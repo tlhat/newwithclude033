@@ -1,0 +1,148 @@
+{
+  "@@locale": "ar",
+  "appTitle": "حنين كيدز — منصة التعلم الآمنة للأطفال",
+  "freeForeverTagline": "مجاني بالكامل ١٠٠٪ — بدون اشتراكات أو إعلانات",
+  "navStories": "قصص حنين",
+  "navAcademy": "أكاديمية حنين",
+  "navGames": "واحة الذكاء",
+  "navAchievements": "إنجازاتي",
+  "navAccount": "حسابي",
+  "achievementsTitle": "إنجازاتي",
+  "greatJobChild": "أحسنت يا {name}!",
+  "@greatJobChild": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "achievementsSubtitle": "كل خطوة صغيرة في التعلم واللعب تضيف لك مهارة جديدة.",
+  "starsEarnedLabel": "النجوم المكتسبة",
+  "iqPointsLabel": "نقاط الذكاء",
+  "completedLessonsLabel": "دروس مكتملة",
+  "unlockedBadgesLabel": "الشارات المفتوحة",
+  "unlockedBadgesHeading": "الشارات التي حصلت عليها",
+  "noBadgesYet": "ابدأ أول درس في الأكاديمية أو العب تحدياً في واحة الذكاء لفتح أول شارة لك.",
+  "goToAcademy": "انتقل إلى أكاديمية حنين",
+  "badgeUnlockedAt": "تم الفتح: {date}",
+  "@badgeUnlockedAt": {
+    "placeholders": {
+      "date": { "type": "String" }
+    }
+  },
+  "accountTitle": "حسابي",
+  "ageGroupAndLevel": "الفئة العمرية: {age} • {level}",
+  "@ageGroupAndLevel": {
+    "placeholders": {
+      "age": { "type": "String" },
+      "level": { "type": "String" }
+    }
+  },
+  "dailyUsageLabel": "وقت الاستخدام اليومي",
+  "minutesProgress": "{used} / {limit} دقيقة",
+  "@minutesProgress": {
+    "placeholders": {
+      "used": { "type": "int" },
+      "limit": { "type": "int" }
+    }
+  },
+  "darkModeTitle": "الوضع الداكن",
+  "darkModeSubtitle": "مظهر موحد ومريح للعين في كل الشاشات",
+  "switchChildTitle": "تبديل ملف الطفل",
+  "registeredProfilesCount": "عدد الملفات المسجلة: {count}",
+  "@registeredProfilesCount": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "uiLanguageTitle": "لغة الواجهة (العربية / English)",
+  "learningLanguageTitle": "لغة تعلم الطفل",
+  "languageArabic": "العربية",
+  "languageEnglish": "English",
+  "parentalGateButton": "بوابة الوالدين والإعدادات (محمية بالرمز)",
+  "parentGateTitle": "بوابة الوالدين",
+  "parentGatePrompt": "للدخول إلى بوابة الوالدين، يرجى إدخال الرمز السري للوالدين (المكوّن من ٦ أرقام):",
+  "parentGateHint": "أدخل الرمز السري (٦ أرقام)",
+  "parentGateError": "الرمز السري غير صحيح. يرجى إدخال ٦ أرقام صحيحة.",
+  "cancelButton": "إلغاء",
+  "enterButton": "دخول",
+  "retryButton": "إعادة المحاولة",
+  "voiceLanguageTitle": "لغة المساعد الصوتي والنطق",
+  "parentStudioTitle": "استوديو الوالدين",
+  "authPhoneLabel": "رقم الموبايل",
+  "authParentNameLabel": "اسم ولي الأمر",
+  "authChildNameLabel": "اسم الطفل",
+  "authChildAgeLabel": "سن الطفل",
+  "authOtpLabel": "رمز التحقق OTP",
+  "authSendOtpButton": "إرسال رمز التحقق (OTP) 📲",
+  "authVerifyButton": "تأكيد الرمز وبدء الرحلة 🚀",
+  "authEditPhoneButton": "تعديل الرقم",
+  "betaFeedbackTitle": "ملاحظات الإصدار التجريبي (Beta)",
+  "betaFeedbackSent": "تم الإرسال",
+  "betaFeedbackPending": "قيد الانتظار",
+  "betaFeedbackFailed": "فشل الإرسال",
+  "tierBeginner": "تمهيدي (٢-٣ سنوات)",
+  "tierElementary": "مبتدئ (٣-٤ سنوات)",
+  "tierIntermediate": "متوسط (٤-٥ سنوات)",
+  "tierAdvanced": "متقدم (٥-٦ سنوات)",
+  "deleteChildConfirmation": "هل أنت متأكد من حذف ملف الطفل نهائياً؟",
+  "confirmDelete": "تأكيد الحذف",
+  "cancel": "إلغاء",
+  "companionStudioTitle": "استوديو شخصيتي",
+  "companionGenderBoy": "ولد",
+  "companionGenderGirl": "بنت",
+  "companionCategoryGender": "الجنس",
+  "companionCategoryFace": "الوجه",
+  "companionCategoryHair": "الشعر",
+  "companionCategoryOutfit": "الملابس",
+  "companionCategoryBackground": "الخلفية",
+  "companionCategoryPose": "الحركة",
+  "companionSaveButton": "حفظ شخصيتي ✨",
+  "companionUnlockTitle": "فتح عنصر جديد",
+  "companionUnlockPrompt": "هل تريد فتح \"{itemName}\" مقابل {stars} ⭐؟",
+  "@companionUnlockPrompt": {
+    "placeholders": {
+      "itemName": { "type": "String" },
+      "stars": { "type": "int" }
+    }
+  },
+  "companionUnlockButton": "فتح الآن",
+  "companionNotEnoughStars": "لا يوجد نجوم كافية! اجمع المزيد من التعلم واللعب.",
+  "companionCustomizeButton": "تخصيص شخصيتي 🎨",
+  "companionShopDisabled": "تم تعطيل متجر الشخصيات من قبل ولي الأمر.",
+  "companionGreeting": "أهلاً يا {childName}! 👋 ما رأيك نتعلم شيئاً جديداً اليوم؟",
+  "@companionGreeting": {
+    "placeholders": {
+      "childName": { "type": "String" }
+    }
+  },
+  "companionEncourageCorrect": "أحسنت! إجابة رائعة يا بطل! 🌟",
+  "companionEncourageHint": "لا تقلق، جرب مرة ثانية! أنت قريب جداً من الإجابة الصحيحة 💪",
+  "companionExplorePrompt": "هيا نكتشف مغامرة جديدة معاً!",
+  "companionHintButton": "أعطني تلميحاً",
+  "companionHintTier1": "انظر إلى الصور واستمع مرة أخرى — أيّ صورة تناسب كلمة «{targetWord}»؟",
+  "@companionHintTier1": {
+    "placeholders": {
+      "targetWord": { "type": "String" }
+    }
+  },
+  "companionHintTier2": "الاستراتيجية: قل «{targetWord}» ببطء بصوت عالٍ، ثم ابحث عن الصورة التي تبدأ بنفس الصوت الأول.",
+  "@companionHintTier2": {
+    "placeholders": {
+      "targetWord": { "type": "String" }
+    }
+  },
+  "companionHintTier3": "مثال محلول: لنجد كلمة «{exampleWord}» {emoji} نقولها ببطء ونختار الصورة المناسبة. الآن جرّب الحيلة نفسها في سؤالك!",
+  "@companionHintTier3": {
+    "placeholders": {
+      "exampleWord": { "type": "String" },
+      "emoji": { "type": "String" }
+    }
+  },
+  "companionHintTier3Fallback": "مثال محلول: لنجد كلمة مثل «{targetWord}»، قلها ببطء بصوت عالٍ، واستمع إلى صوتها الأول، ثم ابحث عن الصورة المناسبة. جرّب الحيلة نفسها الآن!",
+  "@companionHintTier3Fallback": {
+    "placeholders": {
+      "targetWord": { "type": "String" }
+    }
+  },
+  "companionRevealAnswerButton": "أرني الإجابة",
+  "companionAnswerRevealed": "الإجابة الصحيحة مضيئة — انظر إليها جيداً وحاول أن تتذكرها! 💡"
+}

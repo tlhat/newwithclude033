@@ -1,0 +1,28 @@
+# Flutter & Dart artifacts
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+
+# Android artifacts
+**/android/.gradle
+**/android/captures/
+**/android/gradlew
+**/android/gradlew.bat
+**/android/local.properties
+**/android/**/GeneratedPluginRegistrant.java
+
+# Environment & Sensitive configs
+.env*
+!.env.example
+
+# Temporary agent skills & caches
+.agents/tmp/
+.agents/cache/
+*.tmp
+*.temp
+
+# OS generated files
+.DS_Store
+Thumbs.db

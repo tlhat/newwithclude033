@@ -1,0 +1,42 @@
+name: haneen_kids_vod
+description: Safe 100% Free Educational Platform for Kids with ElevenLabs Neural Voices, Interactive Academy, 200 Animated Stories, 10 Brain Games & 6-Digit Parental Controls
+publish_to: 'none'
+version: 5.0.0+20
+
+environment:
+  sdk: '>=3.2.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: any
+  video_player: '>=2.8.2 <3.0.0'
+  http: '>=1.2.0 <2.0.0'
+  shared_preferences: '>=2.2.2 <3.0.0'
+  speech_to_text: '>=7.0.0 <8.0.0'
+  crypto: '>=3.0.3 <4.0.0'
+  flutter_secure_storage: '>=9.0.0 <12.0.0'
+  rive: '>=0.13.1 <0.14.0'
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: '>=3.0.1 <7.0.0'
+
+flutter_launcher_icons:
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/icon/app_icon.png"
+  min_sdk_android: 24
+  remove_alpha_ios: true
+  adaptive_icon_background: "#1E1B4B"
+  adaptive_icon_foreground: "assets/icon/app_icon_foreground.png"
+
+flutter:
+  generate: true
+  uses-material-design: true
+  assets:
+    - assets/icon/
+    - assets/avatars/

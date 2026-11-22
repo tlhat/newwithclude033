@@ -1,0 +1,29 @@
+{
+  "feedVersion": "4.0-animated-stories",
+  "stories": [
+    {
+      "id": "story_moon_rabbit",
+      "linkedStoryId": "story_moon_rabbit",
+      "durationSeconds": 220,
+      "title": "الأرنب الأبيض ونجمة المساء الهادئة",
+      "category": "bedtime",
+      "ageGroup": "2–6 سنوات",
+      "description": "قصة تفاعلية متحركة بتأثيرات Ken Burns وسرد ثنائي وموسيقى هادئة قبل النوم.",
+      "repeatPhrase": "«الاستعداد الهادئ للنوم المبكر»",
+      "activeActivity": "النوم المبكر والهادئ يمنح الجسم والعقل صحة وذكاءً ونشاطاً.",
+      "streamUrl": "/local/animated_stories/story_moon_rabbit"
+    },
+    {
+      "id": "story_honest_bird",
+      "linkedStoryId": "story_honest_bird",
+      "durationSeconds": 216,
+      "title": "العصفور الصادق وحبة القمح الذهبية",
+      "category": "habits",
+      "ageGroup": "3–6 سنوات",
+      "description": "قصة تفاعلية متحركة تعلم الأمانة والتعاون مع الأصدقاء والجيران.",
+      "repeatPhrase": "«الأمانة والتعاون مع الجيران»",
+      "activeActivity": "الأمانة والصدق والمشاركة تجعل الجميع يحبوننا ويثقون بنا.",
+      "streamUrl": "/local/animated_stories/story_honest_bird"
+    }
+  ]
+}

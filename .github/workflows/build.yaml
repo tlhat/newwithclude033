@@ -1,0 +1,85 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Source Code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Set up Flutter SDK
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+
+      - name: Ensure Android Platform Files (Preserving pubspec.lock & tests)
+        run: |
+          cp lib/main.dart /tmp/saved_main.dart
+          cp pubspec.yaml /tmp/saved_pubspec.yaml
+          if [ -f "pubspec.lock" ]; then cp pubspec.lock /tmp/saved_pubspec.lock; fi
+          if [ -d "test" ]; then cp -r test /tmp/saved_test; fi
+          rm -f android/app/build.gradle android/app/build.gradle.kts
+          flutter create -t app --platforms=android --org com.haneenkids.vod --project-name haneen_kids_vod .
+          cp /tmp/saved_main.dart lib/main.dart
+          cp /tmp/saved_pubspec.yaml pubspec.yaml
+          if [ -f "/tmp/saved_pubspec.lock" ]; then cp /tmp/saved_pubspec.lock pubspec.lock; fi
+          if [ -d "/tmp/saved_test" ]; then rm -rf test && cp -r /tmp/saved_test test; fi
+
+      - name: Configure Android Manifest Permissions, HTTPS-Only Security & SDK Versions (compileSdk 36)
+        run: |
+          MANIFEST="android/app/src/main/AndroidManifest.xml"
+          if ! grep -q "android.permission.INTERNET" "$MANIFEST"; then
+            sed -i 's/<manifest[^>]*>/&\n    <uses-permission android:name="android.permission.INTERNET"\/>\n    <uses-permission android:name="android.permission.RECORD_AUDIO"\/>/' "$MANIFEST"
+          fi
+          sed -i 's/android:usesCleartextTraffic="true"/android:usesCleartextTraffic="false"/g' "$MANIFEST"
+          if ! grep -q "usesCleartextTraffic" "$MANIFEST"; then
+            sed -i 's/<application/<application android:usesCleartextTraffic="false"/' "$MANIFEST"
+          fi
+          if [ -f "android/app/build.gradle" ]; then
+            sed -i 's/compileSdkVersion flutter.compileSdkVersion/compileSdkVersion 36/g' android/app/build.gradle
+            sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 36/g' android/app/build.gradle
+            sed -i 's/compileSdk flutter.compileSdkVersion/compileSdk 36/g' android/app/build.gradle
+            sed -i 's/compileSdkVersion [0-9]\+/compileSdkVersion 36/g' android/app/build.gradle
+            sed -i 's/minSdkVersion flutter.minSdkVersion/minSdkVersion 24/g' android/app/build.gradle
+            sed -i 's/minSdk = flutter.minSdkVersion/minSdk = 24/g' android/app/build.gradle
+            sed -i 's/minSdk flutter.minSdkVersion/minSdk 24/g' android/app/build.gradle
+            sed -i 's/minSdkVersion [0-9]\+/minSdkVersion 24/g' android/app/build.gradle
+            sed -i 's/targetSdkVersion flutter.targetSdkVersion/targetSdkVersion 36/g' android/app/build.gradle
+            sed -i 's/targetSdk = flutter.targetSdkVersion/targetSdk = 36/g' android/app/build.gradle
+            sed -i 's/targetSdk flutter.targetSdkVersion/targetSdk 36/g' android/app/build.gradle
+            sed -i 's/targetSdkVersion [0-9]\+/targetSdkVersion 36/g' android/app/build.gradle
+          fi
+          if [ -f "android/app/build.gradle.kts" ]; then
+            sed -i 's/compileSdk = flutter.compileSdkVersion/compileSdk = 36/g' android/app/build.gradle.kts
+            sed -i 's/compileSdk = [0-9]\+/compileSdk = 36/g' android/app/build.gradle.kts
+            sed -i 's/minSdk = flutter.minSdkVersion/minSdk = 24/g' android/app/build.gradle.kts
+            sed -i 's/minSdk = [0-9]\+/minSdk = 24/g' android/app/build.gradle.kts
+            sed -i 's/targetSdk = flutter.targetSdkVersion/targetSdk = 36/g' android/app/build.gradle.kts
+            sed -i 's/targetSdk = [0-9]\+/targetSdk = 36/g' android/app/build.gradle.kts
+          fi
+
+      - name: Resolve Pinned Range Dependencies
+        run: flutter pub get
+
+      - name: Run Automated Security, Isolation & Reward Unit Tests
+        run: flutter test
+
+      - name: Build Release APK
+        run: flutter build apk --release --no-tree-shake-icons
+
+      - name: Upload Ready-to-Install APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: haneen-kids-release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk

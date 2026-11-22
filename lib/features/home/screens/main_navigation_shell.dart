@@ -1,0 +1,180 @@
+import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/l10n/app_localizations.dart';
+import 'package:haneen_kids_vod/haneen_kids_exports.dart';
+
+enum MainNavDestination {
+  stories,
+  academy,
+  games,
+  achievements,
+  account,
+}
+
+/// 5-Destination Bottom Navigation Shell (Stage P0 / Sprint 2 & 3):
+/// Localized via AppLocalizations with automatic RTL/LTR support.
+class MainNavigationShell extends StatefulWidget {
+  final AppStateManager appState;
+  final MainNavDestination initialDestination;
+
+  const MainNavigationShell({
+    super.key,
+    required this.appState,
+    this.initialDestination = MainNavDestination.stories,
+  });
+
+  @override
+  State<MainNavigationShell> createState() => _MainNavigationShellState();
+}
+
+class _MainNavigationShellState extends State<MainNavigationShell> {
+  late int _currentIndex;
+
+  @override
+  void initState() {
+    super.initState();
+    _currentIndex = widget.initialDestination.index;
+  }
+
+  void _switchTo(MainNavDestination dest) {
+    if (!mounted) return;
+    setState(() {
+      _currentIndex = dest.index;
+    });
+  }
+
+  Future<void> _openParentalGate() async {
+    await CalmVoiceService.instance.stopAllAudioImmediatelyForParentalGate();
+    if (!mounted) return;
+    final l10n = AppLocalizations.of(context);
+    final TextEditingController pinCtrl = TextEditingController();
+    String? err;
+    await showDialog(
+      context: context,
+      builder: (ctx) => StatefulBuilder(
+        builder: (ctx, setDialogState) {
+          return AlertDialog(
+            title: Text(l10n.parentGateTitle),
+            content: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(l10n.parentGatePrompt),
+                const SizedBox(height: 12),
+                TextField(
+                  controller: pinCtrl,
+                  obscureText: true,
+                  keyboardType: TextInputType.number,
+                  maxLength: ParentAccount.kUnifiedParentalPinLength,
+                  textAlign: TextAlign.center,
+                  decoration: InputDecoration(
+                    hintText: l10n.parentGateHint,
+                    counterText: '',
+                  ),
+                ),
+                if (err != null) ...[
+                  const SizedBox(height: 8),
+                  Text(
+                    err!,
+                    style: const TextStyle(color: Colors.redAccent, fontSize: 12),
+                  ),
+                ],
+              ],
+            ),
+            actions: [
+              TextButton(
+                onPressed: () => Navigator.pop(ctx),
+                child: Text(l10n.cancelButton),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  final account = widget.appState.currentAccount;
+                  if (account != null &&
+                      account.verifyParentalPin(pinCtrl.text.trim())) {
+                    Navigator.pop(ctx);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_) => ParentalStudioScreen(
+                          appState: widget.appState,
+                        ),
+                      ),
+                    );
+                  } else {
+                    setDialogState(() {
+                      err = l10n.parentGateError;
+                    });
+                  }
+                },
+                child: Text(l10n.enterButton),
+              ),
+            ],
+          );
+        },
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context);
+    final List<Widget> pages = [
+      VerticalVideoFeedPlayerScreen(
+        appState: widget.appState,
+        embeddedInShell: true,
+        onNavigateToGames: () => _switchTo(MainNavDestination.games),
+        onNavigateToAcademy: () => _switchTo(MainNavDestination.academy),
+      ),
+      HaneenAcademyScreen(appState: widget.appState),
+      BrainGamesHubScreen(appState: widget.appState),
+      AchievementsCenterTab(
+        appState: widget.appState,
+        onExploreAcademy: () => _switchTo(MainNavDestination.academy),
+      ),
+      ChildAccountTab(
+        appState: widget.appState,
+        onOpenParentalGate: _openParentalGate,
+      ),
+    ];
+
+    return Scaffold(
+      body: IndexedStack(
+        index: _currentIndex,
+        children: pages,
+      ),
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: _currentIndex,
+        onDestinationSelected: (idx) {
+          setState(() {
+            _currentIndex = idx;
+          });
+        },
+        destinations: [
+          NavigationDestination(
+            icon: const Icon(Icons.auto_stories_outlined),
+            selectedIcon: const Icon(Icons.auto_stories_rounded),
+            label: l10n.navStories,
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.school_outlined),
+            selectedIcon: const Icon(Icons.school_rounded),
+            label: l10n.navAcademy,
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.extension_outlined),
+            selectedIcon: const Icon(Icons.extension_rounded),
+            label: l10n.navGames,
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.emoji_events_outlined),
+            selectedIcon: const Icon(Icons.emoji_events_rounded),
+            label: l10n.navAchievements,
+          ),
+          NavigationDestination(
+            icon: const Icon(Icons.person_outline_rounded),
+            selectedIcon: const Icon(Icons.person_rounded),
+            label: l10n.navAccount,
+          ),
+        ],
+      ),
+    );
+  }
+}

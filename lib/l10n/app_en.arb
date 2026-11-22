@@ -1,0 +1,148 @@
+{
+  "@@locale": "en",
+  "appTitle": "Haneen Kids — Safe Learning Platform",
+  "freeForeverTagline": "100% Free Forever — No Subscriptions or Ads",
+  "navStories": "Stories",
+  "navAcademy": "Academy",
+  "navGames": "Brain Oasis",
+  "navAchievements": "Achievements",
+  "navAccount": "My Account",
+  "achievementsTitle": "My Achievements",
+  "greatJobChild": "Great job, {name}!",
+  "@greatJobChild": {
+    "placeholders": {
+      "name": { "type": "String" }
+    }
+  },
+  "achievementsSubtitle": "Every small step in learning and play builds a new skill.",
+  "starsEarnedLabel": "Stars Earned",
+  "iqPointsLabel": "IQ Points",
+  "completedLessonsLabel": "Lessons Done",
+  "unlockedBadgesLabel": "Badges Earned",
+  "unlockedBadgesHeading": "Your Earned Badges",
+  "noBadgesYet": "Start your first Academy lesson or play a Brain Oasis challenge to unlock your first badge.",
+  "goToAcademy": "Go to Haneen Academy",
+  "badgeUnlockedAt": "Unlocked: {date}",
+  "@badgeUnlockedAt": {
+    "placeholders": {
+      "date": { "type": "String" }
+    }
+  },
+  "accountTitle": "My Account",
+  "ageGroupAndLevel": "Age Group: {age} • {level}",
+  "@ageGroupAndLevel": {
+    "placeholders": {
+      "age": { "type": "String" },
+      "level": { "type": "String" }
+    }
+  },
+  "dailyUsageLabel": "Daily Screen Time",
+  "minutesProgress": "{used} / {limit} min",
+  "@minutesProgress": {
+    "placeholders": {
+      "used": { "type": "int" },
+      "limit": { "type": "int" }
+    }
+  },
+  "darkModeTitle": "Dark Mode",
+  "darkModeSubtitle": "Unified, comfortable look across all screens",
+  "switchChildTitle": "Switch Child Profile",
+  "registeredProfilesCount": "Registered profiles: {count}",
+  "@registeredProfilesCount": {
+    "placeholders": {
+      "count": { "type": "int" }
+    }
+  },
+  "uiLanguageTitle": "Interface Language (العربية / English)",
+  "learningLanguageTitle": "Child Learning Language",
+  "languageArabic": "العربية",
+  "languageEnglish": "English",
+  "parentalGateButton": "Parental Hub & Settings (PIN Protected)",
+  "parentGateTitle": "Parental Gate",
+  "parentGatePrompt": "To enter the Parental Hub, please enter your 6-digit Parental PIN:",
+  "parentGateHint": "Enter 6-digit PIN",
+  "parentGateError": "Incorrect PIN. Please enter 6 valid digits.",
+  "cancelButton": "Cancel",
+  "enterButton": "Enter",
+  "retryButton": "Retry",
+  "voiceLanguageTitle": "Voice Assistant & Pronunciation Language",
+  "parentStudioTitle": "Parental Studio",
+  "authPhoneLabel": "Mobile Phone Number",
+  "authParentNameLabel": "Parent Name",
+  "authChildNameLabel": "Child Name",
+  "authChildAgeLabel": "Child Age",
+  "authOtpLabel": "Verification Code (OTP)",
+  "authSendOtpButton": "Send Verification Code (OTP) 📲",
+  "authVerifyButton": "Verify Code & Start Journey 🚀",
+  "authEditPhoneButton": "Edit Phone Number",
+  "betaFeedbackTitle": "Beta Feedback & Developer Notes",
+  "betaFeedbackSent": "Sent",
+  "betaFeedbackPending": "Pending",
+  "betaFeedbackFailed": "Failed",
+  "tierBeginner": "Preschool (2-3 yrs)",
+  "tierElementary": "Beginner (3-4 yrs)",
+  "tierIntermediate": "Intermediate (4-5 yrs)",
+  "tierAdvanced": "Advanced (5-6 yrs)",
+  "deleteChildConfirmation": "Are you sure you want to permanently delete this child profile?",
+  "confirmDelete": "Confirm Delete",
+  "cancel": "Cancel",
+  "companionStudioTitle": "My Character Studio",
+  "companionGenderBoy": "Boy",
+  "companionGenderGirl": "Girl",
+  "companionCategoryGender": "Gender",
+  "companionCategoryFace": "Face",
+  "companionCategoryHair": "Hair",
+  "companionCategoryOutfit": "Outfit",
+  "companionCategoryBackground": "Background",
+  "companionCategoryPose": "Pose",
+  "companionSaveButton": "Save My Character ✨",
+  "companionUnlockTitle": "Unlock New Item",
+  "companionUnlockPrompt": "Do you want to unlock \"{itemName}\" for {stars} ⭐?",
+  "@companionUnlockPrompt": {
+    "placeholders": {
+      "itemName": { "type": "String" },
+      "stars": { "type": "int" }
+    }
+  },
+  "companionUnlockButton": "Unlock Now",
+  "companionNotEnoughStars": "Not enough stars! Earn more by learning and playing.",
+  "companionCustomizeButton": "Customize My Character 🎨",
+  "companionShopDisabled": "Character shop has been disabled by parent.",
+  "companionGreeting": "Hi {childName}! 👋 Shall we learn something new today?",
+  "@companionGreeting": {
+    "placeholders": {
+      "childName": { "type": "String" }
+    }
+  },
+  "companionEncourageCorrect": "Well done! Amazing answer, hero! 🌟",
+  "companionEncourageHint": "Don't worry, try again! You're very close 💪",
+  "companionExplorePrompt": "Let's discover a new adventure together!",
+  "companionHintButton": "Give me a hint",
+  "companionHintTier1": "Look at the pictures and listen again — which one matches \"{targetWord}\"?",
+  "@companionHintTier1": {
+    "placeholders": {
+      "targetWord": { "type": "String" }
+    }
+  },
+  "companionHintTier2": "Strategy: say \"{targetWord}\" slowly out loud, then look for the picture whose first sound is the same.",
+  "@companionHintTier2": {
+    "placeholders": {
+      "targetWord": { "type": "String" }
+    }
+  },
+  "companionHintTier3": "Worked example: to find the word \"{exampleWord}\" {emoji} we say it slowly and pick the matching picture. Now try the same trick with your question!",
+  "@companionHintTier3": {
+    "placeholders": {
+      "exampleWord": { "type": "String" },
+      "emoji": { "type": "String" }
+    }
+  },
+  "companionHintTier3Fallback": "Worked example: to find a word like \"{targetWord}\", say it slowly out loud, listen to its first sound, then find the picture that matches. Try the same trick now!",
+  "@companionHintTier3Fallback": {
+    "placeholders": {
+      "targetWord": { "type": "String" }
+    }
+  },
+  "companionRevealAnswerButton": "Show me the answer",
+  "companionAnswerRevealed": "The correct answer is highlighted — look carefully and try to remember it! 💡"
+}
