@@ -24,15 +24,14 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: '>=3.0.1 <7.0.0'
+  flutter_launcher_icons: ^0.14.3
 
 flutter_launcher_icons:
-  android: "launcher_icon"
+  android: true
   ios: true
-  image_path: "assets/icon/app_icon.png"
-  min_sdk_android: 24
+  image_path: "assets/icon/app_icon-removebg.png"
+  min_sdk_android: 21
   remove_alpha_ios: true
-  adaptive_icon_background: "#1E1B4B"
-  adaptive_icon_foreground: "assets/icon/app_icon_foreground.png"
 
 flutter:
   generate: true
