@@ -5,6 +5,7 @@ import 'package:haneen_kids_vod/app/app_theme.dart';
 import 'package:haneen_kids_vod/core/services/calm_voice_service.dart';
 import 'package:haneen_kids_vod/features/companion/engine/speech_coordinator.dart';
 import 'package:haneen_kids_vod/features/companion/models/avatar_customization_model.dart';
+import 'package:haneen_kids_vod/features/companion/widgets/haneen_layered_avatar_widget.dart';
 
 /// Approximate mouth anchor calibration for the four companion sprites.
 ///
@@ -94,6 +95,10 @@ class HaneenCompanionAvatarWidget extends StatefulWidget {
   /// Ignores the coordinator and forces the mouth open/closed. Used by tests.
   final bool debugForceMouthOpen;
 
+  /// When true (the default), renders the authentic 110-part layered 2D rig.
+  /// When false, falls back to the original single-sprite rendering.
+  final bool useLayeredRig;
+
   const HaneenCompanionAvatarWidget({
     super.key,
     required this.avatar,
@@ -112,6 +117,7 @@ class HaneenCompanionAvatarWidget extends StatefulWidget {
     this.speechCoordinator,
     this.mouthAnimationEnabled = true,
     this.debugForceMouthOpen = false,
+    this.useLayeredRig = true,
   });
 
   /// Asset path of the 3D sprite for this avatar's gender and view angle.
@@ -429,13 +435,30 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
   }) {
     final double size = widget.size;
     final bool isBust = widget.mode == CompanionDisplayMode.bust;
+    final bool waving =
+        widget.avatar.pose == CompanionPose.waving || widget.isWaving || _manualWaving;
+
+    final Widget characterBody = widget.useLayeredRig
+        ? HaneenLayeredAvatarWidget(
+            avatar: widget.avatar,
+            viewAngle: widget.viewAngle,
+            size: size,
+            animateBreathing: widget.animateBreathing,
+            isWaving: waving,
+            isCelebrating: celebrating,
+            expressionOverride: widget.expressionOverride ?? _reactionExpression,
+            speechCoordinator: widget.speechCoordinator,
+            mouthAnimationEnabled: widget.mouthAnimationEnabled,
+            debugForceMouthOpen: widget.debugForceMouthOpen,
+          )
+        : _buildSprite(size, isBust: isBust);
 
     final Widget character = Stack(
       clipBehavior: Clip.none,
       alignment: Alignment.bottomCenter,
       children: [
-        // Explorer wings sit behind the sprite
-        if (widget.avatar.accessory == 'wings' && !isBust)
+        // Explorer wings sit behind the sprite (legacy path only; layered rig has native wings)
+        if (!widget.useLayeredRig && widget.avatar.accessory == 'wings' && !isBust)
           Positioned(
             bottom: size * 0.42,
             child: Opacity(
@@ -446,14 +469,12 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
               ),
             ),
           ),
-        _buildSprite(size, isBust: isBust),
-        // Approximate mouth animation overlay (Phase 3): an open/close
-        // ellipse at the calibrated sprite mouth anchor, driven by the
-        // speech coordinator. Renders nothing when the mouth is closed.
-        if (_effectiveMouthOpen > 0.001)
+        characterBody,
+        // Approximate mouth animation overlay (legacy path only; layered rig has articulated mouth)
+        if (!widget.useLayeredRig && _effectiveMouthOpen > 0.001)
           _buildMouthOverlay(size, isBust: isBust),
-        // smart glasses over the face
-        if (widget.avatar.accessory == 'glasses')
+        // smart glasses over the face (legacy path only; layered rig has native glasses)
+        if (!widget.useLayeredRig && widget.avatar.accessory == 'glasses')
           Positioned(
             top: isBust ? size * 0.16 : size * 0.20,
             child: Text(
@@ -461,8 +482,8 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
               style: TextStyle(fontSize: size * 0.16),
             ),
           ),
-        // golden crown above the head
-        if (widget.avatar.accessory == 'crown')
+        // golden crown above the head (legacy path only; layered rig has native crown)
+        if (!widget.useLayeredRig && widget.avatar.accessory == 'crown')
           Positioned(
             top: isBust ? size * 0.015 : size * 0.03,
             child: const Text('👑', style: TextStyle(fontSize: 18)),

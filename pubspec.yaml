@@ -39,3 +39,7 @@ flutter:
   assets:
     - assets/icon/
     - assets/avatars/
+    - assets/avatars/parts/boy_front/
+    - assets/avatars/parts/boy_3d_angle/
+    - assets/avatars/parts/girl_front/
+    - assets/avatars/parts/girl_3d_angle/
