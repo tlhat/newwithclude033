@@ -557,3 +557,83 @@ class _PinUnlockScreenState extends State<PinUnlockScreen> {
     );
   }
 }
+
+/// Shown on the child's phone when the parent locked the app remotely.
+class RemoteLockScreen extends StatefulWidget {
+  final AppStateManager appState;
+  const RemoteLockScreen({super.key, required this.appState});
+
+  @override
+  State<RemoteLockScreen> createState() => _RemoteLockScreenState();
+}
+
+class _RemoteLockScreenState extends State<RemoteLockScreen> {
+  final TextEditingController _ctrl = TextEditingController();
+  String? _err;
+
+  @override
+  void dispose() {
+    _ctrl.dispose();
+    super.dispose();
+  }
+
+  Future<void> _unlock() async {
+    final String? e = await widget.appState.unlockRemoteLockWithPin(_ctrl.text);
+    if (mounted && e != null) setState(() => _err = e);
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Scaffold(
+        backgroundColor: const Color(0xFF1E2A4A),
+        body: SafeArea(
+          child: Center(
+            child: SingleChildScrollView(
+              padding: const EdgeInsets.all(28),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  const Text('🌙', style: TextStyle(fontSize: 64)),
+                  const SizedBox(height: 12),
+                  Text(widget.appState.remoteLockMessage,
+                      textAlign: TextAlign.center,
+                      style: const TextStyle(
+                          fontSize: 20,
+                          height: 1.6,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.white)),
+                  const SizedBox(height: 24),
+                  TextField(
+                    controller: _ctrl,
+                    obscureText: true,
+                    keyboardType: TextInputType.number,
+                    maxLength: ParentAccount.kUnifiedParentalPinLength,
+                    textAlign: TextAlign.center,
+                    style: const TextStyle(color: Colors.white),
+                    decoration: const InputDecoration(
+                      counterText: '',
+                      hintText: 'الرمز السري لولي الأمر لفتح القفل',
+                      hintStyle: TextStyle(color: Colors.white54),
+                    ),
+                    onSubmitted: (_) => _unlock(),
+                  ),
+                  if (_err != null)
+                    Padding(
+                      padding: const EdgeInsets.only(top: 8),
+                      child: Text(_err!,
+                          style: const TextStyle(color: Colors.redAccent)),
+                    ),
+                  const SizedBox(height: 14),
+                  ElevatedButton(
+                      onPressed: _unlock, child: const Text('فتح القفل')),
+                ],
+              ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}

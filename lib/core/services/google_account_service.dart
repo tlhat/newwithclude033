@@ -145,10 +145,11 @@ class GoogleAccountService {
     }
   }
 
-  Future<String?> _findBackupFileId(GoogleIdentity id) async {
+  Future<String?> _findBackupFileId(GoogleIdentity id,
+      [String name = kBackupFileName]) async {
     final Uri url = Uri.https('www.googleapis.com', '/drive/v3/files', {
       'spaces': 'appDataFolder',
-      'q': "name='$kBackupFileName' and trashed=false",
+      'q': "name='$name' and trashed=false",
       'fields': 'files(id,modifiedTime)',
       'orderBy': 'modifiedTime desc',
       'pageSize': '1',
@@ -165,8 +166,9 @@ class GoogleAccountService {
   }
 
   /// Returns the saved backup text, or null when this Google account has none.
-  Future<String?> downloadBackup(GoogleIdentity id) async {
-    final String? fileId = await _findBackupFileId(id);
+  Future<String?> downloadBackup(GoogleIdentity id,
+      [String name = kBackupFileName]) async {
+    final String? fileId = await _findBackupFileId(id, name);
     if (fileId == null) return null;
     final Uri url = Uri.https(
         'www.googleapis.com', '/drive/v3/files/$fileId', {'alt': 'media'});
@@ -178,14 +180,15 @@ class GoogleAccountService {
   }
 
   /// Creates or overwrites the single backup file.
-  Future<void> uploadBackup(GoogleIdentity id, String json) async {
-    final String? fileId = await _findBackupFileId(id);
+  Future<void> uploadBackup(GoogleIdentity id, String json,
+      [String name = kBackupFileName]) async {
+    final String? fileId = await _findBackupFileId(id, name);
     final List<int> bytes = utf8.encode(json);
     http.Response r;
     if (fileId == null) {
       const String boundary = 'haneen_backup_boundary';
       final String meta = jsonEncode({
-        'name': kBackupFileName,
+        'name': name,
         'parents': ['appDataFolder'],
         'mimeType': 'application/json',
       });

@@ -47,6 +47,9 @@ class _SplashRouterScreenState extends State<SplashRouterScreen> {
         widget.appState.currentAccount == null) {
       return OnboardingScreen(appState: widget.appState);
     }
+    if (widget.appState.remoteLockActive) {
+      return RemoteLockScreen(appState: widget.appState);
+    }
     if (!widget.appState.pinUnlockedThisSession) {
       return PinUnlockScreen(appState: widget.appState);
     }

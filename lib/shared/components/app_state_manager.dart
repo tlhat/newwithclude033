@@ -326,6 +326,7 @@ class AppStateManager extends ChangeNotifier {
         !(currentAccount?.voiceAssistantEnabled ?? true));
     _refreshSmartVoiceAssistantSuggestion(speakAloud: false);
     _startScreenTimeTracker();
+    _startRemoteLockWatcher();
     isInitialized = true;
     notifyListeners();
 
@@ -1754,6 +1755,96 @@ class AppStateManager extends ChangeNotifier {
     notifyListeners();
   }
 
+  // ------------------------------------------------- remote lock (Drive)
+  static const String kRemoteLockFile = 'haneen_remote_lock_v1.json';
+  Timer? _remoteLockTimer;
+
+  /// True while a parent locked the app from another phone.
+  bool get remoteLockActive => _prefs.getBool('remote_lock_active') ?? false;
+
+  String get remoteLockMessage =>
+      _prefs.getString('remote_lock_message') ?? 'التطبيق مقفول دلوقتي بأمر من ولي الأمر.';
+
+  String get _deviceId {
+    String? id = _prefs.getString('device_id');
+    if (id == null) {
+      id = DateTime.now().microsecondsSinceEpoch.toRadixString(36);
+      _prefs.setString('device_id', id);
+    }
+    return id;
+  }
+
+  void _startRemoteLockWatcher() {
+    _remoteLockTimer?.cancel();
+    _remoteLockTimer = Timer.periodic(const Duration(seconds: 60), (_) {
+      pollRemoteLock();
+    });
+    pollRemoteLock();
+  }
+
+  /// Reads the lock file from the family's Google Drive. A phone never obeys
+  /// the lock it wrote itself (so the parent's phone is not locked).
+  Future<void> pollRemoteLock() async {
+    if (linkedGoogleEmail == null ||
+        isAppInBackground ||
+        AppNetworkPolicyGuard.isOfflineOnlyModeActive) {
+      return;
+    }
+    try {
+      final GoogleIdentity? who =
+          await GoogleAccountService.instance.signInSilently();
+      if (who == null) return;
+      final String? text = await GoogleAccountService.instance
+          .downloadBackup(who, kRemoteLockFile);
+      if (text == null) return;
+      final Map<String, dynamic> m = jsonDecode(text) as Map<String, dynamic>;
+      if (m['by'] == _deviceId) return;
+      final bool locked = m['locked'] == true;
+      if (locked != remoteLockActive) {
+        await _prefs.setBool('remote_lock_active', locked);
+        if (locked) {
+          await _prefs.setString('remote_lock_message',
+              (m['message'] ?? '').toString().trim().isEmpty
+                  ? 'التطبيق مقفول دلوقتي بأمر من ولي الأمر.'
+                  : m['message'].toString());
+          await CalmVoiceService.instance.stopSpeaking();
+        }
+        notifyListeners();
+      }
+    } catch (_) {}
+  }
+
+  /// Parent side: writes the lock state for the family's other phones.
+  Future<void> publishRemoteLock(bool locked, {String message = ''}) async {
+    if (linkedGoogleEmail == null) return;
+    try {
+      final GoogleIdentity? who =
+          await GoogleAccountService.instance.signInSilently();
+      if (who == null) return;
+      await GoogleAccountService.instance.uploadBackup(
+          who,
+          jsonEncode({
+            'locked': locked,
+            'message': message,
+            'by': _deviceId,
+            'at': DateTime.now().toIso8601String(),
+          }),
+          kRemoteLockFile);
+    } catch (_) {}
+  }
+
+  /// Child phone: the parent types the PIN to unlock it.
+  Future<String?> unlockRemoteLockWithPin(String pin) async {
+    final ParentAccount? acc = currentAccount;
+    if (acc == null) return 'مفيش حساب.';
+    if (acc.isPinLockedOut) return 'جربت كتير غلط. استنى شوية وجرّب تاني.';
+    if (!acc.verifyParentalPin(pin.trim())) return 'الرمز غلط، جرّب تاني.';
+    await _prefs.setBool('remote_lock_active', false);
+    notifyListeners();
+    publishRemoteLock(false);
+    return null;
+  }
+
   Future<void> setRemoteDeviceLockForChild({
     required String childId,
     required bool lockDevice,
@@ -1783,6 +1874,7 @@ class AppStateManager extends ChangeNotifier {
     if (lockDevice) {
       await CalmVoiceService.instance.stopSpeaking();
     }
+    publishRemoteLock(lockDevice, message: child.remoteLockReasonMessage);
     if (remoteMonitorApiUrl.trim().isNotEmpty && AppNetworkPolicyGuard.canPerformOutboundNetworkRequest()) {
       try {
         await http
@@ -3092,6 +3184,7 @@ class AppStateManager extends ChangeNotifier {
   void dispose() {
     _isDisposed = true;
     _screenTimeTimer?.cancel();
+    _remoteLockTimer?.cancel();
     super.dispose();
   }
 }
