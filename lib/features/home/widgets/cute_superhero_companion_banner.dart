@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
+import 'package:haneen_kids_vod/shared/widgets/bouncy_tap.dart';
 
 class CuteSuperheroCompanionBanner extends StatefulWidget {
   final AppStateManager appState;
@@ -64,7 +65,8 @@ class _CuteSuperheroCompanionBannerState
     final child = widget.appState.currentAccount?.activeChild;
     if (child != null) {
       final bool isAr = Localizations.localeOf(context).languageCode == 'ar';
-      final aiRec = EducationalAiTutorService.analyzeAndRecommendForChild(child);
+      final aiRec =
+          EducationalAiTutorService.analyzeAndRecommendForChild(child);
       CalmVoiceService.instance.speakCalmly(
         widget.customCheerMessage ??
             (isAr
@@ -277,8 +279,8 @@ class _CuteSuperheroCompanionBannerState
   Widget build(BuildContext context) {
     final child = widget.appState.currentAccount?.activeChild;
     final bool isCustomCompanion = _heroIndex == 0 && child != null;
-    final hero = kCuteSuperheroCharacters[
-        _heroIndex % kCuteSuperheroCharacters.length];
+    final hero =
+        kCuteSuperheroCharacters[_heroIndex % kCuteSuperheroCharacters.length];
     final String companionName = isCustomCompanion
         ? (child.name.isNotEmpty ? 'شخصية ${child.name}' : 'شخصيتي المرافقة')
         : hero.nameAr;
@@ -288,7 +290,8 @@ class _CuteSuperheroCompanionBannerState
       final l10n = AppLocalizations.of(context);
       greeting = l10n.companionGreeting(child.name);
       if (!widget.compactMode) {
-        final rec = EducationalAiTutorService.analyzeAndRecommendForChild(child);
+        final rec =
+            EducationalAiTutorService.analyzeAndRecommendForChild(child);
         final String recommendedGameTitle =
             isAr ? rec.recommendedGameTitleAr : rec.recommendedGameTitleEn;
         greeting =
@@ -299,7 +302,8 @@ class _CuteSuperheroCompanionBannerState
         greeting ??
         hero.encouragingAlerts[_alertIndex % hero.encouragingAlerts.length];
 
-    return GestureDetector(
+    return BouncyTap(
+        child: GestureDetector(
       onTap: _openHeroFriendsGalleryModal,
       child: Container(
         padding: EdgeInsets.symmetric(
@@ -435,6 +439,6 @@ class _CuteSuperheroCompanionBannerState
           ],
         ),
       ),
-    );
+    ));
   }
 }

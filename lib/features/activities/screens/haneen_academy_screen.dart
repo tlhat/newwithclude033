@@ -3,6 +3,7 @@ import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'package:haneen_kids_vod/features/companion/engine/companion_interaction_engine.dart';
 import 'package:haneen_kids_vod/features/companion/engine/companion_interaction_state.dart';
+import 'package:haneen_kids_vod/shared/widgets/confetti_burst.dart';
 
 class HaneenAcademyScreen extends StatefulWidget {
   final AppStateManager appState;
@@ -32,7 +33,11 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
     {'id': 'communication', 'title': 'الاستماع والنطق', 'emoji': '🎙️'},
     {'id': 'simple_science', 'title': 'العلوم المبسطة', 'emoji': '🔬'},
     {'id': 'daily_habits', 'title': 'المهارات الحياتية', 'emoji': '🪥'},
-    {'id': 'thinking_problem_solving', 'title': 'التفكير والتركيز', 'emoji': '🧩'},
+    {
+      'id': 'thinking_problem_solving',
+      'title': 'التفكير والتركيز',
+      'emoji': '🧩'
+    },
   ];
 
   /// Phase 2: builds Tier 3 worked-example text from the lesson's own data.
@@ -345,7 +350,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                           '💡 ${l10n.companionHintTier1(lesson.targetWordOrPhrase)}',
                                         2 =>
                                           '🧭 ${l10n.companionHintTier2(lesson.targetWordOrPhrase)}',
-                                        _ => '📖 ${_tier3HintText(l10n, lesson)}',
+                                        _ =>
+                                          '📖 ${_tier3HintText(l10n, lesson)}',
                                       };
                                     });
                                     CalmVoiceService.instance
@@ -372,15 +378,14 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                   !hintLadder.answerRevealed) ...[
                                 OutlinedButton.icon(
                                   onPressed: () {
-                                    final revealed =
-                                        hintLadder.revealAnswer();
+                                    final revealed = hintLadder.revealAnswer();
                                     if (!revealed) return;
                                     setSheetState(() {
                                       hintBannerText =
                                           '👁️ ${l10n.companionAnswerRevealed}';
                                     });
-                                    CalmVoiceService.instance.speak(
-                                        l10n.companionAnswerRevealed);
+                                    CalmVoiceService.instance
+                                        .speak(l10n.companionAnswerRevealed);
                                   },
                                   icon: const Icon(Icons.visibility_rounded,
                                       size: 18, color: Color(0xFFA7F3D0)),
@@ -450,13 +455,11 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                       ),
                                     );
                                     companionCelebrating = next.isCelebrating;
-                                    companionExpression =
-                                        next.isCelebrating
-                                            ? CompanionFaceExpression.excited
-                                            : (isCorrect
-                                                ? CompanionFaceExpression.happy
-                                                : CompanionFaceExpression
-                                                    .thinking);
+                                    companionExpression = next.isCelebrating
+                                        ? CompanionFaceExpression.excited
+                                        : (isCorrect
+                                            ? CompanionFaceExpression.happy
+                                            : CompanionFaceExpression.thinking);
                                     if (!isCorrect) {
                                       showAlternativeRemediation = true;
                                     }
@@ -473,13 +476,17 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                     practicedPronunciation:
                                         practicedVoiceInSession,
                                     hintLevelUsed: hintLadder.hintLevelUsed,
-                                    answerRevealed:
-                                        hintLadder.answerRevealed,
+                                    answerRevealed: hintLadder.answerRevealed,
                                   );
                                   setSheetState(() {
                                     feedbackBannerText =
                                         res.childEncouragementMessage;
                                   });
+                                  if (isCorrect &&
+                                      res.isMastered &&
+                                      ctx.mounted) {
+                                    ConfettiBurst.show(ctx);
+                                  }
                                   if (isCorrect) {
                                     await CalmVoiceService.instance
                                         .speakSuperheroEncouragementAndAutoAdvance(
@@ -594,8 +601,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                       practicedPronunciation:
                                           practicedVoiceInSession,
                                       hintLevelUsed: hintLadder.hintLevelUsed,
-                                      answerRevealed:
-                                          hintLadder.answerRevealed,
+                                      answerRevealed: hintLadder.answerRevealed,
                                     );
                                     setSheetState(() {
                                       feedbackBannerText =
@@ -624,7 +630,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                       const SizedBox(height: 10),
                       Container(
                         width: double.infinity,
-                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
+                        padding: const EdgeInsets.symmetric(
+                            horizontal: 10, vertical: 8),
                         decoration: BoxDecoration(
                           color: const Color(0xFF14B8A6).withOpacity(0.16),
                           borderRadius: BorderRadius.circular(14),
@@ -637,8 +644,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                               avatar: child.companionAvatar,
                               mode: CompanionDisplayMode.bust,
                               size: 40,
-                              isCelebrating: quizAnsweredCorrectly &&
-                                  companionCelebrating,
+                              isCelebrating:
+                                  quizAnsweredCorrectly && companionCelebrating,
                               expressionOverride: companionExpression ??
                                   (quizAnsweredCorrectly
                                       ? CompanionFaceExpression.excited
@@ -666,8 +673,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                       width: double.infinity,
                       child: ElevatedButton.icon(
                         onPressed: () async {
-                          final res = await widget.appState
-                              .recordAcademyLessonAttempt(
+                          final res =
+                              await widget.appState.recordAcademyLessonAttempt(
                             lessonId: lesson.id,
                             lessonTitle: lesson.title,
                             learnedWord: lesson.cards.first.wordExample,
@@ -682,6 +689,9 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                           );
                           if (!ctx.mounted) return;
                           Navigator.pop(ctx);
+                          if (res.isMastered && context.mounted) {
+                            ConfettiBurst.show(context);
+                          }
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(res.childEncouragementMessage),
@@ -987,10 +997,9 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                               final bool isHit = opt == story.correctQuizAnswer;
                               return ElevatedButton(
                                 style: ElevatedButton.styleFrom(
-                                  backgroundColor:
-                                      quizSolved && isHit
-                                          ? const Color(0xFF10B981)
-                                          : const Color(0xFF1E293B),
+                                  backgroundColor: quizSolved && isHit
+                                      ? const Color(0xFF10B981)
+                                      : const Color(0xFF1E293B),
                                   foregroundColor: Colors.white,
                                 ),
                                 onPressed: () async {
@@ -1062,8 +1071,9 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
         final account = widget.appState.currentAccount;
         if (account == null) return const SizedBox.shrink();
         final child = account.activeChild;
-        final activeCurriculum = AdaptiveLearningEngine.getCurriculumForLanguage(
-            widget.appState.localeController.learningLanguageCode);
+        final activeCurriculum =
+            AdaptiveLearningEngine.getCurriculumForLanguage(
+                widget.appState.localeController.learningLanguageCode);
         final report = AdaptiveLearningEngine.buildPedagogicalReport(
           child,
           curriculum: activeCurriculum,
@@ -1071,7 +1081,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
 
         final List<AcademyTrackLesson> filteredLessons;
         if (_selectedTrackFilter == 'smart_path') {
-          filteredLessons = AdaptiveLearningEngine.getRecommendedLessonsForChild(
+          filteredLessons =
+              AdaptiveLearningEngine.getRecommendedLessonsForChild(
             child,
             curriculum: activeCurriculum,
           );
@@ -1158,7 +1169,9 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                           mode: CompanionDisplayMode.bust,
                           size: 50,
                           animateBreathing: true,
-                          speechText: Localizations.localeOf(context).languageCode == 'ar'
+                          speechText: Localizations.localeOf(context)
+                                      .languageCode ==
+                                  'ar'
                               ? 'أهلاً بك يا ${child.name} في الأكاديمية! هيا نتقدم في مسارك التعليمي الذكي.'
                               : 'Welcome to the Academy, ${child.name}! Let\'s keep learning together.',
                           speakOnTap: true,
@@ -1269,15 +1282,18 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                         itemBuilder: (ctx, sIdx) {
                           final story = kInteractiveOriginalStories[sIdx];
                           return GestureDetector(
-                            onTap: () =>
-                                _openInteractiveStoryCarouselSheet(story, child),
+                            onTap: () => _openInteractiveStoryCarouselSheet(
+                                story, child),
                             child: Container(
                               width: 235,
                               margin: const EdgeInsets.only(left: 10),
                               padding: const EdgeInsets.all(12),
                               decoration: BoxDecoration(
                                 gradient: const LinearGradient(
-                                  colors: [Color(0xFF312E81), Color(0xFF0F172A)],
+                                  colors: [
+                                    Color(0xFF312E81),
+                                    Color(0xFF0F172A)
+                                  ],
                                 ),
                                 borderRadius: BorderRadius.circular(16),
                                 border: Border.all(
@@ -1345,8 +1361,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                           fontWeight: FontWeight.bold,
                           fontSize: 12,
                         ),
-                        onSelected: (_) => setState(
-                            () => _selectedTrackFilter = track['id']!),
+                        onSelected: (_) =>
+                            setState(() => _selectedTrackFilter = track['id']!),
                       ),
                     );
                   }).toList(),

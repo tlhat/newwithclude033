@@ -197,10 +197,11 @@ class CalmVoiceService {
     final String prefix = (childName != null && childName.trim().isNotEmpty)
         ? 'يا ${childName.trim()}، '
         : 'يا بطل حنين، ';
-    final String rawMsg = '🎙️ حنين تقول: $prefix$instruction';
+    // The "🎙️ حنين تقول:" label is for the screen only. It must not be spoken.
+    final String spokenMsg = '$prefix$instruction';
     final String adapted =
-        ElevenLabsVoiceService.adaptTextToDialect(rawMsg, activeDialect);
-    lastSpokenHaneenMessage = adapted;
+        ElevenLabsVoiceService.adaptTextToDialect(spokenMsg, activeDialect);
+    lastSpokenHaneenMessage = '🎙️ حنين تقول: $adapted';
     await speakCalmly(
       adapted,
       rate: 0.37,
@@ -525,6 +526,7 @@ class CalmVoiceService {
     final ElevenLabsSynthesisOutcome outcome =
         await ElevenLabsVoiceService.synthesizeSpeech(
       text: cleanText,
+      extraLocalLookupTexts: _nameNeutralVariants(cleanText),
       personaId: overridePersonaId ?? activePersonaId,
       dialect: activeDialect,
       speed: activeVoiceSpeed,
@@ -546,6 +548,21 @@ class CalmVoiceService {
       spokenText: cleanText,
     );
     isSpeaking = false;
+  }
+
+  /// Returns the name of the child currently using the app (set by the app
+  /// state) so offline clips recorded with "يا بطل" can still be found.
+  String? Function()? childNameProvider;
+
+  /// Variants of [text] with the child's name replaced by the generic "بطل".
+  List<String> _nameNeutralVariants(String text) {
+    final String? n = childNameProvider?.call()?.trim();
+    if (n == null || n.isEmpty || !text.contains(n)) return const [];
+    return [
+      text.replaceAll('يا $n،', 'يا بطل حنين،').replaceAll(n, 'بطل'),
+      text.replaceAll('يا $n', 'يا بطل').replaceAll(n, 'بطل'),
+      text.replaceAll(' يا $n', '').replaceAll(n, 'بطل'),
+    ];
   }
 
   Future<void> stopSpeaking() async {

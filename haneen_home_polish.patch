@@ -1,0 +1,758 @@
+diff --git a/lib/app/app_theme.dart b/lib/app/app_theme.dart
+index 8f354e2..f0f09f5 100644
+--- a/lib/app/app_theme.dart
++++ b/lib/app/app_theme.dart
+@@ -53,13 +53,11 @@ class AppTheme {
+             : AppDesignTokens.darkSurface)
+         : AppDesignTokens.lightSurface;
+ 
+-    final Color primaryColor = highContrast
+-        ? const Color(0xFF818CF8)
+-        : AppDesignTokens.primaryPurple;
++    final Color primaryColor =
++        highContrast ? const Color(0xFF818CF8) : AppDesignTokens.primaryPurple;
+ 
+-    final Color secondaryColor = highContrast
+-        ? const Color(0xFF2DD4BF)
+-        : AppDesignTokens.secondaryGreen;
++    final Color secondaryColor =
++        highContrast ? const Color(0xFF2DD4BF) : AppDesignTokens.secondaryGreen;
+ 
+     final Brightness brightness =
+         isDarkMode ? Brightness.dark : Brightness.light;
+@@ -84,8 +82,7 @@ class AppTheme {
+             onSurface: const Color(0xFF0F172A),
+           );
+ 
+-    final ThemeData base =
+-        isDarkMode ? ThemeData.dark() : ThemeData.light();
++    final ThemeData base = isDarkMode ? ThemeData.dark() : ThemeData.light();
+ 
+     return base.copyWith(
+       brightness: brightness,
+@@ -106,6 +103,12 @@ class AppTheme {
+           color: colorScheme.onSurface,
+         ),
+       ),
++      pageTransitionsTheme: const PageTransitionsTheme(
++        builders: <TargetPlatform, PageTransitionsBuilder>{
++          TargetPlatform.android: SoftPageTransitionsBuilder(),
++          TargetPlatform.iOS: SoftPageTransitionsBuilder(),
++        },
++      ),
+       navigationBarTheme: NavigationBarThemeData(
+         backgroundColor: surfaceColor,
+         indicatorColor: primaryColor.withOpacity(isDarkMode ? 0.28 : 0.16),
+@@ -152,9 +155,7 @@ class AppTheme {
+           side: BorderSide(
+             color: highContrast
+                 ? colorScheme.onSurface.withOpacity(0.55)
+-                : (isDarkMode
+-                    ? Colors.white12
+-                    : AppDesignTokens.lightBorder),
++                : (isDarkMode ? Colors.white12 : AppDesignTokens.lightBorder),
+             width: highContrast ? 1.5 : 1.0,
+           ),
+         ),
+@@ -188,3 +189,36 @@ class AppTheme {
+     );
+   }
+ }
++
++/// Smooth page transition: fade, small slide up and a gentle scale-in.
++class SoftPageTransitionsBuilder extends PageTransitionsBuilder {
++  const SoftPageTransitionsBuilder();
++
++  @override
++  Widget buildTransitions<T>(
++    PageRoute<T> route,
++    BuildContext context,
++    Animation<double> animation,
++    Animation<double> secondaryAnimation,
++    Widget child,
++  ) {
++    final CurvedAnimation curved = CurvedAnimation(
++      parent: animation,
++      curve: Curves.easeOutCubic,
++      reverseCurve: Curves.easeInCubic,
++    );
++    return FadeTransition(
++      opacity: curved,
++      child: SlideTransition(
++        position: Tween<Offset>(
++          begin: const Offset(0, 0.04),
++          end: Offset.zero,
++        ).animate(curved),
++        child: ScaleTransition(
++          scale: Tween<double>(begin: 0.97, end: 1.0).animate(curved),
++          child: child,
++        ),
++      ),
++    );
++  }
++}
+diff --git a/lib/features/activities/screens/haneen_academy_screen.dart b/lib/features/activities/screens/haneen_academy_screen.dart
+index 761769f..aaeaf99 100644
+--- a/lib/features/activities/screens/haneen_academy_screen.dart
++++ b/lib/features/activities/screens/haneen_academy_screen.dart
+@@ -3,6 +3,7 @@ import 'package:haneen_kids_vod/l10n/app_localizations.dart';
+ import 'package:haneen_kids_vod/haneen_kids_exports.dart';
+ import 'package:haneen_kids_vod/features/companion/engine/companion_interaction_engine.dart';
+ import 'package:haneen_kids_vod/features/companion/engine/companion_interaction_state.dart';
++import 'package:haneen_kids_vod/shared/widgets/confetti_burst.dart';
+ 
+ class HaneenAcademyScreen extends StatefulWidget {
+   final AppStateManager appState;
+@@ -32,7 +33,11 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+     {'id': 'communication', 'title': 'الاستماع والنطق', 'emoji': '🎙️'},
+     {'id': 'simple_science', 'title': 'العلوم المبسطة', 'emoji': '🔬'},
+     {'id': 'daily_habits', 'title': 'المهارات الحياتية', 'emoji': '🪥'},
+-    {'id': 'thinking_problem_solving', 'title': 'التفكير والتركيز', 'emoji': '🧩'},
++    {
++      'id': 'thinking_problem_solving',
++      'title': 'التفكير والتركيز',
++      'emoji': '🧩'
++    },
+   ];
+ 
+   /// Phase 2: builds Tier 3 worked-example text from the lesson's own data.
+@@ -345,7 +350,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+                                           '💡 ${l10n.companionHintTier1(lesson.targetWordOrPhrase)}',
+                                         2 =>
+                                           '🧭 ${l10n.companionHintTier2(lesson.targetWordOrPhrase)}',
+-                                        _ => '📖 ${_tier3HintText(l10n, lesson)}',
++                                        _ =>
++                                          '📖 ${_tier3HintText(l10n, lesson)}',
+                                       };
+                                     });
+                                     CalmVoiceService.instance
+@@ -372,15 +378,14 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+                                   !hintLadder.answerRevealed) ...[
+                                 OutlinedButton.icon(
+                                   onPressed: () {
+-                                    final revealed =
+-                                        hintLadder.revealAnswer();
++                                    final revealed = hintLadder.revealAnswer();
+                                     if (!revealed) return;
+                                     setSheetState(() {
+                                       hintBannerText =
+                                           '👁️ ${l10n.companionAnswerRevealed}';
+                                     });
+-                                    CalmVoiceService.instance.speak(
+-                                        l10n.companionAnswerRevealed);
++                                    CalmVoiceService.instance
++                                        .speak(l10n.companionAnswerRevealed);
+                                   },
+                                   icon: const Icon(Icons.visibility_rounded,
+                                       size: 18, color: Color(0xFFA7F3D0)),
+@@ -450,13 +455,11 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+                                       ),
+                                     );
+                                     companionCelebrating = next.isCelebrating;
+-                                    companionExpression =
+-                                        next.isCelebrating
+-                                            ? CompanionFaceExpression.excited
+-                                            : (isCorrect
+-                                                ? CompanionFaceExpression.happy
+-                                                : CompanionFaceExpression
+-                                                    .thinking);
++                                    companionExpression = next.isCelebrating
++                                        ? CompanionFaceExpression.excited
++                                        : (isCorrect
++                                            ? CompanionFaceExpression.happy
++                                            : CompanionFaceExpression.thinking);
+                                     if (!isCorrect) {
+                                       showAlternativeRemediation = true;
+                                     }
+@@ -473,13 +476,17 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+                                     practicedPronunciation:
+                                         practicedVoiceInSession,
+                                     hintLevelUsed: hintLadder.hintLevelUsed,
+-                                    answerRevealed:
+-                                        hintLadder.answerRevealed,
++                                    answerRevealed: hintLadder.answerRevealed,
+                                   );
+                                   setSheetState(() {
+                                     feedbackBannerText =
+                                         res.childEncouragementMessage;
+                                   });
++                                  if (isCorrect &&
++                                      res.isMastered &&
++                                      ctx.mounted) {
++                                    ConfettiBurst.show(ctx);
++                                  }
+                                   if (isCorrect) {
+                                     await CalmVoiceService.instance
+                                         .speakSuperheroEncouragementAndAutoAdvance(
+@@ -594,8 +601,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+                                       practicedPronunciation:
+                                           practicedVoiceInSession,
+                                       hintLevelUsed: hintLadder.hintLevelUsed,
+-                                      answerRevealed:
+-                                          hintLadder.answerRevealed,
++                                      answerRevealed: hintLadder.answerRevealed,
+                                     );
+                                     setSheetState(() {
+                                       feedbackBannerText =
+@@ -624,7 +630,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+                       const SizedBox(height: 10),
+                       Container(
+                         width: double.infinity,
+-                        padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 8),
++                        padding: const EdgeInsets.symmetric(
++                            horizontal: 10, vertical: 8),
+                         decoration: BoxDecoration(
+                           color: const Color(0xFF14B8A6).withOpacity(0.16),
+                           borderRadius: BorderRadius.circular(14),
+@@ -637,8 +644,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+                               avatar: child.companionAvatar,
+                               mode: CompanionDisplayMode.bust,
+                               size: 40,
+-                              isCelebrating: quizAnsweredCorrectly &&
+-                                  companionCelebrating,
++                              isCelebrating:
++                                  quizAnsweredCorrectly && companionCelebrating,
+                               expressionOverride: companionExpression ??
+                                   (quizAnsweredCorrectly
+                                       ? CompanionFaceExpression.excited
+@@ -666,8 +673,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+                       width: double.infinity,
+                       child: ElevatedButton.icon(
+                         onPressed: () async {
+-                          final res = await widget.appState
+-                              .recordAcademyLessonAttempt(
++                          final res =
++                              await widget.appState.recordAcademyLessonAttempt(
+                             lessonId: lesson.id,
+                             lessonTitle: lesson.title,
+                             learnedWord: lesson.cards.first.wordExample,
+@@ -682,6 +689,9 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+                           );
+                           if (!ctx.mounted) return;
+                           Navigator.pop(ctx);
++                          if (res.isMastered && context.mounted) {
++                            ConfettiBurst.show(context);
++                          }
+                           ScaffoldMessenger.of(context).showSnackBar(
+                             SnackBar(
+                               content: Text(res.childEncouragementMessage),
+@@ -987,10 +997,9 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+                               final bool isHit = opt == story.correctQuizAnswer;
+                               return ElevatedButton(
+                                 style: ElevatedButton.styleFrom(
+-                                  backgroundColor:
+-                                      quizSolved && isHit
+-                                          ? const Color(0xFF10B981)
+-                                          : const Color(0xFF1E293B),
++                                  backgroundColor: quizSolved && isHit
++                                      ? const Color(0xFF10B981)
++                                      : const Color(0xFF1E293B),
+                                   foregroundColor: Colors.white,
+                                 ),
+                                 onPressed: () async {
+@@ -1062,8 +1071,9 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+         final account = widget.appState.currentAccount;
+         if (account == null) return const SizedBox.shrink();
+         final child = account.activeChild;
+-        final activeCurriculum = AdaptiveLearningEngine.getCurriculumForLanguage(
+-            widget.appState.localeController.learningLanguageCode);
++        final activeCurriculum =
++            AdaptiveLearningEngine.getCurriculumForLanguage(
++                widget.appState.localeController.learningLanguageCode);
+         final report = AdaptiveLearningEngine.buildPedagogicalReport(
+           child,
+           curriculum: activeCurriculum,
+@@ -1071,7 +1081,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+ 
+         final List<AcademyTrackLesson> filteredLessons;
+         if (_selectedTrackFilter == 'smart_path') {
+-          filteredLessons = AdaptiveLearningEngine.getRecommendedLessonsForChild(
++          filteredLessons =
++              AdaptiveLearningEngine.getRecommendedLessonsForChild(
+             child,
+             curriculum: activeCurriculum,
+           );
+@@ -1158,7 +1169,9 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+                           mode: CompanionDisplayMode.bust,
+                           size: 50,
+                           animateBreathing: true,
+-                          speechText: Localizations.localeOf(context).languageCode == 'ar'
++                          speechText: Localizations.localeOf(context)
++                                      .languageCode ==
++                                  'ar'
+                               ? 'أهلاً بك يا ${child.name} في الأكاديمية! هيا نتقدم في مسارك التعليمي الذكي.'
+                               : 'Welcome to the Academy, ${child.name}! Let\'s keep learning together.',
+                           speakOnTap: true,
+@@ -1269,15 +1282,18 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+                         itemBuilder: (ctx, sIdx) {
+                           final story = kInteractiveOriginalStories[sIdx];
+                           return GestureDetector(
+-                            onTap: () =>
+-                                _openInteractiveStoryCarouselSheet(story, child),
++                            onTap: () => _openInteractiveStoryCarouselSheet(
++                                story, child),
+                             child: Container(
+                               width: 235,
+                               margin: const EdgeInsets.only(left: 10),
+                               padding: const EdgeInsets.all(12),
+                               decoration: BoxDecoration(
+                                 gradient: const LinearGradient(
+-                                  colors: [Color(0xFF312E81), Color(0xFF0F172A)],
++                                  colors: [
++                                    Color(0xFF312E81),
++                                    Color(0xFF0F172A)
++                                  ],
+                                 ),
+                                 borderRadius: BorderRadius.circular(16),
+                                 border: Border.all(
+@@ -1345,8 +1361,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
+                           fontWeight: FontWeight.bold,
+                           fontSize: 12,
+                         ),
+-                        onSelected: (_) => setState(
+-                            () => _selectedTrackFilter = track['id']!),
++                        onSelected: (_) =>
++                            setState(() => _selectedTrackFilter = track['id']!),
+                       ),
+                     );
+                   }).toList(),
+diff --git a/lib/features/home/screens/child_account_tab.dart b/lib/features/home/screens/child_account_tab.dart
+index 9f1bd25..de97c7d 100644
+--- a/lib/features/home/screens/child_account_tab.dart
++++ b/lib/features/home/screens/child_account_tab.dart
+@@ -1,6 +1,7 @@
+ import 'package:flutter/material.dart';
+ import 'package:haneen_kids_vod/l10n/app_localizations.dart';
+ import 'package:haneen_kids_vod/haneen_kids_exports.dart';
++import 'package:haneen_kids_vod/shared/widgets/bouncy_tap.dart';
+ 
+ /// Destination 5: حسابي / My Account
+ class ChildAccountTab extends StatelessWidget {
+@@ -83,14 +84,16 @@ class ChildAccountTab extends StatelessWidget {
+                 ),
+               ),
+               const SizedBox(height: AppDesignTokens.spaceMd),
+-              Card(
++              BouncyTap(
++                  child: Card(
+                 child: InkWell(
+                   borderRadius: BorderRadius.circular(AppDesignTokens.radiusLg),
+                   onTap: () {
+                     Navigator.push(
+                       context,
+                       MaterialPageRoute(
+-                        builder: (_) => CharacterStudioScreen(appState: appState),
++                        builder: (_) =>
++                            CharacterStudioScreen(appState: appState),
+                       ),
+                     );
+                   },
+@@ -130,14 +133,16 @@ class ChildAccountTab extends StatelessWidget {
+                           style: ElevatedButton.styleFrom(
+                             backgroundColor: AppDesignTokens.primaryPurple,
+                             foregroundColor: Colors.white,
+-                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
++                            padding: const EdgeInsets.symmetric(
++                                horizontal: 12, vertical: 8),
+                             minimumSize: const Size(40, 36),
+                           ),
+                           onPressed: () {
+                             Navigator.push(
+                               context,
+                               MaterialPageRoute(
+-                                builder: (_) => CharacterStudioScreen(appState: appState),
++                                builder: (_) =>
++                                    CharacterStudioScreen(appState: appState),
+                               ),
+                             );
+                           },
+@@ -151,7 +156,7 @@ class ChildAccountTab extends StatelessWidget {
+                     ),
+                   ),
+                 ),
+-              ),
++              )),
+               const SizedBox(height: AppDesignTokens.spaceMd),
+               Card(
+                 child: Padding(
+diff --git a/lib/features/home/screens/onboarding_screen.dart b/lib/features/home/screens/onboarding_screen.dart
+index ddaf420..5ccb9cb 100644
+--- a/lib/features/home/screens/onboarding_screen.dart
++++ b/lib/features/home/screens/onboarding_screen.dart
+@@ -1,6 +1,7 @@
+ import 'package:flutter/material.dart';
+ import 'package:flutter/services.dart';
+ import 'package:haneen_kids_vod/haneen_kids_exports.dart';
++import 'package:haneen_kids_vod/shared/widgets/bouncy_tap.dart';
+ 
+ /// One-Time Initial Installation Setup Flow (`OnboardingScreen`):
+ /// Appears strictly once upon initial installation and takes the user sequentially through:
+@@ -28,10 +29,26 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
+   final TextEditingController _passcode12Ctrl = TextEditingController();
+ 
+   static const List<Map<String, String>> _ageOptions = [
+-    {'value': '2–3 سنوات', 'label': '٢ – ٣ سنوات (مرحلة الاكتشاف المبكر)', 'emoji': '🐣'},
+-    {'value': '3–4 سنوات', 'label': '٣ – ٤ سنوات (مرحلة التأسيس والنطق)', 'emoji': '🐰'},
+-    {'value': '4–5 سنوات', 'label': '٤ – ٥ سنوات (مرحلة المهارات والتفكير)', 'emoji': '🦁'},
+-    {'value': '5–6 سنوات', 'label': '٥ – ٦ سنوات (مرحلة الاستعداد المدرسي)', 'emoji': '🚀'},
++    {
++      'value': '2–3 سنوات',
++      'label': '٢ – ٣ سنوات (مرحلة الاكتشاف المبكر)',
++      'emoji': '🐣'
++    },
++    {
++      'value': '3–4 سنوات',
++      'label': '٣ – ٤ سنوات (مرحلة التأسيس والنطق)',
++      'emoji': '🐰'
++    },
++    {
++      'value': '4–5 سنوات',
++      'label': '٤ – ٥ سنوات (مرحلة المهارات والتفكير)',
++      'emoji': '🦁'
++    },
++    {
++      'value': '5–6 سنوات',
++      'label': '٥ – ٦ سنوات (مرحلة الاستعداد المدرسي)',
++      'emoji': '🚀'
++    },
+   ];
+ 
+   @override
+@@ -207,7 +224,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
+               final bool isSelected = _selectedAge == opt['value'];
+               return Padding(
+                 padding: const EdgeInsets.only(bottom: 10),
+-                child: InkWell(
++                child: BouncyTap(
++                    child: InkWell(
+                   borderRadius: BorderRadius.circular(16),
+                   onTap: () => setState(() => _selectedAge = opt['value']!),
+                   child: Container(
+@@ -248,7 +266,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
+                       ],
+                     ),
+                   ),
+-                ),
++                )),
+               );
+             }),
+           ],
+@@ -277,8 +295,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
+               decoration: BoxDecoration(
+                 color: const Color(0xFF1E293B),
+                 borderRadius: BorderRadius.circular(18),
+-                border: Border.all(
+-                    color: const Color(0xFF14B8A6).withOpacity(0.5)),
++                border:
++                    Border.all(color: const Color(0xFF14B8A6).withOpacity(0.5)),
+               ),
+               child: Column(
+                 children: [
+diff --git a/lib/features/home/widgets/cute_superhero_companion_banner.dart b/lib/features/home/widgets/cute_superhero_companion_banner.dart
+index ebc1c85..a3c9456 100644
+--- a/lib/features/home/widgets/cute_superhero_companion_banner.dart
++++ b/lib/features/home/widgets/cute_superhero_companion_banner.dart
+@@ -2,6 +2,7 @@ import 'dart:async';
+ import 'package:flutter/material.dart';
+ import 'package:haneen_kids_vod/haneen_kids_exports.dart';
+ import 'package:haneen_kids_vod/l10n/app_localizations.dart';
++import 'package:haneen_kids_vod/shared/widgets/bouncy_tap.dart';
+ 
+ class CuteSuperheroCompanionBanner extends StatefulWidget {
+   final AppStateManager appState;
+@@ -64,7 +65,8 @@ class _CuteSuperheroCompanionBannerState
+     final child = widget.appState.currentAccount?.activeChild;
+     if (child != null) {
+       final bool isAr = Localizations.localeOf(context).languageCode == 'ar';
+-      final aiRec = EducationalAiTutorService.analyzeAndRecommendForChild(child);
++      final aiRec =
++          EducationalAiTutorService.analyzeAndRecommendForChild(child);
+       CalmVoiceService.instance.speakCalmly(
+         widget.customCheerMessage ??
+             (isAr
+@@ -277,8 +279,8 @@ class _CuteSuperheroCompanionBannerState
+   Widget build(BuildContext context) {
+     final child = widget.appState.currentAccount?.activeChild;
+     final bool isCustomCompanion = _heroIndex == 0 && child != null;
+-    final hero = kCuteSuperheroCharacters[
+-        _heroIndex % kCuteSuperheroCharacters.length];
++    final hero =
++        kCuteSuperheroCharacters[_heroIndex % kCuteSuperheroCharacters.length];
+     final String companionName = isCustomCompanion
+         ? (child.name.isNotEmpty ? 'شخصية ${child.name}' : 'شخصيتي المرافقة')
+         : hero.nameAr;
+@@ -288,7 +290,8 @@ class _CuteSuperheroCompanionBannerState
+       final l10n = AppLocalizations.of(context);
+       greeting = l10n.companionGreeting(child.name);
+       if (!widget.compactMode) {
+-        final rec = EducationalAiTutorService.analyzeAndRecommendForChild(child);
++        final rec =
++            EducationalAiTutorService.analyzeAndRecommendForChild(child);
+         final String recommendedGameTitle =
+             isAr ? rec.recommendedGameTitleAr : rec.recommendedGameTitleEn;
+         greeting =
+@@ -299,7 +302,8 @@ class _CuteSuperheroCompanionBannerState
+         greeting ??
+         hero.encouragingAlerts[_alertIndex % hero.encouragingAlerts.length];
+ 
+-    return GestureDetector(
++    return BouncyTap(
++        child: GestureDetector(
+       onTap: _openHeroFriendsGalleryModal,
+       child: Container(
+         padding: EdgeInsets.symmetric(
+@@ -435,6 +439,6 @@ class _CuteSuperheroCompanionBannerState
+           ],
+         ),
+       ),
+-    );
++    ));
+   }
+ }
+diff --git a/lib/shared/widgets/bouncy_tap.dart b/lib/shared/widgets/bouncy_tap.dart
+new file mode 100644
+index 0000000..689bb8c
+--- /dev/null
++++ b/lib/shared/widgets/bouncy_tap.dart
+@@ -0,0 +1,40 @@
++import 'package:flutter/material.dart';
++
++/// Gives any tappable child a soft "press and bounce back" feel.
++///
++/// It only listens to raw pointer events, so it never steals taps from the
++/// child (InkWell, GestureDetector, buttons keep working as before).
++class BouncyTap extends StatefulWidget {
++  final Widget child;
++  final double pressedScale;
++
++  const BouncyTap({super.key, required this.child, this.pressedScale = 0.95});
++
++  @override
++  State<BouncyTap> createState() => _BouncyTapState();
++}
++
++class _BouncyTapState extends State<BouncyTap> {
++  bool _down = false;
++
++  void _set(bool v) {
++    if (mounted && _down != v) setState(() => _down = v);
++  }
++
++  @override
++  Widget build(BuildContext context) {
++    final bool reduce = MediaQuery.maybeOf(context)?.disableAnimations ?? false;
++    return Listener(
++      behavior: HitTestBehavior.translucent,
++      onPointerDown: (_) => _set(true),
++      onPointerUp: (_) => _set(false),
++      onPointerCancel: (_) => _set(false),
++      child: AnimatedScale(
++        scale: (_down && !reduce) ? widget.pressedScale : 1.0,
++        duration: Duration(milliseconds: _down ? 90 : 320),
++        curve: _down ? Curves.easeOut : Curves.elasticOut,
++        child: widget.child,
++      ),
++    );
++  }
++}
+diff --git a/lib/shared/widgets/confetti_burst.dart b/lib/shared/widgets/confetti_burst.dart
+new file mode 100644
+index 0000000..b03a564
+--- /dev/null
++++ b/lib/shared/widgets/confetti_burst.dart
+@@ -0,0 +1,127 @@
++import 'dart:math' as math;
++import 'package:flutter/material.dart';
++
++/// Short full-screen confetti celebration. Call [ConfettiBurst.show] when a
++/// child finishes a lesson. It draws above everything, ignores touches and
++/// removes itself after about two seconds.
++class ConfettiBurst extends StatefulWidget {
++  final VoidCallback onDone;
++  const ConfettiBurst({super.key, required this.onDone});
++
++  static void show(BuildContext context) {
++    if (MediaQuery.maybeOf(context)?.disableAnimations ?? false) return;
++    final OverlayState? overlay = Overlay.maybeOf(context, rootOverlay: true);
++    if (overlay == null) return;
++    late final OverlayEntry entry;
++    entry = OverlayEntry(
++      builder: (_) => ConfettiBurst(onDone: () => entry.remove()),
++    );
++    overlay.insert(entry);
++  }
++
++  @override
++  State<ConfettiBurst> createState() => _ConfettiBurstState();
++}
++
++class _Piece {
++  final double angle, speed, spin, size;
++  final Color color;
++  final bool round;
++  const _Piece(
++      this.angle, this.speed, this.spin, this.size, this.color, this.round);
++}
++
++class _ConfettiBurstState extends State<ConfettiBurst>
++    with SingleTickerProviderStateMixin {
++  late final AnimationController _c;
++  late final List<_Piece> _pieces;
++
++  static const List<Color> _colors = [
++    Color(0xFF6C63FF),
++    Color(0xFF16C79A),
++    Color(0xFFFFB84C),
++    Color(0xFFFF7892),
++    Color(0xFF53B9F5),
++  ];
++
++  @override
++  void initState() {
++    super.initState();
++    final math.Random r = math.Random();
++    _pieces = List.generate(70, (i) {
++      return _Piece(
++        -math.pi / 2 + (r.nextDouble() - 0.5) * math.pi * 1.1,
++        0.55 + r.nextDouble() * 0.75,
++        (r.nextDouble() - 0.5) * 12,
++        6 + r.nextDouble() * 7,
++        _colors[r.nextInt(_colors.length)],
++        r.nextBool(),
++      );
++    });
++    _c = AnimationController(
++      vsync: this,
++      duration: const Duration(milliseconds: 2200),
++    )..forward().whenComplete(widget.onDone);
++  }
++
++  @override
++  void dispose() {
++    _c.dispose();
++    super.dispose();
++  }
++
++  @override
++  Widget build(BuildContext context) {
++    return IgnorePointer(
++      child: AnimatedBuilder(
++        animation: _c,
++        builder: (_, __) => CustomPaint(
++          size: Size.infinite,
++          painter: _ConfettiPainter(_pieces, _c.value),
++        ),
++      ),
++    );
++  }
++}
++
++class _ConfettiPainter extends CustomPainter {
++  final List<_Piece> pieces;
++  final double t;
++  _ConfettiPainter(this.pieces, this.t);
++
++  @override
++  void paint(Canvas canvas, Size size) {
++    final Offset origin = Offset(size.width / 2, size.height * 0.62);
++    final double reach = size.height * 0.75;
++    for (final _Piece p in pieces) {
++      final double e = Curves.easeOutCubic.transform(t);
++      final double x =
++          origin.dx + math.cos(p.angle) * p.speed * reach * e * 0.7;
++      final double y = origin.dy +
++          math.sin(p.angle) * p.speed * reach * e +
++          t * t * size.height * 0.55; // gravity
++      final double fade = t < 0.7 ? 1.0 : (1.0 - (t - 0.7) / 0.3);
++      final Paint paint = Paint()
++        ..color = p.color.withValues(alpha: fade.clamp(0.0, 1.0));
++      canvas.save();
++      canvas.translate(x, y);
++      canvas.rotate(p.spin * t * 3);
++      if (p.round) {
++        canvas.drawCircle(Offset.zero, p.size / 2, paint);
++      } else {
++        canvas.drawRRect(
++          RRect.fromRectAndRadius(
++            Rect.fromCenter(
++                center: Offset.zero, width: p.size, height: p.size * 0.55),
++            const Radius.circular(2),
++          ),
++          paint,
++        );
++      }
++      canvas.restore();
++    }
++  }
++
++  @override
++  bool shouldRepaint(_ConfettiPainter old) => old.t != t;
++}
+diff --git a/test/polish_test.dart b/test/polish_test.dart
+new file mode 100644
+index 0000000..1ba8447
+--- /dev/null
++++ b/test/polish_test.dart
+@@ -0,0 +1,62 @@
++import 'package:flutter/material.dart';
++import 'package:flutter_test/flutter_test.dart';
++import 'package:haneen_kids_vod/app/app_theme.dart';
++import 'package:haneen_kids_vod/shared/widgets/bouncy_tap.dart';
++import 'package:haneen_kids_vod/shared/widgets/confetti_burst.dart';
++
++void main() {
++  testWidgets('BouncyTap shrinks while pressed and keeps child tap working',
++      (t) async {
++    int taps = 0;
++    await t.pumpWidget(MaterialApp(
++      home: Center(
++        child: BouncyTap(
++          child:
++              ElevatedButton(onPressed: () => taps++, child: const Text('go')),
++        ),
++      ),
++    ));
++    final g = await t.startGesture(t.getCenter(find.text('go')));
++    await t.pump(const Duration(milliseconds: 200));
++    expect(t.widget<AnimatedScale>(find.byType(AnimatedScale)).scale, 0.95);
++    await g.up();
++    await t.pump(const Duration(milliseconds: 600));
++    expect(t.widget<AnimatedScale>(find.byType(AnimatedScale)).scale, 1.0);
++    expect(taps, 1);
++  });
++
++  testWidgets('ConfettiBurst shows then removes itself', (t) async {
++    await t.pumpWidget(MaterialApp(
++      home: Builder(
++        builder: (c) => ElevatedButton(
++          onPressed: () => ConfettiBurst.show(c),
++          child: const Text('go'),
++        ),
++      ),
++    ));
++    await t.tap(find.text('go'));
++    await t.pump(const Duration(milliseconds: 700));
++    expect(find.byType(ConfettiBurst), findsOneWidget);
++    await t.pump(const Duration(seconds: 3));
++    expect(find.byType(ConfettiBurst), findsNothing);
++  });
++
++  testWidgets('theme uses soft page transitions', (t) async {
++    final theme = AppTheme.buildTheme(highContrast: false);
++    expect(theme.pageTransitionsTheme.builders[TargetPlatform.android],
++        isA<SoftPageTransitionsBuilder>());
++    await t.pumpWidget(MaterialApp(
++      theme: theme,
++      home: Builder(
++        builder: (c) => ElevatedButton(
++          onPressed: () => Navigator.push(
++              c, MaterialPageRoute(builder: (_) => const Text('page2'))),
++          child: const Text('go'),
++        ),
++      ),
++    ));
++    await t.tap(find.text('go'));
++    await t.pumpAndSettle();
++    expect(find.text('page2'), findsOneWidget);
++  });
++}

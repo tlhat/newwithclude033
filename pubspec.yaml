@@ -37,6 +37,31 @@ flutter:
   generate: true
   uses-material-design: true
   assets:
+    # audio-assets-begin
+    - assets/audio/audio_index.json
+    - assets/audio/cheerful_friend/companion/
+    - assets/audio/cheerful_friend/games_etiquette/
+    - assets/audio/cheerful_friend/games_odd/
+    - assets/audio/cheerful_friend/games_pattern/
+    - assets/audio/cheerful_friend/games_word/
+    - assets/audio/cheerful_friend/hero_alerts/
+    - assets/audio/cheerful_friend/lesson_feedback/
+    - assets/audio/cheerful_friend/reactions/
+    - assets/audio/cheerful_friend/stories/
+    - assets/audio/haneen/app/
+    - assets/audio/haneen/brain_games/
+    - assets/audio/haneen/companion/
+    - assets/audio/haneen/games_etiquette/
+    - assets/audio/haneen/games_pattern/
+    - assets/audio/haneen/games_pictureword/
+    - assets/audio/haneen/games_riddle/
+    - assets/audio/haneen/games_word/
+    - assets/audio/haneen/lessons/
+    - assets/audio/haneen/reactions/
+    - assets/audio/haneen/videos/
+    - assets/audio/storyteller/games_sound/
+    - assets/audio/storyteller/stories/
+    # audio-assets-end
     - assets/icon/
     - assets/avatars/
     - assets/avatars/parts/boy_front/

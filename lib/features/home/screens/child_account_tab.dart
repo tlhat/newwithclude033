@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
+import 'package:haneen_kids_vod/shared/widgets/bouncy_tap.dart';
 
 /// Destination 5: حسابي / My Account
 class ChildAccountTab extends StatelessWidget {
@@ -83,14 +84,16 @@ class ChildAccountTab extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: AppDesignTokens.spaceMd),
-              Card(
+              BouncyTap(
+                  child: Card(
                 child: InkWell(
                   borderRadius: BorderRadius.circular(AppDesignTokens.radiusLg),
                   onTap: () {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (_) => CharacterStudioScreen(appState: appState),
+                        builder: (_) =>
+                            CharacterStudioScreen(appState: appState),
                       ),
                     );
                   },
@@ -130,14 +133,16 @@ class ChildAccountTab extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                             backgroundColor: AppDesignTokens.primaryPurple,
                             foregroundColor: Colors.white,
-                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 12, vertical: 8),
                             minimumSize: const Size(40, 36),
                           ),
                           onPressed: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (_) => CharacterStudioScreen(appState: appState),
+                                builder: (_) =>
+                                    CharacterStudioScreen(appState: appState),
                               ),
                             );
                           },
@@ -151,7 +156,7 @@ class ChildAccountTab extends StatelessWidget {
                     ),
                   ),
                 ),
-              ),
+              )),
               const SizedBox(height: AppDesignTokens.spaceMd),
               Card(
                 child: Padding(

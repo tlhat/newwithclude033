@@ -58,7 +58,8 @@ enum CompanionViewAngle {
   front,
   threeQuarter;
 
-  String get assetSuffix => this == CompanionViewAngle.front ? 'front' : '3d_angle';
+  String get assetSuffix =>
+      this == CompanionViewAngle.front ? 'front' : '3d_angle';
 }
 
 /// Interactive 3D-sprite companion avatar for Haneen Kids.
@@ -122,8 +123,7 @@ class HaneenCompanionAvatarWidget extends StatefulWidget {
 
   /// Asset path of the 3D sprite for this avatar's gender and view angle.
   String spriteAsset() {
-    final String gender =
-        avatar.gender == CompanionGender.boy ? 'boy' : 'girl';
+    final String gender = avatar.gender == CompanionGender.boy ? 'boy' : 'girl';
     return 'assets/avatars/${gender}_${viewAngle.assetSuffix}.png';
   }
 
@@ -132,8 +132,8 @@ class HaneenCompanionAvatarWidget extends StatefulWidget {
       HaneenCompanionAvatarWidgetState();
 }
 
-class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget>
-    with TickerProviderStateMixin {
+class HaneenCompanionAvatarWidgetState
+    extends State<HaneenCompanionAvatarWidget> with TickerProviderStateMixin {
   late AnimationController _breathingController;
   late Animation<double> _breathingAnim;
 
@@ -226,8 +226,9 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
       }
     }
 
-    final bool shouldWave =
-        widget.avatar.pose == CompanionPose.waving || widget.isWaving || _manualWaving;
+    final bool shouldWave = widget.avatar.pose == CompanionPose.waving ||
+        widget.isWaving ||
+        _manualWaving;
     if (shouldWave && !_waveController.isAnimating) {
       _waveController.repeat(reverse: true);
     } else if (!shouldWave && _waveController.isAnimating) {
@@ -235,9 +236,10 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
       _waveController.value = 0.0;
     }
 
-    final bool shouldCelebrate = widget.avatar.pose == CompanionPose.celebrating ||
-        widget.isCelebrating ||
-        _manualCelebrating;
+    final bool shouldCelebrate =
+        widget.avatar.pose == CompanionPose.celebrating ||
+            widget.isCelebrating ||
+            _manualCelebrating;
     if (shouldCelebrate && !_jumpController.isAnimating) {
       _jumpController.repeat(reverse: true);
     } else if (!shouldCelebrate && _jumpController.isAnimating) {
@@ -258,8 +260,8 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
   }
 
   void _onSpeechSnapshotChanged() {
-    final CompanionSpeechSnapshot next = widget.speechCoordinator?.snapshot ??
-        CompanionSpeechSnapshot.idle;
+    final CompanionSpeechSnapshot next =
+        widget.speechCoordinator?.snapshot ?? CompanionSpeechSnapshot.idle;
     if (next == _speechSnapshot) return;
     // Ignore mouth-open values when mouth animation is disabled: only keep
     // the phase so listeners still see lifecycle, but never animate.
@@ -281,7 +283,9 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
     setState(() => _manualWaving = true);
     _waveController.repeat(reverse: true);
     Future.delayed(const Duration(milliseconds: 1600), () {
-      if (mounted && widget.avatar.pose != CompanionPose.waving && !widget.isWaving) {
+      if (mounted &&
+          widget.avatar.pose != CompanionPose.waving &&
+          !widget.isWaving) {
         setState(() => _manualWaving = false);
         _waveController.stop();
         _waveController.value = 0.0;
@@ -406,7 +410,8 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
                     disableAnimations ? 0.0 : _breathingAnim.value;
                 final double tiltAngle = disableAnimations
                     ? 0.0
-                    : (_waveAnim.value * 0.5 + (celebrating ? jumpT * 0.06 : 0.0));
+                    : (_waveAnim.value * 0.5 +
+                        (celebrating ? jumpT * 0.06 : 0.0));
 
                 return _buildScene(
                   context,
@@ -435,8 +440,9 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
   }) {
     final double size = widget.size;
     final bool isBust = widget.mode == CompanionDisplayMode.bust;
-    final bool waving =
-        widget.avatar.pose == CompanionPose.waving || widget.isWaving || _manualWaving;
+    final bool waving = widget.avatar.pose == CompanionPose.waving ||
+        widget.isWaving ||
+        _manualWaving;
 
     final Widget characterBody = widget.useLayeredRig
         ? HaneenLayeredAvatarWidget(
@@ -446,7 +452,8 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
             animateBreathing: widget.animateBreathing,
             isWaving: waving,
             isCelebrating: celebrating,
-            expressionOverride: widget.expressionOverride ?? _reactionExpression,
+            expressionOverride:
+                widget.expressionOverride ?? _reactionExpression,
             speechCoordinator: widget.speechCoordinator,
             mouthAnimationEnabled: widget.mouthAnimationEnabled,
             debugForceMouthOpen: widget.debugForceMouthOpen,
@@ -458,7 +465,9 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
       alignment: Alignment.bottomCenter,
       children: [
         // Explorer wings sit behind the sprite (legacy path only; layered rig has native wings)
-        if (!widget.useLayeredRig && widget.avatar.accessory == 'wings' && !isBust)
+        if (!widget.useLayeredRig &&
+            widget.avatar.accessory == 'wings' &&
+            !isBust)
           Positioned(
             bottom: size * 0.42,
             child: Opacity(
@@ -510,9 +519,10 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
             Positioned(
               bottom: size * 0.015,
               child: Transform.scale(
-                scale: 1.0 - jumpT * 0.35,
+                // Shadow shrinks/fades as the character floats up (floatDy is -4..4).
+                scale: (1.0 - jumpT * 0.35) * (1.0 + floatDy * 0.012),
                 child: Opacity(
-                  opacity: 0.35 * (1.0 - jumpT * 0.55),
+                  opacity: 0.35 * (1.0 - jumpT * 0.55) * (1.0 + floatDy * 0.02),
                   child: Container(
                     width: size * 0.62,
                     height: size * 0.085,
@@ -537,11 +547,18 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
             child: Transform.translate(
               offset: Offset(0, floatDy + jumpLift * size),
               child: Transform.rotate(
-                angle: tiltAngle,
-                child: SizedBox(
-                  width: size,
-                  height: size * 0.94,
-                  child: isBust ? _buildBustClip(character) : character,
+                angle: tiltAngle + floatDy * 0.0035,
+                alignment: Alignment.bottomCenter,
+                // Soft squash and stretch synced to the breathing float.
+                child: Transform.scale(
+                  alignment: Alignment.bottomCenter,
+                  scaleX: 1.0 - floatDy * 0.004,
+                  scaleY: 1.0 + floatDy * 0.006,
+                  child: SizedBox(
+                    width: size,
+                    height: size * 0.94,
+                    child: isBust ? _buildBustClip(character) : character,
+                  ),
                 ),
               ),
             ),
@@ -592,7 +609,8 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
     );
   }
 
-  Widget _buildBustClip(Widget character) {    return ClipOval(
+  Widget _buildBustClip(Widget character) {
+    return ClipOval(
       child: OverflowBox(
         maxWidth: double.infinity,
         maxHeight: double.infinity,
@@ -674,9 +692,12 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
           Color(0xFF4ADE80),
         ];
         dots = [
-          _SceneDot(const Offset(-0.45, -0.35), 6.0, Colors.pinkAccent.withOpacity(0.7)),
-          _SceneDot(const Offset(0.42, -0.42), 7.0, Colors.amber.withOpacity(0.8)),
-          _SceneDot(const Offset(-0.38, 0.30), 5.0, Colors.pinkAccent.withOpacity(0.5)),
+          _SceneDot(const Offset(-0.45, -0.35), 6.0,
+              Colors.pinkAccent.withOpacity(0.7)),
+          _SceneDot(
+              const Offset(0.42, -0.42), 7.0, Colors.amber.withOpacity(0.8)),
+          _SceneDot(const Offset(-0.38, 0.30), 5.0,
+              Colors.pinkAccent.withOpacity(0.5)),
         ];
         break;
       case 'space':
@@ -699,8 +720,10 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
             ? const [Color(0xFF334155), Color(0xFF1E293B), Color(0xFF0F172A)]
             : const [Color(0xFFFEF3C7), Color(0xFFFDE68A), Color(0xFFFACC15)];
         dots = [
-          _SceneDot(const Offset(-0.40, -0.38), 4.5, Colors.amber.withOpacity(0.7)),
-          _SceneDot(const Offset(0.44, -0.35), 3.8, Colors.amber.withOpacity(0.5)),
+          _SceneDot(
+              const Offset(-0.40, -0.38), 4.5, Colors.amber.withOpacity(0.7)),
+          _SceneDot(
+              const Offset(0.44, -0.35), 3.8, Colors.amber.withOpacity(0.5)),
         ];
         break;
     }
@@ -754,10 +777,22 @@ class HaneenCompanionAvatarWidgetState extends State<HaneenCompanionAvatarWidget
     final double s = size * 0.14;
     final style = TextStyle(fontSize: s);
     return [
-      Positioned(top: size * 0.16, left: -s * 0.4, child: Opacity(opacity: 0.9, child: Text('⭐', style: style))),
-      Positioned(top: size * 0.05, right: -s * 0.3, child: Opacity(opacity: 0.85, child: Text('🌟', style: style))),
-      Positioned(bottom: size * 0.30, left: -s * 0.6, child: Opacity(opacity: 0.75, child: Text('✨', style: style))),
-      Positioned(bottom: size * 0.22, right: -s * 0.5, child: Opacity(opacity: 0.8, child: Text('⭐', style: style))),
+      Positioned(
+          top: size * 0.16,
+          left: -s * 0.4,
+          child: Opacity(opacity: 0.9, child: Text('⭐', style: style))),
+      Positioned(
+          top: size * 0.05,
+          right: -s * 0.3,
+          child: Opacity(opacity: 0.85, child: Text('🌟', style: style))),
+      Positioned(
+          bottom: size * 0.30,
+          left: -s * 0.6,
+          child: Opacity(opacity: 0.75, child: Text('✨', style: style))),
+      Positioned(
+          bottom: size * 0.22,
+          right: -s * 0.5,
+          child: Opacity(opacity: 0.8, child: Text('⭐', style: style))),
       Positioned(
         top: size * 0.28,
         right: s * 0.2,

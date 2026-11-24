@@ -53,13 +53,11 @@ class AppTheme {
             : AppDesignTokens.darkSurface)
         : AppDesignTokens.lightSurface;
 
-    final Color primaryColor = highContrast
-        ? const Color(0xFF818CF8)
-        : AppDesignTokens.primaryPurple;
+    final Color primaryColor =
+        highContrast ? const Color(0xFF818CF8) : AppDesignTokens.primaryPurple;
 
-    final Color secondaryColor = highContrast
-        ? const Color(0xFF2DD4BF)
-        : AppDesignTokens.secondaryGreen;
+    final Color secondaryColor =
+        highContrast ? const Color(0xFF2DD4BF) : AppDesignTokens.secondaryGreen;
 
     final Brightness brightness =
         isDarkMode ? Brightness.dark : Brightness.light;
@@ -84,8 +82,7 @@ class AppTheme {
             onSurface: const Color(0xFF0F172A),
           );
 
-    final ThemeData base =
-        isDarkMode ? ThemeData.dark() : ThemeData.light();
+    final ThemeData base = isDarkMode ? ThemeData.dark() : ThemeData.light();
 
     return base.copyWith(
       brightness: brightness,
@@ -105,6 +102,12 @@ class AppTheme {
           fontWeight: FontWeight.bold,
           color: colorScheme.onSurface,
         ),
+      ),
+      pageTransitionsTheme: const PageTransitionsTheme(
+        builders: <TargetPlatform, PageTransitionsBuilder>{
+          TargetPlatform.android: SoftPageTransitionsBuilder(),
+          TargetPlatform.iOS: SoftPageTransitionsBuilder(),
+        },
       ),
       navigationBarTheme: NavigationBarThemeData(
         backgroundColor: surfaceColor,
@@ -152,9 +155,7 @@ class AppTheme {
           side: BorderSide(
             color: highContrast
                 ? colorScheme.onSurface.withOpacity(0.55)
-                : (isDarkMode
-                    ? Colors.white12
-                    : AppDesignTokens.lightBorder),
+                : (isDarkMode ? Colors.white12 : AppDesignTokens.lightBorder),
             width: highContrast ? 1.5 : 1.0,
           ),
         ),
@@ -183,6 +184,39 @@ class AppTheme {
         focusedBorder: OutlineInputBorder(
           borderRadius: BorderRadius.circular(AppDesignTokens.radiusMd),
           borderSide: BorderSide(color: primaryColor, width: 2),
+        ),
+      ),
+    );
+  }
+}
+
+/// Smooth page transition: fade, small slide up and a gentle scale-in.
+class SoftPageTransitionsBuilder extends PageTransitionsBuilder {
+  const SoftPageTransitionsBuilder();
+
+  @override
+  Widget buildTransitions<T>(
+    PageRoute<T> route,
+    BuildContext context,
+    Animation<double> animation,
+    Animation<double> secondaryAnimation,
+    Widget child,
+  ) {
+    final CurvedAnimation curved = CurvedAnimation(
+      parent: animation,
+      curve: Curves.easeOutCubic,
+      reverseCurve: Curves.easeInCubic,
+    );
+    return FadeTransition(
+      opacity: curved,
+      child: SlideTransition(
+        position: Tween<Offset>(
+          begin: const Offset(0, 0.04),
+          end: Offset.zero,
+        ).animate(curved),
+        child: ScaleTransition(
+          scale: Tween<double>(begin: 0.97, end: 1.0).animate(curved),
+          child: child,
         ),
       ),
     );

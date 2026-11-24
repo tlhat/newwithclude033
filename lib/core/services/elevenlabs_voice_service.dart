@@ -5,6 +5,7 @@ import 'package:crypto/crypto.dart' as crypto;
 import 'package:http/http.dart' as http;
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
+import 'package:haneen_kids_vod/core/services/local_audio_library.dart';
 
 enum ElevenLabsSpeechContext {
   storyNarration,
@@ -352,6 +353,7 @@ class ElevenLabsVoiceService {
     required String sessionAccessToken,
     bool respectContextualPersonas = true,
     SharedPreferences? prefs,
+    List<String>? extraLocalLookupTexts,
   }) async {
     final int myToken = cancelActiveSpeechAndIssueToken();
     final ElevenLabsVoicePersona persona = resolvePersonaForContext(
@@ -373,6 +375,29 @@ class ElevenLabsVoiceService {
       speed: clampedSpeed,
       adaptedText: adaptedText,
     );
+
+    // 0. Bundled offline clips (assets/audio). No network, no API key needed.
+    final String? localClip = await LocalAudioLibrary.resolveToFile(
+      persona.id,
+      text,
+      alternateTexts: [adaptedText, ...?extraLocalLookupTexts],
+    );
+    if (localClip != null) {
+      return ElevenLabsSynthesisOutcome(
+        success: true,
+        servedFromCache: true,
+        usedPrebundledElevenLabsOfflineClip: false,
+        personaId: persona.id,
+        voiceId: voiceId,
+        modelId: modelId,
+        dialect: dialect,
+        speed: clampedSpeed,
+        adaptedText: adaptedText,
+        cacheKey: 'local_${LocalAudioLibrary.keyFor(persona.id, text)}',
+        cachedAudioFilePath: localClip,
+        playbackToken: myToken,
+      );
+    }
 
     // 1. Check local ElevenLabs cache first
     if (_memoryAudioCache.containsKey(cacheKey)) {

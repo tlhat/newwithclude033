@@ -251,6 +251,10 @@ class AppStateManager extends ChangeNotifier {
 
   Future<void> initialize() async {
     CalmVoiceService.instance.attachSharedPreferences(_prefs);
+    CalmVoiceService.instance.childNameProvider = () =>
+        (currentAccount != null && hasSelectedChildInSession)
+            ? currentAccount!.activeChild.name
+            : null;
     await CalmVoiceService.instance.init();
     onboardingCompleted = _prefs.getBool('onboarding_completed') ?? false;
     isDarkMode = _prefs.getBool('app_dark_mode') ?? true;

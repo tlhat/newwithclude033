@@ -1,0 +1,7 @@
+Item 1: offline audio loader + "حنين تقول" label fix
+1) Copy these files over the project (same folders).
+2) Put the generated mp3 files in: assets/audio/<persona>/<feature>/<id>.mp3  (names exactly as in manifest.csv "file" column)
+3) From the project folder run:  python3 tools/build_audio_index.py
+   (it creates assets/audio/audio_index.json and adds the audio folders to pubspec.yaml)
+4) flutter pub get && flutter run
+Missing clips are fine: the app plays the file if it exists, otherwise uses ElevenLabs as before.

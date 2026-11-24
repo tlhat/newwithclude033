@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
+import 'package:haneen_kids_vod/shared/widgets/bouncy_tap.dart';
 
 /// One-Time Initial Installation Setup Flow (`OnboardingScreen`):
 /// Appears strictly once upon initial installation and takes the user sequentially through:
@@ -28,10 +29,26 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
   final TextEditingController _passcode12Ctrl = TextEditingController();
 
   static const List<Map<String, String>> _ageOptions = [
-    {'value': '2–3 سنوات', 'label': '٢ – ٣ سنوات (مرحلة الاكتشاف المبكر)', 'emoji': '🐣'},
-    {'value': '3–4 سنوات', 'label': '٣ – ٤ سنوات (مرحلة التأسيس والنطق)', 'emoji': '🐰'},
-    {'value': '4–5 سنوات', 'label': '٤ – ٥ سنوات (مرحلة المهارات والتفكير)', 'emoji': '🦁'},
-    {'value': '5–6 سنوات', 'label': '٥ – ٦ سنوات (مرحلة الاستعداد المدرسي)', 'emoji': '🚀'},
+    {
+      'value': '2–3 سنوات',
+      'label': '٢ – ٣ سنوات (مرحلة الاكتشاف المبكر)',
+      'emoji': '🐣'
+    },
+    {
+      'value': '3–4 سنوات',
+      'label': '٣ – ٤ سنوات (مرحلة التأسيس والنطق)',
+      'emoji': '🐰'
+    },
+    {
+      'value': '4–5 سنوات',
+      'label': '٤ – ٥ سنوات (مرحلة المهارات والتفكير)',
+      'emoji': '🦁'
+    },
+    {
+      'value': '5–6 سنوات',
+      'label': '٥ – ٦ سنوات (مرحلة الاستعداد المدرسي)',
+      'emoji': '🚀'
+    },
   ];
 
   @override
@@ -207,7 +224,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               final bool isSelected = _selectedAge == opt['value'];
               return Padding(
                 padding: const EdgeInsets.only(bottom: 10),
-                child: InkWell(
+                child: BouncyTap(
+                    child: InkWell(
                   borderRadius: BorderRadius.circular(16),
                   onTap: () => setState(() => _selectedAge = opt['value']!),
                   child: Container(
@@ -248,7 +266,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                       ],
                     ),
                   ),
-                ),
+                )),
               );
             }),
           ],
@@ -277,8 +295,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               decoration: BoxDecoration(
                 color: const Color(0xFF1E293B),
                 borderRadius: BorderRadius.circular(18),
-                border: Border.all(
-                    color: const Color(0xFF14B8A6).withOpacity(0.5)),
+                border:
+                    Border.all(color: const Color(0xFF14B8A6).withOpacity(0.5)),
               ),
               child: Column(
                 children: [
