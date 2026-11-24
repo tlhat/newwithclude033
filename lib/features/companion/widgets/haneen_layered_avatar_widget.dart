@@ -110,9 +110,9 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
     // 1. Breathing: gentle 2.6s sinusoidal cycle
     _breathingController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 2600),
+      duration: const Duration(milliseconds: 2000),
     );
-    _breathingAnim = Tween<double>(begin: -1.8, end: 1.8).animate(
+    _breathingAnim = Tween<double>(begin: -4.5, end: 4.5).animate(
       CurvedAnimation(parent: _breathingController, curve: Curves.easeInOutSine),
     );
     if (widget.animateBreathing) {
@@ -122,9 +122,9 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
     // 2. Head micro-tilt and bob: 3.2s cadence
     _headController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 3200),
+      duration: const Duration(milliseconds: 2200),
     );
-    _headAnim = Tween<double>(begin: -0.016, end: 0.018).animate(
+    _headAnim = Tween<double>(begin: -0.06, end: 0.07).animate(
       CurvedAnimation(parent: _headController, curve: Curves.easeInOutCubic),
     );
     if (widget.animateBreathing) {
@@ -136,7 +136,7 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
       vsync: this,
       duration: const Duration(milliseconds: 2600),
     );
-    _armAnim = Tween<double>(begin: -0.02, end: 0.02).animate(
+    _armAnim = Tween<double>(begin: -0.10, end: 0.10).animate(
       CurvedAnimation(parent: _armController, curve: Curves.easeInOut),
     );
     if (widget.animateBreathing) {
@@ -148,7 +148,7 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
       vsync: this,
       duration: const Duration(milliseconds: 620),
     );
-    _waveAnim = Tween<double>(begin: 0.06, end: 0.38).animate(
+    _waveAnim = Tween<double>(begin: 0.10, end: 0.85).animate(
       CurvedAnimation(parent: _waveController, curve: Curves.easeInOut),
     );
     if (widget.isWaving || widget.avatar.pose == CompanionPose.waving) {
@@ -160,7 +160,7 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
       vsync: this,
       duration: const Duration(milliseconds: 2100),
     );
-    _hairAnim = Tween<double>(begin: -0.022, end: 0.022).animate(
+    _hairAnim = Tween<double>(begin: -0.06, end: 0.06).animate(
       CurvedAnimation(parent: _hairController, curve: Curves.easeInOutSine),
     );
     if (widget.animateBreathing) {
