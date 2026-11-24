@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
+import 'level_check_screen.dart';
 
 class PathStep {
   final String id;
@@ -90,6 +91,13 @@ class _MyPathScreenState extends State<MyPathScreen> {
     super.initState();
     _load();
     HintVoiceService.instance.play('hint_my_path', oncePerSession: true);
+    if (!widget.appState.levelCheckDone) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (!mounted) return;
+        Navigator.of(context).push(MaterialPageRoute(
+            builder: (_) => LevelCheckScreen(appState: widget.appState)));
+      });
+    }
   }
 
   Future<void> _load() async {

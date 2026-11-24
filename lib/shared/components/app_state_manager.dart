@@ -1845,6 +1845,20 @@ class AppStateManager extends ChangeNotifier {
     return null;
   }
 
+  /// Level check result: sets the curriculum tier and remembers it was done.
+  Future<void> applyLevelCheckTier(int tier) async {
+    final ParentAccount? acc = currentAccount;
+    if (acc == null) return;
+    acc.activeChild.currentCurriculumTier = tier.clamp(1, 4);
+    await _prefs.setBool('level_check_done_${acc.activeChild.id}', true);
+    await _saveAccounts();
+    notifyListeners();
+  }
+
+  bool get levelCheckDone =>
+      _prefs.getBool('level_check_done_${currentAccount?.activeChild.id}') ??
+      false;
+
   Future<void> setRemoteDeviceLockForChild({
     required String childId,
     required bool lockDevice,
