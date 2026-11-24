@@ -1,4 +1,5 @@
 import 'package:haneen_kids_vod/core/services/app_rating_service.dart';
+import 'package:haneen_kids_vod/features/home/screens/my_path_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
@@ -37,6 +38,20 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) SectionIntroService.instance.playForTab(_currentIndex);
       AppRatingService.instance.maybeAsk();
+      widget.appState.claimDailyStreak().then((int days) {
+        if (!mounted || days <= 0) return;
+        ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+          backgroundColor: const Color(0xFFF59E0B),
+          duration: const Duration(seconds: 4),
+          content: Text(
+            days == 1
+                ? '🔥 أهلاً بك! بداية مغامرة جديدة +١ ⭐'
+                : '🔥 $days أيام متتالية! برافو يا بطل +١ ⭐',
+            textAlign: TextAlign.center,
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+        ));
+      });
     });
   }
 
@@ -155,6 +170,21 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
     ];
 
     return Scaffold(
+      floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
+      floatingActionButton: _currentIndex <= 2
+          ? FloatingActionButton.extended(
+              heroTag: 'my_path_fab',
+              onPressed: () {
+                CalmVoiceService.instance.stopSpeaking();
+                Navigator.of(context).push(MaterialPageRoute(
+                    builder: (_) => MyPathScreen(
+                        appState: widget.appState,
+                        onGoToTab: _selectIndex)));
+              },
+              icon: const Icon(Icons.explore_rounded),
+              label: const Text('مساري'),
+            )
+          : null,
       body: IndexedStack(
         index: _currentIndex,
         children: pages,

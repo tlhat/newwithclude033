@@ -364,6 +364,15 @@ class AppStateManager extends ChangeNotifier {
           child.usedMinutesToday++;
           _activeSessionSeconds += 60;
           final int remaining = child.dailyTimeLimit - child.usedMinutesToday;
+          if (_activeSessionSeconds > 0 &&
+              _activeSessionSeconds % (20 * 60) == 0 &&
+              remaining > 1 &&
+              currentAccount!.voiceAssistantEnabled) {
+            final String brk =
+                'يا ${child.name}، نرتاح شوية؟ بُصّ بعيد بعينيك لمدة عشر ثواني ثم كمّل مغامرتك.';
+            currentAssistantBannerMessage = brk;
+            CalmVoiceService.instance.speakCalmly(brk);
+          }
           if (remaining == 5 && currentAccount!.voiceAssistantEnabled) {
             final msg =
                 'تنبيه لطيف يا ${child.name}، بقيت خمس دقائق فقط في وقت المشاهدة اليومي، استعد لنشاط البطل!';
@@ -2051,6 +2060,43 @@ class AppStateManager extends ChangeNotifier {
         newValue ?? !currentAccount!.warmEveningFilter;
     await _saveAccounts();
     notifyListeners();
+  }
+
+  /// Daily streak: call once when the child area opens. Returns the new streak
+  /// length when today is a NEW day (and gives +1 star), otherwise 0.
+  Future<int> claimDailyStreak() async {
+    final child = currentAccount?.activeChild;
+    if (child == null) return 0;
+    final String kDay = 'streak_day_${child.id}';
+    final String kCnt = 'streak_count_${child.id}';
+    final DateTime now = DateTime.now();
+    final DateTime today = DateTime(now.year, now.month, now.day);
+    final String? last = _prefs.getString(kDay);
+    int count = _prefs.getInt(kCnt) ?? 0;
+    if (last != null) {
+      final DateTime? d = DateTime.tryParse(last);
+      if (d != null) {
+        final int gap = today.difference(d).inDays;
+        if (gap <= 0) return 0;
+        count = gap == 1 ? count + 1 : 1;
+      } else {
+        count = 1;
+      }
+    } else {
+      count = 1;
+    }
+    await _prefs.setString(kDay, today.toIso8601String());
+    await _prefs.setInt(kCnt, count);
+    child.starsEarned += 1;
+    await _saveAccounts();
+    notifyListeners();
+    return count;
+  }
+
+  int currentStreakDays() {
+    final child = currentAccount?.activeChild;
+    if (child == null) return 0;
+    return _prefs.getInt('streak_count_${child.id}') ?? 0;
   }
 
   Future<bool> recordBrainGameWin({
