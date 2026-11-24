@@ -13540,5 +13540,101 @@
 "feature": "wrong_answer",
 "persona": "haneen",
 "text": "اسمع أول صوت في الكلمة، وده هو الحرف اللي ناقص."
+},
+{
+"id": "hint_games_pick",
+"feature": "hints",
+"persona": "haneen",
+"text": "اختار لعبة من اللي قدامك وأنا هلعب معاك!"
+},
+{
+"id": "hint_stories_pick",
+"feature": "hints",
+"persona": "haneen",
+"text": "دوس على الحكاية اللي عجباك، وأنا هحكيهالك."
+},
+{
+"id": "hint_academy_pick",
+"feature": "hints",
+"persona": "haneen",
+"text": "يلا نتعلم حاجة جديدة النهاردة. دوس على الدرس."
+},
+{
+"id": "hint_my_path",
+"feature": "hints",
+"persona": "haneen",
+"text": "دي خطتك النهاردة. دوس على أول خطوة ونبدأ!"
+},
+{
+"id": "hint_draw_start",
+"feature": "hints",
+"persona": "haneen",
+"text": "حط صباعك على الشكل وارسم معايا بالراحة."
+},
+{
+"id": "hint_draw_imagine",
+"feature": "hints",
+"persona": "haneen",
+"text": "ارسم اللي في خيالك. أنا فضولية أشوفه!"
+},
+{
+"id": "hint_draw_ask_1",
+"feature": "hints",
+"persona": "haneen",
+"text": "إنت بتحب ترسم إيه النهاردة؟ حيوان ولا عربية؟"
+},
+{
+"id": "hint_draw_ask_2",
+"feature": "hints",
+"persona": "haneen",
+"text": "إيه اللون اللي نفسك تستخدمه في رسمتك؟"
+},
+{
+"id": "hint_draw_done",
+"feature": "hints",
+"persona": "haneen",
+"text": "إيه الرسمة الجميلة دي! برافو عليك."
+},
+{
+"id": "hint_trace_letter",
+"feature": "hints",
+"persona": "haneen",
+"text": "امشي بصباعك على الحرف من النقطة الخضرا."
+},
+{
+"id": "hint_count_pics",
+"feature": "hints",
+"persona": "haneen",
+"text": "عُد معايا الصور، واحد، اتنين، تلاتة."
+},
+{
+"id": "hint_sort_shapes",
+"feature": "hints",
+"persona": "haneen",
+"text": "شد الشكل وحطه في مكانه الصح."
+},
+{
+"id": "hint_try_again",
+"feature": "hints",
+"persona": "haneen",
+"text": "مش مشكلة، جرّب تاني. أنا واثقة إنك تقدر!"
+},
+{
+"id": "hint_great",
+"feature": "hints",
+"persona": "haneen",
+"text": "برافو! إنت شاطر جداً."
+},
+{
+"id": "hint_eye_break",
+"feature": "hints",
+"persona": "haneen",
+"text": "يلا نريّح عينينا شوية. بص بعيد عن الشاشة وعُد لخمسة."
+},
+{
+"id": "hint_streak",
+"feature": "hints",
+"persona": "haneen",
+"text": "إنت جيت النهاردة كمان! خدت نجمة زيادة."
 }
 ]

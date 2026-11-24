@@ -372,7 +372,7 @@ class AppStateManager extends ChangeNotifier {
             final String brk =
                 'يا ${child.name}، نرتاح شوية؟ بُصّ بعيد بعينيك لمدة عشر ثواني ثم كمّل مغامرتك.';
             currentAssistantBannerMessage = brk;
-            CalmVoiceService.instance.speakCalmly(brk);
+            HintVoiceService.instance.play('hint_eye_break');
           }
           if (remaining == 5 && currentAccount!.voiceAssistantEnabled) {
             final msg =

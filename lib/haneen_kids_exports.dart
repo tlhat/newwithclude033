@@ -21,6 +21,7 @@ export 'core/utils/arabic_text_utils.dart';
 export 'core/services/elevenlabs_voice_service.dart';
 export 'core/services/calm_voice_service.dart';
 export 'core/services/section_intro_service.dart';
+export 'core/services/hint_voice_service.dart';
 export 'core/services/google_account_service.dart';
 export 'features/home/screens/entry_gate_screens.dart';
 export 'features/home/widgets/google_backup_card.dart';

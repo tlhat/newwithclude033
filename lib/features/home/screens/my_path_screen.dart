@@ -89,6 +89,7 @@ class _MyPathScreenState extends State<MyPathScreen> {
   void initState() {
     super.initState();
     _load();
+    HintVoiceService.instance.play('hint_my_path', oncePerSession: true);
   }
 
   Future<void> _load() async {
