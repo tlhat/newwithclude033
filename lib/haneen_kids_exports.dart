@@ -23,6 +23,7 @@ export 'core/services/calm_voice_service.dart';
 export 'core/services/section_intro_service.dart';
 export 'core/services/google_account_service.dart';
 export 'features/home/widgets/google_backup_card.dart';
+export 'features/videos/widgets/animated_story_scene.dart';
 
 export 'data/models/video_model.dart';
 export 'data/models/child_profile_model.dart';

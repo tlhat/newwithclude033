@@ -591,7 +591,6 @@ class CalmVoiceService {
     final ElevenLabsSynthesisOutcome outcome =
         await ElevenLabsVoiceService.synthesizeSpeech(
       text: cleanText,
-      nameNeutralTexts: _nameNeutralVariants(cleanText),
       personaId: overridePersonaId ?? activePersonaId,
       dialect: activeDialect,
       speed: activeVoiceSpeed,
@@ -618,17 +617,6 @@ class CalmVoiceService {
   /// Returns the name of the child currently using the app (set by the app
   /// state) so offline clips recorded with "يا بطل" can still be found.
   String? Function()? childNameProvider;
-
-  /// Variants of [text] with the child's name replaced by the generic "بطل".
-  List<String> _nameNeutralVariants(String text) {
-    final String? n = childNameProvider?.call()?.trim();
-    if (n == null || n.isEmpty || !text.contains(n)) return const [];
-    return [
-      text.replaceAll('يا $n،', 'يا بطل حنين،').replaceAll(n, 'بطل'),
-      text.replaceAll('يا $n', 'يا بطل').replaceAll(n, 'بطل'),
-      text.replaceAll(' يا $n', '').replaceAll(n, 'بطل'),
-    ];
-  }
 
   Future<void> stopSpeaking() async {
     ElevenLabsVoiceService.cancelActiveSpeechAndIssueToken();
