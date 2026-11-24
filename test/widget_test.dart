@@ -1020,7 +1020,21 @@ void main() {
         childName: child.name,
         gentleHint: 'تأمل لون الفاكهة الأصفر',
       );
-      expect(gentleCorrection, contains('تلميح لطيف من حنين'));
+      // Wrong answers now use the 3-step coaching ladder: a cheer first, a
+      // general nudge on the 1st miss, the specific hint from the 2nd miss.
+      expect(gentleCorrection.trim(), isNotEmpty);
+      expect(
+        CalmVoiceService.kWrongEncouragements
+            .any((l) => gentleCorrection.contains(l)),
+        isTrue,
+      );
+      final String secondMiss =
+          await CalmVoiceService.instance.reactToChildAnswerAsHaneen(
+        isCorrect: false,
+        childName: child.name,
+        gentleHint: 'تأمل لون الفاكهة الأصفر',
+      );
+      expect(secondMiss, contains('تأمل لون الفاكهة الأصفر'));
 
       // 8e. Progressive educational badges & parental sound/low-memory toggles
       await appState.recordBrainGameWin(
