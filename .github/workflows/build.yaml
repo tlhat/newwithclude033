@@ -69,6 +69,38 @@ jobs:
             sed -i 's/targetSdk = [0-9]\+/targetSdk = 36/g' android/app/build.gradle.kts
           fi
 
+      - name: Set app id and sign with the stable key
+        env:
+          PASS: ${{ secrets.KEYSTORE_PASSWORD }}
+        run: |
+          F=android/app/build.gradle.kts
+          sed -i 's/applicationId = ".*"/applicationId = "com.haneenkids.haneen_kids_vod"/' "$F"
+          if [ -f ci/keystore.jks.enc ] && [ -n "$PASS" ]; then
+            openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -pass env:PASS \
+              -in ci/keystore.jks.enc -out /tmp/haneen.jks
+            python3 - <<'PY'
+          import re
+          p="android/app/build.gradle.kts"
+          s=open(p).read()
+          block = (
+              "    signingConfigs {\n"
+              "        create(\"ci\") {\n"
+              "            storeFile = file(\"/tmp/haneen.jks\")\n"
+              "            storePassword = System.getenv(\"PASS\")\n"
+              "            keyAlias = \"haneen\"\n"
+              "            keyPassword = System.getenv(\"PASS\")\n"
+              "        }\n"
+              "    }\n\n"
+          )
+          s=s.replace("    buildTypes {", block+"    buildTypes {",1)
+          s=s.replace('signingConfigs.getByName("debug")','signingConfigs.getByName("ci")')
+          open(p,"w").write(s)
+          PY
+            echo "Signing with the stable key"
+          else
+            echo "WARNING: no stable key yet, signing with a random debug key"
+          fi
+
       - name: Resolve Pinned Range Dependencies
         run: flutter pub get
 
@@ -76,7 +108,13 @@ jobs:
         run: flutter test
 
       - name: Build Release APK
+        env:
+          PASS: ${{ secrets.KEYSTORE_PASSWORD }}
         run: flutter build apk --release --no-tree-shake-icons
+
+      - name: Show the SHA-1 this APK is really signed with
+        run: |
+          keytool -printcert -jarfile build/app/outputs/flutter-apk/app-release.apk | grep -E "SHA1|SHA256"
 
       - name: Upload Ready-to-Install APK Artifact
         uses: actions/upload-artifact@v4
