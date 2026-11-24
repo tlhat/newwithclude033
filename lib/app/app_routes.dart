@@ -40,11 +40,15 @@ class _SplashRouterScreenState extends State<SplashRouterScreen> {
     if (!widget.appState.isInitialized || !_splashTimerDone) {
       return const SplashScreen();
     }
-    if (!widget.appState.onboardingCompleted) {
+    if (!widget.appState.googleGateDone) {
+      return GoogleGateScreen(appState: widget.appState);
+    }
+    if (!widget.appState.onboardingCompleted ||
+        widget.appState.currentAccount == null) {
       return OnboardingScreen(appState: widget.appState);
     }
-    if (widget.appState.currentAccount == null) {
-      return OnboardingScreen(appState: widget.appState);
+    if (!widget.appState.pinUnlockedThisSession) {
+      return PinUnlockScreen(appState: widget.appState);
     }
     return MainNavigationShell(appState: widget.appState);
   }

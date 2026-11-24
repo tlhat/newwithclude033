@@ -71,24 +71,31 @@ jobs:
 
       - name: Set app id and sign with the stable key
         env:
-          PASS: ${{ secrets.KEYSTORE_PASSWORD }}
+          OLD_PASS: ${{ secrets.KEYSTORE_PASSWORD }}
         run: |
           F=android/app/build.gradle.kts
           sed -i 's/applicationId = ".*"/applicationId = "com.haneenkids.haneen_kids_vod"/' "$F"
-          if [ -f ci/keystore.jks.enc ] && [ -n "$PASS" ]; then
-            openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -pass env:PASS \
+          if [ -f ci/haneen.jks ]; then
+            cp ci/haneen.jks /tmp/haneen.jks
+            echo "KSPASS=mA7JSevDRB5Be0KOQlNGH6Wv" >> "$GITHUB_ENV"
+            SIGN=1
+          elif [ -f ci/keystore.jks.enc ] && [ -n "$OLD_PASS" ]; then
+            openssl enc -d -aes-256-cbc -pbkdf2 -iter 200000 -pass env:OLD_PASS \
               -in ci/keystore.jks.enc -out /tmp/haneen.jks
+            echo "KSPASS=$OLD_PASS" >> "$GITHUB_ENV"
+            SIGN=1
+          fi
+          if [ -n "$SIGN" ]; then
             python3 - <<'PY'
-          import re
           p="android/app/build.gradle.kts"
           s=open(p).read()
           block = (
               "    signingConfigs {\n"
               "        create(\"ci\") {\n"
               "            storeFile = file(\"/tmp/haneen.jks\")\n"
-              "            storePassword = System.getenv(\"PASS\")\n"
+              "            storePassword = System.getenv(\"KSPASS\")\n"
               "            keyAlias = \"haneen\"\n"
-              "            keyPassword = System.getenv(\"PASS\")\n"
+              "            keyPassword = System.getenv(\"KSPASS\")\n"
               "        }\n"
               "    }\n\n"
           )
@@ -128,8 +135,6 @@ jobs:
           cat ~/.gradle/init.d/disable-lint.gradle
 
       - name: Build Release APK
-        env:
-          PASS: ${{ secrets.KEYSTORE_PASSWORD }}
         run: flutter build apk --release --no-tree-shake-icons
 
       - name: Show the SHA-1 this APK is really signed with

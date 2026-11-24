@@ -690,6 +690,7 @@ class AppStateManager extends ChangeNotifier {
     _accounts[familyKey] = familyAccount;
     currentAccount = familyAccount;
     onboardingCompleted = true;
+    pinUnlockedThisSession = true;
     hasSelectedChildInSession = true;
 
     await _saveAccounts();
@@ -700,6 +701,7 @@ class AppStateManager extends ChangeNotifier {
     _syncLikedStateForActiveChild();
     _refreshSmartVoiceAssistantSuggestion(speakAloud: false);
     notifyListeners();
+    unawaited(backupToGoogleQuietly());
     return null;
   }
 
@@ -805,6 +807,80 @@ class AppStateManager extends ChangeNotifier {
     await GoogleAccountService.instance.signOut();
     await _prefs.remove('linked_google_email');
     notifyListeners();
+  }
+
+  // ------------------------------------------------------- launch gates
+
+  /// True after the parent typed the 6-digit PIN in this app launch.
+  bool pinUnlockedThisSession = false;
+
+  /// The Google screen is done once a Google account is linked on this
+  /// phone. Google sign-in is mandatory (needs internet once per phone).
+  bool get googleGateDone => linkedGoogleEmail != null;
+
+  /// Opens the PIN screen's lock. Returns null when the PIN is right, or a
+  /// message in Arabic.
+  String? unlockWithPin(String pin) {
+    final ParentAccount? acc = currentAccount;
+    if (acc == null) return 'مفيش حساب. ابدأ من الأول.';
+    if (acc.isPinLockedOut) {
+      return 'جربت كتير غلط. استنى شوية وجرّب تاني.';
+    }
+    if (!acc.verifyParentalPin(pin.trim())) {
+      return acc.isPinLockedOut
+          ? 'جربت كتير غلط. استنى شوية وجرّب تاني.'
+          : 'الرمز غلط، جرّب تاني.';
+    }
+    pinUnlockedThisSession = true;
+    notifyListeners();
+    return null;
+  }
+
+  /// First screen: sign in with Google.
+  /// - This phone already has a family: link the Google account and back the
+  ///   family up (the phone is the source of truth).
+  /// - No family here: restore it from Google if a backup exists, otherwise
+  ///   the router continues to the first-time setup.
+  /// Returns null on success, otherwise a message in Arabic.
+  Future<String?> googleGateSignIn() async {
+    if (AppNetworkPolicyGuard.isOfflineOnlyModeActive) {
+      return 'وضع بدون إنترنت شغال. أوقفه وجرّب تاني.';
+    }
+    try {
+      final GoogleIdentity? who = await GoogleAccountService.instance.signIn();
+      if (who == null) return 'اتلغى الدخول بجوجل.';
+      final bool hasLocalFamily = onboardingCompleted && currentAccount != null;
+      if (hasLocalFamily) {
+        await GoogleAccountService.instance
+            .uploadBackup(who, exportBackupJson());
+      } else {
+        final String? text =
+            await GoogleAccountService.instance.downloadBackup(who);
+        if (text != null) {
+          final String? err = await restoreFromBackupJson(text);
+          if (err != null) return err;
+        }
+      }
+      await _prefs.setString('linked_google_email', who.email);
+      notifyListeners();
+      return null;
+    } on GoogleAccountException catch (e) {
+      return e.messageAr;
+    }
+  }
+
+  /// Saves the family to Google without any popup (only if already linked).
+  Future<void> backupToGoogleQuietly() async {
+    if (linkedGoogleEmail == null ||
+        AppNetworkPolicyGuard.isOfflineOnlyModeActive) {
+      return;
+    }
+    try {
+      final GoogleIdentity? who =
+          await GoogleAccountService.instance.signInSilently();
+      if (who == null) return;
+      await GoogleAccountService.instance.uploadBackup(who, exportBackupJson());
+    } catch (_) {}
   }
 
   Future<void> reopenOnboardingIntro() async {

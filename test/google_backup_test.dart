@@ -13,6 +13,8 @@ class _FakeGateway implements GoogleSignInGateway {
       id: '1',
       authHeaders: {'Authorization': 'Bearer t'});
   @override
+  Future<GoogleIdentity?> signInSilently() => signIn();
+  @override
   Future<void> signOut() async {}
 }
 

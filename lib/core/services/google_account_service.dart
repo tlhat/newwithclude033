@@ -29,6 +29,8 @@ class GoogleAccountException implements Exception {
 /// Thin wrapper so tests can replace the real Google sign-in.
 abstract class GoogleSignInGateway {
   Future<GoogleIdentity?> signIn();
+  /// Signs in without a popup when this phone already signed in before.
+  Future<GoogleIdentity?> signInSilently();
   Future<void> signOut();
 }
 
@@ -75,6 +77,22 @@ class RealGoogleSignInGateway implements GoogleSignInGateway {
   }
 
   @override
+  Future<GoogleIdentity?> signInSilently() async {
+    try {
+      final GoogleSignInAccount? acc = await _gs.signInSilently();
+      if (acc == null) return null;
+      return GoogleIdentity(
+        email: acc.email,
+        displayName: acc.displayName ?? acc.email,
+        id: acc.id,
+        authHeaders: await acc.authHeaders,
+      );
+    } catch (_) {
+      return null;
+    }
+  }
+
+  @override
   Future<void> signOut() async {
     try {
       await _gs.signOut();
@@ -101,6 +119,7 @@ class GoogleAccountService {
   final http.Client? _client;
 
   Future<GoogleIdentity?> signIn() => gateway.signIn();
+  Future<GoogleIdentity?> signInSilently() => gateway.signInSilently();
   Future<void> signOut() => gateway.signOut();
 
   Map<String, String> _h(GoogleIdentity id, [Map<String, String>? extra]) =>
