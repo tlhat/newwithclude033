@@ -101,6 +101,12 @@ jobs:
             echo "WARNING: no stable key yet, signing with a random debug key"
           fi
 
+      - name: Build the offline audio index from the mp3 files in the repo
+        run: |
+          python3 tools/build_audio_index.py tools/audio_manifest.json
+          echo "mp3 files in repo: $(find assets/audio -name '*.mp3' | wc -l)"
+          head -c 300 assets/audio/audio_index.json; echo
+
       - name: Resolve Pinned Range Dependencies
         run: flutter pub get
 

@@ -63,7 +63,7 @@ class SectionIntroService {
     final String? text = kIntroTexts[key];
     if (text == null || !_played.add(key)) return;
     final voice = CalmVoiceService.instance;
-    await voice.stopAllAudioImmediatelyForParentalGate();
+    await voice.stopSpeaking(); // keep the calm background music running
     await voice.speakCalmly(
       text,
       rate: 0.38,

@@ -9828,12 +9828,6 @@
 "text": "مبروك يا بطل! تم فتح العنصر بنجاح!"
 },
 {
-"id": "studio_persona_intro",
-"feature": "companion",
-"persona": "(per persona)",
-"text": "أهلاً بك! أنا {persona.nameAr}، هيا نجرب معاً رحلة التعلم الممتعة!"
-},
-{
 "id": "vid_repeat_1",
 "feature": "videos",
 "persona": "haneen",
@@ -13360,5 +13354,191 @@
 "feature": "games_menu",
 "persona": "haneen",
 "text": "الترتيب والتسلسل المنطقي، رتّب خطوات العادات اليومية بترتيبها الصحيح"
+},
+{
+"id": "intro_stories",
+"feature": "section_intro",
+"persona": "haneen",
+"text": "أهلاً بيك في قصص حنين! هنا هتسمع حكايات حلوة، وكل حكاية بتعلمك حاجة جديدة. اختار القصة اللي عجبتك وأنا هحكيهالك."
+},
+{
+"id": "intro_academy",
+"feature": "section_intro",
+"persona": "haneen",
+"text": "ده مكان التعلم! فيه دروس عن الحروف والكلمات والأرقام. اتعلم، وجاوب، وهتكسب نجوم."
+},
+{
+"id": "intro_games",
+"feature": "section_intro",
+"persona": "haneen",
+"text": "أهلاً بيك في واحة الذكاء! ألعاب حلوة بتخلي مخك أذكى: ذاكرة وحساب وألغاز. العب وكسب نجوم."
+},
+{
+"id": "intro_achievements",
+"feature": "section_intro",
+"persona": "haneen",
+"text": "هنا كل نجومك وإنجازاتك! شوف إنت وصلت لفين، وإيه الجوايز اللي كسبتها."
+},
+{
+"id": "intro_account",
+"feature": "section_intro",
+"persona": "haneen",
+"text": "ده حسابك! تقدر تغير شكل شخصيتك، وتشوف معلوماتك."
+},
+{
+"id": "intro_etiquette",
+"feature": "section_intro",
+"persona": "haneen",
+"text": "مرسم الآداب! اتعلم الأخلاق الحلوة وإنت بترسم وتلوّن."
+},
+{
+"id": "intro_oddone",
+"feature": "section_intro",
+"persona": "haneen",
+"text": "قوة الملاحظة! دور على الشكل المختلف وسط الأشكال."
+},
+{
+"id": "intro_pattern",
+"feature": "section_intro",
+"persona": "haneen",
+"text": "الألغاز والمنطق! كمّل النمط واكتشف إيه اللي جاي بعد كده."
+},
+{
+"id": "intro_memory",
+"feature": "section_intro",
+"persona": "haneen",
+"text": "لعبة الذاكرة! افتكر مكان الصور المتشابهة. ركز كويس وافتح كروتين زي بعض."
+},
+{
+"id": "intro_math",
+"feature": "section_intro",
+"persona": "haneen",
+"text": "الحساب والجمع! عدّ الأشكال واختار الرقم الصح."
+},
+{
+"id": "intro_letters",
+"feature": "section_intro",
+"persona": "haneen",
+"text": "الحروف والكلمات! اتعلم الحروف العربي ونطقها."
+},
+{
+"id": "intro_picmatch",
+"feature": "section_intro",
+"persona": "haneen",
+"text": "مطابقة الصور والكلمات! اختار الصورة اللي تناسب الكلمة."
+},
+{
+"id": "intro_classify",
+"feature": "section_intro",
+"persona": "haneen",
+"text": "التصنيف الذكي! حط كل حاجة في مجموعتها الصح."
+},
+{
+"id": "intro_sounds",
+"feature": "section_intro",
+"persona": "haneen",
+"text": "أصوات الحيوانات! اسمع الصوت وخمّن صاحبه."
+},
+{
+"id": "intro_sequence",
+"feature": "section_intro",
+"persona": "haneen",
+"text": "الترتيب والتسلسل! رتّب الخطوات بالترتيب الصح."
+},
+{
+"id": "enc_01",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "ولا يهمك، المحاولة نفسها شطارة!"
+},
+{
+"id": "enc_02",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "قريب جداً، جرّب مرة كمان!"
+},
+{
+"id": "enc_03",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "أنت بطل، والأبطال بيحاولوا تاني!"
+},
+{
+"id": "enc_04",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "مفيش مشكلة، كل غلطة بتعلمنا حاجة جديدة!"
+},
+{
+"id": "enc_05",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "برافو على المحاولة، أنا معاك!"
+},
+{
+"id": "enc_06",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "خد نفس عميق وفكّر براحة، وأنت هتعرفها!"
+},
+{
+"id": "enc_07",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "كدا قربنا، كمّل يا بطل!"
+},
+{
+"id": "enc_08",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "حلوة منك إنك بتحاول، يلا نجرّب تاني!"
+},
+{
+"id": "nudge_01",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "ركّز كويس في السؤال وجرّب إجابة تانية."
+},
+{
+"id": "nudge_02",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "اقرأ السؤال بهدوء، والإجابة قدامك."
+},
+{
+"id": "nudge_03",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "جرّب تضغط على زر الصوت واسمع السؤال تاني."
+},
+{
+"id": "last_01",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "خد وقتك، مفيش استعجال، أنا هنا معاك خطوة بخطوة."
+},
+{
+"id": "last_02",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "لو صعبة عليك، اسمع التلميح تاني وجرّب إجابة مختلفة."
+},
+{
+"id": "hint_game_01",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "لاحظ الترتيب: إيه الشكل اللي بيتكرر؟"
+},
+{
+"id": "hint_game_02",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "عدّ الأشكال واحد واحد وأنت بتشاور عليها."
+},
+{
+"id": "hint_game_03",
+"feature": "wrong_answer",
+"persona": "haneen",
+"text": "اسمع أول صوت في الكلمة، وده هو الحرف اللي ناقص."
 }
-]
+]
