@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
+import 'new_games.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/features/companion/engine/companion_interaction_engine.dart';
 import 'package:haneen_kids_vod/features/companion/engine/companion_interaction_state.dart';
@@ -357,6 +358,30 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
             'skill': 'رتّب خطوات العادات اليومية بترتيبها الصحيح',
             'color': const Color(0xFFEC4899),
           },
+          {
+            'title': 'تتبّع الحروف',
+            'icon': '✏️',
+            'skill': 'امشي بصباعك على الحرف',
+            'color': const Color(0xFF10B981),
+          },
+          {
+            'title': 'عدّ وجمّع بالصور',
+            'icon': '🍎',
+            'skill': 'عُد الصور واجمع',
+            'color': const Color(0xFFF59E0B),
+          },
+          {
+            'title': 'رتّب الأشكال والألوان',
+            'icon': '🔷',
+            'skill': 'حط كل شكل في مكانه',
+            'color': const Color(0xFF3B82F6),
+          },
+          {
+            'title': 'ارسم خيالك',
+            'icon': '🖍️',
+            'skill': 'ارسم اللي في خيالك',
+            'color': const Color(0xFFEC4899),
+          },
         ];
 
         return Scaffold(
@@ -605,6 +630,18 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
         return _buildSoundSourceIdentificationGame();
       case 9:
         return _buildLogicalSequenceOrderingGame();
+      case 10:
+        return TraceLetterGame(
+            appState: widget.appState, onReact: _companionReact);
+      case 11:
+        return CountPicsGame(
+            appState: widget.appState, onReact: _companionReact);
+      case 12:
+        return ShapeSortGame(
+            appState: widget.appState, onReact: _companionReact);
+      case 13:
+        return ImagineDrawGame(
+            appState: widget.appState, onReact: _companionReact);
       default:
         return _buildEtiquetteDrawingStudioGame();
     }
