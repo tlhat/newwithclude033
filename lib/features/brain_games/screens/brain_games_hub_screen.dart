@@ -26,6 +26,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
       CompanionInteractionEngine();
 
   void _companionReact(bool correct) {
+    if (correct) CalmVoiceService.instance.resetWrongStreak();
     if (!mounted) return;
     final l10n = AppLocalizations.of(context);
     final CompanionVisualState next = _companionEngine.dispatchAndRead(
@@ -492,6 +493,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                               _selectedGameIndex = i;
                               _heroReactionMessage = null;
                             });
+                            SectionIntroService.instance.playForGame(i);
                             widget.appState.logChildRealtimeActivity(
                               statusSummary: '🎮 يلعب الآن: ${g['title']}',
                               actionLogText: 'انتقل إلى لعبة (${g['title']})',
@@ -998,7 +1000,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                       _oddCorrect = true;
                       _oddFeedback = '✅ ملاحظة ذكية جداً! $explanation';
                       _heroReactionMessage =
-                          '🦸‍♂️ سبايدي وفارس الليل يقولان لك: قوة ملاحظتك خارقة في المرحلة $levelNum!';
+                          '🌟 الأبطال الصغار يقولون لك: قوة ملاحظتك خارقة في المرحلة $levelNum!';
                     });
                     await widget.appState.recordBrainGameWin(
                       gameId: 'odd_one_out_$levelNum',
@@ -1227,8 +1229,8 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                       _patternFeedback =
                           '💡 تأمل الترتيب مرة أخرى بهدوء وحاول مجدداً!';
                     });
-                    CalmVoiceService.instance.speakCalmly(
-                      'فكر بهدوء يا بطل، لاحظ الترتيب وحاول مرة أخرى.',
+                    CalmVoiceService.instance.coachWrongAnswer(
+                      hint: 'لاحظ الترتيب: إيه الشكل اللي بيتكرر؟',
                     );
                   }
                 },
@@ -1528,7 +1530,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                       _mathFeedback =
                           '🎉 عبقري في الحساب! الناتج ($numOpt) صحيح (+15 ذكاء)';
                       _heroReactionMessage =
-                          '⚡ بيكا وسوبر نور يهتفان لك: إجابة حسابية متقنة في المرحلة $levelNum!';
+                          '⚡ الأبطال الصغار يهتفون لك: إجابة حسابية متقنة في المرحلة $levelNum!';
                     });
                     await CalmVoiceService.instance.speakSuperheroEncouragementAndAutoAdvance(
                       encouragementText:
@@ -1548,8 +1550,8 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                       _mathFeedback =
                           '🔢 عدّ الأشكال بأصابعك مرة أخرى بهدوء وحاول مجدداً!';
                     });
-                    CalmVoiceService.instance.speakCalmly(
-                      'هيا نعدّ الأشكال معاً ببطء ونحاول مرة أخرى.',
+                    CalmVoiceService.instance.coachWrongAnswer(
+                      hint: 'عدّ الأشكال واحد واحد وأنت بتشاور عليها.',
                     );
                   }
                 },
@@ -1696,7 +1698,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                       _wordFeedback =
                           '✅ أحسنت يا فصيح! حرف ($letter) يكمل كلمة ($fullWord) (+15 ذكاء)';
                       _heroReactionMessage =
-                          '👧🎒 المستكشفة الصغيرة والشبل سيمبا يحيون فصاحتك في المرحلة $levelNum!';
+                          '👦👧 الأبطال الصغار يحيّون فصاحتك في المرحلة $levelNum!';
                     });
                     await widget.appState.recordBrainGameWin(
                       gameId: 'arabic_word_$levelNum',
@@ -1723,9 +1725,8 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                       _wordFeedback =
                           '🗣️ استمع لصوت الكلمة مرة أخرى وجرب حرفاً آخر!';
                     });
-                    CalmVoiceService.instance.speakCalmly(
-                      'استمع جيداً لصوت أول الكلمة: $fullWord',
-                      rate: 0.34,
+                    CalmVoiceService.instance.coachWrongAnswer(
+                      hint: 'اسمع أول صوت في الكلمة، وده هو الحرف اللي ناقص.',
                     );
                   }
                 },

@@ -42,8 +42,12 @@ void main() {
     );
     expect(path, isNotNull);
     expect(await File(path!).readAsBytes(), fake);
+    // Another persona still finds the recorded line.
     expect(
         await LocalAudioLibrary.resolveToFile('storyteller', 'أهلاً بك يا بطل'),
+        isNotNull);
+    expect(
+        await LocalAudioLibrary.resolveToFile('storyteller', 'سطر غير موجود'),
         isNull);
   });
 }

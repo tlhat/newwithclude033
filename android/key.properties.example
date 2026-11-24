@@ -1,0 +1,6 @@
+# Copy this file to key.properties (same folder) and fill in YOUR values.
+# key.properties is already ignored by git. Never send it to anyone.
+storePassword=PUT_YOUR_KEYSTORE_PASSWORD_HERE
+keyPassword=PUT_YOUR_KEY_PASSWORD_HERE
+keyAlias=upload
+storeFile=C:/Users/YOURNAME/keys/haneen-upload.jks

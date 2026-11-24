@@ -14,6 +14,14 @@ import 'package:flutter/services.dart' show rootBundle;
 class LocalAudioLibrary {
   static const String indexAsset = 'assets/audio/audio_index.json';
 
+  static const List<String> kPersonaIds = [
+    'haneen',
+    'teacher',
+    'storyteller',
+    'cheerful_friend',
+    'calm_assistant',
+  ];
+
   static Map<String, String>? _index;
   static final Map<String, String> _extractedPaths = {};
 
@@ -67,12 +75,21 @@ class LocalAudioLibrary {
   }) async {
     final Map<String, String> index = await _loadIndex();
     if (index.isEmpty) return null;
+    // The app picks the persona by context (a lesson may speak as "teacher",
+    // a game as "cheerful_friend"), so the requested persona is tried first
+    // and then every other persona, so a recorded line is never skipped.
+    final List<String> personas = <String>[
+      personaId,
+      ...kPersonaIds.where((p) => p != personaId),
+    ];
     for (final String candidate in [text, ...alternateTexts]) {
-      final String key = keyFor(personaId, candidate);
-      final String? asset = index[key];
-      if (asset == null) continue;
-      final String? path = await _extract(key, asset);
-      if (path != null) return path;
+      for (final String persona in personas) {
+        final String key = keyFor(persona, candidate);
+        final String? asset = index[key];
+        if (asset == null) continue;
+        final String? path = await _extract(key, asset);
+        if (path != null) return path;
+      }
     }
     return null;
   }

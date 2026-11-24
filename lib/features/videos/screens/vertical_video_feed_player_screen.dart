@@ -6,12 +6,17 @@ import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 class VerticalVideoFeedPlayerScreen extends StatefulWidget {
   final AppStateManager appState;
   final bool embeddedInShell;
+
+  /// False while another bottom-nav section is on screen, so the current
+  /// video / story pauses.
+  final bool tabActive;
   final VoidCallback? onNavigateToGames;
   final VoidCallback? onNavigateToAcademy;
   const VerticalVideoFeedPlayerScreen({
     super.key,
     required this.appState,
     this.embeddedInShell = false,
+    this.tabActive = true,
     this.onNavigateToGames,
     this.onNavigateToAcademy,
   });
@@ -1076,6 +1081,7 @@ class _VerticalVideoFeedPlayerScreenState
               itemBuilder: (context, index) {
                 final item = videos[index];
                 final isCurrentPage = index == _currentVideoIndex &&
+                    widget.tabActive &&
                     !sleepCurtainActive &&
                     !subscriptionExpired &&
                     !remotelyLockedByParent;

@@ -236,6 +236,64 @@ class CalmVoiceService {
     return adapted;
   }
 
+  // ---- Wrong-answer coaching (fixed, name-free lines so they can be pre-recorded) ----
+  static const List<String> kWrongEncouragements = [
+    'ولا يهمك، المحاولة نفسها شطارة!',
+    'قريب جداً، جرّب مرة كمان!',
+    'أنت بطل، والأبطال بيحاولوا تاني!',
+    'مفيش مشكلة، كل غلطة بتعلمنا حاجة جديدة!',
+    'برافو على المحاولة، أنا معاك!',
+    'خد نفس عميق وفكّر براحة، وأنت هتعرفها!',
+    'كدا قربنا، كمّل يا بطل!',
+    'حلوة منك إنك بتحاول، يلا نجرّب تاني!',
+  ];
+  static const List<String> kWrongNudges = [
+    'ركّز كويس في السؤال وجرّب إجابة تانية.',
+    'اقرأ السؤال بهدوء، والإجابة قدامك.',
+    'جرّب تضغط على زر الصوت واسمع السؤال تاني.',
+  ];
+  static const List<String> kWrongLastChance = [
+    'خد وقتك، مفيش استعجال، أنا هنا معاك خطوة بخطوة.',
+    'لو صعبة عليك، اسمع التلميح تاني وجرّب إجابة مختلفة.',
+  ];
+  int _wrongStreak = 0;
+  int _wrongLineCursor = 0;
+
+  void resetWrongStreak() => _wrongStreak = 0;
+
+  /// 3-step ladder: 1) cheer + general nudge, 2) cheer + the specific hint,
+  /// 3+) cheer + the hint + a calming last-chance line. Returns the text shown.
+  Future<String> coachWrongAnswer({
+    String? hint,
+    String? overridePersonaId,
+  }) async {
+    _wrongStreak++;
+    final String cheer =
+        kWrongEncouragements[_wrongLineCursor++ % kWrongEncouragements.length];
+    final String cleanHint = (hint ?? '').trim();
+    final List<String> parts = [cheer];
+    if (_wrongStreak == 1 || cleanHint.isEmpty) {
+      parts.add(kWrongNudges[(_wrongLineCursor) % kWrongNudges.length]);
+    } else {
+      parts.add(cleanHint);
+      if (_wrongStreak >= 3) {
+        parts.add(kWrongLastChance[_wrongLineCursor % kWrongLastChance.length]);
+      }
+    }
+    lastSpokenHaneenMessage = parts.join(' ');
+    for (final String part in parts) {
+      await speakCalmly(
+        ElevenLabsVoiceService.adaptTextToDialect(part, activeDialect),
+        rate: 0.38,
+        allowSpeechForRepeatGame: true,
+        overridePersonaId: overridePersonaId ?? 'haneen',
+        speechContext: ElevenLabsSpeechContext.gameFeedback,
+        respectContextualPersonas: false,
+      );
+    }
+    return parts.join(' ');
+  }
+
   Future<String> reactToChildAnswerAsHaneen({
     required bool isCorrect,
     required String childName,
@@ -246,6 +304,13 @@ class CalmVoiceService {
   }) async {
     final String cleanName =
         childName.trim().isEmpty ? 'يا بطل' : childName.trim();
+    if (!isCorrect) {
+      return coachWrongAnswer(
+        hint: gentleHint,
+        overridePersonaId: overridePersonaId,
+      );
+    }
+    _wrongStreak = 0;
     final String rawReaction;
     if (isCorrect) {
       final String conceptSuffix =
@@ -526,7 +591,7 @@ class CalmVoiceService {
     final ElevenLabsSynthesisOutcome outcome =
         await ElevenLabsVoiceService.synthesizeSpeech(
       text: cleanText,
-      extraLocalLookupTexts: _nameNeutralVariants(cleanText),
+      nameNeutralTexts: _nameNeutralVariants(cleanText),
       personaId: overridePersonaId ?? activePersonaId,
       dialect: activeDialect,
       speed: activeVoiceSpeed,

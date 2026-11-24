@@ -2,7 +2,6 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
-import 'package:haneen_kids_vod/shared/widgets/bouncy_tap.dart';
 
 class CuteSuperheroCompanionBanner extends StatefulWidget {
   final AppStateManager appState;
@@ -44,17 +43,6 @@ class _CuteSuperheroCompanionBannerState
         avatar?.triggerHint();
       }
     }
-  }
-
-  void _cycleNextHero() {
-    setState(() {
-      _heroIndex = (_heroIndex + 1) % kCuteSuperheroCharacters.length;
-      _alertIndex = (_alertIndex + 1) % 3;
-      _isJumping = true;
-    });
-    Future.delayed(const Duration(milliseconds: 700), () {
-      if (mounted) setState(() => _isJumping = false);
-    });
   }
 
   void _triggerHeroWaveAndCheer() {
@@ -302,8 +290,7 @@ class _CuteSuperheroCompanionBannerState
         greeting ??
         hero.encouragingAlerts[_alertIndex % hero.encouragingAlerts.length];
 
-    return BouncyTap(
-        child: GestureDetector(
+    return GestureDetector(
       onTap: _openHeroFriendsGalleryModal,
       child: Container(
         padding: EdgeInsets.symmetric(
@@ -414,31 +401,9 @@ class _CuteSuperheroCompanionBannerState
                 color: Color(0xFFA7F3D0),
               ),
             ),
-            GestureDetector(
-              onTap: _cycleNextHero,
-              child: Container(
-                padding: EdgeInsets.symmetric(
-                  horizontal: widget.compactMode ? 7 : 9,
-                  vertical: widget.compactMode ? 3 : 5,
-                ),
-                decoration: BoxDecoration(
-                  color: Colors.black38,
-                  borderRadius: BorderRadius.circular(10),
-                  border: Border.all(color: Colors.white24, width: 0.7),
-                ),
-                child: Text(
-                  widget.compactMode ? '3D 🔄' : 'بطل آخر 🔄',
-                  style: const TextStyle(
-                    fontSize: 9.5,
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ),
-            ),
           ],
         ),
       ),
-    ));
+    );
   }
 }

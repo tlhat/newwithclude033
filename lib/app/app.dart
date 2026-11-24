@@ -57,7 +57,10 @@ class _HaneenKidsAppState extends State<HaneenKidsApp>
             );
             return MediaQuery(
               data: mediaQuery.copyWith(textScaler: clampedScaler),
-              child: child!,
+              child: StarRewardHost(
+                appState: widget.appState,
+                child: child!,
+              ),
             );
           },
           home: SplashRouterScreen(appState: widget.appState),

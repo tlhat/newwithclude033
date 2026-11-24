@@ -10024,5 +10024,3341 @@
 "feature": "hero_alerts",
 "persona": "cheerful_friend",
 "text": "أحسنت يا بطل! خطوة بعد خطوة تقترب من إنهاء الـ ١٠٠ مرحلة كاملة!"
+},
+{
+"id": "math_001_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 1: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_002_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 2: اجمع 2 زائد 1 يساوي كم؟"
+},
+{
+"id": "math_003_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 3: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_004_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 4: اجمع 4 زائد 2 يساوي كم؟"
+},
+{
+"id": "math_005_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 5: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_006_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 6: اجمع 2 زائد 3 يساوي كم؟"
+},
+{
+"id": "math_007_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 7: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_008_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 8: اجمع 4 زائد 4 يساوي كم؟"
+},
+{
+"id": "math_009_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 9: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_010_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 10: اجمع 2 زائد 1 يساوي كم؟"
+},
+{
+"id": "math_011_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 11: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_012_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 12: اجمع 4 زائد 2 يساوي كم؟"
+},
+{
+"id": "math_013_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 13: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_014_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 14: اجمع 2 زائد 3 يساوي كم؟"
+},
+{
+"id": "math_015_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 15: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_016_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 16: اجمع 4 زائد 4 يساوي كم؟"
+},
+{
+"id": "math_017_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 17: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_018_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 18: اجمع 2 زائد 1 يساوي كم؟"
+},
+{
+"id": "math_019_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 19: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_020_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 20: اجمع 4 زائد 2 يساوي كم؟"
+},
+{
+"id": "math_021_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 21: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_022_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 22: اجمع 2 زائد 3 يساوي كم؟"
+},
+{
+"id": "math_023_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 23: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_024_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 24: اجمع 4 زائد 4 يساوي كم؟"
+},
+{
+"id": "math_025_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 25: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_026_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 26: اجمع 2 زائد 1 يساوي كم؟"
+},
+{
+"id": "math_027_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 27: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_028_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 28: اجمع 4 زائد 2 يساوي كم؟"
+},
+{
+"id": "math_029_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 29: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_030_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 30: اجمع 2 زائد 3 يساوي كم؟"
+},
+{
+"id": "math_031_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 31: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_032_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 32: اجمع 4 زائد 4 يساوي كم؟"
+},
+{
+"id": "math_033_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 33: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_034_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 34: اجمع 2 زائد 1 يساوي كم؟"
+},
+{
+"id": "math_035_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 35: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_036_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 36: اجمع 4 زائد 2 يساوي كم؟"
+},
+{
+"id": "math_037_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 37: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_038_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 38: اجمع 2 زائد 3 يساوي كم؟"
+},
+{
+"id": "math_039_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 39: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_040_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 40: اجمع 4 زائد 4 يساوي كم؟"
+},
+{
+"id": "math_041_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 41: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_042_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 42: اجمع 2 زائد 1 يساوي كم؟"
+},
+{
+"id": "math_043_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 43: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_044_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 44: اجمع 4 زائد 2 يساوي كم؟"
+},
+{
+"id": "math_045_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 45: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_046_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 46: اجمع 2 زائد 3 يساوي كم؟"
+},
+{
+"id": "math_047_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 47: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_048_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 48: اجمع 4 زائد 4 يساوي كم؟"
+},
+{
+"id": "math_049_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 49: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_050_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 50: اجمع 2 زائد 1 يساوي كم؟"
+},
+{
+"id": "math_051_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 51: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_052_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 52: اجمع 4 زائد 2 يساوي كم؟"
+},
+{
+"id": "math_053_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 53: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_054_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 54: اجمع 2 زائد 3 يساوي كم؟"
+},
+{
+"id": "math_055_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 55: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_056_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 56: اجمع 4 زائد 4 يساوي كم؟"
+},
+{
+"id": "math_057_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 57: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_058_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 58: اجمع 2 زائد 1 يساوي كم؟"
+},
+{
+"id": "math_059_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 59: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_060_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 60: اجمع 4 زائد 2 يساوي كم؟"
+},
+{
+"id": "math_061_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 61: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_062_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 62: اجمع 2 زائد 3 يساوي كم؟"
+},
+{
+"id": "math_063_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 63: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_064_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 64: اجمع 4 زائد 4 يساوي كم؟"
+},
+{
+"id": "math_065_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 65: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_066_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 66: اجمع 2 زائد 1 يساوي كم؟"
+},
+{
+"id": "math_067_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 67: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_068_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 68: اجمع 4 زائد 2 يساوي كم؟"
+},
+{
+"id": "math_069_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 69: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_070_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 70: اجمع 2 زائد 3 يساوي كم؟"
+},
+{
+"id": "math_071_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 71: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_072_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 72: اجمع 4 زائد 4 يساوي كم؟"
+},
+{
+"id": "math_073_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 73: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_074_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 74: اجمع 2 زائد 1 يساوي كم؟"
+},
+{
+"id": "math_075_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 75: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_076_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 76: اجمع 4 زائد 2 يساوي كم؟"
+},
+{
+"id": "math_077_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 77: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_078_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 78: اجمع 2 زائد 3 يساوي كم؟"
+},
+{
+"id": "math_079_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 79: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_080_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 80: اجمع 4 زائد 4 يساوي كم؟"
+},
+{
+"id": "math_081_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 81: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_082_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 82: اجمع 2 زائد 1 يساوي كم؟"
+},
+{
+"id": "math_083_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 83: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_084_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 84: اجمع 4 زائد 2 يساوي كم؟"
+},
+{
+"id": "math_085_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 85: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_086_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 86: اجمع 2 زائد 3 يساوي كم؟"
+},
+{
+"id": "math_087_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 87: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_088_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 88: اجمع 4 زائد 4 يساوي كم؟"
+},
+{
+"id": "math_089_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 89: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_090_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 90: اجمع 2 زائد 1 يساوي كم؟"
+},
+{
+"id": "math_091_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 91: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_092_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 92: اجمع 4 زائد 2 يساوي كم؟"
+},
+{
+"id": "math_093_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 93: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_094_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 94: اجمع 2 زائد 3 يساوي كم؟"
+},
+{
+"id": "math_095_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 95: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_096_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 96: اجمع 4 زائد 4 يساوي كم؟"
+},
+{
+"id": "math_097_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 97: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_098_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 98: اجمع 2 زائد 1 يساوي كم؟"
+},
+{
+"id": "math_099_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 99: عدّ الأشكال بهدوء واختر الرقم الصحيح!"
+},
+{
+"id": "math_100_q",
+"feature": "games_math",
+"persona": "haneen",
+"text": "المرحلة 100: اجمع 4 زائد 2 يساوي كم؟"
+},
+{
+"id": "math_ok_01",
+"feature": "games_math",
+"persona": "cheerful_friend",
+"text": "رائع يا بطل الحساب الخارق! الإجابة هي 1!"
+},
+{
+"id": "math_ok_02",
+"feature": "games_math",
+"persona": "cheerful_friend",
+"text": "رائع يا بطل الحساب الخارق! الإجابة هي 2!"
+},
+{
+"id": "math_ok_03",
+"feature": "games_math",
+"persona": "cheerful_friend",
+"text": "رائع يا بطل الحساب الخارق! الإجابة هي 3!"
+},
+{
+"id": "math_ok_04",
+"feature": "games_math",
+"persona": "cheerful_friend",
+"text": "رائع يا بطل الحساب الخارق! الإجابة هي 4!"
+},
+{
+"id": "math_ok_05",
+"feature": "games_math",
+"persona": "cheerful_friend",
+"text": "رائع يا بطل الحساب الخارق! الإجابة هي 5!"
+},
+{
+"id": "math_ok_06",
+"feature": "games_math",
+"persona": "cheerful_friend",
+"text": "رائع يا بطل الحساب الخارق! الإجابة هي 6!"
+},
+{
+"id": "math_ok_07",
+"feature": "games_math",
+"persona": "cheerful_friend",
+"text": "رائع يا بطل الحساب الخارق! الإجابة هي 7!"
+},
+{
+"id": "math_ok_08",
+"feature": "games_math",
+"persona": "cheerful_friend",
+"text": "رائع يا بطل الحساب الخارق! الإجابة هي 8!"
+},
+{
+"id": "math_ok_09",
+"feature": "games_math",
+"persona": "cheerful_friend",
+"text": "رائع يا بطل الحساب الخارق! الإجابة هي 9!"
+},
+{
+"id": "memory_001_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 1 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_001_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 1 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الفواكه الطازجة):"
+},
+{
+"id": "picword_001_ok",
+"feature": "games_pictureword",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «تُفَّاحَةٌ حَمْرَاءُ (Apple)» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "picword_001_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 1 من ١٠٠ (المستوى 2): فاكهة لذيذة ومفيدة للجسم 🎈"
+},
+{
+"id": "classify_001_ok",
+"feature": "games_classify",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «الموز اللذيذ من فواكه وغذاء 🍎» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "classify_001_bad",
+"feature": "games_classify",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: فكر بهدوء: أين نرى الموز اللذيذ في حياتنا اليومية؟ 🎈"
+},
+{
+"id": "sound_001_ok",
+"feature": "games_sound",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «🐱 القطة الأليفة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "riddle_001_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 1 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "riddle_001_bad",
+"feature": "games_riddle",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: لغز النظافة: نبدأ بالماء ثم الصابون ثم التجفيف! 🎈"
+},
+{
+"id": "memory_002_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 2 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_002_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 2 من ١٠٠: أخرج الرمز المختلف عن مجموعة (حيوانات الغابة والمزرعة):"
+},
+{
+"id": "picword_002_ok",
+"feature": "games_pictureword",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «أَسَدٌ شُجَاعٌ (Lion)» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "picword_002_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 2 من ١٠٠ (المستوى 2): يعيش في الغابة ويسمى ملك الغابة 🎈"
+},
+{
+"id": "classify_002_ok",
+"feature": "games_classify",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «القطار السريع من وسائل نقل 🚗» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "classify_002_bad",
+"feature": "games_classify",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: فكر بهدوء: أين نرى القطار السريع في حياتنا اليومية؟ 🎈"
+},
+{
+"id": "sound_002_ok",
+"feature": "games_sound",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «🦁 الأسد الشجاع» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "riddle_002_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 2 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "riddle_002_bad",
+"feature": "games_riddle",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: لغز المساء: نرتب الغرفة ثم نفرش أسناننا ثم ننام! 🎈"
+},
+{
+"id": "memory_003_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 3 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_003_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 3 من ١٠٠: أخرج الرمز المختلف عن مجموعة (وسائل النقل والمواصلات):"
+},
+{
+"id": "picword_003_ok",
+"feature": "games_pictureword",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «طَائِرَةٌ سَرِيعَةٌ (Plane)» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "picword_003_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 3 من ١٠٠ (المستوى 2): وسيلة نقل تطير في السماء فوق السحاب 🎈"
+},
+{
+"id": "classify_003_ok",
+"feature": "games_classify",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «الزرافة الطويلة من حيوانات الغابة 🦁» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "classify_003_bad",
+"feature": "games_classify",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: فكر بهدوء: أين نرى الزرافة الطويلة في حياتنا اليومية؟ 🎈"
+},
+{
+"id": "sound_003_ok",
+"feature": "games_sound",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «🐦 العصفور المغرد» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "riddle_003_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 3 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "riddle_003_bad",
+"feature": "games_riddle",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: لغز الطبيعة: من البذرة الصغيرة إلى الزهرة المتفتحة! 🎈"
+},
+{
+"id": "memory_004_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 4 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_004_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 4 من ١٠٠: أخرج الرمز المختلف عن مجموعة (عجائب السماء والفضاء):"
+},
+{
+"id": "picword_004_ok",
+"feature": "games_pictureword",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «فَرَاشَةٌ مُلَوَّنَةٌ (Butterfly)» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "picword_004_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 4 من ١٠٠ (المستوى 2): تطير بهدوء بين الأزهار في الحديقة 🎈"
+},
+{
+"id": "classify_004_ok",
+"feature": "games_classify",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «الفراولة الحمراء من فواكه وغذاء 🍎» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "classify_004_bad",
+"feature": "games_classify",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: فكر بهدوء: أين نرى الفراولة الحمراء في حياتنا اليومية؟ 🎈"
+},
+{
+"id": "sound_004_ok",
+"feature": "games_sound",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «🐝 النحلة النشيطة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "riddle_004_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 4 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "riddle_004_bad",
+"feature": "games_riddle",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: لغز الأوقات: الصباح ثم الظهيرة ثم المساء! 🎈"
+},
+{
+"id": "memory_005_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 5 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_005_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 5 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأدوات المدرسية والتعلم):"
+},
+{
+"id": "picword_005_ok",
+"feature": "games_pictureword",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «كِتَابٌ مُفِيدٌ (Book)» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "picword_005_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 5 من ١٠٠ (المستوى 2): نقرأ فيه القصص الجميلة ونتعلم منه العلوم 🎈"
+},
+{
+"id": "classify_005_ok",
+"feature": "games_classify",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «الدولفين الذكي من كائنات بحرية 🌊» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "classify_005_bad",
+"feature": "games_classify",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: فكر بهدوء: أين نرى الدولفين الذكي في حياتنا اليومية؟ 🎈"
+},
+{
+"id": "sound_005_ok",
+"feature": "games_sound",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «🐑 الخروف الوديع» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "riddle_005_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 5 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_006_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 6 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_006_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 6 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الكائنات البحرية):"
+},
+{
+"id": "picword_006_ok",
+"feature": "games_pictureword",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «شَمْسٌ مُشْرِقَةٌ (Sun)» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "picword_006_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 6 من ١٠٠ (المستوى 2): تضيء السماء في الصباح وتمنحنا الدفء 🎈"
+},
+{
+"id": "classify_006_ok",
+"feature": "games_classify",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «قلم الرصاص من أدوات مدرسية ✏️» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "classify_006_bad",
+"feature": "games_classify",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: فكر بهدوء: أين نرى قلم الرصاص في حياتنا اليومية؟ 🎈"
+},
+{
+"id": "sound_006_ok",
+"feature": "games_sound",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «🚂 القطار السريع» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "riddle_006_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 6 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_007_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 7 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_007_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 7 من ١٠٠: أخرج الرمز المختلف عن مجموعة (النباتات والزهور):"
+},
+{
+"id": "picword_007_ok",
+"feature": "games_pictureword",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «سَمَكَةٌ سَابِحَةٌ (Fish)» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "picword_007_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 7 من ١٠٠ (المستوى 2): تعيش وتسبح تحت الماء في البحر 🎈"
+},
+{
+"id": "classify_007_ok",
+"feature": "games_classify",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «البروكلي الأخضر من خضروات صحية 🥕» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "classify_007_bad",
+"feature": "games_classify",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: فكر بهدوء: أين نرى البروكلي الأخضر في حياتنا اليومية؟ 🎈"
+},
+{
+"id": "riddle_007_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 7 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_008_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 8 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_008_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 8 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأشكال الهندسية والألوان):"
+},
+{
+"id": "picword_008_ok",
+"feature": "games_pictureword",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «قِطَارٌ طَوِيلٌ (Train)» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "picword_008_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 8 من ١٠٠ (المستوى 2): يسير على القضبان الحديدية وينقل المسافرين 🎈"
+},
+{
+"id": "classify_008_ok",
+"feature": "games_classify",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «كوكب زحل ذو الحلقات من أجرام الفضاء 🪐» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "classify_008_bad",
+"feature": "games_classify",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: فكر بهدوء: أين نرى كوكب زحل ذو الحلقات في حياتنا اليومية؟ 🎈"
+},
+{
+"id": "riddle_008_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 8 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_009_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 9 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_009_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 9 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الخضروات الصحية):"
+},
+{
+"id": "picword_009_ok",
+"feature": "games_pictureword",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «نَحْلَةٌ نَشِيطَةٌ (Bee)» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "picword_009_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 9 من ١٠٠ (المستوى 2): تجمع الرحيق من الأزهار وتصنع العسل 🎈"
+},
+{
+"id": "riddle_009_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 9 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_010_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 10 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_010_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 10 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الرياضة والنشاط البدني):"
+},
+{
+"id": "picword_010_ok",
+"feature": "games_pictureword",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «شَجَرَةٌ خَضْرَاءُ (Tree)» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "picword_010_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 10 من ١٠٠ (المستوى 2): نبات كبير يعطينا الظل والأكسجين والثمار 🎈"
+},
+{
+"id": "riddle_010_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 10 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_011_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 11 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_011_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 11 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الفواكه الطازجة):"
+},
+{
+"id": "picword_011_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 11 من ١٠٠ (المستوى 2): فاكهة لذيذة ومفيدة للجسم 🎈"
+},
+{
+"id": "riddle_011_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 11 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_012_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 12 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_012_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 12 من ١٠٠: أخرج الرمز المختلف عن مجموعة (حيوانات الغابة والمزرعة):"
+},
+{
+"id": "picword_012_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 12 من ١٠٠ (المستوى 2): يعيش في الغابة ويسمى ملك الغابة 🎈"
+},
+{
+"id": "riddle_012_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 12 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_013_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 13 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_013_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 13 من ١٠٠: أخرج الرمز المختلف عن مجموعة (وسائل النقل والمواصلات):"
+},
+{
+"id": "picword_013_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 13 من ١٠٠ (المستوى 2): وسيلة نقل تطير في السماء فوق السحاب 🎈"
+},
+{
+"id": "riddle_013_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 13 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_014_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 14 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_014_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 14 من ١٠٠: أخرج الرمز المختلف عن مجموعة (عجائب السماء والفضاء):"
+},
+{
+"id": "picword_014_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 14 من ١٠٠ (المستوى 2): تطير بهدوء بين الأزهار في الحديقة 🎈"
+},
+{
+"id": "riddle_014_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 14 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_015_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 15 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_015_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 15 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأدوات المدرسية والتعلم):"
+},
+{
+"id": "picword_015_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 15 من ١٠٠ (المستوى 2): نقرأ فيه القصص الجميلة ونتعلم منه العلوم 🎈"
+},
+{
+"id": "riddle_015_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 15 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_016_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 16 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_016_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 16 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الكائنات البحرية):"
+},
+{
+"id": "picword_016_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 16 من ١٠٠ (المستوى 2): تضيء السماء في الصباح وتمنحنا الدفء 🎈"
+},
+{
+"id": "riddle_016_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 16 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_017_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 17 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_017_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 17 من ١٠٠: أخرج الرمز المختلف عن مجموعة (النباتات والزهور):"
+},
+{
+"id": "picword_017_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 17 من ١٠٠ (المستوى 2): تعيش وتسبح تحت الماء في البحر 🎈"
+},
+{
+"id": "riddle_017_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 17 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_018_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 18 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_018_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 18 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأشكال الهندسية والألوان):"
+},
+{
+"id": "picword_018_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 18 من ١٠٠ (المستوى 2): يسير على القضبان الحديدية وينقل المسافرين 🎈"
+},
+{
+"id": "riddle_018_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 18 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_019_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 19 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_019_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 19 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الخضروات الصحية):"
+},
+{
+"id": "picword_019_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 19 من ١٠٠ (المستوى 2): تجمع الرحيق من الأزهار وتصنع العسل 🎈"
+},
+{
+"id": "riddle_019_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 19 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_020_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 20 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_020_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 20 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الرياضة والنشاط البدني):"
+},
+{
+"id": "picword_020_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 20 من ١٠٠ (المستوى 2): نبات كبير يعطينا الظل والأكسجين والثمار 🎈"
+},
+{
+"id": "riddle_020_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 20 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_021_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 21 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_021_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 21 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الفواكه الطازجة):"
+},
+{
+"id": "picword_021_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 21 من ١٠٠ (المستوى 2): فاكهة لذيذة ومفيدة للجسم 🎈"
+},
+{
+"id": "riddle_021_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 21 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_022_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 22 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_022_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 22 من ١٠٠: أخرج الرمز المختلف عن مجموعة (حيوانات الغابة والمزرعة):"
+},
+{
+"id": "picword_022_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 22 من ١٠٠ (المستوى 2): يعيش في الغابة ويسمى ملك الغابة 🎈"
+},
+{
+"id": "riddle_022_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 22 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_023_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 23 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_023_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 23 من ١٠٠: أخرج الرمز المختلف عن مجموعة (وسائل النقل والمواصلات):"
+},
+{
+"id": "picword_023_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 23 من ١٠٠ (المستوى 2): وسيلة نقل تطير في السماء فوق السحاب 🎈"
+},
+{
+"id": "riddle_023_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 23 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_024_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 24 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_024_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 24 من ١٠٠: أخرج الرمز المختلف عن مجموعة (عجائب السماء والفضاء):"
+},
+{
+"id": "picword_024_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 24 من ١٠٠ (المستوى 2): تطير بهدوء بين الأزهار في الحديقة 🎈"
+},
+{
+"id": "riddle_024_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 24 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_025_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 25 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_025_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 25 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأدوات المدرسية والتعلم):"
+},
+{
+"id": "picword_025_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 25 من ١٠٠ (المستوى 2): نقرأ فيه القصص الجميلة ونتعلم منه العلوم 🎈"
+},
+{
+"id": "riddle_025_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 25 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_026_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 26 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_026_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 26 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الكائنات البحرية):"
+},
+{
+"id": "picword_026_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 26 من ١٠٠ (المستوى 2): تضيء السماء في الصباح وتمنحنا الدفء 🎈"
+},
+{
+"id": "riddle_026_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 26 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_027_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 27 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_027_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 27 من ١٠٠: أخرج الرمز المختلف عن مجموعة (النباتات والزهور):"
+},
+{
+"id": "picword_027_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 27 من ١٠٠ (المستوى 2): تعيش وتسبح تحت الماء في البحر 🎈"
+},
+{
+"id": "riddle_027_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 27 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_028_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 28 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_028_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 28 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأشكال الهندسية والألوان):"
+},
+{
+"id": "picword_028_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 28 من ١٠٠ (المستوى 2): يسير على القضبان الحديدية وينقل المسافرين 🎈"
+},
+{
+"id": "riddle_028_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 28 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_029_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 29 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_029_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 29 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الخضروات الصحية):"
+},
+{
+"id": "picword_029_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 29 من ١٠٠ (المستوى 2): تجمع الرحيق من الأزهار وتصنع العسل 🎈"
+},
+{
+"id": "riddle_029_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 29 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_030_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 30 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_030_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 30 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الرياضة والنشاط البدني):"
+},
+{
+"id": "picword_030_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 30 من ١٠٠ (المستوى 2): نبات كبير يعطينا الظل والأكسجين والثمار 🎈"
+},
+{
+"id": "riddle_030_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 30 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_031_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 31 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_031_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 31 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الفواكه الطازجة):"
+},
+{
+"id": "picword_031_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 31 من ١٠٠ (المستوى 2): فاكهة لذيذة ومفيدة للجسم 🎈"
+},
+{
+"id": "riddle_031_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 31 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_032_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 32 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_032_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 32 من ١٠٠: أخرج الرمز المختلف عن مجموعة (حيوانات الغابة والمزرعة):"
+},
+{
+"id": "picword_032_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 32 من ١٠٠ (المستوى 2): يعيش في الغابة ويسمى ملك الغابة 🎈"
+},
+{
+"id": "riddle_032_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 32 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_033_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 33 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_033_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 33 من ١٠٠: أخرج الرمز المختلف عن مجموعة (وسائل النقل والمواصلات):"
+},
+{
+"id": "picword_033_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 33 من ١٠٠ (المستوى 2): وسيلة نقل تطير في السماء فوق السحاب 🎈"
+},
+{
+"id": "riddle_033_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 33 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_034_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 34 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_034_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 34 من ١٠٠: أخرج الرمز المختلف عن مجموعة (عجائب السماء والفضاء):"
+},
+{
+"id": "picword_034_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 34 من ١٠٠ (المستوى 2): تطير بهدوء بين الأزهار في الحديقة 🎈"
+},
+{
+"id": "riddle_034_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 34 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_035_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 35 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_035_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 35 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأدوات المدرسية والتعلم):"
+},
+{
+"id": "picword_035_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 35 من ١٠٠ (المستوى 2): نقرأ فيه القصص الجميلة ونتعلم منه العلوم 🎈"
+},
+{
+"id": "riddle_035_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 35 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_036_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 36 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_036_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 36 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الكائنات البحرية):"
+},
+{
+"id": "picword_036_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 36 من ١٠٠ (المستوى 2): تضيء السماء في الصباح وتمنحنا الدفء 🎈"
+},
+{
+"id": "riddle_036_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 36 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_037_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 37 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_037_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 37 من ١٠٠: أخرج الرمز المختلف عن مجموعة (النباتات والزهور):"
+},
+{
+"id": "picword_037_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 37 من ١٠٠ (المستوى 2): تعيش وتسبح تحت الماء في البحر 🎈"
+},
+{
+"id": "riddle_037_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 37 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_038_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 38 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_038_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 38 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأشكال الهندسية والألوان):"
+},
+{
+"id": "picword_038_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 38 من ١٠٠ (المستوى 2): يسير على القضبان الحديدية وينقل المسافرين 🎈"
+},
+{
+"id": "riddle_038_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 38 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_039_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 39 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_039_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 39 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الخضروات الصحية):"
+},
+{
+"id": "picword_039_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 39 من ١٠٠ (المستوى 2): تجمع الرحيق من الأزهار وتصنع العسل 🎈"
+},
+{
+"id": "riddle_039_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 39 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_040_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 40 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_040_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 40 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الرياضة والنشاط البدني):"
+},
+{
+"id": "picword_040_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 40 من ١٠٠ (المستوى 2): نبات كبير يعطينا الظل والأكسجين والثمار 🎈"
+},
+{
+"id": "riddle_040_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 40 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_041_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 41 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_041_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 41 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الفواكه الطازجة):"
+},
+{
+"id": "picword_041_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 41 من ١٠٠ (المستوى 2): فاكهة لذيذة ومفيدة للجسم 🎈"
+},
+{
+"id": "riddle_041_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 41 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_042_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 42 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_042_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 42 من ١٠٠: أخرج الرمز المختلف عن مجموعة (حيوانات الغابة والمزرعة):"
+},
+{
+"id": "picword_042_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 42 من ١٠٠ (المستوى 2): يعيش في الغابة ويسمى ملك الغابة 🎈"
+},
+{
+"id": "riddle_042_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 42 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_043_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 43 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_043_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 43 من ١٠٠: أخرج الرمز المختلف عن مجموعة (وسائل النقل والمواصلات):"
+},
+{
+"id": "picword_043_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 43 من ١٠٠ (المستوى 2): وسيلة نقل تطير في السماء فوق السحاب 🎈"
+},
+{
+"id": "riddle_043_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 43 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_044_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 44 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_044_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 44 من ١٠٠: أخرج الرمز المختلف عن مجموعة (عجائب السماء والفضاء):"
+},
+{
+"id": "picword_044_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 44 من ١٠٠ (المستوى 2): تطير بهدوء بين الأزهار في الحديقة 🎈"
+},
+{
+"id": "riddle_044_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 44 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_045_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 45 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_045_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 45 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأدوات المدرسية والتعلم):"
+},
+{
+"id": "picword_045_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 45 من ١٠٠ (المستوى 2): نقرأ فيه القصص الجميلة ونتعلم منه العلوم 🎈"
+},
+{
+"id": "riddle_045_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 45 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_046_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 46 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_046_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 46 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الكائنات البحرية):"
+},
+{
+"id": "picword_046_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 46 من ١٠٠ (المستوى 2): تضيء السماء في الصباح وتمنحنا الدفء 🎈"
+},
+{
+"id": "riddle_046_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 46 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_047_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 47 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_047_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 47 من ١٠٠: أخرج الرمز المختلف عن مجموعة (النباتات والزهور):"
+},
+{
+"id": "picword_047_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 47 من ١٠٠ (المستوى 2): تعيش وتسبح تحت الماء في البحر 🎈"
+},
+{
+"id": "riddle_047_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 47 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_048_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 48 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_048_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 48 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأشكال الهندسية والألوان):"
+},
+{
+"id": "picword_048_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 48 من ١٠٠ (المستوى 2): يسير على القضبان الحديدية وينقل المسافرين 🎈"
+},
+{
+"id": "riddle_048_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 48 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_049_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 49 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_049_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 49 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الخضروات الصحية):"
+},
+{
+"id": "picword_049_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 49 من ١٠٠ (المستوى 2): تجمع الرحيق من الأزهار وتصنع العسل 🎈"
+},
+{
+"id": "riddle_049_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 49 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_050_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 50 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_050_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 50 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الرياضة والنشاط البدني):"
+},
+{
+"id": "picword_050_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 50 من ١٠٠ (المستوى 2): نبات كبير يعطينا الظل والأكسجين والثمار 🎈"
+},
+{
+"id": "riddle_050_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 50 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_051_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 51 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_051_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 51 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الفواكه الطازجة):"
+},
+{
+"id": "picword_051_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 51 من ١٠٠ (المستوى 2): فاكهة لذيذة ومفيدة للجسم 🎈"
+},
+{
+"id": "riddle_051_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 51 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_052_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 52 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_052_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 52 من ١٠٠: أخرج الرمز المختلف عن مجموعة (حيوانات الغابة والمزرعة):"
+},
+{
+"id": "picword_052_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 52 من ١٠٠ (المستوى 2): يعيش في الغابة ويسمى ملك الغابة 🎈"
+},
+{
+"id": "riddle_052_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 52 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_053_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 53 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_053_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 53 من ١٠٠: أخرج الرمز المختلف عن مجموعة (وسائل النقل والمواصلات):"
+},
+{
+"id": "picword_053_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 53 من ١٠٠ (المستوى 2): وسيلة نقل تطير في السماء فوق السحاب 🎈"
+},
+{
+"id": "riddle_053_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 53 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_054_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 54 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_054_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 54 من ١٠٠: أخرج الرمز المختلف عن مجموعة (عجائب السماء والفضاء):"
+},
+{
+"id": "picword_054_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 54 من ١٠٠ (المستوى 2): تطير بهدوء بين الأزهار في الحديقة 🎈"
+},
+{
+"id": "riddle_054_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 54 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_055_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 55 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_055_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 55 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأدوات المدرسية والتعلم):"
+},
+{
+"id": "picword_055_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 55 من ١٠٠ (المستوى 2): نقرأ فيه القصص الجميلة ونتعلم منه العلوم 🎈"
+},
+{
+"id": "riddle_055_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 55 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_056_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 56 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_056_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 56 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الكائنات البحرية):"
+},
+{
+"id": "picword_056_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 56 من ١٠٠ (المستوى 2): تضيء السماء في الصباح وتمنحنا الدفء 🎈"
+},
+{
+"id": "riddle_056_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 56 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_057_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 57 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_057_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 57 من ١٠٠: أخرج الرمز المختلف عن مجموعة (النباتات والزهور):"
+},
+{
+"id": "picword_057_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 57 من ١٠٠ (المستوى 2): تعيش وتسبح تحت الماء في البحر 🎈"
+},
+{
+"id": "riddle_057_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 57 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_058_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 58 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_058_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 58 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأشكال الهندسية والألوان):"
+},
+{
+"id": "picword_058_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 58 من ١٠٠ (المستوى 2): يسير على القضبان الحديدية وينقل المسافرين 🎈"
+},
+{
+"id": "riddle_058_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 58 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_059_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 59 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_059_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 59 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الخضروات الصحية):"
+},
+{
+"id": "picword_059_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 59 من ١٠٠ (المستوى 2): تجمع الرحيق من الأزهار وتصنع العسل 🎈"
+},
+{
+"id": "riddle_059_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 59 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_060_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 60 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_060_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 60 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الرياضة والنشاط البدني):"
+},
+{
+"id": "picword_060_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 60 من ١٠٠ (المستوى 2): نبات كبير يعطينا الظل والأكسجين والثمار 🎈"
+},
+{
+"id": "riddle_060_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 60 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_061_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 61 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_061_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 61 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الفواكه الطازجة):"
+},
+{
+"id": "picword_061_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 61 من ١٠٠ (المستوى 2): فاكهة لذيذة ومفيدة للجسم 🎈"
+},
+{
+"id": "riddle_061_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 61 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_062_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 62 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_062_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 62 من ١٠٠: أخرج الرمز المختلف عن مجموعة (حيوانات الغابة والمزرعة):"
+},
+{
+"id": "picword_062_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 62 من ١٠٠ (المستوى 2): يعيش في الغابة ويسمى ملك الغابة 🎈"
+},
+{
+"id": "riddle_062_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 62 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_063_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 63 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_063_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 63 من ١٠٠: أخرج الرمز المختلف عن مجموعة (وسائل النقل والمواصلات):"
+},
+{
+"id": "picword_063_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 63 من ١٠٠ (المستوى 2): وسيلة نقل تطير في السماء فوق السحاب 🎈"
+},
+{
+"id": "riddle_063_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 63 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_064_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 64 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_064_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 64 من ١٠٠: أخرج الرمز المختلف عن مجموعة (عجائب السماء والفضاء):"
+},
+{
+"id": "picword_064_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 64 من ١٠٠ (المستوى 2): تطير بهدوء بين الأزهار في الحديقة 🎈"
+},
+{
+"id": "riddle_064_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 64 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_065_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 65 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_065_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 65 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأدوات المدرسية والتعلم):"
+},
+{
+"id": "picword_065_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 65 من ١٠٠ (المستوى 2): نقرأ فيه القصص الجميلة ونتعلم منه العلوم 🎈"
+},
+{
+"id": "riddle_065_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 65 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_066_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 66 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_066_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 66 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الكائنات البحرية):"
+},
+{
+"id": "picword_066_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 66 من ١٠٠ (المستوى 2): تضيء السماء في الصباح وتمنحنا الدفء 🎈"
+},
+{
+"id": "riddle_066_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 66 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_067_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 67 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_067_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 67 من ١٠٠: أخرج الرمز المختلف عن مجموعة (النباتات والزهور):"
+},
+{
+"id": "picword_067_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 67 من ١٠٠ (المستوى 2): تعيش وتسبح تحت الماء في البحر 🎈"
+},
+{
+"id": "riddle_067_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 67 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_068_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 68 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_068_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 68 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأشكال الهندسية والألوان):"
+},
+{
+"id": "picword_068_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 68 من ١٠٠ (المستوى 2): يسير على القضبان الحديدية وينقل المسافرين 🎈"
+},
+{
+"id": "riddle_068_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 68 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_069_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 69 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_069_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 69 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الخضروات الصحية):"
+},
+{
+"id": "picword_069_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 69 من ١٠٠ (المستوى 2): تجمع الرحيق من الأزهار وتصنع العسل 🎈"
+},
+{
+"id": "riddle_069_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 69 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_070_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 70 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_070_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 70 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الرياضة والنشاط البدني):"
+},
+{
+"id": "picword_070_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 70 من ١٠٠ (المستوى 2): نبات كبير يعطينا الظل والأكسجين والثمار 🎈"
+},
+{
+"id": "riddle_070_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 70 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_071_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 71 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_071_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 71 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الفواكه الطازجة):"
+},
+{
+"id": "picword_071_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 71 من ١٠٠ (المستوى 2): فاكهة لذيذة ومفيدة للجسم 🎈"
+},
+{
+"id": "riddle_071_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 71 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_072_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 72 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_072_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 72 من ١٠٠: أخرج الرمز المختلف عن مجموعة (حيوانات الغابة والمزرعة):"
+},
+{
+"id": "picword_072_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 72 من ١٠٠ (المستوى 2): يعيش في الغابة ويسمى ملك الغابة 🎈"
+},
+{
+"id": "riddle_072_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 72 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_073_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 73 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_073_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 73 من ١٠٠: أخرج الرمز المختلف عن مجموعة (وسائل النقل والمواصلات):"
+},
+{
+"id": "picword_073_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 73 من ١٠٠ (المستوى 2): وسيلة نقل تطير في السماء فوق السحاب 🎈"
+},
+{
+"id": "riddle_073_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 73 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_074_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 74 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_074_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 74 من ١٠٠: أخرج الرمز المختلف عن مجموعة (عجائب السماء والفضاء):"
+},
+{
+"id": "picword_074_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 74 من ١٠٠ (المستوى 2): تطير بهدوء بين الأزهار في الحديقة 🎈"
+},
+{
+"id": "riddle_074_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 74 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_075_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 75 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_075_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 75 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأدوات المدرسية والتعلم):"
+},
+{
+"id": "picword_075_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 75 من ١٠٠ (المستوى 2): نقرأ فيه القصص الجميلة ونتعلم منه العلوم 🎈"
+},
+{
+"id": "riddle_075_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 75 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_076_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 76 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_076_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 76 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الكائنات البحرية):"
+},
+{
+"id": "picword_076_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 76 من ١٠٠ (المستوى 2): تضيء السماء في الصباح وتمنحنا الدفء 🎈"
+},
+{
+"id": "riddle_076_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 76 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_077_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 77 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_077_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 77 من ١٠٠: أخرج الرمز المختلف عن مجموعة (النباتات والزهور):"
+},
+{
+"id": "picword_077_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 77 من ١٠٠ (المستوى 2): تعيش وتسبح تحت الماء في البحر 🎈"
+},
+{
+"id": "riddle_077_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 77 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_078_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 78 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_078_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 78 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأشكال الهندسية والألوان):"
+},
+{
+"id": "picword_078_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 78 من ١٠٠ (المستوى 2): يسير على القضبان الحديدية وينقل المسافرين 🎈"
+},
+{
+"id": "riddle_078_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 78 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_079_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 79 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_079_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 79 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الخضروات الصحية):"
+},
+{
+"id": "picword_079_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 79 من ١٠٠ (المستوى 2): تجمع الرحيق من الأزهار وتصنع العسل 🎈"
+},
+{
+"id": "riddle_079_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 79 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_080_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 80 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_080_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 80 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الرياضة والنشاط البدني):"
+},
+{
+"id": "picword_080_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 80 من ١٠٠ (المستوى 2): نبات كبير يعطينا الظل والأكسجين والثمار 🎈"
+},
+{
+"id": "riddle_080_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 80 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_081_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 81 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_081_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 81 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الفواكه الطازجة):"
+},
+{
+"id": "picword_081_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 81 من ١٠٠ (المستوى 2): فاكهة لذيذة ومفيدة للجسم 🎈"
+},
+{
+"id": "riddle_081_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 81 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_082_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 82 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_082_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 82 من ١٠٠: أخرج الرمز المختلف عن مجموعة (حيوانات الغابة والمزرعة):"
+},
+{
+"id": "picword_082_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 82 من ١٠٠ (المستوى 2): يعيش في الغابة ويسمى ملك الغابة 🎈"
+},
+{
+"id": "riddle_082_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 82 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_083_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 83 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_083_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 83 من ١٠٠: أخرج الرمز المختلف عن مجموعة (وسائل النقل والمواصلات):"
+},
+{
+"id": "picword_083_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 83 من ١٠٠ (المستوى 2): وسيلة نقل تطير في السماء فوق السحاب 🎈"
+},
+{
+"id": "riddle_083_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 83 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_084_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 84 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_084_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 84 من ١٠٠: أخرج الرمز المختلف عن مجموعة (عجائب السماء والفضاء):"
+},
+{
+"id": "picword_084_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 84 من ١٠٠ (المستوى 2): تطير بهدوء بين الأزهار في الحديقة 🎈"
+},
+{
+"id": "riddle_084_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 84 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_085_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 85 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_085_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 85 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأدوات المدرسية والتعلم):"
+},
+{
+"id": "picword_085_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 85 من ١٠٠ (المستوى 2): نقرأ فيه القصص الجميلة ونتعلم منه العلوم 🎈"
+},
+{
+"id": "riddle_085_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 85 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_086_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 86 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_086_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 86 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الكائنات البحرية):"
+},
+{
+"id": "picword_086_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 86 من ١٠٠ (المستوى 2): تضيء السماء في الصباح وتمنحنا الدفء 🎈"
+},
+{
+"id": "riddle_086_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 86 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_087_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 87 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_087_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 87 من ١٠٠: أخرج الرمز المختلف عن مجموعة (النباتات والزهور):"
+},
+{
+"id": "picword_087_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 87 من ١٠٠ (المستوى 2): تعيش وتسبح تحت الماء في البحر 🎈"
+},
+{
+"id": "riddle_087_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 87 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_088_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 88 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_088_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 88 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأشكال الهندسية والألوان):"
+},
+{
+"id": "picword_088_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 88 من ١٠٠ (المستوى 2): يسير على القضبان الحديدية وينقل المسافرين 🎈"
+},
+{
+"id": "riddle_088_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 88 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_089_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 89 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_089_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 89 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الخضروات الصحية):"
+},
+{
+"id": "picword_089_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 89 من ١٠٠ (المستوى 2): تجمع الرحيق من الأزهار وتصنع العسل 🎈"
+},
+{
+"id": "riddle_089_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 89 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_090_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 90 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_090_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 90 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الرياضة والنشاط البدني):"
+},
+{
+"id": "picword_090_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 90 من ١٠٠ (المستوى 2): نبات كبير يعطينا الظل والأكسجين والثمار 🎈"
+},
+{
+"id": "riddle_090_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 90 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_091_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 91 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_091_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 91 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الفواكه الطازجة):"
+},
+{
+"id": "picword_091_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 91 من ١٠٠ (المستوى 2): فاكهة لذيذة ومفيدة للجسم 🎈"
+},
+{
+"id": "riddle_091_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 91 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_092_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 92 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_092_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 92 من ١٠٠: أخرج الرمز المختلف عن مجموعة (حيوانات الغابة والمزرعة):"
+},
+{
+"id": "picword_092_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 92 من ١٠٠ (المستوى 2): يعيش في الغابة ويسمى ملك الغابة 🎈"
+},
+{
+"id": "riddle_092_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 92 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_093_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 93 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_093_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 93 من ١٠٠: أخرج الرمز المختلف عن مجموعة (وسائل النقل والمواصلات):"
+},
+{
+"id": "picword_093_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 93 من ١٠٠ (المستوى 2): وسيلة نقل تطير في السماء فوق السحاب 🎈"
+},
+{
+"id": "riddle_093_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 93 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_094_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 94 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_094_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 94 من ١٠٠: أخرج الرمز المختلف عن مجموعة (عجائب السماء والفضاء):"
+},
+{
+"id": "picword_094_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 94 من ١٠٠ (المستوى 2): تطير بهدوء بين الأزهار في الحديقة 🎈"
+},
+{
+"id": "riddle_094_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 94 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_095_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 95 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_095_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 95 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأدوات المدرسية والتعلم):"
+},
+{
+"id": "picword_095_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 95 من ١٠٠ (المستوى 2): نقرأ فيه القصص الجميلة ونتعلم منه العلوم 🎈"
+},
+{
+"id": "riddle_095_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 95 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_096_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 96 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_096_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 96 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الكائنات البحرية):"
+},
+{
+"id": "picword_096_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 96 من ١٠٠ (المستوى 2): تضيء السماء في الصباح وتمنحنا الدفء 🎈"
+},
+{
+"id": "riddle_096_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 96 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_097_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 97 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_097_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 97 من ١٠٠: أخرج الرمز المختلف عن مجموعة (النباتات والزهور):"
+},
+{
+"id": "picword_097_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 97 من ١٠٠ (المستوى 2): تعيش وتسبح تحت الماء في البحر 🎈"
+},
+{
+"id": "riddle_097_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 97 من ١٠٠: ترتيب خطوات غسل اليدين قبل الطعام» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_098_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 98 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_098_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 98 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الأشكال الهندسية والألوان):"
+},
+{
+"id": "picword_098_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 98 من ١٠٠ (المستوى 2): يسير على القضبان الحديدية وينقل المسافرين 🎈"
+},
+{
+"id": "riddle_098_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 98 من ١٠٠: ترتيب خطوات الاستعداد للنوم الهادئ» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_099_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 99 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_099_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 99 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الخضروات الصحية):"
+},
+{
+"id": "picword_099_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 99 من ١٠٠ (المستوى 2): تجمع الرحيق من الأزهار وتصنع العسل 🎈"
+},
+{
+"id": "riddle_099_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 99 من ١٠٠: مراحل نمو النبتة الجميلة» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "memory_100_win",
+"feature": "games_memory",
+"persona": "cheerful_friend",
+"text": "ما شاء الله يا بطل الأبطال! أنهيت المرحلة 100 من مئة في لعبة الذاكرة البصرية بنجاح!"
+},
+{
+"id": "odd_100_title",
+"feature": "games_odd",
+"persona": "haneen",
+"text": "المرحلة 100 من ١٠٠: أخرج الرمز المختلف عن مجموعة (الرياضة والنشاط البدني):"
+},
+{
+"id": "picword_100_bad",
+"feature": "games_pictureword",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: المرحلة 100 من ١٠٠ (المستوى 2): نبات كبير يعطينا الظل والأكسجين والثمار 🎈"
+},
+{
+"id": "riddle_100_ok",
+"feature": "games_riddle",
+"persona": "cheerful_friend",
+"text": "أحسنت يا بطل! إجابة ذكية وصحيحة! لقد أتقنت «المرحلة 100 من ١٠٠: ترتيب وجبات اليوم الصحي للبطل» ببراعة! أنا فخورة بك جداً 🌟"
+},
+{
+"id": "sound_bad",
+"feature": "games_sound",
+"persona": "haneen",
+"text": "محاولة شجاعة وجميلة يا بطل! لا بأس أبداً، كلنا نتعلم بالمحاولة. تلميح لطيف من حنين: اضغط «استمع للصوت» بالأعلى وركز في الصوت! 🎈"
+},
+{
+"id": "menu_01",
+"feature": "games_menu",
+"persona": "haneen",
+"text": "مرسم الآداب (١٠٠ لوحة)، ١٠٠ لوحة رسم وتلوين لتعلم الآداب والأخلاق"
+},
+{
+"id": "menu_02",
+"feature": "games_menu",
+"persona": "haneen",
+"text": "قوة الملاحظة (١٠٠ مرحلة)، ١٠٠ مرحلة لتصنيف الأشكال واكتشاف المختلف"
+},
+{
+"id": "menu_03",
+"feature": "games_menu",
+"persona": "haneen",
+"text": "الألغاز والمنطق (١٠٠ لغز)، ١٠٠ لغز لاستنتاج الأنماط والتسلسل المنطقي"
+},
+{
+"id": "menu_04",
+"feature": "games_menu",
+"persona": "haneen",
+"text": "الذاكرة البصرية (١٠٠ مرحلة)، ١٠٠ مستوى متدرج لتقوية الذاكرة والتركيز"
+},
+{
+"id": "menu_05",
+"feature": "games_menu",
+"persona": "haneen",
+"text": "الحساب والجمع (١٠٠ مرحلة)، ١٠٠ مسألة عدّ وجمع بصري لتنمية الذكاء الرياضي"
+},
+{
+"id": "menu_06",
+"feature": "games_menu",
+"persona": "haneen",
+"text": "الحروف والكلمات (١٠٠ مرحلة)، ١٠٠ تحدٍ للذكاء اللغوي ومخارج الحروف العربية"
+},
+{
+"id": "menu_07",
+"feature": "games_menu",
+"persona": "haneen",
+"text": "مطابقة الصور والكلمات، اختر الصورة الصحيحة التي تطابق الكلمة والوصف"
+},
+{
+"id": "menu_08",
+"feature": "games_menu",
+"persona": "haneen",
+"text": "لعبة التصنيف الذكي، صنّف الحيوانات والفواكه ووسائل النقل في مجموعاتها"
+},
+{
+"id": "menu_09",
+"feature": "games_menu",
+"persona": "haneen",
+"text": "أصوات الحيوانات والبيئة، تعرّف على صاحب الصوت وبيئته الطبيعية"
+},
+{
+"id": "menu_10",
+"feature": "games_menu",
+"persona": "haneen",
+"text": "الترتيب والتسلسل المنطقي، رتّب خطوات العادات اليومية بترتيبها الصحيح"
 }
 ]

@@ -1,0 +1,47 @@
+خطوات تفعيل الدخول بجوجل (من غير Firebase)
+==========================================
+الفكرة: ولي الأمر بيدخل بحساب جوجل بتاعه، والتطبيق بيحفظ نسخة من بيانات الأسرة (الطفل، النجوم، الإعدادات) في مساحة مخفية خاصة بالتطبيق في Google Drive بتاع الأب. لما يفتح التطبيق على موبايل جديد ويضغط "عندي حساب بالفعل" كل حاجة بترجع. مفيش سيرفر عندنا ومفيش Firebase.
+
+أولاً: على الكمبيوتر (مرة واحدة)
+1) افتح https://console.cloud.google.com وادخل بحساب جوجل بتاعك.
+2) فوق اضغط على اختيار المشروع > "New Project" > الاسم: Haneen Kids > Create.
+3) من القائمة: APIs & Services > Library > دوّر على "Google Drive API" > Enable.
+4) من القائمة: APIs & Services > OAuth consent screen:
+   - User type: External > Create.
+   - App name: حنين كيدز، User support email وDeveloper email: إيميلك.
+   - Scopes: اضغط Add or remove scopes وضيف: ../auth/userinfo.email و ../auth/drive.appdata (وده مش حساس، فمفيش مراجعة من جوجل).
+   - لما تخلص اضغط "Publish app" وخليه In production. مهم جداً: لو فضل Testing الدخول هيشتغل بس لحد 100 إيميل ويتفصل كل 7 أيام.
+5) من القائمة: APIs & Services > Credentials > Create credentials > OAuth client ID:
+   - Application type: Android
+   - Package name: com.haneenkids.haneen_kids_vod
+   - SHA-1: بصمة المفتاح (الخطوة ثانياً تحت)
+   - Create.
+   كرر الخطوة دي لكل بصمة SHA-1 (واحدة للـ debug للتجربة، وواحدة للـ release، وواحدة بتاعة Play).
+
+ثانياً: إزاي تجيب بصمة SHA-1
+- للتجربة (debug): في الـ Terminal جوه فولدر المشروع:
+  cd android && ./gradlew signingReport
+  هتلاقي سطر SHA1 تحت Variant: debug.
+- للـ release (المفتاح بتاعك): 
+  keytool -list -v -keystore PATH_TO_YOUR_KEYSTORE.jks -alias YOUR_ALIAS
+  وانسخ سطر SHA1. (متبعتش الباسورد ولا الملف لحد في الشات.)
+- بعد ما ترفع على Google Play وتفعّل Play App Signing: Play Console > التطبيق > Test and release > App integrity > App signing > انسخ SHA-1 بتاع "App signing key certificate" وضيفه كـ OAuth client تالت. ده اللي بيخلي الدخول يشتغل للناس اللي بتنزل من المتجر.
+
+ثالثاً: في المشروع
+1) انسخ الملفات اللي في الفولدر ده فوق ملفاتك بنفس المسارات.
+2) شغّل: flutter pub get
+3) مفيش ملف google-services.json ومفيش رقم تحطه في الكود. التطبيق بيتعرف على نفسه من الباكدج + SHA-1.
+4) INTERNET permission لازم يكون في AndroidManifest.xml (موجود في ملف المانيفست اللي بعتهولك قبل كده).
+
+رابعاً: إزاي تجرب
+1) ثبّت نسخة debug على موبايل فيه حساب جوجل.
+2) أول شاشة: اضغط "عندي حساب بالفعل". لو مفيش نسخة محفوظة هتظهر رسالة "مفيش حساب محفوظ" وده طبيعي.
+3) اعمل حساب جديد (يلا نبدأ)، وبعدين من تبويب "حسابي" اضغط "اربط واحفظ" واختار حساب جوجل.
+4) امسح التطبيق (Uninstall) وثبّته تاني، واضغط "عندي حساب بالفعل". المفروض الطفل والنجوم يرجعوا.
+
+لو ظهرت رسالة "إعداد دخول جوجل لسه مش مكتمل": يبقى البصمة SHA-1 أو اسم الباكدج في الخطوة 5 مش مطابق للنسخة اللي بتجربها.
+
+ملاحظات أمان:
+- النسخة الاحتياطية بتتحفظ في مساحة خاصة بالتطبيق في حساب الأب، ومفيش حد غيره يقدر يشوفها. بتحتوي على بيانات الطفل ورمز الوالدين، فمتشاركش حساب جوجل بتاعك مع الطفل.
+- لازم تحدّث سياسة الخصوصية وتذكر إن التطبيق بيحفظ نسخة اختيارية على Google Drive الخاص بالأب. وفي Play Console في Data safety اختار إن البيانات بتتشارك مع Google للحفظ الاختياري.
+- لو عايز Google ID Token لسيرفر في المستقبل: اعمل OAuth client من نوع Web وابني بـ --dart-define=GOOGLE_SERVER_CLIENT_ID=xxxx.apps.googleusercontent.com (مش مطلوب دلوقتي).

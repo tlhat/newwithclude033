@@ -59,7 +59,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
         ? 1
         : widget.initialTabIndex.clamp(0, 3);
     _tabController = TabController(
-      length: 4,
+      length: 5,
       vsync: this,
       initialIndex: mappedTabIndex,
     );
@@ -1572,6 +1572,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                 Tab(
                     icon: Icon(Icons.manage_accounts_outlined),
                     text: 'إعدادات الحساب'),
+                Tab(icon: Icon(Icons.insights_rounded), text: 'تقرير التقدم'),
               ],
             ),
           ),
@@ -1910,6 +1911,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
               ListView(
                 padding: const EdgeInsets.all(20),
                 children: [
+                  SafetyPrivacyCard(appState: widget.appState),
                   Container(
                     padding: const EdgeInsets.all(18),
                     decoration: BoxDecoration(
@@ -2115,6 +2117,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                   ),
                 ],
               ),
+              ParentProgressReport(child: activeChild),
             ],
           ),
         );

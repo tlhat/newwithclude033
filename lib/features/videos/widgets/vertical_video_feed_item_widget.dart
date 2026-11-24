@@ -414,14 +414,12 @@ class _VerticalVideoFeedItemWidgetState
                                       ),
 
                                       // Animated Story Scene Illustration
-                                      Text(
-                                        card.imageIllustration,
-                                        textAlign: TextAlign.center,
-                                        style: TextStyle(
-                                          fontSize: MediaQuery.of(context).size.height < 700
-                                              ? 48
-                                              : 68,
-                                        ),
+                                      AnimatedStoryScene(
+                                        illustration: card.imageIllustration,
+                                        emojiSize:
+                                            MediaQuery.of(context).size.height < 700
+                                                ? 44
+                                                : 60,
                                       ),
                                       if (CalmVoiceService.instance.isStoryNarrationPaused) ...[
                                         const SizedBox(height: 6),

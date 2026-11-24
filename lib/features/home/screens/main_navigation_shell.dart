@@ -33,14 +33,24 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
   void initState() {
     super.initState();
     _currentIndex = widget.initialDestination.index;
-  }
-
-  void _switchTo(MainNavDestination dest) {
-    if (!mounted) return;
-    setState(() {
-      _currentIndex = dest.index;
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted) SectionIntroService.instance.playForTab(_currentIndex);
     });
   }
+
+  /// Every section change goes through here. The sections live in an
+  /// IndexedStack, so a story keeps talking in the background unless we stop
+  /// it: narration, speech and music are stopped when the section changes.
+  void _selectIndex(int idx) {
+    if (!mounted || idx == _currentIndex) return;
+    CalmVoiceService.instance.stopAllAudioImmediatelyForParentalGate();
+    setState(() {
+      _currentIndex = idx;
+    });
+    SectionIntroService.instance.playForTab(idx);
+  }
+
+  void _switchTo(MainNavDestination dest) => _selectIndex(dest.index);
 
   Future<void> _openParentalGate() async {
     await CalmVoiceService.instance.stopAllAudioImmediatelyForParentalGate();
@@ -74,7 +84,8 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
                   const SizedBox(height: 8),
                   Text(
                     err!,
-                    style: const TextStyle(color: Colors.redAccent, fontSize: 12),
+                    style:
+                        const TextStyle(color: Colors.redAccent, fontSize: 12),
                   ),
                 ],
               ],
@@ -120,6 +131,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
       VerticalVideoFeedPlayerScreen(
         appState: widget.appState,
         embeddedInShell: true,
+        tabActive: _currentIndex == MainNavDestination.stories.index,
         onNavigateToGames: () => _switchTo(MainNavDestination.games),
         onNavigateToAcademy: () => _switchTo(MainNavDestination.academy),
       ),
@@ -142,11 +154,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
       ),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _currentIndex,
-        onDestinationSelected: (idx) {
-          setState(() {
-            _currentIndex = idx;
-          });
-        },
+        onDestinationSelected: _selectIndex,
         destinations: [
           NavigationDestination(
             icon: const Icon(Icons.auto_stories_outlined),

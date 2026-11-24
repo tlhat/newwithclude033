@@ -47,6 +47,16 @@ class AppStateManager extends ChangeNotifier {
   bool _isDisposed = false;
   int _activeSessionSeconds = 0;
   final Set<String> _inFlightRewardLocks = {};
+
+  /// Fires every time the child earns stars. StarRewardHost plays the celebration.
+  final ValueNotifier<StarRewardEvent?> starRewards =
+      ValueNotifier<StarRewardEvent?>(null);
+  int _rewardSeq = 0;
+
+  void announceStarReward(int stars, String title) {
+    if (stars <= 0) return;
+    starRewards.value = StarRewardEvent(stars, title, ++_rewardSeq);
+  }
   // Phase 5: duplicate-greeting guard — the greeting is presented at most
   // once per child selection session (rebuilds/navigation never re-trigger).
   String? _companionGreetingPresentedForChildId;
@@ -691,6 +701,110 @@ class AppStateManager extends ChangeNotifier {
     _refreshSmartVoiceAssistantSuggestion(speakAloud: false);
     notifyListeners();
     return null;
+  }
+
+  // ------------------------------------------------------------ Google backup
+
+  /// Email of the Google account used for the backup (null = not linked).
+  String? get linkedGoogleEmail => _prefs.getString('linked_google_email');
+
+  /// Everything needed to rebuild the family on a new phone. The demo account
+  /// is never included.
+  String exportBackupJson() {
+    final Map<String, dynamic> accounts = {};
+    _accounts.forEach((key, acc) {
+      if (key == 'parent@haneenkids.com') return;
+      accounts[key] = acc.toJson();
+    });
+    return jsonEncode({
+      'version': 1,
+      'savedAt': DateTime.now().toIso8601String(),
+      'currentUserKey': currentAccount == null
+          ? null
+          : _accounts.entries
+              .firstWhere((e) => identical(e.value, currentAccount),
+                  orElse: () => MapEntry('', currentAccount!))
+              .key,
+      'accounts': accounts,
+    });
+  }
+
+  /// Returns null on success, otherwise a message in Arabic.
+  Future<String?> restoreFromBackupJson(String text) async {
+    try {
+      final Map<String, dynamic> data =
+          jsonDecode(text) as Map<String, dynamic>;
+      final Map<String, dynamic> raw =
+          Map<String, dynamic>.from(data['accounts'] as Map? ?? const {});
+      if (raw.isEmpty) return 'النسخة الاحتياطية فاضية.';
+      final Map<String, ParentAccount> restored = {};
+      raw.forEach((k, v) {
+        restored[k] = ParentAccount.fromJson(Map<String, dynamic>.from(v as Map));
+      });
+      String key = (data['currentUserKey'] ?? '').toString();
+      if (!restored.containsKey(key)) key = restored.keys.first;
+      _accounts.addAll(restored);
+      currentAccount = _accounts[key];
+      onboardingCompleted = true;
+      hasSelectedChildInSession = true;
+      await _saveAccounts();
+      await _prefs.setBool('onboarding_completed', true);
+      await accountRepository.dataSource.setLoggedInUserKey(key);
+      await _prefs.setString('current_user_key', key);
+      await _prefs.setBool('has_selected_child_in_session', true);
+      _syncLikedStateForActiveChild();
+      notifyListeners();
+      return null;
+    } catch (_) {
+      return 'ملف النسخة الاحتياطية تالف أو من إصدار غير مدعوم.';
+    }
+  }
+
+  /// "عندي حساب بالفعل": sign in with Google and restore the saved family.
+  /// Returns null on success, otherwise a message to show.
+  Future<String?> signInWithGoogleAndRestore() async {
+    if (AppNetworkPolicyGuard.isOfflineOnlyModeActive) {
+      return 'وضع بدون إنترنت شغال. أوقفه من إعدادات الوالدين عشان تدخل بجوجل.';
+    }
+    try {
+      final GoogleIdentity? who = await GoogleAccountService.instance.signIn();
+      if (who == null) return 'اتلغى الدخول بجوجل.';
+      final String? text =
+          await GoogleAccountService.instance.downloadBackup(who);
+      if (text == null) {
+        await GoogleAccountService.instance.signOut();
+        return 'مفيش حساب محفوظ على ${who.email}. ابدأ حساب جديد بزر «يلا نبدأ».';
+      }
+      final String? err = await restoreFromBackupJson(text);
+      if (err == null) await _prefs.setString('linked_google_email', who.email);
+      return err;
+    } on GoogleAccountException catch (e) {
+      return e.messageAr;
+    }
+  }
+
+  /// Saves the family to the parent's Google Drive. Null = success.
+  Future<String?> backupToGoogleNow() async {
+    if (AppNetworkPolicyGuard.isOfflineOnlyModeActive) {
+      return 'وضع بدون إنترنت شغال. أوقفه الأول.';
+    }
+    try {
+      final GoogleIdentity? who = await GoogleAccountService.instance.signIn();
+      if (who == null) return 'اتلغى الدخول بجوجل.';
+      await GoogleAccountService.instance
+          .uploadBackup(who, exportBackupJson());
+      await _prefs.setString('linked_google_email', who.email);
+      notifyListeners();
+      return null;
+    } on GoogleAccountException catch (e) {
+      return e.messageAr;
+    }
+  }
+
+  Future<void> unlinkGoogleBackup() async {
+    await GoogleAccountService.instance.signOut();
+    await _prefs.remove('linked_google_email');
+    notifyListeners();
   }
 
   Future<void> reopenOnboardingIntro() async {
@@ -1901,6 +2015,7 @@ class AppStateManager extends ChangeNotifier {
       if (!alreadyRewarded) {
         child.completedActivities.add(uniqueKey);
         child.starsEarned += earnedStars;
+        announceStarReward(earnedStars, 'أحسنت يا بطل! أنجزت «$gameTitle»');
         child.intelligencePoints += earnedIqPoints;
         child.gamesCompletedCount++;
         _evaluateAndUnlockChildAchievements(child);
@@ -2180,6 +2295,7 @@ class AppStateManager extends ChangeNotifier {
         child.completedLessons.add(lessonId);
         awardedStars = 2;
         child.starsEarned += awardedStars;
+        announceStarReward(awardedStars, 'أتقنت درس «$lessonTitle»');
         child.intelligencePoints += 15;
       }
     } else {
@@ -2515,6 +2631,7 @@ class AppStateManager extends ChangeNotifier {
       if (isFirstTime) {
         child.completedActivities.add(scopedKey);
         child.starsEarned++;
+        announceStarReward(1, 'نجمة جديدة! عمل رائع');
         if (isPronunciation) {
           child.correctPronunciationsCount++;
         }

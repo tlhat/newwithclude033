@@ -20,6 +20,9 @@ export 'core/storage/local_preferences_storage.dart';
 export 'core/utils/arabic_text_utils.dart';
 export 'core/services/elevenlabs_voice_service.dart';
 export 'core/services/calm_voice_service.dart';
+export 'core/services/section_intro_service.dart';
+export 'core/services/google_account_service.dart';
+export 'features/home/widgets/google_backup_card.dart';
 
 export 'data/models/video_model.dart';
 export 'data/models/child_profile_model.dart';
@@ -87,6 +90,9 @@ export 'features/settings/screens/account_settings_section.dart';
 export 'features/settings/widgets/security_settings_card.dart';
 
 export 'shared/components/app_state_manager.dart';
+export 'shared/components/star_reward_host.dart';
+export 'features/parental_studio/screens/parent_progress_report.dart';
+export 'features/parental_studio/widgets/safety_privacy_card.dart';
 export 'shared/widgets/side_action_button.dart';
 export 'shared/widgets/kid_friendly_big_back_button.dart';
 export 'shared/widgets/app_common_widgets.dart';
