@@ -25,9 +25,11 @@ class EtiquetteDrawingCanvasPainter extends CustomPainter {
   @override
   void paint(Canvas canvas, Size size) {
     final Paint guidePaint = Paint()
-      ..color = Colors.white.withOpacity(0.18)
+      ..color = Colors.white.withOpacity(0.38)
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 4.0;
+      ..strokeWidth = 5.0
+      ..strokeJoin = StrokeJoin.round
+      ..strokeCap = StrokeCap.round;
 
     final Offset center = Offset(size.width / 2, size.height / 2);
     final double radius = min(size.width, size.height) * 0.34;
@@ -163,19 +165,37 @@ class EtiquetteDrawingCanvasPainter extends CustomPainter {
     }
 
     for (final stroke in strokes) {
-      if (stroke.points.length < 2) continue;
+      if (stroke.points.isEmpty) continue;
       final Paint p = Paint()
         ..color = stroke.color
         ..strokeCap = StrokeCap.round
         ..strokeJoin = StrokeJoin.round
+        ..isAntiAlias = true
         ..style = PaintingStyle.stroke
         ..strokeWidth = stroke.strokeWidth;
 
-      final Path path = Path()
-        ..moveTo(stroke.points.first.dx, stroke.points.first.dy);
-      for (int i = 1; i < stroke.points.length; i++) {
-        path.lineTo(stroke.points[i].dx, stroke.points[i].dy);
+      if (stroke.points.length < 3) {
+        // A tap or a very short touch: draw a round dot.
+        canvas.drawCircle(
+            stroke.points.first,
+            stroke.strokeWidth / 2,
+            Paint()
+              ..color = stroke.color
+              ..isAntiAlias = true);
+        if (stroke.points.length == 2) {
+          canvas.drawLine(stroke.points[0], stroke.points[1], p);
+        }
+        continue;
       }
+      // Smooth curve: quadratic curves through the midpoints of the points.
+      final List<Offset> pts = stroke.points;
+      final Path path = Path()..moveTo(pts.first.dx, pts.first.dy);
+      for (int i = 1; i < pts.length - 1; i++) {
+        final Offset mid = Offset(
+            (pts[i].dx + pts[i + 1].dx) / 2, (pts[i].dy + pts[i + 1].dy) / 2);
+        path.quadraticBezierTo(pts[i].dx, pts[i].dy, mid.dx, mid.dy);
+      }
+      path.lineTo(pts.last.dx, pts.last.dy);
       canvas.drawPath(path, p);
     }
   }

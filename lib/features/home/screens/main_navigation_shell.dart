@@ -1,3 +1,4 @@
+import 'package:haneen_kids_vod/core/services/app_rating_service.dart';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
@@ -35,6 +36,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
     _currentIndex = widget.initialDestination.index;
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) SectionIntroService.instance.playForTab(_currentIndex);
+      AppRatingService.instance.maybeAsk();
     });
   }
 
@@ -42,7 +44,12 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
   /// IndexedStack, so a story keeps talking in the background unless we stop
   /// it: narration, speech and music are stopped when the section changes.
   void _selectIndex(int idx) {
-    if (!mounted || idx == _currentIndex) return;
+    if (!mounted) return;
+    if (idx == _currentIndex) {
+      // Tapping the section you are already in: stop and replay its intro.
+      SectionIntroService.instance.playForTab(idx);
+      return;
+    }
     CalmVoiceService.instance.stopAllAudioImmediatelyForParentalGate();
     setState(() {
       _currentIndex = idx;

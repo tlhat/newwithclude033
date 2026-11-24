@@ -58,12 +58,19 @@ class SectionIntroService {
 
   bool hasPlayed(String key) => _played.contains(key);
 
-  /// Speaks the intro once per app session. Stops any other audio first.
+  int _generation = 0;
+
+  /// Speaks the section intro EVERY time the section is opened (so it is
+  /// consistent), after stopping any other audio at once. If the child taps
+  /// another section quickly, the older intro never starts.
   Future<void> playOnce(String key) async {
     final String? text = kIntroTexts[key];
-    if (text == null || !_played.add(key)) return;
+    if (text == null) return;
+    _played.add(key);
+    final int gen = ++_generation;
     final voice = CalmVoiceService.instance;
     await voice.stopSpeaking(); // keep the calm background music running
+    if (gen != _generation) return;
     await voice.speakCalmly(
       text,
       rate: 0.38,

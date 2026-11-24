@@ -489,6 +489,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                         final Color accent = g['color'] as Color;
                         return GestureDetector(
                           onTap: () {
+                            CalmVoiceService.instance.stopSpeaking();
                             setState(() {
                               _selectedGameIndex = i;
                               _heroReactionMessage = null;
@@ -798,6 +799,18 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     );
                   }).toList(),
                 ),
+              ),
+              IconButton(
+                tooltip: 'تراجع عن آخر خط',
+                onPressed: () {
+                  if (_drawingStrokes.isEmpty) return;
+                  setState(() {
+                    _drawingStrokes.removeLast();
+                    _drawnPointsCount =
+                        _drawingStrokes.fold<int>(0, (a, s) => a + s.points.length);
+                  });
+                },
+                icon: const Icon(Icons.undo_rounded, color: Color(0xFFFDE68A)),
               ),
               IconButton(
                 tooltip: 'مسح اللوحة',
