@@ -1724,7 +1724,7 @@ class AppStateManager extends ChangeNotifier {
     if (child.liveActivityTimeline.length > 35) {
       child.liveActivityTimeline.removeLast();
     }
-    if (remoteMonitorApiUrl.trim().isNotEmpty && AppNetworkPolicyGuard.canPerformOutboundNetworkRequest()) {
+    if (kRemoteControlEnabled && remoteMonitorApiUrl.trim().isNotEmpty && AppNetworkPolicyGuard.canPerformOutboundNetworkRequest()) {
       try {
         http.post(
           Uri.parse(remoteMonitorApiUrl.trim()),
@@ -1752,7 +1752,9 @@ class AppStateManager extends ChangeNotifier {
   Timer? _remoteLockTimer;
 
   /// True while a parent locked the app from another phone.
-  bool get remoteLockActive => _prefs.getBool('remote_lock_active') ?? false;
+  /// Remote lock and monitoring are postponed: off, nothing is read or sent.
+  static const bool kRemoteControlEnabled = false;
+  bool get remoteLockActive => kRemoteControlEnabled && (_prefs.getBool('remote_lock_active') ?? false);
 
   String get remoteLockMessage =>
       _prefs.getString('remote_lock_message') ?? 'التطبيق مقفول دلوقتي بأمر من ولي الأمر.';
@@ -1777,6 +1779,7 @@ class AppStateManager extends ChangeNotifier {
   /// Reads the lock file from the family's Google Drive. A phone never obeys
   /// the lock it wrote itself (so the parent's phone is not locked).
   Future<void> pollRemoteLock() async {
+    if (!kRemoteControlEnabled) return;
     if (linkedGoogleEmail == null ||
         isAppInBackground ||
         AppNetworkPolicyGuard.isOfflineOnlyModeActive) {
@@ -1808,6 +1811,7 @@ class AppStateManager extends ChangeNotifier {
 
   /// Parent side: writes the lock state for the family's other phones.
   Future<void> publishRemoteLock(bool locked, {String message = ''}) async {
+    if (!kRemoteControlEnabled) return;
     if (linkedGoogleEmail == null) return;
     try {
       final GoogleIdentity? who =
@@ -1881,7 +1885,7 @@ class AppStateManager extends ChangeNotifier {
       await CalmVoiceService.instance.stopSpeaking();
     }
     publishRemoteLock(lockDevice, message: child.remoteLockReasonMessage);
-    if (remoteMonitorApiUrl.trim().isNotEmpty && AppNetworkPolicyGuard.canPerformOutboundNetworkRequest()) {
+    if (kRemoteControlEnabled && remoteMonitorApiUrl.trim().isNotEmpty && AppNetworkPolicyGuard.canPerformOutboundNetworkRequest()) {
       try {
         await http
             .post(

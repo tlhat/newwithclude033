@@ -58,11 +58,13 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
     widget.appState.setParentalControlActive(true);
     // Immediately stop all story narration, voices, and background music upon entering Parental Studio
     CalmVoiceService.instance.stopAllAudioImmediatelyForParentalGate();
-    final int mappedTabIndex = widget.initialTabIndex == 2
+    final int oldMapped = widget.initialTabIndex == 2
         ? 1
         : widget.initialTabIndex.clamp(0, 3);
+    // The remote monitor/lock tab was removed (postponed), so indexes shift by one.
+    final int mappedTabIndex = (oldMapped - 1).clamp(0, 3);
     _tabController = TabController(
-      length: 5,
+      length: 4,
       vsync: this,
       initialIndex: mappedTabIndex,
     );
@@ -1566,9 +1568,6 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
               unselectedLabelColor: Colors.white70,
               tabs: [
                 Tab(
-                    icon: Icon(Icons.phonelink_lock_rounded),
-                    text: 'مراقبة وقفل موبايل الطفل'),
-                Tab(
                     icon: Icon(Icons.star_rate_rounded),
                     text: 'الدعم والتقييم'),
                 Tab(icon: Icon(Icons.child_care), text: 'ملفات الأطفال'),
@@ -1582,7 +1581,6 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
           body: TabBarView(
             controller: _tabController,
             children: [
-              _buildRemoteChildMonitorAndLockTab(account, activeChild),
               ListView(
                 padding: const EdgeInsets.all(20),
                 children: [
