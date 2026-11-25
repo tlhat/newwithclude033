@@ -173,3 +173,59 @@ jobs:
         with:
           name: haneen-kids-release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
+
+      # ---- Emulator test build (extra, never replaces the phone APK above) ----
+      - name: Build emulator APK (adds x86_64; arm64 kept for Apple-silicon emulators)
+        continue-on-error: true
+        run: |
+          cp build/app/outputs/flutter-apk/app-release.apk /tmp/phone-app-release.apk
+          flutter build apk --release --no-tree-shake-icons --target-platform android-arm64,android-x64
+          mkdir -p /tmp/emu
+          cp build/app/outputs/flutter-apk/app-release.apk /tmp/emu/haneen-emulator-x86_64.apk
+          "$(ls -d $ANDROID_HOME/build-tools/*/apksigner | sort -V | tail -1)" verify --print-certs /tmp/emu/haneen-emulator-x86_64.apk | grep "SHA-1"
+          unzip -l /tmp/emu/haneen-emulator-x86_64.apk | grep "libflutter.so"
+
+      - name: Upload emulator APK
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: haneen-kids-emulator-x86_64-apk
+          path: /tmp/emu/haneen-emulator-x86_64.apk
+
+      - name: Enable KVM for the emulator smoke test
+        continue-on-error: true
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - name: Startup smoke test on an x86_64 emulator (installs, launches, checks it stays open)
+        continue-on-error: true
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 33
+          arch: x86_64
+          target: google_apis
+          disable-animations: true
+          script: |
+            adb install -r /tmp/emu/haneen-emulator-x86_64.apk
+            adb logcat -c
+            adb shell monkey -p com.haneenkids.haneen_kids_vod -c android.intent.category.LAUNCHER 1
+            sleep 25
+            adb logcat -d > /tmp/emu/logcat.txt
+            echo "--- process alive? ---"
+            adb shell pidof com.haneenkids.haneen_kids_vod && echo ALIVE || echo DEAD
+            echo "--- crash lines ---"
+            grep -E "FATAL EXCEPTION|AndroidRuntime|UnsatisfiedLinkError|signal 11|Fatal signal|E/flutter" /tmp/emu/logcat.txt | head -40 || true
+            adb exec-out screencap -p > /tmp/emu/screen.png
+
+      - name: Upload emulator log and screenshot
+        if: always()
+        continue-on-error: true
+        uses: actions/upload-artifact@v4
+        with:
+          name: emulator-smoke-log
+          path: |
+            /tmp/emu/logcat.txt
+            /tmp/emu/screen.png
+          if-no-files-found: ignore
