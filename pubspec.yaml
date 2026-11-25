@@ -42,6 +42,43 @@ flutter:
   assets:
     # audio-assets-begin
     - assets/audio/audio_index.json
+    - assets/audio/cheerful_friend/companion/
+    - assets/audio/cheerful_friend/games_classify/
+    - assets/audio/cheerful_friend/games_etiquette/
+    - assets/audio/cheerful_friend/games_math/
+    - assets/audio/cheerful_friend/games_memory/
+    - assets/audio/cheerful_friend/games_odd/
+    - assets/audio/cheerful_friend/games_pattern/
+    - assets/audio/cheerful_friend/games_pictureword/
+    - assets/audio/cheerful_friend/games_riddle/
+    - assets/audio/cheerful_friend/games_sound/
+    - assets/audio/cheerful_friend/games_word/
+    - assets/audio/cheerful_friend/hero_alerts/
+    - assets/audio/cheerful_friend/lesson_feedback/
+    - assets/audio/cheerful_friend/reactions/
+    - assets/audio/cheerful_friend/stories/
+    - assets/audio/haneen/app/
+    - assets/audio/haneen/brain_games/
+    - assets/audio/haneen/companion/
+    - assets/audio/haneen/games_classify/
+    - assets/audio/haneen/games_etiquette/
+    - assets/audio/haneen/games_math/
+    - assets/audio/haneen/games_menu/
+    - assets/audio/haneen/games_odd/
+    - assets/audio/haneen/games_pattern/
+    - assets/audio/haneen/games_pictureword/
+    - assets/audio/haneen/games_riddle/
+    - assets/audio/haneen/games_sound/
+    - assets/audio/haneen/games_word/
+    - assets/audio/haneen/guide/
+    - assets/audio/haneen/hints/
+    - assets/audio/haneen/lessons/
+    - assets/audio/haneen/reactions/
+    - assets/audio/haneen/section_intro/
+    - assets/audio/haneen/videos/
+    - assets/audio/haneen/wrong_answer/
+    - assets/audio/storyteller/games_sound/
+    - assets/audio/storyteller/stories/
     # audio-assets-end
     - assets/exercises/
     - assets/icon/
