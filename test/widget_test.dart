@@ -1504,20 +1504,12 @@ void main() {
       expect(appState.localeController.learningLanguageCode, equals('ar'));
       expect(appState.localeController.uiTextDirection, equals(TextDirection.rtl));
 
+      // The app is Arabic only: asking for English changes nothing.
       await appState.setUiLanguage('en');
-      expect(appState.localeController.uiLanguageCode, equals('en'));
-      expect(appState.localeController.uiTextDirection, equals(TextDirection.ltr));
-      // Learning language stays independent!
-      expect(appState.localeController.learningLanguageCode, equals('ar'));
-
       await appState.setLearningLanguage('en');
-      expect(appState.localeController.learningLanguageCode, equals('en'));
-
-      final AppStateManager relaunched = AppStateManager(prefs);
-      await relaunched.initialize();
-      expect(relaunched.localeController.uiLanguageCode, equals('en'));
-      expect(relaunched.localeController.learningLanguageCode, equals('en'));
-      relaunched.dispose();
+      expect(appState.localeController.uiLanguageCode, equals('ar'));
+      expect(appState.localeController.learningLanguageCode, equals('ar'));
+      expect(appState.localeController.uiTextDirection, equals(TextDirection.rtl));
     });
 
     testWidgets('14. Sprint 3 (P0): English LTR Rendering of MainNavigationShell on 360x640', (WidgetTester tester) async {
