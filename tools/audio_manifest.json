@@ -22148,5 +22148,26 @@
   "persona": "haneen",
   "group": "oral_quiz_question",
   "text": "الكلمة تبدأ بأي حرف؟ الاختيارات: و، ح، ه."
+ },
+ {
+  "id": "fs_gender",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "fast_start",
+  "text": "إنت ولد ولا بنت؟"
+ },
+ {
+  "id": "fs_age",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "fast_start",
+  "text": "عندك كام سنة؟"
+ },
+ {
+  "id": "fs_name",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "fast_start",
+  "text": "اسمك إيه؟"
  }
 ]
