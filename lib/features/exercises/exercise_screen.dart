@@ -6,6 +6,7 @@ import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'package:haneen_kids_vod/core/theme/kid_theme.dart';
 import 'exercise_models.dart';
 import 'game_catalog.dart';
+import 'package:haneen_kids_vod/features/development/dev_core.dart';
 
 /// Plays the JSON exercises one after another. Rendering lives here, grading
 /// lives in ExerciseGrader.
@@ -18,6 +19,8 @@ class ExerciseGame extends StatefulWidget {
   /// Play exactly this question, then call [onSolved] (daily challenge).
   final Exercise? fixed;
   final VoidCallback? onSolved;
+  /// Called once per question with whether the first try was right.
+  final void Function(Exercise e, bool firstTry)? onFirstTry;
   const ExerciseGame(
       {super.key,
       required this.appState,
@@ -25,6 +28,7 @@ class ExerciseGame extends StatefulWidget {
       this.skill,
       this.fixed,
       this.onSolved,
+      this.onFirstTry,
       this.title = 'تمارين متنوعة'});
   @override
   State<ExerciseGame> createState() => _ExerciseGameState();
@@ -133,6 +137,8 @@ class _ExerciseGameState extends State<ExerciseGame> {
     final bool ok = ExerciseGrader.grade(e, _answer(e));
     if (_wrong == 0) {
       _prog.record(e, ok, DateTime.now());
+      DevStore.logAttempt(widget.appState.currentAccount?.activeChild.id ?? '', e.skill, e.id, ok);
+      widget.onFirstTry?.call(e, ok);
       _sp.setString(_key, jsonEncode(_prog.toJson()));
     }
     widget.onReact(ok);

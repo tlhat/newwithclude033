@@ -190,15 +190,20 @@ class ExerciseProgress {
     m['total'] = m['total']! + 1;
     if (correct) {
       m['right'] = m['right']! + 1;
+      m['miss'] = 0;
       m['streak'] = m['streak']! + 1;
       if (m['streak']! >= 3 && m['level']! < 3) {
         m['level'] = m['level']! + 1;
         m['streak'] = 0;
       }
     } else {
+      // Gentle adaptivity: the level only drops after two misses in a row,
+      // and a single miss never lowers it.
       m['streak'] = 0;
-      if (m['level']! > 1 && (m['total']! - m['right']!) % 2 == 0) {
-        m['level'] = m['level']! - 1;
+      m['miss'] = (m['miss'] ?? 0) + 1;
+      if (m['miss']! >= 2) {
+        if (m['level']! > 1) m['level'] = m['level']! - 1;
+        m['miss'] = 0;
       }
     }
     final Map<String, dynamic>? r = review[e.id];
