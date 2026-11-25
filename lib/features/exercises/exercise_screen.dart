@@ -15,11 +15,16 @@ class ExerciseGame extends StatefulWidget {
   /// Optional: play only one skill (used by the single-widget games).
   final String? skill;
   final String title;
+  /// Play exactly this question, then call [onSolved] (daily challenge).
+  final Exercise? fixed;
+  final VoidCallback? onSolved;
   const ExerciseGame(
       {super.key,
       required this.appState,
       required this.onReact,
       this.skill,
+      this.fixed,
+      this.onSolved,
       this.title = 'تمارين متنوعة'});
   @override
   State<ExerciseGame> createState() => _ExerciseGameState();
@@ -63,8 +68,12 @@ class _ExerciseGameState extends State<ExerciseGame> {
     try {
       final String raw =
           await rootBundle.loadString('assets/exercises/exercises_v1.json');
-      final List<Exercise> all = Exercise.parseList(raw);
-      final List<Exercise> l = widget.skill == null
+      final List<Exercise> all = widget.fixed != null
+          ? <Exercise>[widget.fixed!]
+          : Exercise.parseList(raw);
+      final List<Exercise> l = widget.fixed != null
+          ? all
+          : widget.skill == null
           ? all.where((x) => !kExerciseGameSkills.contains(x.skill)).toList()
           : all.where((x) => x.skill == widget.skill).toList();
       _sp = await SharedPreferences.getInstance();
@@ -140,6 +149,10 @@ class _ExerciseGameState extends State<ExerciseGame> {
           earnedStars: 1);
       await Future<void>.delayed(Duration(milliseconds: e.explain.isEmpty ? 900 : 2600));
       if (!mounted) return;
+      if (widget.onSolved != null) {
+        widget.onSolved!();
+        return;
+      }
       setState(() {
         _cur = _prog.next(_list, DateTime.now(), lastId: e.id);
         _wrong = 0;

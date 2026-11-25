@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/core/theme/kid_theme.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
+import 'world_games.dart';
 
 typedef ExtraReact = void Function(bool correct);
 
@@ -23,6 +24,13 @@ const List<WidgetGameDef> kWidgetGames = [
   WidgetGameDef('shadow_match', 'ظل الصورة', '🌑', 'اعرف صاحب الظل', 0xFF6366F1),
   WidgetGameDef('slide_puzzle', 'بازل الأرقام', '🧩', 'رتّب القطع من ١ لـ ٨', 0xFFEC4899),
   WidgetGameDef('maze', 'المتاهة', '🌀', 'وصّل حنين للنجمة', 0xFF22C55E),
+  WidgetGameDef('daily_challenge', 'تحدي اليوم', '📅', '٥ أسئلة قصيرة كل يوم', 0xFFEF4444),
+  WidgetGameDef('haneen_house', 'بيت حنين', '🏠', 'زيّن البيت بنجومك', 0xFF7C5E3C),
+  WidgetGameDef('haneen_pet', 'كتكوت حنين', '🐣', 'اعتني بالكتكوت وهو يكبر', 0xFFF59E0B),
+  WidgetGameDef('sticker_album', 'ألبوم الملصقات', '🏅', 'اجمع الملصقات والجوائز', 0xFFA855F7),
+  WidgetGameDef('certificate', 'شهادة التقدير', '🏆', 'شهادتك داخل التطبيق', 0xFFD4A017),
+  WidgetGameDef('bedtime', 'حدوتة قبل النوم', '🌙', 'الإضاءة بتخفت مع الحدوتة', 0xFF1E3A8A),
+  WidgetGameDef('screen_free', 'وضع بدون شاشة', '🗣️', 'أسئلة شفهية مع الأب أو الأم', 0xFF10B981),
   WidgetGameDef('plant_care', 'اعتني بالنبتة', '🌱', 'اسقِها وعرّضها للشمس لتكبر', 0xFF84CC16),
 ];
 
@@ -38,8 +46,10 @@ Widget buildWidgetGame(String id, AppStateManager s, ExtraReact react) {
       return SlidePuzzleGame(appState: s, onReact: react);
     case 'maze':
       return MazeGame(appState: s, onReact: react);
-    default:
+    case 'plant_care':
       return PlantCareGame(appState: s, onReact: react);
+    default:
+      return buildWorldGame(id, s);
   }
 }
 
