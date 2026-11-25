@@ -1,3 +1,4 @@
+import 'package:haneen_kids_vod/features/home/path_progress.dart';
 import 'dart:convert';
 import 'dart:math';
 import 'package:flutter/material.dart';
@@ -466,7 +467,14 @@ class _BedtimeState extends State<BedtimeStoryScreen> {
 
   int get _storyNo => kBedtimeStories.indexWhere((s) => identical(s, widget.story) || s.join() == widget.story.join());
 
-  void _say() => GuideVoice.instance.play('bed_${_storyNo + 1}_${_i + 1}', widget.story[_i]);
+  void _say() {
+    final int at = _i;
+    GuideVoice.instance.play('bed_${_storyNo + 1}_${_i + 1}', widget.story[_i]).then((_) {
+      // Counts only when the LAST page has been read aloud to the end.
+      if (!mounted || at != widget.story.length - 1 || _i != at) return;
+      PathProgress.recordForActive(PathProgress.story);
+    });
+  }
 
   @override
   void initState() {

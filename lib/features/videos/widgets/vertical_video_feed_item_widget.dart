@@ -1,3 +1,4 @@
+import 'package:haneen_kids_vod/features/home/path_progress.dart';
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
@@ -171,6 +172,7 @@ class _VerticalVideoFeedItemWidgetState
       },
       onStoryFinished: () {
         if (!mounted || mySession != _narrationSessionToken) return;
+        PathProgress.recordForActive(PathProgress.story);
         setState(() {
           _isNarrating = false;
         });

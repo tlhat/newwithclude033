@@ -1,3 +1,4 @@
+import 'package:haneen_kids_vod/features/home/path_progress.dart';
 import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
@@ -2322,6 +2323,7 @@ class AppStateManager extends ChangeNotifier {
   }) async {
     if (currentAccount == null) return false;
     final child = currentAccount!.activeChild;
+    PathProgress.record(child.id, PathProgress.game);
     final String uniqueKey = '${child.id}_game_win_$gameId';
     if (_inFlightRewardLocks.contains(uniqueKey)) return false;
     _inFlightRewardLocks.add(uniqueKey);
@@ -2584,6 +2586,7 @@ class AppStateManager extends ChangeNotifier {
       );
     }
     final child = currentAccount!.activeChild;
+    if (isCorrectAnswer) PathProgress.record(child.id, PathProgress.lesson);
     child.lastActiveAcademyLessonId = lessonId;
     final int prevScore =
         AdaptiveLearningEngine.getLessonMasteryScore(child, lessonId);

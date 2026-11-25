@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'level_check_screen.dart';
+import 'package:haneen_kids_vod/features/home/path_progress.dart';
 
 class PathStep {
   final String id;
@@ -52,23 +53,6 @@ class MyPathPlan {
       PathStep('g3', '🎨', 'مرسم الآداب', 'ارسم وتعلّم أدب جديد', 2),
     ];
   }
-
-  static String _key(String childId) {
-    final DateTime n = DateTime.now();
-    return 'path_done_${childId}_${n.year}${n.month}${n.day}';
-  }
-
-  static Future<Set<String>> doneToday(String childId) async {
-    final SharedPreferences p = await SharedPreferences.getInstance();
-    return (p.getStringList(_key(childId)) ?? const <String>[]).toSet();
-  }
-
-  static Future<void> markDone(String childId, String stepId) async {
-    final SharedPreferences p = await SharedPreferences.getInstance();
-    final Set<String> s = (p.getStringList(_key(childId)) ?? <String>[]).toSet()
-      ..add(stepId);
-    await p.setStringList(_key(childId), s.toList());
-  }
 }
 
 class MyPathScreen extends StatefulWidget {
@@ -82,7 +66,7 @@ class MyPathScreen extends StatefulWidget {
 }
 
 class _MyPathScreenState extends State<MyPathScreen> {
-  Set<String> _done = <String>{};
+  List<bool> _flags = const <bool>[];
 
   String get _childId => widget.appState.currentAccount!.activeChild.id;
 
@@ -101,8 +85,11 @@ class _MyPathScreenState extends State<MyPathScreen> {
   }
 
   Future<void> _load() async {
-    final Set<String> d = await MyPathPlan.doneToday(_childId);
-    if (mounted) setState(() => _done = d);
+    final int age = MyPathPlan.ageOf(widget.appState.currentAccount!.activeChild.age);
+    final counts = await PathProgress.countsToday(_childId);
+    final flags = PathProgress.doneFlags(
+        MyPathPlan.stepsFor(age).map((s) => s.tab).toList(), counts);
+    if (mounted) setState(() => _flags = flags);
   }
 
   @override
@@ -110,7 +97,8 @@ class _MyPathScreenState extends State<MyPathScreen> {
     final child = widget.appState.currentAccount!.activeChild;
     final int age = MyPathPlan.ageOf(child.age);
     final List<PathStep> steps = MyPathPlan.stepsFor(age);
-    final int doneCount = steps.where((s) => _done.contains(s.id + s.tab.toString())).length;
+    final List<bool> flags = _flags.length == steps.length ? _flags : List<bool>.filled(steps.length, false);
+    final int doneCount = flags.where((d) => d).length;
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
@@ -129,21 +117,21 @@ class _MyPathScreenState extends State<MyPathScreen> {
             const SizedBox(height: 4),
             Text('${doneCount} من ${steps.length}'),
             const SizedBox(height: 12),
-            for (final s in steps)
+            for (int si = 0; si < steps.length; si++)
               Card(
                 child: ListTile(
-                  leading: Text(s.emoji, style: const TextStyle(fontSize: 28)),
-                  title: Text(s.title,
+                  leading: Text(steps[si].emoji, style: const TextStyle(fontSize: 28)),
+                  title: Text(steps[si].title,
                       style: const TextStyle(fontWeight: FontWeight.w800)),
-                  subtitle: Text(s.hint),
-                  trailing: _done.contains(s.id + s.tab.toString())
+                  subtitle: Text(steps[si].hint),
+                  trailing: flags[si]
                       ? const Icon(Icons.check_circle, color: Colors.green)
                       : const Icon(Icons.play_circle_fill_rounded),
                   onTap: () async {
-                    await MyPathPlan.markDone(_childId, s.id + s.tab.toString());
+                    // Only go there. It is marked done when really finished.
                     if (!mounted) return;
                     Navigator.of(context).pop();
-                    widget.onGoToTab(s.tab);
+                    widget.onGoToTab(steps[si].tab);
                   },
                 ),
               ),

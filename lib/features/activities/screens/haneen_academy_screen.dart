@@ -1,3 +1,4 @@
+import 'package:haneen_kids_vod/features/home/path_progress.dart';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
@@ -72,6 +73,14 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
         child.needsRemediationLessonIds.contains(lesson.id);
     int? selectedRemediationOptionIdx;
     bool practicedVoiceInSession = false;
+    // The sheet is closed once. A second pop (two taps, or auto-advance firing
+    // twice) would pop the last route: black screen, then the app closes.
+    bool lessonSheetClosing = false;
+    void closeLessonSheet(BuildContext c) {
+      if (lessonSheetClosing || !c.mounted) return;
+      lessonSheetClosing = true;
+      Navigator.pop(c);
+    }
     String? feedbackBannerText;
     // Phase 2: 3-tier hint ladder + separate opt-in answer reveal.
     final HintLadderSessionState hintLadder = HintLadderSessionState(
@@ -402,6 +411,10 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                   idx == lesson.correctOptionIndex;
                               return ElevatedButton(
                                 onPressed: () async {
+                                  if (lessonSheetClosing ||
+                                      quizAnsweredCorrectly) {
+                                    return;
+                                  }
                                   setSheetState(() {
                                     selectedOptionIndex = idx;
                                     quizAnsweredCorrectly = isCorrect;
@@ -443,6 +456,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                     answerRevealed:
                                         hintLadder.answerRevealed,
                                   );
+                                  if (!ctx.mounted || lessonSheetClosing) return;
                                   setSheetState(() {
                                     feedbackBannerText =
                                         res.childEncouragementMessage;
@@ -452,11 +466,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                         .speakSuperheroEncouragementAndAutoAdvance(
                                       encouragementText:
                                           res.childEncouragementMessage,
-                                      onAutoAdvance: () {
-                                        if (ctx.mounted) {
-                                          Navigator.pop(ctx);
-                                        }
-                                      },
+                                      onAutoAdvance: () => closeLessonSheet(ctx),
                                     );
                                   } else {
                                     await CalmVoiceService.instance
@@ -647,8 +657,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                             hintLevelUsed: hintLadder.hintLevelUsed,
                             answerRevealed: hintLadder.answerRevealed,
                           );
-                          if (!ctx.mounted) return;
-                          Navigator.pop(ctx);
+                          if (!ctx.mounted || lessonSheetClosing) return;
+                          closeLessonSheet(ctx);
                           ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
                               content: Text(res.childEncouragementMessage),
@@ -696,6 +706,12 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
     bool isAutoNarrating = true;
     String? quizFeedback;
     bool quizSolved = false;
+    bool storySheetClosing = false;
+    void closeStorySheet(BuildContext c) {
+      if (storySheetClosing || !c.mounted) return;
+      storySheetClosing = true;
+      Navigator.pop(c);
+    }
 
     showModalBottomSheet(
       context: context,
@@ -738,6 +754,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                 },
                 onStoryFinished: () {
                   if (!ctx.mounted) return;
+                  PathProgress.record(child.id, PathProgress.story);
                   setStoryState(() {
                     isAutoNarrating = false;
                   });
@@ -972,11 +989,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                       isCorrect: true,
                                       childName: child.name,
                                       learnedConcept: story.title,
-                                      onAutoAdvanceAfterAudio: () {
-                                        if (ctx.mounted) {
-                                          Navigator.pop(ctx);
-                                        }
-                                      },
+                                      onAutoAdvanceAfterAudio: () =>
+                                          closeStorySheet(ctx),
                                     );
                                   } else {
                                     final hintMsg = await CalmVoiceService
