@@ -79,7 +79,21 @@ void bankTests() {
         expect((e.data['options'] as List).length,
             greaterThan((e.data['correct'] as num).toInt()), reason: e.id);
       }
+      if (e.type == 'choice' || e.type == 'blank') {
+        final List o = e.data['options'] as List;
+        expect(o.toSet().length, o.length, reason: 'dup options ${e.id}');
+        expect(o.length, greaterThan((e.data['correct'] as num).toInt()), reason: e.id);
+      }
+      if (e.type == 'multi') {
+        final List o = e.data['options'] as List;
+        expect(o.toSet().length, o.length, reason: e.id);
+        for (final c in e.data['correct'] as List) {
+          expect(o.length, greaterThan((c as num).toInt()), reason: e.id);
+        }
+      }
       if (e.type == 'ordering') {
+        expect((e.data['items'] as List).length,
+            (e.data['items'] as List).toSet().length, reason: 'dup items ${e.id}');
         expect((e.data['items'] as List).toSet(),
             (e.data['order'] as List).toSet(), reason: e.id);
       }

@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'new_games.dart';
 import 'package:haneen_kids_vod/features/exercises/exercise_screen.dart';
+import 'package:haneen_kids_vod/features/exercises/game_catalog.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/features/companion/engine/companion_interaction_engine.dart';
 import 'package:haneen_kids_vod/features/companion/engine/companion_interaction_state.dart';
@@ -389,36 +390,13 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
             'skill': 'اختيار وأرقام وترتيب وتوصيل وتصنيف',
             'color': const Color(0xFF8B5CF6),
           },
-          {
-            'title': 'خط الأعداد',
-            'icon': '📏',
-            'skill': 'حرّك النقطة على الرقم الصح',
-            'color': const Color(0xFF0EA5E9),
-          },
-          {
-            'title': 'املأ الفراغ',
-            'icon': '✍️',
-            'skill': 'اختر الكلمة الناقصة',
-            'color': const Color(0xFFF97316),
-          },
-          {
-            'title': 'اختر كل الصح',
-            'icon': '☑️',
-            'skill': 'فيه أكتر من إجابة صحيحة',
-            'color': const Color(0xFF22C55E),
-          },
-          {
-            'title': 'أين النقطة؟',
-            'icon': '📍',
-            'skill': 'اضغط على المكان الصح في الشبكة',
-            'color': const Color(0xFFEF4444),
-          },
-          {
-            'title': 'ارسم الأعمدة',
-            'icon': '📊',
-            'skill': 'ارفع الأعمدة للعدد المطلوب',
-            'color': const Color(0xFFA855F7),
-          },
+          for (final ExerciseGameDef g in kExerciseGames)
+            {
+              'title': g.title,
+              'icon': g.icon,
+              'skill': g.hint,
+              'color': Color(g.color),
+            },
         ];
 
         return Scaffold(
@@ -682,42 +660,17 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
       case 14:
         return ExerciseGame(
             appState: widget.appState, onReact: _companionReact);
-      case 15:
-        return ExerciseGame(
-            key: const ValueKey<String>('ex_number_line'),
-            appState: widget.appState,
-            onReact: _companionReact,
-            skill: 'number_line',
-            title: 'خط الأعداد');
-      case 16:
-        return ExerciseGame(
-            key: const ValueKey<String>('ex_fill_blank'),
-            appState: widget.appState,
-            onReact: _companionReact,
-            skill: 'fill_blank',
-            title: 'املأ الفراغ');
-      case 17:
-        return ExerciseGame(
-            key: const ValueKey<String>('ex_multi_select'),
-            appState: widget.appState,
-            onReact: _companionReact,
-            skill: 'multi_select',
-            title: 'اختر كل الصح');
-      case 18:
-        return ExerciseGame(
-            key: const ValueKey<String>('ex_grid_points'),
-            appState: widget.appState,
-            onReact: _companionReact,
-            skill: 'grid_points',
-            title: 'أين النقطة؟');
-      case 19:
-        return ExerciseGame(
-            key: const ValueKey<String>('ex_bar_chart'),
-            appState: widget.appState,
-            onReact: _companionReact,
-            skill: 'bar_chart',
-            title: 'ارسم الأعمدة');
       default:
+        final int k = _selectedGameIndex - 15;
+        if (k >= 0 && k < kExerciseGames.length) {
+          final ExerciseGameDef g = kExerciseGames[k];
+          return ExerciseGame(
+              key: ValueKey<String>('ex_${g.skill}'),
+              appState: widget.appState,
+              onReact: _companionReact,
+              skill: g.skill,
+              title: g.title);
+        }
         return _buildEtiquetteDrawingStudioGame();
     }
   }

@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'game_catalog.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/features/exercises/exercise_models.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
@@ -99,7 +100,10 @@ class _SkillMasteryCardState extends State<SkillMasteryCard> {
             if (p == null)
               const LinearProgressIndicator()
             else ...[
-              for (final e in SkillMasteryCard.skillNames.entries)
+              for (final e in {
+                ...SkillMasteryCard.skillNames,
+                for (final ExerciseGameDef g in kExerciseGames) g.skill: g.title,
+              }.entries)
                 _row(p, e.key, e.value),
               const SizedBox(height: 8),
               Text('مراجعات مستحقة اليوم: ${_dueCount(p)}',

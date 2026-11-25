@@ -5,18 +5,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'package:haneen_kids_vod/core/theme/kid_theme.dart';
 import 'exercise_models.dart';
+import 'game_catalog.dart';
 
 /// Plays the JSON exercises one after another. Rendering lives here, grading
 /// lives in ExerciseGrader.
-/// Skills that have their own game card in the hub.
-const Set<String> kSingleWidgetSkills = {
-  'number_line',
-  'fill_blank',
-  'multi_select',
-  'grid_points',
-  'bar_chart',
-};
-
 class ExerciseGame extends StatefulWidget {
   final AppStateManager appState;
   final void Function(bool correct) onReact;
@@ -73,7 +65,7 @@ class _ExerciseGameState extends State<ExerciseGame> {
           await rootBundle.loadString('assets/exercises/exercises_v1.json');
       final List<Exercise> all = Exercise.parseList(raw);
       final List<Exercise> l = widget.skill == null
-          ? all.where((x) => !kSingleWidgetSkills.contains(x.skill)).toList()
+          ? all.where((x) => !kExerciseGameSkills.contains(x.skill)).toList()
           : all.where((x) => x.skill == widget.skill).toList();
       _sp = await SharedPreferences.getInstance();
       try {
