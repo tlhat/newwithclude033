@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'dart:math' as math;
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/app/app_theme.dart';
@@ -363,8 +362,8 @@ class HaneenCompanionAvatarWidgetState
 
     return Semantics(
       label: widget.avatar.gender == CompanionGender.boy
-          ? tr('شخصية الصديق البطل')
-          : tr('شخصية الصديقة البطلة'),
+          ? 'شخصية الصديق البطل'
+          : 'شخصية الصديقة البطلة',
       button: widget.onTap != null,
       child: GestureDetector(
         onTap: () {

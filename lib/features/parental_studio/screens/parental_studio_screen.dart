@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:haneen_kids_vod/features/exercises/skill_mastery_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -34,10 +33,10 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
   final TextEditingController _vActivityCtrl = TextEditingController();
   final TextEditingController _vEmojiCtrl = TextEditingController(text: '🌟');
   String _vCategory = 'bedtime';
-  String _vAgeGroup = tr('3–6 سنوات');
+  String _vAgeGroup = '3–6 سنوات';
 
   final TextEditingController _newChildNameCtrl = TextEditingController();
-  String _newChildAge = tr('3–6 سنوات');
+  String _newChildAge = '3–6 سنوات';
   String _newChildAvatar = '🐰';
   int _newChildDailyLimit = 20;
 
@@ -105,7 +104,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
       widget.appState.activateOrResetOneDayTrial();
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(tr('✨ جميع مزايا التطبيق مفتوحة ومجانية بالكامل ١٠٠٪!')),
+          content: Text('✨ جميع مزايا التطبيق مفتوحة ومجانية بالكامل ١٠٠٪!'),
           backgroundColor: Color(0xFF14B8A6),
         ),
       );
@@ -154,7 +153,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                     .validateInstaPayIdentifier(walletOrIpaCtrl.text);
                 if (err != null) return err;
                 if (transferRefCtrl.text.trim().length < 6) {
-                  return tr('يرجى إدخال رقم مرجع التحويل اللحظي في إنستا باي (٦ أرقام/حروف على الأقل) بعد إتمام التحويل.');
+                  return 'يرجى إدخال رقم مرجع التحويل اللحظي في إنستا باي (٦ أرقام/حروف على الأقل) بعد إتمام التحويل.';
                 }
                 return null;
               } else {
@@ -165,7 +164,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                 );
                 if (err != null) return err;
                 if (transferRefCtrl.text.trim().length < 6) {
-                  return tr('يرجى إدخال رقم العملية / مرجع التحويل من رسالة {0} (٦ أرقام على الأقل).', [selectedMethod.nameAr]);
+                  return 'يرجى إدخال رقم العملية / مرجع التحويل من رسالة ${selectedMethod.nameAr} (٦ أرقام على الأقل).';
                 }
                 return null;
               }
@@ -188,7 +187,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                       children: [
                         Expanded(
                           child: Text(
-                            tr('🔒 بوابة الدفع والتحقق الفعلي — {0}', [plan.title]),
+                            '🔒 بوابة الدفع والتحقق الفعلي — ${plan.title}',
                             style: const TextStyle(
                               fontSize: 17,
                               fontWeight: FontWeight.bold,
@@ -204,7 +203,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                             borderRadius: BorderRadius.circular(14),
                           ),
                           child: Text(
-                            tr('{0} ج.م', [plan.priceEgp]),
+                            '${plan.priceEgp} ج.م',
                             style: const TextStyle(
                               fontSize: 16,
                               fontWeight: FontWeight.bold,
@@ -229,7 +228,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           SizedBox(width: 8),
                           Expanded(
                             child: Text(
-                              tr('حماية صارمة: لن يتم تفعيل الباقة إلا بعد التحقق الفعلي من بيانات الدفع ورقم المرجع وكود التفويض البنكي (OTP).'),
+                              'حماية صارمة: لن يتم تفعيل الباقة إلا بعد التحقق الفعلي من بيانات الدفع ورقم المرجع وكود التفويض البنكي (OTP).',
                               style: TextStyle(
                                   fontSize: 11, color: Colors.white70),
                             ),
@@ -239,7 +238,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                     ),
                     const SizedBox(height: 12),
                     Text(
-                      tr('١. اختر وسيلة الدفع المصرية:'),
+                      '١. اختر وسيلة الدفع المصرية:',
                       style: TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.bold,
@@ -292,7 +291,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                                       ),
                                     ),
                                     Text(
-                                      tr('حساب الاستقبال: {0}', [method.merchantAccountNumber]),
+                                      'حساب الاستقبال: ${method.merchantAccountNumber}',
                                       style: const TextStyle(
                                           fontSize: 11,
                                           color: Color(0xFFFDE68A)),
@@ -323,8 +322,8 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           Expanded(
                             child: Text(
                               isCard
-                                  ? tr('أدخل بيانات البطاقة البنكية (١٦ رقماً تخضع لفحص Luhn البنكي وتاريخ سارٍ)')
-                                  : tr('حوّل مبلغ {0} ج.م إلى ({1}) ثم أدخل رقمك ورقم مرجع التحويل:', [plan.priceEgp, selectedMethod.merchantAccountNumber]),
+                                  ? 'أدخل بيانات البطاقة البنكية (١٦ رقماً تخضع لفحص Luhn البنكي وتاريخ سارٍ)'
+                                  : 'حوّل مبلغ ${plan.priceEgp} ج.م إلى (${selectedMethod.merchantAccountNumber}) ثم أدخل رقمك ورقم مرجع التحويل:',
                               style: const TextStyle(
                                   fontSize: 12, color: Colors.white),
                             ),
@@ -336,7 +335,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: Text(
-                                      tr('📋 تم نسخ رقم/عنوان الاستقبال: {0}', [selectedMethod.merchantAccountNumber])),
+                                      '📋 تم نسخ رقم/عنوان الاستقبال: ${selectedMethod.merchantAccountNumber}'),
                                 ),
                               );
                             },
@@ -355,8 +354,8 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                             : TextInputType.phone,
                         decoration: InputDecoration(
                           labelText: isInstaPay
-                              ? tr('عنوان الدفع (IPA مثل name@instapay) أو رقم هاتفك')
-                              : tr('رقم محفظتك المحوّل منها ({0})', [selectedMethod.nameAr]),
+                              ? 'عنوان الدفع (IPA مثل name@instapay) أو رقم هاتفك'
+                              : 'رقم محفظتك المحوّل منها (${selectedMethod.nameAr})',
                           hintText: isInstaPay
                               ? 'ahmed@instapay'
                               : selectedMethod.id == 'vodafone_cash'
@@ -372,8 +371,8 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                         controller: transferRefCtrl,
                         decoration: InputDecoration(
                           labelText:
-                              tr('رقم مرجع التحويل الفعلي (Transaction Reference ID)'),
-                          hintText: tr('مثال: VF98234120 أو IPN774192'),
+                              'رقم مرجع التحويل الفعلي (Transaction Reference ID)',
+                          hintText: 'مثال: VF98234120 أو IPN774192',
                           prefixIcon: Icon(Icons.receipt_long_outlined),
                         ),
                       ),
@@ -381,7 +380,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                       TextField(
                         controller: cardHolderCtrl,
                         decoration: InputDecoration(
-                          labelText: tr('اسم حامل البطاقة (كما على البطاقة)'),
+                          labelText: 'اسم حامل البطاقة (كما على البطاقة)',
                           hintText: 'AHMED MAHMOUD',
                           prefixIcon: Icon(Icons.person_outline),
                         ),
@@ -393,7 +392,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                         maxLength: 16,
                         decoration: InputDecoration(
                           labelText:
-                              tr('رقم البطاقة البنكية (١٦ رقماً — Visa / Mastercard / Meeza)'),
+                              'رقم البطاقة البنكية (١٦ رقماً — Visa / Mastercard / Meeza)',
                           hintText: '4532015112830366',
                           counterText: '',
                           prefixIcon: Icon(Icons.credit_card),
@@ -406,7 +405,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                             child: TextField(
                               controller: cardExpiryCtrl,
                               decoration: InputDecoration(
-                                labelText: tr('تاريخ الانتهاء (MM/YY)'),
+                                labelText: 'تاريخ الانتهاء (MM/YY)',
                                 hintText: '08/29',
                               ),
                             ),
@@ -419,7 +418,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                               keyboardType: TextInputType.number,
                               maxLength: 4,
                               decoration: InputDecoration(
-                                labelText: tr('رمز CVV'),
+                                labelText: 'رمز CVV',
                                 hintText: '123',
                                 counterText: '',
                               ),
@@ -458,14 +457,14 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                                 otpDispatched = true;
                                 isErrorMessage = false;
                                 verificationMessage =
-                                    tr('📲 تم التحقق المبدئي وإرسال كود التفويض البنكي (OTP) للعملية: [ {0} ] — أدخله بالأسفل لتأكيد الخصم والتفعيل.', [newOtp]);
+                                    '📲 تم التحقق المبدئي وإرسال كود التفويض البنكي (OTP) للعملية: [ ${newOtp} ] — أدخله بالأسفل لتأكيد الخصم والتفعيل.';
                               });
                             },
                             icon: const Icon(Icons.sms_outlined, size: 18),
                             label: Text(
                               otpDispatched
-                                  ? tr('إعادة إرسال كود التفويض (OTP)')
-                                  : tr('١. طلب كود التحقق البنكي (OTP)'),
+                                  ? 'إعادة إرسال كود التفويض (OTP)'
+                                  : '١. طلب كود التحقق البنكي (OTP)',
                               style: const TextStyle(
                                   fontWeight: FontWeight.bold, fontSize: 12),
                             ),
@@ -481,8 +480,8 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                         maxLength: 6,
                         decoration: InputDecoration(
                           labelText:
-                              tr('٢. أدخل كود التفويض البنكي المكون من ٦ أرقام (OTP)'),
-                          hintText: tr('أدخل الكود المرسل لتأكيد سداد المبلغ'),
+                              '٢. أدخل كود التفويض البنكي المكون من ٦ أرقام (OTP)',
+                          hintText: 'أدخل الكود المرسل لتأكيد سداد المبلغ',
                           counterText: '',
                           prefixIcon: const Icon(Icons.security_rounded,
                               color: Color(0xFF14B8A6)),
@@ -494,7 +493,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                                 });
                               }
                             },
-                            child: Text(tr('لصق الكود'),
+                            child: Text('لصق الكود',
                                 style: TextStyle(fontSize: 11)),
                           ),
                         ),
@@ -509,11 +508,11 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                         simulateBankRejection = val;
                       }),
                       title: Text(
-                        tr('محاكاة رفض العملية من البنك / عدم اكتمال الدفع (للاختبار)'),
+                        'محاكاة رفض العملية من البنك / عدم اكتمال الدفع (للاختبار)',
                         style: TextStyle(fontSize: 12, color: Colors.white70),
                       ),
                       subtitle: Text(
-                        tr('عند تفعيل هذا الخيار سيرفض النظام العملية ولن يتم تفعيل الخطة أبداً'),
+                        'عند تفعيل هذا الخيار سيرفض النظام العملية ولن يتم تفعيل الخطة أبداً',
                         style: TextStyle(fontSize: 11, color: Colors.white54),
                       ),
                     ),
@@ -565,7 +564,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                                   setModalState(() {
                                     isErrorMessage = true;
                                     verificationMessage =
-                                        tr('❌ لا يمكن تفعيل الخطة: {0}', [stepOneError]);
+                                        '❌ لا يمكن تفعيل الخطة: ${stepOneError}';
                                   });
                                   return;
                                 }
@@ -574,7 +573,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                                   setModalState(() {
                                     isErrorMessage = true;
                                     verificationMessage =
-                                        tr('❌ يرجى الضغط أولاً على «طلب كود التحقق البنكي (OTP)» وإدخال الكود للتأكد من إتمام الدفع.');
+                                        '❌ يرجى الضغط أولاً على «طلب كود التحقق البنكي (OTP)» وإدخال الكود للتأكد من إتمام الدفع.';
                                   });
                                   return;
                                 }
@@ -627,8 +626,8 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                         icon: const Icon(Icons.verified_user),
                         label: Text(
                           isVerifyingPayment
-                              ? tr('جاري التحقق البنكي الفعلي من الدفع...')
-                              : tr('تحقق من الدفع الآن وتفعيل ({0})', [plan.title]),
+                              ? 'جاري التحقق البنكي الفعلي من الدفع...'
+                              : 'تحقق من الدفع الآن وتفعيل (${plan.title})',
                           style: const TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 13),
                         ),
@@ -653,17 +652,17 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
         SmartVideoLinkAutoImporter.stripPlatformMentions(_vDescCtrl.text.trim());
     final newVideo = VideoModel(
       id: 'v_${DateTime.now().millisecondsSinceEpoch}',
-      title: cleanManualTitle.isEmpty ? tr('قصة حنين التربوية') : cleanManualTitle,
+      title: cleanManualTitle.isEmpty ? 'قصة حنين التربوية' : cleanManualTitle,
       description: cleanManualDesc.isEmpty
-          ? tr('قصة هادئة وممتعة لأطفالنا الأبطال.')
+          ? 'قصة هادئة وممتعة لأطفالنا الأبطال.'
           : cleanManualDesc,
       category: _vCategory,
       ageGroup: _vAgeGroup,
       repeatPhrase: _vPhraseCtrl.text.trim().isEmpty
-          ? tr('«أَنَا أَتَعَلَّمُ كُلَّ يَوْمٍ شَيْئاً جَدِيداً»')
+          ? '«أَنَا أَتَعَلَّمُ كُلَّ يَوْمٍ شَيْئاً جَدِيداً»'
           : _vPhraseCtrl.text.trim(),
       activeActivity: _vActivityCtrl.text.trim().isEmpty
-          ? tr('احكِ لماما أو بابا ماذا أعجبك في هذه القصة!')
+          ? 'احكِ لماما أو بابا ماذا أعجبك في هذه القصة!'
           : _vActivityCtrl.text.trim(),
       streamUrl: _vUrlCtrl.text.trim(),
       bgGradientStart: const Color(0xFF1E1B4B),
@@ -678,7 +677,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
             content: Text(
-                tr('🔒 تم رفض الرابط: تأكد أن السماح بالفيديوهات الخارجية مفعّل أو استخدم مسار ملف محلي (/storage/...) أو رابط HTTPS مشفر.')),
+                '🔒 تم رفض الرابط: تأكد أن السماح بالفيديوهات الخارجية مفعّل أو استخدم مسار ملف محلي (/storage/...) أو رابط HTTPS مشفر.'),
             backgroundColor: Colors.redAccent,
           ),
         );
@@ -692,7 +691,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
 
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text(tr('✅ تمت إضافة الفيديو بنجاح إلى المكتبة المحلية!')),
+          content: Text('✅ تمت إضافة الفيديو بنجاح إلى المكتبة المحلية!'),
           backgroundColor: Color(0xFF14B8A6),
         ),
       );
@@ -704,7 +703,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
     Clipboard.setData(ClipboardData(text: jsonStr));
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(tr('📋 تم نسخ كود JSON لجميع الفيديوهات إلى الحافظة!')),
+        content: Text('📋 تم نسخ كود JSON لجميع الفيديوهات إلى الحافظة!'),
         backgroundColor: Color(0xFF14B8A6),
       ),
     );
@@ -749,7 +748,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                   const SizedBox(width: 12),
                   Expanded(
                     child: Text(
-                      tr('مراقبة وقفل موبايل الطفل: {0}', [activeChild.name]),
+                      'مراقبة وقفل موبايل الطفل: ${activeChild.name}',
                       style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -771,7 +770,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      tr('📡 ماذا يفعل الطفل الآن على الموبايل؟ (بث الحالة الفوري):'),
+                      '📡 ماذا يفعل الطفل الآن على الموبايل؟ (بث الحالة الفوري):',
                       style: TextStyle(fontSize: 12, color: Colors.white70),
                     ),
                     const SizedBox(height: 4),
@@ -791,19 +790,19 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   _MonitorStatBadge(
-                    label: tr('وقت المشاهدة'),
+                    label: 'وقت المشاهدة',
                     value:
-                        tr('{0}/{1} د', [activeChild.usedMinutesToday, activeChild.dailyTimeLimit]),
+                        '${activeChild.usedMinutesToday}/${activeChild.dailyTimeLimit} د',
                     icon: Icons.timer_outlined,
                   ),
                   _MonitorStatBadge(
-                    label: tr('الأكاديمية والذكاء'),
+                    label: 'الأكاديمية والذكاء',
                     value:
                         '🎓 ${activeChild.completedLessons.length} | 🧠 ${activeChild.intelligencePoints}',
                     icon: Icons.school_outlined,
                   ),
                   _MonitorStatBadge(
-                    label: tr('النجوم والأوسمة'),
+                    label: 'النجوم والأوسمة',
                     value:
                         '⭐ ${activeChild.starsEarned} | 🏅 ${activeChild.unlockedAchievements.length}',
                     icon: Icons.star_border_rounded,
@@ -833,7 +832,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              tr('📊 التقرير التربوي الذكي ومؤشر الإتقان لـ ({0} • {1}):', [activeChild.name, pedReport.currentTierLabelAr]),
+                              '📊 التقرير التربوي الذكي ومؤشر الإتقان لـ (${activeChild.name} • ${pedReport.currentTierLabelAr}):',
                               style: const TextStyle(
                                 fontSize: 13,
                                 fontWeight: FontWeight.bold,
@@ -842,7 +841,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                             ),
                             const SizedBox(height: 6),
                             Text(
-                              tr('• نسبة إتقان المستوى الحالي: {0}% | الإتقان الكلي للمنهج: {1}% (يتطلب الانتقال للمستوى الأعلى إتقان 80% فأكثر)', [pedReport.currentTierMasteryPercentage, pedReport.overallMasteryPercentage]),
+                              '• نسبة إتقان المستوى الحالي: ${pedReport.currentTierMasteryPercentage}% | الإتقان الكلي للمنهج: ${pedReport.overallMasteryPercentage}% (يتطلب الانتقال للمستوى الأعلى إتقان 80% فأكثر)',
                               style: const TextStyle(
                                 fontSize: 11.5,
                                 color: Color(0xFF38BDF8),
@@ -870,7 +869,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                             if (pedReport.parentHomeTips.isNotEmpty) ...[
                               const SizedBox(height: 6),
                               Text(
-                                tr('🏡 نصائح منزلية بسيطة للأب والأم: {0}', [pedReport.parentHomeTips.first]),
+                                '🏡 نصائح منزلية بسيطة للأب والأم: ${pedReport.parentHomeTips.first}',
                                 style: const TextStyle(
                                   fontSize: 11.5,
                                   color: Colors.white,
@@ -889,7 +888,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                             ),
                             const SizedBox(height: 4),
                             Text(
-                              tr('ℹ️ ملاحظة تربوية: هذه المؤشرات لعرض تقدم أنشطة التعلم فقط ولا تمثل أي تقييم طبي أو تشخيصي (لا يتم تخزين أي تسجيلات صوتية خام حفاظاً على الخصوصية).'),
+                              'ℹ️ ملاحظة تربوية: هذه المؤشرات لعرض تقدم أنشطة التعلم فقط ولا تمثل أي تقييم طبي أو تشخيصي (لا يتم تخزين أي تسجيلات صوتية خام حفاظاً على الخصوصية).',
                               style: TextStyle(
                                   fontSize: 10, color: Colors.white54),
                             ),
@@ -912,7 +911,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      tr('🛡️ ضوابط الأمان والخصوصية المستقلة لهذا الطفل:'),
+                      '🛡️ ضوابط الأمان والخصوصية المستقلة لهذا الطفل:',
                       style: TextStyle(
                           fontSize: 13,
                           fontWeight: FontWeight.bold,
@@ -926,10 +925,10 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                       onChanged: (v) => widget.appState
                           .updateChildPrivacyAndSafetyControls(
                               childId: activeChild.id, allowMicrophone: v),
-                      title: Text(tr('السماح بالميكروفون في نشاط «ردد معي»'),
+                      title: Text('السماح بالميكروفون في نشاط «ردد معي»',
                           style: TextStyle(fontSize: 12)),
                       subtitle: Text(
-                          tr('يُستخدم محلياً للتدرب على الكلمات ولا يتم حفظ أي تسجيل صوتي'),
+                          'يُستخدم محلياً للتدرب على الكلمات ولا يتم حفظ أي تسجيل صوتي',
                           style: TextStyle(fontSize: 10, color: Colors.white60)),
                     ),
                     SwitchListTile(
@@ -941,10 +940,10 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           .updateChildPrivacyAndSafetyControls(
                               childId: activeChild.id, allowExternalVideos: v),
                       title: Text(
-                          tr('السماح باستيراد وتشغيل الفيديوهات الخارجية'),
+                          'السماح باستيراد وتشغيل الفيديوهات الخارجية',
                           style: TextStyle(fontSize: 12)),
                       subtitle: Text(
-                          tr('عند إغلاقه يُمنع استيراد أو تشغيل أي روابط خارجية ويُسمح بالمحتوى المحلي فقط'),
+                          'عند إغلاقه يُمنع استيراد أو تشغيل أي روابط خارجية ويُسمح بالمحتوى المحلي فقط',
                           style: TextStyle(fontSize: 10, color: Colors.white60)),
                     ),
                     SwitchListTile(
@@ -956,10 +955,10 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           .updateChildPrivacyAndSafetyControls(
                               childId: activeChild.id, offlineOnlyMode: v),
                       title: Text(
-                          tr('وضع العمل بدون إنترنت'),
+                          'وضع العمل بدون إنترنت',
                           style: TextStyle(fontSize: 12)),
                       subtitle: Text(
-                          tr('يمنع التطبيق برمجياً من بدء أي طلبات شبكة خارجية ويشغّل الدروس والألعاب المحلية فقط'),
+                          'يمنع التطبيق برمجياً من بدء أي طلبات شبكة خارجية ويشغّل الدروس والألعاب المحلية فقط',
                           style: TextStyle(fontSize: 10, color: Colors.white60)),
                     ),
                     SwitchListTile(
@@ -971,10 +970,10 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           .updateChildPrivacyAndSafetyControls(
                               childId: activeChild.id, reduceMotion: v),
                       title: Text(
-                          tr('تقليل الحركة والمؤثرات البصرية (إمكانية الوصول)'),
+                          'تقليل الحركة والمؤثرات البصرية (إمكانية الوصول)',
                           style: TextStyle(fontSize: 12)),
                       subtitle: Text(
-                          tr('يخفف حركة الشخصيات والانتقالات لراحة العين والأطفال الحساسين للحركة'),
+                          'يخفف حركة الشخصيات والانتقالات لراحة العين والأطفال الحساسين للحركة',
                           style: TextStyle(fontSize: 10, color: Colors.white60)),
                     ),
                     SwitchListTile(
@@ -986,10 +985,10 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           .updateChildPrivacyAndSafetyControls(
                               childId: activeChild.id, highContrastMode: v),
                       title: Text(
-                          tr('وضع التباين العالي للألوان والحواف (وضوح الرؤية)'),
+                          'وضع التباين العالي للألوان والحواف (وضوح الرؤية)',
                           style: TextStyle(fontSize: 12)),
                       subtitle: Text(
-                          tr('يزيد وضوح الحدود وتباين النصوص والأزرار لسهولة القراءة واللمس'),
+                          'يزيد وضوح الحدود وتباين النصوص والأزرار لسهولة القراءة واللمس',
                           style: TextStyle(fontSize: 10, color: Colors.white60)),
                     ),
                     SwitchListTile(
@@ -1002,10 +1001,10 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                               childId: activeChild.id,
                               allowSoundEffectsAndVoice: v),
                       title: Text(
-                          tr('السماح بالصوت والمؤثرات الصوتية وصوت حنين التفاعلي'),
+                          'السماح بالصوت والمؤثرات الصوتية وصوت حنين التفاعلي',
                           style: TextStyle(fontSize: 12)),
                       subtitle: Text(
-                          tr('يتحكم في قراءة التعليمات والقصص والتشجيع الصوتي داخل الألعاب والأكاديمية'),
+                          'يتحكم في قراءة التعليمات والقصص والتشجيع الصوتي داخل الألعاب والأكاديمية',
                           style: TextStyle(fontSize: 10, color: Colors.white60)),
                     ),
                     SwitchListTile(
@@ -1018,10 +1017,10 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                               childId: activeChild.id,
                               lowMemoryPerformanceMode: v),
                       title: Text(
-                          tr('وضع الأداء الخفيف وتوفير البطارية والذاكرة (للأجهزة المتوسطة والضعيفة)'),
+                          'وضع الأداء الخفيف وتوفير البطارية والذاكرة (للأجهزة المتوسطة والضعيفة)',
                           style: TextStyle(fontSize: 12)),
                       subtitle: Text(
-                          tr('يوقف الحلقات الرسومية المستمرة والظلال الثقيلة لتسريع الأداء وتقليل استهلاك البطارية'),
+                          'يوقف الحلقات الرسومية المستمرة والظلال الثقيلة لتسريع الأداء وتقليل استهلاك البطارية',
                           style: TextStyle(fontSize: 10, color: Colors.white60)),
                     ),
                     SwitchListTile(
@@ -1031,15 +1030,15 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                       activeColor: const Color(0xFF6C63FF),
                       onChanged: (v) => widget.appState.setCompanionShopEnabled(v),
                       title: Text(
-                          tr('متجر تخصيص شخصية الطفل بالنجوم (Character Studio)'),
+                          'متجر تخصيص شخصية الطفل بالنجوم (Character Studio)',
                           style: TextStyle(fontSize: 12)),
                       subtitle: Text(
-                          tr('إتاحة فتح الملابس والإكسسوارات الإضافية بالنجوم المكتسبة (يمكنك تعطيله لتركيز الطفل)'),
+                          'إتاحة فتح الملابس والإكسسوارات الإضافية بالنجوم المكتسبة (يمكنك تعطيله لتركيز الطفل)',
                           style: TextStyle(fontSize: 10, color: Colors.white60)),
                     ),
                     const Divider(color: Colors.white12, height: 18),
                     Text(
-                      tr('🎙️ إعدادات الصوت (اللهجة والسرعة):'),
+                      '🎙️ إعدادات الصوت (اللهجة والسرعة):',
                       style: TextStyle(
                         fontSize: 12.5,
                         fontWeight: FontWeight.bold,
@@ -1050,7 +1049,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(tr('اللهجة الصوتية:'),
+                        Text('اللهجة الصوتية:',
                             style: TextStyle(fontSize: 12)),
                         DropdownButton<String>(
                           value: activeChild.preferredVoiceDialect == 'egyptian'
@@ -1059,12 +1058,12 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           items: [
                             DropdownMenuItem(
                               value: 'msa',
-                              child: Text(tr('اللغة العربية الفصحى المبسطة'),
+                              child: Text('اللغة العربية الفصحى المبسطة',
                                   style: TextStyle(fontSize: 12)),
                             ),
                             DropdownMenuItem(
                               value: 'egyptian',
-                              child: Text(tr('اللهجة المصرية اللطيفة'),
+                              child: Text('اللهجة المصرية اللطيفة',
                                   style: TextStyle(fontSize: 12)),
                             ),
                           ],
@@ -1083,7 +1082,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                     Row(
                       children: [
                         Text(
-                          tr('سرعة الصوت ({0}x):', [activeChild.preferredVoiceSpeed.toStringAsFixed(2)]),
+                          'سرعة الصوت (${activeChild.preferredVoiceSpeed.toStringAsFixed(2)}x):',
                           style: const TextStyle(fontSize: 12),
                         ),
                         Expanded(
@@ -1106,14 +1105,14 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           ),
                         ),
                         IconButton(
-                          tooltip: tr('معاينة صوت الشخصية المختارة'),
+                          tooltip: 'معاينة صوت الشخصية المختارة',
                           onPressed: () {
                             final persona =
                                 ElevenLabsVoiceService.getPersonaById(
                                     activeChild.preferredVoicePersonaId);
                             CalmVoiceService.instance.speakWithPersona(
                               text:
-                                  tr('أهلاً بك يا {0}! أنا {1}، هيا نجرب معاً رحلة التعلم الممتعة!', [activeChild.name, persona.nameAr]),
+                                  'أهلاً بك يا ${activeChild.name}! أنا ${persona.nameAr}، هيا نجرب معاً رحلة التعلم الممتعة!',
                               personaId: persona.id,
                             );
                           },
@@ -1125,7 +1124,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(tr('المستوى التعليمي للطفل:'),
+                        Text('المستوى التعليمي للطفل:',
                             style: TextStyle(fontSize: 12)),
                         DropdownButton<String>(
                           value: ['مبتدئ', 'متوسط', 'متقدم']
@@ -1135,15 +1134,15 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           items: [
                             DropdownMenuItem(
                                 value: 'مبتدئ',
-                                child: Text(tr('مبتدئ (٢–٤ سنوات)'),
+                                child: Text('مبتدئ (٢–٤ سنوات)',
                                     style: TextStyle(fontSize: 12))),
                             DropdownMenuItem(
                                 value: 'متوسط',
-                                child: Text(tr('متوسط (٣–٦ سنوات)'),
+                                child: Text('متوسط (٣–٦ سنوات)',
                                     style: TextStyle(fontSize: 12))),
                             DropdownMenuItem(
                                 value: 'متقدم',
-                                child: Text(tr('متقدم (٦–٩ سنوات)'),
+                                child: Text('متقدم (٦–٩ سنوات)',
                                     style: TextStyle(fontSize: 12))),
                           ],
                           onChanged: (lvl) {
@@ -1174,7 +1173,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                               ScaffoldMessenger.of(context).showSnackBar(
                                 SnackBar(
                                   content: Text(
-                                      tr('🧹 تم مسح سجل النشاط الزمني فقط للطفل ({0}) مع الاحتفاظ بالدروس والنجوم والأوسمة.', [activeChild.name])),
+                                      '🧹 تم مسح سجل النشاط الزمني فقط للطفل (${activeChild.name}) مع الاحتفاظ بالدروس والنجوم والأوسمة.'),
                                 ),
                               );
                             }
@@ -1182,7 +1181,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           icon: const Icon(Icons.history_toggle_off_rounded,
                               size: 16),
                           label: Text(
-                            tr('مسح سجل النشاط فقط'),
+                            'مسح سجل النشاط فقط',
                             style: TextStyle(fontSize: 11),
                           ),
                         ),
@@ -1197,20 +1196,20 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                               builder: (dCtx) => AlertDialog(
                                 backgroundColor: const Color(0xFF1E293B),
                                 title: Text(
-                                  tr('⚠️ تأكيد حذف جميع بيانات ({0})', [activeChild.name]),
+                                  '⚠️ تأكيد حذف جميع بيانات (${activeChild.name})',
                                   style: const TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.bold),
                                 ),
                                 content: Text(
-                                  tr('سيؤدي هذا الإجراء إلى حذف جميع البيانات التعليمية والشخصية المخزنة محلياً لهذا الطفل (الدروس المكتملة، النجوم، الأوسمة، المفردات، المفضلة، نتائج الألعاب، وسجل النشاط) دون المساس بملفات الأطفال الآخرين.'),
+                                  'سيؤدي هذا الإجراء إلى حذف جميع البيانات التعليمية والشخصية المخزنة محلياً لهذا الطفل (الدروس المكتملة، النجوم، الأوسمة، المفردات، المفضلة، نتائج الألعاب، وسجل النشاط) دون المساس بملفات الأطفال الآخرين.',
                                   style: TextStyle(
                                       fontSize: 13, color: Colors.white70),
                                 ),
                                 actions: [
                                   TextButton(
                                     onPressed: () => Navigator.pop(dCtx),
-                                    child: Text(tr('إلغاء')),
+                                    child: Text('إلغاء'),
                                   ),
                                   ElevatedButton(
                                     style: ElevatedButton.styleFrom(
@@ -1227,13 +1226,13 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                                             .showSnackBar(
                                           SnackBar(
                                             content: Text(
-                                                tr('🗑️ تم حذف جميع البيانات التعليمية والشخصية المحلية المرتبطة بالطفل ({0}) بنجاح.', [activeChild.name])),
+                                                '🗑️ تم حذف جميع البيانات التعليمية والشخصية المحلية المرتبطة بالطفل (${activeChild.name}) بنجاح.'),
                                             backgroundColor: Colors.redAccent,
                                           ),
                                         );
                                       }
                                     },
-                                    child: Text(tr('حذف جميع بيانات الطفل')),
+                                    child: Text('حذف جميع بيانات الطفل'),
                                   ),
                                 ],
                               ),
@@ -1242,7 +1241,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           icon: const Icon(Icons.delete_forever_rounded,
                               size: 16),
                           label: Text(
-                            tr('حذف جميع بيانات الطفل'),
+                            'حذف جميع بيانات الطفل',
                             style: TextStyle(
                                 fontSize: 11, fontWeight: FontWeight.bold),
                           ),
@@ -1264,7 +1263,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      tr('⏱️ تعديل وقت الاستخدام اليومي للطفل ({0}): {1} دقيقة', [activeChild.name, activeChild.dailyTimeLimit]),
+                      '⏱️ تعديل وقت الاستخدام اليومي للطفل (${activeChild.name}): ${activeChild.dailyTimeLimit} دقيقة',
                       style: const TextStyle(
                         fontSize: 13.5,
                         fontWeight: FontWeight.bold,
@@ -1273,7 +1272,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      tr('المستهلك اليوم: {0} دقيقة من {1} دقيقة', [activeChild.usedMinutesToday, activeChild.dailyTimeLimit]),
+                      'المستهلك اليوم: ${activeChild.usedMinutesToday} دقيقة من ${activeChild.dailyTimeLimit} دقيقة',
                       style: const TextStyle(fontSize: 11.5, color: Colors.white70),
                     ),
                     Slider(
@@ -1282,7 +1281,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                       max: 60,
                       divisions: 11,
                       activeColor: const Color(0xFF14B8A6),
-                      label: tr('{0} دقيقة', [activeChild.dailyTimeLimit]),
+                      label: '${activeChild.dailyTimeLimit} دقيقة',
                       onChanged: (val) =>
                           widget.appState.updateDailyTimeLimit(val.round()),
                     ),
@@ -1292,7 +1291,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                         onPressed:
                             widget.appState.resetDailyScreenTimeForActiveChild,
                         icon: const Icon(Icons.restart_alt_rounded, size: 18),
-                        label: Text(tr('تصفير عداد الوقت اليومي')),
+                        label: Text('تصفير عداد الوقت اليومي'),
                       ),
                     ),
                   ],
@@ -1302,7 +1301,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
               TextField(
                 controller: lockMsgCtrl,
                 decoration: InputDecoration(
-                  labelText: tr('رسالة القفل التي تظهر على شاشة موبايل الطفل'),
+                  labelText: 'رسالة القفل التي تظهر على شاشة موبايل الطفل',
                   prefixIcon: Icon(Icons.message_outlined),
                 ),
               ),
@@ -1335,8 +1334,8 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                               SnackBar(
                                 content: Text(
                                   nextLock
-                                      ? tr('🔒 تم إرسال أمر قفل شاشة موبايل ({0}) فوراً!', [activeChild.name])
-                                      : tr('🟢 تم فتح قفل شاشة موبايل ({0}) عن بُعد!', [activeChild.name]),
+                                      ? '🔒 تم إرسال أمر قفل شاشة موبايل (${activeChild.name}) فوراً!'
+                                      : '🟢 تم فتح قفل شاشة موبايل (${activeChild.name}) عن بُعد!',
                                 ),
                                 backgroundColor: nextLock
                                     ? Colors.redAccent
@@ -1352,8 +1351,8 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                         ),
                         label: Text(
                           activeChild.isDeviceRemotelyLocked
-                              ? tr('فتح قفل موبايل الطفل الآن')
-                              : tr('قفل موبايل الطفل الآن من موبايلي 🔒'),
+                              ? 'فتح قفل موبايل الطفل الآن'
+                              : 'قفل موبايل الطفل الآن من موبايلي 🔒',
                           style: const TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 14),
                         ),
@@ -1368,7 +1367,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
         const SizedBox(height: 16),
         if (account.children.length > 1) ...[
           Text(
-            tr('👦👧 التبديل السريع لمراقبة طفل آخر في العائلة:'),
+            '👦👧 التبديل السريع لمراقبة طفل آخر في العائلة:',
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 8),
@@ -1389,7 +1388,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
         ],
 
         Text(
-          tr('📋 سجل النشاط الحي لما يفعله ({0}) على التطبيق:', [activeChild.name]),
+          '📋 سجل النشاط الحي لما يفعله (${activeChild.name}) على التطبيق:',
           style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 8),
@@ -1447,14 +1446,14 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    tr('✏️ تعديل ملف الطفل'),
+                    '✏️ تعديل ملف الطفل',
                     style: TextStyle(fontSize: 19, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 12),
                   TextField(
                     controller: editNameCtrl,
                     decoration: InputDecoration(
-                      labelText: tr('اسم الطفل'),
+                      labelText: 'اسم الطفل',
                       prefixIcon: Icon(Icons.child_care),
                     ),
                   ),
@@ -1465,16 +1464,16 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                         child: DropdownButtonFormField<String>(
                           value: editAge,
                           decoration:
-                              InputDecoration(labelText: tr('الفئة العمرية')),
+                              InputDecoration(labelText: 'الفئة العمرية'),
                           items: [
                             DropdownMenuItem(
-                                value: '2–4 سنوات', child: Text(tr('2–4 سنوات'))),
+                                value: '2–4 سنوات', child: Text('2–4 سنوات')),
                             DropdownMenuItem(
-                                value: '3–6 سنوات', child: Text(tr('3–6 سنوات'))),
+                                value: '3–6 سنوات', child: Text('3–6 سنوات')),
                             DropdownMenuItem(
-                                value: '4–8 سنوات', child: Text(tr('4–8 سنوات'))),
+                                value: '4–8 سنوات', child: Text('4–8 سنوات')),
                             DropdownMenuItem(
-                                value: '6–10 سنوات', child: Text(tr('6–10 سنوات'))),
+                                value: '6–10 سنوات', child: Text('6–10 سنوات')),
                           ],
                           onChanged: (v) {
                             if (v != null) setModalState(() => editAge = v);
@@ -1499,7 +1498,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                     ],
                   ),
                   const SizedBox(height: 12),
-                  Text(tr('الحد اليومي: {0} دقيقة', [editLimit])),
+                  Text('الحد اليومي: ${editLimit} دقيقة'),
                   Slider(
                     value: editLimit.toDouble(),
                     min: 5,
@@ -1527,7 +1526,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                         );
                         Navigator.pop(ctx);
                       },
-                      child: Text(tr('حفظ التعديلات')),
+                      child: Text('حفظ التعديلات'),
                     ),
                   ),
                 ],
@@ -1554,7 +1553,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
           appBar: AppBar(
             backgroundColor: Color(0xFF1E293B),
             title: Text(
-              tr('بوابة الوالدين واستوديو حنين كيدز'),
+              'بوابة الوالدين واستوديو حنين كيدز',
               style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
             ),
             bottom: TabBar(
@@ -1566,15 +1565,15 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
               tabs: [
                 Tab(
                     icon: Icon(Icons.phonelink_lock_rounded),
-                    text: tr('مراقبة وقفل موبايل الطفل')),
+                    text: 'مراقبة وقفل موبايل الطفل'),
                 Tab(
                     icon: Icon(Icons.star_rate_rounded),
-                    text: tr('الدعم والتقييم')),
-                Tab(icon: Icon(Icons.child_care), text: tr('ملفات الأطفال')),
+                    text: 'الدعم والتقييم'),
+                Tab(icon: Icon(Icons.child_care), text: 'ملفات الأطفال'),
                 Tab(
                     icon: Icon(Icons.manage_accounts_outlined),
-                    text: tr('إعدادات الحساب')),
-                Tab(icon: Icon(Icons.insights_rounded), text: tr('تقرير التقدم')),
+                    text: 'إعدادات الحساب'),
+                Tab(icon: Icon(Icons.insights_rounded), text: 'تقرير التقدم'),
               ],
             ),
           ),
@@ -1604,7 +1603,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                             SizedBox(width: 10),
                             Expanded(
                               child: Text(
-                                tr('حنين كيدز مجاني ١٠٠٪ لجميع أطفالنا!'),
+                                'حنين كيدز مجاني ١٠٠٪ لجميع أطفالنا!',
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
@@ -1616,7 +1615,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                         ),
                         const SizedBox(height: 10),
                         Text(
-                          tr('دعمكم لنا بتقييم ٥ نجوم وتعليق إيجابي مشجع على متجر Google Play يساعدنا كثيراً في الوصول إلى المزيد من العائلات واستمرار تقديم الدروس والقصص والألعاب مجاناً بالكامل بدون أي إعلانات أو اشتراكات!'),
+                          'دعمكم لنا بتقييم ٥ نجوم وتعليق إيجابي مشجع على متجر Google Play يساعدنا كثيراً في الوصول إلى المزيد من العائلات واستمرار تقديم الدروس والقصص والألعاب مجاناً بالكامل بدون أي إعلانات أو اشتراكات!',
                           style: TextStyle(
                             fontSize: 13.5,
                             height: 1.55,
@@ -1643,7 +1642,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                                 ScaffoldMessenger.of(context).showSnackBar(
                                   SnackBar(
                                     content: Text(
-                                        tr('⭐ شكراً لدعمكم الجميل! تم فتح ونسخ رابط التقييم على Google Play: {0}', [url])),
+                                        '⭐ شكراً لدعمكم الجميل! تم فتح ونسخ رابط التقييم على Google Play: ${url}'),
                                     backgroundColor: const Color(0xFF14B8A6),
                                   ),
                                 );
@@ -1651,7 +1650,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                             },
                             icon: const Icon(Icons.star_rounded, size: 24),
                             label: Text(
-                              tr('تقييم التطبيق ٥ نجوم على Google Play ⭐'),
+                              'تقييم التطبيق ٥ نجوم على Google Play ⭐',
                               style: TextStyle(
                                 fontSize: 15,
                                 fontWeight: FontWeight.bold,
@@ -1672,7 +1671,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                 padding: const EdgeInsets.all(20),
                 children: [
                   Text(
-                    tr('👨‍👩‍👧‍👦 إدارة وتعديل ملفات الأطفال'),
+                    '👨‍👩‍👧‍👦 إدارة وتعديل ملفات الأطفال',
                     style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                   ),
                   const SizedBox(height: 12),
@@ -1699,7 +1698,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                         subtitle: Text(
-                          tr('الحصة: {0}د • ⭐ {1} • 🧠 ذكاء: {2} ({3} ألعاب) • 🗣️ فصاحة: {4}', [child.dailyTimeLimit, child.starsEarned, child.intelligencePoints, child.gamesCompletedCount, child.correctPronunciationsCount]),
+                          'الحصة: ${child.dailyTimeLimit}د • ⭐ ${child.starsEarned} • 🧠 ذكاء: ${child.intelligencePoints} (${child.gamesCompletedCount} ألعاب) • 🗣️ فصاحة: ${child.correctPronunciationsCount}',
                           style: const TextStyle(color: Colors.white70, fontSize: 12),
                         ),
                         trailing: Row(
@@ -1711,7 +1710,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                               onPressed: () => _showEditChildModal(child),
                             ),
                             IconButton(
-                              tooltip: tr('حذف ملف الطفل'),
+                              tooltip: 'حذف ملف الطفل',
                               icon: const Icon(Icons.delete_outline,
                                   color: Colors.redAccent),
                               onPressed: () {
@@ -1734,7 +1733,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          tr('➕ إضافة ملف طفل جديد'),
+                          '➕ إضافة ملف طفل جديد',
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -1745,7 +1744,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                         TextField(
                           controller: _newChildNameCtrl,
                           decoration: InputDecoration(
-                            labelText: tr('اسم الطفل'),
+                            labelText: 'اسم الطفل',
                             prefixIcon: Icon(Icons.child_care),
                           ),
                         ),
@@ -1756,21 +1755,21 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                               child: DropdownButtonFormField<String>(
                                 value: _newChildAge,
                                 decoration: InputDecoration(
-                                  labelText: tr('الفئة العمرية'),
+                                  labelText: 'الفئة العمرية',
                                 ),
                                 items: [
                                   DropdownMenuItem(
                                       value: '2–4 سنوات',
-                                      child: Text(tr('2–4 سنوات'))),
+                                      child: Text('2–4 سنوات')),
                                   DropdownMenuItem(
                                       value: '3–6 سنوات',
-                                      child: Text(tr('3–6 سنوات'))),
+                                      child: Text('3–6 سنوات')),
                                   DropdownMenuItem(
                                       value: '4–8 سنوات',
-                                      child: Text(tr('4–8 سنوات'))),
+                                      child: Text('4–8 سنوات')),
                                   DropdownMenuItem(
                                       value: '6–10 سنوات',
-                                      child: Text(tr('6–10 سنوات'))),
+                                      child: Text('6–10 سنوات')),
                                 ],
                                 onChanged: (v) {
                                   if (v != null) {
@@ -1800,7 +1799,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                         ),
                         const SizedBox(height: 12),
                         Text(
-                            tr('دقائق المشاهدة اليومية: {0} دقيقة', [_newChildDailyLimit])),
+                            'دقائق المشاهدة اليومية: ${_newChildDailyLimit} دقيقة'),
                         Slider(
                           value: _newChildDailyLimit.toDouble(),
                           min: 5,
@@ -1828,7 +1827,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                               );
                               _newChildNameCtrl.clear();
                             },
-                            child: Text(tr('حفظ ملف الطفل')),
+                            child: Text('حفظ ملف الطفل'),
                           ),
                         ),
                       ],
@@ -1865,7 +1864,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                             ),
                           ),
                           subtitle: Text(
-                            'البريد / الهاتف: ${account.emailOrPhone}\nطريقة الدخول: ${account.authProvider == 'google' ? tr('حساب Google الموثق') : tr('بريد إلكتروني')}\nالرمز الأبوي (PIN): •••• (محمي ومشفر)',
+                            'البريد / الهاتف: ${account.emailOrPhone}\nطريقة الدخول: ${account.authProvider == 'google' ? 'حساب Google الموثق' : 'بريد إلكتروني'}\nالرمز الأبوي (PIN): •••• (محمي ومشفر)',
                             style: const TextStyle(color: Colors.white70),
                           ),
                         ),
@@ -1876,18 +1875,18 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           activeColor: const Color(0xFF14B8A6),
                           onChanged: widget.appState.toggleVoiceAssistant,
                           title: Text(
-                            tr('🤖 تفعيل المساعد الصوتي الذكي للطفل'),
+                            '🤖 تفعيل المساعد الصوتي الذكي للطفل',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           subtitle: Text(
-                            tr('يقدم تنبيهات صوتية هادئة واقتراحات قصص مناسبة للطفل'),
+                            'يقدم تنبيهات صوتية هادئة واقتراحات قصص مناسبة للطفل',
                             style:
                                 TextStyle(fontSize: 12, color: Colors.white70),
                           ),
                         ),
                         const Divider(color: Colors.white12, height: 24),
                         Text(
-                          tr('🔐 تغيير الرمز السري للوالدين (٦ أرقام)'),
+                          '🔐 تغيير الرمز السري للوالدين (٦ أرقام)',
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 14),
                         ),
@@ -1900,7 +1899,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                                 keyboardType: TextInputType.number,
                                 maxLength: 6,
                                 decoration: InputDecoration(
-                                  labelText: tr('الرمز السري الجديد (٦ أرقام)'),
+                                  labelText: 'الرمز السري الجديد (٦ أرقام)',
                                   counterText: '',
                                   prefixIcon: Icon(Icons.lock_outline),
                                 ),
@@ -1919,13 +1918,13 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                                   ScaffoldMessenger.of(context).showSnackBar(
                                     SnackBar(
                                       content: Text(ok
-                                          ? tr('✅ تم تحديث الرمز السري للوالدين بنجاح')
-                                          : tr('يرجى إدخال رمز سري مكون من ٦ أرقام')),
+                                          ? '✅ تم تحديث الرمز السري للوالدين بنجاح'
+                                          : 'يرجى إدخال رمز سري مكون من ٦ أرقام'),
                                     ),
                                   );
                                 }
                               },
-                              child: Text(tr('حفظ الرمز')),
+                              child: Text('حفظ الرمز'),
                             ),
                           ],
                         ),
@@ -1953,7 +1952,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                       },
                       icon: const Icon(Icons.logout),
                       label: Text(
-                        tr('تسجيل الخروج من الحساب'),
+                        'تسجيل الخروج من الحساب',
                         style: TextStyle(
                             fontSize: 16, fontWeight: FontWeight.bold),
                       ),
@@ -1978,7 +1977,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                             builder: (dCtx, setDialogState) => AlertDialog(
                               backgroundColor: const Color(0xFF1E293B),
                               title: Text(
-                                tr('⚠️ حذف حساب ولي الأمر وجميع البيانات نهائياً'),
+                                '⚠️ حذف حساب ولي الأمر وجميع البيانات نهائياً',
                                 style: TextStyle(
                                     fontSize: 15, fontWeight: FontWeight.bold),
                               ),
@@ -1986,7 +1985,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Text(
-                                    tr('أدخل رمز PIN الأبوي أو كلمة المرور لتأكيد الحذف النهائي للحساب وجميع ملفات الأطفال المرتبطة به:'),
+                                    'أدخل رمز PIN الأبوي أو كلمة المرور لتأكيد الحذف النهائي للحساب وجميع ملفات الأطفال المرتبطة به:',
                                     style: TextStyle(
                                         fontSize: 12.5, color: Colors.white70),
                                   ),
@@ -1995,7 +1994,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                                     controller: confirmCtrl,
                                     obscureText: true,
                                     decoration: InputDecoration(
-                                      labelText: tr('رمز PIN أو كلمة المرور'),
+                                      labelText: 'رمز PIN أو كلمة المرور',
                                     ),
                                   ),
                                   if (delErr != null) ...[
@@ -2012,7 +2011,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                               actions: [
                                 TextButton(
                                   onPressed: () => Navigator.pop(dCtx),
-                                  child: Text(tr('إلغاء')),
+                                  child: Text('إلغاء'),
                                 ),
                                 ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -2034,7 +2033,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                                       }
                                     }
                                   },
-                                  child: Text(tr('تأكيد حذف الحساب')),
+                                  child: Text('تأكيد حذف الحساب'),
                                 ),
                               ],
                             ),
@@ -2042,7 +2041,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                         );
                       },
                       icon: const Icon(Icons.delete_forever_rounded),
-                      label: Text(tr('حذف حساب ولي الأمر نهائياً')),
+                      label: Text('حذف حساب ولي الأمر نهائياً'),
                     ),
                   ),
                 ],

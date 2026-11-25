@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -256,7 +255,7 @@ class _VerticalVideoFeedItemWidgetState
             sceneTitle: item.title,
             narrationText: item.description,
             speakerRole: 'primary_assistant',
-            speakerNameAr: tr('المساعد الصوتي الرئيسي'),
+            speakerNameAr: 'المساعد الصوتي الرئيسي',
             speakerAvatar: '🎙️✨',
           );
 
@@ -443,7 +442,7 @@ class _VerticalVideoFeedItemWidgetState
                                               SizedBox(width: 6),
                                               Flexible(
                                                 child: Text(
-                                                  tr('متوقف مؤقتاً — المس الشاشة للمتابعة'),
+                                                  'متوقف مؤقتاً — المس الشاشة للمتابعة',
                                                   maxLines: 1,
                                                   overflow: TextOverflow.ellipsis,
                                                   style: TextStyle(
@@ -459,7 +458,7 @@ class _VerticalVideoFeedItemWidgetState
                                       ] else if (_showTouchSparkle) ...[
                                         const SizedBox(height: 4),
                                         Text(
-                                          tr('✨ تفاعل رائع يا بطل! ✨'),
+                                          '✨ تفاعل رائع يا بطل! ✨',
                                           style: TextStyle(
                                             fontSize: 11.5,
                                             fontWeight: FontWeight.bold,
@@ -507,7 +506,7 @@ class _VerticalVideoFeedItemWidgetState
                                           const SizedBox(width: 4),
                                           Flexible(
                                             child: Text(
-                                              tr('موسيقى هادئة + سرد تلقائي ({0} د)', [_story.totalEstimatedMinutes]),
+                                              'موسيقى هادئة + سرد تلقائي (${_story.totalEstimatedMinutes} د)',
                                               maxLines: 1,
                                               overflow: TextOverflow.ellipsis,
                                               style: const TextStyle(
@@ -550,14 +549,14 @@ class _VerticalVideoFeedItemWidgetState
                   _SideActionButton(
                     icon: Icons.mic_rounded,
                     iconColor: const Color(0xFFF59E0B),
-                    label: tr('ردد معي'),
+                    label: 'ردد معي',
                     onTap: widget.onRepeatPhraseTap,
                   ),
                   const SizedBox(height: 8),
                   _SideActionButton(
                     icon: Icons.emoji_events_rounded,
                     iconColor: const Color(0xFF14B8A6),
-                    label: tr('نشاط البطل'),
+                    label: 'نشاط البطل',
                     onTap: widget.onHeroActivityTap,
                   ),
                   const SizedBox(height: 8),
@@ -565,7 +564,7 @@ class _VerticalVideoFeedItemWidgetState
                     _SideActionButton(
                       icon: Icons.school_rounded,
                       iconColor: const Color(0xFF10B981),
-                      label: tr('الأكاديمية'),
+                      label: 'الأكاديمية',
                       onTap: widget.onAcademyTap!,
                     ),
                     const SizedBox(height: 8),
@@ -573,21 +572,21 @@ class _VerticalVideoFeedItemWidgetState
                   _SideActionButton(
                     icon: Icons.psychology_rounded,
                     iconColor: const Color(0xFFC084FC),
-                    label: tr('ألعاب الذكاء'),
+                    label: 'ألعاب الذكاء',
                     onTap: widget.onBrainGamesTap,
                   ),
                   const SizedBox(height: 8),
                   _SideActionButton(
                     icon: Icons.assistant_rounded,
                     iconColor: const Color(0xFF38BDF8),
-                    label: tr('مساعد ذكي'),
+                    label: 'مساعد ذكي',
                     onTap: widget.onVoiceAssistantTap,
                   ),
                   const SizedBox(height: 8),
                   _SideActionButton(
                     icon: _isMuted ? Icons.volume_off : Icons.volume_up,
                     iconColor: Colors.white,
-                    label: _isMuted ? tr('صامت') : tr('الصوت'),
+                    label: _isMuted ? 'صامت' : 'الصوت',
                     onTap: _toggleMute,
                   ),
                 ],
@@ -676,7 +675,7 @@ class _VerticalVideoFeedItemWidgetState
                     onTap: () => setState(
                         () => _showFullDescription = !_showFullDescription),
                     child: Text(
-                      tr('🎯 الهدف التربوي: {0}', [_story.pedagogicalConcept]),
+                      '🎯 الهدف التربوي: ${_story.pedagogicalConcept}',
                       maxLines: _showFullDescription ? 6 : 1,
                       overflow: TextOverflow.ellipsis,
                       style: const TextStyle(
@@ -706,7 +705,7 @@ class _VerticalVideoFeedItemWidgetState
                           const SizedBox(width: 4),
                           Flexible(
                             child: Text(
-                              tr('ردد معي: {0}', [item.repeatPhrase]),
+                              'ردد معي: ${item.repeatPhrase}',
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
                               style: const TextStyle(

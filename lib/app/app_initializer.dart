@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
@@ -10,7 +9,6 @@ class AppInitializer {
     await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     await LocalCredentialSecurityService.ensureKeystorePinPepperInitialized();
-    await Tr.load();
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     final AppStateManager appState = AppStateManager(prefs);
     await appState.initialize();

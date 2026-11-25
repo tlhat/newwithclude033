@@ -1,7 +1,10 @@
 import 'dart:convert';
 
 /// Exercise data comes from JSON (assets/exercises/*.json), not code.
-/// Types: choice, number, ordering, matching, categorize.
+/// Types: choice, number, ordering, matching, categorize, plus widget ideas
+/// from Khan Academy's Perseus (MIT): numberline, blank (fill-in-the-blank
+/// dropdown), multi (multiple answers), grid_point (interactive graph point),
+/// bars (plotter), and an optional `explain` text (explanation widget).
 class Exercise {
   final String id;
   final String type;
@@ -12,7 +15,9 @@ class Exercise {
   final Map<String, dynamic> data;
   final String skill;
   final int level;
+  final String explain;
   const Exercise({
+    this.explain = '',
     this.skill = 'general',
     this.level = 1,
     required this.id,
@@ -34,6 +39,7 @@ class Exercise {
         data: Map<String, dynamic>.from(j['data'] as Map),
         skill: (j['skill'] ?? 'general').toString(),
         level: ((j['level'] as num?) ?? 1).toInt(),
+        explain: (j['explain'] ?? '').toString(),
       );
 
   static List<Exercise> parseList(String raw) {
@@ -52,7 +58,28 @@ class ExerciseGrader {
     try {
       switch (e.type) {
         case 'choice':
+        case 'blank':
           return answer == (e.data['correct'] as num).toInt();
+        case 'numberline':
+          final num? v = answer is num ? answer : num.tryParse('$answer');
+          return v != null && v == (e.data['answer'] as num);
+        case 'multi':
+          final Set<int> want =
+              (e.data['correct'] as List).map((x) => (x as num).toInt()).toSet();
+          final Set<int> got = (answer as Iterable).map((x) => (x as num).toInt()).toSet();
+          return want.length == got.length && want.containsAll(got);
+        case 'grid_point':
+          final List w = e.data['answer'] as List;
+          final List g = answer as List;
+          return g.length == 2 && g[0] == (w[0] as num).toInt() && g[1] == (w[1] as num).toInt();
+        case 'bars':
+          final List t = e.data['target'] as List;
+          final List g2 = answer as List;
+          if (t.length != g2.length) return false;
+          for (int i = 0; i < t.length; i++) {
+            if ((t[i] as num).toInt() != (g2[i] as num).toInt()) return false;
+          }
+          return true;
         case 'number':
           final num? v = answer is num ? answer : num.tryParse('$answer'.trim());
           return v != null && v == (e.data['answer'] as num);
@@ -109,6 +136,16 @@ extension StepGrading on ExerciseGrader {
             if (i >= got.length || '${got[i]}' != '${want[i]}') bad.add('${want[i]}');
           }
           return StepResult(want.length, bad);
+        case 'bars':
+          final List t = e.data['target'] as List;
+          final List labels = (e.data['labels'] as List?) ?? const [];
+          final List g = answer as List;
+          final List<String> bad = [
+            for (int i = 0; i < t.length; i++)
+              if (i >= g.length || (g[i] as num).toInt() != (t[i] as num).toInt())
+                i < labels.length ? '${labels[i]}' : '$i'
+          ];
+          return StepResult(t.length, bad);
         case 'matching':
         case 'categorize':
           final Map want = (e.type == 'matching' ? e.data['pairs'] : e.data['items']) as Map;

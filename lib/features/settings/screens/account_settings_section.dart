@@ -1,4 +1,3 @@
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:flutter/material.dart';
 
 class AccountSecurityNoticeWidget extends StatelessWidget {
@@ -7,7 +6,7 @@ class AccountSecurityNoticeWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      tr('🔐 جميع بيانات العائلة ورمز الحماية الأبوي محفوظة بأمان تام.'),
+      '🔐 جميع بيانات العائلة ورمز الحماية الأبوي محفوظة بأمان تام.',
       style: TextStyle(fontSize: 12, color: Colors.white70),
     );
   }

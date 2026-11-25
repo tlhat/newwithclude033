@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
 /// Lets the parent save the family (child, stars, settings) to their own
@@ -21,7 +20,7 @@ class _GoogleBackupCardState extends State<GoogleBackupCard> {
     if (!mounted) return;
     setState(() => _busy = false);
     ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-        content: Text(err ?? tr('تم حفظ نسخة احتياطية على حساب جوجل بتاعك.'))));
+        content: Text(err ?? 'تم حفظ نسخة احتياطية على حساب جوجل بتاعك.')));
   }
 
   @override
@@ -31,10 +30,10 @@ class _GoogleBackupCardState extends State<GoogleBackupCard> {
       child: ListTile(
         minVerticalPadding: 12,
         leading: const Icon(Icons.cloud_upload_outlined, color: Color(0xFF3B82F6)),
-        title: Text(tr('نسخة احتياطية على جوجل')),
+        title: Text('نسخة احتياطية على جوجل'),
         subtitle: Text(email == null
-            ? tr('احفظ تقدم طفلك عشان ترجعه على أي موبايل جديد')
-            : tr('مربوط بـ {0}', [email])),
+            ? 'احفظ تقدم طفلك عشان ترجعه على أي موبايل جديد'
+            : 'مربوط بـ ${email}'),
         trailing: _busy
             ? const SizedBox(
                 width: 22,
@@ -42,7 +41,7 @@ class _GoogleBackupCardState extends State<GoogleBackupCard> {
                 child: CircularProgressIndicator(strokeWidth: 2))
             : TextButton(
                 onPressed: _backup,
-                child: Text(email == null ? tr('اربط واحفظ') : tr('احفظ الآن')),
+                child: Text(email == null ? 'اربط واحفظ' : 'احفظ الآن'),
               ),
         onLongPress: email == null
             ? null

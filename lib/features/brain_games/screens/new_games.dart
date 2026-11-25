@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
@@ -7,7 +6,7 @@ typedef GameReact = void Function(bool correct);
 
 List<String> _kLetters = [
   'ا', 'ب', 'ت', 'ث', 'ج', 'ح', 'خ', 'د', 'ذ', 'ر', 'ز', 'س', 'ش', 'ص',
-  tr('ض'), tr('ط'), tr('ظ'), tr('ع'), tr('غ'), tr('ف'), tr('ق'), tr('ك'), tr('ل'), tr('م'), tr('ن'), tr('هـ'), tr('و'), tr('ي')
+  'ض', 'ط', 'ظ', 'ع', 'غ', 'ف', 'ق', 'ك', 'ل', 'م', 'ن', 'هـ', 'و', 'ي'
 ];
 
 Future<void> _win(AppStateManager s, String id, String title) =>
@@ -87,7 +86,7 @@ class _TraceLetterGameState extends State<TraceLetterGame> {
     }
     widget.onReact(true);
     HintVoiceService.instance.play('hint_great');
-    await _win(widget.appState, 'trace_letter_$_i', tr('تتبّع الحروف'));
+    await _win(widget.appState, 'trace_letter_$_i', 'تتبّع الحروف');
     setState(() {
       _i = (_i + 1) % _kLetters.length;
       _strokes.clear();
@@ -98,7 +97,7 @@ class _TraceLetterGameState extends State<TraceLetterGame> {
   @override
   Widget build(BuildContext context) {
     return Column(mainAxisSize: MainAxisSize.min, children: [
-      Text(tr('✏️ امشي بصباعك على الحرف'),
+      Text('✏️ امشي بصباعك على الحرف',
           style: TextStyle(
               color: Colors.white, fontSize: 17, fontWeight: FontWeight.w800)),
       const SizedBox(height: 10),
@@ -137,12 +136,12 @@ class _TraceLetterGameState extends State<TraceLetterGame> {
                   _cells.clear();
                 }),
             icon: const Icon(Icons.refresh),
-            label: Text(tr('من الأول'))),
+            label: Text('من الأول')),
         const SizedBox(width: 12),
         ElevatedButton.icon(
             onPressed: _done,
             icon: const Icon(Icons.check),
-            label: Text(tr('خلصت'))),
+            label: Text('خلصت')),
       ]),
     ]);
   }
@@ -193,7 +192,7 @@ class _CountPicsGameState extends State<CountPicsGame> {
     if (v == _answer) {
       widget.onReact(true);
       HintVoiceService.instance.play('hint_great');
-      await _win(widget.appState, 'count_pics', tr('عدّ وجمّع بالصور'));
+      await _win(widget.appState, 'count_pics', 'عدّ وجمّع بالصور');
       setState(() {
         _round++;
         _next();
@@ -211,7 +210,7 @@ class _CountPicsGameState extends State<CountPicsGame> {
   @override
   Widget build(BuildContext context) {
     return Column(mainAxisSize: MainAxisSize.min, children: [
-      Text(_add ? tr('➕ كام الإجمالي؟') : tr('🔢 عُد الصور'),
+      Text(_add ? '➕ كام الإجمالي؟' : '🔢 عُد الصور',
           style: const TextStyle(
               color: Colors.white, fontSize: 17, fontWeight: FontWeight.w800)),
       const SizedBox(height: 12),
@@ -265,12 +264,12 @@ class _SItem {
 class _ShapeSortGameState extends State<ShapeSortGame> {
   static Color red = Color(0xFFEF4444), blue = Color(0xFF3B82F6);
   static List<_SItem> _all = [
-    _SItem('●', red, tr('دايرة'), tr('أحمر')),
-    _SItem('■', red, tr('مربع'), tr('أحمر')),
-    _SItem('▲', red, tr('مثلث'), tr('أحمر')),
-    _SItem('●', blue, tr('دايرة'), tr('أزرق')),
-    _SItem('■', blue, tr('مربع'), tr('أزرق')),
-    _SItem('▲', blue, tr('مثلث'), tr('أزرق')),
+    _SItem('●', red, 'دايرة', 'أحمر'),
+    _SItem('■', red, 'مربع', 'أحمر'),
+    _SItem('▲', red, 'مثلث', 'أحمر'),
+    _SItem('●', blue, 'دايرة', 'أزرق'),
+    _SItem('■', blue, 'مربع', 'أزرق'),
+    _SItem('▲', blue, 'مثلث', 'أزرق'),
   ];
   final Random _r = Random();
   bool _byColor = true;
@@ -288,9 +287,9 @@ class _ShapeSortGameState extends State<ShapeSortGame> {
   void _newRound() {
     _placed = 0;
     if (_byColor) {
-      _bins = [tr('أحمر'), tr('أزرق')];
+      _bins = ['أحمر', 'أزرق'];
     } else {
-      _bins = ([tr('دايرة'), tr('مربع'), tr('مثلث')]..shuffle(_r)).take(2).toList();
+      _bins = (['دايرة', 'مربع', 'مثلث']..shuffle(_r)).take(2).toList();
     }
     final List<_SItem> pool = _byColor
         ? _all
@@ -309,7 +308,7 @@ class _ShapeSortGameState extends State<ShapeSortGame> {
       });
       if (_items.isEmpty) {
         HintVoiceService.instance.play('hint_great');
-        await _win(widget.appState, 'shape_sort', tr('رتّب الأشكال والألوان'));
+        await _win(widget.appState, 'shape_sort', 'رتّب الأشكال والألوان');
         setState(() {
           _byColor = !_byColor;
           _newRound();
@@ -328,7 +327,7 @@ class _ShapeSortGameState extends State<ShapeSortGame> {
   @override
   Widget build(BuildContext context) {
     return Column(mainAxisSize: MainAxisSize.min, children: [
-      Text(_byColor ? tr('🎨 رتّب حسب اللون') : tr('🔷 رتّب حسب الشكل'),
+      Text(_byColor ? '🎨 رتّب حسب اللون' : '🔷 رتّب حسب الشكل',
           style: const TextStyle(
               color: Colors.white, fontSize: 17, fontWeight: FontWeight.w800)),
       const SizedBox(height: 10),
@@ -405,7 +404,7 @@ class _ImagineDrawGameState extends State<ImagineDrawGame> {
     setState(() => _finished = true);
     widget.onReact(true);
     HintVoiceService.instance.play('hint_draw_done');
-    await _win(widget.appState, 'imagine_draw', tr('ارسم خيالك'));
+    await _win(widget.appState, 'imagine_draw', 'ارسم خيالك');
   }
 
   void _again() {
@@ -469,11 +468,11 @@ class _ImagineDrawGameState extends State<ImagineDrawGame> {
             onPressed: _strokes.isEmpty || _finished
                 ? null
                 : () => setState(() => _strokes.removeLast()),
-            child: Text(tr('تراجع'))),
+            child: Text('تراجع')),
         const SizedBox(width: 10),
         _finished
-            ? ElevatedButton(onPressed: _again, child: Text(tr('رسمة جديدة')))
-            : ElevatedButton(onPressed: _finish, child: Text(tr('خلصت'))),
+            ? ElevatedButton(onPressed: _again, child: Text('رسمة جديدة'))
+            : ElevatedButton(onPressed: _finish, child: Text('خلصت')),
       ]),
     ]);
   }

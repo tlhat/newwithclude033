@@ -8,7 +8,7 @@ class LocaleController extends ChangeNotifier {
   static const String kLearningLanguagePrefKey = 'app_learning_language_code';
   static const String kVoiceLanguagePrefKey = 'app_voice_language_code';
 
-  static const List<String> kSupportedLanguageCodes = ['ar', 'en'];
+  static const List<String> kSupportedLanguageCodes = ['ar']; // Arabic only
 
   String _uiLanguageCode = 'ar';
   String _learningLanguageCode = 'ar';

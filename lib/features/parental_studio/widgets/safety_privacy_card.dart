@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'package:haneen_kids_vod/core/security/local_credential_security_service.dart';
 
@@ -79,7 +78,7 @@ class _SafetyPrivacyCardState extends State<SafetyPrivacyCard> {
             MaterialPageRoute(builder: (_) => PrivacyPolicyScreen()),
           ),
           icon: Icon(Icons.privacy_tip_outlined),
-          label: Text(tr('سياسة الخصوصية وحماية بيانات الأطفال')),
+          label: Text('سياسة الخصوصية وحماية بيانات الأطفال'),
         ),
         SizedBox(height: 14),
       ],
@@ -96,7 +95,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
   static List<List<String>> sections = [
     [
       'من نحن',
-      tr('حنين كيدز تطبيق تعليمي للأطفال. هذه السياسة تشرح ما نحفظه وما لا نحفظه. التطبيق موجّه للأطفال، والوالدان هما المسؤولان عن الحساب.'),
+      'حنين كيدز تطبيق تعليمي للأطفال. هذه السياسة تشرح ما نحفظه وما لا نحفظه. التطبيق موجّه للأطفال، والوالدان هما المسؤولان عن الحساب.',
     ],
     [
       'ما البيانات التي نحفظها',
@@ -114,7 +113,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
           'التطبيق لا يسجّل صوت الطفل ولا يحفظه ولا يرسله إلى خوادمنا.',
     ],
     [
-      tr('الأصوات المنطوقة'),
+      'الأصوات المنطوقة',
       'معظم أصوات حنين مدمجة داخل التطبيق وتعمل دون إنترنت. عند عدم وجود تسجيل جاهز '
           'ومع وجود إنترنت، يُرسل نص الجملة فقط (قد يتضمن اسم الطفل) إلى خدمة توليد الصوت ElevenLabs '
           'لتحويله إلى كلام. لا يُرسل أي صوت ولا صور.',
@@ -128,10 +127,10 @@ class PrivacyPolicyScreen extends StatelessWidget {
     ],
     [
       'تنبيهات البريد لولي الأمر',
-      tr('إذا فعّل ولي الأمر تنبيهات البريد، تُرسل ملخصات عن تقدم الطفل إلى بريد ولي الأمر.'),
+      'إذا فعّل ولي الأمر تنبيهات البريد، تُرسل ملخصات عن تقدم الطفل إلى بريد ولي الأمر.',
     ],
     [
-      tr('التحكم والحذف'),
+      'التحكم والحذف',
       'يستطيع ولي الأمر في أي وقت: تغيير الرمز السري، وتعطيل الميكروفون والمزامنة، '
           'وحذف حساب ولي الأمر وبيانات الأطفال نهائياً من «إعدادات الحساب» داخل بوابة الوالدين.',
     ],
@@ -144,13 +143,13 @@ class PrivacyPolicyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Directionality(
-      textDirection: Tr.dir,
+      textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: AppBar(title: Text(tr('سياسة الخصوصية'))),
+        appBar: AppBar(title: Text('سياسة الخصوصية')),
         body: ListView(
           padding: const EdgeInsets.all(20),
           children: [
-            Text(tr('آخر تحديث: {0}', [kPrivacyPolicyDate]),
+            Text('آخر تحديث: ${kPrivacyPolicyDate}',
                 style: const TextStyle(fontSize: 12, color: Colors.grey)),
             const SizedBox(height: 12),
             for (final s in sections) ...[

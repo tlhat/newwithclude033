@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
@@ -14,10 +13,10 @@ class MultiChildProfilesScreen extends StatefulWidget {
 
 class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
   final List<String> _ageGroups = [
-    tr('2–4 سنوات'),
-    tr('3–6 سنوات'),
-    tr('4–8 سنوات'),
-    tr('6–10 سنوات')
+    '2–4 سنوات',
+    '3–6 سنوات',
+    '4–8 سنوات',
+    '6–10 سنوات'
   ];
   final List<String> _avatars = [
     '🦁',
@@ -36,7 +35,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
     final TextEditingController nameCtrl = TextEditingController();
     final TextEditingController addPinCtrl = TextEditingController();
     String? addChildError;
-    String selectedAge = tr('3–6 سنوات');
+    String selectedAge = '3–6 سنوات';
     String selectedAvatar = '🦁';
     String selectedGender = 'boy';
     int selectedMinutes = 20;
@@ -64,7 +63,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      tr('➕ إضافة ملف طفل جديد (بموافقة ولي الأمر)'),
+                      '➕ إضافة ملف طفل جديد (بموافقة ولي الأمر)',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -75,8 +74,8 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                     TextField(
                       controller: nameCtrl,
                       decoration: InputDecoration(
-                        labelText: tr('اسم الطفل'),
-                        hintText: tr('مثال: سارة أو عمر'),
+                        labelText: 'اسم الطفل',
+                        hintText: 'مثال: سارة أو عمر',
                         prefixIcon: Icon(Icons.child_care),
                       ),
                     ),
@@ -84,7 +83,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                     Row(
                       children: [
                         Text(
-                          tr('الجنس:'),
+                          'الجنس:',
                           style: TextStyle(
                               fontSize: 13,
                               color: Colors.white70,
@@ -93,7 +92,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                         const SizedBox(width: 10),
                         ChoiceChip(
                           avatar: const Text('👦'),
-                          label: Text(tr('ولد')),
+                          label: Text('ولد'),
                           selected: selectedGender == 'boy',
                           selectedColor:
                               const Color(0xFF6C63FF).withOpacity(0.35),
@@ -106,7 +105,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                         const SizedBox(width: 8),
                         ChoiceChip(
                           avatar: const Text('👧'),
-                          label: Text(tr('بنت')),
+                          label: Text('بنت'),
                           selected: selectedGender == 'girl',
                           selectedColor:
                               const Color(0xFFFF7892).withOpacity(0.35),
@@ -122,7 +121,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                     DropdownButtonFormField<String>(
                       value: selectedAge,
                       decoration: InputDecoration(
-                        labelText: tr('الفئة العمرية'),
+                        labelText: 'الفئة العمرية',
                         prefixIcon: Icon(Icons.cake_outlined),
                       ),
                       items: _ageGroups
@@ -139,7 +138,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                     ),
                     const SizedBox(height: 14),
                     Text(
-                      tr('اختر الرمز التعبيري (Avatar):'),
+                      'اختر الرمز التعبيري (Avatar):',
                       style: TextStyle(fontSize: 13, color: Colors.white70),
                     ),
                     const SizedBox(height: 8),
@@ -176,11 +175,11 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
-                          tr('دقائق المشاهدة اليومية:'),
+                          'دقائق المشاهدة اليومية:',
                           style: TextStyle(color: Colors.white70),
                         ),
                         Text(
-                          tr('{0} دقيقة / يومياً', [selectedMinutes]),
+                          '${selectedMinutes} دقيقة / يومياً',
                           style: const TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Color(0xFFF59E0B),
@@ -204,7 +203,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                       keyboardType: TextInputType.number,
                       maxLength: 6,
                       decoration: InputDecoration(
-                        labelText: tr('رمز PIN الأبوي (٦ أرقام) لتأكيد إضافة الملف'),
+                        labelText: 'رمز PIN الأبوي (٦ أرقام) لتأكيد إضافة الملف',
                         counterText: '',
                         prefixIcon: Icon(Icons.lock_outline),
                       ),
@@ -232,7 +231,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                         onPressed: () {
                           if (nameCtrl.text.trim().isEmpty) {
                             setModalState(() {
-                              addChildError = tr('يرجى إدخال اسم الطفل أولاً.');
+                              addChildError = 'يرجى إدخال اسم الطفل أولاً.';
                             });
                             return;
                           }
@@ -241,14 +240,14 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                             if (acc.isPinLockedOut) {
                               setModalState(() {
                                 addChildError =
-                                    tr('⏳ تم قفل الرمز الأبوي مؤقتاً. انتظر {0} ثانية.', [acc.remainingPinLockoutSeconds]);
+                                    '⏳ تم قفل الرمز الأبوي مؤقتاً. انتظر ${acc.remainingPinLockoutSeconds} ثانية.';
                               });
                               return;
                             }
                             if (!acc.verifyParentalPin(addPinCtrl.text)) {
                               setModalState(() {
                                 addChildError =
-                                    tr('رمز PIN الأبوي غير صحيح؛ لا يمكن إضافة ملف طفل بدون موافقة ولي الأمر.');
+                                    'رمز PIN الأبوي غير صحيح؛ لا يمكن إضافة ملف طفل بدون موافقة ولي الأمر.';
                               });
                               return;
                             }
@@ -264,7 +263,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                         },
                         icon: const Icon(Icons.check_circle_outline),
                         label: Text(
-                          tr('حفظ ملف الطفل'),
+                          'حفظ ملف الطفل',
                           style: TextStyle(
                               fontSize: 16, fontWeight: FontWeight.bold),
                         ),
@@ -290,14 +289,14 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
         backgroundColor: const Color(0xFF1E293B),
         leading: account.isGuestDemoSession
             ? IconButton(
-                tooltip: tr('الرجوع لصفحة البداية وتسجيل الدخول'),
+                tooltip: 'الرجوع لصفحة البداية وتسجيل الدخول',
                 icon: const Icon(Icons.arrow_back_rounded,
                     color: Color(0xFFF59E0B)),
                 onPressed: () => widget.appState.logout(),
               )
             : null,
         title: Text(
-          tr('من سيشاهد قصص حنين اليوم؟'),
+          'من سيشاهد قصص حنين اليوم؟',
           style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
         ),
         actions: [
@@ -306,7 +305,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                 widget.appState.selectChildAndEnterFeed(account.activeChildId),
             icon: const Icon(Icons.play_circle_fill, color: Color(0xFF14B8A6)),
             label: Text(
-              tr('المشغل'),
+              'المشغل',
               style: TextStyle(
                   color: Color(0xFF14B8A6), fontWeight: FontWeight.bold),
             ),
@@ -343,7 +342,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                       const SizedBox(width: 10),
                       Expanded(
                         child: Text(
-                          tr('حنين كيدز مجاني ١٠٠٪ بالكامل لجميع الأطفال'),
+                          'حنين كيدز مجاني ١٠٠٪ بالكامل لجميع الأطفال',
                           style: const TextStyle(
                               fontSize: 12, color: Colors.white),
                         ),
@@ -376,7 +375,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                                   SizedBox(width: 8),
                                   Expanded(
                                     child: Text(
-                                      tr('تأكيد الرمز الأبوي السري (PIN)'),
+                                      'تأكيد الرمز الأبوي السري (PIN)',
                                       style: TextStyle(
                                           fontSize: 16,
                                           fontWeight: FontWeight.bold),
@@ -388,7 +387,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                                 mainAxisSize: MainAxisSize.min,
                                 children: [
                                   Text(
-                                    tr('للدخول إلى بوابة الوالدين وإعدادات الحماية، يرجى إدخال رمز PIN الأبوي المكون من ٦ أرقام:'),
+                                    'للدخول إلى بوابة الوالدين وإعدادات الحماية، يرجى إدخال رمز PIN الأبوي المكون من ٦ أرقام:',
                                     style: TextStyle(
                                         fontSize: 12.5, color: Colors.white70),
                                   ),
@@ -418,7 +417,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                               actions: [
                                 TextButton(
                                   onPressed: () => Navigator.pop(dCtx),
-                                  child: Text(tr('إلغاء')),
+                                  child: Text('إلغاء'),
                                 ),
                                 ElevatedButton(
                                   style: ElevatedButton.styleFrom(
@@ -431,7 +430,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                                     if (acc.isPinLockedOut) {
                                       setDialogState(() {
                                         pinError =
-                                            tr('⏳ تم قفل البوابة مؤقتاً. انتظر {0} ثانية.', [acc.remainingPinLockoutSeconds]);
+                                            '⏳ تم قفل البوابة مؤقتاً. انتظر ${acc.remainingPinLockoutSeconds} ثانية.';
                                       });
                                       return;
                                     }
@@ -451,12 +450,12 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                                     } else {
                                       setDialogState(() {
                                         pinError = acc.isPinLockedOut
-                                            ? tr('⏳ تم قفل البوابة مؤقتاً لمدة {0} ثانية لحماية طفلك.', [acc.remainingPinLockoutSeconds])
-                                            : tr('رمز PIN الأبوي غير صحيح.');
+                                            ? '⏳ تم قفل البوابة مؤقتاً لمدة ${acc.remainingPinLockoutSeconds} ثانية لحماية طفلك.'
+                                            : 'رمز PIN الأبوي غير صحيح.';
                                       });
                                     }
                                   },
-                                  child: Text(tr('دخول بوابة الوالدين')),
+                                  child: Text('دخول بوابة الوالدين'),
                                 ),
                               ],
                             );
@@ -485,7 +484,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                tr('📲 وضع هاتف ولي الأمر: المراقبة الحية وقفل موبايل الطفل عن بُعد'),
+                                '📲 وضع هاتف ولي الأمر: المراقبة الحية وقفل موبايل الطفل عن بُعد',
                                 style: TextStyle(
                                   fontWeight: FontWeight.bold,
                                   fontSize: 13,
@@ -493,7 +492,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                                 ),
                               ),
                               Text(
-                                tr('شاهد ماذا يفعل طفلك الآن على التطبيق واقفل شاشة موبايله بضغطة زر من موبايلك'),
+                                'شاهد ماذا يفعل طفلك الآن على التطبيق واقفل شاشة موبايله بضغطة زر من موبايلك',
                                 style: TextStyle(
                                     fontSize: 11, color: Colors.white70),
                               ),
@@ -509,7 +508,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                 ],
                 const SizedBox(height: 14),
                 Text(
-                  tr('مرحباً بك يا {0} 👋 اختر ملف الطفل للبدء أو أضف طفلاً جديداً:', [account.fullName]),
+                  'مرحباً بك يا ${account.fullName} 👋 اختر ملف الطفل للبدء أو أضف طفلاً جديداً:',
                   style: const TextStyle(color: Colors.white70, fontSize: 14),
                 ),
                 const SizedBox(height: 16),
@@ -547,7 +546,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                                 ),
                                 SizedBox(height: 12),
                                 Text(
-                                  tr('إضافة طفل جديد'),
+                                  'إضافة طفل جديد',
                                   style: TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 15,
@@ -556,7 +555,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                                 ),
                                 SizedBox(height: 4),
                                 Text(
-                                  tr('تخصيص العمر والوقت'),
+                                  'تخصيص العمر والوقت',
                                   style: TextStyle(
                                       fontSize: 12, color: Colors.white60),
                                 ),
@@ -616,7 +615,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Text(
-                                  tr('⏱️ {0}/{1} د • ⭐ {2}', [child.usedMinutesToday, child.dailyTimeLimit, child.starsEarned]),
+                                  '⏱️ ${child.usedMinutesToday}/${child.dailyTimeLimit} د • ⭐ ${child.starsEarned}',
                                   style: const TextStyle(
                                     fontSize: 11,
                                     color: Color(0xFFF59E0B),

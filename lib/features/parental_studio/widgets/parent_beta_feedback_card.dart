@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
 /// Parent-Only Beta Feedback, Version/Environment Info & Feature Flags Card
@@ -18,14 +17,14 @@ class ParentBetaFeedbackCard extends StatefulWidget {
 
 class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
   final TextEditingController _notesCtrl = TextEditingController();
-  String _selectedCategory = tr('مشكلة استخدام');
+  String _selectedCategory = 'مشكلة استخدام';
 
   static List<String> _categories = [
     'عطل حرج',
     'مشكلة استخدام',
     'ترجمة',
-    tr('محتوى'),
-    tr('اقتراح'),
+    'محتوى',
+    'اقتراح',
   ];
 
   @override
@@ -65,7 +64,7 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
                   SizedBox(width: 10),
                   Expanded(
                     child: Text(
-                      tr('معلومات النسخة وملاحظات ولي الأمر (Beta)'),
+                      'معلومات النسخة وملاحظات ولي الأمر (Beta)',
                       style: TextStyle(
                         fontSize: 16.5,
                         fontWeight: FontWeight.bold,
@@ -77,7 +76,7 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
               ),
               const SizedBox(height: 8),
               Text(
-                tr('الإصدار والبيئة: {0} • اللغة: {1}', [env.buildInfoSummary, widget.appState.localeController.uiLanguageCode.toUpperCase()]),
+                'الإصدار والبيئة: ${env.buildInfoSummary}',
                 style: const TextStyle(fontSize: 12.5, color: Colors.white70),
               ),
               const SizedBox(height: 14),
@@ -85,7 +84,7 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
                 value: _selectedCategory,
                 dropdownColor: const Color(0xFF0F172A),
                 decoration: InputDecoration(
-                  labelText: tr('تصنيف الملاحظة'),
+                  labelText: 'تصنيف الملاحظة',
                 ),
                 items: _categories
                     .map((c) => DropdownMenuItem(value: c, child: Text(c)))
@@ -101,8 +100,8 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
                 controller: _notesCtrl,
                 maxLines: 3,
                 decoration: InputDecoration(
-                  labelText: tr('وصف المشكلة أو الاقتراح (بدون بيانات شخصية للطفل)'),
-                  hintText: tr('اكتب الخطوات أو الشاشة التي ظهرت فيها الملاحظة...'),
+                  labelText: 'وصف المشكلة أو الاقتراح (بدون بيانات شخصية للطفل)',
+                  hintText: 'اكتب الخطوات أو الشاشة التي ظهرت فيها الملاحظة...',
                 ),
               ),
               const SizedBox(height: 12),
@@ -121,20 +120,20 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
                     if (context.mounted) {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
-                          content: Text(tr('✅ تم تسجيل ملاحظتك بنجاح في سجل الدعم.')),
+                          content: Text('✅ تم تسجيل ملاحظتك بنجاح في سجل الدعم.'),
                         ),
                       );
                     }
                   },
                   icon: const Icon(Icons.send_rounded),
-                  label: Text(tr('إرسال الملاحظة لفريق التطوير')),
+                  label: Text('إرسال الملاحظة لفريق التطوير'),
                 ),
               ),
               const SizedBox(height: 12),
               SwitchListTile(
                 contentPadding: EdgeInsets.zero,
                 title: Text(
-                  tr('تفعيل تلميحات التعلم التكيفي التجريبية'),
+                  'تفعيل تلميحات التعلم التكيفي التجريبية',
                   style: TextStyle(fontSize: 13.5, color: Colors.white),
                 ),
                 value: flags.enableExperimentalAdaptiveHints,
@@ -151,7 +150,7 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
                     Icon(Icons.history_rounded, size: 18, color: Colors.white70),
                     SizedBox(width: 6),
                     Text(
-                      tr('سجل الملاحظات المرسلة للمطورين:'),
+                      'سجل الملاحظات المرسلة للمطورين:',
                       style: TextStyle(
                         fontSize: 13.5,
                         fontWeight: FontWeight.bold,
@@ -164,13 +163,13 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
                 ...widget.appState.betaFeedbackLog.take(4).map((entry) {
                   final String status = entry['status'] ?? 'Pending';
                   Color statusColor = const Color(0xFFF59E0B);
-                  String statusLabel = tr('قيد الانتظار (Pending)');
+                  String statusLabel = 'قيد الانتظار (Pending)';
                   if (status == 'Sent') {
                     statusColor = const Color(0xFF10B981);
-                    statusLabel = tr('تم الإرسال (Sent)');
+                    statusLabel = 'تم الإرسال (Sent)';
                   } else if (status == 'Failed') {
                     statusColor = const Color(0xFFEF4444);
-                    statusLabel = tr('فشل الإرسال (Failed)');
+                    statusLabel = 'فشل الإرسال (Failed)';
                   }
 
                   return Container(
@@ -238,7 +237,7 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
                                   .retrySendingBetaFeedback(entry['id'] ?? ''),
                               icon: const Icon(Icons.refresh_rounded, size: 14),
                               label: Text(
-                                tr('إعادة المحاولة'),
+                                'إعادة المحاولة',
                                 style: TextStyle(fontSize: 11.5),
                               ),
                             ),

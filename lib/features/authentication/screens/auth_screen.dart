@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
 class AuthScreen extends StatefulWidget {
@@ -20,14 +19,14 @@ class _AuthScreenState extends State<AuthScreen> {
   final TextEditingController _fullNameCtrl = TextEditingController();
   final TextEditingController _childNameCtrl = TextEditingController();
   final TextEditingController _otpCtrl = TextEditingController();
-  String _selectedAgeGroup = tr('3–6 سنوات');
+  String _selectedAgeGroup = '3–6 سنوات';
 
   final List<String> _ageGroups = [
-    tr('2–3 سنوات'),
-    tr('3–4 سنوات'),
-    tr('3–6 سنوات'),
-    tr('4–6 سنوات'),
-    tr('5–6 سنوات'),
+    '2–3 سنوات',
+    '3–4 سنوات',
+    '3–6 سنوات',
+    '4–6 سنوات',
+    '5–6 سنوات',
   ];
 
   @override
@@ -46,7 +45,7 @@ class _AuthScreenState extends State<AuthScreen> {
 
     if (phone.isEmpty || parent.isEmpty || child.isEmpty) {
       setState(() {
-        _errorMessage = tr('يرجى إكمال جميع الحقول قبل طلب رمز التحقق.');
+        _errorMessage = 'يرجى إكمال جميع الحقول قبل طلب رمز التحقق.';
       });
       return;
     }
@@ -64,10 +63,10 @@ class _AuthScreenState extends State<AuthScreen> {
         if (outcome.success) {
           _isOtpStep = true;
           _infoMessage = outcome.debugCode != null
-              ? tr('رمز التحقق التجريبي هو: {0}', [outcome.debugCode])
-              : tr('تم إرسال رمز التحقق OTP إلى هاتفك بنجاح.');
+              ? 'رمز التحقق التجريبي هو: ${outcome.debugCode}'
+              : 'تم إرسال رمز التحقق OTP إلى هاتفك بنجاح.';
         } else {
-          _errorMessage = outcome.errorMessage ?? tr('تعذر إرسال رمز التحقق.');
+          _errorMessage = outcome.errorMessage ?? 'تعذر إرسال رمز التحقق.';
         }
       });
     }
@@ -77,7 +76,7 @@ class _AuthScreenState extends State<AuthScreen> {
     final String otp = _otpCtrl.text.trim();
     if (otp.length < 4) {
       setState(() {
-        _errorMessage = tr('يرجى إدخال رمز التحقق المكون من 6 أرقام.');
+        _errorMessage = 'يرجى إدخال رمز التحقق المكون من 6 أرقام.';
       });
       return;
     }
@@ -128,7 +127,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     Align(
                       alignment: AlignmentDirectional.centerStart,
                       child: KidFriendlyBigBackButton(
-                        label: tr('رجوع'),
+                        label: 'رجوع',
                         accentColor: const Color(0xFF38BDF8),
                         onPressed: () =>
                             widget.appState.reopenOnboardingIntro(),
@@ -138,7 +137,7 @@ class _AuthScreenState extends State<AuthScreen> {
                     const HaneenAppIconPreviewWidget(size: 84),
                     const SizedBox(height: 12),
                     Text(
-                      tr('تسجيل الدخول وإنشاء الحساب'),
+                      'تسجيل الدخول وإنشاء الحساب',
                       style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
@@ -156,7 +155,7 @@ class _AuthScreenState extends State<AuthScreen> {
                             color: const Color(0xFFF59E0B).withOpacity(0.5)),
                       ),
                       child: Text(
-                        tr('✨ مجاني بالكامل ١٠٠٪ — بدون اشتراكات أو إعلانات'),
+                        '✨ مجاني بالكامل ١٠٠٪ — بدون اشتراكات أو إعلانات',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 12,
@@ -173,7 +172,7 @@ class _AuthScreenState extends State<AuthScreen> {
                         controller: _phoneCtrl,
                         keyboardType: TextInputType.phone,
                         decoration: InputDecoration(
-                          labelText: tr('رقم الموبايل'),
+                          labelText: 'رقم الموبايل',
                           hintText: '01012345678',
                           prefixIcon: Icon(Icons.phone_iphone_rounded),
                         ),
@@ -184,8 +183,8 @@ class _AuthScreenState extends State<AuthScreen> {
                       TextField(
                         controller: _fullNameCtrl,
                         decoration: InputDecoration(
-                          labelText: tr('اسم ولي الأمر'),
-                          hintText: tr('مثال: أحمد محمد'),
+                          labelText: 'اسم ولي الأمر',
+                          hintText: 'مثال: أحمد محمد',
                           prefixIcon: Icon(Icons.person_outline_rounded),
                         ),
                       ),
@@ -195,8 +194,8 @@ class _AuthScreenState extends State<AuthScreen> {
                       TextField(
                         controller: _childNameCtrl,
                         decoration: InputDecoration(
-                          labelText: tr('اسم الطفل'),
-                          hintText: tr('مثال: فارس أو ليلى'),
+                          labelText: 'اسم الطفل',
+                          hintText: 'مثال: فارس أو ليلى',
                           prefixIcon: Icon(Icons.child_care_rounded),
                         ),
                       ),
@@ -206,7 +205,7 @@ class _AuthScreenState extends State<AuthScreen> {
                       DropdownButtonFormField<String>(
                         value: _selectedAgeGroup,
                         decoration: InputDecoration(
-                          labelText: tr('سن الطفل'),
+                          labelText: 'سن الطفل',
                           prefixIcon: Icon(Icons.cake_outlined),
                         ),
                         items: _ageGroups
@@ -256,7 +255,7 @@ class _AuthScreenState extends State<AuthScreen> {
                                       ? null
                                       : () => setState(() => _isOtpStep = false),
                                   icon: const Icon(Icons.edit, size: 14),
-                                  label: Text(tr('تعديل الرقم'),
+                                  label: Text('تعديل الرقم',
                                       style: TextStyle(fontSize: 12)),
                                 ),
                               ],
@@ -275,7 +274,7 @@ class _AuthScreenState extends State<AuthScreen> {
                               ),
                               decoration: InputDecoration(
                                 counterText: '',
-                                labelText: tr('رمز التحقق (OTP)'),
+                                labelText: 'رمز التحقق (OTP)',
                                 hintText: '••••••',
                                 prefixIcon: Icon(Icons.lock_clock_rounded),
                               ),
@@ -361,8 +360,8 @@ class _AuthScreenState extends State<AuthScreen> {
                               )
                             : Text(
                                 _isOtpStep
-                                    ? tr('تأكيد الرمز وبدء الرحلة 🚀')
-                                    : tr('إرسال رمز التحقق (OTP) 📲'),
+                                    ? 'تأكيد الرمز وبدء الرحلة 🚀'
+                                    : 'إرسال رمز التحقق (OTP) 📲',
                                 style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,

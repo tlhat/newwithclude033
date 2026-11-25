@@ -1,1713 +1,2742 @@
 [
-{
-"id": "c1",
-"type": "choice",
-"prompt": "أي واحد فيه ٣ تفاحات؟",
-"hints": [
-"عُد التفاح واحد واحد."
-],
-"correct": "برافو، ٣ تفاحات!",
-"wrong": "قريب، عُد تاني.",
-"data": {
-"options": [
-"🍎",
-"🍎🍎🍎",
-"🍎🍎🍎🍎🍎"
-],
-"correct": 1
-},
-"skill": "counting",
-"level": 1
-},
-{
-"id": "c2",
-"type": "choice",
-"prompt": "أي حيوان بيطير؟",
-"hints": [
-"بيطير بجناحاته في السما."
-],
-"data": {
-"options": [
-"🐟",
-"🐦",
-"🐢"
-],
-"correct": 1
-},
-"skill": "animals",
-"level": 1
-},
-{
-"id": "n1",
-"type": "number",
-"prompt": "٢ + ٣ = ؟",
-"hints": [
-"ابدأ من ٢ وعُد ٣ أرقام بعدها.",
-"٢، ٣، ٤، ٥"
-],
-"data": {
-"answer": 5
-},
-"skill": "addition",
-"level": 1
-},
-{
-"id": "n2",
-"type": "number",
-"prompt": "٩ - ٤ = ؟",
-"hints": [
-"شيل ٤ من ٩."
-],
-"data": {
-"answer": 5
-},
-"skill": "subtraction",
-"level": 2
-},
-{
-"id": "o1",
-"type": "ordering",
-"prompt": "رتّب الأرقام من الأصغر للأكبر",
-"hints": [
-"ابدأ بأصغر رقم."
-],
-"data": {
-"items": [
-"٣",
-"١",
-"٢"
-],
-"order": [
-"١",
-"٢",
-"٣"
-]
-},
-"skill": "numbers_order",
-"level": 1
-},
-{
-"id": "o2",
-"type": "ordering",
-"prompt": "رتّب اليوم: صحيان، فطار، مدرسة",
-"hints": [
-"إيه أول حاجة بتعملها الصبح؟"
-],
-"data": {
-"items": [
-"مدرسة",
-"صحيان",
-"فطار"
-],
-"order": [
-"صحيان",
-"فطار",
-"مدرسة"
-]
-},
-"skill": "daily_routine",
-"level": 2
-},
-{
-"id": "m1",
-"type": "matching",
-"prompt": "وصّل الحيوان بصوته",
-"hints": [
-"القطة بتقول مواء."
-],
-"data": {
-"left": [
-"🐱",
-"🐶",
-"🐮"
-],
-"right": [
-"هو هو",
-"مواء",
-"موو"
-],
-"pairs": {
-"🐱": "مواء",
-"🐶": "هو هو",
-"🐮": "موو"
-}
-},
-"skill": "animal_sounds",
-"level": 1
-},
-{
-"id": "k1",
-"type": "categorize",
-"prompt": "حط كل حاجة في مكانها",
-"hints": [
-"الفاكهة بناكلها، والعربية بنركبها."
-],
-"data": {
-"bins": [
-"فاكهة",
-"مواصلات"
-],
-"items": {
-"🍎": "فاكهة",
-"🍌": "فاكهة",
-"🚗": "مواصلات",
-"🚌": "مواصلات"
-}
-},
-"skill": "classify",
-"level": 2
-},
-{
-"id": "n3",
-"type": "number",
-"prompt": "٦ + ٧ = ؟",
-"hints": [
-"اجمع ٦ وكمّل عُد ٧.",
-"٦ + ٤ = ١٠ وفاضل ٣."
-],
-"skill": "addition",
-"level": 3,
-"data": {
-"answer": 13
-}
-},
-{
-"id": "n4",
-"type": "number",
-"prompt": "١٥ - ٨ = ؟",
-"hints": [
-"شيل ٨ من ١٥ على مرتين."
-],
-"skill": "subtraction",
-"level": 3,
-"data": {
-"answer": 7
-}
-},
-{
-"id": "o3",
-"type": "ordering",
-"prompt": "رتّب من الأكبر للأصغر",
-"hints": [
-"ابدأ بأكبر رقم."
-],
-"skill": "numbers_order",
-"level": 2,
-"data": {
-"items": [
-"٤",
-"٩",
-"٦",
-"٢"
-],
-"order": [
-"٩",
-"٦",
-"٤",
-"٢"
-]
-}
-},
-{
-"id": "c3",
-"type": "choice",
-"prompt": "أي رقم أكبر؟",
-"hints": [
-"قارن الرقمين."
-],
-"skill": "counting",
-"level": 2,
-"data": {
-"options": [
-"١٢",
-"٢١",
-"١٠"
-],
-"correct": 1
-}
-},
-{
-"id": "k2",
-"type": "categorize",
-"prompt": "حيوانات في البر والبحر",
-"hints": [
-"السمك بيعيش في الماء."
-],
-"skill": "classify",
-"level": 1,
-"data": {
-"bins": [
-"بر",
-"بحر"
-],
-"items": {
-"🐘": "بر",
-"🐟": "بحر",
-"🐪": "بر",
-"🐙": "بحر"
-}
-}
-},
-{
-"id": "m2",
-"type": "matching",
-"prompt": "وصّل الشكل باسمه",
-"hints": [
-"الدايرة مستديرة."
-],
-"skill": "shapes",
-"level": 1,
-"data": {
-"left": [
-"⚪",
-"🟦",
-"🔺"
-],
-"right": [
-"مثلث",
-"دايرة",
-"مربع"
-],
-"pairs": {
-"⚪": "دايرة",
-"🟦": "مربع",
-"🔺": "مثلث"
-}
-}
-},
-{
-"id": "add0",
-"type": "number",
-"prompt": "١ + ١ = ؟",
-"hints": [
-"عُد على صوابعك.",
-"ابدأ من ١ وكمّل عُد ١."
-],
-"skill": "addition",
-"level": 1,
-"data": {
-"answer": 2
-}
-},
-{
-"id": "add1",
-"type": "number",
-"prompt": "٢ + ١ = ؟",
-"hints": [
-"عُد على صوابعك.",
-"ابدأ من ٢ وكمّل عُد ١."
-],
-"skill": "addition",
-"level": 1,
-"data": {
-"answer": 3
-}
-},
-{
-"id": "add2",
-"type": "number",
-"prompt": "١ + ٣ = ؟",
-"hints": [
-"عُد على صوابعك.",
-"ابدأ من ٣ وكمّل عُد ١."
-],
-"skill": "addition",
-"level": 1,
-"data": {
-"answer": 4
-}
-},
-{
-"id": "add3",
-"type": "number",
-"prompt": "٣ + ٢ = ؟",
-"hints": [
-"عُد على صوابعك.",
-"ابدأ من ٣ وكمّل عُد ٢."
-],
-"skill": "addition",
-"level": 1,
-"data": {
-"answer": 5
-}
-},
-{
-"id": "add4",
-"type": "number",
-"prompt": "٤ + ١ = ؟",
-"hints": [
-"عُد على صوابعك.",
-"ابدأ من ٤ وكمّل عُد ١."
-],
-"skill": "addition",
-"level": 1,
-"data": {
-"answer": 5
-}
-},
-{
-"id": "add5",
-"type": "number",
-"prompt": "٢ + ٢ = ؟",
-"hints": [
-"عُد على صوابعك.",
-"ابدأ من ٢ وكمّل عُد ٢."
-],
-"skill": "addition",
-"level": 1,
-"data": {
-"answer": 4
-}
-},
-{
-"id": "add6",
-"type": "number",
-"prompt": "٥ + ٣ = ؟",
-"hints": [
-"عُد على صوابعك.",
-"ابدأ من ٥ وكمّل عُد ٣."
-],
-"skill": "addition",
-"level": 2,
-"data": {
-"answer": 8
-}
-},
-{
-"id": "add7",
-"type": "number",
-"prompt": "٦ + ٢ = ؟",
-"hints": [
-"عُد على صوابعك.",
-"ابدأ من ٦ وكمّل عُد ٢."
-],
-"skill": "addition",
-"level": 2,
-"data": {
-"answer": 8
-}
-},
-{
-"id": "add8",
-"type": "number",
-"prompt": "٤ + ٥ = ؟",
-"hints": [
-"عُد على صوابعك.",
-"ابدأ من ٥ وكمّل عُد ٤."
-],
-"skill": "addition",
-"level": 2,
-"data": {
-"answer": 9
-}
-},
-{
-"id": "add9",
-"type": "number",
-"prompt": "٧ + ٣ = ؟",
-"hints": [
-"عُد على صوابعك.",
-"ابدأ من ٧ وكمّل عُد ٣."
-],
-"skill": "addition",
-"level": 2,
-"data": {
-"answer": 10
-}
-},
-{
-"id": "add10",
-"type": "number",
-"prompt": "٨ + ٤ = ؟",
-"hints": [
-"عُد على صوابعك.",
-"ابدأ من ٨ وكمّل عُد ٤."
-],
-"skill": "addition",
-"level": 3,
-"data": {
-"answer": 12
-}
-},
-{
-"id": "add11",
-"type": "number",
-"prompt": "٩ + ٦ = ؟",
-"hints": [
-"عُد على صوابعك.",
-"ابدأ من ٩ وكمّل عُد ٦."
-],
-"skill": "addition",
-"level": 3,
-"data": {
-"answer": 15
-}
-},
-{
-"id": "add12",
-"type": "number",
-"prompt": "١٢ + ٥ = ؟",
-"hints": [
-"عُد على صوابعك.",
-"ابدأ من ١٢ وكمّل عُد ٥."
-],
-"skill": "addition",
-"level": 3,
-"data": {
-"answer": 17
-}
-},
-{
-"id": "add13",
-"type": "number",
-"prompt": "٨ + ٨ = ؟",
-"hints": [
-"عُد على صوابعك.",
-"ابدأ من ٨ وكمّل عُد ٨."
-],
-"skill": "addition",
-"level": 3,
-"data": {
-"answer": 16
-}
-},
-{
-"id": "add14",
-"type": "number",
-"prompt": "١٥ + ٤ = ؟",
-"hints": [
-"عُد على صوابعك.",
-"ابدأ من ١٥ وكمّل عُد ٤."
-],
-"skill": "addition",
-"level": 3,
-"data": {
-"answer": 19
-}
-},
-{
-"id": "sub0",
-"type": "number",
-"prompt": "٣ - ١ = ؟",
-"hints": [
-"شيل ١ من ٣.",
-"عُد لورا من الرقم الكبير."
-],
-"skill": "subtraction",
-"level": 1,
-"data": {
-"answer": 2
-}
-},
-{
-"id": "sub1",
-"type": "number",
-"prompt": "٤ - ٢ = ؟",
-"hints": [
-"شيل ٢ من ٤.",
-"عُد لورا من الرقم الكبير."
-],
-"skill": "subtraction",
-"level": 1,
-"data": {
-"answer": 2
-}
-},
-{
-"id": "sub2",
-"type": "number",
-"prompt": "٥ - ٣ = ؟",
-"hints": [
-"شيل ٣ من ٥.",
-"عُد لورا من الرقم الكبير."
-],
-"skill": "subtraction",
-"level": 1,
-"data": {
-"answer": 2
-}
-},
-{
-"id": "sub3",
-"type": "number",
-"prompt": "٦ - ١ = ؟",
-"hints": [
-"شيل ١ من ٦.",
-"عُد لورا من الرقم الكبير."
-],
-"skill": "subtraction",
-"level": 1,
-"data": {
-"answer": 5
-}
-},
-{
-"id": "sub4",
-"type": "number",
-"prompt": "٨ - ٣ = ؟",
-"hints": [
-"شيل ٣ من ٨.",
-"عُد لورا من الرقم الكبير."
-],
-"skill": "subtraction",
-"level": 2,
-"data": {
-"answer": 5
-}
-},
-{
-"id": "sub5",
-"type": "number",
-"prompt": "٩ - ٥ = ؟",
-"hints": [
-"شيل ٥ من ٩.",
-"عُد لورا من الرقم الكبير."
-],
-"skill": "subtraction",
-"level": 2,
-"data": {
-"answer": 4
-}
-},
-{
-"id": "sub6",
-"type": "number",
-"prompt": "١٠ - ٤ = ؟",
-"hints": [
-"شيل ٤ من ١٠.",
-"عُد لورا من الرقم الكبير."
-],
-"skill": "subtraction",
-"level": 2,
-"data": {
-"answer": 6
-}
-},
-{
-"id": "sub7",
-"type": "number",
-"prompt": "١٢ - ٧ = ؟",
-"hints": [
-"شيل ٧ من ١٢.",
-"عُد لورا من الرقم الكبير."
-],
-"skill": "subtraction",
-"level": 3,
-"data": {
-"answer": 5
-}
-},
-{
-"id": "sub8",
-"type": "number",
-"prompt": "١٥ - ٦ = ؟",
-"hints": [
-"شيل ٦ من ١٥.",
-"عُد لورا من الرقم الكبير."
-],
-"skill": "subtraction",
-"level": 3,
-"data": {
-"answer": 9
-}
-},
-{
-"id": "sub9",
-"type": "number",
-"prompt": "١٨ - ٩ = ؟",
-"hints": [
-"شيل ٩ من ١٨.",
-"عُد لورا من الرقم الكبير."
-],
-"skill": "subtraction",
-"level": 3,
-"data": {
-"answer": 9
-}
-},
-{
-"id": "sub10",
-"type": "number",
-"prompt": "٢٠ - ٥ = ؟",
-"hints": [
-"شيل ٥ من ٢٠.",
-"عُد لورا من الرقم الكبير."
-],
-"skill": "subtraction",
-"level": 3,
-"data": {
-"answer": 15
-}
-},
-{
-"id": "cnt0",
-"type": "choice",
-"prompt": "كام 🍎 في الصف ده؟  🍎",
-"hints": [
-"عُد واحد واحد وإنت بتشاور."
-],
-"skill": "counting",
-"level": 1,
-"data": {
-"options": [
-"٣",
-"١",
-"٢"
-],
-"correct": 1
-}
-},
-{
-"id": "cnt1",
-"type": "choice",
-"prompt": "كام ⭐ في الصف ده؟  ⭐⭐",
-"hints": [
-"عُد واحد واحد وإنت بتشاور."
-],
-"skill": "counting",
-"level": 1,
-"data": {
-"options": [
-"٣",
-"١",
-"٢"
-],
-"correct": 2
-}
-},
-{
-"id": "cnt2",
-"type": "choice",
-"prompt": "كام 🐟 في الصف ده؟  🐟🐟🐟",
-"hints": [
-"عُد واحد واحد وإنت بتشاور."
-],
-"skill": "counting",
-"level": 1,
-"data": {
-"options": [
-"٣",
-"٤",
-"٢"
-],
-"correct": 0
-}
-},
-{
-"id": "cnt3",
-"type": "choice",
-"prompt": "كام 🎈 في الصف ده؟  🎈🎈🎈🎈",
-"hints": [
-"عُد واحد واحد وإنت بتشاور."
-],
-"skill": "counting",
-"level": 1,
-"data": {
-"options": [
-"٥",
-"٣",
-"٤"
-],
-"correct": 2
-}
-},
-{
-"id": "cnt4",
-"type": "choice",
-"prompt": "كام 🐥 في الصف ده؟  🐥🐥🐥🐥🐥",
-"hints": [
-"عُد واحد واحد وإنت بتشاور."
-],
-"skill": "counting",
-"level": 2,
-"data": {
-"options": [
-"٥",
-"٤",
-"٦"
-],
-"correct": 0
-}
-},
-{
-"id": "cnt5",
-"type": "choice",
-"prompt": "كام 🚗 في الصف ده؟  🚗🚗🚗🚗🚗🚗",
-"hints": [
-"عُد واحد واحد وإنت بتشاور."
-],
-"skill": "counting",
-"level": 2,
-"data": {
-"options": [
-"٦",
-"٧",
-"٥"
-],
-"correct": 0
-}
-},
-{
-"id": "cnt6",
-"type": "choice",
-"prompt": "كام 🌸 في الصف ده؟  🌸🌸🌸🌸🌸🌸🌸",
-"hints": [
-"عُد واحد واحد وإنت بتشاور."
-],
-"skill": "counting",
-"level": 2,
-"data": {
-"options": [
-"٦",
-"٨",
-"٧"
-],
-"correct": 2
-}
-},
-{
-"id": "cnt7",
-"type": "choice",
-"prompt": "كام 🍌 في الصف ده؟  🍌🍌",
-"hints": [
-"عُد واحد واحد وإنت بتشاور."
-],
-"skill": "counting",
-"level": 1,
-"data": {
-"options": [
-"٢",
-"٣",
-"١"
-],
-"correct": 0
-}
-},
-{
-"id": "cnt8",
-"type": "choice",
-"prompt": "كام 🍎 في الصف ده؟  🍎🍎🍎",
-"hints": [
-"عُد واحد واحد وإنت بتشاور."
-],
-"skill": "counting",
-"level": 1,
-"data": {
-"options": [
-"٤",
-"٣",
-"٢"
-],
-"correct": 1
-}
-},
-{
-"id": "cnt9",
-"type": "choice",
-"prompt": "كام ⭐ في الصف ده؟  ⭐⭐⭐⭐",
-"hints": [
-"عُد واحد واحد وإنت بتشاور."
-],
-"skill": "counting",
-"level": 1,
-"data": {
-"options": [
-"٤",
-"٥",
-"٣"
-],
-"correct": 0
-}
-},
-{
-"id": "cmp0",
-"type": "choice",
-"prompt": "أي رقم أكبر؟",
-"hints": [
-"قارن الأرقام من الخانة الكبيرة."
-],
-"skill": "compare",
-"level": 1,
-"data": {
-"options": [
-"٣",
-"٨"
-],
-"correct": 1
-}
-},
-{
-"id": "cmp1",
-"type": "choice",
-"prompt": "أي رقم أكبر؟",
-"hints": [
-"قارن الأرقام من الخانة الكبيرة."
-],
-"skill": "compare",
-"level": 2,
-"data": {
-"options": [
-"١٢",
-"٩"
-],
-"correct": 0
-}
-},
-{
-"id": "cmp2",
-"type": "choice",
-"prompt": "أي رقم أكبر؟",
-"hints": [
-"قارن الأرقام من الخانة الكبيرة."
-],
-"skill": "compare",
-"level": 2,
-"data": {
-"options": [
-"٢٥",
-"٥٢"
-],
-"correct": 1
-}
-},
-{
-"id": "cmp3",
-"type": "choice",
-"prompt": "أي رقم أكبر؟",
-"hints": [
-"قارن الأرقام من الخانة الكبيرة."
-],
-"skill": "compare",
-"level": 2,
-"data": {
-"options": [
-"٤٧",
-"٧٤"
-],
-"correct": 1
-}
-},
-{
-"id": "cmp4",
-"type": "choice",
-"prompt": "أي رقم أكبر؟",
-"hints": [
-"قارن الأرقام من الخانة الكبيرة."
-],
-"skill": "compare",
-"level": 3,
-"data": {
-"options": [
-"١٠١",
-"١١٠"
-],
-"correct": 1
-}
-},
-{
-"id": "cmp5",
-"type": "choice",
-"prompt": "أي رقم أكبر؟",
-"hints": [
-"قارن الأرقام من الخانة الكبيرة."
-],
-"skill": "compare",
-"level": 2,
-"data": {
-"options": [
-"٣٦",
-"٦٣"
-],
-"correct": 1
-}
-},
-{
-"id": "ord0",
-"type": "ordering",
-"prompt": "رتّب من الأصغر للأكبر",
-"hints": [
-"دوّر على أصغر رقم الأول."
-],
-"skill": "numbers_order",
-"level": 1,
-"data": {
-"items": [
-"٢",
-"٥",
-"١"
-],
-"order": [
-"١",
-"٢",
-"٥"
-]
-}
-},
-{
-"id": "ord1",
-"type": "ordering",
-"prompt": "رتّب من الأصغر للأكبر",
-"hints": [
-"دوّر على أصغر رقم الأول."
-],
-"skill": "numbers_order",
-"level": 1,
-"data": {
-"items": [
-"٤",
-"٢",
-"٣"
-],
-"order": [
-"٢",
-"٣",
-"٤"
-]
-}
-},
-{
-"id": "ord2",
-"type": "ordering",
-"prompt": "رتّب من الأصغر للأكبر",
-"hints": [
-"دوّر على أصغر رقم الأول."
-],
-"skill": "numbers_order",
-"level": 2,
-"data": {
-"items": [
-"٧",
-"٣",
-"٥",
-"١"
-],
-"order": [
-"١",
-"٣",
-"٥",
-"٧"
-]
-}
-},
-{
-"id": "ord3",
-"type": "ordering",
-"prompt": "رتّب من الأصغر للأكبر",
-"hints": [
-"دوّر على أصغر رقم الأول."
-],
-"skill": "numbers_order",
-"level": 2,
-"data": {
-"items": [
-"٩",
-"٦",
-"٨",
-"٢"
-],
-"order": [
-"٢",
-"٦",
-"٨",
-"٩"
-]
-}
-},
-{
-"id": "ord4",
-"type": "ordering",
-"prompt": "رتّب من الأصغر للأكبر",
-"hints": [
-"دوّر على أصغر رقم الأول."
-],
-"skill": "numbers_order",
-"level": 3,
-"data": {
-"items": [
-"١٥",
-"٨",
-"٢١",
-"٣"
-],
-"order": [
-"٣",
-"٨",
-"١٥",
-"٢١"
-]
-}
-},
-{
-"id": "ord5",
-"type": "ordering",
-"prompt": "رتّب من الأصغر للأكبر",
-"hints": [
-"دوّر على أصغر رقم الأول."
-],
-"skill": "numbers_order",
-"level": 3,
-"data": {
-"items": [
-"٣٠",
-"١٢",
-"٢٥",
-"٧"
-],
-"order": [
-"٧",
-"١٢",
-"٢٥",
-"٣٠"
-]
-}
-},
-{
-"id": "rt0",
-"type": "ordering",
-"prompt": "رتّب الخطوات بالترتيب الصح",
-"hints": [
-"إيه اللي بتعمله الأول؟"
-],
-"skill": "daily_routine",
-"level": 1,
-"data": {
-"items": [
-"غسيل وش",
-"فطار",
-"صحيان"
-],
-"order": [
-"صحيان",
-"غسيل وش",
-"فطار"
-]
-}
-},
-{
-"id": "rt1",
-"type": "ordering",
-"prompt": "رتّب الخطوات بالترتيب الصح",
-"hints": [
-"إيه اللي بتعمله الأول؟"
-],
-"skill": "daily_routine",
-"level": 1,
-"data": {
-"items": [
-"روح المدرسة",
-"لبس الجزمة"
-],
-"order": [
-"لبس الجزمة",
-"روح المدرسة"
-]
-}
-},
-{
-"id": "rt2",
-"type": "ordering",
-"prompt": "رتّب الخطوات بالترتيب الصح",
-"hints": [
-"إيه اللي بتعمله الأول؟"
-],
-"skill": "daily_routine",
-"level": 2,
-"data": {
-"items": [
-"أكل",
-"غسيل سنان",
-"نوم",
-"غسيل إيدين"
-],
-"order": [
-"غسيل إيدين",
-"أكل",
-"غسيل سنان",
-"نوم"
-]
-}
-},
-{
-"id": "rt3",
-"type": "ordering",
-"prompt": "رتّب الخطوات بالترتيب الصح",
-"hints": [
-"إيه اللي بتعمله الأول؟"
-],
-"skill": "daily_routine",
-"level": 3,
-"data": {
-"items": [
-"واجب",
-"عشا",
-"نوم",
-"لعب"
-],
-"order": [
-"واجب",
-"لعب",
-"عشا",
-"نوم"
-]
-}
-},
-{
-"id": "cls0",
-"type": "categorize",
-"prompt": "حط كل حاجة في مكانها",
-"hints": [
-"فكّر: كل حاجة بتتبع أنهي مجموعة؟"
-],
-"skill": "classify",
-"level": 1,
-"data": {
-"bins": [
-"فاكهة",
-"خضار"
-],
-"items": {
-"🍎": "فاكهة",
-"🍌": "فاكهة",
-"🥕": "خضار",
-"🥦": "خضار"
-}
-}
-},
-{
-"id": "cls1",
-"type": "categorize",
-"prompt": "حط كل حاجة في مكانها",
-"hints": [
-"فكّر: كل حاجة بتتبع أنهي مجموعة؟"
-],
-"skill": "classify",
-"level": 1,
-"data": {
-"bins": [
-"حيوان",
-"نبات"
-],
-"items": {
-"🐱": "حيوان",
-"🐶": "حيوان",
-"🌹": "نبات",
-"🌳": "نبات"
-}
-}
-},
-{
-"id": "cls2",
-"type": "categorize",
-"prompt": "حط كل حاجة في مكانها",
-"hints": [
-"فكّر: كل حاجة بتتبع أنهي مجموعة؟"
-],
-"skill": "classify",
-"level": 2,
-"data": {
-"bins": [
-"بيطير",
-"بيمشي"
-],
-"items": {
-"🐦": "بيطير",
-"🦋": "بيطير",
-"🐘": "بيمشي",
-"🐪": "بيمشي"
-}
-}
-},
-{
-"id": "cls3",
-"type": "categorize",
-"prompt": "حط كل حاجة في مكانها",
-"hints": [
-"فكّر: كل حاجة بتتبع أنهي مجموعة؟"
-],
-"skill": "classify",
-"level": 2,
-"data": {
-"bins": [
-"حار",
-"بارد"
-],
-"items": {
-"☀️": "حار",
-"🔥": "حار",
-"❄️": "بارد",
-"🍦": "بارد"
-}
-}
-},
-{
-"id": "cls4",
-"type": "categorize",
-"prompt": "حط كل حاجة في مكانها",
-"hints": [
-"فكّر: كل حاجة بتتبع أنهي مجموعة؟"
-],
-"skill": "classify",
-"level": 1,
-"data": {
-"bins": [
-"أكل",
-"لبس"
-],
-"items": {
-"🍕": "أكل",
-"🍞": "أكل",
-"👕": "لبس",
-"👟": "لبس"
-}
-}
-},
-{
-"id": "cls5",
-"type": "categorize",
-"prompt": "حط كل حاجة في مكانها",
-"hints": [
-"فكّر: كل حاجة بتتبع أنهي مجموعة؟"
-],
-"skill": "classify",
-"level": 3,
-"data": {
-"bins": [
-"نهار",
-"ليل"
-],
-"items": {
-"🌞": "نهار",
-"🌙": "ليل",
-"⭐": "ليل",
-"🌈": "نهار"
-}
-}
-},
-{
-"id": "cls6",
-"type": "categorize",
-"prompt": "حط كل حاجة في مكانها",
-"hints": [
-"فكّر: كل حاجة بتتبع أنهي مجموعة؟"
-],
-"skill": "classify",
-"level": 3,
-"data": {
-"bins": [
-"مواصلات",
-"أدوات مدرسة"
-],
-"items": {
-"🚗": "مواصلات",
-"✈️": "مواصلات",
-"✏️": "أدوات مدرسة",
-"📚": "أدوات مدرسة"
-}
-}
-},
-{
-"id": "mt0",
-"type": "matching",
-"prompt": "وصّل الحيوان بصوته",
-"hints": [
-"ابدأ بالأسهل عندك."
-],
-"skill": "animal_sounds",
-"level": 1,
-"data": {
-"left": [
-"🐱",
-"🐶",
-"🐮"
-],
-"right": [
-"هو هو",
-"موو",
-"مواء"
-],
-"pairs": {
-"🐱": "مواء",
-"🐶": "هو هو",
-"🐮": "موو"
-}
-}
-},
-{
-"id": "mt1",
-"type": "matching",
-"prompt": "وصّل الصورة بالكلمة",
-"hints": [
-"ابدأ بالأسهل عندك."
-],
-"skill": "vocabulary",
-"level": 1,
-"data": {
-"left": [
-"🍎",
-"🐟",
-"🚗"
-],
-"right": [
-"تفاحة",
-"سمكة",
-"عربية"
-],
-"pairs": {
-"🍎": "تفاحة",
-"🐟": "سمكة",
-"🚗": "عربية"
-}
-}
-},
-{
-"id": "mt2",
-"type": "matching",
-"prompt": "وصّل الشكل باسمه",
-"hints": [
-"ابدأ بالأسهل عندك."
-],
-"skill": "shapes",
-"level": 1,
-"data": {
-"left": [
-"⚪",
-"🟦",
-"🔺"
-],
-"right": [
-"مربع",
-"دايرة",
-"مثلث"
-],
-"pairs": {
-"⚪": "دايرة",
-"🟦": "مربع",
-"🔺": "مثلث"
-}
-}
-},
-{
-"id": "mt3",
-"type": "matching",
-"prompt": "وصّل اللون باسمه",
-"hints": [
-"ابدأ بالأسهل عندك."
-],
-"skill": "colors",
-"level": 1,
-"data": {
-"left": [
-"🔴",
-"🟢",
-"🔵"
-],
-"right": [
-"أخضر",
-"أزرق",
-"أحمر"
-],
-"pairs": {
-"🔴": "أحمر",
-"🟢": "أخضر",
-"🔵": "أزرق"
-}
-}
-},
-{
-"id": "mt4",
-"type": "matching",
-"prompt": "وصّل الرقم بالعدد",
-"hints": [
-"ابدأ بالأسهل عندك."
-],
-"skill": "counting",
-"level": 2,
-"data": {
-"left": [
-"٢",
-"٣",
-"٤"
-],
-"right": [
-"🍎🍎🍎🍎",
-"🍎🍎",
-"🍎🍎🍎"
-],
-"pairs": {
-"٢": "🍎🍎",
-"٣": "🍎🍎🍎",
-"٤": "🍎🍎🍎🍎"
-}
-}
-},
-{
-"id": "mt5",
-"type": "matching",
-"prompt": "وصّل الحرف بالكلمة",
-"hints": [
-"ابدأ بالأسهل عندك."
-],
-"skill": "letters",
-"level": 2,
-"data": {
-"left": [
-"ب",
-"ق",
-"س"
-],
-"right": [
-"قطة",
-"بطة",
-"سمكة"
-],
-"pairs": {
-"ب": "بطة",
-"ق": "قطة",
-"س": "سمكة"
-}
-}
-},
-{
-"id": "mt6",
-"type": "matching",
-"prompt": "وصّل العكس",
-"hints": [
-"ابدأ بالأسهل عندك."
-],
-"skill": "opposites",
-"level": 3,
-"data": {
-"left": [
-"كبير",
-"طويل",
-"حار"
-],
-"right": [
-"قصير",
-"صغير",
-"بارد"
-],
-"pairs": {
-"كبير": "صغير",
-"طويل": "قصير",
-"حار": "بارد"
-}
-}
-},
-{
-"id": "ltr0",
-"type": "choice",
-"prompt": "أي كلمة بتبدأ بحرف (ب)؟",
-"hints": [
-"انطق الحرف ب وإنت بتقول كل كلمة."
-],
-"skill": "letters",
-"level": 1,
-"data": {
-"options": [
-"بطة",
-"قطة",
-"سمكة"
-],
-"correct": 0
-}
-},
-{
-"id": "ltr1",
-"type": "choice",
-"prompt": "أي كلمة بتبدأ بحرف (ق)؟",
-"hints": [
-"انطق الحرف ق وإنت بتقول كل كلمة."
-],
-"skill": "letters",
-"level": 1,
-"data": {
-"options": [
-"جمل",
-"قطة",
-"فيل"
-],
-"correct": 1
-}
-},
-{
-"id": "ltr2",
-"type": "choice",
-"prompt": "أي كلمة بتبدأ بحرف (س)؟",
-"hints": [
-"انطق الحرف س وإنت بتقول كل كلمة."
-],
-"skill": "letters",
-"level": 1,
-"data": {
-"options": [
-"سمكة",
-"بقرة",
-"نمر"
-],
-"correct": 0
-}
-},
-{
-"id": "ltr3",
-"type": "choice",
-"prompt": "أي كلمة بتبدأ بحرف (ج)؟",
-"hints": [
-"انطق الحرف ج وإنت بتقول كل كلمة."
-],
-"skill": "letters",
-"level": 2,
-"data": {
-"options": [
-"حصان",
-"جمل",
-"أسد"
-],
-"correct": 1
-}
-},
-{
-"id": "ltr4",
-"type": "choice",
-"prompt": "أي كلمة بتبدأ بحرف (ف)؟",
-"hints": [
-"انطق الحرف ف وإنت بتقول كل كلمة."
-],
-"skill": "letters",
-"level": 2,
-"data": {
-"options": [
-"فيل",
-"ذئب",
-"ثعلب"
-],
-"correct": 0
-}
-},
-{
-"id": "ltr5",
-"type": "choice",
-"prompt": "أي كلمة بتبدأ بحرف (ك)؟",
-"hints": [
-"انطق الحرف ك وإنت بتقول كل كلمة."
-],
-"skill": "letters",
-"level": 2,
-"data": {
-"options": [
-"قلم",
-"كتاب",
-"باب"
-],
-"correct": 1
-}
-},
-{
-"id": "ltr6",
-"type": "choice",
-"prompt": "أي كلمة بتبدأ بحرف (م)؟",
-"hints": [
-"انطق الحرف م وإنت بتقول كل كلمة."
-],
-"skill": "letters",
-"level": 3,
-"data": {
-"options": [
-"تفاحة",
-"موزة",
-"برتقالة"
-],
-"correct": 1
-}
-},
-{
-"id": "ltr7",
-"type": "choice",
-"prompt": "أي كلمة بتبدأ بحرف (ن)؟",
-"hints": [
-"انطق الحرف ن وإنت بتقول كل كلمة."
-],
-"skill": "letters",
-"level": 3,
-"data": {
-"options": [
-"نحلة",
-"ذبابة",
-"فراشة"
-],
-"correct": 0
-}
-},
-{
-"id": "pat0",
-"type": "choice",
-"prompt": "كمّل النمط: 🔴 🔵 🔴 🔵 🔴 ؟",
-"hints": [
-"اللي بيتكرر هو النمط."
-],
-"skill": "patterns",
-"level": 1,
-"data": {
-"options": [
-"🔴",
-"🔵",
-"🟢"
-],
-"correct": 1
-}
-},
-{
-"id": "pat1",
-"type": "choice",
-"prompt": "كمّل النمط: 🍎 🍌 🍎 🍌 🍎 ؟",
-"hints": [
-"اللي بيتكرر هو النمط."
-],
-"skill": "patterns",
-"level": 1,
-"data": {
-"options": [
-"🍎",
-"🍌",
-"🍇"
-],
-"correct": 1
-}
-},
-{
-"id": "pat2",
-"type": "choice",
-"prompt": "كمّل النمط: ⭐ ⭐ 🌙 ⭐ ⭐ 🌙 ⭐ ⭐ ؟",
-"hints": [
-"اللي بيتكرر هو النمط."
-],
-"skill": "patterns",
-"level": 2,
-"data": {
-"options": [
-"⭐",
-"🌙",
-"☀️"
-],
-"correct": 1
-}
-},
-{
-"id": "pat3",
-"type": "choice",
-"prompt": "كمّل النمط: 🔺 🟦 ⚪ 🔺 🟦 ؟",
-"hints": [
-"اللي بيتكرر هو النمط."
-],
-"skill": "patterns",
-"level": 3,
-"data": {
-"options": [
-"🔺",
-"🟦",
-"⚪"
-],
-"correct": 2
-}
-}
+ {
+  "id": "c1",
+  "type": "choice",
+  "prompt": "أي واحد فيه ٣ تفاحات؟",
+  "hints": [
+   "عُد التفاح واحد واحد."
+  ],
+  "correct": "برافو، ٣ تفاحات!",
+  "wrong": "قريب، عُد تاني.",
+  "data": {
+   "options": [
+    "🍎",
+    "🍎🍎🍎",
+    "🍎🍎🍎🍎🍎"
+   ],
+   "correct": 1
+  },
+  "skill": "counting",
+  "level": 1
+ },
+ {
+  "id": "c2",
+  "type": "choice",
+  "prompt": "أي حيوان بيطير؟",
+  "hints": [
+   "بيطير بجناحاته في السما."
+  ],
+  "data": {
+   "options": [
+    "🐟",
+    "🐦",
+    "🐢"
+   ],
+   "correct": 1
+  },
+  "skill": "animals",
+  "level": 1
+ },
+ {
+  "id": "n1",
+  "type": "number",
+  "prompt": "٢ + ٣ = ؟",
+  "hints": [
+   "ابدأ من ٢ وعُد ٣ أرقام بعدها.",
+   "٢، ٣، ٤، ٥"
+  ],
+  "data": {
+   "answer": 5
+  },
+  "skill": "addition",
+  "level": 1
+ },
+ {
+  "id": "n2",
+  "type": "number",
+  "prompt": "٩ - ٤ = ؟",
+  "hints": [
+   "شيل ٤ من ٩."
+  ],
+  "data": {
+   "answer": 5
+  },
+  "skill": "subtraction",
+  "level": 2
+ },
+ {
+  "id": "o1",
+  "type": "ordering",
+  "prompt": "رتّب الأرقام من الأصغر للأكبر",
+  "hints": [
+   "ابدأ بأصغر رقم."
+  ],
+  "data": {
+   "items": [
+    "٣",
+    "١",
+    "٢"
+   ],
+   "order": [
+    "١",
+    "٢",
+    "٣"
+   ]
+  },
+  "skill": "numbers_order",
+  "level": 1
+ },
+ {
+  "id": "o2",
+  "type": "ordering",
+  "prompt": "رتّب اليوم: صحيان، فطار، مدرسة",
+  "hints": [
+   "إيه أول حاجة بتعملها الصبح؟"
+  ],
+  "data": {
+   "items": [
+    "مدرسة",
+    "صحيان",
+    "فطار"
+   ],
+   "order": [
+    "صحيان",
+    "فطار",
+    "مدرسة"
+   ]
+  },
+  "skill": "daily_routine",
+  "level": 2
+ },
+ {
+  "id": "m1",
+  "type": "matching",
+  "prompt": "وصّل الحيوان بصوته",
+  "hints": [
+   "القطة بتقول مواء."
+  ],
+  "data": {
+   "left": [
+    "🐱",
+    "🐶",
+    "🐮"
+   ],
+   "right": [
+    "هو هو",
+    "مواء",
+    "موو"
+   ],
+   "pairs": {
+    "🐱": "مواء",
+    "🐶": "هو هو",
+    "🐮": "موو"
+   }
+  },
+  "skill": "animal_sounds",
+  "level": 1
+ },
+ {
+  "id": "k1",
+  "type": "categorize",
+  "prompt": "حط كل حاجة في مكانها",
+  "hints": [
+   "الفاكهة بناكلها، والعربية بنركبها."
+  ],
+  "data": {
+   "bins": [
+    "فاكهة",
+    "مواصلات"
+   ],
+   "items": {
+    "🍎": "فاكهة",
+    "🍌": "فاكهة",
+    "🚗": "مواصلات",
+    "🚌": "مواصلات"
+   }
+  },
+  "skill": "classify",
+  "level": 2
+ },
+ {
+  "id": "n3",
+  "type": "number",
+  "prompt": "٦ + ٧ = ؟",
+  "hints": [
+   "اجمع ٦ وكمّل عُد ٧.",
+   "٦ + ٤ = ١٠ وفاضل ٣."
+  ],
+  "skill": "addition",
+  "level": 3,
+  "data": {
+   "answer": 13
+  }
+ },
+ {
+  "id": "n4",
+  "type": "number",
+  "prompt": "١٥ - ٨ = ؟",
+  "hints": [
+   "شيل ٨ من ١٥ على مرتين."
+  ],
+  "skill": "subtraction",
+  "level": 3,
+  "data": {
+   "answer": 7
+  }
+ },
+ {
+  "id": "o3",
+  "type": "ordering",
+  "prompt": "رتّب من الأكبر للأصغر",
+  "hints": [
+   "ابدأ بأكبر رقم."
+  ],
+  "skill": "numbers_order",
+  "level": 2,
+  "data": {
+   "items": [
+    "٤",
+    "٩",
+    "٦",
+    "٢"
+   ],
+   "order": [
+    "٩",
+    "٦",
+    "٤",
+    "٢"
+   ]
+  }
+ },
+ {
+  "id": "c3",
+  "type": "choice",
+  "prompt": "أي رقم أكبر؟",
+  "hints": [
+   "قارن الرقمين."
+  ],
+  "skill": "counting",
+  "level": 2,
+  "data": {
+   "options": [
+    "١٢",
+    "٢١",
+    "١٠"
+   ],
+   "correct": 1
+  }
+ },
+ {
+  "id": "k2",
+  "type": "categorize",
+  "prompt": "حيوانات في البر والبحر",
+  "hints": [
+   "السمك بيعيش في الماء."
+  ],
+  "skill": "classify",
+  "level": 1,
+  "data": {
+   "bins": [
+    "بر",
+    "بحر"
+   ],
+   "items": {
+    "🐘": "بر",
+    "🐟": "بحر",
+    "🐪": "بر",
+    "🐙": "بحر"
+   }
+  }
+ },
+ {
+  "id": "m2",
+  "type": "matching",
+  "prompt": "وصّل الشكل باسمه",
+  "hints": [
+   "الدايرة مستديرة."
+  ],
+  "skill": "shapes",
+  "level": 1,
+  "data": {
+   "left": [
+    "⚪",
+    "🟦",
+    "🔺"
+   ],
+   "right": [
+    "مثلث",
+    "دايرة",
+    "مربع"
+   ],
+   "pairs": {
+    "⚪": "دايرة",
+    "🟦": "مربع",
+    "🔺": "مثلث"
+   }
+  }
+ },
+ {
+  "id": "add0",
+  "type": "number",
+  "prompt": "١ + ١ = ؟",
+  "hints": [
+   "عُد على صوابعك.",
+   "ابدأ من ١ وكمّل عُد ١."
+  ],
+  "skill": "addition",
+  "level": 1,
+  "data": {
+   "answer": 2
+  }
+ },
+ {
+  "id": "add1",
+  "type": "number",
+  "prompt": "٢ + ١ = ؟",
+  "hints": [
+   "عُد على صوابعك.",
+   "ابدأ من ٢ وكمّل عُد ١."
+  ],
+  "skill": "addition",
+  "level": 1,
+  "data": {
+   "answer": 3
+  }
+ },
+ {
+  "id": "add2",
+  "type": "number",
+  "prompt": "١ + ٣ = ؟",
+  "hints": [
+   "عُد على صوابعك.",
+   "ابدأ من ٣ وكمّل عُد ١."
+  ],
+  "skill": "addition",
+  "level": 1,
+  "data": {
+   "answer": 4
+  }
+ },
+ {
+  "id": "add3",
+  "type": "number",
+  "prompt": "٣ + ٢ = ؟",
+  "hints": [
+   "عُد على صوابعك.",
+   "ابدأ من ٣ وكمّل عُد ٢."
+  ],
+  "skill": "addition",
+  "level": 1,
+  "data": {
+   "answer": 5
+  }
+ },
+ {
+  "id": "add4",
+  "type": "number",
+  "prompt": "٤ + ١ = ؟",
+  "hints": [
+   "عُد على صوابعك.",
+   "ابدأ من ٤ وكمّل عُد ١."
+  ],
+  "skill": "addition",
+  "level": 1,
+  "data": {
+   "answer": 5
+  }
+ },
+ {
+  "id": "add5",
+  "type": "number",
+  "prompt": "٢ + ٢ = ؟",
+  "hints": [
+   "عُد على صوابعك.",
+   "ابدأ من ٢ وكمّل عُد ٢."
+  ],
+  "skill": "addition",
+  "level": 1,
+  "data": {
+   "answer": 4
+  }
+ },
+ {
+  "id": "add6",
+  "type": "number",
+  "prompt": "٥ + ٣ = ؟",
+  "hints": [
+   "عُد على صوابعك.",
+   "ابدأ من ٥ وكمّل عُد ٣."
+  ],
+  "skill": "addition",
+  "level": 2,
+  "data": {
+   "answer": 8
+  }
+ },
+ {
+  "id": "add7",
+  "type": "number",
+  "prompt": "٦ + ٢ = ؟",
+  "hints": [
+   "عُد على صوابعك.",
+   "ابدأ من ٦ وكمّل عُد ٢."
+  ],
+  "skill": "addition",
+  "level": 2,
+  "data": {
+   "answer": 8
+  }
+ },
+ {
+  "id": "add8",
+  "type": "number",
+  "prompt": "٤ + ٥ = ؟",
+  "hints": [
+   "عُد على صوابعك.",
+   "ابدأ من ٥ وكمّل عُد ٤."
+  ],
+  "skill": "addition",
+  "level": 2,
+  "data": {
+   "answer": 9
+  }
+ },
+ {
+  "id": "add9",
+  "type": "number",
+  "prompt": "٧ + ٣ = ؟",
+  "hints": [
+   "عُد على صوابعك.",
+   "ابدأ من ٧ وكمّل عُد ٣."
+  ],
+  "skill": "addition",
+  "level": 2,
+  "data": {
+   "answer": 10
+  }
+ },
+ {
+  "id": "add10",
+  "type": "number",
+  "prompt": "٨ + ٤ = ؟",
+  "hints": [
+   "عُد على صوابعك.",
+   "ابدأ من ٨ وكمّل عُد ٤."
+  ],
+  "skill": "addition",
+  "level": 3,
+  "data": {
+   "answer": 12
+  }
+ },
+ {
+  "id": "add11",
+  "type": "number",
+  "prompt": "٩ + ٦ = ؟",
+  "hints": [
+   "عُد على صوابعك.",
+   "ابدأ من ٩ وكمّل عُد ٦."
+  ],
+  "skill": "addition",
+  "level": 3,
+  "data": {
+   "answer": 15
+  }
+ },
+ {
+  "id": "add12",
+  "type": "number",
+  "prompt": "١٢ + ٥ = ؟",
+  "hints": [
+   "عُد على صوابعك.",
+   "ابدأ من ١٢ وكمّل عُد ٥."
+  ],
+  "skill": "addition",
+  "level": 3,
+  "data": {
+   "answer": 17
+  }
+ },
+ {
+  "id": "add13",
+  "type": "number",
+  "prompt": "٨ + ٨ = ؟",
+  "hints": [
+   "عُد على صوابعك.",
+   "ابدأ من ٨ وكمّل عُد ٨."
+  ],
+  "skill": "addition",
+  "level": 3,
+  "data": {
+   "answer": 16
+  }
+ },
+ {
+  "id": "add14",
+  "type": "number",
+  "prompt": "١٥ + ٤ = ؟",
+  "hints": [
+   "عُد على صوابعك.",
+   "ابدأ من ١٥ وكمّل عُد ٤."
+  ],
+  "skill": "addition",
+  "level": 3,
+  "data": {
+   "answer": 19
+  }
+ },
+ {
+  "id": "sub0",
+  "type": "number",
+  "prompt": "٣ - ١ = ؟",
+  "hints": [
+   "شيل ١ من ٣.",
+   "عُد لورا من الرقم الكبير."
+  ],
+  "skill": "subtraction",
+  "level": 1,
+  "data": {
+   "answer": 2
+  }
+ },
+ {
+  "id": "sub1",
+  "type": "number",
+  "prompt": "٤ - ٢ = ؟",
+  "hints": [
+   "شيل ٢ من ٤.",
+   "عُد لورا من الرقم الكبير."
+  ],
+  "skill": "subtraction",
+  "level": 1,
+  "data": {
+   "answer": 2
+  }
+ },
+ {
+  "id": "sub2",
+  "type": "number",
+  "prompt": "٥ - ٣ = ؟",
+  "hints": [
+   "شيل ٣ من ٥.",
+   "عُد لورا من الرقم الكبير."
+  ],
+  "skill": "subtraction",
+  "level": 1,
+  "data": {
+   "answer": 2
+  }
+ },
+ {
+  "id": "sub3",
+  "type": "number",
+  "prompt": "٦ - ١ = ؟",
+  "hints": [
+   "شيل ١ من ٦.",
+   "عُد لورا من الرقم الكبير."
+  ],
+  "skill": "subtraction",
+  "level": 1,
+  "data": {
+   "answer": 5
+  }
+ },
+ {
+  "id": "sub4",
+  "type": "number",
+  "prompt": "٨ - ٣ = ؟",
+  "hints": [
+   "شيل ٣ من ٨.",
+   "عُد لورا من الرقم الكبير."
+  ],
+  "skill": "subtraction",
+  "level": 2,
+  "data": {
+   "answer": 5
+  }
+ },
+ {
+  "id": "sub5",
+  "type": "number",
+  "prompt": "٩ - ٥ = ؟",
+  "hints": [
+   "شيل ٥ من ٩.",
+   "عُد لورا من الرقم الكبير."
+  ],
+  "skill": "subtraction",
+  "level": 2,
+  "data": {
+   "answer": 4
+  }
+ },
+ {
+  "id": "sub6",
+  "type": "number",
+  "prompt": "١٠ - ٤ = ؟",
+  "hints": [
+   "شيل ٤ من ١٠.",
+   "عُد لورا من الرقم الكبير."
+  ],
+  "skill": "subtraction",
+  "level": 2,
+  "data": {
+   "answer": 6
+  }
+ },
+ {
+  "id": "sub7",
+  "type": "number",
+  "prompt": "١٢ - ٧ = ؟",
+  "hints": [
+   "شيل ٧ من ١٢.",
+   "عُد لورا من الرقم الكبير."
+  ],
+  "skill": "subtraction",
+  "level": 3,
+  "data": {
+   "answer": 5
+  }
+ },
+ {
+  "id": "sub8",
+  "type": "number",
+  "prompt": "١٥ - ٦ = ؟",
+  "hints": [
+   "شيل ٦ من ١٥.",
+   "عُد لورا من الرقم الكبير."
+  ],
+  "skill": "subtraction",
+  "level": 3,
+  "data": {
+   "answer": 9
+  }
+ },
+ {
+  "id": "sub9",
+  "type": "number",
+  "prompt": "١٨ - ٩ = ؟",
+  "hints": [
+   "شيل ٩ من ١٨.",
+   "عُد لورا من الرقم الكبير."
+  ],
+  "skill": "subtraction",
+  "level": 3,
+  "data": {
+   "answer": 9
+  }
+ },
+ {
+  "id": "sub10",
+  "type": "number",
+  "prompt": "٢٠ - ٥ = ؟",
+  "hints": [
+   "شيل ٥ من ٢٠.",
+   "عُد لورا من الرقم الكبير."
+  ],
+  "skill": "subtraction",
+  "level": 3,
+  "data": {
+   "answer": 15
+  }
+ },
+ {
+  "id": "cnt0",
+  "type": "choice",
+  "prompt": "كام 🍎 في الصف ده؟  🍎",
+  "hints": [
+   "عُد واحد واحد وإنت بتشاور."
+  ],
+  "skill": "counting",
+  "level": 1,
+  "data": {
+   "options": [
+    "٣",
+    "١",
+    "٢"
+   ],
+   "correct": 1
+  }
+ },
+ {
+  "id": "cnt1",
+  "type": "choice",
+  "prompt": "كام ⭐ في الصف ده؟  ⭐⭐",
+  "hints": [
+   "عُد واحد واحد وإنت بتشاور."
+  ],
+  "skill": "counting",
+  "level": 1,
+  "data": {
+   "options": [
+    "٣",
+    "١",
+    "٢"
+   ],
+   "correct": 2
+  }
+ },
+ {
+  "id": "cnt2",
+  "type": "choice",
+  "prompt": "كام 🐟 في الصف ده؟  🐟🐟🐟",
+  "hints": [
+   "عُد واحد واحد وإنت بتشاور."
+  ],
+  "skill": "counting",
+  "level": 1,
+  "data": {
+   "options": [
+    "٣",
+    "٤",
+    "٢"
+   ],
+   "correct": 0
+  }
+ },
+ {
+  "id": "cnt3",
+  "type": "choice",
+  "prompt": "كام 🎈 في الصف ده؟  🎈🎈🎈🎈",
+  "hints": [
+   "عُد واحد واحد وإنت بتشاور."
+  ],
+  "skill": "counting",
+  "level": 1,
+  "data": {
+   "options": [
+    "٥",
+    "٣",
+    "٤"
+   ],
+   "correct": 2
+  }
+ },
+ {
+  "id": "cnt4",
+  "type": "choice",
+  "prompt": "كام 🐥 في الصف ده؟  🐥🐥🐥🐥🐥",
+  "hints": [
+   "عُد واحد واحد وإنت بتشاور."
+  ],
+  "skill": "counting",
+  "level": 2,
+  "data": {
+   "options": [
+    "٥",
+    "٤",
+    "٦"
+   ],
+   "correct": 0
+  }
+ },
+ {
+  "id": "cnt5",
+  "type": "choice",
+  "prompt": "كام 🚗 في الصف ده؟  🚗🚗🚗🚗🚗🚗",
+  "hints": [
+   "عُد واحد واحد وإنت بتشاور."
+  ],
+  "skill": "counting",
+  "level": 2,
+  "data": {
+   "options": [
+    "٦",
+    "٧",
+    "٥"
+   ],
+   "correct": 0
+  }
+ },
+ {
+  "id": "cnt6",
+  "type": "choice",
+  "prompt": "كام 🌸 في الصف ده؟  🌸🌸🌸🌸🌸🌸🌸",
+  "hints": [
+   "عُد واحد واحد وإنت بتشاور."
+  ],
+  "skill": "counting",
+  "level": 2,
+  "data": {
+   "options": [
+    "٦",
+    "٨",
+    "٧"
+   ],
+   "correct": 2
+  }
+ },
+ {
+  "id": "cnt7",
+  "type": "choice",
+  "prompt": "كام 🍌 في الصف ده؟  🍌🍌",
+  "hints": [
+   "عُد واحد واحد وإنت بتشاور."
+  ],
+  "skill": "counting",
+  "level": 1,
+  "data": {
+   "options": [
+    "٢",
+    "٣",
+    "١"
+   ],
+   "correct": 0
+  }
+ },
+ {
+  "id": "cnt8",
+  "type": "choice",
+  "prompt": "كام 🍎 في الصف ده؟  🍎🍎🍎",
+  "hints": [
+   "عُد واحد واحد وإنت بتشاور."
+  ],
+  "skill": "counting",
+  "level": 1,
+  "data": {
+   "options": [
+    "٤",
+    "٣",
+    "٢"
+   ],
+   "correct": 1
+  }
+ },
+ {
+  "id": "cnt9",
+  "type": "choice",
+  "prompt": "كام ⭐ في الصف ده؟  ⭐⭐⭐⭐",
+  "hints": [
+   "عُد واحد واحد وإنت بتشاور."
+  ],
+  "skill": "counting",
+  "level": 1,
+  "data": {
+   "options": [
+    "٤",
+    "٥",
+    "٣"
+   ],
+   "correct": 0
+  }
+ },
+ {
+  "id": "cmp0",
+  "type": "choice",
+  "prompt": "أي رقم أكبر؟",
+  "hints": [
+   "قارن الأرقام من الخانة الكبيرة."
+  ],
+  "skill": "compare",
+  "level": 1,
+  "data": {
+   "options": [
+    "٣",
+    "٨"
+   ],
+   "correct": 1
+  }
+ },
+ {
+  "id": "cmp1",
+  "type": "choice",
+  "prompt": "أي رقم أكبر؟",
+  "hints": [
+   "قارن الأرقام من الخانة الكبيرة."
+  ],
+  "skill": "compare",
+  "level": 2,
+  "data": {
+   "options": [
+    "١٢",
+    "٩"
+   ],
+   "correct": 0
+  }
+ },
+ {
+  "id": "cmp2",
+  "type": "choice",
+  "prompt": "أي رقم أكبر؟",
+  "hints": [
+   "قارن الأرقام من الخانة الكبيرة."
+  ],
+  "skill": "compare",
+  "level": 2,
+  "data": {
+   "options": [
+    "٢٥",
+    "٥٢"
+   ],
+   "correct": 1
+  }
+ },
+ {
+  "id": "cmp3",
+  "type": "choice",
+  "prompt": "أي رقم أكبر؟",
+  "hints": [
+   "قارن الأرقام من الخانة الكبيرة."
+  ],
+  "skill": "compare",
+  "level": 2,
+  "data": {
+   "options": [
+    "٤٧",
+    "٧٤"
+   ],
+   "correct": 1
+  }
+ },
+ {
+  "id": "cmp4",
+  "type": "choice",
+  "prompt": "أي رقم أكبر؟",
+  "hints": [
+   "قارن الأرقام من الخانة الكبيرة."
+  ],
+  "skill": "compare",
+  "level": 3,
+  "data": {
+   "options": [
+    "١٠١",
+    "١١٠"
+   ],
+   "correct": 1
+  }
+ },
+ {
+  "id": "cmp5",
+  "type": "choice",
+  "prompt": "أي رقم أكبر؟",
+  "hints": [
+   "قارن الأرقام من الخانة الكبيرة."
+  ],
+  "skill": "compare",
+  "level": 2,
+  "data": {
+   "options": [
+    "٣٦",
+    "٦٣"
+   ],
+   "correct": 1
+  }
+ },
+ {
+  "id": "ord0",
+  "type": "ordering",
+  "prompt": "رتّب من الأصغر للأكبر",
+  "hints": [
+   "دوّر على أصغر رقم الأول."
+  ],
+  "skill": "numbers_order",
+  "level": 1,
+  "data": {
+   "items": [
+    "٢",
+    "٥",
+    "١"
+   ],
+   "order": [
+    "١",
+    "٢",
+    "٥"
+   ]
+  }
+ },
+ {
+  "id": "ord1",
+  "type": "ordering",
+  "prompt": "رتّب من الأصغر للأكبر",
+  "hints": [
+   "دوّر على أصغر رقم الأول."
+  ],
+  "skill": "numbers_order",
+  "level": 1,
+  "data": {
+   "items": [
+    "٤",
+    "٢",
+    "٣"
+   ],
+   "order": [
+    "٢",
+    "٣",
+    "٤"
+   ]
+  }
+ },
+ {
+  "id": "ord2",
+  "type": "ordering",
+  "prompt": "رتّب من الأصغر للأكبر",
+  "hints": [
+   "دوّر على أصغر رقم الأول."
+  ],
+  "skill": "numbers_order",
+  "level": 2,
+  "data": {
+   "items": [
+    "٧",
+    "٣",
+    "٥",
+    "١"
+   ],
+   "order": [
+    "١",
+    "٣",
+    "٥",
+    "٧"
+   ]
+  }
+ },
+ {
+  "id": "ord3",
+  "type": "ordering",
+  "prompt": "رتّب من الأصغر للأكبر",
+  "hints": [
+   "دوّر على أصغر رقم الأول."
+  ],
+  "skill": "numbers_order",
+  "level": 2,
+  "data": {
+   "items": [
+    "٩",
+    "٦",
+    "٨",
+    "٢"
+   ],
+   "order": [
+    "٢",
+    "٦",
+    "٨",
+    "٩"
+   ]
+  }
+ },
+ {
+  "id": "ord4",
+  "type": "ordering",
+  "prompt": "رتّب من الأصغر للأكبر",
+  "hints": [
+   "دوّر على أصغر رقم الأول."
+  ],
+  "skill": "numbers_order",
+  "level": 3,
+  "data": {
+   "items": [
+    "١٥",
+    "٨",
+    "٢١",
+    "٣"
+   ],
+   "order": [
+    "٣",
+    "٨",
+    "١٥",
+    "٢١"
+   ]
+  }
+ },
+ {
+  "id": "ord5",
+  "type": "ordering",
+  "prompt": "رتّب من الأصغر للأكبر",
+  "hints": [
+   "دوّر على أصغر رقم الأول."
+  ],
+  "skill": "numbers_order",
+  "level": 3,
+  "data": {
+   "items": [
+    "٣٠",
+    "١٢",
+    "٢٥",
+    "٧"
+   ],
+   "order": [
+    "٧",
+    "١٢",
+    "٢٥",
+    "٣٠"
+   ]
+  }
+ },
+ {
+  "id": "rt0",
+  "type": "ordering",
+  "prompt": "رتّب الخطوات بالترتيب الصح",
+  "hints": [
+   "إيه اللي بتعمله الأول؟"
+  ],
+  "skill": "daily_routine",
+  "level": 1,
+  "data": {
+   "items": [
+    "غسيل وش",
+    "فطار",
+    "صحيان"
+   ],
+   "order": [
+    "صحيان",
+    "غسيل وش",
+    "فطار"
+   ]
+  }
+ },
+ {
+  "id": "rt1",
+  "type": "ordering",
+  "prompt": "رتّب الخطوات بالترتيب الصح",
+  "hints": [
+   "إيه اللي بتعمله الأول؟"
+  ],
+  "skill": "daily_routine",
+  "level": 1,
+  "data": {
+   "items": [
+    "روح المدرسة",
+    "لبس الجزمة"
+   ],
+   "order": [
+    "لبس الجزمة",
+    "روح المدرسة"
+   ]
+  }
+ },
+ {
+  "id": "rt2",
+  "type": "ordering",
+  "prompt": "رتّب الخطوات بالترتيب الصح",
+  "hints": [
+   "إيه اللي بتعمله الأول؟"
+  ],
+  "skill": "daily_routine",
+  "level": 2,
+  "data": {
+   "items": [
+    "أكل",
+    "غسيل سنان",
+    "نوم",
+    "غسيل إيدين"
+   ],
+   "order": [
+    "غسيل إيدين",
+    "أكل",
+    "غسيل سنان",
+    "نوم"
+   ]
+  }
+ },
+ {
+  "id": "rt3",
+  "type": "ordering",
+  "prompt": "رتّب الخطوات بالترتيب الصح",
+  "hints": [
+   "إيه اللي بتعمله الأول؟"
+  ],
+  "skill": "daily_routine",
+  "level": 3,
+  "data": {
+   "items": [
+    "واجب",
+    "عشا",
+    "نوم",
+    "لعب"
+   ],
+   "order": [
+    "واجب",
+    "لعب",
+    "عشا",
+    "نوم"
+   ]
+  }
+ },
+ {
+  "id": "cls0",
+  "type": "categorize",
+  "prompt": "حط كل حاجة في مكانها",
+  "hints": [
+   "فكّر: كل حاجة بتتبع أنهي مجموعة؟"
+  ],
+  "skill": "classify",
+  "level": 1,
+  "data": {
+   "bins": [
+    "فاكهة",
+    "خضار"
+   ],
+   "items": {
+    "🍎": "فاكهة",
+    "🍌": "فاكهة",
+    "🥕": "خضار",
+    "🥦": "خضار"
+   }
+  }
+ },
+ {
+  "id": "cls1",
+  "type": "categorize",
+  "prompt": "حط كل حاجة في مكانها",
+  "hints": [
+   "فكّر: كل حاجة بتتبع أنهي مجموعة؟"
+  ],
+  "skill": "classify",
+  "level": 1,
+  "data": {
+   "bins": [
+    "حيوان",
+    "نبات"
+   ],
+   "items": {
+    "🐱": "حيوان",
+    "🐶": "حيوان",
+    "🌹": "نبات",
+    "🌳": "نبات"
+   }
+  }
+ },
+ {
+  "id": "cls2",
+  "type": "categorize",
+  "prompt": "حط كل حاجة في مكانها",
+  "hints": [
+   "فكّر: كل حاجة بتتبع أنهي مجموعة؟"
+  ],
+  "skill": "classify",
+  "level": 2,
+  "data": {
+   "bins": [
+    "بيطير",
+    "بيمشي"
+   ],
+   "items": {
+    "🐦": "بيطير",
+    "🦋": "بيطير",
+    "🐘": "بيمشي",
+    "🐪": "بيمشي"
+   }
+  }
+ },
+ {
+  "id": "cls3",
+  "type": "categorize",
+  "prompt": "حط كل حاجة في مكانها",
+  "hints": [
+   "فكّر: كل حاجة بتتبع أنهي مجموعة؟"
+  ],
+  "skill": "classify",
+  "level": 2,
+  "data": {
+   "bins": [
+    "حار",
+    "بارد"
+   ],
+   "items": {
+    "☀️": "حار",
+    "🔥": "حار",
+    "❄️": "بارد",
+    "🍦": "بارد"
+   }
+  }
+ },
+ {
+  "id": "cls4",
+  "type": "categorize",
+  "prompt": "حط كل حاجة في مكانها",
+  "hints": [
+   "فكّر: كل حاجة بتتبع أنهي مجموعة؟"
+  ],
+  "skill": "classify",
+  "level": 1,
+  "data": {
+   "bins": [
+    "أكل",
+    "لبس"
+   ],
+   "items": {
+    "🍕": "أكل",
+    "🍞": "أكل",
+    "👕": "لبس",
+    "👟": "لبس"
+   }
+  }
+ },
+ {
+  "id": "cls5",
+  "type": "categorize",
+  "prompt": "حط كل حاجة في مكانها",
+  "hints": [
+   "فكّر: كل حاجة بتتبع أنهي مجموعة؟"
+  ],
+  "skill": "classify",
+  "level": 3,
+  "data": {
+   "bins": [
+    "نهار",
+    "ليل"
+   ],
+   "items": {
+    "🌞": "نهار",
+    "🌙": "ليل",
+    "⭐": "ليل",
+    "🌈": "نهار"
+   }
+  }
+ },
+ {
+  "id": "cls6",
+  "type": "categorize",
+  "prompt": "حط كل حاجة في مكانها",
+  "hints": [
+   "فكّر: كل حاجة بتتبع أنهي مجموعة؟"
+  ],
+  "skill": "classify",
+  "level": 3,
+  "data": {
+   "bins": [
+    "مواصلات",
+    "أدوات مدرسة"
+   ],
+   "items": {
+    "🚗": "مواصلات",
+    "✈️": "مواصلات",
+    "✏️": "أدوات مدرسة",
+    "📚": "أدوات مدرسة"
+   }
+  }
+ },
+ {
+  "id": "mt0",
+  "type": "matching",
+  "prompt": "وصّل الحيوان بصوته",
+  "hints": [
+   "ابدأ بالأسهل عندك."
+  ],
+  "skill": "animal_sounds",
+  "level": 1,
+  "data": {
+   "left": [
+    "🐱",
+    "🐶",
+    "🐮"
+   ],
+   "right": [
+    "هو هو",
+    "موو",
+    "مواء"
+   ],
+   "pairs": {
+    "🐱": "مواء",
+    "🐶": "هو هو",
+    "🐮": "موو"
+   }
+  }
+ },
+ {
+  "id": "mt1",
+  "type": "matching",
+  "prompt": "وصّل الصورة بالكلمة",
+  "hints": [
+   "ابدأ بالأسهل عندك."
+  ],
+  "skill": "vocabulary",
+  "level": 1,
+  "data": {
+   "left": [
+    "🍎",
+    "🐟",
+    "🚗"
+   ],
+   "right": [
+    "تفاحة",
+    "سمكة",
+    "عربية"
+   ],
+   "pairs": {
+    "🍎": "تفاحة",
+    "🐟": "سمكة",
+    "🚗": "عربية"
+   }
+  }
+ },
+ {
+  "id": "mt2",
+  "type": "matching",
+  "prompt": "وصّل الشكل باسمه",
+  "hints": [
+   "ابدأ بالأسهل عندك."
+  ],
+  "skill": "shapes",
+  "level": 1,
+  "data": {
+   "left": [
+    "⚪",
+    "🟦",
+    "🔺"
+   ],
+   "right": [
+    "مربع",
+    "دايرة",
+    "مثلث"
+   ],
+   "pairs": {
+    "⚪": "دايرة",
+    "🟦": "مربع",
+    "🔺": "مثلث"
+   }
+  }
+ },
+ {
+  "id": "mt3",
+  "type": "matching",
+  "prompt": "وصّل اللون باسمه",
+  "hints": [
+   "ابدأ بالأسهل عندك."
+  ],
+  "skill": "colors",
+  "level": 1,
+  "data": {
+   "left": [
+    "🔴",
+    "🟢",
+    "🔵"
+   ],
+   "right": [
+    "أخضر",
+    "أزرق",
+    "أحمر"
+   ],
+   "pairs": {
+    "🔴": "أحمر",
+    "🟢": "أخضر",
+    "🔵": "أزرق"
+   }
+  }
+ },
+ {
+  "id": "mt4",
+  "type": "matching",
+  "prompt": "وصّل الرقم بالعدد",
+  "hints": [
+   "ابدأ بالأسهل عندك."
+  ],
+  "skill": "counting",
+  "level": 2,
+  "data": {
+   "left": [
+    "٢",
+    "٣",
+    "٤"
+   ],
+   "right": [
+    "🍎🍎🍎🍎",
+    "🍎🍎",
+    "🍎🍎🍎"
+   ],
+   "pairs": {
+    "٢": "🍎🍎",
+    "٣": "🍎🍎🍎",
+    "٤": "🍎🍎🍎🍎"
+   }
+  }
+ },
+ {
+  "id": "mt5",
+  "type": "matching",
+  "prompt": "وصّل الحرف بالكلمة",
+  "hints": [
+   "ابدأ بالأسهل عندك."
+  ],
+  "skill": "letters",
+  "level": 2,
+  "data": {
+   "left": [
+    "ب",
+    "ق",
+    "س"
+   ],
+   "right": [
+    "قطة",
+    "بطة",
+    "سمكة"
+   ],
+   "pairs": {
+    "ب": "بطة",
+    "ق": "قطة",
+    "س": "سمكة"
+   }
+  }
+ },
+ {
+  "id": "mt6",
+  "type": "matching",
+  "prompt": "وصّل العكس",
+  "hints": [
+   "ابدأ بالأسهل عندك."
+  ],
+  "skill": "opposites",
+  "level": 3,
+  "data": {
+   "left": [
+    "كبير",
+    "طويل",
+    "حار"
+   ],
+   "right": [
+    "قصير",
+    "صغير",
+    "بارد"
+   ],
+   "pairs": {
+    "كبير": "صغير",
+    "طويل": "قصير",
+    "حار": "بارد"
+   }
+  }
+ },
+ {
+  "id": "ltr0",
+  "type": "choice",
+  "prompt": "أي كلمة بتبدأ بحرف (ب)؟",
+  "hints": [
+   "انطق الحرف ب وإنت بتقول كل كلمة."
+  ],
+  "skill": "letters",
+  "level": 1,
+  "data": {
+   "options": [
+    "بطة",
+    "قطة",
+    "سمكة"
+   ],
+   "correct": 0
+  }
+ },
+ {
+  "id": "ltr1",
+  "type": "choice",
+  "prompt": "أي كلمة بتبدأ بحرف (ق)؟",
+  "hints": [
+   "انطق الحرف ق وإنت بتقول كل كلمة."
+  ],
+  "skill": "letters",
+  "level": 1,
+  "data": {
+   "options": [
+    "جمل",
+    "قطة",
+    "فيل"
+   ],
+   "correct": 1
+  }
+ },
+ {
+  "id": "ltr2",
+  "type": "choice",
+  "prompt": "أي كلمة بتبدأ بحرف (س)؟",
+  "hints": [
+   "انطق الحرف س وإنت بتقول كل كلمة."
+  ],
+  "skill": "letters",
+  "level": 1,
+  "data": {
+   "options": [
+    "سمكة",
+    "بقرة",
+    "نمر"
+   ],
+   "correct": 0
+  }
+ },
+ {
+  "id": "ltr3",
+  "type": "choice",
+  "prompt": "أي كلمة بتبدأ بحرف (ج)؟",
+  "hints": [
+   "انطق الحرف ج وإنت بتقول كل كلمة."
+  ],
+  "skill": "letters",
+  "level": 2,
+  "data": {
+   "options": [
+    "حصان",
+    "جمل",
+    "أسد"
+   ],
+   "correct": 1
+  }
+ },
+ {
+  "id": "ltr4",
+  "type": "choice",
+  "prompt": "أي كلمة بتبدأ بحرف (ف)؟",
+  "hints": [
+   "انطق الحرف ف وإنت بتقول كل كلمة."
+  ],
+  "skill": "letters",
+  "level": 2,
+  "data": {
+   "options": [
+    "فيل",
+    "ذئب",
+    "ثعلب"
+   ],
+   "correct": 0
+  }
+ },
+ {
+  "id": "ltr5",
+  "type": "choice",
+  "prompt": "أي كلمة بتبدأ بحرف (ك)؟",
+  "hints": [
+   "انطق الحرف ك وإنت بتقول كل كلمة."
+  ],
+  "skill": "letters",
+  "level": 2,
+  "data": {
+   "options": [
+    "قلم",
+    "كتاب",
+    "باب"
+   ],
+   "correct": 1
+  }
+ },
+ {
+  "id": "ltr6",
+  "type": "choice",
+  "prompt": "أي كلمة بتبدأ بحرف (م)؟",
+  "hints": [
+   "انطق الحرف م وإنت بتقول كل كلمة."
+  ],
+  "skill": "letters",
+  "level": 3,
+  "data": {
+   "options": [
+    "تفاحة",
+    "موزة",
+    "برتقالة"
+   ],
+   "correct": 1
+  }
+ },
+ {
+  "id": "ltr7",
+  "type": "choice",
+  "prompt": "أي كلمة بتبدأ بحرف (ن)؟",
+  "hints": [
+   "انطق الحرف ن وإنت بتقول كل كلمة."
+  ],
+  "skill": "letters",
+  "level": 3,
+  "data": {
+   "options": [
+    "نحلة",
+    "ذبابة",
+    "فراشة"
+   ],
+   "correct": 0
+  }
+ },
+ {
+  "id": "pat0",
+  "type": "choice",
+  "prompt": "كمّل النمط: 🔴 🔵 🔴 🔵 🔴 ؟",
+  "hints": [
+   "اللي بيتكرر هو النمط."
+  ],
+  "skill": "patterns",
+  "level": 1,
+  "data": {
+   "options": [
+    "🔴",
+    "🔵",
+    "🟢"
+   ],
+   "correct": 1
+  }
+ },
+ {
+  "id": "pat1",
+  "type": "choice",
+  "prompt": "كمّل النمط: 🍎 🍌 🍎 🍌 🍎 ؟",
+  "hints": [
+   "اللي بيتكرر هو النمط."
+  ],
+  "skill": "patterns",
+  "level": 1,
+  "data": {
+   "options": [
+    "🍎",
+    "🍌",
+    "🍇"
+   ],
+   "correct": 1
+  }
+ },
+ {
+  "id": "pat2",
+  "type": "choice",
+  "prompt": "كمّل النمط: ⭐ ⭐ 🌙 ⭐ ⭐ 🌙 ⭐ ⭐ ؟",
+  "hints": [
+   "اللي بيتكرر هو النمط."
+  ],
+  "skill": "patterns",
+  "level": 2,
+  "data": {
+   "options": [
+    "⭐",
+    "🌙",
+    "☀️"
+   ],
+   "correct": 1
+  }
+ },
+ {
+  "id": "pat3",
+  "type": "choice",
+  "prompt": "كمّل النمط: 🔺 🟦 ⚪ 🔺 🟦 ؟",
+  "hints": [
+   "اللي بيتكرر هو النمط."
+  ],
+  "skill": "patterns",
+  "level": 3,
+  "data": {
+   "options": [
+    "🔺",
+    "🟦",
+    "⚪"
+   ],
+   "correct": 2
+  }
+ },
+ {
+  "id": "nl0",
+  "type": "numberline",
+  "prompt": "حرّك النقطة على الرقم 3",
+  "hints": [
+   "ابدأ من الصفر وعدّ للأمام.",
+   "الرقم 3 قبل 4 وبعد 2."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "min": 0,
+   "max": 5,
+   "answer": 3
+  },
+  "skill": "number_line",
+  "level": 1,
+  "explain": "العدد 3 مكانه على خط الأعداد بعد 2 وقبل 4."
+ },
+ {
+  "id": "nl1",
+  "type": "numberline",
+  "prompt": "حرّك النقطة على الرقم 5",
+  "hints": [
+   "ابدأ من الصفر وعدّ للأمام.",
+   "الرقم 5 قبل 6 وبعد 4."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "min": 0,
+   "max": 10,
+   "answer": 5
+  },
+  "skill": "number_line",
+  "level": 1,
+  "explain": "العدد 5 مكانه على خط الأعداد بعد 4 وقبل 6."
+ },
+ {
+  "id": "nl2",
+  "type": "numberline",
+  "prompt": "حرّك النقطة على الرقم 7",
+  "hints": [
+   "ابدأ من الصفر وعدّ للأمام.",
+   "الرقم 7 قبل 8 وبعد 6."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "min": 0,
+   "max": 10,
+   "answer": 7
+  },
+  "skill": "number_line",
+  "level": 1,
+  "explain": "العدد 7 مكانه على خط الأعداد بعد 6 وقبل 8."
+ },
+ {
+  "id": "nl3",
+  "type": "numberline",
+  "prompt": "حرّك النقطة على الرقم 8",
+  "hints": [
+   "ابدأ من الصفر وعدّ للأمام.",
+   "الرقم 8 قبل 9 وبعد 7."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "min": 0,
+   "max": 10,
+   "answer": 8
+  },
+  "skill": "number_line",
+  "level": 2,
+  "explain": "العدد 8 مكانه على خط الأعداد بعد 7 وقبل 9."
+ },
+ {
+  "id": "nl4",
+  "type": "numberline",
+  "prompt": "حرّك النقطة على الرقم 2",
+  "hints": [
+   "ابدأ من الصفر وعدّ للأمام.",
+   "الرقم 2 قبل 3 وبعد 1."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "min": 0,
+   "max": 10,
+   "answer": 2
+  },
+  "skill": "number_line",
+  "level": 2,
+  "explain": "العدد 2 مكانه على خط الأعداد بعد 1 وقبل 3."
+ },
+ {
+  "id": "nl5",
+  "type": "numberline",
+  "prompt": "حرّك النقطة على الرقم 12",
+  "hints": [
+   "ابدأ من الصفر وعدّ للأمام.",
+   "الرقم 12 قبل 13 وبعد 11."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "min": 0,
+   "max": 20,
+   "answer": 12
+  },
+  "skill": "number_line",
+  "level": 2,
+  "explain": "العدد 12 مكانه على خط الأعداد بعد 11 وقبل 13."
+ },
+ {
+  "id": "nl6",
+  "type": "numberline",
+  "prompt": "حرّك النقطة على الرقم 15",
+  "hints": [
+   "ابدأ من الصفر وعدّ للأمام.",
+   "الرقم 15 قبل 16 وبعد 14."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "min": 0,
+   "max": 20,
+   "answer": 15
+  },
+  "skill": "number_line",
+  "level": 3,
+  "explain": "العدد 15 مكانه على خط الأعداد بعد 14 وقبل 16."
+ },
+ {
+  "id": "nl7",
+  "type": "numberline",
+  "prompt": "حرّك النقطة على الرقم 17",
+  "hints": [
+   "ابدأ من الصفر وعدّ للأمام.",
+   "الرقم 17 قبل 18 وبعد 16."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "min": 0,
+   "max": 20,
+   "answer": 17
+  },
+  "skill": "number_line",
+  "level": 3,
+  "explain": "العدد 17 مكانه على خط الأعداد بعد 16 وقبل 18."
+ },
+ {
+  "id": "nl8",
+  "type": "numberline",
+  "prompt": "حرّك النقطة على الرقم 9",
+  "hints": [
+   "ابدأ من الصفر وعدّ للأمام.",
+   "الرقم 9 قبل 10 وبعد 8."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "min": 0,
+   "max": 20,
+   "answer": 9
+  },
+  "skill": "number_line",
+  "level": 3,
+  "explain": "العدد 9 مكانه على خط الأعداد بعد 8 وقبل 10."
+ },
+ {
+  "id": "fb0",
+  "type": "blank",
+  "prompt": "اختر الكلمة المناسبة للجملة",
+  "hints": [
+   "اقرأ الجملة بصوت واضح وجرّب كل كلمة.",
+   "فكّر: أي كلمة تخلي الجملة صح؟"
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "sentence": "الشمس تطلع في ___",
+   "options": [
+    "الصباح",
+    "الليل"
+   ],
+   "correct": 0
+  },
+  "skill": "fill_blank",
+  "level": 1,
+  "explain": "الشمس بتظهر الصبح."
+ },
+ {
+  "id": "fb1",
+  "type": "blank",
+  "prompt": "اختر الكلمة المناسبة للجملة",
+  "hints": [
+   "اقرأ الجملة بصوت واضح وجرّب كل كلمة.",
+   "فكّر: أي كلمة تخلي الجملة صح؟"
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "sentence": "نغسل أيدينا قبل ___",
+   "options": [
+    "الأكل",
+    "النوم"
+   ],
+   "correct": 0
+  },
+  "skill": "fill_blank",
+  "level": 1,
+  "explain": "بنغسل إيدينا قبل الأكل عشان نبقى نضاف."
+ },
+ {
+  "id": "fb2",
+  "type": "blank",
+  "prompt": "اختر الكلمة المناسبة للجملة",
+  "hints": [
+   "اقرأ الجملة بصوت واضح وجرّب كل كلمة.",
+   "فكّر: أي كلمة تخلي الجملة صح؟"
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "sentence": "القطة تقول ___",
+   "options": [
+    "مواء",
+    "نباح"
+   ],
+   "correct": 0
+  },
+  "skill": "fill_blank",
+  "level": 1,
+  "explain": "القطة بتموء والكلب بينبح."
+ },
+ {
+  "id": "fb3",
+  "type": "blank",
+  "prompt": "اختر الكلمة المناسبة للجملة",
+  "hints": [
+   "اقرأ الجملة بصوت واضح وجرّب كل كلمة.",
+   "فكّر: أي كلمة تخلي الجملة صح؟"
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "sentence": "نلبس الجاكيت في الجو ___",
+   "options": [
+    "البارد",
+    "الحار",
+    "الجميل"
+   ],
+   "correct": 0
+  },
+  "skill": "fill_blank",
+  "level": 2,
+  "explain": "الجاكيت للجو البارد."
+ },
+ {
+  "id": "fb4",
+  "type": "blank",
+  "prompt": "اختر الكلمة المناسبة للجملة",
+  "hints": [
+   "اقرأ الجملة بصوت واضح وجرّب كل كلمة.",
+   "فكّر: أي كلمة تخلي الجملة صح؟"
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "sentence": "السمكة تعيش في ___",
+   "options": [
+    "الماء",
+    "الشجرة",
+    "الرمال"
+   ],
+   "correct": 0
+  },
+  "skill": "fill_blank",
+  "level": 2,
+  "explain": "السمك بيعيش في الماية."
+ },
+ {
+  "id": "fb5",
+  "type": "blank",
+  "prompt": "اختر الكلمة المناسبة للجملة",
+  "hints": [
+   "اقرأ الجملة بصوت واضح وجرّب كل كلمة.",
+   "فكّر: أي كلمة تخلي الجملة صح؟"
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "sentence": "نقول ___ لما حد يساعدنا",
+   "options": [
+    "شكراً",
+    "آسف",
+    "مع السلامة"
+   ],
+   "correct": 0
+  },
+  "skill": "fill_blank",
+  "level": 2,
+  "explain": "بنقول شكراً لما حد يساعدنا."
+ },
+ {
+  "id": "fb6",
+  "type": "blank",
+  "prompt": "اختر الكلمة المناسبة للجملة",
+  "hints": [
+   "اقرأ الجملة بصوت واضح وجرّب كل كلمة.",
+   "فكّر: أي كلمة تخلي الجملة صح؟"
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "sentence": "الأسبوع فيه ___ أيام",
+   "options": [
+    "سبعة",
+    "خمسة",
+    "عشرة"
+   ],
+   "correct": 0
+  },
+  "skill": "fill_blank",
+  "level": 3,
+  "explain": "الأسبوع سبعة أيام."
+ },
+ {
+  "id": "fb7",
+  "type": "blank",
+  "prompt": "اختر الكلمة المناسبة للجملة",
+  "hints": [
+   "اقرأ الجملة بصوت واضح وجرّب كل كلمة.",
+   "فكّر: أي كلمة تخلي الجملة صح؟"
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "sentence": "إذا أخطأت أقول ___ بصدق",
+   "options": [
+    "آسف",
+    "شكراً",
+    "أهلاً"
+   ],
+   "correct": 0
+  },
+  "skill": "fill_blank",
+  "level": 3,
+  "explain": "لما نغلط بنعتذر."
+ },
+ {
+  "id": "fb8",
+  "type": "blank",
+  "prompt": "اختر الكلمة المناسبة للجملة",
+  "hints": [
+   "اقرأ الجملة بصوت واضح وجرّب كل كلمة.",
+   "فكّر: أي كلمة تخلي الجملة صح؟"
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "sentence": "الطائرة تطير في ___",
+   "options": [
+    "السماء",
+    "البحر",
+    "الأرض"
+   ],
+   "correct": 0
+  },
+  "skill": "fill_blank",
+  "level": 3,
+  "explain": "الطيارة بتطير في السما."
+ },
+ {
+  "id": "ms0",
+  "type": "multi",
+  "prompt": "اختر كل الفواكه (فيه أكتر من إجابة)",
+  "hints": [
+   "فيه أكتر من إجابة صحيحة، دوس على كل واحدة.",
+   "راجع كل اختيار لوحده."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "options": [
+    "🍎",
+    "🚗",
+    "🍌",
+    "⚽"
+   ],
+   "correct": [
+    0,
+    2
+   ]
+  },
+  "skill": "multi_select",
+  "level": 1
+ },
+ {
+  "id": "ms1",
+  "type": "multi",
+  "prompt": "اختر كل الحيوانات (فيه أكتر من إجابة)",
+  "hints": [
+   "فيه أكتر من إجابة صحيحة، دوس على كل واحدة.",
+   "راجع كل اختيار لوحده."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "options": [
+    "🐱",
+    "🌳",
+    "🐶",
+    "🏠"
+   ],
+   "correct": [
+    0,
+    2
+   ]
+  },
+  "skill": "multi_select",
+  "level": 1
+ },
+ {
+  "id": "ms2",
+  "type": "multi",
+  "prompt": "اختر كل ما يطير (فيه أكتر من إجابة)",
+  "hints": [
+   "فيه أكتر من إجابة صحيحة، دوس على كل واحدة.",
+   "راجع كل اختيار لوحده."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "options": [
+    "🐦",
+    "🚗",
+    "✈️",
+    "🐟"
+   ],
+   "correct": [
+    0,
+    2
+   ]
+  },
+  "skill": "multi_select",
+  "level": 1
+ },
+ {
+  "id": "ms3",
+  "type": "multi",
+  "prompt": "اختر كل الأرقام الزوجية (فيه أكتر من إجابة)",
+  "hints": [
+   "فيه أكتر من إجابة صحيحة، دوس على كل واحدة.",
+   "راجع كل اختيار لوحده."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "correct": [
+    0,
+    2
+   ]
+  },
+  "skill": "multi_select",
+  "level": 2
+ },
+ {
+  "id": "ms4",
+  "type": "multi",
+  "prompt": "اختر كل ما نلبسه (فيه أكتر من إجابة)",
+  "hints": [
+   "فيه أكتر من إجابة صحيحة، دوس على كل واحدة.",
+   "راجع كل اختيار لوحده."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "options": [
+    "👕",
+    "🍕",
+    "👟",
+    "📚"
+   ],
+   "correct": [
+    0,
+    2
+   ]
+  },
+  "skill": "multi_select",
+  "level": 2
+ },
+ {
+  "id": "ms5",
+  "type": "multi",
+  "prompt": "اختر كل ما يعيش في الماء (فيه أكتر من إجابة)",
+  "hints": [
+   "فيه أكتر من إجابة صحيحة، دوس على كل واحدة.",
+   "راجع كل اختيار لوحده."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "options": [
+    "🐟",
+    "🐬",
+    "🐘",
+    "🦁"
+   ],
+   "correct": [
+    0,
+    1
+   ]
+  },
+  "skill": "multi_select",
+  "level": 2
+ },
+ {
+  "id": "ms6",
+  "type": "multi",
+  "prompt": "اختر الأرقام الأكبر من ٥ (فيه أكتر من إجابة)",
+  "hints": [
+   "فيه أكتر من إجابة صحيحة، دوس على كل واحدة.",
+   "راجع كل اختيار لوحده."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "options": [
+    "3",
+    "6",
+    "8",
+    "4",
+    "9"
+   ],
+   "correct": [
+    1,
+    2,
+    4
+   ]
+  },
+  "skill": "multi_select",
+  "level": 3
+ },
+ {
+  "id": "ms7",
+  "type": "multi",
+  "prompt": "اختر كل الأشياء التي نأكلها (فيه أكتر من إجابة)",
+  "hints": [
+   "فيه أكتر من إجابة صحيحة، دوس على كل واحدة.",
+   "راجع كل اختيار لوحده."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "options": [
+    "🥕",
+    "🍞",
+    "🪑",
+    "🥛",
+    "🧸"
+   ],
+   "correct": [
+    0,
+    1,
+    3
+   ]
+  },
+  "skill": "multi_select",
+  "level": 3
+ },
+ {
+  "id": "ms8",
+  "type": "multi",
+  "prompt": "اختر الأشكال المستديرة (فيه أكتر من إجابة)",
+  "hints": [
+   "فيه أكتر من إجابة صحيحة، دوس على كل واحدة.",
+   "راجع كل اختيار لوحده."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "options": [
+    "⚽",
+    "⬜",
+    "🔵",
+    "🔺",
+    "🌕"
+   ],
+   "correct": [
+    0,
+    2,
+    4
+   ]
+  },
+  "skill": "multi_select",
+  "level": 3
+ },
+ {
+  "id": "gp0",
+  "type": "grid_point",
+  "prompt": "دوس على المربع: يمين 2، فوق 3",
+  "hints": [
+   "الرقم الأول لليمين من تحت، والتاني لفوق.",
+   "عدّ 2 خطوات لليمين وبعدين 3 لفوق."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "size": 4,
+   "answer": [
+    2,
+    3
+   ]
+  },
+  "skill": "grid_points",
+  "level": 1,
+  "explain": "النقطة (2، 3) تعني 2 يمين و3 فوق."
+ },
+ {
+  "id": "gp1",
+  "type": "grid_point",
+  "prompt": "دوس على المربع: يمين 4، فوق 1",
+  "hints": [
+   "الرقم الأول لليمين من تحت، والتاني لفوق.",
+   "عدّ 4 خطوات لليمين وبعدين 1 لفوق."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "size": 4,
+   "answer": [
+    4,
+    1
+   ]
+  },
+  "skill": "grid_points",
+  "level": 1,
+  "explain": "النقطة (4، 1) تعني 4 يمين و1 فوق."
+ },
+ {
+  "id": "gp2",
+  "type": "grid_point",
+  "prompt": "دوس على المربع: يمين 1، فوق 4",
+  "hints": [
+   "الرقم الأول لليمين من تحت، والتاني لفوق.",
+   "عدّ 1 خطوات لليمين وبعدين 4 لفوق."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "size": 4,
+   "answer": [
+    1,
+    4
+   ]
+  },
+  "skill": "grid_points",
+  "level": 1,
+  "explain": "النقطة (1، 4) تعني 1 يمين و4 فوق."
+ },
+ {
+  "id": "gp3",
+  "type": "grid_point",
+  "prompt": "دوس على المربع: يمين 3، فوق 3",
+  "hints": [
+   "الرقم الأول لليمين من تحت، والتاني لفوق.",
+   "عدّ 3 خطوات لليمين وبعدين 3 لفوق."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "size": 5,
+   "answer": [
+    3,
+    3
+   ]
+  },
+  "skill": "grid_points",
+  "level": 2,
+  "explain": "النقطة (3، 3) تعني 3 يمين و3 فوق."
+ },
+ {
+  "id": "gp4",
+  "type": "grid_point",
+  "prompt": "دوس على المربع: يمين 5، فوق 2",
+  "hints": [
+   "الرقم الأول لليمين من تحت، والتاني لفوق.",
+   "عدّ 5 خطوات لليمين وبعدين 2 لفوق."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "size": 5,
+   "answer": [
+    5,
+    2
+   ]
+  },
+  "skill": "grid_points",
+  "level": 2,
+  "explain": "النقطة (5، 2) تعني 5 يمين و2 فوق."
+ },
+ {
+  "id": "gp5",
+  "type": "grid_point",
+  "prompt": "دوس على المربع: يمين 2، فوق 5",
+  "hints": [
+   "الرقم الأول لليمين من تحت، والتاني لفوق.",
+   "عدّ 2 خطوات لليمين وبعدين 5 لفوق."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "size": 5,
+   "answer": [
+    2,
+    5
+   ]
+  },
+  "skill": "grid_points",
+  "level": 2,
+  "explain": "النقطة (2، 5) تعني 2 يمين و5 فوق."
+ },
+ {
+  "id": "gp6",
+  "type": "grid_point",
+  "prompt": "دوس على المربع: يمين 4، فوق 4",
+  "hints": [
+   "الرقم الأول لليمين من تحت، والتاني لفوق.",
+   "عدّ 4 خطوات لليمين وبعدين 4 لفوق."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "size": 5,
+   "answer": [
+    4,
+    4
+   ]
+  },
+  "skill": "grid_points",
+  "level": 3,
+  "explain": "النقطة (4، 4) تعني 4 يمين و4 فوق."
+ },
+ {
+  "id": "gp7",
+  "type": "grid_point",
+  "prompt": "دوس على المربع: يمين 5، فوق 5",
+  "hints": [
+   "الرقم الأول لليمين من تحت، والتاني لفوق.",
+   "عدّ 5 خطوات لليمين وبعدين 5 لفوق."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "size": 5,
+   "answer": [
+    5,
+    5
+   ]
+  },
+  "skill": "grid_points",
+  "level": 3,
+  "explain": "النقطة (5، 5) تعني 5 يمين و5 فوق."
+ },
+ {
+  "id": "gp8",
+  "type": "grid_point",
+  "prompt": "دوس على المربع: يمين 1، فوق 1",
+  "hints": [
+   "الرقم الأول لليمين من تحت، والتاني لفوق.",
+   "عدّ 1 خطوات لليمين وبعدين 1 لفوق."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "size": 5,
+   "answer": [
+    1,
+    1
+   ]
+  },
+  "skill": "grid_points",
+  "level": 3,
+  "explain": "النقطة (1، 1) تعني 1 يمين و1 فوق."
+ },
+ {
+  "id": "br0",
+  "type": "bars",
+  "prompt": "ارسم الأعمدة: 🍎 = 2، 🍌 = 3",
+  "hints": [
+   "دوس على العمود لحد ما يوصل للعدد المطلوب.",
+   "كل دوسة تزيد العمود واحد."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "labels": [
+    "🍎",
+    "🍌"
+   ],
+   "target": [
+    2,
+    3
+   ],
+   "max": 4
+  },
+  "skill": "bar_chart",
+  "level": 1
+ },
+ {
+  "id": "br1",
+  "type": "bars",
+  "prompt": "ارسم الأعمدة: 🐱 = 1، 🐶 = 4",
+  "hints": [
+   "دوس على العمود لحد ما يوصل للعدد المطلوب.",
+   "كل دوسة تزيد العمود واحد."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "labels": [
+    "🐱",
+    "🐶"
+   ],
+   "target": [
+    1,
+    4
+   ],
+   "max": 4
+  },
+  "skill": "bar_chart",
+  "level": 1
+ },
+ {
+  "id": "br2",
+  "type": "bars",
+  "prompt": "ارسم الأعمدة: 🔴 = 3، 🔵 = 2",
+  "hints": [
+   "دوس على العمود لحد ما يوصل للعدد المطلوب.",
+   "كل دوسة تزيد العمود واحد."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "labels": [
+    "🔴",
+    "🔵"
+   ],
+   "target": [
+    3,
+    2
+   ],
+   "max": 4
+  },
+  "skill": "bar_chart",
+  "level": 1
+ },
+ {
+  "id": "br3",
+  "type": "bars",
+  "prompt": "ارسم الأعمدة: 🍎 = 2، 🍌 = 4، 🍇 = 1",
+  "hints": [
+   "دوس على العمود لحد ما يوصل للعدد المطلوب.",
+   "كل دوسة تزيد العمود واحد."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "labels": [
+    "🍎",
+    "🍌",
+    "🍇"
+   ],
+   "target": [
+    2,
+    4,
+    1
+   ],
+   "max": 5
+  },
+  "skill": "bar_chart",
+  "level": 2
+ },
+ {
+  "id": "br4",
+  "type": "bars",
+  "prompt": "ارسم الأعمدة: ⚽ = 3، 🚲 = 1، 🧸 = 5",
+  "hints": [
+   "دوس على العمود لحد ما يوصل للعدد المطلوب.",
+   "كل دوسة تزيد العمود واحد."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "labels": [
+    "⚽",
+    "🚲",
+    "🧸"
+   ],
+   "target": [
+    3,
+    1,
+    5
+   ],
+   "max": 5
+  },
+  "skill": "bar_chart",
+  "level": 2
+ },
+ {
+  "id": "br5",
+  "type": "bars",
+  "prompt": "ارسم الأعمدة: ☀️ = 4، ☁️ = 2، 🌧️ = 1",
+  "hints": [
+   "دوس على العمود لحد ما يوصل للعدد المطلوب.",
+   "كل دوسة تزيد العمود واحد."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "labels": [
+    "☀️",
+    "☁️",
+    "🌧️"
+   ],
+   "target": [
+    4,
+    2,
+    1
+   ],
+   "max": 5
+  },
+  "skill": "bar_chart",
+  "level": 2
+ },
+ {
+  "id": "br6",
+  "type": "bars",
+  "prompt": "ارسم الأعمدة: 🐟 = 1، 🐦 = 3، 🐱 = 2، 🐶 = 4",
+  "hints": [
+   "دوس على العمود لحد ما يوصل للعدد المطلوب.",
+   "كل دوسة تزيد العمود واحد."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "labels": [
+    "🐟",
+    "🐦",
+    "🐱",
+    "🐶"
+   ],
+   "target": [
+    1,
+    3,
+    2,
+    4
+   ],
+   "max": 5
+  },
+  "skill": "bar_chart",
+  "level": 3
+ },
+ {
+  "id": "br7",
+  "type": "bars",
+  "prompt": "ارسم الأعمدة: 🍓 = 5، 🍊 = 2، 🍋 = 4، 🍐 = 1",
+  "hints": [
+   "دوس على العمود لحد ما يوصل للعدد المطلوب.",
+   "كل دوسة تزيد العمود واحد."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "labels": [
+    "🍓",
+    "🍊",
+    "🍋",
+    "🍐"
+   ],
+   "target": [
+    5,
+    2,
+    4,
+    1
+   ],
+   "max": 5
+  },
+  "skill": "bar_chart",
+  "level": 3
+ },
+ {
+  "id": "br8",
+  "type": "bars",
+  "prompt": "ارسم الأعمدة: ⭐ = 2، 🌙 = 5، ☁️ = 3، 🌈 = 4",
+  "hints": [
+   "دوس على العمود لحد ما يوصل للعدد المطلوب.",
+   "كل دوسة تزيد العمود واحد."
+  ],
+  "correct": "برافو!",
+  "wrong": "جرّب تاني.",
+  "data": {
+   "labels": [
+    "⭐",
+    "🌙",
+    "☁️",
+    "🌈"
+   ],
+   "target": [
+    2,
+    5,
+    3,
+    4
+   ],
+   "max": 5
+  },
+  "skill": "bar_chart",
+  "level": 3
+ }
 ]

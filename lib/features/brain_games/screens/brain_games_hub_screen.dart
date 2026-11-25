@@ -1,5 +1,4 @@
 import 'dart:math';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'new_games.dart';
@@ -123,14 +122,14 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
     _syncChildGameProgressLevels();
     _initMemoryGame();
     widget.appState.logChildRealtimeActivity(
-      statusSummary: tr('🧠 يتفاعل داخل واحة الـ ١٠٠ مرحلة لألعاب الذكاء والآداب'),
-      actionLogText: tr('دخل إلى واحة ألعاب الذكاء (١٠٠ مرحلة لكل لعبة)'),
-      categoryBadge: tr('ألعاب الذكاء'),
+      statusSummary: '🧠 يتفاعل داخل واحة الـ ١٠٠ مرحلة لألعاب الذكاء والآداب',
+      actionLogText: 'دخل إلى واحة ألعاب الذكاء (١٠٠ مرحلة لكل لعبة)',
+      categoryBadge: 'ألعاب الذكاء',
     );
     final childName =
-        widget.appState.currentAccount?.activeChild.name ?? tr('بطل حنين');
+        widget.appState.currentAccount?.activeChild.name ?? 'بطل حنين';
     CalmVoiceService.instance.speakCalmly(
-      tr('أهلاً بك يا {0}! كل لعبة هنا تحتوي على مئة مرحلة مشوقة، وأصدقاؤك الأبطال الخارقون يشجعونك في كل خطوة!', [childName]),
+      'أهلاً بك يا ${childName}! كل لعبة هنا تحتوي على مئة مرحلة مشوقة، وأصدقاؤك الأبطال الخارقون يشجعونك في كل خطوة!',
     );
   }
 
@@ -186,17 +185,17 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
         _companionReact(true);
         await widget.appState.recordBrainGameWin(
           gameId: 'memory_match_lvl_$_memoryLevel',
-          gameTitle: tr('الذاكرة البصرية (المرحلة {0} من ١٠٠)', [_memoryLevel]),
+          gameTitle: 'الذاكرة البصرية (المرحلة ${_memoryLevel} من ١٠٠)',
           earnedIqPoints: 20,
           earnedStars: 2,
         );
         setState(() {
           _heroReactionMessage =
-              tr('🎉 الأبطال الخارقون يصفقون لك! أتممت المرحلة {0} من ١٠٠ في لعبة الذاكرة!', [_memoryLevel]);
+              '🎉 الأبطال الخارقون يصفقون لك! أتممت المرحلة ${_memoryLevel} من ١٠٠ في لعبة الذاكرة!';
         });
         await CalmVoiceService.instance.speakSuperheroEncouragementAndAutoAdvance(
           encouragementText:
-              tr('ما شاء الله يا بطل الأبطال! أنهيت المرحلة {0} من مئة في لعبة الذاكرة البصرية بنجاح!', [_memoryLevel]),
+              'ما شاء الله يا بطل الأبطال! أنهيت المرحلة ${_memoryLevel} من مئة في لعبة الذاكرة البصرية بنجاح!',
           onAutoAdvance: () {
             if (!mounted) return;
             setState(() {
@@ -207,7 +206,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
         );
       } else {
         _companionReact(true);
-        CalmVoiceService.instance.speakCalmly(tr('تطابق رائع!'));
+        CalmVoiceService.instance.speakCalmly('تطابق رائع!');
       }
     } else {
       _companionReact(false);
@@ -235,7 +234,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text(
-              tr('🏆 المرحلة {0} من ١٠٠', [currentDisplay]),
+              '🏆 المرحلة ${currentDisplay} من ١٠٠',
               style: TextStyle(
                 fontSize: 13,
                 fontWeight: FontWeight.bold,
@@ -280,7 +279,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
             max: 100,
             divisions: 99,
             activeColor: accentColor,
-            label: tr('المرحلة {0}', [currentDisplay]),
+            label: 'المرحلة ${currentDisplay}',
             onChanged: (v) => onSelectLevel(v.round() - 1),
           ),
         ),
@@ -301,94 +300,124 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
 
         final List<Map<String, dynamic>> gamesMeta = [
           {
-            'title': tr('مرسم الآداب (١٠٠ لوحة)'),
+            'title': 'مرسم الآداب (١٠٠ لوحة)',
             'icon': '🎨',
-            'skill': tr('١٠٠ لوحة رسم وتلوين لتعلم الآداب والأخلاق'),
+            'skill': '١٠٠ لوحة رسم وتلوين لتعلم الآداب والأخلاق',
             'color': const Color(0xFF10B981),
           },
           {
-            'title': tr('قوة الملاحظة (١٠٠ مرحلة)'),
+            'title': 'قوة الملاحظة (١٠٠ مرحلة)',
             'icon': '🔍',
-            'skill': tr('١٠٠ مرحلة لتصنيف الأشكال واكتشاف المختلف'),
+            'skill': '١٠٠ مرحلة لتصنيف الأشكال واكتشاف المختلف',
             'color': const Color(0xFFEC4899),
           },
           {
-            'title': tr('الألغاز والمنطق (١٠٠ لغز)'),
+            'title': 'الألغاز والمنطق (١٠٠ لغز)',
             'icon': '🧩',
-            'skill': tr('١٠٠ لغز لاستنتاج الأنماط والتسلسل المنطقي'),
+            'skill': '١٠٠ لغز لاستنتاج الأنماط والتسلسل المنطقي',
             'color': const Color(0xFFF59E0B),
           },
           {
-            'title': tr('الذاكرة البصرية (١٠٠ مرحلة)'),
+            'title': 'الذاكرة البصرية (١٠٠ مرحلة)',
             'icon': '🃏',
-            'skill': tr('١٠٠ مستوى متدرج لتقوية الذاكرة والتركيز'),
+            'skill': '١٠٠ مستوى متدرج لتقوية الذاكرة والتركيز',
             'color': const Color(0xFF14B8A6),
           },
           {
-            'title': tr('الحساب والجمع (١٠٠ مرحلة)'),
+            'title': 'الحساب والجمع (١٠٠ مرحلة)',
             'icon': '🔢',
-            'skill': tr('١٠٠ مسألة عدّ وجمع بصري لتنمية الذكاء الرياضي'),
+            'skill': '١٠٠ مسألة عدّ وجمع بصري لتنمية الذكاء الرياضي',
             'color': const Color(0xFF38BDF8),
           },
           {
-            'title': tr('الحروف والكلمات (١٠٠ مرحلة)'),
+            'title': 'الحروف والكلمات (١٠٠ مرحلة)',
             'icon': '🔤',
-            'skill': tr('١٠٠ تحدٍ للذكاء اللغوي ومخارج الحروف العربية'),
+            'skill': '١٠٠ تحدٍ للذكاء اللغوي ومخارج الحروف العربية',
             'color': const Color(0xFFA855F7),
           },
           {
-            'title': tr('مطابقة الصور والكلمات'),
+            'title': 'مطابقة الصور والكلمات',
             'icon': '🖼️',
-            'skill': tr('اختر الصورة الصحيحة التي تطابق الكلمة والوصف'),
+            'skill': 'اختر الصورة الصحيحة التي تطابق الكلمة والوصف',
             'color': const Color(0xFF06B6D4),
           },
           {
-            'title': tr('لعبة التصنيف الذكي'),
+            'title': 'لعبة التصنيف الذكي',
             'icon': '🗂️',
-            'skill': tr('صنّف الحيوانات والفواكه ووسائل النقل في مجموعاتها'),
+            'skill': 'صنّف الحيوانات والفواكه ووسائل النقل في مجموعاتها',
             'color': const Color(0xFF10B981),
           },
           {
-            'title': tr('أصوات الحيوانات والبيئة'),
+            'title': 'أصوات الحيوانات والبيئة',
             'icon': '🔊',
-            'skill': tr('تعرّف على صاحب الصوت وبيئته الطبيعية'),
+            'skill': 'تعرّف على صاحب الصوت وبيئته الطبيعية',
             'color': const Color(0xFFF97316),
           },
           {
-            'title': tr('الترتيب والتسلسل المنطقي'),
+            'title': 'الترتيب والتسلسل المنطقي',
             'icon': '🪜',
-            'skill': tr('رتّب خطوات العادات اليومية بترتيبها الصحيح'),
+            'skill': 'رتّب خطوات العادات اليومية بترتيبها الصحيح',
             'color': const Color(0xFFEC4899),
           },
           {
-            'title': tr('تتبّع الحروف'),
+            'title': 'تتبّع الحروف',
             'icon': '✏️',
-            'skill': tr('امشي بصباعك على الحرف'),
+            'skill': 'امشي بصباعك على الحرف',
             'color': const Color(0xFF10B981),
           },
           {
-            'title': tr('عدّ وجمّع بالصور'),
+            'title': 'عدّ وجمّع بالصور',
             'icon': '🍎',
-            'skill': tr('عُد الصور واجمع'),
+            'skill': 'عُد الصور واجمع',
             'color': const Color(0xFFF59E0B),
           },
           {
-            'title': tr('رتّب الأشكال والألوان'),
+            'title': 'رتّب الأشكال والألوان',
             'icon': '🔷',
-            'skill': tr('حط كل شكل في مكانه'),
+            'skill': 'حط كل شكل في مكانه',
             'color': const Color(0xFF3B82F6),
           },
           {
-            'title': tr('ارسم خيالك'),
+            'title': 'ارسم خيالك',
             'icon': '🖍️',
-            'skill': tr('ارسم اللي في خيالك'),
+            'skill': 'ارسم اللي في خيالك',
             'color': const Color(0xFFEC4899),
           },
           {
-            'title': tr('تمارين متنوعة'),
+            'title': 'تمارين متنوعة',
             'icon': '🧠',
-            'skill': tr('اختيار وأرقام وترتيب وتوصيل وتصنيف'),
+            'skill': 'اختيار وأرقام وترتيب وتوصيل وتصنيف',
             'color': const Color(0xFF8B5CF6),
+          },
+          {
+            'title': 'خط الأعداد',
+            'icon': '📏',
+            'skill': 'حرّك النقطة على الرقم الصح',
+            'color': const Color(0xFF0EA5E9),
+          },
+          {
+            'title': 'املأ الفراغ',
+            'icon': '✍️',
+            'skill': 'اختر الكلمة الناقصة',
+            'color': const Color(0xFFF97316),
+          },
+          {
+            'title': 'اختر كل الصح',
+            'icon': '☑️',
+            'skill': 'فيه أكتر من إجابة صحيحة',
+            'color': const Color(0xFF22C55E),
+          },
+          {
+            'title': 'أين النقطة؟',
+            'icon': '📍',
+            'skill': 'اضغط على المكان الصح في الشبكة',
+            'color': const Color(0xFFEF4444),
+          },
+          {
+            'title': 'ارسم الأعمدة',
+            'icon': '📊',
+            'skill': 'ارفع الأعمدة للعدد المطلوب',
+            'color': const Color(0xFFA855F7),
           },
         ];
 
@@ -401,7 +430,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
             title: Row(
               children: [
                 KidFriendlyBigBackButton(
-                  label: tr('رجوع'),
+                  label: 'رجوع',
                   accentColor: const Color(0xFFF59E0B),
                   onPressed: () {
                     CalmVoiceService.instance.stopSpeaking();
@@ -411,7 +440,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                 const SizedBox(width: 10),
                 Expanded(
                   child: Text(
-                    tr('🧠 واحة الـ ١٠٠ مرحلة والأبطال الخارقين'),
+                    '🧠 واحة الـ ١٠٠ مرحلة والأبطال الخارقين',
                     style: TextStyle(fontSize: 14.5, fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -463,7 +492,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                               const SizedBox(width: 8),
                               Expanded(
                                 child: Text(
-                                  tr('مستشار حنين الذكي (صعوبة تكيفية {0}/٤): نقترح تقوية «{1}» في «{2}»', [aiRec.adaptiveDifficultyTier, aiRec.focusDomainTitleAr, aiRec.recommendedGameTitleAr]),
+                                  'مستشار حنين الذكي (صعوبة تكيفية ${aiRec.adaptiveDifficultyTier}/٤): نقترح تقوية «${aiRec.focusDomainTitleAr}» في «${aiRec.recommendedGameTitleAr}»',
                                   style: const TextStyle(
                                     fontSize: 11,
                                     color: Color(0xFFA7F3D0),
@@ -498,7 +527,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                                 icon: const Icon(Icons.auto_awesome_rounded,
                                     size: 14),
                                 label: Text(
-                                  tr('العب المقترح'),
+                                  'العب المقترح',
                                   style: TextStyle(
                                       fontSize: 10.5,
                                       fontWeight: FontWeight.bold),
@@ -531,7 +560,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                             widget.appState.logChildRealtimeActivity(
                               statusSummary: '🎮 يلعب الآن: ${g['title']}',
                               actionLogText: 'انتقل إلى لعبة (${g['title']})',
-                              categoryBadge: tr('ألعاب الذكاء'),
+                              categoryBadge: 'ألعاب الذكاء',
                             );
                             CalmVoiceService.instance.speakCalmly(
                               '${g['title']}، ${g['skill']}',
@@ -653,6 +682,41 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
       case 14:
         return ExerciseGame(
             appState: widget.appState, onReact: _companionReact);
+      case 15:
+        return ExerciseGame(
+            key: const ValueKey<String>('ex_number_line'),
+            appState: widget.appState,
+            onReact: _companionReact,
+            skill: 'number_line',
+            title: 'خط الأعداد');
+      case 16:
+        return ExerciseGame(
+            key: const ValueKey<String>('ex_fill_blank'),
+            appState: widget.appState,
+            onReact: _companionReact,
+            skill: 'fill_blank',
+            title: 'املأ الفراغ');
+      case 17:
+        return ExerciseGame(
+            key: const ValueKey<String>('ex_multi_select'),
+            appState: widget.appState,
+            onReact: _companionReact,
+            skill: 'multi_select',
+            title: 'اختر كل الصح');
+      case 18:
+        return ExerciseGame(
+            key: const ValueKey<String>('ex_grid_points'),
+            appState: widget.appState,
+            onReact: _companionReact,
+            skill: 'grid_points',
+            title: 'أين النقطة؟');
+      case 19:
+        return ExerciseGame(
+            key: const ValueKey<String>('ex_bar_chart'),
+            appState: widget.appState,
+            onReact: _companionReact,
+            skill: 'bar_chart',
+            title: 'ارسم الأعمدة');
       default:
         return _buildEtiquetteDrawingStudioGame();
     }
@@ -724,7 +788,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                 ),
               ),
               IconButton(
-                tooltip: tr('استمع لدرس الأدب بصوت هادئ'),
+                tooltip: 'استمع لدرس الأدب بصوت هادئ',
                 onPressed: () {
                   CalmVoiceService.instance.speakCalmly(
                     '$title. $etiquetteText. $phrase',
@@ -765,7 +829,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                   Border.all(color: const Color(0xFFF59E0B).withOpacity(0.5)),
             ),
             child: Text(
-              tr('🗣️ عبارة الأدب: {0}', [phrase]),
+              '🗣️ عبارة الأدب: ${phrase}',
               textAlign: TextAlign.center,
               style: const TextStyle(
                 fontSize: 13,
@@ -823,7 +887,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
           const SizedBox(height: 10),
           Row(
             children: [
-              Text(tr('الألوان: '), style: TextStyle(fontSize: 12)),
+              Text('الألوان: ', style: TextStyle(fontSize: 12)),
               Expanded(
                 child: Wrap(
                   spacing: 8,
@@ -849,7 +913,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                 ),
               ),
               IconButton(
-                tooltip: tr('تراجع عن آخر خط'),
+                tooltip: 'تراجع عن آخر خط',
                 onPressed: () {
                   if (_drawingStrokes.isEmpty) return;
                   setState(() {
@@ -861,7 +925,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                 icon: const Icon(Icons.undo_rounded, color: Color(0xFFFDE68A)),
               ),
               IconButton(
-                tooltip: tr('مسح اللوحة'),
+                tooltip: 'مسح اللوحة',
                 onPressed: () {
                   setState(() {
                     _drawingStrokes.clear();
@@ -875,7 +939,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
           ),
           Row(
             children: [
-              Text(tr('حجم الفرشاة:'), style: TextStyle(fontSize: 12)),
+              Text('حجم الفرشاة:', style: TextStyle(fontSize: 12)),
               Expanded(
                 child: Slider(
                   value: _selectedBrushSize,
@@ -905,7 +969,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           content: Text(
-                              tr('🎨 ارسم ولوّن أولاً داخل اللوحة بأصبعك لتكسب نقاط الذكاء والآداب!')),
+                              '🎨 ارسم ولوّن أولاً داخل اللوحة بأصبعك لتكسب نقاط الذكاء والآداب!'),
                           backgroundColor: Color(0xFFF59E0B),
                         ),
                       );
@@ -914,17 +978,17 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     _companionReact(true);
                     await widget.appState.recordBrainGameWin(
                       gameId: 'etiquette_draw_$levelNum',
-                      gameTitle: tr('مرسم الآداب (لوحة {0} من ١٠٠)', [levelNum]),
+                      gameTitle: 'مرسم الآداب (لوحة ${levelNum} من ١٠٠)',
                       earnedIqPoints: 20,
                       earnedStars: 2,
                     );
                     setState(() {
                       _heroReactionMessage =
-                          tr('🌟 الأبطال الخارقون فخورون بلوحتك رقم {0} وتعلمك لعبارة: {1}!', [levelNum, phrase]);
+                          '🌟 الأبطال الخارقون فخورون بلوحتك رقم ${levelNum} وتعلمك لعبارة: ${phrase}!';
                     });
                     await CalmVoiceService.instance.speakSuperheroEncouragementAndAutoAdvance(
                       encouragementText:
-                          tr('لوحة فنية رائعة يا فنان الآداب! أتممت اللوحة رقم {0} من مئة!', [levelNum]),
+                          'لوحة فنية رائعة يا فنان الآداب! أتممت اللوحة رقم ${levelNum} من مئة!',
                       onAutoAdvance: () {
                         if (!mounted) return;
                         setState(() {
@@ -937,7 +1001,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                   },
                   icon: const Icon(Icons.check_circle_outline),
                   label: Text(
-                    tr('حفظ الرسمة (+20 ذكاء)'),
+                    'حفظ الرسمة (+20 ذكاء)',
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 12),
                   ),
                 ),
@@ -952,7 +1016,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                   });
                 },
                 icon: const Icon(Icons.navigate_next),
-                label: Text(tr('اللوحة التالية')),
+                label: Text('اللوحة التالية'),
               ),
             ],
           ),
@@ -1059,19 +1123,19 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     _companionReact(true);
                     setState(() {
                       _oddCorrect = true;
-                      _oddFeedback = tr('✅ ملاحظة ذكية جداً! {0}', [explanation]);
+                      _oddFeedback = '✅ ملاحظة ذكية جداً! ${explanation}';
                       _heroReactionMessage =
-                          tr('🌟 الأبطال الصغار يقولون لك: قوة ملاحظتك خارقة في المرحلة {0}!', [levelNum]);
+                          '🌟 الأبطال الصغار يقولون لك: قوة ملاحظتك خارقة في المرحلة ${levelNum}!';
                     });
                     await widget.appState.recordBrainGameWin(
                       gameId: 'odd_one_out_$levelNum',
-                      gameTitle: tr('قوة الملاحظة (المرحلة {0} من ١٠٠)', [levelNum]),
+                      gameTitle: 'قوة الملاحظة (المرحلة ${levelNum} من ١٠٠)',
                       earnedIqPoints: 15,
                       earnedStars: 1,
                     );
                     await CalmVoiceService.instance.speakSuperheroEncouragementAndAutoAdvance(
                       encouragementText:
-                          tr('أحسنت الملاحظة الخارقة في المرحلة {0}! {1}', [levelNum, explanation]),
+                          'أحسنت الملاحظة الخارقة في المرحلة ${levelNum}! ${explanation}',
                       onAutoAdvance: () {
                         if (!mounted) return;
                         setState(() {
@@ -1086,10 +1150,10 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     setState(() {
                       _oddCorrect = false;
                       _oddFeedback =
-                          tr('👀 هذا العنصر يشبه أصدقاءه في المجموعة، ابحث عن العنصر المختلف تماماً!');
+                          '👀 هذا العنصر يشبه أصدقاءه في المجموعة، ابحث عن العنصر المختلف تماماً!';
                     });
                     CalmVoiceService.instance.speakCalmly(
-                      tr('انظر بدقة يا بطل وابحث عن الشكل المختلف عن المجموعة.'),
+                      'انظر بدقة يا بطل وابحث عن الشكل المختلف عن المجموعة.',
                     );
                   }
                 },
@@ -1149,7 +1213,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
               },
               icon: const Icon(Icons.navigate_next),
               label: Text(
-                tr('المرحلة التالية ({0} من ١٠٠)', [(levelNum % 100) + 1]),
+                'المرحلة التالية (${(levelNum % 100) + 1} من ١٠٠)',
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
@@ -1194,7 +1258,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
             children: [
               Expanded(
                 child: Text(
-                  tr('🧩 مختبر المنطق والأنماط ({0} / 100)', [levelNum]),
+                  '🧩 مختبر المنطق والأنماط (${levelNum} / 100)',
                   style: const TextStyle(
                       fontSize: 16, fontWeight: FontWeight.bold),
                 ),
@@ -1233,7 +1297,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     borderRadius: BorderRadius.circular(10),
                     border: Border.all(color: const Color(0xFFF59E0B)),
                   ),
-                  child: Text(tr('؟'),
+                  child: Text('؟',
                       style:
                           TextStyle(fontSize: 28, fontWeight: FontWeight.bold)),
                 ),
@@ -1261,19 +1325,19 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     setState(() {
                       _patternCorrect = true;
                       _patternFeedback =
-                          tr('✅ تفكير منطقي عبقري في اللغز {0}! الإجابة ({1}) صحيحة (+15 ذكاء)', [levelNum, option]);
+                          '✅ تفكير منطقي عبقري في اللغز ${levelNum}! الإجابة (${option}) صحيحة (+15 ذكاء)';
                       _heroReactionMessage =
-                          tr('🦇 فارس الليل يحييك: استنتاج منطقي مذهل في المرحلة {0} من ١٠٠!', [levelNum]);
+                          '🦇 فارس الليل يحييك: استنتاج منطقي مذهل في المرحلة ${levelNum} من ١٠٠!';
                     });
                     await widget.appState.recordBrainGameWin(
                       gameId: 'pattern_logic_$levelNum',
-                      gameTitle: tr('الألغاز والمنطق (لغز {0} من ١٠٠)', [levelNum]),
+                      gameTitle: 'الألغاز والمنطق (لغز ${levelNum} من ١٠٠)',
                       earnedIqPoints: 15,
                       earnedStars: 1,
                     );
                     await CalmVoiceService.instance.speakSuperheroEncouragementAndAutoAdvance(
                       encouragementText:
-                          tr('أحسنت التفكير المنطقي الخارق في المرحلة {0}!', [levelNum]),
+                          'أحسنت التفكير المنطقي الخارق في المرحلة ${levelNum}!',
                       onAutoAdvance: () {
                         if (!mounted) return;
                         setState(() {
@@ -1288,10 +1352,10 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     setState(() {
                       _patternCorrect = false;
                       _patternFeedback =
-                          tr('💡 تأمل الترتيب مرة أخرى بهدوء وحاول مجدداً!');
+                          '💡 تأمل الترتيب مرة أخرى بهدوء وحاول مجدداً!';
                     });
                     CalmVoiceService.instance.coachWrongAnswer(
-                      hint: tr('لاحظ الترتيب: إيه الشكل اللي بيتكرر؟'),
+                      hint: 'لاحظ الترتيب: إيه الشكل اللي بيتكرر؟',
                     );
                   }
                 },
@@ -1329,7 +1393,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
               },
               icon: const Icon(Icons.navigate_next),
               label: Text(
-                tr('اللغز التالي ({0} من ١٠٠)', [(levelNum % 100) + 1]),
+                'اللغز التالي (${(levelNum % 100) + 1} من ١٠٠)',
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
@@ -1364,7 +1428,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
             children: [
               Expanded(
                 child: Text(
-                  tr('🃏 الذاكرة البصرية (المرحلة {0} من ١٠٠)', [_memoryLevel]),
+                  '🃏 الذاكرة البصرية (المرحلة ${_memoryLevel} من ١٠٠)',
                   style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.bold,
@@ -1380,7 +1444,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                   _initMemoryGame();
                 },
                 icon: const Icon(Icons.skip_next, size: 16),
-                label: Text(tr('المرحلة التالية')),
+                label: Text('المرحلة التالية'),
               ),
             ],
           ),
@@ -1390,12 +1454,12 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
             children: [
               Chip(
                 backgroundColor: const Color(0xFF0F172A),
-                label: Text(tr('المحاولات: {0}', [_memoryMoves])),
+                label: Text('المحاولات: ${_memoryMoves}'),
               ),
               Chip(
                 backgroundColor: const Color(0xFF0F172A),
                 label: Text(
-                    tr('التطابقات: {0} / {1}', [_memoryMatches, _memoryBoard.length ~/ 2])),
+                    'التطابقات: ${_memoryMatches} / ${_memoryBoard.length ~/ 2}'),
               ),
             ],
           ),
@@ -1486,8 +1550,8 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
               Expanded(
                 child: Text(
                   isAdd
-                      ? tr('🔢 الجمع المصور (المرحلة {0} من ١٠٠)', [levelNum])
-                      : tr('🔢 العدّ البصري (المرحلة {0} من ١٠٠)', [levelNum]),
+                      ? '🔢 الجمع المصور (المرحلة ${levelNum} من ١٠٠)'
+                      : '🔢 العدّ البصري (المرحلة ${levelNum} من ١٠٠)',
                   style: const TextStyle(
                       fontSize: 15, fontWeight: FontWeight.bold),
                 ),
@@ -1495,8 +1559,8 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
               IconButton(
                 onPressed: () => CalmVoiceService.instance.speakCalmly(
                   isAdd
-                      ? tr('المرحلة {0}: اجمع {1} زائد {2} يساوي كم؟', [levelNum, a, b])
-                      : tr('المرحلة {0}: عدّ الأشكال بهدوء واختر الرقم الصحيح!', [levelNum]),
+                      ? 'المرحلة ${levelNum}: اجمع ${a} زائد ${b} يساوي كم؟'
+                      : 'المرحلة ${levelNum}: عدّ الأشكال بهدوء واختر الرقم الصحيح!',
                 ),
                 icon: const Icon(Icons.volume_up_rounded,
                     color: Color(0xFF38BDF8)),
@@ -1582,20 +1646,20 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                       _mathAnswered = true;
                       await widget.appState.recordBrainGameWin(
                         gameId: 'visual_math_$levelNum',
-                        gameTitle: tr('الحساب البصري (المرحلة {0} من ١٠٠)', [levelNum]),
+                        gameTitle: 'الحساب البصري (المرحلة ${levelNum} من ١٠٠)',
                         earnedIqPoints: 15,
                         earnedStars: 1,
                       );
                     }
                     setState(() {
                       _mathFeedback =
-                          tr('🎉 عبقري في الحساب! الناتج ({0}) صحيح (+15 ذكاء)', [numOpt]);
+                          '🎉 عبقري في الحساب! الناتج (${numOpt}) صحيح (+15 ذكاء)';
                       _heroReactionMessage =
-                          tr('⚡ الأبطال الصغار يهتفون لك: إجابة حسابية متقنة في المرحلة {0}!', [levelNum]);
+                          '⚡ الأبطال الصغار يهتفون لك: إجابة حسابية متقنة في المرحلة ${levelNum}!';
                     });
                     await CalmVoiceService.instance.speakSuperheroEncouragementAndAutoAdvance(
                       encouragementText:
-                          tr('رائع يا بطل الحساب الخارق! الإجابة هي {0}!', [numOpt]),
+                          'رائع يا بطل الحساب الخارق! الإجابة هي ${numOpt}!',
                       onAutoAdvance: () {
                         if (!mounted) return;
                         setState(() {
@@ -1609,10 +1673,10 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     _companionReact(false);
                     setState(() {
                       _mathFeedback =
-                          tr('🔢 عدّ الأشكال بأصابعك مرة أخرى بهدوء وحاول مجدداً!');
+                          '🔢 عدّ الأشكال بأصابعك مرة أخرى بهدوء وحاول مجدداً!';
                     });
                     CalmVoiceService.instance.coachWrongAnswer(
-                      hint: tr('عدّ الأشكال واحد واحد وأنت بتشاور عليها.'),
+                      hint: 'عدّ الأشكال واحد واحد وأنت بتشاور عليها.',
                     );
                   }
                 },
@@ -1650,7 +1714,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
               },
               icon: const Icon(Icons.navigate_next),
               label: Text(
-                tr('المرحلة الحسابية التالية ({0} من ١٠٠)', [(levelNum % 100) + 1]),
+                'المرحلة الحسابية التالية (${(levelNum % 100) + 1} من ١٠٠)',
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
@@ -1696,14 +1760,14 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
             children: [
               Expanded(
                 child: Text(
-                  tr('🔤 الذكاء اللغوي ({0} / 100)', [levelNum]),
+                  '🔤 الذكاء اللغوي (${levelNum} / 100)',
                   style: const TextStyle(
                       fontSize: 16, fontWeight: FontWeight.bold),
                 ),
               ),
               IconButton(
                 onPressed: () => CalmVoiceService.instance.speakCalmly(
-                  tr('{0} الكلمة هي {1}', [prompt, fullWord]),
+                  '${prompt} الكلمة هي ${fullWord}',
                   rate: 0.34,
                 ),
                 icon: const Icon(Icons.volume_up_rounded,
@@ -1727,7 +1791,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
               borderRadius: BorderRadius.circular(16),
             ),
             child: Text(
-              _wordCorrect ? fullWord : tr('؟ {0}', [missingDisplay]),
+              _wordCorrect ? fullWord : '؟ ${missingDisplay}',
               style: const TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.bold,
@@ -1757,19 +1821,19 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     setState(() {
                       _wordCorrect = true;
                       _wordFeedback =
-                          tr('✅ أحسنت يا فصيح! حرف ({0}) يكمل كلمة ({1}) (+15 ذكاء)', [letter, fullWord]);
+                          '✅ أحسنت يا فصيح! حرف (${letter}) يكمل كلمة (${fullWord}) (+15 ذكاء)';
                       _heroReactionMessage =
-                          tr('👦👧 الأبطال الصغار يحيّون فصاحتك في المرحلة {0}!', [levelNum]);
+                          '👦👧 الأبطال الصغار يحيّون فصاحتك في المرحلة ${levelNum}!';
                     });
                     await widget.appState.recordBrainGameWin(
                       gameId: 'arabic_word_$levelNum',
-                      gameTitle: tr('الذكاء اللغوي (المرحلة {0} من ١٠٠)', [levelNum]),
+                      gameTitle: 'الذكاء اللغوي (المرحلة ${levelNum} من ١٠٠)',
                       earnedIqPoints: 15,
                       earnedStars: 1,
                     );
                     await CalmVoiceService.instance.speakSuperheroEncouragementAndAutoAdvance(
                       encouragementText:
-                          tr('ممتاز يا بطل الفصاحة! حرف {0}، {1}!', [letter, fullWord]),
+                          'ممتاز يا بطل الفصاحة! حرف ${letter}، ${fullWord}!',
                       onAutoAdvance: () {
                         if (!mounted) return;
                         setState(() {
@@ -1784,10 +1848,10 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     setState(() {
                       _wordCorrect = false;
                       _wordFeedback =
-                          tr('🗣️ استمع لصوت الكلمة مرة أخرى وجرب حرفاً آخر!');
+                          '🗣️ استمع لصوت الكلمة مرة أخرى وجرب حرفاً آخر!';
                     });
                     CalmVoiceService.instance.coachWrongAnswer(
-                      hint: tr('اسمع أول صوت في الكلمة، وده هو الحرف اللي ناقص.'),
+                      hint: 'اسمع أول صوت في الكلمة، وده هو الحرف اللي ناقص.',
                     );
                   }
                 },
@@ -1825,7 +1889,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
               },
               icon: const Icon(Icons.navigate_next),
               label: Text(
-                tr('الكلمة التالية ({0} من ١٠٠)', [(levelNum % 100) + 1]),
+                'الكلمة التالية (${(levelNum % 100) + 1} من ١٠٠)',
                 style: const TextStyle(fontWeight: FontWeight.bold),
               ),
             ),
@@ -1873,12 +1937,12 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                tr('🖼️ مطابقة الصور والكلمات ({0} / 100)', [levelNum]),
+                '🖼️ مطابقة الصور والكلمات (${levelNum} / 100)',
                 style:
                     const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
               ),
               IconButton(
-                tooltip: tr('استمع للكلمة بصوت حنين'),
+                tooltip: 'استمع للكلمة بصوت حنين',
                 onPressed: () {
                   CalmVoiceService.instance.speakInstructionAsHaneen(
                     'اختر الصورة المطابقة لكلمة ${current['word']}. ${current['hint']}',
@@ -1930,7 +1994,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     _companionReact(true);
                     final isNew = await widget.appState.recordBrainGameWin(
                       gameId: 'pic_match_$levelNum',
-                      gameTitle: tr('مطابقة الصور والكلمات (المرحلة {0})', [levelNum]),
+                      gameTitle: 'مطابقة الصور والكلمات (المرحلة ${levelNum})',
                       earnedIqPoints: 12,
                       earnedStars: 1,
                       learnedWord: current['word'] as String,
@@ -1938,7 +2002,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     final reaction = await CalmVoiceService.instance
                         .reactToChildAnswerAsHaneen(
                       isCorrect: true,
-                      childName: child?.name ?? tr('يا بطل'),
+                      childName: child?.name ?? 'يا بطل',
                       learnedConcept: current['word'] as String,
                       onAutoAdvanceAfterAudio: () {
                         if (!mounted) return;
@@ -1962,7 +2026,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     final reaction = await CalmVoiceService.instance
                         .reactToChildAnswerAsHaneen(
                       isCorrect: false,
-                      childName: child?.name ?? tr('بطل حنين'),
+                      childName: child?.name ?? 'بطل حنين',
                       gentleHint: current['hint'] as String,
                     );
                     setState(() {
@@ -2014,7 +2078,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                 });
               },
               icon: const Icon(Icons.navigate_next),
-              label: Text(tr('التحدي التالي')),
+              label: Text('التحدي التالي'),
             ),
           ),
         ],
@@ -2058,7 +2122,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
             },
           ),
           Text(
-            tr('🗂️ لعبة التصنيف الذكي ({0} / 100)', [levelNum]),
+            '🗂️ لعبة التصنيف الذكي (${levelNum} / 100)',
             style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 12),
@@ -2090,7 +2154,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     if (catName == current['correctCategory']) {
                       await widget.appState.recordBrainGameWin(
                         gameId: 'classify_$levelNum',
-                        gameTitle: tr('لعبة التصنيف الذكي (المرحلة {0})', [levelNum]),
+                        gameTitle: 'لعبة التصنيف الذكي (المرحلة ${levelNum})',
                         earnedIqPoints: 12,
                         earnedStars: 1,
                         learnedWord: current['itemName'] as String,
@@ -2099,7 +2163,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                       final reaction = await CalmVoiceService.instance
                           .reactToChildAnswerAsHaneen(
                         isCorrect: true,
-                        childName: child?.name ?? tr('يا بطل'),
+                        childName: child?.name ?? 'يا بطل',
                         learnedConcept:
                             '${current['itemName']} من $catName',
                         onAutoAdvanceAfterAudio: () {
@@ -2124,7 +2188,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                       final reaction = await CalmVoiceService.instance
                           .reactToChildAnswerAsHaneen(
                         isCorrect: false,
-                        childName: child?.name ?? tr('بطل حنين'),
+                        childName: child?.name ?? 'بطل حنين',
                         gentleHint:
                             'فكر بهدوء: أين نرى ${current['itemName']} في حياتنا اليومية؟',
                       );
@@ -2168,7 +2232,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                 });
               },
               icon: const Icon(Icons.navigate_next),
-              label: Text(tr('العنصر التالي')),
+              label: Text('العنصر التالي'),
             ),
           ),
         ],
@@ -2215,7 +2279,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                tr('🔊 تمييز الأصوات ({0} / 100)', [levelNum]),
+                '🔊 تمييز الأصوات (${levelNum} / 100)',
                 style:
                     const TextStyle(fontSize: 15, fontWeight: FontWeight.bold),
               ),
@@ -2226,13 +2290,13 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                 ),
                 onPressed: () {
                   CalmVoiceService.instance.speakStoryOrQuestionAsHaneen(
-                    titleOrContext: tr('استمع مع حنين'),
+                    titleOrContext: 'استمع مع حنين',
                     contentToRead: current['soundText'] as String,
                     questionPrompt: current['question'] as String,
                   );
                 },
                 icon: const Icon(Icons.volume_up_rounded, size: 18),
-                label: Text(tr('استمع للصوت')),
+                label: Text('استمع للصوت'),
               ),
             ],
           ),
@@ -2283,7 +2347,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                       _companionReact(true);
                       await widget.appState.recordBrainGameWin(
                         gameId: 'sound_id_$levelNum',
-                        gameTitle: tr('لعبة تمييز الأصوات (المرحلة {0})', [levelNum]),
+                        gameTitle: 'لعبة تمييز الأصوات (المرحلة ${levelNum})',
                         earnedIqPoints: 12,
                         earnedStars: 1,
                         learnedWord: opt,
@@ -2291,7 +2355,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                       final reaction = await CalmVoiceService.instance
                           .reactToChildAnswerAsHaneen(
                         isCorrect: true,
-                        childName: child?.name ?? tr('يا بطل'),
+                        childName: child?.name ?? 'يا بطل',
                         learnedConcept: opt,
                         onAutoAdvanceAfterAudio: () {
                           if (!mounted) return;
@@ -2315,8 +2379,8 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                       final reaction = await CalmVoiceService.instance
                           .reactToChildAnswerAsHaneen(
                         isCorrect: false,
-                        childName: child?.name ?? tr('بطل حنين'),
-                        gentleHint: tr('اضغط «استمع للصوت» بالأعلى وركز في الصوت!'),
+                        childName: child?.name ?? 'بطل حنين',
+                        gentleHint: 'اضغط «استمع للصوت» بالأعلى وركز في الصوت!',
                       );
                       setState(() {
                         _soundGameFeedback = '💡 $reaction';
@@ -2358,7 +2422,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                 });
               },
               icon: const Icon(Icons.navigate_next),
-              label: Text(tr('الصوت التالي')),
+              label: Text('الصوت التالي'),
             ),
           ),
         ],
@@ -2416,7 +2480,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                 ),
               ),
               IconButton(
-                tooltip: tr('استمع للغز بصوت حنين'),
+                tooltip: 'استمع للغز بصوت حنين',
                 onPressed: () {
                   CalmVoiceService.instance.speakInstructionAsHaneen(
                     '${current['title']}. ${current['riddleTip']}',
@@ -2452,14 +2516,14 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                       _companionReact(true);
                       await widget.appState.recordBrainGameWin(
                         gameId: 'seq_$levelNum',
-                        gameTitle: tr('لعبة الترتيب المنطقي (المرحلة {0})', [levelNum]),
+                        gameTitle: 'لعبة الترتيب المنطقي (المرحلة ${levelNum})',
                         earnedIqPoints: 15,
                         earnedStars: 2,
                       );
                       final reaction = await CalmVoiceService.instance
                           .reactToChildAnswerAsHaneen(
                         isCorrect: true,
-                        childName: child?.name ?? tr('يا بطل'),
+                        childName: child?.name ?? 'يا بطل',
                         learnedConcept: current['title'] as String,
                         onAutoAdvanceAfterAudio: () {
                           if (!mounted) return;
@@ -2484,7 +2548,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                       final reaction = await CalmVoiceService.instance
                           .reactToChildAnswerAsHaneen(
                         isCorrect: false,
-                        childName: child?.name ?? tr('بطل حنين'),
+                        childName: child?.name ?? 'بطل حنين',
                         gentleHint: current['riddleTip'] as String,
                       );
                       setState(() {
@@ -2514,7 +2578,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                             ? const Color(0xFF14B8A6)
                             : Colors.white12,
                         child: Text(
-                          isPicked ? '$pickedOrder' : tr('؟'),
+                          isPicked ? '$pickedOrder' : '؟',
                           style: const TextStyle(
                               fontSize: 12,
                               fontWeight: FontWeight.bold,
@@ -2554,7 +2618,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     });
                   },
                   icon: const Icon(Icons.refresh, size: 16),
-                  label: Text(tr('إعادة الترتيب')),
+                  label: Text('إعادة الترتيب'),
                 ),
               ),
               const SizedBox(width: 8),
@@ -2576,7 +2640,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                     });
                   },
                   icon: const Icon(Icons.navigate_next),
-                  label: Text(tr('التسلسل التالي')),
+                  label: Text('التسلسل التالي'),
                 ),
               ),
             ],

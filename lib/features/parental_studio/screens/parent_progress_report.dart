@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
 /// "تقرير التقدم": a read-only summary of what the child did and learned.
@@ -18,8 +17,15 @@ class ParentProgressReport extends StatelessWidget {
     'visual_math': 'الحساب والجمع',
     'arabic_word': 'الحروف والكلمات',
     'classify': 'لعبة التصنيف الذكي',
-    'sound_id': tr('أصوات الحيوانات والبيئة'),
-    'seq': tr('الترتيب والتسلسل المنطقي'),
+    'sound_id': 'أصوات الحيوانات والبيئة',
+    'seq': 'الترتيب والتسلسل المنطقي',
+    'trace_letter': 'تتبّع الحروف',
+    'count_pics': 'عدّ وجمّع بالصور',
+    'shape_sort': 'رتّب الأشكال والألوان',
+    'imagine_draw': 'ارسم خيالك',
+    'exercise': 'تمارين متنوعة',
+    'quick_math': 'الحساب والجمع',
+    'star_collector': 'جامع النجوم',
   };
 
   /// Turns an ISO time into "منذ ٣ دقائق" style text.
@@ -27,10 +33,10 @@ class ParentProgressReport extends StatelessWidget {
     final DateTime? t = DateTime.tryParse(iso);
     if (t == null) return '';
     final Duration d = (now ?? DateTime.now()).difference(t);
-    if (d.inMinutes < 1) return tr('الآن');
-    if (d.inMinutes < 60) return tr('منذ {0} دقيقة', [d.inMinutes]);
-    if (d.inHours < 24) return tr('منذ {0} ساعة', [d.inHours]);
-    return tr('منذ {0} يوم', [d.inDays]);
+    if (d.inMinutes < 1) return 'الآن';
+    if (d.inMinutes < 60) return 'منذ ${d.inMinutes} دقيقة';
+    if (d.inHours < 24) return 'منذ ${d.inHours} ساعة';
+    return 'منذ ${d.inDays} يوم';
   }
 
   @override
@@ -43,12 +49,12 @@ class ParentProgressReport extends StatelessWidget {
       ..sort((a, b) => b.value.compareTo(a.value));
 
     return Directionality(
-      textDirection: Tr.dir,
+      textDirection: TextDirection.rtl,
       child: ListView(
         padding: EdgeInsets.all(20),
         children: [
           Text(
-            tr('تقرير تقدم {0}', [child.name]),
+            'تقرير تقدم ${child.name}',
             style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
           ),
           SizedBox(height: 14),
@@ -56,18 +62,18 @@ class ParentProgressReport extends StatelessWidget {
             spacing: 10,
             runSpacing: 10,
             children: [
-              _stat('⭐', tr('النجوم'), '${child.starsEarned}'),
-              _stat('🧠', tr('نقاط الذكاء'), '${child.intelligencePoints}'),
-              _stat('🎮', tr('ألعاب أنجزها'), '${child.gamesCompletedCount}'),
-              _stat('🎓', tr('دروس أتقنها'), '${child.completedLessons.length}'),
+              _stat('⭐', 'النجوم', '${child.starsEarned}'),
+              _stat('🧠', 'نقاط الذكاء', '${child.intelligencePoints}'),
+              _stat('🎮', 'ألعاب أنجزها', '${child.gamesCompletedCount}'),
+              _stat('🎓', 'دروس أتقنها', '${child.completedLessons.length}'),
               _stat(
-                  '📖', tr('كلمات تعلمها'), '${child.practicedVocabulary.length}'),
-              _stat('🎙️', tr('نطق صحيح'), '${child.correctPronunciationsCount}'),
+                  '📖', 'كلمات تعلمها', '${child.practicedVocabulary.length}'),
+              _stat('🎙️', 'نطق صحيح', '${child.correctPronunciationsCount}'),
             ],
           ),
           SizedBox(height: 18),
           _card(
-            title: tr('⏱️ وقت اليوم'),
+            title: '⏱️ وقت اليوم',
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -78,24 +84,24 @@ class ParentProgressReport extends StatelessWidget {
                 ),
                 SizedBox(height: 6),
                 Text(
-                    tr('استخدم {0} من {1} دقيقة', [child.usedMinutesToday, child.dailyTimeLimit]) +
-                        tr(' • شاهد {0} فيديو', [child.watchedVideosToday])),
+                    'استخدم ${child.usedMinutesToday} من ${child.dailyTimeLimit} دقيقة' +
+                        ' • شاهد ${child.watchedVideosToday} فيديو'),
               ],
             ),
           ),
           if (skills.isNotEmpty)
             _card(
-              title: tr('📊 المهارات'),
+              title: '📊 المهارات',
               child: Column(
                 children: [
                   for (final e in skills)
-                    _bar(e.key, e.value.clamp(0, 100) / 100.0, '${e.value}%'),
+                    _bar(_domainName(e.key), e.value.clamp(0, 100) / 100.0, '${e.value}%'),
                 ],
               ),
             ),
           if (games.isNotEmpty)
             _card(
-              title: tr('🎮 تقدم الألعاب (من ١٠٠ مرحلة)'),
+              title: '🎮 تقدم الألعاب (من ١٠٠ مرحلة)',
               child: Column(
                 children: [
                   for (final e in games)
@@ -106,13 +112,13 @@ class ParentProgressReport extends StatelessWidget {
             ),
           if (child.needsRemediationLessonIds.isNotEmpty)
             _card(
-              title: tr('💡 يحتاج تدريباً'),
+              title: '💡 يحتاج تدريباً',
               child: Text(
-                  tr('{0} درس يحتاج إعادة تدريب. شجّعه على إعادة الدروس بهدوء.', [child.needsRemediationLessonIds.length])),
+                  '${child.needsRemediationLessonIds.length} درس يحتاج إعادة تدريب. شجّعه على إعادة الدروس بهدوء.'),
             ),
           if (child.unlockedAchievements.isNotEmpty)
             _card(
-              title: tr('🏅 الإنجازات'),
+              title: '🏅 الإنجازات',
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -125,9 +131,9 @@ class ParentProgressReport extends StatelessWidget {
               ),
             ),
           _card(
-            title: tr('🕒 آخر الأنشطة'),
+            title: '🕒 آخر الأنشطة',
             child: timeline.isEmpty
-                ? Text(tr('لا توجد أنشطة بعد.'))
+                ? Text('لا توجد أنشطة بعد.')
                 : Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
@@ -159,8 +165,22 @@ class ParentProgressReport extends StatelessWidget {
     for (final e in kGameNames.entries) {
       if (id.startsWith(e.key)) return e.value;
     }
-    return id;
+    return 'لعبة أخرى';
   }
+
+  static const Map<String, String> kDomainNames = {
+    'memory_focus': 'الذاكرة والتركيز البصري',
+    'matching_shapes': 'المطابقة وربط الصور بالكلمات',
+    'classification_sorting': 'التصنيف والفرز المنطقي',
+    'puzzles_logic': 'الألغاز والتفكير المنطقي',
+    'math_counting': 'الأرقام والحساب المبسط',
+    'letters_words': 'الحروف وتكوين الكلمات',
+    'listening_pronunciation': 'الاستماع والنطق الواضح',
+    'etiquette_social': 'الآداب والسلوكيات الجميلة',
+    'general_mastery': 'الإتقان العام',
+  };
+
+  static String _domainName(String k) => kDomainNames[k] ?? 'مهارة أخرى';
 
   Widget _stat(String emoji, String label, String value) {
     return Container(

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'level_check_screen.dart';
@@ -24,7 +23,7 @@ class MyPathPlan {
   }
 
   static String groupName(int age) =>
-      age <= 4 ? tr('من ٣ إلى ٤ سنين') : (age <= 6 ? tr('من ٥ إلى ٦ سنين') : tr('٧ سنين وأكتر'));
+      age <= 4 ? 'من ٣ إلى ٤ سنين' : (age <= 6 ? 'من ٥ إلى ٦ سنين' : '٧ سنين وأكتر');
 
   static List<PathStep> stepsFor(int age) {
     if (age <= 4) {
@@ -47,10 +46,10 @@ class MyPathPlan {
     }
     return [
       PathStep('a1', '📚', 'درس اليوم', 'كلمات وجمل أطول', 1),
-      PathStep('g1', '🧠', tr('تحدّي ذكاء'), tr('نمط وتصنيف ومختلف'), 2),
-      PathStep('g2', '🔢', tr('رياضيات'), tr('مسائل أسرع شوية'), 2),
-      PathStep('s1', '📖', tr('قصة وأسئلة'), tr('اقرا وجاوب'), 0),
-      PathStep('g3', '🎨', tr('مرسم الآداب'), tr('ارسم وتعلّم أدب جديد'), 2),
+      PathStep('g1', '🧠', 'تحدّي ذكاء', 'نمط وتصنيف ومختلف', 2),
+      PathStep('g2', '🔢', 'رياضيات', 'مسائل أسرع شوية', 2),
+      PathStep('s1', '📖', 'قصة وأسئلة', 'اقرا وجاوب', 0),
+      PathStep('g3', '🎨', 'مرسم الآداب', 'ارسم وتعلّم أدب جديد', 2),
     ];
   }
 
@@ -113,13 +112,13 @@ class _MyPathScreenState extends State<MyPathScreen> {
     final List<PathStep> steps = MyPathPlan.stepsFor(age);
     final int doneCount = steps.where((s) => _done.contains(s.id + s.tab.toString())).length;
     return Directionality(
-      textDirection: Tr.dir,
+      textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: AppBar(title: Text(tr('مساري 🧭'))),
+        appBar: AppBar(title: Text('مساري 🧭')),
         body: ListView(
           padding: const EdgeInsets.all(16),
           children: [
-            Text(tr('خطة النهاردة يا {0} ({1})', [child.name, MyPathPlan.groupName(age)]),
+            Text('خطة النهاردة يا ${child.name} (${MyPathPlan.groupName(age)})',
                 style:
                     const TextStyle(fontSize: 17, fontWeight: FontWeight.w800)),
             const SizedBox(height: 8),
@@ -128,7 +127,7 @@ class _MyPathScreenState extends State<MyPathScreen> {
                 minHeight: 10,
                 borderRadius: BorderRadius.circular(8)),
             const SizedBox(height: 4),
-            Text(tr('{0} من {1}', [doneCount, steps.length])),
+            Text('${doneCount} من ${steps.length}'),
             const SizedBox(height: 12),
             for (final s in steps)
               Card(
@@ -151,7 +150,7 @@ class _MyPathScreenState extends State<MyPathScreen> {
             if (doneCount >= steps.length)
               Padding(
                 padding: EdgeInsets.only(top: 12),
-                child: Text(tr('🎉 خلصت خطة النهاردة! برافو يا بطل'),
+                child: Text('🎉 خلصت خطة النهاردة! برافو يا بطل',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900)),
               ),

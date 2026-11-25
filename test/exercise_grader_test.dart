@@ -21,6 +21,16 @@ void main() {
     expect(ExerciseGrader.grade(_e('matching', {'pairs': {'1': 'a'}}), {'1': 'a'}), true);
     expect(ExerciseGrader.grade(_e('categorize', {'items': {'x': 'k'}}), {'x': 'z'}), false);
   });
+  test('perseus-style widgets grade correctly', () {
+    expect(ExerciseGrader.grade(_e('numberline', {'answer': 7}), 7), true);
+    expect(ExerciseGrader.grade(_e('numberline', {'answer': 7}), 6), false);
+    expect(ExerciseGrader.grade(_e('multi', {'correct': [0, 2]}), [2, 0]), true);
+    expect(ExerciseGrader.grade(_e('multi', {'correct': [0, 2]}), [0]), false);
+    expect(ExerciseGrader.grade(_e('grid_point', {'answer': [2, 3]}), [2, 3]), true);
+    expect(ExerciseGrader.grade(_e('grid_point', {'answer': [2, 3]}), <int>[]), false);
+    expect(ExerciseGrader.grade(_e('bars', {'target': [1, 2]}), [1, 3]), false);
+    expect(StepGrading.steps(_e('bars', {'target': [1, 2], 'labels': ['a', 'b']}), [1, 3]).wrongSteps, ['b']);
+  });
   test('hints repeat last', () {
     final Exercise e = _e('choice', {'correct': 0});
     expect(ExerciseGrader.hintFor(e, 0), 'h1');
@@ -32,7 +42,16 @@ void main() {
 Object _solve(Exercise e) {
   switch (e.type) {
     case 'choice':
+    case 'blank':
       return (e.data['correct'] as num).toInt();
+    case 'numberline':
+      return (e.data['answer'] as num).toInt();
+    case 'multi':
+      return (e.data['correct'] as List).map((x) => (x as num).toInt()).toList();
+    case 'grid_point':
+      return (e.data['answer'] as List).map((x) => (x as num).toInt()).toList();
+    case 'bars':
+      return (e.data['target'] as List).map((x) => (x as num).toInt()).toList();
     case 'number':
       return '${e.data['answer']}';
     case 'ordering':

@@ -221,62 +221,6 @@ class ChildAccountTab extends StatelessWidget {
                     ),
                     const Divider(height: 1),
                     ListTile(
-                      minVerticalPadding: 12,
-                      leading: const Icon(
-                        Icons.translate_rounded,
-                        color: AppDesignTokens.secondaryGreen,
-                      ),
-                      title: Text(l10n.uiLanguageTitle),
-                      trailing: DropdownButton<String>(
-                        value: appState.localeController.uiLanguageCode,
-                        underline: const SizedBox.shrink(),
-                        items: [
-                          DropdownMenuItem(
-                            value: 'ar',
-                            child: Text(l10n.languageArabic),
-                          ),
-                          DropdownMenuItem(
-                            value: 'en',
-                            child: Text(l10n.languageEnglish),
-                          ),
-                        ],
-                        onChanged: (code) {
-                          if (code != null) {
-                            appState.setUiLanguage(code);
-                          }
-                        },
-                      ),
-                    ),
-                    const Divider(height: 1),
-                    ListTile(
-                      minVerticalPadding: 12,
-                      leading: const Icon(
-                        Icons.language_rounded,
-                        color: AppDesignTokens.rewardGold,
-                      ),
-                      title: Text(l10n.learningLanguageTitle),
-                      trailing: DropdownButton<String>(
-                        value: appState.localeController.learningLanguageCode,
-                        underline: const SizedBox.shrink(),
-                        items: [
-                          DropdownMenuItem(
-                            value: 'ar',
-                            child: Text(l10n.languageArabic),
-                          ),
-                          DropdownMenuItem(
-                            value: 'en',
-                            child: Text(l10n.languageEnglish),
-                          ),
-                        ],
-                        onChanged: (code) {
-                          if (code != null) {
-                            appState.setLearningLanguage(code);
-                          }
-                        },
-                      ),
-                    ),
-                    const Divider(height: 1),
-                    ListTile(
                       minVerticalPadding: 14,
                       leading: const Icon(
                         Icons.switch_account_rounded,

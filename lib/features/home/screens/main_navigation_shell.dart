@@ -1,5 +1,4 @@
 import 'package:haneen_kids_vod/core/services/app_rating_service.dart';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:haneen_kids_vod/features/home/screens/my_path_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
@@ -46,8 +45,8 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
           duration: const Duration(seconds: 4),
           content: Text(
             days == 1
-                ? tr('🔥 أهلاً بك! بداية مغامرة جديدة +١ ⭐')
-                : tr('🔥 {0} أيام متتالية! برافو يا بطل +١ ⭐', [days]),
+                ? '🔥 أهلاً بك! بداية مغامرة جديدة +١ ⭐'
+                : '🔥 ${days} أيام متتالية! برافو يا بطل +١ ⭐',
             textAlign: TextAlign.center,
             style: const TextStyle(fontWeight: FontWeight.bold),
           ),
@@ -183,7 +182,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
                         onGoToTab: _selectIndex)));
               },
               icon: const Icon(Icons.explore_rounded),
-              label: Text(tr('مساري')),
+              label: Text('مساري'),
             )
           : null,
       body: IndexedStack(

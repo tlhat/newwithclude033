@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:haneen_kids_vod/features/exercises/exercise_models.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
@@ -27,6 +26,11 @@ class SkillMasteryCard extends StatefulWidget {
     'opposites': 'الأضداد',
     'vocabulary': 'المفردات',
     'daily_routine': 'الروتين اليومي',
+    'number_line': 'خط الأعداد',
+    'fill_blank': 'املأ الفراغ',
+    'multi_select': 'اختر كل الصح',
+    'grid_points': 'أين النقطة؟',
+    'bar_chart': 'ارسم الأعمدة',
   };
 
   @override
@@ -77,31 +81,31 @@ class _SkillMasteryCardState extends State<SkillMasteryCard> {
         border: Border.all(color: Colors.white12),
       ),
       child: Directionality(
-        textDirection: Tr.dir,
+        textDirection: TextDirection.rtl,
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(tr('🎯 إتقان المهارات'),
+            Text('🎯 إتقان المهارات',
                 style: const TextStyle(
                     fontSize: 16.5,
                     fontWeight: FontWeight.bold,
                     color: Colors.white)),
             const SizedBox(height: 4),
             Text(
-                tr('تقدّم {0} في كل مهارة (محفوظ على هذا الهاتف فقط)', [name]),
+                'تقدّم ${name} في كل مهارة (محفوظ على هذا الهاتف فقط)',
                 style: const TextStyle(fontSize: 12.5, color: Colors.white70)),
             const SizedBox(height: 12),
             if (p == null)
               const LinearProgressIndicator()
             else ...[
               for (final e in SkillMasteryCard.skillNames.entries)
-                _row(p, e.key, tr(e.value)),
+                _row(p, e.key, e.value),
               const SizedBox(height: 8),
-              Text(tr('مراجعات مستحقة اليوم: {0}', [_dueCount(p)]),
+              Text('مراجعات مستحقة اليوم: ${_dueCount(p)}',
                   style: const TextStyle(
                       fontSize: 13, color: Color(0xFFA7F3D0))),
               const SizedBox(height: 4),
-              Text(tr('يُعتبر المتقن: 5 محاولات على الأقل و80% صح والمستوى 3 أو أعلى.'),
+              Text('يُعتبر المتقن: 5 محاولات على الأقل و80% صح والمستوى 3 أو أعلى.',
                   style:
                       const TextStyle(fontSize: 11.5, color: Colors.white54)),
             ],
@@ -109,6 +113,14 @@ class _SkillMasteryCardState extends State<SkillMasteryCard> {
         ),
       ),
     );
+  }
+
+  /// Our own four-step ladder (idea only: show progress as clear steps).
+  static String _tier(int total, int pct, bool done) {
+    if (done) return '🏆 متقن';
+    if (total >= 5 && pct >= 70) return '⭐ متمكّن';
+    if (total >= 2) return '🌿 يتقدّم';
+    return '🌱 بداية';
   }
 
   Widget _row(ExerciseProgress p, String key, String label) {
@@ -129,12 +141,12 @@ class _SkillMasteryCardState extends State<SkillMasteryCard> {
         children: [
           Row(children: [
             Expanded(
-                child: Text(done ? '✅ $label' : label,
+                child: Text('${_tier(total, pct, done)} $label',
                     style: const TextStyle(color: Colors.white, fontSize: 14))),
             Text(
                 total == 0
-                    ? tr('لم يبدأ بعد')
-                    : tr('{0}% • المستوى {1} • {2} محاولة', [pct, p.levelOf(key), total]),
+                    ? 'لم يبدأ بعد'
+                    : '${pct}% • المستوى ${p.levelOf(key)} • ${total} محاولة',
                 style: TextStyle(color: c, fontSize: 12)),
           ]),
           const SizedBox(height: 4),

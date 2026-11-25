@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
 class _Q {
@@ -25,9 +24,9 @@ class _LevelCheckScreenState extends State<LevelCheckScreen> {
     _Q('عُد النجوم: ⭐⭐⭐⭐⭐⭐⭐', ['٥', '٧', '٩'], 1),
     _Q('٣ + ٤ = ؟', ['٦', '٧', '٨'], 1),
     _Q('أي كلمة تبدأ بحرف (س)؟', ['سمكة', 'قطة', 'بطة'], 0),
-    _Q(tr('كمّل النمط: 🔴 🔵 🔴 🔵 🔴 ؟'), ['🔴', '🔵', '🟢'], 1),
-    _Q(tr('١٢ - ٥ = ؟'), [tr('٦'), tr('٧'), tr('٨')], 1),
-    _Q(tr('أي كلمة معناها عكس (كبير)؟'), [tr('طويل'), tr('صغير'), tr('عالي')], 1),
+    _Q('كمّل النمط: 🔴 🔵 🔴 🔵 🔴 ؟', ['🔴', '🔵', '🟢'], 1),
+    _Q('١٢ - ٥ = ؟', ['٦', '٧', '٨'], 1),
+    _Q('أي كلمة معناها عكس (كبير)؟', ['طويل', 'صغير', 'عالي'], 1),
   ];
   int _i = 0;
   int _score = 0;
@@ -53,12 +52,12 @@ class _LevelCheckScreenState extends State<LevelCheckScreen> {
   @override
   Widget build(BuildContext context) {
     return Directionality(
-      textDirection: Tr.dir,
+      textDirection: TextDirection.rtl,
       child: Scaffold(
         backgroundColor: const Color(0xFF0F172A),
         appBar: AppBar(
             backgroundColor: const Color(0xFF1E293B),
-            title: Text(tr('اختبار المستوى'))),
+            title: Text('اختبار المستوى')),
         body: Center(
           child: Padding(
             padding: const EdgeInsets.all(20),
@@ -80,13 +79,13 @@ class _LevelCheckScreenState extends State<LevelCheckScreen> {
         const SizedBox(height: 18),
         ElevatedButton(
             onPressed: () => Navigator.pop(context),
-            child: Text(tr('يلا نبدأ'))),
+            child: Text('يلا نبدأ')),
       ]);
 
   Widget _question() {
     final _Q q = _qs[_i];
     return Column(mainAxisSize: MainAxisSize.min, children: [
-      Text(tr('سؤال {0} من {1}', [_i + 1, _qs.length]),
+      Text('سؤال ${_i + 1} من ${_qs.length}',
           style: const TextStyle(color: Colors.white54)),
       const SizedBox(height: 14),
       Text(q.text,

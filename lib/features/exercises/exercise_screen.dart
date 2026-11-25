@@ -8,10 +8,27 @@ import 'exercise_models.dart';
 
 /// Plays the JSON exercises one after another. Rendering lives here, grading
 /// lives in ExerciseGrader.
+/// Skills that have their own game card in the hub.
+const Set<String> kSingleWidgetSkills = {
+  'number_line',
+  'fill_blank',
+  'multi_select',
+  'grid_points',
+  'bar_chart',
+};
+
 class ExerciseGame extends StatefulWidget {
   final AppStateManager appState;
   final void Function(bool correct) onReact;
-  const ExerciseGame({super.key, required this.appState, required this.onReact});
+  /// Optional: play only one skill (used by the single-widget games).
+  final String? skill;
+  final String title;
+  const ExerciseGame(
+      {super.key,
+      required this.appState,
+      required this.onReact,
+      this.skill,
+      this.title = 'تمارين متنوعة'});
   @override
   State<ExerciseGame> createState() => _ExerciseGameState();
 }
@@ -32,6 +49,11 @@ class _ExerciseGameState extends State<ExerciseGame> {
   final Map<String, String> _pairs = {};
   String? _leftSel;
   final Map<String, String> _bins = {};
+  double _line = 0;
+  bool _lineTouched = false;
+  final Set<int> _multi = {};
+  int? _gx, _gy;
+  List<int> _barVals = [];
 
   @override
   void initState() {
@@ -49,7 +71,10 @@ class _ExerciseGameState extends State<ExerciseGame> {
     try {
       final String raw =
           await rootBundle.loadString('assets/exercises/exercises_v1.json');
-      final List<Exercise> l = Exercise.parseList(raw);
+      final List<Exercise> all = Exercise.parseList(raw);
+      final List<Exercise> l = widget.skill == null
+          ? all.where((x) => !kSingleWidgetSkills.contains(x.skill)).toList()
+          : all.where((x) => x.skill == widget.skill).toList();
       _sp = await SharedPreferences.getInstance();
       try {
         _prog = ExerciseProgress.fromJson(
@@ -71,12 +96,26 @@ class _ExerciseGameState extends State<ExerciseGame> {
     _pairs.clear();
     _leftSel = null;
     _bins.clear();
+    _lineTouched = false;
+    _multi.clear();
+    _gx = null;
+    _gy = null;
+    _barVals = [];
   }
 
   Object? _answer(Exercise e) {
     switch (e.type) {
       case 'choice':
+      case 'blank':
         return _choice;
+      case 'numberline':
+        return _lineTouched ? _line.round() : null;
+      case 'multi':
+        return _multi.toList();
+      case 'grid_point':
+        return (_gx == null || _gy == null) ? <int>[] : <int>[_gx!, _gy!];
+      case 'bars':
+        return _barVals;
       case 'number':
         return _num.text;
       case 'ordering':
@@ -98,16 +137,16 @@ class _ExerciseGameState extends State<ExerciseGame> {
     widget.onReact(ok);
     if (ok) {
       setState(() {
-        _msg = e.correctFeedback;
+        _msg = e.explain.isEmpty ? e.correctFeedback : '${e.correctFeedback}\n${e.explain}';
         _msgGood = true;
       });
       HintVoiceService.instance.play('hint_great');
       await widget.appState.recordBrainGameWin(
           gameId: 'exercise_${e.id}',
-          gameTitle: 'تمارين متنوعة',
+          gameTitle: widget.title,
           earnedIqPoints: 10,
           earnedStars: 1);
-      await Future<void>.delayed(const Duration(milliseconds: 900));
+      await Future<void>.delayed(Duration(milliseconds: e.explain.isEmpty ? 900 : 2600));
       if (!mounted) return;
       setState(() {
         _cur = _prog.next(_list, DateTime.now(), lastId: e.id);
@@ -157,6 +196,112 @@ class _ExerciseGameState extends State<ExerciseGame> {
         return Wrap(spacing: 10, runSpacing: 10, alignment: WrapAlignment.center, children: [
           for (int k = 0; k < opts.length; k++)
             _tile('${opts[k]}', sel: _choice == k, onTap: () => setState(() => _choice = k)),
+        ]);
+      case 'blank':
+        final List bo = e.data['options'] as List;
+        final String sent = '${e.data['sentence']}';
+        final String fill = _choice == null ? '＿＿＿' : '${bo[_choice!]}';
+        return Column(children: [
+          Text(sent.replaceAll('___', fill),
+              textAlign: TextAlign.center,
+              style: const TextStyle(color: Colors.white, fontSize: 28, fontWeight: FontWeight.w900)),
+          const SizedBox(height: KidTheme.s3),
+          Wrap(spacing: 10, runSpacing: 10, alignment: WrapAlignment.center, children: [
+            for (int k = 0; k < bo.length; k++)
+              _tile('${bo[k]}', sel: _choice == k, onTap: () => setState(() => _choice = k)),
+          ]),
+        ]);
+      case 'multi':
+        final List mo = e.data['options'] as List;
+        return Wrap(spacing: 10, runSpacing: 10, alignment: WrapAlignment.center, children: [
+          for (int k = 0; k < mo.length; k++)
+            _tile('${_multi.contains(k) ? '✅ ' : ''}${mo[k]}',
+                sel: _multi.contains(k),
+                onTap: () => setState(() {
+                      if (!_multi.add(k)) _multi.remove(k);
+                    })),
+        ]);
+      case 'numberline':
+        final int lo = (e.data['min'] as num).toInt();
+        final int hi = (e.data['max'] as num).toInt();
+        if (!_lineTouched && _line < lo) _line = lo.toDouble();
+        return Column(children: [
+          Text(_lineTouched ? '${_line.round()}' : '؟',
+              style: const TextStyle(color: Colors.white, fontSize: 40, fontWeight: FontWeight.w900)),
+          Slider(
+            min: lo.toDouble(),
+            max: hi.toDouble(),
+            divisions: hi - lo,
+            value: _line.clamp(lo.toDouble(), hi.toDouble()),
+            onChanged: (v) => setState(() {
+              _line = v;
+              _lineTouched = true;
+            }),
+          ),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 24),
+            child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+              for (int i = lo; i <= hi; i++)
+                Text('$i', style: const TextStyle(color: Colors.white70, fontSize: 16)),
+            ]),
+          ),
+        ]);
+      case 'grid_point':
+        final int n = (e.data['size'] as num).toInt();
+        return Column(mainAxisSize: MainAxisSize.min, children: [
+          for (int y = n; y >= 1; y--)
+            Row(mainAxisSize: MainAxisSize.min, children: [
+              SizedBox(width: 22, child: Text('$y', textAlign: TextAlign.center, style: const TextStyle(color: Colors.white70))),
+              for (int x = 1; x <= n; x++)
+                GestureDetector(
+                  onTap: () => setState(() {
+                    _gx = x;
+                    _gy = y;
+                  }),
+                  child: Container(
+                    width: 46,
+                    height: 46,
+                    margin: const EdgeInsets.all(2),
+                    decoration: BoxDecoration(
+                      color: (_gx == x && _gy == y) ? KidTheme.accent : KidTheme.surfaceHigh,
+                      borderRadius: BorderRadius.circular(8),
+                      border: Border.all(color: Colors.white24),
+                    ),
+                    child: (_gx == x && _gy == y) ? const Icon(Icons.star, color: Colors.white) : null,
+                  ),
+                ),
+            ]),
+          Row(mainAxisSize: MainAxisSize.min, children: [
+            const SizedBox(width: 22),
+            for (int x = 1; x <= n; x++)
+              SizedBox(width: 50, child: Text('$x', textAlign: TextAlign.center, style: const TextStyle(color: Colors.white70))),
+          ]),
+        ]);
+      case 'bars':
+        final List labels = e.data['labels'] as List;
+        final int mx = (e.data['max'] as num).toInt();
+        if (_barVals.length != labels.length) _barVals = List<int>.filled(labels.length, 0);
+        return Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly, crossAxisAlignment: CrossAxisAlignment.end, children: [
+          for (int i = 0; i < labels.length; i++)
+            GestureDetector(
+              onTap: () => setState(() => _barVals[i] = (_barVals[i] + 1) % (mx + 1)),
+              child: Column(mainAxisSize: MainAxisSize.min, children: [
+                Text('${_barVals[i]}', style: const TextStyle(color: Colors.white, fontSize: 22, fontWeight: FontWeight.w900)),
+                Container(
+                  width: 52,
+                  height: 22.0 * mx + 6,
+                  alignment: Alignment.bottomCenter,
+                  decoration: BoxDecoration(color: Colors.white10, borderRadius: BorderRadius.circular(8)),
+                  child: Container(
+                    width: 52,
+                    height: 22.0 * _barVals[i],
+                    decoration: BoxDecoration(color: KidTheme.primary, borderRadius: BorderRadius.circular(8)),
+                  ),
+                ),
+                const SizedBox(height: 4),
+                Text('${labels[i]}', style: const TextStyle(color: Colors.white, fontSize: 24)),
+              ]),
+            ),
         ]);
       case 'number':
         return SizedBox(
