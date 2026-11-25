@@ -138,6 +138,18 @@ class AppTheme {
           ),
         ),
       ),
+      dialogTheme: DialogThemeData(
+        backgroundColor: surfaceColor,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(AppDesignTokens.radiusLg + 4),
+        ),
+      ),
+      textButtonTheme: TextButtonThemeData(
+        style: TextButton.styleFrom(
+          minimumSize: const Size(64, AppDesignTokens.minTouchTarget),
+          textStyle: const TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+        ),
+      ),
       outlinedButtonTheme: OutlinedButtonThemeData(
         style: OutlinedButton.styleFrom(
           minimumSize: const Size(88, AppDesignTokens.minTouchTarget),

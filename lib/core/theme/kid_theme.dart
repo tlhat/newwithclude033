@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/app/app_theme.dart';
 
 /// One place for colors, spacing, font sizes and radius used by new screens.
 class KidTheme {
   KidTheme._();
   // colors
-  static const Color bg = Color(0xFF0F172A);
-  static const Color surface = Color(0xFF1E293B);
+  static const Color bg = AppDesignTokens.darkBackground;
+  static const Color surface = AppDesignTokens.darkSurface;
   static const Color surfaceHigh = Color(0xFF334155);
   static const Color primary = Color(0xFF10B981);
   static const Color accent = Color(0xFFF59E0B);
