@@ -147,11 +147,11 @@ jobs:
           cat ~/.gradle/init.d/disable-lint.gradle
 
       - name: Build Release APK
-        run: flutter build apk --release --no-tree-shake-icons --target-platform android-arm,android-arm64
+        run: flutter build apk --release --no-tree-shake-icons --target-platform android-arm,android-arm64,android-x64
 
       - name: Build Play bundle (AAB), only when started by hand with build_aab
         if: github.event_name == 'workflow_dispatch' && inputs.build_aab == true
-        run: flutter build appbundle --release --no-tree-shake-icons --target-platform android-arm,android-arm64
+        run: flutter build appbundle --release --no-tree-shake-icons --target-platform android-arm,android-arm64,android-x64
 
       - name: Upload the AAB (manual runs only)
         if: github.event_name == 'workflow_dispatch' && inputs.build_aab == true
@@ -174,23 +174,14 @@ jobs:
           name: haneen-kids-release-apk
           path: build/app/outputs/flutter-apk/app-release.apk
 
-      # ---- Emulator test build (extra, never replaces the phone APK above) ----
-      - name: Build emulator APK (adds x86_64; arm64 kept for Apple-silicon emulators)
+      # ---- One universal APK (arm, arm64, x86_64); the emulator smoke test uses the same file ----
+      - name: Check the single APK holds every ABI
         continue-on-error: true
         run: |
-          cp build/app/outputs/flutter-apk/app-release.apk /tmp/phone-app-release.apk
-          flutter build apk --release --no-tree-shake-icons --target-platform android-arm64,android-x64
           mkdir -p /tmp/emu
           cp build/app/outputs/flutter-apk/app-release.apk /tmp/emu/haneen-emulator-x86_64.apk
-          "$(ls -d $ANDROID_HOME/build-tools/*/apksigner | sort -V | tail -1)" verify --print-certs /tmp/emu/haneen-emulator-x86_64.apk | grep "SHA-1"
-          unzip -l /tmp/emu/haneen-emulator-x86_64.apk | grep "libflutter.so"
-
-      - name: Upload emulator APK
-        continue-on-error: true
-        uses: actions/upload-artifact@v4
-        with:
-          name: haneen-kids-emulator-x86_64-apk
-          path: /tmp/emu/haneen-emulator-x86_64.apk
+          unzip -l build/app/outputs/flutter-apk/app-release.apk | grep "libflutter.so"
+          ls -l build/app/outputs/flutter-apk/app-release.apk
 
       - name: Enable KVM for the emulator smoke test
         continue-on-error: true
