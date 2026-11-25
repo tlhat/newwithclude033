@@ -58,6 +58,7 @@ flutter:
     - assets/audio/cheerful_friend/lesson_feedback/
     - assets/audio/cheerful_friend/reactions/
     - assets/audio/cheerful_friend/stories/
+    - assets/audio/haneen/academy_hints/
     - assets/audio/haneen/app/
     - assets/audio/haneen/brain_games/
     - assets/audio/haneen/companion/
@@ -74,6 +75,7 @@ flutter:
     - assets/audio/haneen/guide/
     - assets/audio/haneen/hints/
     - assets/audio/haneen/lessons/
+    - assets/audio/haneen/levelcheck/
     - assets/audio/haneen/reactions/
     - assets/audio/haneen/section_intro/
     - assets/audio/haneen/videos/
