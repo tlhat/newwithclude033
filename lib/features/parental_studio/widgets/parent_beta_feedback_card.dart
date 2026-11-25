@@ -64,7 +64,7 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
                   SizedBox(width: 10),
                   Expanded(
                     child: Text(
-                      'معلومات النسخة وملاحظات ولي الأمر (Beta)',
+                      'معلومات النسخة وملاحظات ولي الأمر (تجريبية)',
                       style: TextStyle(
                         fontSize: 16.5,
                         fontWeight: FontWeight.bold,
@@ -163,13 +163,13 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
                 ...widget.appState.betaFeedbackLog.take(4).map((entry) {
                   final String status = entry['status'] ?? 'Pending';
                   Color statusColor = const Color(0xFFF59E0B);
-                  String statusLabel = 'قيد الانتظار (Pending)';
+                  String statusLabel = 'قيد الانتظار';
                   if (status == 'Sent') {
                     statusColor = const Color(0xFF10B981);
-                    statusLabel = 'تم الإرسال (Sent)';
+                    statusLabel = 'تم الإرسال';
                   } else if (status == 'Failed') {
                     statusColor = const Color(0xFFEF4444);
-                    statusLabel = 'فشل الإرسال (Failed)';
+                    statusLabel = 'فشل الإرسال';
                   }
 
                   return Container(

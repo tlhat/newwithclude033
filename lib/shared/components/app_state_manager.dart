@@ -2473,7 +2473,7 @@ class AppStateManager extends ChangeNotifier {
           : DateTime.now().toIso8601String(),
       recentAchievements: child.unlockedAchievements.isEmpty
           ? prior.recentAchievements
-          : child.unlockedAchievements.values.take(5).toList(),
+          : child.unlockedAchievements.keys.take(5).map(badgeTitleAr).toList(),
       weakLessonIds:
           LessonProgressBridge.analyze(child: child).weakLessonIds,
       lastInteractionContext: 'academy',

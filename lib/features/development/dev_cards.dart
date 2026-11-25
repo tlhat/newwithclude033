@@ -337,7 +337,7 @@ class _DevelopmentCardState extends State<DevelopmentCard> {
             },
           ),
       ]),
-      _small('اختيار الفئة وتوزيع الأنشطة عليها قرار تصميم غير مُثبت علميًا (UNVERIFIED).'),
+      _small('اختيار الفئة وتوزيع الأنشطة عليها قرار تصميم غير مُثبت علميًا (غير مُثبت).'),
       _title('وقت الشاشة (يحدده الوالد)'),
     ];
     if (band == AgeBand.m18to36) {
@@ -372,7 +372,7 @@ class _DevelopmentCardState extends State<DevelopmentCard> {
           icon: const Icon(Icons.add_circle_outline, color: Colors.white70)),
     ]));
     w.add(_small('استُخدم اليوم في الألعاب: $used دقيقة. الأرقام الافتراضية (٢٠ و٦٠) اختيار متحفظ مبني على إرشادات WHO وAAP، '
-        'ولا يوجد رقم علمي لعمر ٦ إلى ١٢ (UNVERIFIED). تجنّب الشاشات وقت الأكل وقبل النوم بساعة.'));
+        'ولا يوجد رقم علمي لعمر ٦ إلى ١٢ (غير مُثبت). تجنّب الشاشات وقت الأكل وقبل النوم بساعة.'));
 
     // Summary: strengths, improving, needs practice, over time
     final List<String> strong = [], improving = [], needs = [];
@@ -451,7 +451,7 @@ class _DevelopmentCardState extends State<DevelopmentCard> {
     w.add(const SizedBox(height: 6));
     w.add(_small('مراجعات مستحقة اليوم: ${_due()}', c: const Color(0xFFA7F3D0)));
     w.add(_small('واثق = ٧٠٪ صح فأكثر في يومين مختلفين. راسخ = واثق + فحص مستقل ناجح + يوم جيد بعد ٣ أيام أو أكثر. '
-        'هذه الحدود قرار تصميم (UNVERIFIED) مبني على فكرة التكرار المتباعد (S8, S9).'));
+        'هذه الحدود قرار تصميم (غير مُثبت) مبني على فكرة التكرار المتباعد (S8, S9).'));
 
     // Real-world activities
     w.add(_title('أنشطة حقيقية هذا الأسبوع'));

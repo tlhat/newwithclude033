@@ -52,7 +52,7 @@ const List<EducationalMasteryBadge> kEducationalMasteryBadges = [
   EducationalMasteryBadge(
     id: 'vocab_explorer',
     titleAr: 'مستكشف الكلمات والمفردات',
-    descriptionAr: 'التدرب على ٥ كلمات ومفردات عربية وإنجليزية',
+    descriptionAr: 'التدرب على ٥ كلمات ومفردات عربية',
     emoji: '📚',
     domainKey: 'letters_words',
     requiredThreshold: 5,
@@ -130,3 +130,16 @@ const List<EducationalMasteryBadge> kEducationalMasteryBadges = [
     requiredThreshold: 3,
   ),
 ];
+
+/// Arabic badge lookup by stored id. Unknown ids never show raw.
+EducationalMasteryBadge? badgeById(String id) {
+  for (final EducationalMasteryBadge b in kEducationalMasteryBadges) {
+    if (b.id == id) return b;
+  }
+  return null;
+}
+
+String badgeTitleAr(String id) => badgeById(id)?.titleAr ?? 'إنجاز جديد';
+
+/// "2026-11-25T..." -> "2026-11-25"
+String badgeDateShort(String iso) => iso.length >= 10 ? iso.substring(0, 10) : iso;

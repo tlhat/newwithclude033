@@ -40,7 +40,7 @@ class _HaneenKidsAppState extends State<HaneenKidsApp>
         final bool highContrast = activeChild?.highContrastMode ?? false;
 
         return MaterialApp(
-          title: 'Haneen Kids',
+          title: 'حنين كيدز',
           debugShowCheckedModeBanner: false,
           locale: widget.appState.localeController.uiLocale,
           supportedLocales: const [Locale('ar')],

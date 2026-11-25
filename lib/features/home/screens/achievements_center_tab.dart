@@ -142,17 +142,18 @@ class AchievementsCenterTab extends StatelessWidget {
                       bottom: AppDesignTokens.spaceXs,
                     ),
                     child: ListTile(
-                      leading: const Icon(
-                        Icons.workspace_premium_rounded,
-                        color: AppDesignTokens.rewardGold,
+                      leading: Text(
+                        badgeById(entry.key)?.emoji ?? '🏅',
+                        style: const TextStyle(fontSize: 28),
                       ),
                       title: Text(
-                        entry.key,
+                        badgeTitleAr(entry.key),
                         style: const TextStyle(fontWeight: FontWeight.bold),
                       ),
                       subtitle: Text(
-                        l10n.badgeUnlockedAt(entry.value.toString()),
+                        '${badgeById(entry.key)?.descriptionAr ?? ''}\n${l10n.badgeUnlockedAt(badgeDateShort(entry.value.toString()))}',
                       ),
+                      isThreeLine: true,
                     ),
                   ),
                 ),

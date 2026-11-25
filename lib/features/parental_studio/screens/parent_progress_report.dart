@@ -128,7 +128,7 @@ class ParentProgressReport extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  for (final a in child.unlockedAchievements.values.take(8))
+                  for (final a in child.unlockedAchievements.keys.take(8).map(badgeTitleAr))
                     Padding(
                       padding: const EdgeInsets.symmetric(vertical: 2),
                       child: Text('• $a'),

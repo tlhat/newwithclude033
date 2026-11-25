@@ -78,7 +78,7 @@ class SplashScreen extends StatelessWidget {
               const HaneenAppIconPreviewWidget(size: 96),
               const SizedBox(height: 18),
               Text(
-                'حنين كيدز (Haneen Kids)',
+                'حنين كيدز',
                 style: TextStyle(
                   fontSize: 26,
                   fontWeight: FontWeight.bold,

@@ -1032,7 +1032,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                       activeColor: const Color(0xFF6C63FF),
                       onChanged: (v) => widget.appState.setCompanionShopEnabled(v),
                       title: Text(
-                          'متجر تخصيص شخصية الطفل بالنجوم (Character Studio)',
+                          'متجر تخصيص شخصية الطفل بالنجوم ',
                           style: TextStyle(fontSize: 12)),
                       subtitle: Text(
                           'إتاحة فتح الملابس والإكسسوارات الإضافية بالنجوم المكتسبة (يمكنك تعطيله لتركيز الطفل)',

@@ -138,7 +138,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                     ),
                     const SizedBox(height: 14),
                     Text(
-                      'اختر الرمز التعبيري (Avatar):',
+                      'اختر الرمز التعبيري :',
                       style: TextStyle(fontSize: 13, color: Colors.white70),
                     ),
                     const SizedBox(height: 8),
