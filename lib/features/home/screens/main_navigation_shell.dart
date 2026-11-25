@@ -1,3 +1,4 @@
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/core/services/app_rating_service.dart';
 import 'package:haneen_kids_vod/features/home/screens/my_path_screen.dart';
 import 'package:flutter/material.dart';
@@ -36,6 +37,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
   @override
   void initState() {
     super.initState();
+    _loadPathBadge();
     _currentIndex = widget.initialDestination.index;
     WidgetsBinding.instance.addPostFrameCallback((_) {
       if (mounted) SectionIntroService.instance.playForTab(_currentIndex);
@@ -60,6 +62,22 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
   /// Every section change goes through here. The sections live in an
   /// IndexedStack, so a story keeps talking in the background unless we stop
   /// it: narration, speech and music are stopped when the section changes.
+  bool _showPathBadge = false;
+
+  Future<void> _loadPathBadge() async {
+    final p = await SharedPreferences.getInstance();
+    if (mounted && !(p.getBool('path_badge_seen') ?? false)) {
+      setState(() => _showPathBadge = true);
+    }
+  }
+
+  Future<void> _dismissPathBadge() async {
+    if (!_showPathBadge) return;
+    setState(() => _showPathBadge = false);
+    final p = await SharedPreferences.getInstance();
+    await p.setBool('path_badge_seen', true);
+  }
+
   void _selectIndex(int idx) {
     if (!mounted) return;
     if (idx == _currentIndex) {
@@ -214,13 +232,31 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
               heroTag: 'my_path_fab',
               onPressed: () {
                 CalmVoiceService.instance.stopSpeaking();
+                _dismissPathBadge();
                 Navigator.of(context).push(MaterialPageRoute(
                     builder: (_) => MyPathScreen(
                         appState: widget.appState,
                         onGoToTab: _selectIndex)));
               },
               icon: const Icon(Icons.explore_rounded),
-              label: Text('مساري'),
+              label: Row(mainAxisSize: MainAxisSize.min, children: [
+                const Text('مساري'),
+                if (_showPathBadge) ...[
+                  const SizedBox(width: 8),
+                  Container(
+                    padding:
+                        const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
+                    decoration: BoxDecoration(
+                        color: const Color(0xFFFDE68A),
+                        borderRadius: BorderRadius.circular(10)),
+                    child: const Text('اضغط هنا، مخصص ليك',
+                        style: TextStyle(
+                            fontSize: 11,
+                            fontWeight: FontWeight.w800,
+                            color: Color(0xFF78350F))),
+                  ),
+                ],
+              ]),
             )
           : null,
       body: IndexedStack(
