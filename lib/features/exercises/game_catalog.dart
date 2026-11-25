@@ -30,6 +30,22 @@ const List<ExerciseGameDef> kExerciseGames = [
   ExerciseGameDef('before_after', 'قبل وبعد الرقم', '↔️', 'ما الرقم قبل أو بعد؟', 0xFF14B8A6),
   ExerciseGameDef('even_odd', 'زوجي وفردي', '🎲', 'صنّف الأرقام زوجي أو فردي', 0xFF6366F1),
   ExerciseGameDef('money', 'الفلوس والعملة', '🪙', 'احسب الجنيهات والقروش', 0xFFF59E0B),
+  // ---- batch 2: logic, measuring, science
+  ExerciseGameDef('complete_pattern', 'أكمل النمط', '🔁', 'ما الشكل اللي بعد؟', 0xFF14B8A6),
+  ExerciseGameDef('odd_one', 'مين المختلف', '🕵️', 'اختر الشكل الغريب', 0xFFEF4444),
+  ExerciseGameDef('size_order', 'رتّب بالحجم', '📐', 'من الأصغر للأكبر', 0xFF6366F1),
+  ExerciseGameDef('color_mix', 'مزج الألوان', '🎨', 'أي لون يطلع من الخلط؟', 0xFFEC4899),
+  ExerciseGameDef('hidden_shapes', 'أشكال مخفية', '🔍', 'عُد الأشكال', 0xFFF59E0B),
+  ExerciseGameDef('mirror', 'المرآة والتماثل', '🪞', 'تماثل وانعكاس', 0xFF0EA5E9),
+  ExerciseGameDef('length', 'قياس الطول والوزن', '📏', 'أطول وأقصر وأثقل', 0xFF22C55E),
+  ExerciseGameDef('animal_home', 'بيت كل حيوان', '🏡', 'أين يعيش الحيوان؟', 0xFF10B981),
+  ExerciseGameDef('what_eats', 'إيه بياكل', '🥕', 'ماذا يأكل الحيوان؟', 0xFFF97316),
+  ExerciseGameDef('seasons', 'الفصول الأربعة', '🍂', 'تعرّف على الفصول', 0xFFA855F7),
+  ExerciseGameDef('weather_clothes', 'الطقس واللبس المناسب', '☂️', 'ماذا نلبس؟', 0xFF38BDF8),
+  ExerciseGameDef('jobs', 'المهن', '👩‍🚒', 'من يعمل ماذا؟', 0xFFDC2626),
+  ExerciseGameDef('transport', 'المواصلات', '🚌', 'وسائل المواصلات', 0xFF14B8A6),
+  ExerciseGameDef('fruit_veg', 'فواكه وخضار', '🍅', 'فاكهة ولا خضار؟', 0xFF84CC16),
+  ExerciseGameDef('five_senses', 'الحواس الخمس', '👁️', 'العين والأذن والأنف', 0xFF8B5CF6),
 ];
 
 final Set<String> kExerciseGameSkills = {
