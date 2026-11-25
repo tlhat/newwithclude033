@@ -34,6 +34,7 @@ class EtiquetteDrawingCanvasPainter extends CustomPainter {
     final Offset center = Offset(size.width / 2, size.height / 2);
     final double radius = min(size.width, size.height) * 0.34;
 
+    Path? region;
     switch (templateIndex % 8) {
       case 0:
         final Path heartPath = Path();
@@ -55,8 +56,10 @@ class EtiquetteDrawingCanvasPainter extends CustomPainter {
           center.dy + radius * 0.75,
         );
         canvas.drawPath(heartPath, guidePaint);
+        region = heartPath;
         break;
       case 1:
+        region = Path()..addOval(Rect.fromCircle(center: center, radius: radius));
         canvas.drawCircle(center, radius, guidePaint);
         canvas.drawCircle(
             Offset(center.dx - radius * 0.35, center.dy - radius * 0.25),
@@ -89,6 +92,7 @@ class EtiquetteDrawingCanvasPainter extends CustomPainter {
         }
         starPath.close();
         canvas.drawPath(starPath, guidePaint);
+        region = starPath;
         break;
       case 3:
         for (int i = 0; i < 6; i++) {
@@ -120,8 +124,10 @@ class EtiquetteDrawingCanvasPainter extends CustomPainter {
           ..lineTo(houseBody.right + 15, houseBody.top)
           ..close();
         canvas.drawPath(roof, guidePaint);
+        region = Path.combine(PathOperation.union, Path()..addRect(houseBody), roof);
         break;
       case 5:
+        region = Path()..addOval(Rect.fromCircle(center: center, radius: radius));
         canvas.drawCircle(center, radius, guidePaint);
         for (int i = 0; i < 8; i++) {
           final double angle = i * pi / 4;
@@ -145,6 +151,7 @@ class EtiquetteDrawingCanvasPainter extends CustomPainter {
           ..lineTo(center.dx + radius, center.dy + radius * 0.5)
           ..close();
         canvas.drawPath(crown, guidePaint);
+        region = crown;
         break;
       default:
         final Rect bookRect = Rect.fromCenter(
@@ -152,10 +159,10 @@ class EtiquetteDrawingCanvasPainter extends CustomPainter {
           width: radius * 1.7,
           height: radius * 1.2,
         );
-        canvas.drawRRect(
-          RRect.fromRectAndRadius(bookRect, const Radius.circular(12)),
-          guidePaint,
-        );
+        final RRect bookRR =
+            RRect.fromRectAndRadius(bookRect, const Radius.circular(12));
+        region = Path()..addRRect(bookRR);
+        canvas.drawRRect(bookRR, guidePaint);
         canvas.drawLine(
           Offset(center.dx, bookRect.top),
           Offset(center.dx, bookRect.bottom),
@@ -164,6 +171,8 @@ class EtiquetteDrawingCanvasPainter extends CustomPainter {
         break;
     }
 
+    canvas.save();
+    if (region != null) canvas.clipPath(region);
     for (final stroke in strokes) {
       if (stroke.points.isEmpty) continue;
       final Paint p = Paint()
@@ -198,6 +207,7 @@ class EtiquetteDrawingCanvasPainter extends CustomPainter {
       path.lineTo(pts.last.dx, pts.last.dy);
       canvas.drawPath(path, p);
     }
+    canvas.restore();
   }
 
   @override

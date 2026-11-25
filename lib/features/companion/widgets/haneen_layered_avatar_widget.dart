@@ -525,9 +525,18 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
                   // --- Layer 7+: Head Hierarchy (Neck connection pivot) ---
                   Positioned.fill(
                     child: Transform.translate(
-                      offset: Offset(0, breathDy * 0.6),
+                      offset: Offset(
+                          0,
+                          breathDy * 0.6 -
+                              (_isMouthOpen
+                                  ? _speechSnapshot.mouthOpen * widget.size * 0.012
+                                  : 0.0),
+                        ),
                       child: Transform.rotate(
-                        angle: headTilt,
+                        angle: headTilt +
+                            (_isMouthOpen
+                                ? _speechSnapshot.mouthOpen * 0.05
+                                : 0.0),
                         alignment: _neckPivot,
                         child: Stack(
                           children: [

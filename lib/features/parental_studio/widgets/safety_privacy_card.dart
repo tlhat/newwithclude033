@@ -4,7 +4,7 @@ import 'package:haneen_kids_vod/core/security/local_credential_security_service.
 
 /// Put your real contact email here before publishing. It is shown in the
 /// privacy policy screen.
-const String kPrivacyContactEmail = 'PUT_YOUR_EMAIL_HERE';
+const String kPrivacyContactEmail = 'tlhatmaher1893@gmail.com';
 const String kPrivacyPolicyDate = '2026-11-24';
 
 /// Shown at the top of the parent "account settings" tab:

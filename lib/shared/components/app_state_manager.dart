@@ -327,6 +327,7 @@ class AppStateManager extends ChangeNotifier {
     _refreshSmartVoiceAssistantSuggestion(speakAloud: false);
     _startScreenTimeTracker();
     _startRemoteLockWatcher();
+    applyDueReviews();
     isInitialized = true;
     notifyListeners();
 
@@ -2170,6 +2171,57 @@ class AppStateManager extends ChangeNotifier {
 
   /// Daily streak: call once when the child area opens. Returns the new streak
   /// length when today is a NEW day (and gives +1 star), otherwise 0.
+  // ------------------------------------------- spaced repetition (local)
+  static const List<int> _srDays = [1, 3, 7, 14];
+
+  Map<String, dynamic> _srLoad(String childId) {
+    try {
+      return jsonDecode(_prefs.getString('sr_$childId') ?? '{}')
+          as Map<String, dynamic>;
+    } catch (_) {
+      return <String, dynamic>{};
+    }
+  }
+
+  /// Wrong answer: review again tomorrow. Right answer: push the next review
+  /// further out (1, 3, 7, 14 days), then retire the lesson from the list.
+  void _recordReview(String childId, String lessonId, bool correct) {
+    final Map<String, dynamic> m = _srLoad(childId);
+    final Map<String, dynamic>? cur = m[lessonId] as Map<String, dynamic>?;
+    int step = correct ? ((cur?['step'] as int?) ?? -1) + 1 : 0;
+    if (correct && cur == null) step = 1; // first success: review in 3 days
+    if (step >= _srDays.length) {
+      m.remove(lessonId);
+    } else {
+      final DateTime due = DateTime.now().add(Duration(days: _srDays[step]));
+      m[lessonId] = {'step': step, 'due': due.toIso8601String()};
+    }
+    _prefs.setString('sr_$childId', jsonEncode(m));
+  }
+
+  /// Puts lessons whose review date has come back at the top of the child's
+  /// recommended list (the adaptive engine already puts these first).
+  void applyDueReviews() {
+    final child = currentAccount?.activeChild;
+    if (child == null) return;
+    final Map<String, dynamic> m = _srLoad(child.id);
+    final DateTime now = DateTime.now();
+    bool changed = false;
+    m.forEach((String id, dynamic v) {
+      final DateTime? due = DateTime.tryParse(((v as Map)['due'] ?? '').toString());
+      if (due != null &&
+          !due.isAfter(now) &&
+          !child.needsRemediationLessonIds.contains(id)) {
+        child.needsRemediationLessonIds.add(id);
+        changed = true;
+      }
+    });
+    if (changed) {
+      _saveAccounts();
+      notifyListeners();
+    }
+  }
+
   Future<int> claimDailyStreak() async {
     final child = currentAccount?.activeChild;
     if (child == null) return 0;
@@ -2515,6 +2567,7 @@ class AppStateManager extends ChangeNotifier {
 
     final bool masteredNow =
         updatedScore >= AdaptiveLearningEngine.kMasteryThresholdPercent;
+    _recordReview(child.id, lessonId, isCorrectAnswer);
     int awardedStars = 0;
 
     if (masteredNow) {
