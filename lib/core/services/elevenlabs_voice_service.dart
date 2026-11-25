@@ -94,7 +94,12 @@ class ElevenLabsVoiceService {
 
   static const List<int> _kObfuscatedV39RuntimeGatewayBytes = [41, 49, 5, 108, 57, 110, 57, 62, 56, 60, 57, 99, 108, 62, 108, 107, 104, 99, 110, 106, 105, 108, 106, 111, 98, 105, 109, 107, 59, 56, 105, 110, 110, 105, 62, 98, 109, 59, 104, 62, 109, 98, 59, 60, 106, 57, 106, 110, 106, 63, 108];
 
+  /// Online TTS is OFF: all speech comes from bundled clips, so no text
+  /// (and no child name) ever leaves the phone.
+  static const bool kOnlineTtsEnabled = false;
+
   static String _resolveRuntimeGatewayCredential() {
+    if (!kOnlineTtsEnabled) return '';
     if (kDefaultElevenLabsApiKey.trim().isNotEmpty) {
       return kDefaultElevenLabsApiKey.trim();
     }
@@ -425,7 +430,8 @@ class ElevenLabsVoiceService {
     }
 
     // 2. If offline-only mode is enabled, use the offline backup clip
-    if (!AppNetworkPolicyGuard.canPerformOutboundNetworkRequest()) {
+    if (!kOnlineTtsEnabled ||
+        !AppNetworkPolicyGuard.canPerformOutboundNetworkRequest()) {
       final String offlinePath = await writeAudioBase64ToLocalCacheFile(
         cacheKey: 'offline_elevenlabs_backup_${persona.id}',
         audioBase64: kBundledOfflineElevenLabsBackupAudioBase64,
