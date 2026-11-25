@@ -110,6 +110,25 @@ class EtiquetteDrawingCanvasPainter extends CustomPainter {
           Offset(center.dx, size.height - 20),
           guidePaint,
         );
+        Path flower = Path();
+        for (int i = 0; i < 6; i++) {
+          final double angle = i * pi / 3;
+          flower = Path.combine(
+              PathOperation.union,
+              flower,
+              Path()
+                ..addOval(Rect.fromCircle(
+                    center: Offset(center.dx + radius * 0.55 * cos(angle),
+                        center.dy + radius * 0.55 * sin(angle)),
+                    radius: radius * 0.38)));
+        }
+        flower = Path.combine(
+            PathOperation.union,
+            flower,
+            Path()
+              ..addRect(Rect.fromLTRB(center.dx - 8, center.dy + radius * 0.6,
+                  center.dx + 8, size.height - 20)));
+        region = flower;
         break;
       case 4:
         final Rect houseBody = Rect.fromCenter(

@@ -83,6 +83,13 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
   late AnimationController _blinkController;
   late Animation<double> _blinkAnim;
 
+  // One-shot body reactions: 'jump' (correct), 'shake' (wrong), 'tilt',
+  // 'hop' (idle variety). Driven by _reactController (0..1).
+  late AnimationController _reactController;
+  String _reactKind = 'none';
+  Timer? _idleTimer;
+  int _lastIdle = 0;
+
   late AnimationController _gazeController;
   Offset _currentGaze = Offset.zero;
   Offset _targetGaze = Offset.zero;
@@ -177,6 +184,10 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
     );
     _scheduleNextBlink();
 
+    _reactController = AnimationController(
+        vsync: this, duration: const Duration(milliseconds: 1100));
+    _scheduleIdleGesture();
+
     // 7. Pupil gaze drift controller: 240ms transition to new fixation target
     _gazeController = AnimationController(
       vsync: this,
@@ -191,6 +202,18 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
   @override
   void didUpdateWidget(covariant HaneenLayeredAvatarWidget oldWidget) {
     super.didUpdateWidget(oldWidget);
+
+    if (widget.isCelebrating && !oldWidget.isCelebrating) _react('jump');
+    if (widget.expressionOverride != oldWidget.expressionOverride) {
+      final CompanionFaceExpression? x = widget.expressionOverride;
+      if (x == CompanionFaceExpression.excited ||
+          x == CompanionFaceExpression.happy) {
+        _react('jump');
+      } else if (x == CompanionFaceExpression.shy ||
+          x == CompanionFaceExpression.thinking) {
+        _react('shake');
+      }
+    }
 
     if (oldWidget.speechCoordinator != widget.speechCoordinator) {
       oldWidget.speechCoordinator?.removeListener(_onSpeechSnapshotChanged);
@@ -226,15 +249,46 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
     }
   }
 
+  void _react(String kind) {
+    if (!mounted) return;
+    _reactKind = kind;
+    _reactController.forward(from: 0.0);
+  }
+
+  void _scheduleIdleGesture() {
+    _idleTimer?.cancel();
+    _idleTimer = Timer(Duration(seconds: 6 + _random.nextInt(6)), () {
+      if (!mounted) return;
+      if (_reactController.isDismissed || _reactController.isCompleted) {
+        const List<String> kinds = ['tilt', 'hop', 'wave', 'tilt'];
+        _lastIdle = (_lastIdle + 1 + _random.nextInt(3)) % kinds.length;
+        _react(kinds[_lastIdle]);
+      }
+      _scheduleIdleGesture();
+    });
+  }
+
   void _scheduleNextBlink() {
     _blinkTimer?.cancel();
-    final int delayMs = 3200 + _random.nextInt(1800);
+    final int delayMs = 1800 + _random.nextInt(2400);
     _blinkTimer = Timer(Duration(milliseconds: delayMs), () {
       if (mounted && _blinkController.isDismissed) {
         _blinkController.forward().then((_) {
           if (mounted) {
             _blinkController.reverse().then((_) {
-              if (mounted) _scheduleNextBlink();
+              if (!mounted) return;
+              if (_random.nextInt(4) == 0) {
+                // double blink
+                _blinkController.forward().then((_) {
+                  if (mounted) {
+                    _blinkController.reverse().then((_) {
+                      if (mounted) _scheduleNextBlink();
+                    });
+                  }
+                });
+              } else {
+                _scheduleNextBlink();
+              }
             });
           }
         });
@@ -272,6 +326,8 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
     widget.speechCoordinator?.removeListener(_onSpeechSnapshotChanged);
     _blinkTimer?.cancel();
     _gazeTimer?.cancel();
+    _idleTimer?.cancel();
+    _reactController.dispose();
     _breathingController.dispose();
     _headController.dispose();
     _armController.dispose();
@@ -396,7 +452,13 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
       );
     }
 
-    return RepaintBoundary(
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: () {
+        _react(_random.nextBool() ? 'jump' : 'wave');
+        widget.onTap?.call();
+      },
+      child: RepaintBoundary(
       key: const ValueKey('layered_avatar_rig'),
       child: SizedBox(
         width: widget.size,
@@ -412,6 +474,7 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
               _hairAnim,
               _blinkAnim,
               _gazeController,
+              _reactController,
             ]),
             builder: (context, _) {
               // Calculate active animation offsets
@@ -426,6 +489,39 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
               final double rightArmRot = disableAnimations
                   ? 0.0
                   : (waving ? _waveAnim.value : -_armAnim.value);
+              final double rt = disableAnimations ? 0.0 : _reactController.value;
+              final bool reacting = rt > 0.0 && rt < 1.0;
+              final double fade = reacting ? (1.0 - rt) : 0.0;
+              double bodyDy = 0.0, bodyDx = 0.0, scaleY = 1.0;
+              double headExtra = 0.0, armUp = 0.0;
+              if (reacting) {
+                switch (_reactKind) {
+                  case 'jump':
+                    bodyDy = -math.sin(rt * math.pi * 2).abs() * widget.size * 0.09 * fade;
+                    scaleY = 1.0 + math.sin(rt * math.pi * 4) * 0.025 * fade;
+                    armUp = math.sin(rt * math.pi) * 1.3;
+                    headExtra = math.sin(rt * math.pi * 3) * 0.06 * fade;
+                    break;
+                  case 'shake':
+                    headExtra = math.sin(rt * math.pi * 6) * 0.14 * fade;
+                    bodyDy = widget.size * 0.012 * math.sin(rt * math.pi);
+                    bodyDx = math.sin(rt * math.pi * 6) * widget.size * 0.008 * fade;
+                    break;
+                  case 'hop':
+                    bodyDy = -math.sin(rt * math.pi).abs() * widget.size * 0.05;
+                    scaleY = 1.0 - math.sin(rt * math.pi * 2) * 0.02;
+                    break;
+                  case 'wave':
+                    armUp = math.sin(rt * math.pi) * 1.1;
+                    headExtra = math.sin(rt * math.pi) * 0.05;
+                    break;
+                  default: // tilt
+                    headExtra = math.sin(rt * math.pi) * 0.16;
+                    bodyDx = math.sin(rt * math.pi) * widget.size * 0.012;
+                }
+              }
+              // slow body sway while idle
+              bodyDx += disableAnimations ? 0.0 : headTilt * widget.size * 0.12;
               final double hairSway =
                   disableAnimations ? 0.0 : _hairAnim.value;
 
@@ -447,7 +543,12 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
               final bool hasGlasses = accessory == 'glasses';
               final bool hasCrown = accessory == 'crown';
 
-              return Stack(
+              return Transform.translate(
+                offset: Offset(bodyDx, bodyDy),
+                child: Transform.scale(
+                  scaleY: scaleY,
+                  alignment: Alignment.bottomCenter,
+                  child: Stack(
                 clipBehavior: Clip.none,
                 children: [
                   // --- Layer 1: Back Accessories (Wings) ---
@@ -476,7 +577,7 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
                   // --- Layer 3: Left Arm (Shoulder pivot) ---
                   Positioned.fill(
                     child: Transform.rotate(
-                      angle: leftArmRot,
+                      angle: leftArmRot - armUp,
                       alignment: _leftShoulderPivot,
                       child: _buildImage(
                         _partPath('arm_left.png'),
@@ -488,7 +589,7 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
                   // --- Layer 4: Right Arm (Shoulder pivot + Waving) ---
                   Positioned.fill(
                     child: Transform.rotate(
-                      angle: rightArmRot,
+                      angle: rightArmRot + armUp,
                       alignment: _rightShoulderPivot,
                       child: _buildImage(
                         _partPath('arm_right.png'),
@@ -533,7 +634,7 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
                                   : 0.0),
                         ),
                       child: Transform.rotate(
-                        angle: headTilt +
+                        angle: headTilt + headExtra +
                             (_isMouthOpen
                                 ? _speechSnapshot.mouthOpen * 0.05
                                 : 0.0),
@@ -646,10 +747,13 @@ class HaneenLayeredAvatarWidgetState extends State<HaneenLayeredAvatarWidget>
                     ),
                   ),
                 ],
+              ),
+                ),
               );
             },
           ),
         ),
+      ),
       ),
     );
   }
