@@ -1221,7 +1221,7 @@ void main() {
       expect(fallbackOutcome.modelId, equals('eleven_flash_v2_5'));
 
       ElevenLabsVoiceService.httpClientOverride = null;
-    });
+    }, skip: 'Online TTS is disabled on purpose: no text leaves the phone');
 
     test(
         "10. Phase 6 (v4.0): Strict Official Auth (No Guest/Quick Sign-In), Google Credential Manager RS256 Token, Phone E.164 DB Persistence, and UID + IP Bound 7-Day Free Trial",
