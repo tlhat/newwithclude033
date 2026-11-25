@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
+import 'package:haneen_kids_vod/features/billing/online_gate.dart';
 
 class HaneenKidsApp extends StatefulWidget {
   final AppStateManager appState;
@@ -57,9 +58,11 @@ class _HaneenKidsAppState extends State<HaneenKidsApp>
             );
             return MediaQuery(
               data: mediaQuery.copyWith(textScaler: clampedScaler),
-              child: StarRewardHost(
-                appState: widget.appState,
-                child: child!,
+              child: OnlineGate(
+                child: StarRewardHost(
+                  appState: widget.appState,
+                  child: child!,
+                ),
               ),
             );
           },

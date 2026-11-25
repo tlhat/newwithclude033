@@ -24,6 +24,7 @@ class BillingPlan {
 }
 
 const String kPlanMonthly = 'haneen_monthly';
+const String kPlanQuarterly = 'haneen_quarterly';
 const String kPlanAnnual = 'haneen_annual';
 const String kPlanFamilyAnnual = 'haneen_family_annual';
 
@@ -40,6 +41,17 @@ const List<BillingPlan> kBillingPlans = [
       'التكيف مع مستوى الطفل.',
       'تقارير تقدم مفصلة.',
       'ملف طفل واحد.',
+    ],
+  ),
+  BillingPlan(
+    id: kPlanQuarterly,
+    title: 'الخطة الربع سنوية (٣ شهور)',
+    fallbackPrice: '١٩٩ جنيهًا',
+    period: 'كل ٣ شهور',
+    maxChildren: 1,
+    features: [
+      'جميع مميزات الخطة الشهرية.',
+      'توفير مقارنة بالاشتراك الشهري.',
     ],
   ),
   BillingPlan(
