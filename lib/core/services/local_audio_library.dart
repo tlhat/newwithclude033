@@ -102,7 +102,7 @@ class LocalAudioLibrary {
       final Directory dir =
           Directory('${Directory.systemTemp.path}/haneen_local_audio');
       if (!dir.existsSync()) dir.createSync(recursive: true);
-      final File f = File('${dir.path}/$key.mp3');
+      final File f = File('${dir.path}/$key${asset.endsWith('.ogg') ? '.ogg' : '.mp3'}');
       if (!f.existsSync() || f.lengthSync() != data.lengthInBytes) {
         await f.writeAsBytes(
           data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes),

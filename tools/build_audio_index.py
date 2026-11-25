@@ -25,8 +25,9 @@ def key(persona, text):
 manifest = json.load(open(sys.argv[1] if len(sys.argv) > 1 else os.path.join(ROOT, 'tools', 'audio_manifest.json'), encoding='utf-8'))
 index, dirs, missing = {}, set(), 0
 for m in manifest:
-    rel = f"assets/audio/{m['persona']}/{m['feature']}/{m['id']}.mp3"
-    if not os.path.exists(os.path.join(ROOT, rel)):
+    base = f"assets/audio/{m['persona']}/{m['feature']}/{m['id']}"
+    rel = next((base + e for e in ('.ogg', '.mp3') if os.path.exists(os.path.join(ROOT, base + e))), None)
+    if rel is None:
         missing += 1
         continue
     index[key(m['persona'], m['text'])] = rel
