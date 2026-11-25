@@ -463,6 +463,18 @@ class BedtimeStoryScreen extends StatefulWidget {
 
 class _BedtimeState extends State<BedtimeStoryScreen> {
   int _i = 0;
+
+  int get _storyNo => kBedtimeStories.indexWhere((s) => identical(s, widget.story) || s.join() == widget.story.join());
+
+  void _say() => GuideVoice.instance.play('bed_${_storyNo + 1}_${_i + 1}', widget.story[_i]);
+
+  @override
+  void initState() {
+    super.initState();
+    GuideVoice.instance.play('bed_start', GuideVoice.bedtimeStart).then((_) {
+      if (mounted) _say();
+    });
+  }
   @override
   Widget build(BuildContext context) {
     final double dim = (_i / max(1, widget.story.length - 1)).clamp(0.0, 1.0);
@@ -490,7 +502,10 @@ class _BedtimeState extends State<BedtimeStoryScreen> {
               KidButton(
                   label: 'كمّل',
                   color: Colors.white24,
-                  onPressed: () => setState(() => _i++))
+                  onPressed: () {
+                    setState(() => _i++);
+                    _say();
+                  })
             else
               Text('تصبح على خير 💤', style: TextStyle(color: fg, fontSize: 22)),
           ]),
@@ -602,8 +617,22 @@ class _ScreenFreeState extends State<ScreenFreeQuizCard> {
           .where((e) => spokenAnswer(e) != null)
           .toList()
         ..shuffle(_r);
-      if (mounted) setState(() => _bank = all);
+      if (mounted) {
+        setState(() => _bank = all);
+        _sayQ();
+      }
     });
+  }
+
+  void _sayQ() {
+    if (_bank.isEmpty) return;
+    final Exercise e = _bank[_i];
+    GuideVoice.instance.play('oral_${e.id}_q', oralSpeech(e));
+  }
+
+  void _sayA() {
+    final Exercise e = _bank[_i];
+    GuideVoice.instance.play('oral_${e.id}_a', 'الإجابة هي ${spokenAnswer(e)}.');
   }
 
   Future<void> _mark(bool ok) async {
@@ -616,6 +645,7 @@ class _ScreenFreeState extends State<ScreenFreeQuizCard> {
       _i = (_i + 1) % _bank.length;
       _show = false;
     });
+    _sayQ();
   }
 
   @override
@@ -636,7 +666,10 @@ class _ScreenFreeState extends State<ScreenFreeQuizCard> {
         Text('الإجابة: ${spokenAnswer(e)}',
             style: const TextStyle(color: Color(0xFFA7F3D0), fontSize: 22, fontWeight: FontWeight.w800))
       else
-        KidButton(label: 'أظهر الإجابة', color: KidTheme.surfaceHigh, onPressed: () => setState(() => _show = true)),
+        KidButton(label: 'أظهر الإجابة', color: KidTheme.surfaceHigh, onPressed: () {
+          setState(() => _show = true);
+          _sayA();
+        }),
       const SizedBox(height: 10),
       Wrap(spacing: 12, children: [
         KidButton(label: 'صح ✅', onPressed: () => _mark(true)),

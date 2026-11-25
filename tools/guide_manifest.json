@@ -1,0 +1,8514 @@
+[
+ {
+  "id": "gv_right_1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_right",
+  "text": "برافو عليك! إجابة صح."
+ },
+ {
+  "id": "gv_right_2",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_right",
+  "text": "ممتاز! إنت شاطر جداً."
+ },
+ {
+  "id": "gv_right_3",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_right",
+  "text": "أحسنت! كمّل كده."
+ },
+ {
+  "id": "gv_right_4",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_right",
+  "text": "إيه الحلاوة دي! صح تمام."
+ },
+ {
+  "id": "gv_right_5",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_right",
+  "text": "يا سلام! إنت بتفهم بسرعة."
+ },
+ {
+  "id": "gv_right_6",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_right",
+  "text": "صح! أنا فخورة بيك."
+ },
+ {
+  "id": "gv_right_7",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_right",
+  "text": "عظيم! خدت نجمة."
+ },
+ {
+  "id": "gv_right_8",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_right",
+  "text": "تمام التمام! يلا اللي بعده."
+ },
+ {
+  "id": "gv_wrong_1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_wrong",
+  "text": "مش مشكلة، جرّب تاني."
+ },
+ {
+  "id": "gv_wrong_2",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_wrong",
+  "text": "قريب! فكّر شوية وجرّب كمان مرة."
+ },
+ {
+  "id": "gv_wrong_3",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_wrong",
+  "text": "ولا يهمك، الغلط بيعلّمنا. حاول تاني."
+ },
+ {
+  "id": "gv_wrong_4",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_wrong",
+  "text": "بالراحة، بص كويس وجرّب تاني."
+ },
+ {
+  "id": "gv_wrong_5",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_wrong",
+  "text": "تقريباً! إنت تقدر."
+ },
+ {
+  "id": "gv_wrong_6",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_wrong",
+  "text": "مش دي، بس إنت قريب. جرّب تاني."
+ },
+ {
+  "id": "gi_letter_catcher",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نصطاد الحروف! بص على الحرف المطلوب، ودوس عليه قبل ما ينزل."
+ },
+ {
+  "id": "gi_clock_set",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نظبط الساعة! حرّك العقارب لحد ما الساعة تبقى على الوقت المكتوب."
+ },
+ {
+  "id": "gi_shadow_match",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "مين صاحب الظل؟ بص على الظل الأسود، واختار الصورة اللي تشبهه."
+ },
+ {
+  "id": "gi_slide_puzzle",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "بازل الأرقام! حرّك القطع لحد ما تترتب من واحد لتمانية."
+ },
+ {
+  "id": "gi_maze",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "المتاهة! ودّي حنين للنجمة. حرّك صباعك في الطريق وخلّي بالك من الحيطان."
+ },
+ {
+  "id": "gi_stop_go",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "قف وامشِ! لما تشوف الأخضر دوس بسرعة، ولما تشوف الأحمر استنى ولا تدوس."
+ },
+ {
+  "id": "gi_rule_switch",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "غيّر القاعدة! مرة نختار باللون ومرة بالشكل. اسمع القاعدة وبص كويس."
+ },
+ {
+  "id": "gi_draw_imagine",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "ارسم وتخيّل! ارسم اللي في خيالك بصباعك، وأنا هستنى أشوفه."
+ },
+ {
+  "id": "gi_daily_challenge",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "تحدي اليوم! خمس أسئلة صغيرة، جاوب عليهم واحد واحد."
+ },
+ {
+  "id": "gi_haneen_house",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "ده بيت حنين! اختار حاجة بنجومك وزيّن بيتنا."
+ },
+ {
+  "id": "gi_haneen_pet",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "ده الكتكوت بتاعنا! اهتم بيه وهو هيكبر كل يوم."
+ },
+ {
+  "id": "gi_sticker_album",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "ألبوم الملصقات! هنا كل الملصقات والجوائز اللي جمعتها."
+ },
+ {
+  "id": "gi_certificate",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "دي شهادة التقدير بتاعتك! إنت تعبت وتستاهل."
+ },
+ {
+  "id": "gi_bedtime",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نسمع حدوتة هادية قبل النوم. غمّض عينيك واسمع."
+ },
+ {
+  "id": "gi_dad_voice",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "صوت بابا بيحكي! سجّل حدوتة بصوتك، وتقدر تسمعها أي وقت."
+ },
+ {
+  "id": "gi_screen_free",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "وضع بدون شاشة! ماما أو بابا يسمعوا معاك، وإنت تجاوب بصوتك."
+ },
+ {
+  "id": "gi_plant_care",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "اعتني بالنبتة! اسقيها وحطها في الشمس عشان تكبر."
+ },
+ {
+  "id": "bed_start",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_intro",
+  "text": "اسمع الحدوتة وإنت مرتاح، وأنا هحكيها لك."
+ },
+ {
+  "id": "gi_ex_number_line",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب خط الأعداد. حرّك النقطة على الرقم الصح."
+ },
+ {
+  "id": "gi_ex_fill_blank",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب املأ الفراغ. اختر الكلمة الناقصة."
+ },
+ {
+  "id": "gi_ex_multi_select",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب اختر كل الصح. فيه أكتر من إجابة صحيحة."
+ },
+ {
+  "id": "gi_ex_grid_points",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب أين النقطة؟. اضغط على المكان الصح في الشبكة."
+ },
+ {
+  "id": "gi_ex_bar_chart",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب ارسم الأعمدة. ارفع الأعمدة للعدد المطلوب."
+ },
+ {
+  "id": "gi_ex_missing_letter",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب حرف ناقص. ما الحرف الناقص في الكلمة."
+ },
+ {
+  "id": "gi_ex_build_word",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب ركّب الكلمة. رتّب الحروف لتكوّن الكلمة."
+ },
+ {
+  "id": "gi_ex_same_start",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب نفس البداية. كلمات تبدأ بنفس الحرف."
+ },
+ {
+  "id": "gi_ex_same_end",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب نفس النهاية. كلمات تنتهي بنفس الحرف."
+ },
+ {
+  "id": "gi_ex_pic_word",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب وصّل الصورة بكلمتها. وصّل كل صورة باسمها."
+ },
+ {
+  "id": "gi_ex_scrambled",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب حروف مبعثرة. رتّب الحروف المبعثرة."
+ },
+ {
+  "id": "gi_ex_harakat",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب الفتحة والضمة والكسرة. اعرف حركة الحرف."
+ },
+ {
+  "id": "gi_ex_rhyme",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب قافية. ما الكلمة التي تتقفّى."
+ },
+ {
+  "id": "gi_ex_bigger_smaller",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب أكبر وأصغر. اختر الرقم الأكبر أو الأصغر."
+ },
+ {
+  "id": "gi_ex_missing_number",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب الرقم الناقص. أكمل تسلسل الأرقام."
+ },
+ {
+  "id": "gi_ex_add_pics",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب جمع بالصور. اجمع الصور."
+ },
+ {
+  "id": "gi_ex_subtract_apples",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب طرح بالتفاح. حنين بتاكل تفاح، كام فاضل."
+ },
+ {
+  "id": "gi_ex_before_after",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب قبل وبعد الرقم. ما الرقم قبل أو بعد."
+ },
+ {
+  "id": "gi_ex_even_odd",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب زوجي وفردي. صنّف الأرقام زوجي أو فردي."
+ },
+ {
+  "id": "gi_ex_money",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب الفلوس والعملة. احسب الجنيهات والقروش."
+ },
+ {
+  "id": "gi_ex_complete_pattern",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب أكمل النمط. ما الشكل اللي بعد."
+ },
+ {
+  "id": "gi_ex_odd_one",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب مين المختلف. اختر الشكل الغريب."
+ },
+ {
+  "id": "gi_ex_size_order",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب رتّب بالحجم. من الأصغر للأكبر."
+ },
+ {
+  "id": "gi_ex_color_mix",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب مزج الألوان. أي لون يطلع من الخلط."
+ },
+ {
+  "id": "gi_ex_hidden_shapes",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب أشكال مخفية. عُد الأشكال."
+ },
+ {
+  "id": "gi_ex_mirror",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب المرآة والتماثل. تماثل وانعكاس."
+ },
+ {
+  "id": "gi_ex_length",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب قياس الطول والوزن. أطول وأقصر وأثقل."
+ },
+ {
+  "id": "gi_ex_animal_home",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب بيت كل حيوان. أين يعيش الحيوان."
+ },
+ {
+  "id": "gi_ex_what_eats",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب إيه بياكل. ماذا يأكل الحيوان."
+ },
+ {
+  "id": "gi_ex_seasons",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب الفصول الأربعة. تعرّف على الفصول."
+ },
+ {
+  "id": "gi_ex_weather_clothes",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب الطقس واللبس المناسب. ماذا نلبس."
+ },
+ {
+  "id": "gi_ex_jobs",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب المهن. من يعمل ماذا."
+ },
+ {
+  "id": "gi_ex_transport",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب المواصلات. وسائل المواصلات."
+ },
+ {
+  "id": "gi_ex_fruit_veg",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب فواكه وخضار. فاكهة ولا خضار."
+ },
+ {
+  "id": "gi_ex_five_senses",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب الحواس الخمس. العين والأذن والأنف."
+ },
+ {
+  "id": "gi_ex_first_letter",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب الحرف الأول. أي حرف يبدأ به الاسم."
+ },
+ {
+  "id": "gi_ex_day_routine",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب رتّب روتين اليوم. رتّب أحداث اليوم."
+ },
+ {
+  "id": "gi_ex_right_wrong",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب صح ولا غلط في الآداب. تصرفات جميلة وغير جميلة."
+ },
+ {
+  "id": "gi_ex_teeth",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب تنضيف الأسنان. خطوات غسل الأسنان."
+ },
+ {
+  "id": "gi_ex_tidy_room",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب رتّب الأوضة. حط كل حاجة في مكانها."
+ },
+ {
+  "id": "gi_ex_emotions",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب المشاعر. اختار الوش المناسب للإحساس."
+ },
+ {
+  "id": "gi_ex_emotions_choice",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب تصرّف مع المشاعر. ماذا نفعل."
+ },
+ {
+  "id": "gi_ex_story_order",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب رتّب أحداث القصة. أي حدث أولا."
+ },
+ {
+  "id": "gi_ex_road_safety",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب سلامة الطريق. ازاي نعدّي بأمان."
+ },
+ {
+  "id": "gi_ex_wash_hands",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب غسل الإيدين. خطوات غسل الإيدين."
+ },
+ {
+  "id": "gi_ex_please_thanks",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب من فضلك وشكراً. كلمات جميلة."
+ },
+ {
+  "id": "gi_ex_sharing",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "game_intro",
+  "text": "يلا نلعب المشاركة والتقسيم. نقسم بالتساوي."
+ },
+ {
+  "id": "bed_1_1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "في غابة هادية، كان فيه أرنوب صغير اسمه نور."
+ },
+ {
+  "id": "bed_1_2",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "في آخر النهار، قال نور: الشمس بتنام، وأنا كمان هنام."
+ },
+ {
+  "id": "bed_1_3",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "مشى نور على أطراف صوابعه، ومرّ على صاحبه الدب وقال له: تصبح على خير."
+ },
+ {
+  "id": "bed_1_4",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "والعصافير سكتت، والنجوم طلعت واحدة واحدة."
+ },
+ {
+  "id": "bed_1_5",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "دخل نور بيته الدافي، وحط راسه على الوسادة الناعمة."
+ },
+ {
+  "id": "bed_1_6",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "أخد نفس طويل، وغمّض عينيه، ونام. تصبح على خير."
+ },
+ {
+  "id": "bed_2_1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "كان فيه قمر صغير بيحب يحرس الأطفال بالليل."
+ },
+ {
+  "id": "bed_2_2",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "كل ما طفل ينام، القمر يبعتله شعاع نور ناعم."
+ },
+ {
+  "id": "bed_2_3",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "الشعاع بيقول: نام مطمّن، أنا هنا."
+ },
+ {
+  "id": "bed_2_4",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "والأحلام الجميلة بتيجي على ضهر السحاب."
+ },
+ {
+  "id": "bed_2_5",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "وفي الصبح، الشمس بتيجي وتقول: صباح الخير. تصبح على خير."
+ },
+ {
+  "id": "bed_3_1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "السلحفاة بطيئة بس بتوصل دايماً."
+ },
+ {
+  "id": "bed_3_2",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "في ليلة، قالت السلحفاة: هروح أنام في بيتي الصغير."
+ },
+ {
+  "id": "bed_3_3",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "مشيت خطوة خطوة، وكل خطوة بتقول: هدوء، هدوء."
+ },
+ {
+  "id": "bed_3_4",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "وصلت بيتها، وسحبت راسها جوه الصدفة الدافية."
+ },
+ {
+  "id": "bed_3_5",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "story_page",
+  "text": "وسمعت صوت الريح الخفيف، وناميت. تصبح على خير."
+ },
+ {
+  "id": "ex_c1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي واحد فيه ٣ تفاحات؟"
+ },
+ {
+  "id": "ex_c1_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عُد التفاح واحد واحد."
+ },
+ {
+  "id": "ex_c1_ok",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_right",
+  "text": "برافو، ٣ تفاحات!"
+ },
+ {
+  "id": "ex_c1_no",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_wrong",
+  "text": "قريب، عُد تاني."
+ },
+ {
+  "id": "oral_c1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ."
+ },
+ {
+  "id": "ex_c2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي حيوان بيطير؟"
+ },
+ {
+  "id": "ex_c2_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "بيطير بجناحاته في السما."
+ },
+ {
+  "id": "ex_n1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٢ ٣ ؟"
+ },
+ {
+  "id": "ex_n1_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٢ وعُد ٣ أرقام بعدها."
+ },
+ {
+  "id": "ex_n1_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "٢، ٣، ٤، ٥"
+ },
+ {
+  "id": "oral_n1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي 5."
+ },
+ {
+  "id": "ex_n2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٩ - ٤ ؟"
+ },
+ {
+  "id": "ex_n2_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "شيل ٤ من ٩."
+ },
+ {
+  "id": "ex_o1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب الأرقام من الأصغر للأكبر"
+ },
+ {
+  "id": "ex_o1_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ بأصغر رقم."
+ },
+ {
+  "id": "ex_o2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب اليوم: صحيان، فطار، مدرسة"
+ },
+ {
+  "id": "ex_o2_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "إيه أول حاجة بتعملها الصبح؟"
+ },
+ {
+  "id": "ex_m1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "وصّل الحيوان بصوته"
+ },
+ {
+  "id": "ex_m1_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "القطة بتقول مواء."
+ },
+ {
+  "id": "ex_k1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حط كل حاجة في مكانها"
+ },
+ {
+  "id": "ex_k1_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الفاكهة بناكلها، والعربية بنركبها."
+ },
+ {
+  "id": "ex_n3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٦ ٧ ؟"
+ },
+ {
+  "id": "ex_n3_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "اجمع ٦ وكمّل عُد ٧."
+ },
+ {
+  "id": "ex_n3_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "٦ ٤ ١٠ وفاضل ٣."
+ },
+ {
+  "id": "oral_n3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي 13."
+ },
+ {
+  "id": "ex_n4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "١٥ - ٨ ؟"
+ },
+ {
+  "id": "ex_n4_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "شيل ٨ من ١٥ على مرتين."
+ },
+ {
+  "id": "oral_n4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي 7."
+ },
+ {
+  "id": "ex_o3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب من الأكبر للأصغر"
+ },
+ {
+  "id": "ex_o3_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ بأكبر رقم."
+ },
+ {
+  "id": "ex_c3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي رقم أكبر؟"
+ },
+ {
+  "id": "ex_c3_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "قارن الرقمين."
+ },
+ {
+  "id": "oral_c3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أكبر؟ الاختيارات: ١٢، ٢١، ١٠."
+ },
+ {
+  "id": "oral_c3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٢١."
+ },
+ {
+  "id": "ex_k2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حيوانات في البر والبحر"
+ },
+ {
+  "id": "ex_k2_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "السمك بيعيش في الماء."
+ },
+ {
+  "id": "ex_m2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "وصّل الشكل باسمه"
+ },
+ {
+  "id": "ex_m2_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الدايرة مستديرة."
+ },
+ {
+  "id": "ex_add0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "١ ١ ؟"
+ },
+ {
+  "id": "ex_add0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عُد على صوابعك."
+ },
+ {
+  "id": "ex_add0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ١ وكمّل عُد ١."
+ },
+ {
+  "id": "oral_add0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي 2."
+ },
+ {
+  "id": "ex_add1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٢ ١ ؟"
+ },
+ {
+  "id": "ex_add1_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٢ وكمّل عُد ١."
+ },
+ {
+  "id": "oral_add1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي 3."
+ },
+ {
+  "id": "ex_add2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "١ ٣ ؟"
+ },
+ {
+  "id": "ex_add2_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٣ وكمّل عُد ١."
+ },
+ {
+  "id": "oral_add2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي 4."
+ },
+ {
+  "id": "ex_add3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٣ ٢ ؟"
+ },
+ {
+  "id": "ex_add3_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٣ وكمّل عُد ٢."
+ },
+ {
+  "id": "ex_add4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٤ ١ ؟"
+ },
+ {
+  "id": "ex_add4_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٤ وكمّل عُد ١."
+ },
+ {
+  "id": "ex_add5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٢ ٢ ؟"
+ },
+ {
+  "id": "ex_add5_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٢ وكمّل عُد ٢."
+ },
+ {
+  "id": "ex_add6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٥ ٣ ؟"
+ },
+ {
+  "id": "ex_add6_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٥ وكمّل عُد ٣."
+ },
+ {
+  "id": "oral_add6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي 8."
+ },
+ {
+  "id": "ex_add7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٦ ٢ ؟"
+ },
+ {
+  "id": "ex_add7_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٦ وكمّل عُد ٢."
+ },
+ {
+  "id": "ex_add8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٤ ٥ ؟"
+ },
+ {
+  "id": "ex_add8_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٥ وكمّل عُد ٤."
+ },
+ {
+  "id": "oral_add8_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي 9."
+ },
+ {
+  "id": "ex_add9_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٧ ٣ ؟"
+ },
+ {
+  "id": "ex_add9_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٧ وكمّل عُد ٣."
+ },
+ {
+  "id": "oral_add9_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي 10."
+ },
+ {
+  "id": "ex_add10_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٨ ٤ ؟"
+ },
+ {
+  "id": "ex_add10_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٨ وكمّل عُد ٤."
+ },
+ {
+  "id": "oral_add10_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي 12."
+ },
+ {
+  "id": "ex_add11_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٩ ٦ ؟"
+ },
+ {
+  "id": "ex_add11_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٩ وكمّل عُد ٦."
+ },
+ {
+  "id": "oral_add11_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي 15."
+ },
+ {
+  "id": "ex_add12_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "١٢ ٥ ؟"
+ },
+ {
+  "id": "ex_add12_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ١٢ وكمّل عُد ٥."
+ },
+ {
+  "id": "oral_add12_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي 17."
+ },
+ {
+  "id": "ex_add13_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٨ ٨ ؟"
+ },
+ {
+  "id": "ex_add13_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٨ وكمّل عُد ٨."
+ },
+ {
+  "id": "oral_add13_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي 16."
+ },
+ {
+  "id": "ex_add14_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "١٥ ٤ ؟"
+ },
+ {
+  "id": "ex_add14_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ١٥ وكمّل عُد ٤."
+ },
+ {
+  "id": "oral_add14_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي 19."
+ },
+ {
+  "id": "ex_sub0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٣ - ١ ؟"
+ },
+ {
+  "id": "ex_sub0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "شيل ١ من ٣."
+ },
+ {
+  "id": "ex_sub0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عُد لورا من الرقم الكبير."
+ },
+ {
+  "id": "ex_sub1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٤ - ٢ ؟"
+ },
+ {
+  "id": "ex_sub1_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "شيل ٢ من ٤."
+ },
+ {
+  "id": "ex_sub2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٥ - ٣ ؟"
+ },
+ {
+  "id": "ex_sub2_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "شيل ٣ من ٥."
+ },
+ {
+  "id": "ex_sub3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٦ - ١ ؟"
+ },
+ {
+  "id": "ex_sub3_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "شيل ١ من ٦."
+ },
+ {
+  "id": "ex_sub4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٨ - ٣ ؟"
+ },
+ {
+  "id": "ex_sub4_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "شيل ٣ من ٨."
+ },
+ {
+  "id": "ex_sub5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٩ - ٥ ؟"
+ },
+ {
+  "id": "ex_sub5_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "شيل ٥ من ٩."
+ },
+ {
+  "id": "ex_sub6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "١٠ - ٤ ؟"
+ },
+ {
+  "id": "ex_sub6_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "شيل ٤ من ١٠."
+ },
+ {
+  "id": "oral_sub6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي 6."
+ },
+ {
+  "id": "ex_sub7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "١٢ - ٧ ؟"
+ },
+ {
+  "id": "ex_sub7_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "شيل ٧ من ١٢."
+ },
+ {
+  "id": "ex_sub8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "١٥ - ٦ ؟"
+ },
+ {
+  "id": "ex_sub8_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "شيل ٦ من ١٥."
+ },
+ {
+  "id": "ex_sub9_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "١٨ - ٩ ؟"
+ },
+ {
+  "id": "ex_sub9_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "شيل ٩ من ١٨."
+ },
+ {
+  "id": "ex_sub10_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٢٠ - ٥ ؟"
+ },
+ {
+  "id": "ex_sub10_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "شيل ٥ من ٢٠."
+ },
+ {
+  "id": "ex_cnt0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "كام في الصف ده؟"
+ },
+ {
+  "id": "ex_cnt0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عُد واحد واحد وإنت بتشاور."
+ },
+ {
+  "id": "oral_cnt0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام في الصف ده؟ الاختيارات: ٣، ١، ٢."
+ },
+ {
+  "id": "oral_cnt0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ١."
+ },
+ {
+  "id": "oral_cnt1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٢."
+ },
+ {
+  "id": "oral_cnt2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام في الصف ده؟ الاختيارات: ٣، ٤، ٢."
+ },
+ {
+  "id": "oral_cnt2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٣."
+ },
+ {
+  "id": "oral_cnt3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام في الصف ده؟ الاختيارات: ٥، ٣، ٤."
+ },
+ {
+  "id": "oral_cnt3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٤."
+ },
+ {
+  "id": "oral_cnt4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام في الصف ده؟ الاختيارات: ٥، ٤، ٦."
+ },
+ {
+  "id": "oral_cnt4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٥."
+ },
+ {
+  "id": "oral_cnt5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام في الصف ده؟ الاختيارات: ٦، ٧، ٥."
+ },
+ {
+  "id": "oral_cnt5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٦."
+ },
+ {
+  "id": "oral_cnt6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام في الصف ده؟ الاختيارات: ٦، ٨، ٧."
+ },
+ {
+  "id": "oral_cnt6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٧."
+ },
+ {
+  "id": "oral_cnt7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام في الصف ده؟ الاختيارات: ٢، ٣، ١."
+ },
+ {
+  "id": "oral_cnt8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام في الصف ده؟ الاختيارات: ٤، ٣، ٢."
+ },
+ {
+  "id": "oral_cnt9_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام في الصف ده؟ الاختيارات: ٤، ٥، ٣."
+ },
+ {
+  "id": "ex_cmp0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "قارن الأرقام من الخانة الكبيرة."
+ },
+ {
+  "id": "oral_cmp0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أكبر؟ الاختيارات: ٣، ٨."
+ },
+ {
+  "id": "oral_cmp0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٨."
+ },
+ {
+  "id": "oral_cmp1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أكبر؟ الاختيارات: ١٢، ٩."
+ },
+ {
+  "id": "oral_cmp1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ١٢."
+ },
+ {
+  "id": "oral_cmp2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أكبر؟ الاختيارات: ٢٥، ٥٢."
+ },
+ {
+  "id": "oral_cmp2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٥٢."
+ },
+ {
+  "id": "oral_cmp3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أكبر؟ الاختيارات: ٤٧، ٧٤."
+ },
+ {
+  "id": "oral_cmp3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٧٤."
+ },
+ {
+  "id": "oral_cmp4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أكبر؟ الاختيارات: ١٠١، ١١٠."
+ },
+ {
+  "id": "oral_cmp4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ١١٠."
+ },
+ {
+  "id": "oral_cmp5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أكبر؟ الاختيارات: ٣٦، ٦٣."
+ },
+ {
+  "id": "oral_cmp5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٦٣."
+ },
+ {
+  "id": "ex_ord0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب من الأصغر للأكبر"
+ },
+ {
+  "id": "ex_ord0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "دوّر على أصغر رقم الأول."
+ },
+ {
+  "id": "ex_rt0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب الخطوات بالترتيب الصح"
+ },
+ {
+  "id": "ex_rt0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "إيه اللي بتعمله الأول؟"
+ },
+ {
+  "id": "ex_cls0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "فكّر: كل حاجة بتتبع أنهي مجموعة؟"
+ },
+ {
+  "id": "ex_mt0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ بالأسهل عندك."
+ },
+ {
+  "id": "ex_mt1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "وصّل الصورة بالكلمة"
+ },
+ {
+  "id": "ex_mt3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "وصّل اللون باسمه"
+ },
+ {
+  "id": "ex_mt4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "وصّل الرقم بالعدد"
+ },
+ {
+  "id": "ex_mt5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "وصّل الحرف بالكلمة"
+ },
+ {
+  "id": "ex_mt6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "وصّل العكس"
+ },
+ {
+  "id": "ex_ltr0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة بتبدأ بحرف (ب)؟"
+ },
+ {
+  "id": "ex_ltr0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق الحرف ب وإنت بتقول كل كلمة."
+ },
+ {
+  "id": "oral_ltr0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة بتبدأ بحرف (ب)؟ الاختيارات: بطة، قطة، سمكة."
+ },
+ {
+  "id": "oral_ltr0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي بطة."
+ },
+ {
+  "id": "ex_ltr1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة بتبدأ بحرف (ق)؟"
+ },
+ {
+  "id": "ex_ltr1_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق الحرف ق وإنت بتقول كل كلمة."
+ },
+ {
+  "id": "oral_ltr1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة بتبدأ بحرف (ق)؟ الاختيارات: جمل، قطة، فيل."
+ },
+ {
+  "id": "oral_ltr1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي قطة."
+ },
+ {
+  "id": "ex_ltr2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة بتبدأ بحرف (س)؟"
+ },
+ {
+  "id": "ex_ltr2_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق الحرف س وإنت بتقول كل كلمة."
+ },
+ {
+  "id": "oral_ltr2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة بتبدأ بحرف (س)؟ الاختيارات: سمكة، بقرة، نمر."
+ },
+ {
+  "id": "oral_ltr2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي سمكة."
+ },
+ {
+  "id": "ex_ltr3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة بتبدأ بحرف (ج)؟"
+ },
+ {
+  "id": "ex_ltr3_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق الحرف ج وإنت بتقول كل كلمة."
+ },
+ {
+  "id": "oral_ltr3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة بتبدأ بحرف (ج)؟ الاختيارات: حصان، جمل، أسد."
+ },
+ {
+  "id": "oral_ltr3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي جمل."
+ },
+ {
+  "id": "ex_ltr4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة بتبدأ بحرف (ف)؟"
+ },
+ {
+  "id": "ex_ltr4_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق الحرف ف وإنت بتقول كل كلمة."
+ },
+ {
+  "id": "oral_ltr4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة بتبدأ بحرف (ف)؟ الاختيارات: فيل، ذئب، ثعلب."
+ },
+ {
+  "id": "oral_ltr4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي فيل."
+ },
+ {
+  "id": "ex_ltr5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة بتبدأ بحرف (ك)؟"
+ },
+ {
+  "id": "ex_ltr5_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق الحرف ك وإنت بتقول كل كلمة."
+ },
+ {
+  "id": "oral_ltr5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة بتبدأ بحرف (ك)؟ الاختيارات: قلم، كتاب، باب."
+ },
+ {
+  "id": "oral_ltr5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي كتاب."
+ },
+ {
+  "id": "ex_ltr6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة بتبدأ بحرف (م)؟"
+ },
+ {
+  "id": "ex_ltr6_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق الحرف م وإنت بتقول كل كلمة."
+ },
+ {
+  "id": "oral_ltr6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة بتبدأ بحرف (م)؟ الاختيارات: تفاحة، موزة، برتقالة."
+ },
+ {
+  "id": "oral_ltr6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي موزة."
+ },
+ {
+  "id": "ex_ltr7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة بتبدأ بحرف (ن)؟"
+ },
+ {
+  "id": "ex_ltr7_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق الحرف ن وإنت بتقول كل كلمة."
+ },
+ {
+  "id": "oral_ltr7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة بتبدأ بحرف (ن)؟ الاختيارات: نحلة، ذبابة، فراشة."
+ },
+ {
+  "id": "oral_ltr7_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي نحلة."
+ },
+ {
+  "id": "ex_pat0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "كمّل النمط: ؟"
+ },
+ {
+  "id": "ex_pat0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "اللي بيتكرر هو النمط."
+ },
+ {
+  "id": "ex_nl0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حرّك النقطة على الرقم 3"
+ },
+ {
+  "id": "ex_nl0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من الصفر وعدّ للأمام."
+ },
+ {
+  "id": "ex_nl0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الرقم 3 قبل 4 وبعد 2."
+ },
+ {
+  "id": "ex_nl0_ok",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_right",
+  "text": "برافو!"
+ },
+ {
+  "id": "ex_nl0_no",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_wrong",
+  "text": "جرّب تاني."
+ },
+ {
+  "id": "ex_nl0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "العدد 3 مكانه على خط الأعداد بعد 2 وقبل 4."
+ },
+ {
+  "id": "ex_nl1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حرّك النقطة على الرقم 5"
+ },
+ {
+  "id": "ex_nl1_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الرقم 5 قبل 6 وبعد 4."
+ },
+ {
+  "id": "ex_nl1_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "العدد 5 مكانه على خط الأعداد بعد 4 وقبل 6."
+ },
+ {
+  "id": "ex_nl2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حرّك النقطة على الرقم 7"
+ },
+ {
+  "id": "ex_nl2_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الرقم 7 قبل 8 وبعد 6."
+ },
+ {
+  "id": "ex_nl2_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "العدد 7 مكانه على خط الأعداد بعد 6 وقبل 8."
+ },
+ {
+  "id": "ex_nl3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حرّك النقطة على الرقم 8"
+ },
+ {
+  "id": "ex_nl3_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الرقم 8 قبل 9 وبعد 7."
+ },
+ {
+  "id": "ex_nl3_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "العدد 8 مكانه على خط الأعداد بعد 7 وقبل 9."
+ },
+ {
+  "id": "ex_nl4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حرّك النقطة على الرقم 2"
+ },
+ {
+  "id": "ex_nl4_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الرقم 2 قبل 3 وبعد 1."
+ },
+ {
+  "id": "ex_nl4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "العدد 2 مكانه على خط الأعداد بعد 1 وقبل 3."
+ },
+ {
+  "id": "ex_nl5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حرّك النقطة على الرقم 12"
+ },
+ {
+  "id": "ex_nl5_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الرقم 12 قبل 13 وبعد 11."
+ },
+ {
+  "id": "ex_nl5_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "العدد 12 مكانه على خط الأعداد بعد 11 وقبل 13."
+ },
+ {
+  "id": "ex_nl6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حرّك النقطة على الرقم 15"
+ },
+ {
+  "id": "ex_nl6_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الرقم 15 قبل 16 وبعد 14."
+ },
+ {
+  "id": "ex_nl6_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "العدد 15 مكانه على خط الأعداد بعد 14 وقبل 16."
+ },
+ {
+  "id": "ex_nl7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حرّك النقطة على الرقم 17"
+ },
+ {
+  "id": "ex_nl7_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الرقم 17 قبل 18 وبعد 16."
+ },
+ {
+  "id": "ex_nl7_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "العدد 17 مكانه على خط الأعداد بعد 16 وقبل 18."
+ },
+ {
+  "id": "ex_nl8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حرّك النقطة على الرقم 9"
+ },
+ {
+  "id": "ex_nl8_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الرقم 9 قبل 10 وبعد 8."
+ },
+ {
+  "id": "ex_nl8_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "العدد 9 مكانه على خط الأعداد بعد 8 وقبل 10."
+ },
+ {
+  "id": "ex_fb0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر الكلمة المناسبة للجملة"
+ },
+ {
+  "id": "ex_fb0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "اقرأ الجملة بصوت واضح وجرّب كل كلمة."
+ },
+ {
+  "id": "ex_fb0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "فكّر: أي كلمة تخلي الجملة صح؟"
+ },
+ {
+  "id": "ex_fb0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الشمس بتظهر الصبح."
+ },
+ {
+  "id": "oral_fb0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "اختر الكلمة المناسبة للجملة الشمس تطلع في الاختيارات: الصباح، الليل."
+ },
+ {
+  "id": "oral_fb0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الصباح."
+ },
+ {
+  "id": "ex_fb1_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "بنغسل إيدينا قبل الأكل عشان نبقى نضاف."
+ },
+ {
+  "id": "oral_fb1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "اختر الكلمة المناسبة للجملة نغسل أيدينا قبل الاختيارات: الأكل، النوم."
+ },
+ {
+  "id": "oral_fb1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الأكل."
+ },
+ {
+  "id": "ex_fb2_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "القطة بتموء والكلب بينبح."
+ },
+ {
+  "id": "oral_fb2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "اختر الكلمة المناسبة للجملة القطة تقول الاختيارات: مواء، نباح."
+ },
+ {
+  "id": "oral_fb2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي مواء."
+ },
+ {
+  "id": "ex_fb3_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الجاكيت للجو البارد."
+ },
+ {
+  "id": "oral_fb3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "اختر الكلمة المناسبة للجملة نلبس الجاكيت في الجو الاختيارات: البارد، الحار، الجميل."
+ },
+ {
+  "id": "oral_fb3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي البارد."
+ },
+ {
+  "id": "ex_fb4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "السمك بيعيش في الماية."
+ },
+ {
+  "id": "oral_fb4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "اختر الكلمة المناسبة للجملة السمكة تعيش في الاختيارات: الماء، الشجرة، الرمال."
+ },
+ {
+  "id": "oral_fb4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الماء."
+ },
+ {
+  "id": "ex_fb5_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "بنقول شكراً لما حد يساعدنا."
+ },
+ {
+  "id": "oral_fb5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "اختر الكلمة المناسبة للجملة نقول لما حد يساعدنا الاختيارات: شكراً، آسف، مع السلامة."
+ },
+ {
+  "id": "oral_fb5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي شكراً."
+ },
+ {
+  "id": "ex_fb6_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الأسبوع سبعة أيام."
+ },
+ {
+  "id": "oral_fb6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "اختر الكلمة المناسبة للجملة الأسبوع فيه أيام الاختيارات: سبعة، خمسة، عشرة."
+ },
+ {
+  "id": "oral_fb6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي سبعة."
+ },
+ {
+  "id": "ex_fb7_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "لما نغلط بنعتذر."
+ },
+ {
+  "id": "oral_fb7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "اختر الكلمة المناسبة للجملة إذا أخطأت أقول بصدق الاختيارات: آسف، شكراً، أهلاً."
+ },
+ {
+  "id": "oral_fb7_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي آسف."
+ },
+ {
+  "id": "ex_fb8_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الطيارة بتطير في السما."
+ },
+ {
+  "id": "oral_fb8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "اختر الكلمة المناسبة للجملة الطائرة تطير في الاختيارات: السماء، البحر، الأرض."
+ },
+ {
+  "id": "oral_fb8_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي السماء."
+ },
+ {
+  "id": "ex_ms0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الفواكه (فيه أكتر من إجابة)"
+ },
+ {
+  "id": "ex_ms0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "فيه أكتر من إجابة صحيحة، دوس على كل واحدة."
+ },
+ {
+  "id": "ex_ms0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "راجع كل اختيار لوحده."
+ },
+ {
+  "id": "ex_ms1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الحيوانات (فيه أكتر من إجابة)"
+ },
+ {
+  "id": "ex_ms2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل ما يطير (فيه أكتر من إجابة)"
+ },
+ {
+  "id": "ex_ms3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الأرقام الزوجية (فيه أكتر من إجابة)"
+ },
+ {
+  "id": "ex_ms4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل ما نلبسه (فيه أكتر من إجابة)"
+ },
+ {
+  "id": "ex_ms5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل ما يعيش في الماء (فيه أكتر من إجابة)"
+ },
+ {
+  "id": "ex_ms6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر الأرقام الأكبر من ٥ (فيه أكتر من إجابة)"
+ },
+ {
+  "id": "ex_ms7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الأشياء التي نأكلها (فيه أكتر من إجابة)"
+ },
+ {
+  "id": "ex_ms8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر الأشكال المستديرة (فيه أكتر من إجابة)"
+ },
+ {
+  "id": "ex_gp0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "دوس على المربع: يمين 2، فوق 3"
+ },
+ {
+  "id": "ex_gp0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الرقم الأول لليمين من تحت، والتاني لفوق."
+ },
+ {
+  "id": "ex_gp0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عدّ 2 خطوات لليمين وبعدين 3 لفوق."
+ },
+ {
+  "id": "ex_gp0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "النقطة (2، 3) تعني 2 يمين و3 فوق."
+ },
+ {
+  "id": "ex_gp1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "دوس على المربع: يمين 4، فوق 1"
+ },
+ {
+  "id": "ex_gp1_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عدّ 4 خطوات لليمين وبعدين 1 لفوق."
+ },
+ {
+  "id": "ex_gp1_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "النقطة (4، 1) تعني 4 يمين و1 فوق."
+ },
+ {
+  "id": "ex_gp2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "دوس على المربع: يمين 1، فوق 4"
+ },
+ {
+  "id": "ex_gp2_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عدّ 1 خطوات لليمين وبعدين 4 لفوق."
+ },
+ {
+  "id": "ex_gp2_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "النقطة (1، 4) تعني 1 يمين و4 فوق."
+ },
+ {
+  "id": "ex_gp3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "دوس على المربع: يمين 3، فوق 3"
+ },
+ {
+  "id": "ex_gp3_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عدّ 3 خطوات لليمين وبعدين 3 لفوق."
+ },
+ {
+  "id": "ex_gp3_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "النقطة (3، 3) تعني 3 يمين و3 فوق."
+ },
+ {
+  "id": "ex_gp4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "دوس على المربع: يمين 5، فوق 2"
+ },
+ {
+  "id": "ex_gp4_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عدّ 5 خطوات لليمين وبعدين 2 لفوق."
+ },
+ {
+  "id": "ex_gp4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "النقطة (5، 2) تعني 5 يمين و2 فوق."
+ },
+ {
+  "id": "ex_gp5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "دوس على المربع: يمين 2، فوق 5"
+ },
+ {
+  "id": "ex_gp5_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عدّ 2 خطوات لليمين وبعدين 5 لفوق."
+ },
+ {
+  "id": "ex_gp5_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "النقطة (2، 5) تعني 2 يمين و5 فوق."
+ },
+ {
+  "id": "ex_gp6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "دوس على المربع: يمين 4، فوق 4"
+ },
+ {
+  "id": "ex_gp6_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عدّ 4 خطوات لليمين وبعدين 4 لفوق."
+ },
+ {
+  "id": "ex_gp6_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "النقطة (4، 4) تعني 4 يمين و4 فوق."
+ },
+ {
+  "id": "ex_gp7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "دوس على المربع: يمين 5، فوق 5"
+ },
+ {
+  "id": "ex_gp7_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عدّ 5 خطوات لليمين وبعدين 5 لفوق."
+ },
+ {
+  "id": "ex_gp7_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "النقطة (5، 5) تعني 5 يمين و5 فوق."
+ },
+ {
+  "id": "ex_gp8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "دوس على المربع: يمين 1، فوق 1"
+ },
+ {
+  "id": "ex_gp8_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عدّ 1 خطوات لليمين وبعدين 1 لفوق."
+ },
+ {
+  "id": "ex_gp8_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "النقطة (1، 1) تعني 1 يمين و1 فوق."
+ },
+ {
+  "id": "ex_br0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ارسم الأعمدة: 2، 3"
+ },
+ {
+  "id": "ex_br0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "دوس على العمود لحد ما يوصل للعدد المطلوب."
+ },
+ {
+  "id": "ex_br0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "كل دوسة تزيد العمود واحد."
+ },
+ {
+  "id": "ex_br1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ارسم الأعمدة: 1، 4"
+ },
+ {
+  "id": "ex_br2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ارسم الأعمدة: 3، 2"
+ },
+ {
+  "id": "ex_br3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ارسم الأعمدة: 2، 4، 1"
+ },
+ {
+  "id": "ex_br4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ارسم الأعمدة: 3، 1، 5"
+ },
+ {
+  "id": "ex_br5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ارسم الأعمدة: 4، 2، 1"
+ },
+ {
+  "id": "ex_br6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ارسم الأعمدة: 1، 3، 2، 4"
+ },
+ {
+  "id": "ex_br7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ارسم الأعمدة: 5، 2، 4، 1"
+ },
+ {
+  "id": "ex_br8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ارسم الأعمدة: 2، 5، 3، 4"
+ },
+ {
+  "id": "ex_bp0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "نشوف بإيه؟"
+ },
+ {
+  "id": "ex_bp0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "فكّر: أي جزء بيعمل الشغلانة دي؟"
+ },
+ {
+  "id": "ex_bp0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "بنشوف بعيوننا."
+ },
+ {
+  "id": "oral_bp0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "نشوف بإيه؟ الاختيارات: العين، الأذن، الأنف."
+ },
+ {
+  "id": "oral_bp0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي العين."
+ },
+ {
+  "id": "ex_bp1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "نسمع بإيه؟"
+ },
+ {
+  "id": "ex_bp1_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "بنسمع بودننا."
+ },
+ {
+  "id": "oral_bp1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "نسمع بإيه؟ الاختيارات: الأذن، العين، الفم."
+ },
+ {
+  "id": "oral_bp1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الأذن."
+ },
+ {
+  "id": "ex_bp2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "نشم الورد بإيه؟"
+ },
+ {
+  "id": "ex_bp2_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "بنشم بالأنف."
+ },
+ {
+  "id": "oral_bp2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "نشم الورد بإيه؟ الاختيارات: الأنف، اليد، القدم."
+ },
+ {
+  "id": "oral_bp2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الأنف."
+ },
+ {
+  "id": "ex_bp3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ناكل ونتكلم بإيه؟"
+ },
+ {
+  "id": "ex_bp3_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "بناكل ونتكلم بالفم."
+ },
+ {
+  "id": "oral_bp3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ناكل ونتكلم بإيه؟ الاختيارات: الفم، العين، الأذن."
+ },
+ {
+  "id": "oral_bp3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الفم."
+ },
+ {
+  "id": "ex_bp4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "وصّل العضو بشغلته"
+ },
+ {
+  "id": "ex_bp4_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "فكّر في شغلة كل عضو."
+ },
+ {
+  "id": "ex_bp5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل ما نستخدمه للمشي والجري (فيه أكتر من إجابة)"
+ },
+ {
+  "id": "ex_bp5_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "فيه أكتر من إجابة."
+ },
+ {
+  "id": "ex_bp6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر الكلمة المناسبة"
+ },
+ {
+  "id": "ex_bp6_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "اقرأ الجملة وجرّب كل كلمة."
+ },
+ {
+  "id": "ex_bp6_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "بنمسك الحاجات بإيدينا."
+ },
+ {
+  "id": "oral_bp6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "اختر الكلمة المناسبة نمسك الكوب بـ الاختيارات: اليد، القدم، الأذن."
+ },
+ {
+  "id": "oral_bp6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي اليد."
+ },
+ {
+  "id": "ex_bp7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "كام إصبع في إيد واحدة؟"
+ },
+ {
+  "id": "ex_bp7_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عُد صوابعك."
+ },
+ {
+  "id": "oral_bp7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام إصبع في إيد واحدة؟ الاختيارات: ٣، ٥، ١٠."
+ },
+ {
+  "id": "ex_bp8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "كام عين عندك؟ اكتب الرقم"
+ },
+ {
+  "id": "ex_bp8_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انظر في المراية."
+ },
+ {
+  "id": "ex_b1_ml0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ما الحرف الناقص؟"
+ },
+ {
+  "id": "ex_b1_ml0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق الكلمة بصوت واضح، وانتبه للحرف اللي في النص."
+ },
+ {
+  "id": "ex_b1_ml0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي قلم."
+ },
+ {
+  "id": "ex_b1_ml0_ok",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_right",
+  "text": "برافو يا بطل!"
+ },
+ {
+  "id": "ex_b1_ml0_no",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "feedback_wrong",
+  "text": "قريب، جرّب تاني."
+ },
+ {
+  "id": "oral_b1_ml0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ ق م الاختيارات: ج، ل، ز."
+ },
+ {
+  "id": "oral_b1_ml0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ل."
+ },
+ {
+  "id": "ex_b1_ml1_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي بحر."
+ },
+ {
+  "id": "oral_b1_ml1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ ب ر الاختيارات: ق، ث، ح."
+ },
+ {
+  "id": "oral_b1_ml1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ح."
+ },
+ {
+  "id": "ex_b1_ml2_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي شمس."
+ },
+ {
+  "id": "oral_b1_ml2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ ش س الاختيارات: ق، م، ب."
+ },
+ {
+  "id": "oral_b1_ml2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي م."
+ },
+ {
+  "id": "ex_b1_ml3_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي نجم."
+ },
+ {
+  "id": "oral_b1_ml3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ ن م الاختيارات: ج، ت، ب."
+ },
+ {
+  "id": "oral_b1_ml3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ج."
+ },
+ {
+  "id": "ex_b1_ml4_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي ورد."
+ },
+ {
+  "id": "oral_b1_ml4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ و د الاختيارات: ذ، ت، ر."
+ },
+ {
+  "id": "oral_b1_ml4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ر."
+ },
+ {
+  "id": "ex_b1_ml5_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي جمل."
+ },
+ {
+  "id": "oral_b1_ml5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ ج ل الاختيارات: ب، ف، م."
+ },
+ {
+  "id": "ex_b1_ml6_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي كلب."
+ },
+ {
+  "id": "oral_b1_ml6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ ك ب الاختيارات: ف، م، ل."
+ },
+ {
+  "id": "ex_b1_ml7_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي فيل."
+ },
+ {
+  "id": "oral_b1_ml7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ ف ل الاختيارات: ب، د، ي."
+ },
+ {
+  "id": "oral_b1_ml7_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ي."
+ },
+ {
+  "id": "ex_b1_ml8_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي قمر."
+ },
+ {
+  "id": "oral_b1_ml8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ ق ر الاختيارات: ز، ض، م."
+ },
+ {
+  "id": "ex_b1_ml9_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي سمك."
+ },
+ {
+  "id": "oral_b1_ml9_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ س ك الاختيارات: ف، م، ر."
+ },
+ {
+  "id": "ex_b1_ml10_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي بيت."
+ },
+ {
+  "id": "oral_b1_ml10_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ ب ت الاختيارات: ح، ي، ق."
+ },
+ {
+  "id": "ex_b1_ml11_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي عنب."
+ },
+ {
+  "id": "oral_b1_ml11_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ ع ب الاختيارات: ش، ن، ج."
+ },
+ {
+  "id": "oral_b1_ml11_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ن."
+ },
+ {
+  "id": "ex_b1_ml12_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي موز."
+ },
+ {
+  "id": "oral_b1_ml12_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ م ز الاختيارات: ف، و، ب."
+ },
+ {
+  "id": "oral_b1_ml12_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي و."
+ },
+ {
+  "id": "ex_b1_ml13_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي كتاب."
+ },
+ {
+  "id": "oral_b1_ml13_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ ك ا ب الاختيارات: ت، غ، ه."
+ },
+ {
+  "id": "oral_b1_ml13_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ت."
+ },
+ {
+  "id": "ex_b1_ml14_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي حوت."
+ },
+ {
+  "id": "oral_b1_ml14_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ ح ت الاختيارات: و، ش، ي."
+ },
+ {
+  "id": "ex_b1_ml15_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة هي نمر."
+ },
+ {
+  "id": "oral_b1_ml15_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الحرف الناقص؟ ن ر الاختيارات: ش، ز، م."
+ },
+ {
+  "id": "ex_b1_bw0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب الحروف لتكوّن الكلمة"
+ },
+ {
+  "id": "ex_b1_bw0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ بالحرف الأول من الكلمة."
+ },
+ {
+  "id": "ex_b1_bw0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الحرف الأول هو ق."
+ },
+ {
+  "id": "ex_b1_bw0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة قلم."
+ },
+ {
+  "id": "ex_b1_bw1_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الحرف الأول هو ب."
+ },
+ {
+  "id": "ex_b1_bw1_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة بحر."
+ },
+ {
+  "id": "ex_b1_bw2_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الحرف الأول هو ش."
+ },
+ {
+  "id": "ex_b1_bw2_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة شمس."
+ },
+ {
+  "id": "ex_b1_bw3_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الحرف الأول هو ن."
+ },
+ {
+  "id": "ex_b1_bw3_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة نجم."
+ },
+ {
+  "id": "ex_b1_bw4_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الحرف الأول هو و."
+ },
+ {
+  "id": "ex_b1_bw4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة ورد."
+ },
+ {
+  "id": "ex_b1_bw5_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الحرف الأول هو ج."
+ },
+ {
+  "id": "ex_b1_bw5_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة جمل."
+ },
+ {
+  "id": "ex_b1_bw6_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الحرف الأول هو ك."
+ },
+ {
+  "id": "ex_b1_bw6_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة كلب."
+ },
+ {
+  "id": "ex_b1_bw7_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الحرف الأول هو ف."
+ },
+ {
+  "id": "ex_b1_bw7_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة فيل."
+ },
+ {
+  "id": "ex_b1_bw8_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة قمر."
+ },
+ {
+  "id": "ex_b1_bw9_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الحرف الأول هو س."
+ },
+ {
+  "id": "ex_b1_bw9_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة سمك."
+ },
+ {
+  "id": "ex_b1_bw10_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة بيت."
+ },
+ {
+  "id": "ex_b1_bw11_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الحرف الأول هو ع."
+ },
+ {
+  "id": "ex_b1_bw11_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة عنب."
+ },
+ {
+  "id": "ex_b1_bw12_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الحرف الأول هو م."
+ },
+ {
+  "id": "ex_b1_bw12_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة موز."
+ },
+ {
+  "id": "ex_b1_bw13_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة كتاب."
+ },
+ {
+  "id": "ex_b1_bw14_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الحرف الأول هو ح."
+ },
+ {
+  "id": "ex_b1_bw14_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة حوت."
+ },
+ {
+  "id": "ex_b1_bw15_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكلمة نمر."
+ },
+ {
+  "id": "ex_b1_sc0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الحروف مبعثرة! ما الكلمة؟"
+ },
+ {
+  "id": "ex_b1_sc0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الصورة بتقول لك الكلمة."
+ },
+ {
+  "id": "ex_b1_sc0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نطق الكلمة بيبدأ بحرف ن."
+ },
+ {
+  "id": "ex_b1_sc1_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نطق الكلمة بيبدأ بحرف ح."
+ },
+ {
+  "id": "ex_b1_sc2_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نطق الكلمة بيبدأ بحرف ك."
+ },
+ {
+  "id": "ex_b1_sc3_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نطق الكلمة بيبدأ بحرف م."
+ },
+ {
+  "id": "ex_b1_sc4_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نطق الكلمة بيبدأ بحرف ع."
+ },
+ {
+  "id": "ex_b1_sc5_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نطق الكلمة بيبدأ بحرف ب."
+ },
+ {
+  "id": "ex_b1_sc6_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نطق الكلمة بيبدأ بحرف س."
+ },
+ {
+  "id": "ex_b1_sc7_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نطق الكلمة بيبدأ بحرف ق."
+ },
+ {
+  "id": "ex_b1_sc8_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نطق الكلمة بيبدأ بحرف ف."
+ },
+ {
+  "id": "ex_b1_sc10_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نطق الكلمة بيبدأ بحرف ج."
+ },
+ {
+  "id": "ex_b1_sc11_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نطق الكلمة بيبدأ بحرف و."
+ },
+ {
+  "id": "ex_b1_sc13_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نطق الكلمة بيبدأ بحرف ش."
+ },
+ {
+  "id": "ex_b1_ss0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تبدأ بحرف (ب)"
+ },
+ {
+  "id": "ex_b1_ss0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "فيه أكتر من إجابة. اقرأ كل كلمة وانتبه لأول حرف."
+ },
+ {
+  "id": "ex_b1_ss0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة اللي بتبدأ بحرف ب بنطقها بنفس الصوت في أولها."
+ },
+ {
+  "id": "ex_b1_ss1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تبدأ بحرف (ك)"
+ },
+ {
+  "id": "ex_b1_ss1_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة اللي بتبدأ بحرف ك بنطقها بنفس الصوت في أولها."
+ },
+ {
+  "id": "ex_b1_ss2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تبدأ بحرف (ش)"
+ },
+ {
+  "id": "ex_b1_ss2_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة اللي بتبدأ بحرف ش بنطقها بنفس الصوت في أولها."
+ },
+ {
+  "id": "ex_b1_ss3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تبدأ بحرف (م)"
+ },
+ {
+  "id": "ex_b1_ss3_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة اللي بتبدأ بحرف م بنطقها بنفس الصوت في أولها."
+ },
+ {
+  "id": "ex_b1_ss4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تبدأ بحرف (ق)"
+ },
+ {
+  "id": "ex_b1_ss4_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة اللي بتبدأ بحرف ق بنطقها بنفس الصوت في أولها."
+ },
+ {
+  "id": "ex_b1_ss5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تبدأ بحرف (ف)"
+ },
+ {
+  "id": "ex_b1_ss5_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة اللي بتبدأ بحرف ف بنطقها بنفس الصوت في أولها."
+ },
+ {
+  "id": "ex_b1_ss6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تبدأ بحرف (ج)"
+ },
+ {
+  "id": "ex_b1_ss6_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة اللي بتبدأ بحرف ج بنطقها بنفس الصوت في أولها."
+ },
+ {
+  "id": "ex_b1_ss7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تبدأ بحرف (ح)"
+ },
+ {
+  "id": "ex_b1_ss7_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة اللي بتبدأ بحرف ح بنطقها بنفس الصوت في أولها."
+ },
+ {
+  "id": "ex_b1_ss8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تبدأ بحرف (ن)"
+ },
+ {
+  "id": "ex_b1_ss8_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الكلمة اللي بتبدأ بحرف ن بنطقها بنفس الصوت في أولها."
+ },
+ {
+  "id": "ex_b1_se0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تنتهي بحرف (ة)"
+ },
+ {
+  "id": "ex_b1_se0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "فيه أكتر من إجابة. انطق الكلمة وركّز على صوتها الأخير."
+ },
+ {
+  "id": "ex_b1_se0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انظر لآخر حرف في كل كلمة."
+ },
+ {
+  "id": "ex_b1_se1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تنتهي بحرف (ر)"
+ },
+ {
+  "id": "ex_b1_se2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تنتهي بحرف (ب)"
+ },
+ {
+  "id": "ex_b1_se3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تنتهي بحرف (م)"
+ },
+ {
+  "id": "ex_b1_se4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تنتهي بحرف (ت)"
+ },
+ {
+  "id": "ex_b1_se5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تنتهي بحرف (ل)"
+ },
+ {
+  "id": "ex_b1_se6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "اختر كل الكلمات التي تنتهي بحرف (د)"
+ },
+ {
+  "id": "ex_b1_pw0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "وصّل كل صورة باسمها"
+ },
+ {
+  "id": "ex_b1_pw0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ بالصورة اللي تعرفها أكتر."
+ },
+ {
+  "id": "ex_b1_pw0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "اختار الصورة ثم الكلمة اللي تناسبها."
+ },
+ {
+  "id": "ex_b1_hk0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي حرف عليه الفتحة؟"
+ },
+ {
+  "id": "ex_b1_hk0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الفتحة فوق الحرف، والضمة فوقه صغيرة مثل الواو، والكسرة تحته."
+ },
+ {
+  "id": "ex_b1_hk0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابحث عن الفتحة: فوق الحرف."
+ },
+ {
+  "id": "oral_b1_hk0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي حرف عليه الفتحة؟ الاختيارات: بَ، بُ، بِ."
+ },
+ {
+  "id": "oral_b1_hk0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي بَ."
+ },
+ {
+  "id": "ex_b1_hk1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي حرف عليه الكسرة؟"
+ },
+ {
+  "id": "ex_b1_hk1_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابحث عن الكسرة: تحت الحرف."
+ },
+ {
+  "id": "oral_b1_hk1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي حرف عليه الكسرة؟ الاختيارات: تَ، تُ، تِ."
+ },
+ {
+  "id": "oral_b1_hk1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي تِ."
+ },
+ {
+  "id": "ex_b1_hk2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي حرف عليه الضمة؟"
+ },
+ {
+  "id": "ex_b1_hk2_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابحث عن الضمة: فوق الحرف."
+ },
+ {
+  "id": "oral_b1_hk2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي حرف عليه الضمة؟ الاختيارات: مَ، مُ، مِ."
+ },
+ {
+  "id": "oral_b1_hk2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي مُ."
+ },
+ {
+  "id": "oral_b1_hk3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي حرف عليه الفتحة؟ الاختيارات: كَ، كُ، كِ."
+ },
+ {
+  "id": "oral_b1_hk3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي كَ."
+ },
+ {
+  "id": "oral_b1_hk4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي حرف عليه الكسرة؟ الاختيارات: نَ، نُ، نِ."
+ },
+ {
+  "id": "oral_b1_hk4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي نِ."
+ },
+ {
+  "id": "oral_b1_hk5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي حرف عليه الضمة؟ الاختيارات: لَ، لُ، لِ."
+ },
+ {
+  "id": "oral_b1_hk5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي لُ."
+ },
+ {
+  "id": "oral_b1_hk6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي حرف عليه الفتحة؟ الاختيارات: سَ، سُ، سِ."
+ },
+ {
+  "id": "oral_b1_hk6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي سَ."
+ },
+ {
+  "id": "oral_b1_hk7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي حرف عليه الكسرة؟ الاختيارات: رَ، رُ، رِ."
+ },
+ {
+  "id": "oral_b1_hk7_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي رِ."
+ },
+ {
+  "id": "oral_b1_hk8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي حرف عليه الضمة؟ الاختيارات: حَ، حُ، حِ."
+ },
+ {
+  "id": "oral_b1_hk8_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي حُ."
+ },
+ {
+  "id": "ex_b1_rh0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة تتقفّى مع كتاب؟"
+ },
+ {
+  "id": "ex_b1_rh0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "القافية يعني آخر الصوت يتشابه."
+ },
+ {
+  "id": "ex_b1_rh0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق كتاب ثم كل اختيار وقارن الآخر."
+ },
+ {
+  "id": "ex_b1_rh0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "كتاب وباب آخرهم واحد."
+ },
+ {
+  "id": "oral_b1_rh0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة تتقفّى مع كتاب؟ الاختيارات: باب، سيارة، قلم."
+ },
+ {
+  "id": "oral_b1_rh0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي باب."
+ },
+ {
+  "id": "ex_b1_rh1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة تتقفّى مع نار؟"
+ },
+ {
+  "id": "ex_b1_rh1_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق نار ثم كل اختيار وقارن الآخر."
+ },
+ {
+  "id": "ex_b1_rh1_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "نار وجار آخرهم واحد."
+ },
+ {
+  "id": "oral_b1_rh1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة تتقفّى مع نار؟ الاختيارات: شمس، ماء، جار."
+ },
+ {
+  "id": "oral_b1_rh1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي جار."
+ },
+ {
+  "id": "ex_b1_rh2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة تتقفّى مع بيت؟"
+ },
+ {
+  "id": "ex_b1_rh2_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق بيت ثم كل اختيار وقارن الآخر."
+ },
+ {
+  "id": "ex_b1_rh2_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "بيت وزيت آخرهم واحد."
+ },
+ {
+  "id": "oral_b1_rh2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة تتقفّى مع بيت؟ الاختيارات: زيت، باب، قلم."
+ },
+ {
+  "id": "oral_b1_rh2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي زيت."
+ },
+ {
+  "id": "ex_b1_rh3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة تتقفّى مع قلم؟"
+ },
+ {
+  "id": "ex_b1_rh3_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق قلم ثم كل اختيار وقارن الآخر."
+ },
+ {
+  "id": "ex_b1_rh3_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "قلم وعلم آخرهم واحد."
+ },
+ {
+  "id": "oral_b1_rh3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة تتقفّى مع قلم؟ الاختيارات: علم، كتاب، شجر."
+ },
+ {
+  "id": "oral_b1_rh3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي علم."
+ },
+ {
+  "id": "ex_b1_rh4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة تتقفّى مع ليل؟"
+ },
+ {
+  "id": "ex_b1_rh4_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق ليل ثم كل اختيار وقارن الآخر."
+ },
+ {
+  "id": "ex_b1_rh4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "ليل وخيل آخرهم واحد."
+ },
+ {
+  "id": "oral_b1_rh4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة تتقفّى مع ليل؟ الاختيارات: خيل، شمس، نهار."
+ },
+ {
+  "id": "oral_b1_rh4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي خيل."
+ },
+ {
+  "id": "ex_b1_rh5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة تتقفّى مع فول؟"
+ },
+ {
+  "id": "ex_b1_rh5_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق فول ثم كل اختيار وقارن الآخر."
+ },
+ {
+  "id": "ex_b1_rh5_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "فول وطول آخرهم واحد."
+ },
+ {
+  "id": "oral_b1_rh5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة تتقفّى مع فول؟ الاختيارات: عيش، لبن، طول."
+ },
+ {
+  "id": "oral_b1_rh5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي طول."
+ },
+ {
+  "id": "ex_b1_rh6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة تتقفّى مع ورد؟"
+ },
+ {
+  "id": "ex_b1_rh6_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق ورد ثم كل اختيار وقارن الآخر."
+ },
+ {
+  "id": "ex_b1_rh6_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "ورد وبرد آخرهم واحد."
+ },
+ {
+  "id": "oral_b1_rh6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة تتقفّى مع ورد؟ الاختيارات: زهرة، حب، برد."
+ },
+ {
+  "id": "oral_b1_rh6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي برد."
+ },
+ {
+  "id": "ex_b1_rh7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة تتقفّى مع شمس؟"
+ },
+ {
+  "id": "ex_b1_rh7_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق شمس ثم كل اختيار وقارن الآخر."
+ },
+ {
+  "id": "ex_b1_rh7_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "شمس وأمس آخرهم واحد."
+ },
+ {
+  "id": "oral_b1_rh7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة تتقفّى مع شمس؟ الاختيارات: قمر، نجم، أمس."
+ },
+ {
+  "id": "oral_b1_rh7_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي أمس."
+ },
+ {
+  "id": "ex_b1_rh8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي كلمة تتقفّى مع سور؟"
+ },
+ {
+  "id": "ex_b1_rh8_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق سور ثم كل اختيار وقارن الآخر."
+ },
+ {
+  "id": "ex_b1_rh8_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "سور ونور آخرهم واحد."
+ },
+ {
+  "id": "oral_b1_rh8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي كلمة تتقفّى مع سور؟ الاختيارات: باب، نور، بيت."
+ },
+ {
+  "id": "oral_b1_rh8_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي نور."
+ },
+ {
+  "id": "ex_b1_bs0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الرقم الأكبر يكون بعيد أكتر على خط الأعداد."
+ },
+ {
+  "id": "ex_b1_bs0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عُد من الصفر: أيهما يصل بعد؟"
+ },
+ {
+  "id": "oral_b1_bs0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أكبر؟ الاختيارات: ٢، ٥."
+ },
+ {
+  "id": "ex_b1_bs1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي رقم أصغر؟"
+ },
+ {
+  "id": "oral_b1_bs1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أصغر؟ الاختيارات: ٧، ٣."
+ },
+ {
+  "id": "oral_b1_bs2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أكبر؟ الاختيارات: ٩، ٤."
+ },
+ {
+  "id": "oral_b1_bs2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٩."
+ },
+ {
+  "id": "oral_b1_bs3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أصغر؟ الاختيارات: ١، ٨."
+ },
+ {
+  "id": "oral_b1_bs4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أكبر؟ الاختيارات: ١٢، ١٥."
+ },
+ {
+  "id": "oral_b1_bs4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ١٥."
+ },
+ {
+  "id": "oral_b1_bs5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أصغر؟ الاختيارات: ٢٠، ١٨."
+ },
+ {
+  "id": "oral_b1_bs5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ١٨."
+ },
+ {
+  "id": "oral_b1_bs6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أكبر؟ الاختيارات: ٣١، ٢٩."
+ },
+ {
+  "id": "oral_b1_bs6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٣١."
+ },
+ {
+  "id": "oral_b1_bs7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أصغر؟ الاختيارات: ٤٥، ٥٤."
+ },
+ {
+  "id": "oral_b1_bs7_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٤٥."
+ },
+ {
+  "id": "oral_b1_bs8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أكبر؟ الاختيارات: ٦٠، ١٦."
+ },
+ {
+  "id": "oral_b1_bs8_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٦٠."
+ },
+ {
+  "id": "ex_b1_bs9_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "قارن الخانة الأولى من اليسار."
+ },
+ {
+  "id": "oral_b1_bs9_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أصغر؟ الاختيارات: ٩٩، ١٠٠."
+ },
+ {
+  "id": "oral_b1_bs9_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٩٩."
+ },
+ {
+  "id": "oral_b1_bs10_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أكبر؟ الاختيارات: ٢٥٠، ٢٠٥."
+ },
+ {
+  "id": "oral_b1_bs10_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٢٥٠."
+ },
+ {
+  "id": "oral_b1_bs11_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي رقم أصغر؟ الاختيارات: ١١١، ١٠١."
+ },
+ {
+  "id": "oral_b1_bs11_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ١٠١."
+ },
+ {
+  "id": "ex_b1_mn0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أكمل تسلسل الأرقام"
+ },
+ {
+  "id": "ex_b1_mn0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "شوف الفرق بين كل رقم والتاني."
+ },
+ {
+  "id": "ex_b1_mn0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "كل رقم يزيد ١."
+ },
+ {
+  "id": "ex_b1_mn0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "التسلسل يزيد ١ كل مرة."
+ },
+ {
+  "id": "oral_b1_mn0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أكمل تسلسل الأرقام ١ ، ٢ ، ٣ ، ، ٥ الاختيارات: ٣، ٥، ٤."
+ },
+ {
+  "id": "oral_b1_mn1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أكمل تسلسل الأرقام ٢ ، ٣ ، ، ٥ ، ٦ الاختيارات: ٥، ٤، ٣."
+ },
+ {
+  "id": "oral_b1_mn2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أكمل تسلسل الأرقام ٥ ، ٦ ، ٧ ، ٨ ، الاختيارات: ٩، ٨، ١٠."
+ },
+ {
+  "id": "ex_b1_mn3_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "كل رقم يزيد ٢."
+ },
+ {
+  "id": "ex_b1_mn3_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "التسلسل يزيد ٢ كل مرة."
+ },
+ {
+  "id": "oral_b1_mn3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أكمل تسلسل الأرقام ١ ، ٣ ، ٥ ، ، ٩ الاختيارات: ٩، ٥، ٧."
+ },
+ {
+  "id": "oral_b1_mn4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أكمل تسلسل الأرقام ٢ ، ٤ ، ، ٨ ، ١٠ الاختيارات: ٦، ٤، ٨."
+ },
+ {
+  "id": "ex_b1_mn5_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "كل رقم يزيد ١٠."
+ },
+ {
+  "id": "ex_b1_mn5_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "التسلسل يزيد ١٠ كل مرة."
+ },
+ {
+  "id": "oral_b1_mn5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أكمل تسلسل الأرقام ١٠ ، ٢٠ ، ٣٠ ، ، ٥٠ الاختيارات: ٤٠، ٥٠، ٣٠."
+ },
+ {
+  "id": "oral_b1_mn5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٤٠."
+ },
+ {
+  "id": "ex_b1_mn6_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "كل رقم يزيد ٥."
+ },
+ {
+  "id": "ex_b1_mn6_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "التسلسل يزيد ٥ كل مرة."
+ },
+ {
+  "id": "oral_b1_mn6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أكمل تسلسل الأرقام ٥ ، ١٠ ، ١٥ ، ٢٠ ، الاختيارات: ٣٠، ٢٠، ٢٥."
+ },
+ {
+  "id": "oral_b1_mn6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٢٥."
+ },
+ {
+  "id": "ex_b1_mn7_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "كل رقم يزيد ٣."
+ },
+ {
+  "id": "ex_b1_mn7_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "التسلسل يزيد ٣ كل مرة."
+ },
+ {
+  "id": "oral_b1_mn7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أكمل تسلسل الأرقام ٣ ، ٦ ، ، ١٢ ، ١٥ الاختيارات: ٩، ٦، ١٢."
+ },
+ {
+  "id": "oral_b1_mn8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أكمل تسلسل الأرقام ٢٠ ، ٢٥ ، ٣٠ ، ، ٤٠ الاختيارات: ٣٥، ٣٠، ٤٠."
+ },
+ {
+  "id": "oral_b1_mn8_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٣٥."
+ },
+ {
+  "id": "ex_b1_mn9_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "كل رقم يزيد ١٠٠."
+ },
+ {
+  "id": "ex_b1_mn9_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "التسلسل يزيد ١٠٠ كل مرة."
+ },
+ {
+  "id": "oral_b1_mn9_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أكمل تسلسل الأرقام ١٠٠ ، ٢٠٠ ، ، ٤٠٠ ، ٥٠٠ الاختيارات: ٢٠٠، ٣٠٠، ٤٠٠."
+ },
+ {
+  "id": "oral_b1_mn9_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٣٠٠."
+ },
+ {
+  "id": "ex_b1_ap0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "؟"
+ },
+ {
+  "id": "ex_b1_ap0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عُد الصور كلها مع بعض."
+ },
+ {
+  "id": "ex_b1_ap0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ١ وزوّد ١."
+ },
+ {
+  "id": "ex_b1_ap0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "١ ١ ٢"
+ },
+ {
+  "id": "oral_b1_ap0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "؟ الاختيارات: ٢، ١، ٣."
+ },
+ {
+  "id": "ex_b1_ap1_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٢ وزوّد ١."
+ },
+ {
+  "id": "ex_b1_ap1_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٢ ١ ٣"
+ },
+ {
+  "id": "oral_b1_ap1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "؟ الاختيارات: ٤، ٢، ٣."
+ },
+ {
+  "id": "ex_b1_ap2_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٢ وزوّد ٢."
+ },
+ {
+  "id": "ex_b1_ap2_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٢ ٢ ٤"
+ },
+ {
+  "id": "oral_b1_ap2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "؟ الاختيارات: ٥، ٣، ٤."
+ },
+ {
+  "id": "ex_b1_ap3_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٣ وزوّد ١."
+ },
+ {
+  "id": "ex_b1_ap3_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٣ ١ ٤"
+ },
+ {
+  "id": "oral_b1_ap3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "؟ الاختيارات: ٣، ٤، ٥."
+ },
+ {
+  "id": "ex_b1_ap4_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٣ وزوّد ٢."
+ },
+ {
+  "id": "ex_b1_ap4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٣ ٢ ٥"
+ },
+ {
+  "id": "oral_b1_ap4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "؟ الاختيارات: ٤، ٦، ٥."
+ },
+ {
+  "id": "ex_b1_ap5_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٤ وزوّد ٢."
+ },
+ {
+  "id": "ex_b1_ap5_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٤ ٢ ٦"
+ },
+ {
+  "id": "oral_b1_ap5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "؟ الاختيارات: ٧، ٦، ٥."
+ },
+ {
+  "id": "ex_b1_ap6_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٣ وزوّد ٣."
+ },
+ {
+  "id": "ex_b1_ap6_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٣ ٣ ٦"
+ },
+ {
+  "id": "oral_b1_ap6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "؟ الاختيارات: ٧، ٥، ٦."
+ },
+ {
+  "id": "ex_b1_ap7_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٥ وزوّد ٢."
+ },
+ {
+  "id": "ex_b1_ap7_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٥ ٢ ٧"
+ },
+ {
+  "id": "oral_b1_ap7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "؟ الاختيارات: ٨، ٧، ٦."
+ },
+ {
+  "id": "ex_b1_ap8_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٤ وزوّد ٤."
+ },
+ {
+  "id": "ex_b1_ap8_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٤ ٤ ٨"
+ },
+ {
+  "id": "oral_b1_ap8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "؟ الاختيارات: ٩، ٨، ٧."
+ },
+ {
+  "id": "ex_b1_ap9_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٦ وزوّد ٣."
+ },
+ {
+  "id": "ex_b1_ap9_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٦ ٣ ٩"
+ },
+ {
+  "id": "oral_b1_ap9_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "؟ الاختيارات: ٨، ٩، ١٠."
+ },
+ {
+  "id": "ex_b1_sa0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حنين عندها ٣ تفاحات، أكلت ١. كام تفاحة فاضلت؟"
+ },
+ {
+  "id": "ex_b1_sa0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الطرح يعني ننقّص. شيل التفاح اللي اتأكل."
+ },
+ {
+  "id": "ex_b1_sa0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٣ وعُد للوراء ١."
+ },
+ {
+  "id": "ex_b1_sa0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٣ - ١ ٢"
+ },
+ {
+  "id": "oral_b1_sa0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "حنين عندها ٣ تفاحات، أكلت ١. كام تفاحة فاضلت؟ الاختيارات: ٣، ٤، ٢."
+ },
+ {
+  "id": "ex_b1_sa1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حنين عندها ٤ تفاحات، أكلت ١. كام تفاحة فاضلت؟"
+ },
+ {
+  "id": "ex_b1_sa1_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٤ وعُد للوراء ١."
+ },
+ {
+  "id": "ex_b1_sa1_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٤ - ١ ٣"
+ },
+ {
+  "id": "oral_b1_sa1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "حنين عندها ٤ تفاحات، أكلت ١. كام تفاحة فاضلت؟ الاختيارات: ٣، ٤، ٥."
+ },
+ {
+  "id": "ex_b1_sa2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حنين عندها ٥ تفاحات، أكلت ٢. كام تفاحة فاضلت؟"
+ },
+ {
+  "id": "ex_b1_sa2_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٥ وعُد للوراء ٢."
+ },
+ {
+  "id": "ex_b1_sa2_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٥ - ٢ ٣"
+ },
+ {
+  "id": "oral_b1_sa2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "حنين عندها ٥ تفاحات، أكلت ٢. كام تفاحة فاضلت؟ الاختيارات: ٥، ٤، ٣."
+ },
+ {
+  "id": "ex_b1_sa3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حنين عندها ٥ تفاحات، أكلت ٣. كام تفاحة فاضلت؟"
+ },
+ {
+  "id": "ex_b1_sa3_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٥ وعُد للوراء ٣."
+ },
+ {
+  "id": "ex_b1_sa3_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٥ - ٣ ٢"
+ },
+ {
+  "id": "oral_b1_sa3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "حنين عندها ٥ تفاحات، أكلت ٣. كام تفاحة فاضلت؟ الاختيارات: ٢، ٤، ٣."
+ },
+ {
+  "id": "ex_b1_sa4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حنين عندها ٦ تفاحات، أكلت ٢. كام تفاحة فاضلت؟"
+ },
+ {
+  "id": "ex_b1_sa4_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٦ وعُد للوراء ٢."
+ },
+ {
+  "id": "ex_b1_sa4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٦ - ٢ ٤"
+ },
+ {
+  "id": "oral_b1_sa4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "حنين عندها ٦ تفاحات، أكلت ٢. كام تفاحة فاضلت؟ الاختيارات: ٦، ٤، ٥."
+ },
+ {
+  "id": "ex_b1_sa5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حنين عندها ٧ تفاحات، أكلت ٣. كام تفاحة فاضلت؟"
+ },
+ {
+  "id": "ex_b1_sa5_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٧ وعُد للوراء ٣."
+ },
+ {
+  "id": "ex_b1_sa5_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٧ - ٣ ٤"
+ },
+ {
+  "id": "oral_b1_sa5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "حنين عندها ٧ تفاحات، أكلت ٣. كام تفاحة فاضلت؟ الاختيارات: ٦، ٥، ٤."
+ },
+ {
+  "id": "ex_b1_sa6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حنين عندها ٨ تفاحات، أكلت ٥. كام تفاحة فاضلت؟"
+ },
+ {
+  "id": "ex_b1_sa6_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٨ وعُد للوراء ٥."
+ },
+ {
+  "id": "ex_b1_sa6_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٨ - ٥ ٣"
+ },
+ {
+  "id": "oral_b1_sa6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "حنين عندها ٨ تفاحات، أكلت ٥. كام تفاحة فاضلت؟ الاختيارات: ٣، ٥، ٤."
+ },
+ {
+  "id": "ex_b1_sa7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حنين عندها ٩ تفاحات، أكلت ٤. كام تفاحة فاضلت؟"
+ },
+ {
+  "id": "ex_b1_sa7_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ٩ وعُد للوراء ٤."
+ },
+ {
+  "id": "ex_b1_sa7_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٩ - ٤ ٥"
+ },
+ {
+  "id": "oral_b1_sa7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "حنين عندها ٩ تفاحات، أكلت ٤. كام تفاحة فاضلت؟ الاختيارات: ٥، ٧، ٦."
+ },
+ {
+  "id": "ex_b1_sa8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حنين عندها ١٠ تفاحات، أكلت ٦. كام تفاحة فاضلت؟"
+ },
+ {
+  "id": "ex_b1_sa8_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ١٠ وعُد للوراء ٦."
+ },
+ {
+  "id": "ex_b1_sa8_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "١٠ - ٦ ٤"
+ },
+ {
+  "id": "oral_b1_sa8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "حنين عندها ١٠ تفاحات، أكلت ٦. كام تفاحة فاضلت؟ الاختيارات: ٥، ٦، ٤."
+ },
+ {
+  "id": "ex_b1_sa9_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حنين عندها ١٠ تفاحات، أكلت ٣. كام تفاحة فاضلت؟"
+ },
+ {
+  "id": "ex_b1_sa9_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ من ١٠ وعُد للوراء ٣."
+ },
+ {
+  "id": "ex_b1_sa9_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "١٠ - ٣ ٧"
+ },
+ {
+  "id": "oral_b1_sa9_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "حنين عندها ١٠ تفاحات، أكلت ٣. كام تفاحة فاضلت؟ الاختيارات: ٩، ٨، ٧."
+ },
+ {
+  "id": "ex_b1_ba0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ما الرقم بعد ٤؟"
+ },
+ {
+  "id": "ex_b1_ba0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الرقم اللي بعده يكبر واحد، والرقم اللي قبله يصغر واحد."
+ },
+ {
+  "id": "ex_b1_ba0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "زوّد واحد من ٤."
+ },
+ {
+  "id": "oral_b1_ba0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الرقم بعد ٤؟ الاختيارات: ٥، ٧، ٣."
+ },
+ {
+  "id": "ex_b1_ba1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ما الرقم قبل ٧؟"
+ },
+ {
+  "id": "ex_b1_ba1_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نقّص واحد من ٧."
+ },
+ {
+  "id": "oral_b1_ba1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الرقم قبل ٧؟ الاختيارات: ٤، ٦، ٨."
+ },
+ {
+  "id": "ex_b1_ba2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ما الرقم بعد ٢؟"
+ },
+ {
+  "id": "ex_b1_ba2_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "زوّد واحد من ٢."
+ },
+ {
+  "id": "oral_b1_ba2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الرقم بعد ٢؟ الاختيارات: ٥، ٣، ١."
+ },
+ {
+  "id": "ex_b1_ba3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ما الرقم قبل ٩؟"
+ },
+ {
+  "id": "ex_b1_ba3_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نقّص واحد من ٩."
+ },
+ {
+  "id": "oral_b1_ba3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الرقم قبل ٩؟ الاختيارات: ٦، ١٠، ٨."
+ },
+ {
+  "id": "ex_b1_ba4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ما الرقم بعد ١٥؟"
+ },
+ {
+  "id": "ex_b1_ba4_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "زوّد واحد من ١٥."
+ },
+ {
+  "id": "oral_b1_ba4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الرقم بعد ١٥؟ الاختيارات: ١٨، ١٤، ١٦."
+ },
+ {
+  "id": "oral_b1_ba4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ١٦."
+ },
+ {
+  "id": "ex_b1_ba5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ما الرقم قبل ٢٩؟"
+ },
+ {
+  "id": "ex_b1_ba5_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نقّص واحد من ٢٩."
+ },
+ {
+  "id": "oral_b1_ba5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الرقم قبل ٢٩؟ الاختيارات: ٢٨، ٣٠، ٢٦."
+ },
+ {
+  "id": "oral_b1_ba5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٢٨."
+ },
+ {
+  "id": "ex_b1_ba6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ما الرقم بعد ٤٠؟"
+ },
+ {
+  "id": "ex_b1_ba6_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "زوّد واحد من ٤٠."
+ },
+ {
+  "id": "oral_b1_ba6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الرقم بعد ٤٠؟ الاختيارات: ٤٣، ٤١، ٣٩."
+ },
+ {
+  "id": "oral_b1_ba6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٤١."
+ },
+ {
+  "id": "ex_b1_ba7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ما الرقم قبل ٦٣؟"
+ },
+ {
+  "id": "ex_b1_ba7_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نقّص واحد من ٦٣."
+ },
+ {
+  "id": "oral_b1_ba7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الرقم قبل ٦٣؟ الاختيارات: ٦٢، ٦٤، ٦٠."
+ },
+ {
+  "id": "oral_b1_ba7_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٦٢."
+ },
+ {
+  "id": "ex_b1_ba8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ما الرقم بعد ٩٩؟"
+ },
+ {
+  "id": "ex_b1_ba8_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "زوّد واحد من ٩٩."
+ },
+ {
+  "id": "oral_b1_ba8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الرقم بعد ٩٩؟ الاختيارات: ١٠٠، ١٠٢، ٩٨."
+ },
+ {
+  "id": "oral_b1_ba8_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ١٠٠."
+ },
+ {
+  "id": "ex_b1_ba9_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ما الرقم قبل ١٢٠؟"
+ },
+ {
+  "id": "ex_b1_ba9_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "نقّص واحد من ١٢٠."
+ },
+ {
+  "id": "oral_b1_ba9_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ما الرقم قبل ١٢٠؟ الاختيارات: ١١٧، ١٢١، ١١٩."
+ },
+ {
+  "id": "oral_b1_ba9_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ١١٩."
+ },
+ {
+  "id": "ex_b1_eo0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حط كل رقم في مكانه: زوجي ولا فردي"
+ },
+ {
+  "id": "ex_b1_eo0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الزوجي ينقسم على اتنين من غير باقي، وينتهي بـ ٠ ٢ ٤ ٦ ٨."
+ },
+ {
+  "id": "ex_b1_eo0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الفردي ينتهي بـ ١ ٣ ٥ ٧ ٩."
+ },
+ {
+  "id": "ex_b1_mo0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "كام قرش في الجنيه الواحد؟"
+ },
+ {
+  "id": "ex_b1_mo0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "فكّر: نجمع ولا نطرح؟"
+ },
+ {
+  "id": "ex_b1_mo0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "اكتب العملية في دماغك واحسبها."
+ },
+ {
+  "id": "oral_b1_mo0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام قرش في الجنيه الواحد؟ الاختيارات: ١٠، ١٠٠، ١٠٠٠."
+ },
+ {
+  "id": "ex_b1_mo1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "معاك جنيهين وأبوك أعطاك جنيه. كام معاك؟"
+ },
+ {
+  "id": "oral_b1_mo1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "معاك جنيهين وأبوك أعطاك جنيه. كام معاك؟ الاختيارات: ٣، ٢، ١."
+ },
+ {
+  "id": "ex_b1_mo2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ثمن اللعبة ٥ جنيه. معاك ٣. كام ناقص؟"
+ },
+ {
+  "id": "oral_b1_mo2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ثمن اللعبة ٥ جنيه. معاك ٣. كام ناقص؟ الاختيارات: ٢، ٣، ٥."
+ },
+ {
+  "id": "ex_b1_mo3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٥ جنيه ٥ جنيه ؟"
+ },
+ {
+  "id": "oral_b1_mo3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "٥ جنيه ٥ جنيه ؟ الاختيارات: ١٠، ٥، ١٥."
+ },
+ {
+  "id": "oral_b1_mo3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ١٠."
+ },
+ {
+  "id": "ex_b1_mo4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "لو معاك ١٠ جنيه واشتريت بـ ٤، كام فضل؟"
+ },
+ {
+  "id": "oral_b1_mo4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "لو معاك ١٠ جنيه واشتريت بـ ٤، كام فضل؟ الاختيارات: ٤، ٦، ١٤."
+ },
+ {
+  "id": "ex_b1_mo5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ثمن الحلوى ٣ جنيه. كام ثمن ٢ حلوى؟"
+ },
+ {
+  "id": "oral_b1_mo5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ثمن الحلوى ٣ جنيه. كام ثمن ٢ حلوى؟ الاختيارات: ٥، ٦، ٩."
+ },
+ {
+  "id": "ex_b1_mo6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "معاك ٢٠ جنيه. اشتريت بـ ٧. كام فضل؟"
+ },
+ {
+  "id": "oral_b1_mo6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "معاك ٢٠ جنيه. اشتريت بـ ٧. كام فضل؟ الاختيارات: ١٣، ٢٧، ١٠."
+ },
+ {
+  "id": "oral_b1_mo6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ١٣."
+ },
+ {
+  "id": "ex_b1_mo7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ورقة ١٠ جنيه تساوي كام ورقة ٥ جنيه؟"
+ },
+ {
+  "id": "oral_b1_mo7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ورقة ١٠ جنيه تساوي كام ورقة ٥ جنيه؟ الاختيارات: اتنين، ثلاثة، واحدة."
+ },
+ {
+  "id": "oral_b1_mo7_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي اتنين."
+ },
+ {
+  "id": "ex_b2_complete_pattern0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "شوف الجزء اللي بيتكرر."
+ },
+ {
+  "id": "ex_b2_complete_pattern0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "قول النمط بصوت عالي."
+ },
+ {
+  "id": "ex_b2_complete_pattern0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "النمط: أحمر، أزرق، أحمر، أزرق."
+ },
+ {
+  "id": "ex_b2_complete_pattern1_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "النمط يكرر نجمة ثم قمر."
+ },
+ {
+  "id": "ex_b2_complete_pattern2_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "تفاحتين ثم موزة."
+ },
+ {
+  "id": "ex_b2_complete_pattern3_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "اثنين مثلث ثم مربع."
+ },
+ {
+  "id": "ex_b2_complete_pattern4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "١ ، ٢ ، ١ ، ٢ ، ١ ، ؟"
+ },
+ {
+  "id": "ex_b2_complete_pattern4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "١ و٢ يتكرروا."
+ },
+ {
+  "id": "oral_b2_complete_pattern4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "١ ، ٢ ، ١ ، ٢ ، ١ ، ؟ الاختيارات: ١، ٢، ٣."
+ },
+ {
+  "id": "ex_b2_complete_pattern5_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "ثلاثة حيوانات تتكرر."
+ },
+ {
+  "id": "ex_b2_complete_pattern6_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "أبيض ثم أسودين."
+ },
+ {
+  "id": "ex_b2_complete_pattern7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٢ ، ٤ ، ٦ ، ٨ ، ؟"
+ },
+ {
+  "id": "ex_b2_complete_pattern7_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "بنزيد اتنين كل مرة."
+ },
+ {
+  "id": "oral_b2_complete_pattern7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "٢ ، ٤ ، ٦ ، ٨ ، ؟ الاختيارات: ٩، ١٠، ١٢."
+ },
+ {
+  "id": "ex_b2_complete_pattern8_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "شمس ثم مطرتين."
+ },
+ {
+  "id": "ex_b2_odd_one0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين المختلف؟"
+ },
+ {
+  "id": "ex_b2_odd_one0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "فكّر في السؤال وجرّب كل اختيار."
+ },
+ {
+  "id": "ex_b2_odd_one0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "استبعد الإجابات اللي مش منطقية."
+ },
+ {
+  "id": "ex_b2_odd_one0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "العربية مش فاكهة."
+ },
+ {
+  "id": "ex_b2_odd_one1_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الشجرة مش حيوان."
+ },
+ {
+  "id": "ex_b2_odd_one2_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "البيتزا مش من أدوات المدرسة."
+ },
+ {
+  "id": "ex_b2_odd_one3_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكرة مش لون."
+ },
+ {
+  "id": "ex_b2_odd_one4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "البيت مش مواصلات."
+ },
+ {
+  "id": "ex_b2_odd_one5_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الباقي في السماء."
+ },
+ {
+  "id": "ex_b2_odd_one6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٢ ٤ ٦ ٧ مين المختلف؟"
+ },
+ {
+  "id": "ex_b2_odd_one6_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "٧ فردي والباقي زوجي."
+ },
+ {
+  "id": "oral_b2_odd_one6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "٢ ٤ ٦ ٧ مين المختلف؟ الاختيارات: ٤، ٧، ٦."
+ },
+ {
+  "id": "ex_b2_odd_one7_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الفيل ما بيعيش في الماء."
+ },
+ {
+  "id": "ex_b2_odd_one8_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الكرة مش خضار."
+ },
+ {
+  "id": "ex_b2_sz0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "قارن بين الأول والتاني."
+ },
+ {
+  "id": "ex_b2_sz0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "فكّر أي واحد أكبر في الحقيقة."
+ },
+ {
+  "id": "ex_b2_color_mix0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أحمر أصفر ؟"
+ },
+ {
+  "id": "ex_b2_color_mix0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الأحمر مع الأصفر يعطي البرتقالي."
+ },
+ {
+  "id": "oral_b2_color_mix0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أحمر أصفر ؟ الاختيارات: أخضر، برتقالي، بنفسجي."
+ },
+ {
+  "id": "oral_b2_color_mix0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي برتقالي."
+ },
+ {
+  "id": "ex_b2_color_mix1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أزرق أصفر ؟"
+ },
+ {
+  "id": "ex_b2_color_mix1_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الأزرق مع الأصفر يعطي الأخضر."
+ },
+ {
+  "id": "oral_b2_color_mix1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أزرق أصفر ؟ الاختيارات: أخضر، بني، وردي."
+ },
+ {
+  "id": "oral_b2_color_mix1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي أخضر."
+ },
+ {
+  "id": "ex_b2_color_mix2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أحمر أزرق ؟"
+ },
+ {
+  "id": "ex_b2_color_mix2_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الأحمر مع الأزرق يعطي البنفسجي."
+ },
+ {
+  "id": "oral_b2_color_mix2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أحمر أزرق ؟ الاختيارات: برتقالي، أخضر، بنفسجي."
+ },
+ {
+  "id": "oral_b2_color_mix2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي بنفسجي."
+ },
+ {
+  "id": "ex_b2_color_mix3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أحمر أبيض ؟"
+ },
+ {
+  "id": "ex_b2_color_mix3_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الأحمر مع الأبيض يعطي الوردي."
+ },
+ {
+  "id": "oral_b2_color_mix3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أحمر أبيض ؟ الاختيارات: وردي، أصفر، رمادي."
+ },
+ {
+  "id": "oral_b2_color_mix3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي وردي."
+ },
+ {
+  "id": "ex_b2_color_mix4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أسود أبيض ؟"
+ },
+ {
+  "id": "ex_b2_color_mix4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الأسود مع الأبيض يعطي الرمادي."
+ },
+ {
+  "id": "oral_b2_color_mix4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أسود أبيض ؟ الاختيارات: بني، رمادي، أزرق."
+ },
+ {
+  "id": "oral_b2_color_mix4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي رمادي."
+ },
+ {
+  "id": "ex_b2_color_mix5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أزرق أبيض ؟"
+ },
+ {
+  "id": "ex_b2_color_mix5_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الأزرق مع الأبيض يعطي السماوي."
+ },
+ {
+  "id": "oral_b2_color_mix5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أزرق أبيض ؟ الاختيارات: سماوي، أحمر، أخضر."
+ },
+ {
+  "id": "oral_b2_color_mix5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي سماوي."
+ },
+ {
+  "id": "ex_b2_color_mix6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "لون الموز بعد ما يكبر ويتعفن؟"
+ },
+ {
+  "id": "ex_b2_color_mix6_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الموز يتحول للبني."
+ },
+ {
+  "id": "oral_b2_color_mix6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "لون الموز بعد ما يكبر ويتعفن؟ الاختيارات: أزرق، وردي، بني."
+ },
+ {
+  "id": "oral_b2_color_mix6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي بني."
+ },
+ {
+  "id": "ex_b2_color_mix7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي لونين نخلطهم لنحصل على الأخضر؟"
+ },
+ {
+  "id": "oral_b2_color_mix7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي لونين نخلطهم لنحصل على الأخضر؟ الاختيارات: أسود وأبيض، أزرق وأصفر، أحمر وأبيض."
+ },
+ {
+  "id": "oral_b2_color_mix7_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي أزرق وأصفر."
+ },
+ {
+  "id": "ex_b2_hs0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "كام مثلث؟"
+ },
+ {
+  "id": "ex_b2_hs0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "عُد كل شكل مرة واحدة بإصبعك."
+ },
+ {
+  "id": "ex_b2_hs0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "حط إصبعك على كل واحد وإنت بتعد."
+ },
+ {
+  "id": "oral_b2_hs0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام مثلث؟ الاختيارات: ١، ٢، ٣."
+ },
+ {
+  "id": "ex_b2_hs1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "كام دايرة؟"
+ },
+ {
+  "id": "oral_b2_hs1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام دايرة؟ الاختيارات: ٢، ٣، ٤."
+ },
+ {
+  "id": "ex_b2_hs2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "كام مربع؟"
+ },
+ {
+  "id": "oral_b2_hs2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام مربع؟ الاختيارات: ١، ٢، ٣."
+ },
+ {
+  "id": "ex_b2_hs3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "كام نجمة؟"
+ },
+ {
+  "id": "oral_b2_hs3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام نجمة؟ الاختيارات: ٢، ٣، ٥."
+ },
+ {
+  "id": "ex_b2_hs4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "كام قلب؟"
+ },
+ {
+  "id": "oral_b2_hs4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام قلب؟ الاختيارات: ٣، ٤، ٥."
+ },
+ {
+  "id": "ex_b2_hs5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "كام شكل كله؟"
+ },
+ {
+  "id": "oral_b2_hs5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام شكل كله؟ الاختيارات: ٣، ٤، ٥."
+ },
+ {
+  "id": "ex_b2_hs6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "كام قمر؟"
+ },
+ {
+  "id": "oral_b2_hs6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام قمر؟ الاختيارات: ٣، ٤، ٣٣."
+ },
+ {
+  "id": "ex_b2_hs7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "كام شكل أحمر؟"
+ },
+ {
+  "id": "oral_b2_hs7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام شكل أحمر؟ الاختيارات: ٢، ٣، ٤."
+ },
+ {
+  "id": "ex_b2_mirror0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "لو وقفت قدام المراية، اليد اليمين تبان؟"
+ },
+ {
+  "id": "ex_b2_mirror0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "المراية بتقلب الجهة."
+ },
+ {
+  "id": "oral_b2_mirror0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "لو وقفت قدام المراية، اليد اليمين تبان؟ الاختيارات: فوق، اليمين، اليسار."
+ },
+ {
+  "id": "oral_b2_mirror0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي اليسار."
+ },
+ {
+  "id": "ex_b2_mirror1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي شكل متماثل (نصفه زي نصفه)؟"
+ },
+ {
+  "id": "ex_b2_mirror1_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "القلب نصفه يشبه نصفه الثاني."
+ },
+ {
+  "id": "ex_b2_mirror2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي حرف متماثل؟"
+ },
+ {
+  "id": "ex_b2_mirror2_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "حرف الألف نصفه زي نصفه."
+ },
+ {
+  "id": "oral_b2_mirror2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي حرف متماثل؟ الاختيارات: ا، ق، ب."
+ },
+ {
+  "id": "oral_b2_mirror2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ا."
+ },
+ {
+  "id": "ex_b2_mirror3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "فراشة مفتوحة الجناحين، جناحها اليمين يشبه؟"
+ },
+ {
+  "id": "oral_b2_mirror3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "فراشة مفتوحة الجناحين، جناحها اليمين يشبه؟ الاختيارات: الرجل، اليسار، الراس."
+ },
+ {
+  "id": "ex_b2_mirror4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي واحد له محور تماثل؟"
+ },
+ {
+  "id": "ex_b2_mirror4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "جناحا الفراشة متشابهان."
+ },
+ {
+  "id": "ex_b2_mirror5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين صورة نفس الوجه في المراية؟"
+ },
+ {
+  "id": "ex_b2_mirror6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "نص الدايرة؟"
+ },
+ {
+  "id": "ex_b2_mirror6_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "خط التماثل بيقسم الشكل نصفين."
+ },
+ {
+  "id": "oral_b2_mirror6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "نص الدايرة؟ الاختيارات: جزء واحد، نصفان متساويان، ثلاثة أجزاء."
+ },
+ {
+  "id": "oral_b2_mirror6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي نصفان متساويان."
+ },
+ {
+  "id": "ex_b2_length0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أيهما أطول؟"
+ },
+ {
+  "id": "ex_b2_length0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الزرافة أطول."
+ },
+ {
+  "id": "oral_b2_length0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي زرافة."
+ },
+ {
+  "id": "ex_b2_length1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أيهما أقصر؟"
+ },
+ {
+  "id": "ex_b2_length1_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "النملة صغيرة جدا."
+ },
+ {
+  "id": "oral_b2_length1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي نملة."
+ },
+ {
+  "id": "oral_b2_length2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي شجرة."
+ },
+ {
+  "id": "ex_b2_length3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي أداة نقيس بيها الطول؟"
+ },
+ {
+  "id": "ex_b2_length3_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "المسطرة لقياس الطول."
+ },
+ {
+  "id": "oral_b2_length3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي أداة نقيس بيها الطول؟ الاختيارات: الميزان، المسطرة، الساعة."
+ },
+ {
+  "id": "oral_b2_length3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي المسطرة."
+ },
+ {
+  "id": "ex_b2_length4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أي أداة نقيس بيها الوزن؟"
+ },
+ {
+  "id": "ex_b2_length4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الميزان لقياس الوزن."
+ },
+ {
+  "id": "oral_b2_length4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أي أداة نقيس بيها الوزن؟ الاختيارات: الميزان، المراية، المسطرة."
+ },
+ {
+  "id": "oral_b2_length4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الميزان."
+ },
+ {
+  "id": "ex_b2_length5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "القلم الأطول هو؟"
+ },
+ {
+  "id": "ex_b2_length5_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "كل ما زادت القطع زاد الطول."
+ },
+ {
+  "id": "ex_b2_length6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أيهما أخف؟"
+ },
+ {
+  "id": "oral_b2_length6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ريشة."
+ },
+ {
+  "id": "ex_b2_length7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أيهما أثقل؟"
+ },
+ {
+  "id": "ex_b2_animal_home0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "بيت الأسد؟"
+ },
+ {
+  "id": "ex_b2_animal_home0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الأسد يعيش في الغابة."
+ },
+ {
+  "id": "oral_b2_animal_home0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "بيت الأسد؟ الاختيارات: الغابة، البحر، السماء."
+ },
+ {
+  "id": "oral_b2_animal_home0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الغابة."
+ },
+ {
+  "id": "ex_b2_animal_home1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "بيت السمكة؟"
+ },
+ {
+  "id": "oral_b2_animal_home1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "بيت السمكة؟ الاختيارات: الماء، العش، الكهف."
+ },
+ {
+  "id": "ex_b2_animal_home2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "بيت العصفور؟"
+ },
+ {
+  "id": "oral_b2_animal_home2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "بيت العصفور؟ الاختيارات: الجحر، العش، الإسطبل."
+ },
+ {
+  "id": "oral_b2_animal_home2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي العش."
+ },
+ {
+  "id": "ex_b2_animal_home3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "بيت الأرنب؟"
+ },
+ {
+  "id": "ex_b2_animal_home3_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الأرنب يعيش في جحر."
+ },
+ {
+  "id": "oral_b2_animal_home3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "بيت الأرنب؟ الاختيارات: الجحر، البحر، العش."
+ },
+ {
+  "id": "oral_b2_animal_home3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الجحر."
+ },
+ {
+  "id": "ex_b2_animal_home4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "بيت الحصان؟"
+ },
+ {
+  "id": "oral_b2_animal_home4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "بيت الحصان؟ الاختيارات: البركة، الإسطبل، العش."
+ },
+ {
+  "id": "oral_b2_animal_home4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الإسطبل."
+ },
+ {
+  "id": "ex_b2_animal_home5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "بيت النحلة؟"
+ },
+ {
+  "id": "ex_b2_animal_home5_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "النحل يعيش في خلية."
+ },
+ {
+  "id": "oral_b2_animal_home5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "بيت النحلة؟ الاختيارات: الخلية، الكهف، الجحر."
+ },
+ {
+  "id": "oral_b2_animal_home5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الخلية."
+ },
+ {
+  "id": "ex_b2_animal_home6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "بيت الدب القطبي؟"
+ },
+ {
+  "id": "oral_b2_animal_home6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "بيت الدب القطبي؟ الاختيارات: الجليد، الغابة، الصحراء."
+ },
+ {
+  "id": "oral_b2_animal_home6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الجليد."
+ },
+ {
+  "id": "ex_b2_animal_home7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "بيت الجمل؟"
+ },
+ {
+  "id": "oral_b2_animal_home7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "بيت الجمل؟ الاختيارات: البحر، الصحراء، القطب."
+ },
+ {
+  "id": "oral_b2_animal_home7_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الصحراء."
+ },
+ {
+  "id": "ex_b2_what_eats0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الأرنب يأكل؟"
+ },
+ {
+  "id": "oral_b2_what_eats0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الأرنب يأكل؟ الاختيارات: الحجر، الجزر، اللحم."
+ },
+ {
+  "id": "oral_b2_what_eats0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الجزر."
+ },
+ {
+  "id": "ex_b2_what_eats1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الأسد يأكل؟"
+ },
+ {
+  "id": "ex_b2_what_eats1_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الأسد من آكلي اللحوم."
+ },
+ {
+  "id": "oral_b2_what_eats1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الأسد يأكل؟ الاختيارات: الورد، العشب، اللحم."
+ },
+ {
+  "id": "oral_b2_what_eats1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي اللحم."
+ },
+ {
+  "id": "ex_b2_what_eats2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "البقرة تأكل؟"
+ },
+ {
+  "id": "oral_b2_what_eats2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "البقرة تأكل؟ الاختيارات: العشب، السمك، البيتزا."
+ },
+ {
+  "id": "oral_b2_what_eats2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي العشب."
+ },
+ {
+  "id": "ex_b2_what_eats3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "القرد يحب؟"
+ },
+ {
+  "id": "oral_b2_what_eats3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "القرد يحب؟ الاختيارات: الموز، الورق، العظم."
+ },
+ {
+  "id": "oral_b2_what_eats3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الموز."
+ },
+ {
+  "id": "ex_b2_what_eats4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "النحلة تأخذ؟"
+ },
+ {
+  "id": "ex_b2_what_eats4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "النحل يصنع العسل من الرحيق."
+ },
+ {
+  "id": "oral_b2_what_eats4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "النحلة تأخذ؟ الاختيارات: رحيق الزهور، الحبوب فقط، اللحم."
+ },
+ {
+  "id": "oral_b2_what_eats4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي رحيق الزهور."
+ },
+ {
+  "id": "ex_b2_what_eats5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "القطة تحب؟"
+ },
+ {
+  "id": "oral_b2_what_eats5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "القطة تحب؟ الاختيارات: العشب، السمك، الجزر."
+ },
+ {
+  "id": "oral_b2_what_eats5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي السمك."
+ },
+ {
+  "id": "ex_b2_what_eats6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الدجاجة تأكل؟"
+ },
+ {
+  "id": "oral_b2_what_eats6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الدجاجة تأكل؟ الاختيارات: الحبوب، الحجارة، اللحم."
+ },
+ {
+  "id": "oral_b2_what_eats6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الحبوب."
+ },
+ {
+  "id": "ex_b2_what_eats7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الحوت يأكل؟"
+ },
+ {
+  "id": "oral_b2_what_eats7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الحوت يأكل؟ الاختيارات: العشب، الجزر، الأسماك الصغيرة والعوالق."
+ },
+ {
+  "id": "oral_b2_what_eats7_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الأسماك الصغيرة والعوالق."
+ },
+ {
+  "id": "ex_b2_seasons0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "في أي فصل تساقط أوراق الشجر؟"
+ },
+ {
+  "id": "oral_b2_seasons0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "في أي فصل تساقط أوراق الشجر؟ الاختيارات: الصيف، الخريف، الربيع."
+ },
+ {
+  "id": "oral_b2_seasons0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الخريف."
+ },
+ {
+  "id": "ex_b2_seasons1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الجو حار جدا في فصل؟"
+ },
+ {
+  "id": "oral_b2_seasons1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الجو حار جدا في فصل؟ الاختيارات: الخريف، الشتاء، الصيف."
+ },
+ {
+  "id": "oral_b2_seasons1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الصيف."
+ },
+ {
+  "id": "ex_b2_seasons2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الأزهار تتفتح في فصل؟"
+ },
+ {
+  "id": "oral_b2_seasons2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الأزهار تتفتح في فصل؟ الاختيارات: الربيع، الشتاء، الصيف."
+ },
+ {
+  "id": "oral_b2_seasons2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الربيع."
+ },
+ {
+  "id": "ex_b2_seasons3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "المطر والبرد في فصل؟"
+ },
+ {
+  "id": "oral_b2_seasons3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "المطر والبرد في فصل؟ الاختيارات: الصيف، الشتاء، الربيع."
+ },
+ {
+  "id": "oral_b2_seasons3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الشتاء."
+ },
+ {
+  "id": "ex_b2_seasons4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "كام فصل في السنة؟"
+ },
+ {
+  "id": "ex_b2_seasons4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "أربعة فصول."
+ },
+ {
+  "id": "oral_b2_seasons4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام فصل في السنة؟ الاختيارات: ٥، ٣، ٤."
+ },
+ {
+  "id": "ex_b2_seasons5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الفصل اللي بعد الشتاء؟"
+ },
+ {
+  "id": "ex_b2_seasons5_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "شتاء ثم ربيع ثم صيف ثم خريف."
+ },
+ {
+  "id": "oral_b2_seasons5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الفصل اللي بعد الشتاء؟ الاختيارات: الصيف، الخريف، الربيع."
+ },
+ {
+  "id": "ex_b2_seasons6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "نلبس الجاكيت الثقيل في؟"
+ },
+ {
+  "id": "oral_b2_seasons6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "نلبس الجاكيت الثقيل في؟ الاختيارات: الشتاء، الربيع، الصيف."
+ },
+ {
+  "id": "ex_b2_seasons7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "نذهب للبحر غالبا في؟"
+ },
+ {
+  "id": "oral_b2_seasons7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "نذهب للبحر غالبا في؟ الاختيارات: الخريف، الصيف، الشتاء."
+ },
+ {
+  "id": "ex_b2_weather_clothes0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الجو ممطر، نأخذ؟"
+ },
+ {
+  "id": "oral_b2_weather_clothes0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي مظلة."
+ },
+ {
+  "id": "ex_b2_weather_clothes1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الجو بارد جدا، نلبس؟"
+ },
+ {
+  "id": "oral_b2_weather_clothes1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي جاكيت."
+ },
+ {
+  "id": "ex_b2_weather_clothes2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الجو مشمس وحار، نلبس؟"
+ },
+ {
+  "id": "oral_b2_weather_clothes2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي تيشيرت خفيف."
+ },
+ {
+  "id": "ex_b2_weather_clothes3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الجو رياح، نمسك؟"
+ },
+ {
+  "id": "oral_b2_weather_clothes3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي طيارة ورق."
+ },
+ {
+  "id": "ex_b2_weather_clothes4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "في الثلج نلبس؟"
+ },
+ {
+  "id": "oral_b2_weather_clothes4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي قفازات."
+ },
+ {
+  "id": "ex_b2_weather_clothes5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "نروح البحر نأخذ؟"
+ },
+ {
+  "id": "oral_b2_weather_clothes5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي مايوه."
+ },
+ {
+  "id": "ex_b2_weather_clothes6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الجو غائم ومطر خفيف، نأخذ؟"
+ },
+ {
+  "id": "ex_b2_jobs0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين بيعالج المرضى؟"
+ },
+ {
+  "id": "oral_b2_jobs0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "مين بيعالج المرضى؟ الاختيارات: النجار، الطبيب، الطباخ."
+ },
+ {
+  "id": "oral_b2_jobs0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الطبيب."
+ },
+ {
+  "id": "ex_b2_jobs1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين بيعلّم الأطفال؟"
+ },
+ {
+  "id": "oral_b2_jobs1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "مين بيعلّم الأطفال؟ الاختيارات: الطيار، الحلاق، المعلم."
+ },
+ {
+  "id": "oral_b2_jobs1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي المعلم."
+ },
+ {
+  "id": "ex_b2_jobs2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين بيطفّي الحرائق؟"
+ },
+ {
+  "id": "oral_b2_jobs2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "مين بيطفّي الحرائق؟ الاختيارات: الفلاح، الطبيب، رجل الإطفاء."
+ },
+ {
+  "id": "oral_b2_jobs2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي رجل الإطفاء."
+ },
+ {
+  "id": "ex_b2_jobs3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين بيزرع الأرض؟"
+ },
+ {
+  "id": "oral_b2_jobs3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "مين بيزرع الأرض؟ الاختيارات: الفلاح، الطيار، الشرطي."
+ },
+ {
+  "id": "oral_b2_jobs3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الفلاح."
+ },
+ {
+  "id": "ex_b2_jobs4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين بيسوق الطيارة؟"
+ },
+ {
+  "id": "oral_b2_jobs4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "مين بيسوق الطيارة؟ الاختيارات: السائق، الربان، الطيار."
+ },
+ {
+  "id": "oral_b2_jobs4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الطيار."
+ },
+ {
+  "id": "ex_b2_jobs5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين بيحمينا ويحفظ الأمن؟"
+ },
+ {
+  "id": "oral_b2_jobs5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "مين بيحمينا ويحفظ الأمن؟ الاختيارات: الرسام، الخباز، الشرطي."
+ },
+ {
+  "id": "oral_b2_jobs5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الشرطي."
+ },
+ {
+  "id": "ex_b2_jobs6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين بيعمل العيش؟"
+ },
+ {
+  "id": "oral_b2_jobs6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "مين بيعمل العيش؟ الاختيارات: الميكانيكي، الخباز، الطبيب."
+ },
+ {
+  "id": "oral_b2_jobs6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الخباز."
+ },
+ {
+  "id": "ex_b2_jobs7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين بيصلّح العربيات؟"
+ },
+ {
+  "id": "oral_b2_jobs7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "مين بيصلّح العربيات؟ الاختيارات: المعلم، الطباخ، الميكانيكي."
+ },
+ {
+  "id": "oral_b2_jobs7_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الميكانيكي."
+ },
+ {
+  "id": "ex_b2_transport0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين بيمشي على الشريط؟"
+ },
+ {
+  "id": "oral_b2_transport0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "مين بيمشي على الشريط؟ الاختيارات: القطار، المركب، الطيارة."
+ },
+ {
+  "id": "oral_b2_transport0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي القطار."
+ },
+ {
+  "id": "ex_b2_transport1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين بيطير في السماء؟"
+ },
+ {
+  "id": "oral_b2_transport1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "مين بيطير في السماء؟ الاختيارات: الطيارة، القطار، العربية."
+ },
+ {
+  "id": "oral_b2_transport1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الطيارة."
+ },
+ {
+  "id": "ex_b2_transport2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين بيمشي في البحر؟"
+ },
+ {
+  "id": "oral_b2_transport2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "مين بيمشي في البحر؟ الاختيارات: المركب، الأتوبيس، الدراجة."
+ },
+ {
+  "id": "oral_b2_transport2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي المركب."
+ },
+ {
+  "id": "ex_b2_transport3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين له عجلتين؟"
+ },
+ {
+  "id": "oral_b2_transport3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "مين له عجلتين؟ الاختيارات: الأتوبيس، الدراجة، العربية."
+ },
+ {
+  "id": "oral_b2_transport3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الدراجة."
+ },
+ {
+  "id": "ex_b2_transport4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الأتوبيس بيشيل؟"
+ },
+ {
+  "id": "oral_b2_transport4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الأتوبيس بيشيل؟ الاختيارات: ماء، ناس كتير، سمك."
+ },
+ {
+  "id": "oral_b2_transport4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ناس كتير."
+ },
+ {
+  "id": "ex_b2_transport5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين أسرع؟"
+ },
+ {
+  "id": "oral_b2_transport5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "مين أسرع؟ الاختيارات: الطيارة، الدراجة، المشي."
+ },
+ {
+  "id": "ex_b2_transport6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "مين بيمشي تحت الأرض في المدن الكبيرة؟"
+ },
+ {
+  "id": "oral_b2_transport6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "مين بيمشي تحت الأرض في المدن الكبيرة؟ الاختيارات: الدراجة، المترو، المركب."
+ },
+ {
+  "id": "oral_b2_transport6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي المترو."
+ },
+ {
+  "id": "ex_b2_transport7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "نركب لما نسافر بعيد في وقت قصير"
+ },
+ {
+  "id": "oral_b2_transport7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "نركب لما نسافر بعيد في وقت قصير الاختيارات: الدراجة، الحصان، الطيارة."
+ },
+ {
+  "id": "ex_b2_fv0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حط كل واحدة مكانها: فاكهة ولا خضار"
+ },
+ {
+  "id": "ex_b2_fv0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الفاكهة غالبا حلوة وناكلها زي ما هي."
+ },
+ {
+  "id": "ex_b2_fv0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الخضار نطبخها أو نحطها في السلطة."
+ },
+ {
+  "id": "ex_b2_five_senses0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "نشوف بـ؟"
+ },
+ {
+  "id": "oral_b2_five_senses0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "نشوف بـ؟ الاختيارات: العين، الأذن، الأنف."
+ },
+ {
+  "id": "ex_b2_five_senses1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "نسمع بـ؟"
+ },
+ {
+  "id": "oral_b2_five_senses1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "نسمع بـ؟ الاختيارات: الأذن، اللسان، العين."
+ },
+ {
+  "id": "ex_b2_five_senses2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "نشم الورد بـ؟"
+ },
+ {
+  "id": "oral_b2_five_senses2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "نشم الورد بـ؟ الاختيارات: الأنف، العين، اليد."
+ },
+ {
+  "id": "ex_b2_five_senses3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "نتذوق الحلوى بـ؟"
+ },
+ {
+  "id": "oral_b2_five_senses3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "نتذوق الحلوى بـ؟ الاختيارات: الأذن، اللسان، الأنف."
+ },
+ {
+  "id": "oral_b2_five_senses3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي اللسان."
+ },
+ {
+  "id": "ex_b2_five_senses4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "نحس بالبرد والسخونة بـ؟"
+ },
+ {
+  "id": "ex_b2_five_senses4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الجلد هو حاسة اللمس."
+ },
+ {
+  "id": "oral_b2_five_senses4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "نحس بالبرد والسخونة بـ؟ الاختيارات: الأذن، العين، الجلد."
+ },
+ {
+  "id": "oral_b2_five_senses4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الجلد."
+ },
+ {
+  "id": "ex_b2_five_senses5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "كام حاسة عندنا؟"
+ },
+ {
+  "id": "ex_b2_five_senses5_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "خمس حواس."
+ },
+ {
+  "id": "oral_b2_five_senses5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "كام حاسة عندنا؟ الاختيارات: ١٠، ٥، ٣."
+ },
+ {
+  "id": "ex_b2_five_senses6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "نسمع الموسيقى بـ؟"
+ },
+ {
+  "id": "oral_b2_five_senses6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "نسمع الموسيقى بـ؟ الاختيارات: العين، الأنف، الأذن."
+ },
+ {
+  "id": "ex_b2_five_senses7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "نمسك الكرة الناعمة ونحس بيها بـ؟"
+ },
+ {
+  "id": "oral_b2_five_senses7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "نمسك الكرة الناعمة ونحس بيها بـ؟ الاختيارات: السمع، الشم، اللمس."
+ },
+ {
+  "id": "oral_b2_five_senses7_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي اللمس."
+ },
+ {
+  "id": "ex_b3_day_routine0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب يومك: إيه الأول؟"
+ },
+ {
+  "id": "ex_b3_day_routine0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "فكّر: إيه اللي بنعمله أول حاجة؟"
+ },
+ {
+  "id": "ex_b3_day_routine0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الأخير هو النوم أو الوصول."
+ },
+ {
+  "id": "ex_b3_day_routine1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب المساء"
+ },
+ {
+  "id": "ex_b3_day_routine2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب قبل المدرسة"
+ },
+ {
+  "id": "ex_b3_day_routine3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب بعد المدرسة"
+ },
+ {
+  "id": "ex_b3_day_routine4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب يوم الجمعة"
+ },
+ {
+  "id": "ex_b3_day_routine5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب قبل النوم"
+ },
+ {
+  "id": "ex_b3_rw0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أقول من فضلك لما أطلب حاجة، صح ولا غلط؟"
+ },
+ {
+  "id": "ex_b3_rw0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "فكّر: هل ده تصرف لطيف مع الناس؟"
+ },
+ {
+  "id": "ex_b3_rw0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "هل ده يضايق حد؟"
+ },
+ {
+  "id": "oral_b3_rw0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أقول من فضلك لما أطلب حاجة، صح ولا غلط؟ الاختيارات: صح، غلط."
+ },
+ {
+  "id": "oral_b3_rw0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي صح."
+ },
+ {
+  "id": "ex_b3_rw1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أرمي الزبالة في الشارع، صح ولا غلط؟"
+ },
+ {
+  "id": "oral_b3_rw1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أرمي الزبالة في الشارع، صح ولا غلط؟ الاختيارات: صح، غلط."
+ },
+ {
+  "id": "oral_b3_rw1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي غلط."
+ },
+ {
+  "id": "ex_b3_rw2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أقول شكراً لما حد يساعدني، صح ولا غلط؟"
+ },
+ {
+  "id": "oral_b3_rw2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أقول شكراً لما حد يساعدني، صح ولا غلط؟ الاختيارات: صح، غلط."
+ },
+ {
+  "id": "ex_b3_rw3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أقاطع الناس وهما بيتكلموا، صح ولا غلط؟"
+ },
+ {
+  "id": "oral_b3_rw3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أقاطع الناس وهما بيتكلموا، صح ولا غلط؟ الاختيارات: صح، غلط."
+ },
+ {
+  "id": "ex_b3_rw4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أسلّم على جيراني بابتسامة، صح ولا غلط؟"
+ },
+ {
+  "id": "oral_b3_rw4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أسلّم على جيراني بابتسامة، صح ولا غلط؟ الاختيارات: صح، غلط."
+ },
+ {
+  "id": "ex_b3_rw5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أخد لعبة صاحبي من غير ما أستأذن، صح ولا غلط؟"
+ },
+ {
+  "id": "oral_b3_rw5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أخد لعبة صاحبي من غير ما أستأذن، صح ولا غلط؟ الاختيارات: صح، غلط."
+ },
+ {
+  "id": "ex_b3_rw6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أقول السلام عليكم لما أدخل، صح ولا غلط؟"
+ },
+ {
+  "id": "oral_b3_rw6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أقول السلام عليكم لما أدخل، صح ولا غلط؟ الاختيارات: صح، غلط."
+ },
+ {
+  "id": "ex_b3_rw7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أضحك على صاحبي لما يغلط، صح ولا غلط؟"
+ },
+ {
+  "id": "oral_b3_rw7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أضحك على صاحبي لما يغلط، صح ولا غلط؟ الاختيارات: صح، غلط."
+ },
+ {
+  "id": "ex_b3_rw8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أساعد ماما في البيت، صح ولا غلط؟"
+ },
+ {
+  "id": "oral_b3_rw8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أساعد ماما في البيت، صح ولا غلط؟ الاختيارات: صح، غلط."
+ },
+ {
+  "id": "ex_b3_rw9_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أسيب الأكل على الأرض، صح ولا غلط؟"
+ },
+ {
+  "id": "oral_b3_rw9_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أسيب الأكل على الأرض، صح ولا غلط؟ الاختيارات: صح، غلط."
+ },
+ {
+  "id": "ex_b3_teeth0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب خطوات غسل الأسنان"
+ },
+ {
+  "id": "ex_b3_teeth0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "ابدأ بتجهيز الفرشاة."
+ },
+ {
+  "id": "ex_b3_teeth0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الشطف في الآخر."
+ },
+ {
+  "id": "ex_b3_teeth1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب"
+ },
+ {
+  "id": "ex_b3_rm0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب الأوضة: حط كل حاجة في مكانها"
+ },
+ {
+  "id": "ex_b3_rm0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "اللعب في صندوق اللعب والهدوم في الدولاب."
+ },
+ {
+  "id": "ex_b3_rm1_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الأدوات للمدرسة، واللعب للعب."
+ },
+ {
+  "id": "ex_b3_rm2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب الأوضة"
+ },
+ {
+  "id": "ex_b3_rm2_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "فكّر: ألبسها ولا ألعب بيها؟"
+ },
+ {
+  "id": "ex_b3_rm3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "حط الأشياء في مكانها"
+ },
+ {
+  "id": "ex_b3_rm3_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "المطبخ للأكل والأوضة للنوم."
+ },
+ {
+  "id": "ex_b3_em0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "وصّل الوش بالإحساس"
+ },
+ {
+  "id": "ex_b3_em0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "بص على الوش: العين والفم بيقولوا الإحساس."
+ },
+ {
+  "id": "ex_b3_emotions_choice0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "لو صاحبك زعلان، تعمل إيه؟"
+ },
+ {
+  "id": "ex_b3_emotions_choice0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "افتكر إيه اللي بيحسّ بيه صاحبك."
+ },
+ {
+  "id": "oral_b3_emotions_choice0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "لو صاحبك زعلان، تعمل إيه؟ الاختيارات: أمشي، أطبطب عليه، أضحك عليه."
+ },
+ {
+  "id": "oral_b3_emotions_choice0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي أطبطب عليه."
+ },
+ {
+  "id": "ex_b3_emotions_choice1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "لو أخدت هدية، تحس بإيه؟"
+ },
+ {
+  "id": "oral_b3_emotions_choice1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "لو أخدت هدية، تحس بإيه؟ الاختيارات: زعلان، فرحان، خايف."
+ },
+ {
+  "id": "oral_b3_emotions_choice1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي فرحان."
+ },
+ {
+  "id": "ex_b3_emotions_choice2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "لو الدنيا ضلمة وخايف، تعمل إيه؟"
+ },
+ {
+  "id": "oral_b3_emotions_choice2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "لو الدنيا ضلمة وخايف، تعمل إيه؟ الاختيارات: أصرخ، أخبّي نفسي، أقول لماما أو بابا."
+ },
+ {
+  "id": "oral_b3_emotions_choice2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي أقول لماما أو بابا."
+ },
+ {
+  "id": "ex_b3_story_order0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب الحدوتة: أرنوب والجزرة"
+ },
+ {
+  "id": "ex_b3_story_order0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "فكّر: إيه اللي حصل الأول؟"
+ },
+ {
+  "id": "ex_b3_story_order1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب: البذرة"
+ },
+ {
+  "id": "ex_b3_story_order2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب: الفطيرة"
+ },
+ {
+  "id": "ex_b3_story_order3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب: يوم الشاطئ"
+ },
+ {
+  "id": "ex_b3_story_order4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب: رحلة السمكة"
+ },
+ {
+  "id": "ex_b3_road_safety0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الإشارة حمراء، أعمل إيه؟"
+ },
+ {
+  "id": "ex_b3_road_safety0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الأمان أهم من السرعة."
+ },
+ {
+  "id": "ex_b3_road_safety0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "دايما بص يمين وشمال."
+ },
+ {
+  "id": "ex_b3_road_safety0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "الأحمر معناه قف."
+ },
+ {
+  "id": "oral_b3_road_safety0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الإشارة حمراء، أعمل إيه؟ الاختيارات: أجري، أعدّي، أقف."
+ },
+ {
+  "id": "oral_b3_road_safety0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي أقف."
+ },
+ {
+  "id": "ex_b3_road_safety1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الإشارة خضراء للمشاة، أعمل؟"
+ },
+ {
+  "id": "oral_b3_road_safety1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الإشارة خضراء للمشاة، أعمل؟ الاختيارات: أجري، أعدّي وأنا أبص، أقف."
+ },
+ {
+  "id": "oral_b3_road_safety1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي أعدّي وأنا أبص."
+ },
+ {
+  "id": "ex_b3_road_safety2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أعدّي الشارع من؟"
+ },
+ {
+  "id": "oral_b3_road_safety2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أعدّي الشارع من؟ الاختيارات: الزيبرا والعلامات، وسط العربيات، من أي مكان."
+ },
+ {
+  "id": "oral_b3_road_safety2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الزيبرا والعلامات."
+ },
+ {
+  "id": "ex_b3_road_safety3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "وأنا في العربية، أحط؟"
+ },
+ {
+  "id": "oral_b3_road_safety3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "وأنا في العربية، أحط؟ الاختيارات: حزام الأمان، العروسة، شنطتي."
+ },
+ {
+  "id": "oral_b3_road_safety3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي حزام الأمان."
+ },
+ {
+  "id": "ex_b3_road_safety4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "أمسك إيد مين وأنا بعدّي الشارع؟"
+ },
+ {
+  "id": "oral_b3_road_safety4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "أمسك إيد مين وأنا بعدّي الشارع؟ الاختيارات: إيد صاحبي الصغير، إيد الكبير، لوحدي."
+ },
+ {
+  "id": "oral_b3_road_safety4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي إيد الكبير."
+ },
+ {
+  "id": "ex_b3_road_safety5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "ألعب كورة في؟"
+ },
+ {
+  "id": "oral_b3_road_safety5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "ألعب كورة في؟ الاختيارات: الطريق السريع، الشارع، الحديقة."
+ },
+ {
+  "id": "oral_b3_road_safety5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي الحديقة."
+ },
+ {
+  "id": "ex_b3_road_safety6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الإشارة صفراء معناها؟"
+ },
+ {
+  "id": "oral_b3_road_safety6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الإشارة صفراء معناها؟ الاختيارات: ارجع، استعد وخليك حذر، اجري."
+ },
+ {
+  "id": "oral_b3_road_safety6_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي استعد وخليك حذر."
+ },
+ {
+  "id": "ex_b3_wash_hands0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب خطوات غسل الإيدين"
+ },
+ {
+  "id": "ex_b3_wash_hands0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "الصابون بعد البل، والتنشيف في الآخر."
+ },
+ {
+  "id": "ex_b3_wash_hands2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "رتّب قبل الأكل"
+ },
+ {
+  "id": "ex_b3_please_thanks0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "لما أطلب حاجة أقول؟"
+ },
+ {
+  "id": "ex_b3_please_thanks0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "افتكر الكلمة اللطيفة."
+ },
+ {
+  "id": "oral_b3_please_thanks0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "لما أطلب حاجة أقول؟ الاختيارات: عايز، هات، من فضلك."
+ },
+ {
+  "id": "oral_b3_please_thanks0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي من فضلك."
+ },
+ {
+  "id": "ex_b3_please_thanks1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "لما حد يعطيني حاجة أقول؟"
+ },
+ {
+  "id": "oral_b3_please_thanks1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "لما حد يعطيني حاجة أقول؟ الاختيارات: شكراً، لا، مش عاوز."
+ },
+ {
+  "id": "ex_b3_please_thanks2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "لما أغلط في حق حد أقول؟"
+ },
+ {
+  "id": "oral_b3_please_thanks2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "لما أغلط في حق حد أقول؟ الاختيارات: مش مهم، بتاعي، آسف."
+ },
+ {
+  "id": "ex_b3_please_thanks3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "لما أقابل حد أقول؟"
+ },
+ {
+  "id": "oral_b3_please_thanks3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "لما أقابل حد أقول؟ الاختيارات: لا، هات اللعبة، السلام عليكم."
+ },
+ {
+  "id": "oral_b3_please_thanks3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي السلام عليكم."
+ },
+ {
+  "id": "ex_b3_please_thanks4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "لما حد يعطس نقول؟"
+ },
+ {
+  "id": "ex_b3_please_thanks4_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "والعاطس يقول: يهديكم الله."
+ },
+ {
+  "id": "oral_b3_please_thanks4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "لما حد يعطس نقول؟ الاختيارات: يرحمك الله، برافو، عيب."
+ },
+ {
+  "id": "oral_b3_please_thanks4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي يرحمك الله."
+ },
+ {
+  "id": "ex_b3_please_thanks5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "لما أمشي أقول؟"
+ },
+ {
+  "id": "oral_b3_please_thanks5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "لما أمشي أقول؟ الاختيارات: لا، هات، مع السلامة."
+ },
+ {
+  "id": "oral_b3_please_thanks5_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي مع السلامة."
+ },
+ {
+  "id": "ex_b3_please_thanks6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "لما أدخل مكان وفيه ناس أقول؟"
+ },
+ {
+  "id": "oral_b3_please_thanks6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "لما أدخل مكان وفيه ناس أقول؟ الاختيارات: السلام عليكم، أنا هنا، ولا حاجة."
+ },
+ {
+  "id": "ex_b3_sharing0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "عندك ٤ بسكوتات وصاحبك ما معاهوش، تقسم؟"
+ },
+ {
+  "id": "ex_b3_sharing0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "القسمة بالتساوي."
+ },
+ {
+  "id": "ex_b3_sharing0_why",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "explanation",
+  "text": "المشاركة جميلة."
+ },
+ {
+  "id": "oral_b3_sharing0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "عندك ٤ بسكوتات وصاحبك ما معاهوش، تقسم؟ الاختيارات: ٣ ليا و١ ليه، ٤ ليا، ٢ لكل واحد."
+ },
+ {
+  "id": "oral_b3_sharing0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٢ لكل واحد."
+ },
+ {
+  "id": "ex_b3_sharing1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "عندك ٦ حلوى و٣ أصحاب، كام لكل واحد؟"
+ },
+ {
+  "id": "oral_b3_sharing1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "عندك ٦ حلوى و٣ أصحاب، كام لكل واحد؟ الاختيارات: ٢، ٣، ١."
+ },
+ {
+  "id": "ex_b3_sharing2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "عندك ٨ تفاحات، توزعها على ٢، كام لكل واحد؟"
+ },
+ {
+  "id": "oral_b3_sharing2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "عندك ٨ تفاحات، توزعها على ٢، كام لكل واحد؟ الاختيارات: ٦، ٤، ٢."
+ },
+ {
+  "id": "ex_b3_sharing3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "لو عندك لعبة واحدة وأختك عايزاها؟"
+ },
+ {
+  "id": "oral_b3_sharing3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "لو عندك لعبة واحدة وأختك عايزاها؟ الاختيارات: نلعب بالدور، أخبّيها، آخدها لنفسي."
+ },
+ {
+  "id": "oral_b3_sharing3_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي نلعب بالدور."
+ },
+ {
+  "id": "ex_b3_sharing4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "٥ ألعاب، وإنت وصاحبك: تقسمهم؟"
+ },
+ {
+  "id": "oral_b3_sharing4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "٥ ألعاب، وإنت وصاحبك: تقسمهم؟ الاختيارات: ٣ و٢ ونتبادل، ٠ ليا، ٥ ليا."
+ },
+ {
+  "id": "oral_b3_sharing4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ٣ و٢ ونتبادل."
+ },
+ {
+  "id": "ex_b3_sharing5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "عندك ١٠ جنيه وعايز تعطي نصها؟"
+ },
+ {
+  "id": "oral_b3_sharing5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "عندك ١٠ جنيه وعايز تعطي نصها؟ الاختيارات: ٣، ٥، ٧."
+ },
+ {
+  "id": "ex_b3_fl0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "question_prompt",
+  "text": "الكلمة تبدأ بأي حرف؟"
+ },
+ {
+  "id": "ex_b3_fl0_h0",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "انطق اسم الصورة وركّز على أول صوت."
+ },
+ {
+  "id": "ex_b3_fl0_h1",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "hint",
+  "text": "أول صوت هو الحرف الأول."
+ },
+ {
+  "id": "oral_b3_fl0_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الكلمة تبدأ بأي حرف؟ الاختيارات: ب، ف، ن."
+ },
+ {
+  "id": "oral_b3_fl0_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ب."
+ },
+ {
+  "id": "oral_b3_fl1_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الكلمة تبدأ بأي حرف؟ الاختيارات: ح، ق، ك."
+ },
+ {
+  "id": "oral_b3_fl1_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ق."
+ },
+ {
+  "id": "oral_b3_fl2_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الكلمة تبدأ بأي حرف؟ الاختيارات: ش، ف، ب."
+ },
+ {
+  "id": "oral_b3_fl2_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ش."
+ },
+ {
+  "id": "oral_b3_fl3_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الكلمة تبدأ بأي حرف؟ الاختيارات: ن، ق، س."
+ },
+ {
+  "id": "oral_b3_fl4_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الكلمة تبدأ بأي حرف؟ الاختيارات: س، ح، ش."
+ },
+ {
+  "id": "oral_b3_fl4_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي س."
+ },
+ {
+  "id": "oral_b3_fl5_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الكلمة تبدأ بأي حرف؟ الاختيارات: ش، ل، م."
+ },
+ {
+  "id": "oral_b3_fl6_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الكلمة تبدأ بأي حرف؟ الاختيارات: ت، ش، ج."
+ },
+ {
+  "id": "oral_b3_fl7_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الكلمة تبدأ بأي حرف؟ الاختيارات: ف، ت، ك."
+ },
+ {
+  "id": "oral_b3_fl7_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ف."
+ },
+ {
+  "id": "oral_b3_fl8_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الكلمة تبدأ بأي حرف؟ الاختيارات: ك، س، د."
+ },
+ {
+  "id": "oral_b3_fl8_a",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_answer",
+  "text": "الإجابة هي ك."
+ },
+ {
+  "id": "oral_b3_fl9_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الكلمة تبدأ بأي حرف؟ الاختيارات: و، ق، ك."
+ },
+ {
+  "id": "oral_b3_fl10_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الكلمة تبدأ بأي حرف؟ الاختيارات: ب، و، ر."
+ },
+ {
+  "id": "oral_b3_fl11_q",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "oral_quiz_question",
+  "text": "الكلمة تبدأ بأي حرف؟ الاختيارات: و، ح، ه."
+ }
+]

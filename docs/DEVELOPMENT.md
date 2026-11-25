@@ -19,3 +19,6 @@ All data is stored on the phone (SharedPreferences key `dev_state_<childId>`). N
 | 19 | Offline | everything local |
 
 Screen time: first band is 12-36 months. No game is locked by age or co-use. The daily limit is optional, parent-set, and off by default. `DevGate` wraps the games area and only enforces a parent-set cap.
+
+## Spoken guidance (guide voice)
+Games, stories and creative features speak through `GuideVoice` (lib/core/services/guide_voice.dart). Every line has an id and exact Arabic text in `tools/guide_manifest.json` (and `.csv`), built by `tools/gen_guide_manifest.py`. Clips go to `assets/audio/haneen/guide/<id>.mp3` (mono, low bitrate), then merge the manifest into `tools/audio_manifest.json` and run `tools/build_audio_index.py`. The text always shows on screen. A missing clip is skipped silently with no network call.

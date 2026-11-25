@@ -1,0 +1,1217 @@
+﻿id,group,text
+gv_right_1,feedback_right,برافو عليك! إجابة صح.
+gv_right_2,feedback_right,ممتاز! إنت شاطر جداً.
+gv_right_3,feedback_right,أحسنت! كمّل كده.
+gv_right_4,feedback_right,إيه الحلاوة دي! صح تمام.
+gv_right_5,feedback_right,يا سلام! إنت بتفهم بسرعة.
+gv_right_6,feedback_right,صح! أنا فخورة بيك.
+gv_right_7,feedback_right,عظيم! خدت نجمة.
+gv_right_8,feedback_right,تمام التمام! يلا اللي بعده.
+gv_wrong_1,feedback_wrong,مش مشكلة، جرّب تاني.
+gv_wrong_2,feedback_wrong,قريب! فكّر شوية وجرّب كمان مرة.
+gv_wrong_3,feedback_wrong,ولا يهمك، الغلط بيعلّمنا. حاول تاني.
+gv_wrong_4,feedback_wrong,بالراحة، بص كويس وجرّب تاني.
+gv_wrong_5,feedback_wrong,تقريباً! إنت تقدر.
+gv_wrong_6,feedback_wrong,مش دي، بس إنت قريب. جرّب تاني.
+gi_letter_catcher,game_intro,يلا نصطاد الحروف! بص على الحرف المطلوب، ودوس عليه قبل ما ينزل.
+gi_clock_set,game_intro,يلا نظبط الساعة! حرّك العقارب لحد ما الساعة تبقى على الوقت المكتوب.
+gi_shadow_match,game_intro,مين صاحب الظل؟ بص على الظل الأسود، واختار الصورة اللي تشبهه.
+gi_slide_puzzle,game_intro,بازل الأرقام! حرّك القطع لحد ما تترتب من واحد لتمانية.
+gi_maze,game_intro,المتاهة! ودّي حنين للنجمة. حرّك صباعك في الطريق وخلّي بالك من الحيطان.
+gi_stop_go,game_intro,قف وامشِ! لما تشوف الأخضر دوس بسرعة، ولما تشوف الأحمر استنى ولا تدوس.
+gi_rule_switch,game_intro,غيّر القاعدة! مرة نختار باللون ومرة بالشكل. اسمع القاعدة وبص كويس.
+gi_draw_imagine,game_intro,ارسم وتخيّل! ارسم اللي في خيالك بصباعك، وأنا هستنى أشوفه.
+gi_daily_challenge,game_intro,تحدي اليوم! خمس أسئلة صغيرة، جاوب عليهم واحد واحد.
+gi_haneen_house,game_intro,ده بيت حنين! اختار حاجة بنجومك وزيّن بيتنا.
+gi_haneen_pet,game_intro,ده الكتكوت بتاعنا! اهتم بيه وهو هيكبر كل يوم.
+gi_sticker_album,game_intro,ألبوم الملصقات! هنا كل الملصقات والجوائز اللي جمعتها.
+gi_certificate,game_intro,دي شهادة التقدير بتاعتك! إنت تعبت وتستاهل.
+gi_bedtime,game_intro,يلا نسمع حدوتة هادية قبل النوم. غمّض عينيك واسمع.
+gi_dad_voice,game_intro,صوت بابا بيحكي! سجّل حدوتة بصوتك، وتقدر تسمعها أي وقت.
+gi_screen_free,game_intro,وضع بدون شاشة! ماما أو بابا يسمعوا معاك، وإنت تجاوب بصوتك.
+gi_plant_care,game_intro,اعتني بالنبتة! اسقيها وحطها في الشمس عشان تكبر.
+bed_start,story_intro,اسمع الحدوتة وإنت مرتاح، وأنا هحكيها لك.
+gi_ex_number_line,game_intro,يلا نلعب خط الأعداد. حرّك النقطة على الرقم الصح.
+gi_ex_fill_blank,game_intro,يلا نلعب املأ الفراغ. اختر الكلمة الناقصة.
+gi_ex_multi_select,game_intro,يلا نلعب اختر كل الصح. فيه أكتر من إجابة صحيحة.
+gi_ex_grid_points,game_intro,يلا نلعب أين النقطة؟. اضغط على المكان الصح في الشبكة.
+gi_ex_bar_chart,game_intro,يلا نلعب ارسم الأعمدة. ارفع الأعمدة للعدد المطلوب.
+gi_ex_missing_letter,game_intro,يلا نلعب حرف ناقص. ما الحرف الناقص في الكلمة.
+gi_ex_build_word,game_intro,يلا نلعب ركّب الكلمة. رتّب الحروف لتكوّن الكلمة.
+gi_ex_same_start,game_intro,يلا نلعب نفس البداية. كلمات تبدأ بنفس الحرف.
+gi_ex_same_end,game_intro,يلا نلعب نفس النهاية. كلمات تنتهي بنفس الحرف.
+gi_ex_pic_word,game_intro,يلا نلعب وصّل الصورة بكلمتها. وصّل كل صورة باسمها.
+gi_ex_scrambled,game_intro,يلا نلعب حروف مبعثرة. رتّب الحروف المبعثرة.
+gi_ex_harakat,game_intro,يلا نلعب الفتحة والضمة والكسرة. اعرف حركة الحرف.
+gi_ex_rhyme,game_intro,يلا نلعب قافية. ما الكلمة التي تتقفّى.
+gi_ex_bigger_smaller,game_intro,يلا نلعب أكبر وأصغر. اختر الرقم الأكبر أو الأصغر.
+gi_ex_missing_number,game_intro,يلا نلعب الرقم الناقص. أكمل تسلسل الأرقام.
+gi_ex_add_pics,game_intro,يلا نلعب جمع بالصور. اجمع الصور.
+gi_ex_subtract_apples,game_intro,يلا نلعب طرح بالتفاح. حنين بتاكل تفاح، كام فاضل.
+gi_ex_before_after,game_intro,يلا نلعب قبل وبعد الرقم. ما الرقم قبل أو بعد.
+gi_ex_even_odd,game_intro,يلا نلعب زوجي وفردي. صنّف الأرقام زوجي أو فردي.
+gi_ex_money,game_intro,يلا نلعب الفلوس والعملة. احسب الجنيهات والقروش.
+gi_ex_complete_pattern,game_intro,يلا نلعب أكمل النمط. ما الشكل اللي بعد.
+gi_ex_odd_one,game_intro,يلا نلعب مين المختلف. اختر الشكل الغريب.
+gi_ex_size_order,game_intro,يلا نلعب رتّب بالحجم. من الأصغر للأكبر.
+gi_ex_color_mix,game_intro,يلا نلعب مزج الألوان. أي لون يطلع من الخلط.
+gi_ex_hidden_shapes,game_intro,يلا نلعب أشكال مخفية. عُد الأشكال.
+gi_ex_mirror,game_intro,يلا نلعب المرآة والتماثل. تماثل وانعكاس.
+gi_ex_length,game_intro,يلا نلعب قياس الطول والوزن. أطول وأقصر وأثقل.
+gi_ex_animal_home,game_intro,يلا نلعب بيت كل حيوان. أين يعيش الحيوان.
+gi_ex_what_eats,game_intro,يلا نلعب إيه بياكل. ماذا يأكل الحيوان.
+gi_ex_seasons,game_intro,يلا نلعب الفصول الأربعة. تعرّف على الفصول.
+gi_ex_weather_clothes,game_intro,يلا نلعب الطقس واللبس المناسب. ماذا نلبس.
+gi_ex_jobs,game_intro,يلا نلعب المهن. من يعمل ماذا.
+gi_ex_transport,game_intro,يلا نلعب المواصلات. وسائل المواصلات.
+gi_ex_fruit_veg,game_intro,يلا نلعب فواكه وخضار. فاكهة ولا خضار.
+gi_ex_five_senses,game_intro,يلا نلعب الحواس الخمس. العين والأذن والأنف.
+gi_ex_first_letter,game_intro,يلا نلعب الحرف الأول. أي حرف يبدأ به الاسم.
+gi_ex_day_routine,game_intro,يلا نلعب رتّب روتين اليوم. رتّب أحداث اليوم.
+gi_ex_right_wrong,game_intro,يلا نلعب صح ولا غلط في الآداب. تصرفات جميلة وغير جميلة.
+gi_ex_teeth,game_intro,يلا نلعب تنضيف الأسنان. خطوات غسل الأسنان.
+gi_ex_tidy_room,game_intro,يلا نلعب رتّب الأوضة. حط كل حاجة في مكانها.
+gi_ex_emotions,game_intro,يلا نلعب المشاعر. اختار الوش المناسب للإحساس.
+gi_ex_emotions_choice,game_intro,يلا نلعب تصرّف مع المشاعر. ماذا نفعل.
+gi_ex_story_order,game_intro,يلا نلعب رتّب أحداث القصة. أي حدث أولا.
+gi_ex_road_safety,game_intro,يلا نلعب سلامة الطريق. ازاي نعدّي بأمان.
+gi_ex_wash_hands,game_intro,يلا نلعب غسل الإيدين. خطوات غسل الإيدين.
+gi_ex_please_thanks,game_intro,يلا نلعب من فضلك وشكراً. كلمات جميلة.
+gi_ex_sharing,game_intro,يلا نلعب المشاركة والتقسيم. نقسم بالتساوي.
+bed_1_1,story_page,في غابة هادية، كان فيه أرنوب صغير اسمه نور.
+bed_1_2,story_page,في آخر النهار، قال نور: الشمس بتنام، وأنا كمان هنام.
+bed_1_3,story_page,مشى نور على أطراف صوابعه، ومرّ على صاحبه الدب وقال له: تصبح على خير.
+bed_1_4,story_page,والعصافير سكتت، والنجوم طلعت واحدة واحدة.
+bed_1_5,story_page,دخل نور بيته الدافي، وحط راسه على الوسادة الناعمة.
+bed_1_6,story_page,أخد نفس طويل، وغمّض عينيه، ونام. تصبح على خير.
+bed_2_1,story_page,كان فيه قمر صغير بيحب يحرس الأطفال بالليل.
+bed_2_2,story_page,كل ما طفل ينام، القمر يبعتله شعاع نور ناعم.
+bed_2_3,story_page,الشعاع بيقول: نام مطمّن، أنا هنا.
+bed_2_4,story_page,والأحلام الجميلة بتيجي على ضهر السحاب.
+bed_2_5,story_page,وفي الصبح، الشمس بتيجي وتقول: صباح الخير. تصبح على خير.
+bed_3_1,story_page,السلحفاة بطيئة بس بتوصل دايماً.
+bed_3_2,story_page,في ليلة، قالت السلحفاة: هروح أنام في بيتي الصغير.
+bed_3_3,story_page,مشيت خطوة خطوة، وكل خطوة بتقول: هدوء، هدوء.
+bed_3_4,story_page,وصلت بيتها، وسحبت راسها جوه الصدفة الدافية.
+bed_3_5,story_page,وسمعت صوت الريح الخفيف، وناميت. تصبح على خير.
+ex_c1_q,question_prompt,أي واحد فيه ٣ تفاحات؟
+ex_c1_h0,hint,عُد التفاح واحد واحد.
+ex_c1_ok,feedback_right,برافو، ٣ تفاحات!
+ex_c1_no,feedback_wrong,قريب، عُد تاني.
+oral_c1_a,oral_quiz_answer,الإجابة هي .
+ex_c2_q,question_prompt,أي حيوان بيطير؟
+ex_c2_h0,hint,بيطير بجناحاته في السما.
+ex_n1_q,question_prompt,٢ ٣ ؟
+ex_n1_h0,hint,ابدأ من ٢ وعُد ٣ أرقام بعدها.
+ex_n1_h1,hint,٢، ٣، ٤، ٥
+oral_n1_a,oral_quiz_answer,الإجابة هي 5.
+ex_n2_q,question_prompt,٩ - ٤ ؟
+ex_n2_h0,hint,شيل ٤ من ٩.
+ex_o1_q,question_prompt,رتّب الأرقام من الأصغر للأكبر
+ex_o1_h0,hint,ابدأ بأصغر رقم.
+ex_o2_q,question_prompt,رتّب اليوم: صحيان، فطار، مدرسة
+ex_o2_h0,hint,إيه أول حاجة بتعملها الصبح؟
+ex_m1_q,question_prompt,وصّل الحيوان بصوته
+ex_m1_h0,hint,القطة بتقول مواء.
+ex_k1_q,question_prompt,حط كل حاجة في مكانها
+ex_k1_h0,hint,الفاكهة بناكلها، والعربية بنركبها.
+ex_n3_q,question_prompt,٦ ٧ ؟
+ex_n3_h0,hint,اجمع ٦ وكمّل عُد ٧.
+ex_n3_h1,hint,٦ ٤ ١٠ وفاضل ٣.
+oral_n3_a,oral_quiz_answer,الإجابة هي 13.
+ex_n4_q,question_prompt,١٥ - ٨ ؟
+ex_n4_h0,hint,شيل ٨ من ١٥ على مرتين.
+oral_n4_a,oral_quiz_answer,الإجابة هي 7.
+ex_o3_q,question_prompt,رتّب من الأكبر للأصغر
+ex_o3_h0,hint,ابدأ بأكبر رقم.
+ex_c3_q,question_prompt,أي رقم أكبر؟
+ex_c3_h0,hint,قارن الرقمين.
+oral_c3_q,oral_quiz_question,أي رقم أكبر؟ الاختيارات: ١٢، ٢١، ١٠.
+oral_c3_a,oral_quiz_answer,الإجابة هي ٢١.
+ex_k2_q,question_prompt,حيوانات في البر والبحر
+ex_k2_h0,hint,السمك بيعيش في الماء.
+ex_m2_q,question_prompt,وصّل الشكل باسمه
+ex_m2_h0,hint,الدايرة مستديرة.
+ex_add0_q,question_prompt,١ ١ ؟
+ex_add0_h0,hint,عُد على صوابعك.
+ex_add0_h1,hint,ابدأ من ١ وكمّل عُد ١.
+oral_add0_a,oral_quiz_answer,الإجابة هي 2.
+ex_add1_q,question_prompt,٢ ١ ؟
+ex_add1_h1,hint,ابدأ من ٢ وكمّل عُد ١.
+oral_add1_a,oral_quiz_answer,الإجابة هي 3.
+ex_add2_q,question_prompt,١ ٣ ؟
+ex_add2_h1,hint,ابدأ من ٣ وكمّل عُد ١.
+oral_add2_a,oral_quiz_answer,الإجابة هي 4.
+ex_add3_q,question_prompt,٣ ٢ ؟
+ex_add3_h1,hint,ابدأ من ٣ وكمّل عُد ٢.
+ex_add4_q,question_prompt,٤ ١ ؟
+ex_add4_h1,hint,ابدأ من ٤ وكمّل عُد ١.
+ex_add5_q,question_prompt,٢ ٢ ؟
+ex_add5_h1,hint,ابدأ من ٢ وكمّل عُد ٢.
+ex_add6_q,question_prompt,٥ ٣ ؟
+ex_add6_h1,hint,ابدأ من ٥ وكمّل عُد ٣.
+oral_add6_a,oral_quiz_answer,الإجابة هي 8.
+ex_add7_q,question_prompt,٦ ٢ ؟
+ex_add7_h1,hint,ابدأ من ٦ وكمّل عُد ٢.
+ex_add8_q,question_prompt,٤ ٥ ؟
+ex_add8_h1,hint,ابدأ من ٥ وكمّل عُد ٤.
+oral_add8_a,oral_quiz_answer,الإجابة هي 9.
+ex_add9_q,question_prompt,٧ ٣ ؟
+ex_add9_h1,hint,ابدأ من ٧ وكمّل عُد ٣.
+oral_add9_a,oral_quiz_answer,الإجابة هي 10.
+ex_add10_q,question_prompt,٨ ٤ ؟
+ex_add10_h1,hint,ابدأ من ٨ وكمّل عُد ٤.
+oral_add10_a,oral_quiz_answer,الإجابة هي 12.
+ex_add11_q,question_prompt,٩ ٦ ؟
+ex_add11_h1,hint,ابدأ من ٩ وكمّل عُد ٦.
+oral_add11_a,oral_quiz_answer,الإجابة هي 15.
+ex_add12_q,question_prompt,١٢ ٥ ؟
+ex_add12_h1,hint,ابدأ من ١٢ وكمّل عُد ٥.
+oral_add12_a,oral_quiz_answer,الإجابة هي 17.
+ex_add13_q,question_prompt,٨ ٨ ؟
+ex_add13_h1,hint,ابدأ من ٨ وكمّل عُد ٨.
+oral_add13_a,oral_quiz_answer,الإجابة هي 16.
+ex_add14_q,question_prompt,١٥ ٤ ؟
+ex_add14_h1,hint,ابدأ من ١٥ وكمّل عُد ٤.
+oral_add14_a,oral_quiz_answer,الإجابة هي 19.
+ex_sub0_q,question_prompt,٣ - ١ ؟
+ex_sub0_h0,hint,شيل ١ من ٣.
+ex_sub0_h1,hint,عُد لورا من الرقم الكبير.
+ex_sub1_q,question_prompt,٤ - ٢ ؟
+ex_sub1_h0,hint,شيل ٢ من ٤.
+ex_sub2_q,question_prompt,٥ - ٣ ؟
+ex_sub2_h0,hint,شيل ٣ من ٥.
+ex_sub3_q,question_prompt,٦ - ١ ؟
+ex_sub3_h0,hint,شيل ١ من ٦.
+ex_sub4_q,question_prompt,٨ - ٣ ؟
+ex_sub4_h0,hint,شيل ٣ من ٨.
+ex_sub5_q,question_prompt,٩ - ٥ ؟
+ex_sub5_h0,hint,شيل ٥ من ٩.
+ex_sub6_q,question_prompt,١٠ - ٤ ؟
+ex_sub6_h0,hint,شيل ٤ من ١٠.
+oral_sub6_a,oral_quiz_answer,الإجابة هي 6.
+ex_sub7_q,question_prompt,١٢ - ٧ ؟
+ex_sub7_h0,hint,شيل ٧ من ١٢.
+ex_sub8_q,question_prompt,١٥ - ٦ ؟
+ex_sub8_h0,hint,شيل ٦ من ١٥.
+ex_sub9_q,question_prompt,١٨ - ٩ ؟
+ex_sub9_h0,hint,شيل ٩ من ١٨.
+ex_sub10_q,question_prompt,٢٠ - ٥ ؟
+ex_sub10_h0,hint,شيل ٥ من ٢٠.
+ex_cnt0_q,question_prompt,كام في الصف ده؟
+ex_cnt0_h0,hint,عُد واحد واحد وإنت بتشاور.
+oral_cnt0_q,oral_quiz_question,كام في الصف ده؟ الاختيارات: ٣، ١، ٢.
+oral_cnt0_a,oral_quiz_answer,الإجابة هي ١.
+oral_cnt1_a,oral_quiz_answer,الإجابة هي ٢.
+oral_cnt2_q,oral_quiz_question,كام في الصف ده؟ الاختيارات: ٣، ٤، ٢.
+oral_cnt2_a,oral_quiz_answer,الإجابة هي ٣.
+oral_cnt3_q,oral_quiz_question,كام في الصف ده؟ الاختيارات: ٥، ٣، ٤.
+oral_cnt3_a,oral_quiz_answer,الإجابة هي ٤.
+oral_cnt4_q,oral_quiz_question,كام في الصف ده؟ الاختيارات: ٥، ٤، ٦.
+oral_cnt4_a,oral_quiz_answer,الإجابة هي ٥.
+oral_cnt5_q,oral_quiz_question,كام في الصف ده؟ الاختيارات: ٦، ٧، ٥.
+oral_cnt5_a,oral_quiz_answer,الإجابة هي ٦.
+oral_cnt6_q,oral_quiz_question,كام في الصف ده؟ الاختيارات: ٦، ٨، ٧.
+oral_cnt6_a,oral_quiz_answer,الإجابة هي ٧.
+oral_cnt7_q,oral_quiz_question,كام في الصف ده؟ الاختيارات: ٢، ٣، ١.
+oral_cnt8_q,oral_quiz_question,كام في الصف ده؟ الاختيارات: ٤، ٣، ٢.
+oral_cnt9_q,oral_quiz_question,كام في الصف ده؟ الاختيارات: ٤، ٥، ٣.
+ex_cmp0_h0,hint,قارن الأرقام من الخانة الكبيرة.
+oral_cmp0_q,oral_quiz_question,أي رقم أكبر؟ الاختيارات: ٣، ٨.
+oral_cmp0_a,oral_quiz_answer,الإجابة هي ٨.
+oral_cmp1_q,oral_quiz_question,أي رقم أكبر؟ الاختيارات: ١٢، ٩.
+oral_cmp1_a,oral_quiz_answer,الإجابة هي ١٢.
+oral_cmp2_q,oral_quiz_question,أي رقم أكبر؟ الاختيارات: ٢٥، ٥٢.
+oral_cmp2_a,oral_quiz_answer,الإجابة هي ٥٢.
+oral_cmp3_q,oral_quiz_question,أي رقم أكبر؟ الاختيارات: ٤٧، ٧٤.
+oral_cmp3_a,oral_quiz_answer,الإجابة هي ٧٤.
+oral_cmp4_q,oral_quiz_question,أي رقم أكبر؟ الاختيارات: ١٠١، ١١٠.
+oral_cmp4_a,oral_quiz_answer,الإجابة هي ١١٠.
+oral_cmp5_q,oral_quiz_question,أي رقم أكبر؟ الاختيارات: ٣٦، ٦٣.
+oral_cmp5_a,oral_quiz_answer,الإجابة هي ٦٣.
+ex_ord0_q,question_prompt,رتّب من الأصغر للأكبر
+ex_ord0_h0,hint,دوّر على أصغر رقم الأول.
+ex_rt0_q,question_prompt,رتّب الخطوات بالترتيب الصح
+ex_rt0_h0,hint,إيه اللي بتعمله الأول؟
+ex_cls0_h0,hint,فكّر: كل حاجة بتتبع أنهي مجموعة؟
+ex_mt0_h0,hint,ابدأ بالأسهل عندك.
+ex_mt1_q,question_prompt,وصّل الصورة بالكلمة
+ex_mt3_q,question_prompt,وصّل اللون باسمه
+ex_mt4_q,question_prompt,وصّل الرقم بالعدد
+ex_mt5_q,question_prompt,وصّل الحرف بالكلمة
+ex_mt6_q,question_prompt,وصّل العكس
+ex_ltr0_q,question_prompt,أي كلمة بتبدأ بحرف (ب)؟
+ex_ltr0_h0,hint,انطق الحرف ب وإنت بتقول كل كلمة.
+oral_ltr0_q,oral_quiz_question,أي كلمة بتبدأ بحرف (ب)؟ الاختيارات: بطة، قطة، سمكة.
+oral_ltr0_a,oral_quiz_answer,الإجابة هي بطة.
+ex_ltr1_q,question_prompt,أي كلمة بتبدأ بحرف (ق)؟
+ex_ltr1_h0,hint,انطق الحرف ق وإنت بتقول كل كلمة.
+oral_ltr1_q,oral_quiz_question,أي كلمة بتبدأ بحرف (ق)؟ الاختيارات: جمل، قطة، فيل.
+oral_ltr1_a,oral_quiz_answer,الإجابة هي قطة.
+ex_ltr2_q,question_prompt,أي كلمة بتبدأ بحرف (س)؟
+ex_ltr2_h0,hint,انطق الحرف س وإنت بتقول كل كلمة.
+oral_ltr2_q,oral_quiz_question,أي كلمة بتبدأ بحرف (س)؟ الاختيارات: سمكة، بقرة، نمر.
+oral_ltr2_a,oral_quiz_answer,الإجابة هي سمكة.
+ex_ltr3_q,question_prompt,أي كلمة بتبدأ بحرف (ج)؟
+ex_ltr3_h0,hint,انطق الحرف ج وإنت بتقول كل كلمة.
+oral_ltr3_q,oral_quiz_question,أي كلمة بتبدأ بحرف (ج)؟ الاختيارات: حصان، جمل، أسد.
+oral_ltr3_a,oral_quiz_answer,الإجابة هي جمل.
+ex_ltr4_q,question_prompt,أي كلمة بتبدأ بحرف (ف)؟
+ex_ltr4_h0,hint,انطق الحرف ف وإنت بتقول كل كلمة.
+oral_ltr4_q,oral_quiz_question,أي كلمة بتبدأ بحرف (ف)؟ الاختيارات: فيل، ذئب، ثعلب.
+oral_ltr4_a,oral_quiz_answer,الإجابة هي فيل.
+ex_ltr5_q,question_prompt,أي كلمة بتبدأ بحرف (ك)؟
+ex_ltr5_h0,hint,انطق الحرف ك وإنت بتقول كل كلمة.
+oral_ltr5_q,oral_quiz_question,أي كلمة بتبدأ بحرف (ك)؟ الاختيارات: قلم، كتاب، باب.
+oral_ltr5_a,oral_quiz_answer,الإجابة هي كتاب.
+ex_ltr6_q,question_prompt,أي كلمة بتبدأ بحرف (م)؟
+ex_ltr6_h0,hint,انطق الحرف م وإنت بتقول كل كلمة.
+oral_ltr6_q,oral_quiz_question,أي كلمة بتبدأ بحرف (م)؟ الاختيارات: تفاحة، موزة، برتقالة.
+oral_ltr6_a,oral_quiz_answer,الإجابة هي موزة.
+ex_ltr7_q,question_prompt,أي كلمة بتبدأ بحرف (ن)؟
+ex_ltr7_h0,hint,انطق الحرف ن وإنت بتقول كل كلمة.
+oral_ltr7_q,oral_quiz_question,أي كلمة بتبدأ بحرف (ن)؟ الاختيارات: نحلة، ذبابة، فراشة.
+oral_ltr7_a,oral_quiz_answer,الإجابة هي نحلة.
+ex_pat0_q,question_prompt,كمّل النمط: ؟
+ex_pat0_h0,hint,اللي بيتكرر هو النمط.
+ex_nl0_q,question_prompt,حرّك النقطة على الرقم 3
+ex_nl0_h0,hint,ابدأ من الصفر وعدّ للأمام.
+ex_nl0_h1,hint,الرقم 3 قبل 4 وبعد 2.
+ex_nl0_ok,feedback_right,برافو!
+ex_nl0_no,feedback_wrong,جرّب تاني.
+ex_nl0_why,explanation,العدد 3 مكانه على خط الأعداد بعد 2 وقبل 4.
+ex_nl1_q,question_prompt,حرّك النقطة على الرقم 5
+ex_nl1_h1,hint,الرقم 5 قبل 6 وبعد 4.
+ex_nl1_why,explanation,العدد 5 مكانه على خط الأعداد بعد 4 وقبل 6.
+ex_nl2_q,question_prompt,حرّك النقطة على الرقم 7
+ex_nl2_h1,hint,الرقم 7 قبل 8 وبعد 6.
+ex_nl2_why,explanation,العدد 7 مكانه على خط الأعداد بعد 6 وقبل 8.
+ex_nl3_q,question_prompt,حرّك النقطة على الرقم 8
+ex_nl3_h1,hint,الرقم 8 قبل 9 وبعد 7.
+ex_nl3_why,explanation,العدد 8 مكانه على خط الأعداد بعد 7 وقبل 9.
+ex_nl4_q,question_prompt,حرّك النقطة على الرقم 2
+ex_nl4_h1,hint,الرقم 2 قبل 3 وبعد 1.
+ex_nl4_why,explanation,العدد 2 مكانه على خط الأعداد بعد 1 وقبل 3.
+ex_nl5_q,question_prompt,حرّك النقطة على الرقم 12
+ex_nl5_h1,hint,الرقم 12 قبل 13 وبعد 11.
+ex_nl5_why,explanation,العدد 12 مكانه على خط الأعداد بعد 11 وقبل 13.
+ex_nl6_q,question_prompt,حرّك النقطة على الرقم 15
+ex_nl6_h1,hint,الرقم 15 قبل 16 وبعد 14.
+ex_nl6_why,explanation,العدد 15 مكانه على خط الأعداد بعد 14 وقبل 16.
+ex_nl7_q,question_prompt,حرّك النقطة على الرقم 17
+ex_nl7_h1,hint,الرقم 17 قبل 18 وبعد 16.
+ex_nl7_why,explanation,العدد 17 مكانه على خط الأعداد بعد 16 وقبل 18.
+ex_nl8_q,question_prompt,حرّك النقطة على الرقم 9
+ex_nl8_h1,hint,الرقم 9 قبل 10 وبعد 8.
+ex_nl8_why,explanation,العدد 9 مكانه على خط الأعداد بعد 8 وقبل 10.
+ex_fb0_q,question_prompt,اختر الكلمة المناسبة للجملة
+ex_fb0_h0,hint,اقرأ الجملة بصوت واضح وجرّب كل كلمة.
+ex_fb0_h1,hint,فكّر: أي كلمة تخلي الجملة صح؟
+ex_fb0_why,explanation,الشمس بتظهر الصبح.
+oral_fb0_q,oral_quiz_question,اختر الكلمة المناسبة للجملة الشمس تطلع في الاختيارات: الصباح، الليل.
+oral_fb0_a,oral_quiz_answer,الإجابة هي الصباح.
+ex_fb1_why,explanation,بنغسل إيدينا قبل الأكل عشان نبقى نضاف.
+oral_fb1_q,oral_quiz_question,اختر الكلمة المناسبة للجملة نغسل أيدينا قبل الاختيارات: الأكل، النوم.
+oral_fb1_a,oral_quiz_answer,الإجابة هي الأكل.
+ex_fb2_why,explanation,القطة بتموء والكلب بينبح.
+oral_fb2_q,oral_quiz_question,اختر الكلمة المناسبة للجملة القطة تقول الاختيارات: مواء، نباح.
+oral_fb2_a,oral_quiz_answer,الإجابة هي مواء.
+ex_fb3_why,explanation,الجاكيت للجو البارد.
+oral_fb3_q,oral_quiz_question,اختر الكلمة المناسبة للجملة نلبس الجاكيت في الجو الاختيارات: البارد، الحار، الجميل.
+oral_fb3_a,oral_quiz_answer,الإجابة هي البارد.
+ex_fb4_why,explanation,السمك بيعيش في الماية.
+oral_fb4_q,oral_quiz_question,اختر الكلمة المناسبة للجملة السمكة تعيش في الاختيارات: الماء، الشجرة، الرمال.
+oral_fb4_a,oral_quiz_answer,الإجابة هي الماء.
+ex_fb5_why,explanation,بنقول شكراً لما حد يساعدنا.
+oral_fb5_q,oral_quiz_question,اختر الكلمة المناسبة للجملة نقول لما حد يساعدنا الاختيارات: شكراً، آسف، مع السلامة.
+oral_fb5_a,oral_quiz_answer,الإجابة هي شكراً.
+ex_fb6_why,explanation,الأسبوع سبعة أيام.
+oral_fb6_q,oral_quiz_question,اختر الكلمة المناسبة للجملة الأسبوع فيه أيام الاختيارات: سبعة، خمسة، عشرة.
+oral_fb6_a,oral_quiz_answer,الإجابة هي سبعة.
+ex_fb7_why,explanation,لما نغلط بنعتذر.
+oral_fb7_q,oral_quiz_question,اختر الكلمة المناسبة للجملة إذا أخطأت أقول بصدق الاختيارات: آسف، شكراً، أهلاً.
+oral_fb7_a,oral_quiz_answer,الإجابة هي آسف.
+ex_fb8_why,explanation,الطيارة بتطير في السما.
+oral_fb8_q,oral_quiz_question,اختر الكلمة المناسبة للجملة الطائرة تطير في الاختيارات: السماء، البحر، الأرض.
+oral_fb8_a,oral_quiz_answer,الإجابة هي السماء.
+ex_ms0_q,question_prompt,اختر كل الفواكه (فيه أكتر من إجابة)
+ex_ms0_h0,hint,فيه أكتر من إجابة صحيحة، دوس على كل واحدة.
+ex_ms0_h1,hint,راجع كل اختيار لوحده.
+ex_ms1_q,question_prompt,اختر كل الحيوانات (فيه أكتر من إجابة)
+ex_ms2_q,question_prompt,اختر كل ما يطير (فيه أكتر من إجابة)
+ex_ms3_q,question_prompt,اختر كل الأرقام الزوجية (فيه أكتر من إجابة)
+ex_ms4_q,question_prompt,اختر كل ما نلبسه (فيه أكتر من إجابة)
+ex_ms5_q,question_prompt,اختر كل ما يعيش في الماء (فيه أكتر من إجابة)
+ex_ms6_q,question_prompt,اختر الأرقام الأكبر من ٥ (فيه أكتر من إجابة)
+ex_ms7_q,question_prompt,اختر كل الأشياء التي نأكلها (فيه أكتر من إجابة)
+ex_ms8_q,question_prompt,اختر الأشكال المستديرة (فيه أكتر من إجابة)
+ex_gp0_q,question_prompt,دوس على المربع: يمين 2، فوق 3
+ex_gp0_h0,hint,الرقم الأول لليمين من تحت، والتاني لفوق.
+ex_gp0_h1,hint,عدّ 2 خطوات لليمين وبعدين 3 لفوق.
+ex_gp0_why,explanation,النقطة (2، 3) تعني 2 يمين و3 فوق.
+ex_gp1_q,question_prompt,دوس على المربع: يمين 4، فوق 1
+ex_gp1_h1,hint,عدّ 4 خطوات لليمين وبعدين 1 لفوق.
+ex_gp1_why,explanation,النقطة (4، 1) تعني 4 يمين و1 فوق.
+ex_gp2_q,question_prompt,دوس على المربع: يمين 1، فوق 4
+ex_gp2_h1,hint,عدّ 1 خطوات لليمين وبعدين 4 لفوق.
+ex_gp2_why,explanation,النقطة (1، 4) تعني 1 يمين و4 فوق.
+ex_gp3_q,question_prompt,دوس على المربع: يمين 3، فوق 3
+ex_gp3_h1,hint,عدّ 3 خطوات لليمين وبعدين 3 لفوق.
+ex_gp3_why,explanation,النقطة (3، 3) تعني 3 يمين و3 فوق.
+ex_gp4_q,question_prompt,دوس على المربع: يمين 5، فوق 2
+ex_gp4_h1,hint,عدّ 5 خطوات لليمين وبعدين 2 لفوق.
+ex_gp4_why,explanation,النقطة (5، 2) تعني 5 يمين و2 فوق.
+ex_gp5_q,question_prompt,دوس على المربع: يمين 2، فوق 5
+ex_gp5_h1,hint,عدّ 2 خطوات لليمين وبعدين 5 لفوق.
+ex_gp5_why,explanation,النقطة (2، 5) تعني 2 يمين و5 فوق.
+ex_gp6_q,question_prompt,دوس على المربع: يمين 4، فوق 4
+ex_gp6_h1,hint,عدّ 4 خطوات لليمين وبعدين 4 لفوق.
+ex_gp6_why,explanation,النقطة (4، 4) تعني 4 يمين و4 فوق.
+ex_gp7_q,question_prompt,دوس على المربع: يمين 5، فوق 5
+ex_gp7_h1,hint,عدّ 5 خطوات لليمين وبعدين 5 لفوق.
+ex_gp7_why,explanation,النقطة (5، 5) تعني 5 يمين و5 فوق.
+ex_gp8_q,question_prompt,دوس على المربع: يمين 1، فوق 1
+ex_gp8_h1,hint,عدّ 1 خطوات لليمين وبعدين 1 لفوق.
+ex_gp8_why,explanation,النقطة (1، 1) تعني 1 يمين و1 فوق.
+ex_br0_q,question_prompt,ارسم الأعمدة: 2، 3
+ex_br0_h0,hint,دوس على العمود لحد ما يوصل للعدد المطلوب.
+ex_br0_h1,hint,كل دوسة تزيد العمود واحد.
+ex_br1_q,question_prompt,ارسم الأعمدة: 1، 4
+ex_br2_q,question_prompt,ارسم الأعمدة: 3، 2
+ex_br3_q,question_prompt,ارسم الأعمدة: 2، 4، 1
+ex_br4_q,question_prompt,ارسم الأعمدة: 3، 1، 5
+ex_br5_q,question_prompt,ارسم الأعمدة: 4، 2، 1
+ex_br6_q,question_prompt,ارسم الأعمدة: 1، 3، 2، 4
+ex_br7_q,question_prompt,ارسم الأعمدة: 5، 2، 4، 1
+ex_br8_q,question_prompt,ارسم الأعمدة: 2، 5، 3، 4
+ex_bp0_q,question_prompt,نشوف بإيه؟
+ex_bp0_h0,hint,فكّر: أي جزء بيعمل الشغلانة دي؟
+ex_bp0_why,explanation,بنشوف بعيوننا.
+oral_bp0_q,oral_quiz_question,نشوف بإيه؟ الاختيارات: العين، الأذن، الأنف.
+oral_bp0_a,oral_quiz_answer,الإجابة هي العين.
+ex_bp1_q,question_prompt,نسمع بإيه؟
+ex_bp1_why,explanation,بنسمع بودننا.
+oral_bp1_q,oral_quiz_question,نسمع بإيه؟ الاختيارات: الأذن، العين، الفم.
+oral_bp1_a,oral_quiz_answer,الإجابة هي الأذن.
+ex_bp2_q,question_prompt,نشم الورد بإيه؟
+ex_bp2_why,explanation,بنشم بالأنف.
+oral_bp2_q,oral_quiz_question,نشم الورد بإيه؟ الاختيارات: الأنف، اليد، القدم.
+oral_bp2_a,oral_quiz_answer,الإجابة هي الأنف.
+ex_bp3_q,question_prompt,ناكل ونتكلم بإيه؟
+ex_bp3_why,explanation,بناكل ونتكلم بالفم.
+oral_bp3_q,oral_quiz_question,ناكل ونتكلم بإيه؟ الاختيارات: الفم، العين، الأذن.
+oral_bp3_a,oral_quiz_answer,الإجابة هي الفم.
+ex_bp4_q,question_prompt,وصّل العضو بشغلته
+ex_bp4_h0,hint,فكّر في شغلة كل عضو.
+ex_bp5_q,question_prompt,اختر كل ما نستخدمه للمشي والجري (فيه أكتر من إجابة)
+ex_bp5_h0,hint,فيه أكتر من إجابة.
+ex_bp6_q,question_prompt,اختر الكلمة المناسبة
+ex_bp6_h0,hint,اقرأ الجملة وجرّب كل كلمة.
+ex_bp6_why,explanation,بنمسك الحاجات بإيدينا.
+oral_bp6_q,oral_quiz_question,اختر الكلمة المناسبة نمسك الكوب بـ الاختيارات: اليد، القدم، الأذن.
+oral_bp6_a,oral_quiz_answer,الإجابة هي اليد.
+ex_bp7_q,question_prompt,كام إصبع في إيد واحدة؟
+ex_bp7_h0,hint,عُد صوابعك.
+oral_bp7_q,oral_quiz_question,كام إصبع في إيد واحدة؟ الاختيارات: ٣، ٥، ١٠.
+ex_bp8_q,question_prompt,كام عين عندك؟ اكتب الرقم
+ex_bp8_h0,hint,انظر في المراية.
+ex_b1_ml0_q,question_prompt,ما الحرف الناقص؟
+ex_b1_ml0_h0,hint,انطق الكلمة بصوت واضح، وانتبه للحرف اللي في النص.
+ex_b1_ml0_h1,hint,الكلمة هي قلم.
+ex_b1_ml0_ok,feedback_right,برافو يا بطل!
+ex_b1_ml0_no,feedback_wrong,قريب، جرّب تاني.
+oral_b1_ml0_q,oral_quiz_question,ما الحرف الناقص؟ ق م الاختيارات: ج، ل، ز.
+oral_b1_ml0_a,oral_quiz_answer,الإجابة هي ل.
+ex_b1_ml1_h1,hint,الكلمة هي بحر.
+oral_b1_ml1_q,oral_quiz_question,ما الحرف الناقص؟ ب ر الاختيارات: ق، ث، ح.
+oral_b1_ml1_a,oral_quiz_answer,الإجابة هي ح.
+ex_b1_ml2_h1,hint,الكلمة هي شمس.
+oral_b1_ml2_q,oral_quiz_question,ما الحرف الناقص؟ ش س الاختيارات: ق، م، ب.
+oral_b1_ml2_a,oral_quiz_answer,الإجابة هي م.
+ex_b1_ml3_h1,hint,الكلمة هي نجم.
+oral_b1_ml3_q,oral_quiz_question,ما الحرف الناقص؟ ن م الاختيارات: ج، ت، ب.
+oral_b1_ml3_a,oral_quiz_answer,الإجابة هي ج.
+ex_b1_ml4_h1,hint,الكلمة هي ورد.
+oral_b1_ml4_q,oral_quiz_question,ما الحرف الناقص؟ و د الاختيارات: ذ، ت، ر.
+oral_b1_ml4_a,oral_quiz_answer,الإجابة هي ر.
+ex_b1_ml5_h1,hint,الكلمة هي جمل.
+oral_b1_ml5_q,oral_quiz_question,ما الحرف الناقص؟ ج ل الاختيارات: ب، ف، م.
+ex_b1_ml6_h1,hint,الكلمة هي كلب.
+oral_b1_ml6_q,oral_quiz_question,ما الحرف الناقص؟ ك ب الاختيارات: ف، م، ل.
+ex_b1_ml7_h1,hint,الكلمة هي فيل.
+oral_b1_ml7_q,oral_quiz_question,ما الحرف الناقص؟ ف ل الاختيارات: ب، د، ي.
+oral_b1_ml7_a,oral_quiz_answer,الإجابة هي ي.
+ex_b1_ml8_h1,hint,الكلمة هي قمر.
+oral_b1_ml8_q,oral_quiz_question,ما الحرف الناقص؟ ق ر الاختيارات: ز، ض، م.
+ex_b1_ml9_h1,hint,الكلمة هي سمك.
+oral_b1_ml9_q,oral_quiz_question,ما الحرف الناقص؟ س ك الاختيارات: ف، م، ر.
+ex_b1_ml10_h1,hint,الكلمة هي بيت.
+oral_b1_ml10_q,oral_quiz_question,ما الحرف الناقص؟ ب ت الاختيارات: ح، ي، ق.
+ex_b1_ml11_h1,hint,الكلمة هي عنب.
+oral_b1_ml11_q,oral_quiz_question,ما الحرف الناقص؟ ع ب الاختيارات: ش، ن، ج.
+oral_b1_ml11_a,oral_quiz_answer,الإجابة هي ن.
+ex_b1_ml12_h1,hint,الكلمة هي موز.
+oral_b1_ml12_q,oral_quiz_question,ما الحرف الناقص؟ م ز الاختيارات: ف، و، ب.
+oral_b1_ml12_a,oral_quiz_answer,الإجابة هي و.
+ex_b1_ml13_h1,hint,الكلمة هي كتاب.
+oral_b1_ml13_q,oral_quiz_question,ما الحرف الناقص؟ ك ا ب الاختيارات: ت، غ، ه.
+oral_b1_ml13_a,oral_quiz_answer,الإجابة هي ت.
+ex_b1_ml14_h1,hint,الكلمة هي حوت.
+oral_b1_ml14_q,oral_quiz_question,ما الحرف الناقص؟ ح ت الاختيارات: و، ش، ي.
+ex_b1_ml15_h1,hint,الكلمة هي نمر.
+oral_b1_ml15_q,oral_quiz_question,ما الحرف الناقص؟ ن ر الاختيارات: ش، ز، م.
+ex_b1_bw0_q,question_prompt,رتّب الحروف لتكوّن الكلمة
+ex_b1_bw0_h0,hint,ابدأ بالحرف الأول من الكلمة.
+ex_b1_bw0_h1,hint,الحرف الأول هو ق.
+ex_b1_bw0_why,explanation,الكلمة قلم.
+ex_b1_bw1_h1,hint,الحرف الأول هو ب.
+ex_b1_bw1_why,explanation,الكلمة بحر.
+ex_b1_bw2_h1,hint,الحرف الأول هو ش.
+ex_b1_bw2_why,explanation,الكلمة شمس.
+ex_b1_bw3_h1,hint,الحرف الأول هو ن.
+ex_b1_bw3_why,explanation,الكلمة نجم.
+ex_b1_bw4_h1,hint,الحرف الأول هو و.
+ex_b1_bw4_why,explanation,الكلمة ورد.
+ex_b1_bw5_h1,hint,الحرف الأول هو ج.
+ex_b1_bw5_why,explanation,الكلمة جمل.
+ex_b1_bw6_h1,hint,الحرف الأول هو ك.
+ex_b1_bw6_why,explanation,الكلمة كلب.
+ex_b1_bw7_h1,hint,الحرف الأول هو ف.
+ex_b1_bw7_why,explanation,الكلمة فيل.
+ex_b1_bw8_why,explanation,الكلمة قمر.
+ex_b1_bw9_h1,hint,الحرف الأول هو س.
+ex_b1_bw9_why,explanation,الكلمة سمك.
+ex_b1_bw10_why,explanation,الكلمة بيت.
+ex_b1_bw11_h1,hint,الحرف الأول هو ع.
+ex_b1_bw11_why,explanation,الكلمة عنب.
+ex_b1_bw12_h1,hint,الحرف الأول هو م.
+ex_b1_bw12_why,explanation,الكلمة موز.
+ex_b1_bw13_why,explanation,الكلمة كتاب.
+ex_b1_bw14_h1,hint,الحرف الأول هو ح.
+ex_b1_bw14_why,explanation,الكلمة حوت.
+ex_b1_bw15_why,explanation,الكلمة نمر.
+ex_b1_sc0_q,question_prompt,الحروف مبعثرة! ما الكلمة؟
+ex_b1_sc0_h0,hint,الصورة بتقول لك الكلمة.
+ex_b1_sc0_h1,hint,نطق الكلمة بيبدأ بحرف ن.
+ex_b1_sc1_h1,hint,نطق الكلمة بيبدأ بحرف ح.
+ex_b1_sc2_h1,hint,نطق الكلمة بيبدأ بحرف ك.
+ex_b1_sc3_h1,hint,نطق الكلمة بيبدأ بحرف م.
+ex_b1_sc4_h1,hint,نطق الكلمة بيبدأ بحرف ع.
+ex_b1_sc5_h1,hint,نطق الكلمة بيبدأ بحرف ب.
+ex_b1_sc6_h1,hint,نطق الكلمة بيبدأ بحرف س.
+ex_b1_sc7_h1,hint,نطق الكلمة بيبدأ بحرف ق.
+ex_b1_sc8_h1,hint,نطق الكلمة بيبدأ بحرف ف.
+ex_b1_sc10_h1,hint,نطق الكلمة بيبدأ بحرف ج.
+ex_b1_sc11_h1,hint,نطق الكلمة بيبدأ بحرف و.
+ex_b1_sc13_h1,hint,نطق الكلمة بيبدأ بحرف ش.
+ex_b1_ss0_q,question_prompt,اختر كل الكلمات التي تبدأ بحرف (ب)
+ex_b1_ss0_h0,hint,فيه أكتر من إجابة. اقرأ كل كلمة وانتبه لأول حرف.
+ex_b1_ss0_h1,hint,الكلمة اللي بتبدأ بحرف ب بنطقها بنفس الصوت في أولها.
+ex_b1_ss1_q,question_prompt,اختر كل الكلمات التي تبدأ بحرف (ك)
+ex_b1_ss1_h1,hint,الكلمة اللي بتبدأ بحرف ك بنطقها بنفس الصوت في أولها.
+ex_b1_ss2_q,question_prompt,اختر كل الكلمات التي تبدأ بحرف (ش)
+ex_b1_ss2_h1,hint,الكلمة اللي بتبدأ بحرف ش بنطقها بنفس الصوت في أولها.
+ex_b1_ss3_q,question_prompt,اختر كل الكلمات التي تبدأ بحرف (م)
+ex_b1_ss3_h1,hint,الكلمة اللي بتبدأ بحرف م بنطقها بنفس الصوت في أولها.
+ex_b1_ss4_q,question_prompt,اختر كل الكلمات التي تبدأ بحرف (ق)
+ex_b1_ss4_h1,hint,الكلمة اللي بتبدأ بحرف ق بنطقها بنفس الصوت في أولها.
+ex_b1_ss5_q,question_prompt,اختر كل الكلمات التي تبدأ بحرف (ف)
+ex_b1_ss5_h1,hint,الكلمة اللي بتبدأ بحرف ف بنطقها بنفس الصوت في أولها.
+ex_b1_ss6_q,question_prompt,اختر كل الكلمات التي تبدأ بحرف (ج)
+ex_b1_ss6_h1,hint,الكلمة اللي بتبدأ بحرف ج بنطقها بنفس الصوت في أولها.
+ex_b1_ss7_q,question_prompt,اختر كل الكلمات التي تبدأ بحرف (ح)
+ex_b1_ss7_h1,hint,الكلمة اللي بتبدأ بحرف ح بنطقها بنفس الصوت في أولها.
+ex_b1_ss8_q,question_prompt,اختر كل الكلمات التي تبدأ بحرف (ن)
+ex_b1_ss8_h1,hint,الكلمة اللي بتبدأ بحرف ن بنطقها بنفس الصوت في أولها.
+ex_b1_se0_q,question_prompt,اختر كل الكلمات التي تنتهي بحرف (ة)
+ex_b1_se0_h0,hint,فيه أكتر من إجابة. انطق الكلمة وركّز على صوتها الأخير.
+ex_b1_se0_h1,hint,انظر لآخر حرف في كل كلمة.
+ex_b1_se1_q,question_prompt,اختر كل الكلمات التي تنتهي بحرف (ر)
+ex_b1_se2_q,question_prompt,اختر كل الكلمات التي تنتهي بحرف (ب)
+ex_b1_se3_q,question_prompt,اختر كل الكلمات التي تنتهي بحرف (م)
+ex_b1_se4_q,question_prompt,اختر كل الكلمات التي تنتهي بحرف (ت)
+ex_b1_se5_q,question_prompt,اختر كل الكلمات التي تنتهي بحرف (ل)
+ex_b1_se6_q,question_prompt,اختر كل الكلمات التي تنتهي بحرف (د)
+ex_b1_pw0_q,question_prompt,وصّل كل صورة باسمها
+ex_b1_pw0_h0,hint,ابدأ بالصورة اللي تعرفها أكتر.
+ex_b1_pw0_h1,hint,اختار الصورة ثم الكلمة اللي تناسبها.
+ex_b1_hk0_q,question_prompt,أي حرف عليه الفتحة؟
+ex_b1_hk0_h0,hint,الفتحة فوق الحرف، والضمة فوقه صغيرة مثل الواو، والكسرة تحته.
+ex_b1_hk0_h1,hint,ابحث عن الفتحة: فوق الحرف.
+oral_b1_hk0_q,oral_quiz_question,أي حرف عليه الفتحة؟ الاختيارات: بَ، بُ، بِ.
+oral_b1_hk0_a,oral_quiz_answer,الإجابة هي بَ.
+ex_b1_hk1_q,question_prompt,أي حرف عليه الكسرة؟
+ex_b1_hk1_h1,hint,ابحث عن الكسرة: تحت الحرف.
+oral_b1_hk1_q,oral_quiz_question,أي حرف عليه الكسرة؟ الاختيارات: تَ، تُ، تِ.
+oral_b1_hk1_a,oral_quiz_answer,الإجابة هي تِ.
+ex_b1_hk2_q,question_prompt,أي حرف عليه الضمة؟
+ex_b1_hk2_h1,hint,ابحث عن الضمة: فوق الحرف.
+oral_b1_hk2_q,oral_quiz_question,أي حرف عليه الضمة؟ الاختيارات: مَ، مُ، مِ.
+oral_b1_hk2_a,oral_quiz_answer,الإجابة هي مُ.
+oral_b1_hk3_q,oral_quiz_question,أي حرف عليه الفتحة؟ الاختيارات: كَ، كُ، كِ.
+oral_b1_hk3_a,oral_quiz_answer,الإجابة هي كَ.
+oral_b1_hk4_q,oral_quiz_question,أي حرف عليه الكسرة؟ الاختيارات: نَ، نُ، نِ.
+oral_b1_hk4_a,oral_quiz_answer,الإجابة هي نِ.
+oral_b1_hk5_q,oral_quiz_question,أي حرف عليه الضمة؟ الاختيارات: لَ، لُ، لِ.
+oral_b1_hk5_a,oral_quiz_answer,الإجابة هي لُ.
+oral_b1_hk6_q,oral_quiz_question,أي حرف عليه الفتحة؟ الاختيارات: سَ، سُ، سِ.
+oral_b1_hk6_a,oral_quiz_answer,الإجابة هي سَ.
+oral_b1_hk7_q,oral_quiz_question,أي حرف عليه الكسرة؟ الاختيارات: رَ، رُ، رِ.
+oral_b1_hk7_a,oral_quiz_answer,الإجابة هي رِ.
+oral_b1_hk8_q,oral_quiz_question,أي حرف عليه الضمة؟ الاختيارات: حَ، حُ، حِ.
+oral_b1_hk8_a,oral_quiz_answer,الإجابة هي حُ.
+ex_b1_rh0_q,question_prompt,أي كلمة تتقفّى مع كتاب؟
+ex_b1_rh0_h0,hint,القافية يعني آخر الصوت يتشابه.
+ex_b1_rh0_h1,hint,انطق كتاب ثم كل اختيار وقارن الآخر.
+ex_b1_rh0_why,explanation,كتاب وباب آخرهم واحد.
+oral_b1_rh0_q,oral_quiz_question,أي كلمة تتقفّى مع كتاب؟ الاختيارات: باب، سيارة، قلم.
+oral_b1_rh0_a,oral_quiz_answer,الإجابة هي باب.
+ex_b1_rh1_q,question_prompt,أي كلمة تتقفّى مع نار؟
+ex_b1_rh1_h1,hint,انطق نار ثم كل اختيار وقارن الآخر.
+ex_b1_rh1_why,explanation,نار وجار آخرهم واحد.
+oral_b1_rh1_q,oral_quiz_question,أي كلمة تتقفّى مع نار؟ الاختيارات: شمس، ماء، جار.
+oral_b1_rh1_a,oral_quiz_answer,الإجابة هي جار.
+ex_b1_rh2_q,question_prompt,أي كلمة تتقفّى مع بيت؟
+ex_b1_rh2_h1,hint,انطق بيت ثم كل اختيار وقارن الآخر.
+ex_b1_rh2_why,explanation,بيت وزيت آخرهم واحد.
+oral_b1_rh2_q,oral_quiz_question,أي كلمة تتقفّى مع بيت؟ الاختيارات: زيت، باب، قلم.
+oral_b1_rh2_a,oral_quiz_answer,الإجابة هي زيت.
+ex_b1_rh3_q,question_prompt,أي كلمة تتقفّى مع قلم؟
+ex_b1_rh3_h1,hint,انطق قلم ثم كل اختيار وقارن الآخر.
+ex_b1_rh3_why,explanation,قلم وعلم آخرهم واحد.
+oral_b1_rh3_q,oral_quiz_question,أي كلمة تتقفّى مع قلم؟ الاختيارات: علم، كتاب، شجر.
+oral_b1_rh3_a,oral_quiz_answer,الإجابة هي علم.
+ex_b1_rh4_q,question_prompt,أي كلمة تتقفّى مع ليل؟
+ex_b1_rh4_h1,hint,انطق ليل ثم كل اختيار وقارن الآخر.
+ex_b1_rh4_why,explanation,ليل وخيل آخرهم واحد.
+oral_b1_rh4_q,oral_quiz_question,أي كلمة تتقفّى مع ليل؟ الاختيارات: خيل، شمس، نهار.
+oral_b1_rh4_a,oral_quiz_answer,الإجابة هي خيل.
+ex_b1_rh5_q,question_prompt,أي كلمة تتقفّى مع فول؟
+ex_b1_rh5_h1,hint,انطق فول ثم كل اختيار وقارن الآخر.
+ex_b1_rh5_why,explanation,فول وطول آخرهم واحد.
+oral_b1_rh5_q,oral_quiz_question,أي كلمة تتقفّى مع فول؟ الاختيارات: عيش، لبن، طول.
+oral_b1_rh5_a,oral_quiz_answer,الإجابة هي طول.
+ex_b1_rh6_q,question_prompt,أي كلمة تتقفّى مع ورد؟
+ex_b1_rh6_h1,hint,انطق ورد ثم كل اختيار وقارن الآخر.
+ex_b1_rh6_why,explanation,ورد وبرد آخرهم واحد.
+oral_b1_rh6_q,oral_quiz_question,أي كلمة تتقفّى مع ورد؟ الاختيارات: زهرة، حب، برد.
+oral_b1_rh6_a,oral_quiz_answer,الإجابة هي برد.
+ex_b1_rh7_q,question_prompt,أي كلمة تتقفّى مع شمس؟
+ex_b1_rh7_h1,hint,انطق شمس ثم كل اختيار وقارن الآخر.
+ex_b1_rh7_why,explanation,شمس وأمس آخرهم واحد.
+oral_b1_rh7_q,oral_quiz_question,أي كلمة تتقفّى مع شمس؟ الاختيارات: قمر، نجم، أمس.
+oral_b1_rh7_a,oral_quiz_answer,الإجابة هي أمس.
+ex_b1_rh8_q,question_prompt,أي كلمة تتقفّى مع سور؟
+ex_b1_rh8_h1,hint,انطق سور ثم كل اختيار وقارن الآخر.
+ex_b1_rh8_why,explanation,سور ونور آخرهم واحد.
+oral_b1_rh8_q,oral_quiz_question,أي كلمة تتقفّى مع سور؟ الاختيارات: باب، نور، بيت.
+oral_b1_rh8_a,oral_quiz_answer,الإجابة هي نور.
+ex_b1_bs0_h0,hint,الرقم الأكبر يكون بعيد أكتر على خط الأعداد.
+ex_b1_bs0_h1,hint,عُد من الصفر: أيهما يصل بعد؟
+oral_b1_bs0_q,oral_quiz_question,أي رقم أكبر؟ الاختيارات: ٢، ٥.
+ex_b1_bs1_q,question_prompt,أي رقم أصغر؟
+oral_b1_bs1_q,oral_quiz_question,أي رقم أصغر؟ الاختيارات: ٧، ٣.
+oral_b1_bs2_q,oral_quiz_question,أي رقم أكبر؟ الاختيارات: ٩، ٤.
+oral_b1_bs2_a,oral_quiz_answer,الإجابة هي ٩.
+oral_b1_bs3_q,oral_quiz_question,أي رقم أصغر؟ الاختيارات: ١، ٨.
+oral_b1_bs4_q,oral_quiz_question,أي رقم أكبر؟ الاختيارات: ١٢، ١٥.
+oral_b1_bs4_a,oral_quiz_answer,الإجابة هي ١٥.
+oral_b1_bs5_q,oral_quiz_question,أي رقم أصغر؟ الاختيارات: ٢٠، ١٨.
+oral_b1_bs5_a,oral_quiz_answer,الإجابة هي ١٨.
+oral_b1_bs6_q,oral_quiz_question,أي رقم أكبر؟ الاختيارات: ٣١، ٢٩.
+oral_b1_bs6_a,oral_quiz_answer,الإجابة هي ٣١.
+oral_b1_bs7_q,oral_quiz_question,أي رقم أصغر؟ الاختيارات: ٤٥، ٥٤.
+oral_b1_bs7_a,oral_quiz_answer,الإجابة هي ٤٥.
+oral_b1_bs8_q,oral_quiz_question,أي رقم أكبر؟ الاختيارات: ٦٠، ١٦.
+oral_b1_bs8_a,oral_quiz_answer,الإجابة هي ٦٠.
+ex_b1_bs9_h0,hint,قارن الخانة الأولى من اليسار.
+oral_b1_bs9_q,oral_quiz_question,أي رقم أصغر؟ الاختيارات: ٩٩، ١٠٠.
+oral_b1_bs9_a,oral_quiz_answer,الإجابة هي ٩٩.
+oral_b1_bs10_q,oral_quiz_question,أي رقم أكبر؟ الاختيارات: ٢٥٠، ٢٠٥.
+oral_b1_bs10_a,oral_quiz_answer,الإجابة هي ٢٥٠.
+oral_b1_bs11_q,oral_quiz_question,أي رقم أصغر؟ الاختيارات: ١١١، ١٠١.
+oral_b1_bs11_a,oral_quiz_answer,الإجابة هي ١٠١.
+ex_b1_mn0_q,question_prompt,أكمل تسلسل الأرقام
+ex_b1_mn0_h0,hint,شوف الفرق بين كل رقم والتاني.
+ex_b1_mn0_h1,hint,كل رقم يزيد ١.
+ex_b1_mn0_why,explanation,التسلسل يزيد ١ كل مرة.
+oral_b1_mn0_q,oral_quiz_question,أكمل تسلسل الأرقام ١ ، ٢ ، ٣ ، ، ٥ الاختيارات: ٣، ٥، ٤.
+oral_b1_mn1_q,oral_quiz_question,أكمل تسلسل الأرقام ٢ ، ٣ ، ، ٥ ، ٦ الاختيارات: ٥، ٤، ٣.
+oral_b1_mn2_q,oral_quiz_question,أكمل تسلسل الأرقام ٥ ، ٦ ، ٧ ، ٨ ، الاختيارات: ٩، ٨، ١٠.
+ex_b1_mn3_h1,hint,كل رقم يزيد ٢.
+ex_b1_mn3_why,explanation,التسلسل يزيد ٢ كل مرة.
+oral_b1_mn3_q,oral_quiz_question,أكمل تسلسل الأرقام ١ ، ٣ ، ٥ ، ، ٩ الاختيارات: ٩، ٥، ٧.
+oral_b1_mn4_q,oral_quiz_question,أكمل تسلسل الأرقام ٢ ، ٤ ، ، ٨ ، ١٠ الاختيارات: ٦، ٤، ٨.
+ex_b1_mn5_h1,hint,كل رقم يزيد ١٠.
+ex_b1_mn5_why,explanation,التسلسل يزيد ١٠ كل مرة.
+oral_b1_mn5_q,oral_quiz_question,أكمل تسلسل الأرقام ١٠ ، ٢٠ ، ٣٠ ، ، ٥٠ الاختيارات: ٤٠، ٥٠، ٣٠.
+oral_b1_mn5_a,oral_quiz_answer,الإجابة هي ٤٠.
+ex_b1_mn6_h1,hint,كل رقم يزيد ٥.
+ex_b1_mn6_why,explanation,التسلسل يزيد ٥ كل مرة.
+oral_b1_mn6_q,oral_quiz_question,أكمل تسلسل الأرقام ٥ ، ١٠ ، ١٥ ، ٢٠ ، الاختيارات: ٣٠، ٢٠، ٢٥.
+oral_b1_mn6_a,oral_quiz_answer,الإجابة هي ٢٥.
+ex_b1_mn7_h1,hint,كل رقم يزيد ٣.
+ex_b1_mn7_why,explanation,التسلسل يزيد ٣ كل مرة.
+oral_b1_mn7_q,oral_quiz_question,أكمل تسلسل الأرقام ٣ ، ٦ ، ، ١٢ ، ١٥ الاختيارات: ٩، ٦، ١٢.
+oral_b1_mn8_q,oral_quiz_question,أكمل تسلسل الأرقام ٢٠ ، ٢٥ ، ٣٠ ، ، ٤٠ الاختيارات: ٣٥، ٣٠، ٤٠.
+oral_b1_mn8_a,oral_quiz_answer,الإجابة هي ٣٥.
+ex_b1_mn9_h1,hint,كل رقم يزيد ١٠٠.
+ex_b1_mn9_why,explanation,التسلسل يزيد ١٠٠ كل مرة.
+oral_b1_mn9_q,oral_quiz_question,أكمل تسلسل الأرقام ١٠٠ ، ٢٠٠ ، ، ٤٠٠ ، ٥٠٠ الاختيارات: ٢٠٠، ٣٠٠، ٤٠٠.
+oral_b1_mn9_a,oral_quiz_answer,الإجابة هي ٣٠٠.
+ex_b1_ap0_q,question_prompt,؟
+ex_b1_ap0_h0,hint,عُد الصور كلها مع بعض.
+ex_b1_ap0_h1,hint,ابدأ من ١ وزوّد ١.
+ex_b1_ap0_why,explanation,١ ١ ٢
+oral_b1_ap0_q,oral_quiz_question,؟ الاختيارات: ٢، ١، ٣.
+ex_b1_ap1_h1,hint,ابدأ من ٢ وزوّد ١.
+ex_b1_ap1_why,explanation,٢ ١ ٣
+oral_b1_ap1_q,oral_quiz_question,؟ الاختيارات: ٤، ٢، ٣.
+ex_b1_ap2_h1,hint,ابدأ من ٢ وزوّد ٢.
+ex_b1_ap2_why,explanation,٢ ٢ ٤
+oral_b1_ap2_q,oral_quiz_question,؟ الاختيارات: ٥، ٣، ٤.
+ex_b1_ap3_h1,hint,ابدأ من ٣ وزوّد ١.
+ex_b1_ap3_why,explanation,٣ ١ ٤
+oral_b1_ap3_q,oral_quiz_question,؟ الاختيارات: ٣، ٤، ٥.
+ex_b1_ap4_h1,hint,ابدأ من ٣ وزوّد ٢.
+ex_b1_ap4_why,explanation,٣ ٢ ٥
+oral_b1_ap4_q,oral_quiz_question,؟ الاختيارات: ٤، ٦، ٥.
+ex_b1_ap5_h1,hint,ابدأ من ٤ وزوّد ٢.
+ex_b1_ap5_why,explanation,٤ ٢ ٦
+oral_b1_ap5_q,oral_quiz_question,؟ الاختيارات: ٧، ٦، ٥.
+ex_b1_ap6_h1,hint,ابدأ من ٣ وزوّد ٣.
+ex_b1_ap6_why,explanation,٣ ٣ ٦
+oral_b1_ap6_q,oral_quiz_question,؟ الاختيارات: ٧، ٥، ٦.
+ex_b1_ap7_h1,hint,ابدأ من ٥ وزوّد ٢.
+ex_b1_ap7_why,explanation,٥ ٢ ٧
+oral_b1_ap7_q,oral_quiz_question,؟ الاختيارات: ٨، ٧، ٦.
+ex_b1_ap8_h1,hint,ابدأ من ٤ وزوّد ٤.
+ex_b1_ap8_why,explanation,٤ ٤ ٨
+oral_b1_ap8_q,oral_quiz_question,؟ الاختيارات: ٩، ٨، ٧.
+ex_b1_ap9_h1,hint,ابدأ من ٦ وزوّد ٣.
+ex_b1_ap9_why,explanation,٦ ٣ ٩
+oral_b1_ap9_q,oral_quiz_question,؟ الاختيارات: ٨، ٩، ١٠.
+ex_b1_sa0_q,question_prompt,حنين عندها ٣ تفاحات، أكلت ١. كام تفاحة فاضلت؟
+ex_b1_sa0_h0,hint,الطرح يعني ننقّص. شيل التفاح اللي اتأكل.
+ex_b1_sa0_h1,hint,ابدأ من ٣ وعُد للوراء ١.
+ex_b1_sa0_why,explanation,٣ - ١ ٢
+oral_b1_sa0_q,oral_quiz_question,حنين عندها ٣ تفاحات، أكلت ١. كام تفاحة فاضلت؟ الاختيارات: ٣، ٤، ٢.
+ex_b1_sa1_q,question_prompt,حنين عندها ٤ تفاحات، أكلت ١. كام تفاحة فاضلت؟
+ex_b1_sa1_h1,hint,ابدأ من ٤ وعُد للوراء ١.
+ex_b1_sa1_why,explanation,٤ - ١ ٣
+oral_b1_sa1_q,oral_quiz_question,حنين عندها ٤ تفاحات، أكلت ١. كام تفاحة فاضلت؟ الاختيارات: ٣، ٤، ٥.
+ex_b1_sa2_q,question_prompt,حنين عندها ٥ تفاحات، أكلت ٢. كام تفاحة فاضلت؟
+ex_b1_sa2_h1,hint,ابدأ من ٥ وعُد للوراء ٢.
+ex_b1_sa2_why,explanation,٥ - ٢ ٣
+oral_b1_sa2_q,oral_quiz_question,حنين عندها ٥ تفاحات، أكلت ٢. كام تفاحة فاضلت؟ الاختيارات: ٥، ٤، ٣.
+ex_b1_sa3_q,question_prompt,حنين عندها ٥ تفاحات، أكلت ٣. كام تفاحة فاضلت؟
+ex_b1_sa3_h1,hint,ابدأ من ٥ وعُد للوراء ٣.
+ex_b1_sa3_why,explanation,٥ - ٣ ٢
+oral_b1_sa3_q,oral_quiz_question,حنين عندها ٥ تفاحات، أكلت ٣. كام تفاحة فاضلت؟ الاختيارات: ٢، ٤، ٣.
+ex_b1_sa4_q,question_prompt,حنين عندها ٦ تفاحات، أكلت ٢. كام تفاحة فاضلت؟
+ex_b1_sa4_h1,hint,ابدأ من ٦ وعُد للوراء ٢.
+ex_b1_sa4_why,explanation,٦ - ٢ ٤
+oral_b1_sa4_q,oral_quiz_question,حنين عندها ٦ تفاحات، أكلت ٢. كام تفاحة فاضلت؟ الاختيارات: ٦، ٤، ٥.
+ex_b1_sa5_q,question_prompt,حنين عندها ٧ تفاحات، أكلت ٣. كام تفاحة فاضلت؟
+ex_b1_sa5_h1,hint,ابدأ من ٧ وعُد للوراء ٣.
+ex_b1_sa5_why,explanation,٧ - ٣ ٤
+oral_b1_sa5_q,oral_quiz_question,حنين عندها ٧ تفاحات، أكلت ٣. كام تفاحة فاضلت؟ الاختيارات: ٦، ٥، ٤.
+ex_b1_sa6_q,question_prompt,حنين عندها ٨ تفاحات، أكلت ٥. كام تفاحة فاضلت؟
+ex_b1_sa6_h1,hint,ابدأ من ٨ وعُد للوراء ٥.
+ex_b1_sa6_why,explanation,٨ - ٥ ٣
+oral_b1_sa6_q,oral_quiz_question,حنين عندها ٨ تفاحات، أكلت ٥. كام تفاحة فاضلت؟ الاختيارات: ٣، ٥، ٤.
+ex_b1_sa7_q,question_prompt,حنين عندها ٩ تفاحات، أكلت ٤. كام تفاحة فاضلت؟
+ex_b1_sa7_h1,hint,ابدأ من ٩ وعُد للوراء ٤.
+ex_b1_sa7_why,explanation,٩ - ٤ ٥
+oral_b1_sa7_q,oral_quiz_question,حنين عندها ٩ تفاحات، أكلت ٤. كام تفاحة فاضلت؟ الاختيارات: ٥، ٧، ٦.
+ex_b1_sa8_q,question_prompt,حنين عندها ١٠ تفاحات، أكلت ٦. كام تفاحة فاضلت؟
+ex_b1_sa8_h1,hint,ابدأ من ١٠ وعُد للوراء ٦.
+ex_b1_sa8_why,explanation,١٠ - ٦ ٤
+oral_b1_sa8_q,oral_quiz_question,حنين عندها ١٠ تفاحات، أكلت ٦. كام تفاحة فاضلت؟ الاختيارات: ٥، ٦، ٤.
+ex_b1_sa9_q,question_prompt,حنين عندها ١٠ تفاحات، أكلت ٣. كام تفاحة فاضلت؟
+ex_b1_sa9_h1,hint,ابدأ من ١٠ وعُد للوراء ٣.
+ex_b1_sa9_why,explanation,١٠ - ٣ ٧
+oral_b1_sa9_q,oral_quiz_question,حنين عندها ١٠ تفاحات، أكلت ٣. كام تفاحة فاضلت؟ الاختيارات: ٩، ٨، ٧.
+ex_b1_ba0_q,question_prompt,ما الرقم بعد ٤؟
+ex_b1_ba0_h0,hint,الرقم اللي بعده يكبر واحد، والرقم اللي قبله يصغر واحد.
+ex_b1_ba0_h1,hint,زوّد واحد من ٤.
+oral_b1_ba0_q,oral_quiz_question,ما الرقم بعد ٤؟ الاختيارات: ٥، ٧، ٣.
+ex_b1_ba1_q,question_prompt,ما الرقم قبل ٧؟
+ex_b1_ba1_h1,hint,نقّص واحد من ٧.
+oral_b1_ba1_q,oral_quiz_question,ما الرقم قبل ٧؟ الاختيارات: ٤، ٦، ٨.
+ex_b1_ba2_q,question_prompt,ما الرقم بعد ٢؟
+ex_b1_ba2_h1,hint,زوّد واحد من ٢.
+oral_b1_ba2_q,oral_quiz_question,ما الرقم بعد ٢؟ الاختيارات: ٥، ٣، ١.
+ex_b1_ba3_q,question_prompt,ما الرقم قبل ٩؟
+ex_b1_ba3_h1,hint,نقّص واحد من ٩.
+oral_b1_ba3_q,oral_quiz_question,ما الرقم قبل ٩؟ الاختيارات: ٦، ١٠، ٨.
+ex_b1_ba4_q,question_prompt,ما الرقم بعد ١٥؟
+ex_b1_ba4_h1,hint,زوّد واحد من ١٥.
+oral_b1_ba4_q,oral_quiz_question,ما الرقم بعد ١٥؟ الاختيارات: ١٨، ١٤، ١٦.
+oral_b1_ba4_a,oral_quiz_answer,الإجابة هي ١٦.
+ex_b1_ba5_q,question_prompt,ما الرقم قبل ٢٩؟
+ex_b1_ba5_h1,hint,نقّص واحد من ٢٩.
+oral_b1_ba5_q,oral_quiz_question,ما الرقم قبل ٢٩؟ الاختيارات: ٢٨، ٣٠، ٢٦.
+oral_b1_ba5_a,oral_quiz_answer,الإجابة هي ٢٨.
+ex_b1_ba6_q,question_prompt,ما الرقم بعد ٤٠؟
+ex_b1_ba6_h1,hint,زوّد واحد من ٤٠.
+oral_b1_ba6_q,oral_quiz_question,ما الرقم بعد ٤٠؟ الاختيارات: ٤٣، ٤١، ٣٩.
+oral_b1_ba6_a,oral_quiz_answer,الإجابة هي ٤١.
+ex_b1_ba7_q,question_prompt,ما الرقم قبل ٦٣؟
+ex_b1_ba7_h1,hint,نقّص واحد من ٦٣.
+oral_b1_ba7_q,oral_quiz_question,ما الرقم قبل ٦٣؟ الاختيارات: ٦٢، ٦٤، ٦٠.
+oral_b1_ba7_a,oral_quiz_answer,الإجابة هي ٦٢.
+ex_b1_ba8_q,question_prompt,ما الرقم بعد ٩٩؟
+ex_b1_ba8_h1,hint,زوّد واحد من ٩٩.
+oral_b1_ba8_q,oral_quiz_question,ما الرقم بعد ٩٩؟ الاختيارات: ١٠٠، ١٠٢، ٩٨.
+oral_b1_ba8_a,oral_quiz_answer,الإجابة هي ١٠٠.
+ex_b1_ba9_q,question_prompt,ما الرقم قبل ١٢٠؟
+ex_b1_ba9_h1,hint,نقّص واحد من ١٢٠.
+oral_b1_ba9_q,oral_quiz_question,ما الرقم قبل ١٢٠؟ الاختيارات: ١١٧، ١٢١، ١١٩.
+oral_b1_ba9_a,oral_quiz_answer,الإجابة هي ١١٩.
+ex_b1_eo0_q,question_prompt,حط كل رقم في مكانه: زوجي ولا فردي
+ex_b1_eo0_h0,hint,الزوجي ينقسم على اتنين من غير باقي، وينتهي بـ ٠ ٢ ٤ ٦ ٨.
+ex_b1_eo0_h1,hint,الفردي ينتهي بـ ١ ٣ ٥ ٧ ٩.
+ex_b1_mo0_q,question_prompt,كام قرش في الجنيه الواحد؟
+ex_b1_mo0_h0,hint,فكّر: نجمع ولا نطرح؟
+ex_b1_mo0_h1,hint,اكتب العملية في دماغك واحسبها.
+oral_b1_mo0_q,oral_quiz_question,كام قرش في الجنيه الواحد؟ الاختيارات: ١٠، ١٠٠، ١٠٠٠.
+ex_b1_mo1_q,question_prompt,معاك جنيهين وأبوك أعطاك جنيه. كام معاك؟
+oral_b1_mo1_q,oral_quiz_question,معاك جنيهين وأبوك أعطاك جنيه. كام معاك؟ الاختيارات: ٣، ٢، ١.
+ex_b1_mo2_q,question_prompt,ثمن اللعبة ٥ جنيه. معاك ٣. كام ناقص؟
+oral_b1_mo2_q,oral_quiz_question,ثمن اللعبة ٥ جنيه. معاك ٣. كام ناقص؟ الاختيارات: ٢، ٣، ٥.
+ex_b1_mo3_q,question_prompt,٥ جنيه ٥ جنيه ؟
+oral_b1_mo3_q,oral_quiz_question,٥ جنيه ٥ جنيه ؟ الاختيارات: ١٠، ٥، ١٥.
+oral_b1_mo3_a,oral_quiz_answer,الإجابة هي ١٠.
+ex_b1_mo4_q,question_prompt,لو معاك ١٠ جنيه واشتريت بـ ٤، كام فضل؟
+oral_b1_mo4_q,oral_quiz_question,لو معاك ١٠ جنيه واشتريت بـ ٤، كام فضل؟ الاختيارات: ٤، ٦، ١٤.
+ex_b1_mo5_q,question_prompt,ثمن الحلوى ٣ جنيه. كام ثمن ٢ حلوى؟
+oral_b1_mo5_q,oral_quiz_question,ثمن الحلوى ٣ جنيه. كام ثمن ٢ حلوى؟ الاختيارات: ٥، ٦، ٩.
+ex_b1_mo6_q,question_prompt,معاك ٢٠ جنيه. اشتريت بـ ٧. كام فضل؟
+oral_b1_mo6_q,oral_quiz_question,معاك ٢٠ جنيه. اشتريت بـ ٧. كام فضل؟ الاختيارات: ١٣، ٢٧، ١٠.
+oral_b1_mo6_a,oral_quiz_answer,الإجابة هي ١٣.
+ex_b1_mo7_q,question_prompt,ورقة ١٠ جنيه تساوي كام ورقة ٥ جنيه؟
+oral_b1_mo7_q,oral_quiz_question,ورقة ١٠ جنيه تساوي كام ورقة ٥ جنيه؟ الاختيارات: اتنين، ثلاثة، واحدة.
+oral_b1_mo7_a,oral_quiz_answer,الإجابة هي اتنين.
+ex_b2_complete_pattern0_h0,hint,شوف الجزء اللي بيتكرر.
+ex_b2_complete_pattern0_h1,hint,قول النمط بصوت عالي.
+ex_b2_complete_pattern0_why,explanation,النمط: أحمر، أزرق، أحمر، أزرق.
+ex_b2_complete_pattern1_why,explanation,النمط يكرر نجمة ثم قمر.
+ex_b2_complete_pattern2_why,explanation,تفاحتين ثم موزة.
+ex_b2_complete_pattern3_why,explanation,اثنين مثلث ثم مربع.
+ex_b2_complete_pattern4_q,question_prompt,١ ، ٢ ، ١ ، ٢ ، ١ ، ؟
+ex_b2_complete_pattern4_why,explanation,١ و٢ يتكرروا.
+oral_b2_complete_pattern4_q,oral_quiz_question,١ ، ٢ ، ١ ، ٢ ، ١ ، ؟ الاختيارات: ١، ٢، ٣.
+ex_b2_complete_pattern5_why,explanation,ثلاثة حيوانات تتكرر.
+ex_b2_complete_pattern6_why,explanation,أبيض ثم أسودين.
+ex_b2_complete_pattern7_q,question_prompt,٢ ، ٤ ، ٦ ، ٨ ، ؟
+ex_b2_complete_pattern7_why,explanation,بنزيد اتنين كل مرة.
+oral_b2_complete_pattern7_q,oral_quiz_question,٢ ، ٤ ، ٦ ، ٨ ، ؟ الاختيارات: ٩، ١٠، ١٢.
+ex_b2_complete_pattern8_why,explanation,شمس ثم مطرتين.
+ex_b2_odd_one0_q,question_prompt,مين المختلف؟
+ex_b2_odd_one0_h0,hint,فكّر في السؤال وجرّب كل اختيار.
+ex_b2_odd_one0_h1,hint,استبعد الإجابات اللي مش منطقية.
+ex_b2_odd_one0_why,explanation,العربية مش فاكهة.
+ex_b2_odd_one1_why,explanation,الشجرة مش حيوان.
+ex_b2_odd_one2_why,explanation,البيتزا مش من أدوات المدرسة.
+ex_b2_odd_one3_why,explanation,الكرة مش لون.
+ex_b2_odd_one4_why,explanation,البيت مش مواصلات.
+ex_b2_odd_one5_why,explanation,الباقي في السماء.
+ex_b2_odd_one6_q,question_prompt,٢ ٤ ٦ ٧ مين المختلف؟
+ex_b2_odd_one6_why,explanation,٧ فردي والباقي زوجي.
+oral_b2_odd_one6_q,oral_quiz_question,٢ ٤ ٦ ٧ مين المختلف؟ الاختيارات: ٤، ٧، ٦.
+ex_b2_odd_one7_why,explanation,الفيل ما بيعيش في الماء.
+ex_b2_odd_one8_why,explanation,الكرة مش خضار.
+ex_b2_sz0_h0,hint,قارن بين الأول والتاني.
+ex_b2_sz0_h1,hint,فكّر أي واحد أكبر في الحقيقة.
+ex_b2_color_mix0_q,question_prompt,أحمر أصفر ؟
+ex_b2_color_mix0_why,explanation,الأحمر مع الأصفر يعطي البرتقالي.
+oral_b2_color_mix0_q,oral_quiz_question,أحمر أصفر ؟ الاختيارات: أخضر، برتقالي، بنفسجي.
+oral_b2_color_mix0_a,oral_quiz_answer,الإجابة هي برتقالي.
+ex_b2_color_mix1_q,question_prompt,أزرق أصفر ؟
+ex_b2_color_mix1_why,explanation,الأزرق مع الأصفر يعطي الأخضر.
+oral_b2_color_mix1_q,oral_quiz_question,أزرق أصفر ؟ الاختيارات: أخضر، بني، وردي.
+oral_b2_color_mix1_a,oral_quiz_answer,الإجابة هي أخضر.
+ex_b2_color_mix2_q,question_prompt,أحمر أزرق ؟
+ex_b2_color_mix2_why,explanation,الأحمر مع الأزرق يعطي البنفسجي.
+oral_b2_color_mix2_q,oral_quiz_question,أحمر أزرق ؟ الاختيارات: برتقالي، أخضر، بنفسجي.
+oral_b2_color_mix2_a,oral_quiz_answer,الإجابة هي بنفسجي.
+ex_b2_color_mix3_q,question_prompt,أحمر أبيض ؟
+ex_b2_color_mix3_why,explanation,الأحمر مع الأبيض يعطي الوردي.
+oral_b2_color_mix3_q,oral_quiz_question,أحمر أبيض ؟ الاختيارات: وردي، أصفر، رمادي.
+oral_b2_color_mix3_a,oral_quiz_answer,الإجابة هي وردي.
+ex_b2_color_mix4_q,question_prompt,أسود أبيض ؟
+ex_b2_color_mix4_why,explanation,الأسود مع الأبيض يعطي الرمادي.
+oral_b2_color_mix4_q,oral_quiz_question,أسود أبيض ؟ الاختيارات: بني، رمادي، أزرق.
+oral_b2_color_mix4_a,oral_quiz_answer,الإجابة هي رمادي.
+ex_b2_color_mix5_q,question_prompt,أزرق أبيض ؟
+ex_b2_color_mix5_why,explanation,الأزرق مع الأبيض يعطي السماوي.
+oral_b2_color_mix5_q,oral_quiz_question,أزرق أبيض ؟ الاختيارات: سماوي، أحمر، أخضر.
+oral_b2_color_mix5_a,oral_quiz_answer,الإجابة هي سماوي.
+ex_b2_color_mix6_q,question_prompt,لون الموز بعد ما يكبر ويتعفن؟
+ex_b2_color_mix6_why,explanation,الموز يتحول للبني.
+oral_b2_color_mix6_q,oral_quiz_question,لون الموز بعد ما يكبر ويتعفن؟ الاختيارات: أزرق، وردي، بني.
+oral_b2_color_mix6_a,oral_quiz_answer,الإجابة هي بني.
+ex_b2_color_mix7_q,question_prompt,أي لونين نخلطهم لنحصل على الأخضر؟
+oral_b2_color_mix7_q,oral_quiz_question,أي لونين نخلطهم لنحصل على الأخضر؟ الاختيارات: أسود وأبيض، أزرق وأصفر، أحمر وأبيض.
+oral_b2_color_mix7_a,oral_quiz_answer,الإجابة هي أزرق وأصفر.
+ex_b2_hs0_q,question_prompt,كام مثلث؟
+ex_b2_hs0_h0,hint,عُد كل شكل مرة واحدة بإصبعك.
+ex_b2_hs0_h1,hint,حط إصبعك على كل واحد وإنت بتعد.
+oral_b2_hs0_q,oral_quiz_question,كام مثلث؟ الاختيارات: ١، ٢، ٣.
+ex_b2_hs1_q,question_prompt,كام دايرة؟
+oral_b2_hs1_q,oral_quiz_question,كام دايرة؟ الاختيارات: ٢، ٣، ٤.
+ex_b2_hs2_q,question_prompt,كام مربع؟
+oral_b2_hs2_q,oral_quiz_question,كام مربع؟ الاختيارات: ١، ٢، ٣.
+ex_b2_hs3_q,question_prompt,كام نجمة؟
+oral_b2_hs3_q,oral_quiz_question,كام نجمة؟ الاختيارات: ٢، ٣، ٥.
+ex_b2_hs4_q,question_prompt,كام قلب؟
+oral_b2_hs4_q,oral_quiz_question,كام قلب؟ الاختيارات: ٣، ٤، ٥.
+ex_b2_hs5_q,question_prompt,كام شكل كله؟
+oral_b2_hs5_q,oral_quiz_question,كام شكل كله؟ الاختيارات: ٣، ٤، ٥.
+ex_b2_hs6_q,question_prompt,كام قمر؟
+oral_b2_hs6_q,oral_quiz_question,كام قمر؟ الاختيارات: ٣، ٤، ٣٣.
+ex_b2_hs7_q,question_prompt,كام شكل أحمر؟
+oral_b2_hs7_q,oral_quiz_question,كام شكل أحمر؟ الاختيارات: ٢، ٣، ٤.
+ex_b2_mirror0_q,question_prompt,لو وقفت قدام المراية، اليد اليمين تبان؟
+ex_b2_mirror0_why,explanation,المراية بتقلب الجهة.
+oral_b2_mirror0_q,oral_quiz_question,لو وقفت قدام المراية، اليد اليمين تبان؟ الاختيارات: فوق، اليمين، اليسار.
+oral_b2_mirror0_a,oral_quiz_answer,الإجابة هي اليسار.
+ex_b2_mirror1_q,question_prompt,أي شكل متماثل (نصفه زي نصفه)؟
+ex_b2_mirror1_why,explanation,القلب نصفه يشبه نصفه الثاني.
+ex_b2_mirror2_q,question_prompt,أي حرف متماثل؟
+ex_b2_mirror2_why,explanation,حرف الألف نصفه زي نصفه.
+oral_b2_mirror2_q,oral_quiz_question,أي حرف متماثل؟ الاختيارات: ا، ق، ب.
+oral_b2_mirror2_a,oral_quiz_answer,الإجابة هي ا.
+ex_b2_mirror3_q,question_prompt,فراشة مفتوحة الجناحين، جناحها اليمين يشبه؟
+oral_b2_mirror3_q,oral_quiz_question,فراشة مفتوحة الجناحين، جناحها اليمين يشبه؟ الاختيارات: الرجل، اليسار، الراس.
+ex_b2_mirror4_q,question_prompt,أي واحد له محور تماثل؟
+ex_b2_mirror4_why,explanation,جناحا الفراشة متشابهان.
+ex_b2_mirror5_q,question_prompt,مين صورة نفس الوجه في المراية؟
+ex_b2_mirror6_q,question_prompt,نص الدايرة؟
+ex_b2_mirror6_why,explanation,خط التماثل بيقسم الشكل نصفين.
+oral_b2_mirror6_q,oral_quiz_question,نص الدايرة؟ الاختيارات: جزء واحد، نصفان متساويان، ثلاثة أجزاء.
+oral_b2_mirror6_a,oral_quiz_answer,الإجابة هي نصفان متساويان.
+ex_b2_length0_q,question_prompt,أيهما أطول؟
+ex_b2_length0_why,explanation,الزرافة أطول.
+oral_b2_length0_a,oral_quiz_answer,الإجابة هي زرافة.
+ex_b2_length1_q,question_prompt,أيهما أقصر؟
+ex_b2_length1_why,explanation,النملة صغيرة جدا.
+oral_b2_length1_a,oral_quiz_answer,الإجابة هي نملة.
+oral_b2_length2_a,oral_quiz_answer,الإجابة هي شجرة.
+ex_b2_length3_q,question_prompt,أي أداة نقيس بيها الطول؟
+ex_b2_length3_why,explanation,المسطرة لقياس الطول.
+oral_b2_length3_q,oral_quiz_question,أي أداة نقيس بيها الطول؟ الاختيارات: الميزان، المسطرة، الساعة.
+oral_b2_length3_a,oral_quiz_answer,الإجابة هي المسطرة.
+ex_b2_length4_q,question_prompt,أي أداة نقيس بيها الوزن؟
+ex_b2_length4_why,explanation,الميزان لقياس الوزن.
+oral_b2_length4_q,oral_quiz_question,أي أداة نقيس بيها الوزن؟ الاختيارات: الميزان، المراية، المسطرة.
+oral_b2_length4_a,oral_quiz_answer,الإجابة هي الميزان.
+ex_b2_length5_q,question_prompt,القلم الأطول هو؟
+ex_b2_length5_why,explanation,كل ما زادت القطع زاد الطول.
+ex_b2_length6_q,question_prompt,أيهما أخف؟
+oral_b2_length6_a,oral_quiz_answer,الإجابة هي ريشة.
+ex_b2_length7_q,question_prompt,أيهما أثقل؟
+ex_b2_animal_home0_q,question_prompt,بيت الأسد؟
+ex_b2_animal_home0_why,explanation,الأسد يعيش في الغابة.
+oral_b2_animal_home0_q,oral_quiz_question,بيت الأسد؟ الاختيارات: الغابة، البحر، السماء.
+oral_b2_animal_home0_a,oral_quiz_answer,الإجابة هي الغابة.
+ex_b2_animal_home1_q,question_prompt,بيت السمكة؟
+oral_b2_animal_home1_q,oral_quiz_question,بيت السمكة؟ الاختيارات: الماء، العش، الكهف.
+ex_b2_animal_home2_q,question_prompt,بيت العصفور؟
+oral_b2_animal_home2_q,oral_quiz_question,بيت العصفور؟ الاختيارات: الجحر، العش، الإسطبل.
+oral_b2_animal_home2_a,oral_quiz_answer,الإجابة هي العش.
+ex_b2_animal_home3_q,question_prompt,بيت الأرنب؟
+ex_b2_animal_home3_why,explanation,الأرنب يعيش في جحر.
+oral_b2_animal_home3_q,oral_quiz_question,بيت الأرنب؟ الاختيارات: الجحر، البحر، العش.
+oral_b2_animal_home3_a,oral_quiz_answer,الإجابة هي الجحر.
+ex_b2_animal_home4_q,question_prompt,بيت الحصان؟
+oral_b2_animal_home4_q,oral_quiz_question,بيت الحصان؟ الاختيارات: البركة، الإسطبل، العش.
+oral_b2_animal_home4_a,oral_quiz_answer,الإجابة هي الإسطبل.
+ex_b2_animal_home5_q,question_prompt,بيت النحلة؟
+ex_b2_animal_home5_why,explanation,النحل يعيش في خلية.
+oral_b2_animal_home5_q,oral_quiz_question,بيت النحلة؟ الاختيارات: الخلية، الكهف، الجحر.
+oral_b2_animal_home5_a,oral_quiz_answer,الإجابة هي الخلية.
+ex_b2_animal_home6_q,question_prompt,بيت الدب القطبي؟
+oral_b2_animal_home6_q,oral_quiz_question,بيت الدب القطبي؟ الاختيارات: الجليد، الغابة، الصحراء.
+oral_b2_animal_home6_a,oral_quiz_answer,الإجابة هي الجليد.
+ex_b2_animal_home7_q,question_prompt,بيت الجمل؟
+oral_b2_animal_home7_q,oral_quiz_question,بيت الجمل؟ الاختيارات: البحر، الصحراء، القطب.
+oral_b2_animal_home7_a,oral_quiz_answer,الإجابة هي الصحراء.
+ex_b2_what_eats0_q,question_prompt,الأرنب يأكل؟
+oral_b2_what_eats0_q,oral_quiz_question,الأرنب يأكل؟ الاختيارات: الحجر، الجزر، اللحم.
+oral_b2_what_eats0_a,oral_quiz_answer,الإجابة هي الجزر.
+ex_b2_what_eats1_q,question_prompt,الأسد يأكل؟
+ex_b2_what_eats1_why,explanation,الأسد من آكلي اللحوم.
+oral_b2_what_eats1_q,oral_quiz_question,الأسد يأكل؟ الاختيارات: الورد، العشب، اللحم.
+oral_b2_what_eats1_a,oral_quiz_answer,الإجابة هي اللحم.
+ex_b2_what_eats2_q,question_prompt,البقرة تأكل؟
+oral_b2_what_eats2_q,oral_quiz_question,البقرة تأكل؟ الاختيارات: العشب، السمك، البيتزا.
+oral_b2_what_eats2_a,oral_quiz_answer,الإجابة هي العشب.
+ex_b2_what_eats3_q,question_prompt,القرد يحب؟
+oral_b2_what_eats3_q,oral_quiz_question,القرد يحب؟ الاختيارات: الموز، الورق، العظم.
+oral_b2_what_eats3_a,oral_quiz_answer,الإجابة هي الموز.
+ex_b2_what_eats4_q,question_prompt,النحلة تأخذ؟
+ex_b2_what_eats4_why,explanation,النحل يصنع العسل من الرحيق.
+oral_b2_what_eats4_q,oral_quiz_question,النحلة تأخذ؟ الاختيارات: رحيق الزهور، الحبوب فقط، اللحم.
+oral_b2_what_eats4_a,oral_quiz_answer,الإجابة هي رحيق الزهور.
+ex_b2_what_eats5_q,question_prompt,القطة تحب؟
+oral_b2_what_eats5_q,oral_quiz_question,القطة تحب؟ الاختيارات: العشب، السمك، الجزر.
+oral_b2_what_eats5_a,oral_quiz_answer,الإجابة هي السمك.
+ex_b2_what_eats6_q,question_prompt,الدجاجة تأكل؟
+oral_b2_what_eats6_q,oral_quiz_question,الدجاجة تأكل؟ الاختيارات: الحبوب، الحجارة، اللحم.
+oral_b2_what_eats6_a,oral_quiz_answer,الإجابة هي الحبوب.
+ex_b2_what_eats7_q,question_prompt,الحوت يأكل؟
+oral_b2_what_eats7_q,oral_quiz_question,الحوت يأكل؟ الاختيارات: العشب، الجزر، الأسماك الصغيرة والعوالق.
+oral_b2_what_eats7_a,oral_quiz_answer,الإجابة هي الأسماك الصغيرة والعوالق.
+ex_b2_seasons0_q,question_prompt,في أي فصل تساقط أوراق الشجر؟
+oral_b2_seasons0_q,oral_quiz_question,في أي فصل تساقط أوراق الشجر؟ الاختيارات: الصيف، الخريف، الربيع.
+oral_b2_seasons0_a,oral_quiz_answer,الإجابة هي الخريف.
+ex_b2_seasons1_q,question_prompt,الجو حار جدا في فصل؟
+oral_b2_seasons1_q,oral_quiz_question,الجو حار جدا في فصل؟ الاختيارات: الخريف، الشتاء، الصيف.
+oral_b2_seasons1_a,oral_quiz_answer,الإجابة هي الصيف.
+ex_b2_seasons2_q,question_prompt,الأزهار تتفتح في فصل؟
+oral_b2_seasons2_q,oral_quiz_question,الأزهار تتفتح في فصل؟ الاختيارات: الربيع، الشتاء، الصيف.
+oral_b2_seasons2_a,oral_quiz_answer,الإجابة هي الربيع.
+ex_b2_seasons3_q,question_prompt,المطر والبرد في فصل؟
+oral_b2_seasons3_q,oral_quiz_question,المطر والبرد في فصل؟ الاختيارات: الصيف، الشتاء، الربيع.
+oral_b2_seasons3_a,oral_quiz_answer,الإجابة هي الشتاء.
+ex_b2_seasons4_q,question_prompt,كام فصل في السنة؟
+ex_b2_seasons4_why,explanation,أربعة فصول.
+oral_b2_seasons4_q,oral_quiz_question,كام فصل في السنة؟ الاختيارات: ٥، ٣، ٤.
+ex_b2_seasons5_q,question_prompt,الفصل اللي بعد الشتاء؟
+ex_b2_seasons5_why,explanation,شتاء ثم ربيع ثم صيف ثم خريف.
+oral_b2_seasons5_q,oral_quiz_question,الفصل اللي بعد الشتاء؟ الاختيارات: الصيف، الخريف، الربيع.
+ex_b2_seasons6_q,question_prompt,نلبس الجاكيت الثقيل في؟
+oral_b2_seasons6_q,oral_quiz_question,نلبس الجاكيت الثقيل في؟ الاختيارات: الشتاء، الربيع، الصيف.
+ex_b2_seasons7_q,question_prompt,نذهب للبحر غالبا في؟
+oral_b2_seasons7_q,oral_quiz_question,نذهب للبحر غالبا في؟ الاختيارات: الخريف، الصيف، الشتاء.
+ex_b2_weather_clothes0_q,question_prompt,الجو ممطر، نأخذ؟
+oral_b2_weather_clothes0_a,oral_quiz_answer,الإجابة هي مظلة.
+ex_b2_weather_clothes1_q,question_prompt,الجو بارد جدا، نلبس؟
+oral_b2_weather_clothes1_a,oral_quiz_answer,الإجابة هي جاكيت.
+ex_b2_weather_clothes2_q,question_prompt,الجو مشمس وحار، نلبس؟
+oral_b2_weather_clothes2_a,oral_quiz_answer,الإجابة هي تيشيرت خفيف.
+ex_b2_weather_clothes3_q,question_prompt,الجو رياح، نمسك؟
+oral_b2_weather_clothes3_a,oral_quiz_answer,الإجابة هي طيارة ورق.
+ex_b2_weather_clothes4_q,question_prompt,في الثلج نلبس؟
+oral_b2_weather_clothes4_a,oral_quiz_answer,الإجابة هي قفازات.
+ex_b2_weather_clothes5_q,question_prompt,نروح البحر نأخذ؟
+oral_b2_weather_clothes5_a,oral_quiz_answer,الإجابة هي مايوه.
+ex_b2_weather_clothes6_q,question_prompt,الجو غائم ومطر خفيف، نأخذ؟
+ex_b2_jobs0_q,question_prompt,مين بيعالج المرضى؟
+oral_b2_jobs0_q,oral_quiz_question,مين بيعالج المرضى؟ الاختيارات: النجار، الطبيب، الطباخ.
+oral_b2_jobs0_a,oral_quiz_answer,الإجابة هي الطبيب.
+ex_b2_jobs1_q,question_prompt,مين بيعلّم الأطفال؟
+oral_b2_jobs1_q,oral_quiz_question,مين بيعلّم الأطفال؟ الاختيارات: الطيار، الحلاق، المعلم.
+oral_b2_jobs1_a,oral_quiz_answer,الإجابة هي المعلم.
+ex_b2_jobs2_q,question_prompt,مين بيطفّي الحرائق؟
+oral_b2_jobs2_q,oral_quiz_question,مين بيطفّي الحرائق؟ الاختيارات: الفلاح، الطبيب، رجل الإطفاء.
+oral_b2_jobs2_a,oral_quiz_answer,الإجابة هي رجل الإطفاء.
+ex_b2_jobs3_q,question_prompt,مين بيزرع الأرض؟
+oral_b2_jobs3_q,oral_quiz_question,مين بيزرع الأرض؟ الاختيارات: الفلاح، الطيار، الشرطي.
+oral_b2_jobs3_a,oral_quiz_answer,الإجابة هي الفلاح.
+ex_b2_jobs4_q,question_prompt,مين بيسوق الطيارة؟
+oral_b2_jobs4_q,oral_quiz_question,مين بيسوق الطيارة؟ الاختيارات: السائق، الربان، الطيار.
+oral_b2_jobs4_a,oral_quiz_answer,الإجابة هي الطيار.
+ex_b2_jobs5_q,question_prompt,مين بيحمينا ويحفظ الأمن؟
+oral_b2_jobs5_q,oral_quiz_question,مين بيحمينا ويحفظ الأمن؟ الاختيارات: الرسام، الخباز، الشرطي.
+oral_b2_jobs5_a,oral_quiz_answer,الإجابة هي الشرطي.
+ex_b2_jobs6_q,question_prompt,مين بيعمل العيش؟
+oral_b2_jobs6_q,oral_quiz_question,مين بيعمل العيش؟ الاختيارات: الميكانيكي، الخباز، الطبيب.
+oral_b2_jobs6_a,oral_quiz_answer,الإجابة هي الخباز.
+ex_b2_jobs7_q,question_prompt,مين بيصلّح العربيات؟
+oral_b2_jobs7_q,oral_quiz_question,مين بيصلّح العربيات؟ الاختيارات: المعلم، الطباخ، الميكانيكي.
+oral_b2_jobs7_a,oral_quiz_answer,الإجابة هي الميكانيكي.
+ex_b2_transport0_q,question_prompt,مين بيمشي على الشريط؟
+oral_b2_transport0_q,oral_quiz_question,مين بيمشي على الشريط؟ الاختيارات: القطار، المركب، الطيارة.
+oral_b2_transport0_a,oral_quiz_answer,الإجابة هي القطار.
+ex_b2_transport1_q,question_prompt,مين بيطير في السماء؟
+oral_b2_transport1_q,oral_quiz_question,مين بيطير في السماء؟ الاختيارات: الطيارة، القطار، العربية.
+oral_b2_transport1_a,oral_quiz_answer,الإجابة هي الطيارة.
+ex_b2_transport2_q,question_prompt,مين بيمشي في البحر؟
+oral_b2_transport2_q,oral_quiz_question,مين بيمشي في البحر؟ الاختيارات: المركب، الأتوبيس، الدراجة.
+oral_b2_transport2_a,oral_quiz_answer,الإجابة هي المركب.
+ex_b2_transport3_q,question_prompt,مين له عجلتين؟
+oral_b2_transport3_q,oral_quiz_question,مين له عجلتين؟ الاختيارات: الأتوبيس، الدراجة، العربية.
+oral_b2_transport3_a,oral_quiz_answer,الإجابة هي الدراجة.
+ex_b2_transport4_q,question_prompt,الأتوبيس بيشيل؟
+oral_b2_transport4_q,oral_quiz_question,الأتوبيس بيشيل؟ الاختيارات: ماء، ناس كتير، سمك.
+oral_b2_transport4_a,oral_quiz_answer,الإجابة هي ناس كتير.
+ex_b2_transport5_q,question_prompt,مين أسرع؟
+oral_b2_transport5_q,oral_quiz_question,مين أسرع؟ الاختيارات: الطيارة، الدراجة، المشي.
+ex_b2_transport6_q,question_prompt,مين بيمشي تحت الأرض في المدن الكبيرة؟
+oral_b2_transport6_q,oral_quiz_question,مين بيمشي تحت الأرض في المدن الكبيرة؟ الاختيارات: الدراجة، المترو، المركب.
+oral_b2_transport6_a,oral_quiz_answer,الإجابة هي المترو.
+ex_b2_transport7_q,question_prompt,نركب لما نسافر بعيد في وقت قصير
+oral_b2_transport7_q,oral_quiz_question,نركب لما نسافر بعيد في وقت قصير الاختيارات: الدراجة، الحصان، الطيارة.
+ex_b2_fv0_q,question_prompt,حط كل واحدة مكانها: فاكهة ولا خضار
+ex_b2_fv0_h0,hint,الفاكهة غالبا حلوة وناكلها زي ما هي.
+ex_b2_fv0_h1,hint,الخضار نطبخها أو نحطها في السلطة.
+ex_b2_five_senses0_q,question_prompt,نشوف بـ؟
+oral_b2_five_senses0_q,oral_quiz_question,نشوف بـ؟ الاختيارات: العين، الأذن، الأنف.
+ex_b2_five_senses1_q,question_prompt,نسمع بـ؟
+oral_b2_five_senses1_q,oral_quiz_question,نسمع بـ؟ الاختيارات: الأذن، اللسان، العين.
+ex_b2_five_senses2_q,question_prompt,نشم الورد بـ؟
+oral_b2_five_senses2_q,oral_quiz_question,نشم الورد بـ؟ الاختيارات: الأنف، العين، اليد.
+ex_b2_five_senses3_q,question_prompt,نتذوق الحلوى بـ؟
+oral_b2_five_senses3_q,oral_quiz_question,نتذوق الحلوى بـ؟ الاختيارات: الأذن، اللسان، الأنف.
+oral_b2_five_senses3_a,oral_quiz_answer,الإجابة هي اللسان.
+ex_b2_five_senses4_q,question_prompt,نحس بالبرد والسخونة بـ؟
+ex_b2_five_senses4_why,explanation,الجلد هو حاسة اللمس.
+oral_b2_five_senses4_q,oral_quiz_question,نحس بالبرد والسخونة بـ؟ الاختيارات: الأذن، العين، الجلد.
+oral_b2_five_senses4_a,oral_quiz_answer,الإجابة هي الجلد.
+ex_b2_five_senses5_q,question_prompt,كام حاسة عندنا؟
+ex_b2_five_senses5_why,explanation,خمس حواس.
+oral_b2_five_senses5_q,oral_quiz_question,كام حاسة عندنا؟ الاختيارات: ١٠، ٥، ٣.
+ex_b2_five_senses6_q,question_prompt,نسمع الموسيقى بـ؟
+oral_b2_five_senses6_q,oral_quiz_question,نسمع الموسيقى بـ؟ الاختيارات: العين، الأنف، الأذن.
+ex_b2_five_senses7_q,question_prompt,نمسك الكرة الناعمة ونحس بيها بـ؟
+oral_b2_five_senses7_q,oral_quiz_question,نمسك الكرة الناعمة ونحس بيها بـ؟ الاختيارات: السمع، الشم، اللمس.
+oral_b2_five_senses7_a,oral_quiz_answer,الإجابة هي اللمس.
+ex_b3_day_routine0_q,question_prompt,رتّب يومك: إيه الأول؟
+ex_b3_day_routine0_h0,hint,فكّر: إيه اللي بنعمله أول حاجة؟
+ex_b3_day_routine0_h1,hint,الأخير هو النوم أو الوصول.
+ex_b3_day_routine1_q,question_prompt,رتّب المساء
+ex_b3_day_routine2_q,question_prompt,رتّب قبل المدرسة
+ex_b3_day_routine3_q,question_prompt,رتّب بعد المدرسة
+ex_b3_day_routine4_q,question_prompt,رتّب يوم الجمعة
+ex_b3_day_routine5_q,question_prompt,رتّب قبل النوم
+ex_b3_rw0_q,question_prompt,أقول من فضلك لما أطلب حاجة، صح ولا غلط؟
+ex_b3_rw0_h0,hint,فكّر: هل ده تصرف لطيف مع الناس؟
+ex_b3_rw0_h1,hint,هل ده يضايق حد؟
+oral_b3_rw0_q,oral_quiz_question,أقول من فضلك لما أطلب حاجة، صح ولا غلط؟ الاختيارات: صح، غلط.
+oral_b3_rw0_a,oral_quiz_answer,الإجابة هي صح.
+ex_b3_rw1_q,question_prompt,أرمي الزبالة في الشارع، صح ولا غلط؟
+oral_b3_rw1_q,oral_quiz_question,أرمي الزبالة في الشارع، صح ولا غلط؟ الاختيارات: صح، غلط.
+oral_b3_rw1_a,oral_quiz_answer,الإجابة هي غلط.
+ex_b3_rw2_q,question_prompt,أقول شكراً لما حد يساعدني، صح ولا غلط؟
+oral_b3_rw2_q,oral_quiz_question,أقول شكراً لما حد يساعدني، صح ولا غلط؟ الاختيارات: صح، غلط.
+ex_b3_rw3_q,question_prompt,أقاطع الناس وهما بيتكلموا، صح ولا غلط؟
+oral_b3_rw3_q,oral_quiz_question,أقاطع الناس وهما بيتكلموا، صح ولا غلط؟ الاختيارات: صح، غلط.
+ex_b3_rw4_q,question_prompt,أسلّم على جيراني بابتسامة، صح ولا غلط؟
+oral_b3_rw4_q,oral_quiz_question,أسلّم على جيراني بابتسامة، صح ولا غلط؟ الاختيارات: صح، غلط.
+ex_b3_rw5_q,question_prompt,أخد لعبة صاحبي من غير ما أستأذن، صح ولا غلط؟
+oral_b3_rw5_q,oral_quiz_question,أخد لعبة صاحبي من غير ما أستأذن، صح ولا غلط؟ الاختيارات: صح، غلط.
+ex_b3_rw6_q,question_prompt,أقول السلام عليكم لما أدخل، صح ولا غلط؟
+oral_b3_rw6_q,oral_quiz_question,أقول السلام عليكم لما أدخل، صح ولا غلط؟ الاختيارات: صح، غلط.
+ex_b3_rw7_q,question_prompt,أضحك على صاحبي لما يغلط، صح ولا غلط؟
+oral_b3_rw7_q,oral_quiz_question,أضحك على صاحبي لما يغلط، صح ولا غلط؟ الاختيارات: صح، غلط.
+ex_b3_rw8_q,question_prompt,أساعد ماما في البيت، صح ولا غلط؟
+oral_b3_rw8_q,oral_quiz_question,أساعد ماما في البيت، صح ولا غلط؟ الاختيارات: صح، غلط.
+ex_b3_rw9_q,question_prompt,أسيب الأكل على الأرض، صح ولا غلط؟
+oral_b3_rw9_q,oral_quiz_question,أسيب الأكل على الأرض، صح ولا غلط؟ الاختيارات: صح، غلط.
+ex_b3_teeth0_q,question_prompt,رتّب خطوات غسل الأسنان
+ex_b3_teeth0_h0,hint,ابدأ بتجهيز الفرشاة.
+ex_b3_teeth0_h1,hint,الشطف في الآخر.
+ex_b3_teeth1_q,question_prompt,رتّب
+ex_b3_rm0_q,question_prompt,رتّب الأوضة: حط كل حاجة في مكانها
+ex_b3_rm0_h0,hint,اللعب في صندوق اللعب والهدوم في الدولاب.
+ex_b3_rm1_h0,hint,الأدوات للمدرسة، واللعب للعب.
+ex_b3_rm2_q,question_prompt,رتّب الأوضة
+ex_b3_rm2_h0,hint,فكّر: ألبسها ولا ألعب بيها؟
+ex_b3_rm3_q,question_prompt,حط الأشياء في مكانها
+ex_b3_rm3_h0,hint,المطبخ للأكل والأوضة للنوم.
+ex_b3_em0_q,question_prompt,وصّل الوش بالإحساس
+ex_b3_em0_h0,hint,بص على الوش: العين والفم بيقولوا الإحساس.
+ex_b3_emotions_choice0_q,question_prompt,لو صاحبك زعلان، تعمل إيه؟
+ex_b3_emotions_choice0_h0,hint,افتكر إيه اللي بيحسّ بيه صاحبك.
+oral_b3_emotions_choice0_q,oral_quiz_question,لو صاحبك زعلان، تعمل إيه؟ الاختيارات: أمشي، أطبطب عليه، أضحك عليه.
+oral_b3_emotions_choice0_a,oral_quiz_answer,الإجابة هي أطبطب عليه.
+ex_b3_emotions_choice1_q,question_prompt,لو أخدت هدية، تحس بإيه؟
+oral_b3_emotions_choice1_q,oral_quiz_question,لو أخدت هدية، تحس بإيه؟ الاختيارات: زعلان، فرحان، خايف.
+oral_b3_emotions_choice1_a,oral_quiz_answer,الإجابة هي فرحان.
+ex_b3_emotions_choice2_q,question_prompt,لو الدنيا ضلمة وخايف، تعمل إيه؟
+oral_b3_emotions_choice2_q,oral_quiz_question,لو الدنيا ضلمة وخايف، تعمل إيه؟ الاختيارات: أصرخ، أخبّي نفسي، أقول لماما أو بابا.
+oral_b3_emotions_choice2_a,oral_quiz_answer,الإجابة هي أقول لماما أو بابا.
+ex_b3_story_order0_q,question_prompt,رتّب الحدوتة: أرنوب والجزرة
+ex_b3_story_order0_h0,hint,فكّر: إيه اللي حصل الأول؟
+ex_b3_story_order1_q,question_prompt,رتّب: البذرة
+ex_b3_story_order2_q,question_prompt,رتّب: الفطيرة
+ex_b3_story_order3_q,question_prompt,رتّب: يوم الشاطئ
+ex_b3_story_order4_q,question_prompt,رتّب: رحلة السمكة
+ex_b3_road_safety0_q,question_prompt,الإشارة حمراء، أعمل إيه؟
+ex_b3_road_safety0_h0,hint,الأمان أهم من السرعة.
+ex_b3_road_safety0_h1,hint,دايما بص يمين وشمال.
+ex_b3_road_safety0_why,explanation,الأحمر معناه قف.
+oral_b3_road_safety0_q,oral_quiz_question,الإشارة حمراء، أعمل إيه؟ الاختيارات: أجري، أعدّي، أقف.
+oral_b3_road_safety0_a,oral_quiz_answer,الإجابة هي أقف.
+ex_b3_road_safety1_q,question_prompt,الإشارة خضراء للمشاة، أعمل؟
+oral_b3_road_safety1_q,oral_quiz_question,الإشارة خضراء للمشاة، أعمل؟ الاختيارات: أجري، أعدّي وأنا أبص، أقف.
+oral_b3_road_safety1_a,oral_quiz_answer,الإجابة هي أعدّي وأنا أبص.
+ex_b3_road_safety2_q,question_prompt,أعدّي الشارع من؟
+oral_b3_road_safety2_q,oral_quiz_question,أعدّي الشارع من؟ الاختيارات: الزيبرا والعلامات، وسط العربيات، من أي مكان.
+oral_b3_road_safety2_a,oral_quiz_answer,الإجابة هي الزيبرا والعلامات.
+ex_b3_road_safety3_q,question_prompt,وأنا في العربية، أحط؟
+oral_b3_road_safety3_q,oral_quiz_question,وأنا في العربية، أحط؟ الاختيارات: حزام الأمان، العروسة، شنطتي.
+oral_b3_road_safety3_a,oral_quiz_answer,الإجابة هي حزام الأمان.
+ex_b3_road_safety4_q,question_prompt,أمسك إيد مين وأنا بعدّي الشارع؟
+oral_b3_road_safety4_q,oral_quiz_question,أمسك إيد مين وأنا بعدّي الشارع؟ الاختيارات: إيد صاحبي الصغير، إيد الكبير، لوحدي.
+oral_b3_road_safety4_a,oral_quiz_answer,الإجابة هي إيد الكبير.
+ex_b3_road_safety5_q,question_prompt,ألعب كورة في؟
+oral_b3_road_safety5_q,oral_quiz_question,ألعب كورة في؟ الاختيارات: الطريق السريع، الشارع، الحديقة.
+oral_b3_road_safety5_a,oral_quiz_answer,الإجابة هي الحديقة.
+ex_b3_road_safety6_q,question_prompt,الإشارة صفراء معناها؟
+oral_b3_road_safety6_q,oral_quiz_question,الإشارة صفراء معناها؟ الاختيارات: ارجع، استعد وخليك حذر، اجري.
+oral_b3_road_safety6_a,oral_quiz_answer,الإجابة هي استعد وخليك حذر.
+ex_b3_wash_hands0_q,question_prompt,رتّب خطوات غسل الإيدين
+ex_b3_wash_hands0_h0,hint,الصابون بعد البل، والتنشيف في الآخر.
+ex_b3_wash_hands2_q,question_prompt,رتّب قبل الأكل
+ex_b3_please_thanks0_q,question_prompt,لما أطلب حاجة أقول؟
+ex_b3_please_thanks0_h0,hint,افتكر الكلمة اللطيفة.
+oral_b3_please_thanks0_q,oral_quiz_question,لما أطلب حاجة أقول؟ الاختيارات: عايز، هات، من فضلك.
+oral_b3_please_thanks0_a,oral_quiz_answer,الإجابة هي من فضلك.
+ex_b3_please_thanks1_q,question_prompt,لما حد يعطيني حاجة أقول؟
+oral_b3_please_thanks1_q,oral_quiz_question,لما حد يعطيني حاجة أقول؟ الاختيارات: شكراً، لا، مش عاوز.
+ex_b3_please_thanks2_q,question_prompt,لما أغلط في حق حد أقول؟
+oral_b3_please_thanks2_q,oral_quiz_question,لما أغلط في حق حد أقول؟ الاختيارات: مش مهم، بتاعي، آسف.
+ex_b3_please_thanks3_q,question_prompt,لما أقابل حد أقول؟
+oral_b3_please_thanks3_q,oral_quiz_question,لما أقابل حد أقول؟ الاختيارات: لا، هات اللعبة، السلام عليكم.
+oral_b3_please_thanks3_a,oral_quiz_answer,الإجابة هي السلام عليكم.
+ex_b3_please_thanks4_q,question_prompt,لما حد يعطس نقول؟
+ex_b3_please_thanks4_why,explanation,والعاطس يقول: يهديكم الله.
+oral_b3_please_thanks4_q,oral_quiz_question,لما حد يعطس نقول؟ الاختيارات: يرحمك الله، برافو، عيب.
+oral_b3_please_thanks4_a,oral_quiz_answer,الإجابة هي يرحمك الله.
+ex_b3_please_thanks5_q,question_prompt,لما أمشي أقول؟
+oral_b3_please_thanks5_q,oral_quiz_question,لما أمشي أقول؟ الاختيارات: لا، هات، مع السلامة.
+oral_b3_please_thanks5_a,oral_quiz_answer,الإجابة هي مع السلامة.
+ex_b3_please_thanks6_q,question_prompt,لما أدخل مكان وفيه ناس أقول؟
+oral_b3_please_thanks6_q,oral_quiz_question,لما أدخل مكان وفيه ناس أقول؟ الاختيارات: السلام عليكم، أنا هنا، ولا حاجة.
+ex_b3_sharing0_q,question_prompt,عندك ٤ بسكوتات وصاحبك ما معاهوش، تقسم؟
+ex_b3_sharing0_h0,hint,القسمة بالتساوي.
+ex_b3_sharing0_why,explanation,المشاركة جميلة.
+oral_b3_sharing0_q,oral_quiz_question,عندك ٤ بسكوتات وصاحبك ما معاهوش، تقسم؟ الاختيارات: ٣ ليا و١ ليه، ٤ ليا، ٢ لكل واحد.
+oral_b3_sharing0_a,oral_quiz_answer,الإجابة هي ٢ لكل واحد.
+ex_b3_sharing1_q,question_prompt,عندك ٦ حلوى و٣ أصحاب، كام لكل واحد؟
+oral_b3_sharing1_q,oral_quiz_question,عندك ٦ حلوى و٣ أصحاب، كام لكل واحد؟ الاختيارات: ٢، ٣، ١.
+ex_b3_sharing2_q,question_prompt,عندك ٨ تفاحات، توزعها على ٢، كام لكل واحد؟
+oral_b3_sharing2_q,oral_quiz_question,عندك ٨ تفاحات، توزعها على ٢، كام لكل واحد؟ الاختيارات: ٦، ٤، ٢.
+ex_b3_sharing3_q,question_prompt,لو عندك لعبة واحدة وأختك عايزاها؟
+oral_b3_sharing3_q,oral_quiz_question,لو عندك لعبة واحدة وأختك عايزاها؟ الاختيارات: نلعب بالدور، أخبّيها، آخدها لنفسي.
+oral_b3_sharing3_a,oral_quiz_answer,الإجابة هي نلعب بالدور.
+ex_b3_sharing4_q,question_prompt,٥ ألعاب، وإنت وصاحبك: تقسمهم؟
+oral_b3_sharing4_q,oral_quiz_question,٥ ألعاب، وإنت وصاحبك: تقسمهم؟ الاختيارات: ٣ و٢ ونتبادل، ٠ ليا، ٥ ليا.
+oral_b3_sharing4_a,oral_quiz_answer,الإجابة هي ٣ و٢ ونتبادل.
+ex_b3_sharing5_q,question_prompt,عندك ١٠ جنيه وعايز تعطي نصها؟
+oral_b3_sharing5_q,oral_quiz_question,عندك ١٠ جنيه وعايز تعطي نصها؟ الاختيارات: ٣، ٥، ٧.
+ex_b3_fl0_q,question_prompt,الكلمة تبدأ بأي حرف؟
+ex_b3_fl0_h0,hint,انطق اسم الصورة وركّز على أول صوت.
+ex_b3_fl0_h1,hint,أول صوت هو الحرف الأول.
+oral_b3_fl0_q,oral_quiz_question,الكلمة تبدأ بأي حرف؟ الاختيارات: ب، ف، ن.
+oral_b3_fl0_a,oral_quiz_answer,الإجابة هي ب.
+oral_b3_fl1_q,oral_quiz_question,الكلمة تبدأ بأي حرف؟ الاختيارات: ح، ق، ك.
+oral_b3_fl1_a,oral_quiz_answer,الإجابة هي ق.
+oral_b3_fl2_q,oral_quiz_question,الكلمة تبدأ بأي حرف؟ الاختيارات: ش، ف، ب.
+oral_b3_fl2_a,oral_quiz_answer,الإجابة هي ش.
+oral_b3_fl3_q,oral_quiz_question,الكلمة تبدأ بأي حرف؟ الاختيارات: ن، ق، س.
+oral_b3_fl4_q,oral_quiz_question,الكلمة تبدأ بأي حرف؟ الاختيارات: س، ح، ش.
+oral_b3_fl4_a,oral_quiz_answer,الإجابة هي س.
+oral_b3_fl5_q,oral_quiz_question,الكلمة تبدأ بأي حرف؟ الاختيارات: ش، ل، م.
+oral_b3_fl6_q,oral_quiz_question,الكلمة تبدأ بأي حرف؟ الاختيارات: ت، ش، ج.
+oral_b3_fl7_q,oral_quiz_question,الكلمة تبدأ بأي حرف؟ الاختيارات: ف، ت، ك.
+oral_b3_fl7_a,oral_quiz_answer,الإجابة هي ف.
+oral_b3_fl8_q,oral_quiz_question,الكلمة تبدأ بأي حرف؟ الاختيارات: ك، س، د.
+oral_b3_fl8_a,oral_quiz_answer,الإجابة هي ك.
+oral_b3_fl9_q,oral_quiz_question,الكلمة تبدأ بأي حرف؟ الاختيارات: و، ق، ك.
+oral_b3_fl10_q,oral_quiz_question,الكلمة تبدأ بأي حرف؟ الاختيارات: ب، و، ر.
+oral_b3_fl11_q,oral_quiz_question,الكلمة تبدأ بأي حرف؟ الاختيارات: و، ح، ه.

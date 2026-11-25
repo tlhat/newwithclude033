@@ -40,11 +40,43 @@ const List<WidgetGameDef> kWidgetGames = [
   WidgetGameDef('plant_care', 'اعتني بالنبتة', '🌱', 'اسقِها وعرّضها للشمس لتكبر', 0xFF84CC16),
 ];
 
+/// Plays the spoken intro of a widget game once when it opens.
+class _GameIntro extends StatefulWidget {
+  final String id;
+  final Widget child;
+  const _GameIntro({super.key, required this.id, required this.child});
+  @override
+  State<_GameIntro> createState() => _GameIntroState();
+}
+
+class _GameIntroState extends State<_GameIntro> {
+  @override
+  void initState() {
+    super.initState();
+    GuideVoice.instance.widgetStart(widget.id);
+  }
+
+  @override
+  Widget build(BuildContext context) => widget.child;
+}
+
 Widget buildWidgetGame(String id, AppStateManager s, ExtraReact rawReact) {
+  return _GameIntro(
+      key: ValueKey<String>('intro_$id'),
+      id: id,
+      child: _buildWidgetGameInner(id, s, rawReact));
+}
+
+Widget _buildWidgetGameInner(String id, AppStateManager s, ExtraReact rawReact) {
   // Every widget game reports each answer to the local developmental log.
   void react(bool ok) {
     DevStore.logAttempt(s.currentAccount?.activeChild.id ?? '', id, id, ok);
     rawReact(ok);
+    if (ok) {
+      GuideVoice.instance.right();
+    } else {
+      GuideVoice.instance.wrong();
+    }
   }
 
   switch (id) {

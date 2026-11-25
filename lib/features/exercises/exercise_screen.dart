@@ -60,6 +60,15 @@ class _ExerciseGameState extends State<ExerciseGame> {
   void initState() {
     super.initState();
     _load();
+    final String? sk = widget.skill;
+    if (sk != null && widget.fixed == null) GuideVoice.instance.exerciseGameStart(sk);
+  }
+
+  /// Speaks the current question (after the game intro has finished).
+  Future<void> _sayPrompt() async {
+    final Exercise? e = _cur;
+    if (e == null) return;
+    await GuideVoice.instance.prompt(e);
   }
 
   @override
@@ -90,6 +99,7 @@ class _ExerciseGameState extends State<ExerciseGame> {
           _list = l;
           _cur = _prog.next(l, DateTime.now());
         });
+        _sayPrompt();
       }
     } catch (_) {}
   }
@@ -148,13 +158,14 @@ class _ExerciseGameState extends State<ExerciseGame> {
         _msg = e.explain.isEmpty ? e.correctFeedback : '${e.correctFeedback}\n${e.explain}';
         _msgGood = true;
       });
-      HintVoiceService.instance.play('hint_great');
+      final Future<void> spoken = GuideVoice.instance.correct(e);
       await widget.appState.recordBrainGameWin(
           gameId: 'exercise_${e.id}',
           gameTitle: widget.title,
           earnedIqPoints: 10,
           earnedStars: 1);
       await Future<void>.delayed(Duration(milliseconds: e.explain.isEmpty ? 900 : 2600));
+      await spoken.timeout(const Duration(seconds: 8), onTimeout: () {});
       if (!mounted) return;
       if (widget.onSolved != null) {
         widget.onSolved!();
@@ -166,6 +177,7 @@ class _ExerciseGameState extends State<ExerciseGame> {
         _msg = null;
         _resetAnswer();
       });
+      _sayPrompt();
     } else {
       if (_wrong > 0) DevStore.logExtra(widget.appState.currentAccount?.activeChild.id ?? '', e.skill);
       final String? h = ExerciseGrader.hintFor(e, _wrong);
@@ -177,7 +189,7 @@ class _ExerciseGameState extends State<ExerciseGame> {
         _msgGood = false;
         _wrong++;
       });
-      HintVoiceService.instance.play('hint_try_again');
+      GuideVoice.instance.incorrect(e, h);
     }
   }
 
