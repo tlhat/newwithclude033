@@ -46,6 +46,19 @@ const List<ExerciseGameDef> kExerciseGames = [
   ExerciseGameDef('transport', 'المواصلات', '🚌', 'وسائل المواصلات', 0xFF14B8A6),
   ExerciseGameDef('fruit_veg', 'فواكه وخضار', '🍅', 'فاكهة ولا خضار؟', 0xFF84CC16),
   ExerciseGameDef('five_senses', 'الحواس الخمس', '👁️', 'العين والأذن والأنف', 0xFF8B5CF6),
+  // ---- batch 3: life skills and values
+  ExerciseGameDef('first_letter', 'الحرف الأول', '🔤', 'أي حرف يبدأ به الاسم؟', 0xFF14B8A6),
+  ExerciseGameDef('day_routine', 'رتّب روتين اليوم', '⏰', 'رتّب أحداث اليوم', 0xFFF59E0B),
+  ExerciseGameDef('right_wrong', 'صح ولا غلط في الآداب', '✅', 'تصرفات جميلة وغير جميلة', 0xFF22C55E),
+  ExerciseGameDef('teeth', 'تنضيف الأسنان', '🪥', 'خطوات غسل الأسنان', 0xFF0EA5E9),
+  ExerciseGameDef('tidy_room', 'رتّب الأوضة', '🧺', 'حط كل حاجة في مكانها', 0xFFA855F7),
+  ExerciseGameDef('emotions', 'المشاعر', '😊', 'اختار الوش المناسب للإحساس', 0xFFEC4899),
+  ExerciseGameDef('emotions_choice', 'تصرّف مع المشاعر', '🤗', 'ماذا نفعل؟', 0xFFF97316),
+  ExerciseGameDef('story_order', 'رتّب أحداث القصة', '📜', 'أي حدث أولا؟', 0xFF6366F1),
+  ExerciseGameDef('road_safety', 'سلامة الطريق', '🚦', 'ازاي نعدّي بأمان', 0xFFEF4444),
+  ExerciseGameDef('wash_hands', 'غسل الإيدين', '🧼', 'خطوات غسل الإيدين', 0xFF38BDF8),
+  ExerciseGameDef('please_thanks', 'من فضلك وشكراً', '🙏', 'كلمات جميلة', 0xFF10B981),
+  ExerciseGameDef('sharing', 'المشاركة والتقسيم', '🤝', 'نقسم بالتساوي', 0xFFDC2626),
 ];
 
 final Set<String> kExerciseGameSkills = {
