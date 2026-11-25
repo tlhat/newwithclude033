@@ -26,6 +26,12 @@ class ParentProgressReport extends StatelessWidget {
     'exercise': 'تمارين متنوعة',
     'quick_math': 'الحساب والجمع',
     'star_collector': 'جامع النجوم',
+    'letter_catcher': 'صائد الحروف',
+    'clock_set': 'اضبط عقارب الساعة',
+    'shadow_match': 'ظل الصورة',
+    'slide_puzzle': 'بازل الأرقام',
+    'maze': 'المتاهة',
+    'plant_care': 'اعتني بالنبتة',
   };
 
   /// Turns an ISO time into "منذ ٣ دقائق" style text.

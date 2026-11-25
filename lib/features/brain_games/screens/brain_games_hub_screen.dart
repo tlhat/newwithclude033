@@ -4,6 +4,7 @@ import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'new_games.dart';
 import 'package:haneen_kids_vod/features/exercises/exercise_screen.dart';
 import 'package:haneen_kids_vod/features/exercises/game_catalog.dart';
+import 'extra_games.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/features/companion/engine/companion_interaction_engine.dart';
 import 'package:haneen_kids_vod/features/companion/engine/companion_interaction_state.dart';
@@ -397,6 +398,13 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
               'skill': g.hint,
               'color': Color(g.color),
             },
+          for (final WidgetGameDef g in kWidgetGames)
+            {
+              'title': g.title,
+              'icon': g.icon,
+              'skill': g.hint,
+              'color': Color(g.color),
+            },
         ];
 
         return Scaffold(
@@ -670,6 +678,11 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
               onReact: _companionReact,
               skill: g.skill,
               title: g.title);
+        }
+        final int k2 = k - kExerciseGames.length;
+        if (k2 >= 0 && k2 < kWidgetGames.length) {
+          final WidgetGameDef w = kWidgetGames[k2];
+          return buildWidgetGame(w.id, widget.appState, _companionReact);
         }
         return _buildEtiquetteDrawingStudioGame();
     }
