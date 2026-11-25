@@ -4,6 +4,11 @@ on:
   push:
     branches: [ main, master ]
   workflow_dispatch:
+    inputs:
+      build_aab:
+        description: 'Also build the Play bundle (AAB)'
+        type: boolean
+        default: false
 
 jobs:
   build:
@@ -72,10 +77,17 @@ jobs:
       - name: Set app id and sign with the stable key
         env:
           OLD_PASS: ${{ secrets.KEYSTORE_PASSWORD }}
+          KS_B64: ${{ secrets.HANEEN_KEYSTORE_B64 }}
+          KS_PW: ${{ secrets.HANEEN_KEYSTORE_PASSWORD }}
         run: |
           F=android/app/build.gradle.kts
           sed -i 's/applicationId = ".*"/applicationId = "com.haneenkids.haneen_kids_vod"/' "$F"
-          if [ -f ci/haneen.jks ]; then
+          if [ -n "$KS_B64" ] && [ -n "$KS_PW" ]; then
+            echo "$KS_B64" | base64 -d > /tmp/haneen.jks
+            echo "KSPASS=$KS_PW" >> "$GITHUB_ENV"
+            echo "::add-mask::$KS_PW"
+            SIGN=1
+          elif [ -f ci/haneen.jks ]; then
             cp ci/haneen.jks /tmp/haneen.jks
             echo "KSPASS=mA7JSevDRB5Be0KOQlNGH6Wv" >> "$GITHUB_ENV"
             SIGN=1
@@ -135,7 +147,18 @@ jobs:
           cat ~/.gradle/init.d/disable-lint.gradle
 
       - name: Build Release APK
-        run: flutter build apk --release --no-tree-shake-icons --target-platform android-arm64
+        run: flutter build apk --release --no-tree-shake-icons --target-platform android-arm,android-arm64
+
+      - name: Build Play bundle (AAB), only when started by hand with build_aab
+        if: github.event_name == 'workflow_dispatch' && inputs.build_aab == true
+        run: flutter build appbundle --release --no-tree-shake-icons --target-platform android-arm,android-arm64
+
+      - name: Upload the AAB (manual runs only)
+        if: github.event_name == 'workflow_dispatch' && inputs.build_aab == true
+        uses: actions/upload-artifact@v4
+        with:
+          name: haneen-kids-release-aab
+          path: build/app/outputs/bundle/release/*.aab
 
       - name: Show the SHA-1 this APK is really signed with
         continue-on-error: true

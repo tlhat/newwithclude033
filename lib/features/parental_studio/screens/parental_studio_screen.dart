@@ -5,6 +5,7 @@ import 'package:haneen_kids_vod/features/development/dev_cards.dart';
 import 'package:haneen_kids_vod/features/kidlock/kid_lock_card.dart';
 import 'package:flutter/services.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
+import 'package:haneen_kids_vod/features/billing/plans_screen.dart';
 
 class ParentalStudioScreen extends StatefulWidget {
   final AppStateManager appState;
@@ -878,6 +879,18 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    ListTile(
+                      dense: true,
+                      contentPadding: EdgeInsets.zero,
+                      leading: const Icon(Icons.workspace_premium_rounded,
+                          color: Color(0xFFFBBF24)),
+                      title: const Text('الاشتراك والباقات',
+                          style: TextStyle(fontSize: 13)),
+                      subtitle: const Text('للأهل فقط: عرض الباقات وإدارة الاشتراك',
+                          style: TextStyle(fontSize: 10, color: Colors.white60)),
+                      onTap: () => Navigator.of(context).push(MaterialPageRoute(
+                          builder: (_) => const PlansScreen())),
+                    ),
                     Text(
                       '🛡️ ضوابط الأمان والخصوصية المستقلة لهذا الطفل:',
                       style: TextStyle(
