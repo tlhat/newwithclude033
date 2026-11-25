@@ -46,7 +46,7 @@ AgeBand bandFromAgeString(String age) {
   return AgeBand.y9to12;
 }
 
-enum SkillArea { cognition, language, social, executive, motor }
+enum SkillArea { cognition, language, social, executive, independence, creative, motor }
 
 extension SkillAreaX on SkillArea {
   String get label {
@@ -58,7 +58,11 @@ extension SkillAreaX on SkillArea {
       case SkillArea.social:
         return 'المهارات الاجتماعية والانفعالية';
       case SkillArea.executive:
-        return 'الوظائف التنفيذية (تخطيط وروتين)';
+        return 'الوظائف التنفيذية (انتباه ومرونة وضبط اندفاع)';
+      case SkillArea.independence:
+        return 'الاستقلالية (روتين وتعليمات وقرارات)';
+      case SkillArea.creative:
+        return 'الإبداع والخيال';
       case SkillArea.motor:
         return 'المهارات الحركية';
     }
@@ -97,6 +101,10 @@ const Map<SkillArea, EvidenceBadge> kAreaEvidence = {
       'الدليل من برامج مدرسية يقودها معلمون، وانتقال أثر التطبيق للسلوك غير مثبت.'),
   SkillArea.executive: EvidenceBadge(['S4', 'S5'], EvidenceStrength.moderate,
       'التدرج والتكرار مفيدان، لكن "تدريب الدماغ" لا يرفع الذكاء العام (S6, S7).'),
+  SkillArea.independence: EvidenceBadge(['S4'], EvidenceStrength.weak,
+      'الروتين اليومي في التطبيق تدريب على الفهم فقط، والاستقلالية الحقيقية تُبنى في البيت (تصميم غير مُثبت).'),
+  SkillArea.creative: EvidenceBadge([], EvidenceStrength.unverified,
+      'لم نفتح دراسة عن أنشطة الإبداع الرقمية. تُعرض كلعب حر.'),
   SkillArea.motor: EvidenceBadge([], EvidenceStrength.unverified,
       'لم نفتح دراسة عن الحركة باللمس. الحركة الحقيقية (لعب خارجي) أهم (S2).'),
 };
@@ -115,9 +123,13 @@ const Map<String, SkillArea> _areas = {
   'emotions_choice': SkillArea.social, 'please_thanks': SkillArea.social,
   'sharing': SkillArea.social, 'road_safety': SkillArea.social,
   // executive (routines and planning)
-  'daily_routine': SkillArea.executive, 'day_routine': SkillArea.executive,
-  'tidy_room': SkillArea.executive, 'teeth': SkillArea.executive,
-  'wash_hands': SkillArea.executive,
+  'daily_routine': SkillArea.independence, 'day_routine': SkillArea.independence,
+  'tidy_room': SkillArea.independence, 'teeth': SkillArea.independence,
+  'wash_hands': SkillArea.independence, 'plant_care': SkillArea.independence,
+  // widget games
+  'stop_go': SkillArea.executive, 'rule_switch': SkillArea.executive,
+  'slide_puzzle': SkillArea.executive, 'letter_catcher': SkillArea.language,
+  'maze': SkillArea.motor, 'draw_imagine': SkillArea.creative,
 };
 
 SkillArea areaOf(String skill) => _areas[skill] ?? SkillArea.cognition;
@@ -254,6 +266,8 @@ const Map<AgeBand, Map<SkillArea, List<String>>> kRealWorld = {
     SkillArea.cognition: ['فرزوا الغسيل أو الملاعق أو الألعاب مع بعض'],
     SkillArea.social: ['سمّوا المشاعر خلال اليوم: شكلك فرحان'],
     SkillArea.executive: ['ألعاب الدور وأغاني قف وامش'],
+    SkillArea.independence: ['نفّذوا تعليمة من خطوتين: هات الكورة وحطها هنا'],
+    SkillArea.creative: ['العبوا بالكوبايات والصناديق وتخيلوا إنها بيت'],
     SkillArea.motor: ['تركيب المكعبات والخربشة والجري والتسلق'],
   },
   AgeBand.y3to5: {
@@ -261,6 +275,8 @@ const Map<AgeBand, Map<SkillArea, List<String>>> kRealWorld = {
     SkillArea.cognition: ['عدّوا درجات السلم وابحثوا عن أنماط في الشارع'],
     SkillArea.social: ['تحدثوا عن موقف حصل فعلًا: ماذا كنت ستفعل؟'],
     SkillArea.executive: ['لعبة سيمون يقول، وروتين ترتيب الألعاب'],
+    SkillArea.independence: ['اتركه يختار ملابسه ويرتب شنطته بنفسه'],
+    SkillArea.creative: ['ارسموا مع بعض واحكوا حكاية الرسمة'],
     SkillArea.motor: ['رسم وصلصال ولعب بالكرة'],
   },
   AgeBand.y6to8: {
@@ -268,6 +284,8 @@ const Map<AgeBand, Map<SkillArea, List<String>>> kRealWorld = {
     SkillArea.cognition: ['تسوّق بالفلوس وقياسات الطبخ'],
     SkillArea.social: ['حديث عائلي عن حل خلاف'],
     SkillArea.executive: ['خطّط لمهمة نهاية الأسبوع وقائمة روتين'],
+    SkillArea.independence: ['اتركه يخطط ترتيب واجبه ويتخذ قرارًا بسيطًا'],
+    SkillArea.creative: ['ابنوا شيئًا من علب فاضية وفكروا في أكتر من حل'],
     SkillArea.motor: ['رياضة ورسم وكتابة باليد'],
   },
   AgeBand.y9to12: {
@@ -275,6 +293,8 @@ const Map<AgeBand, Map<SkillArea, List<String>>> kRealWorld = {
     SkillArea.cognition: ['ميزانية رحلة وألغاز عائلية'],
     SkillArea.social: ['حديث عن المشاعر والأصدقاء'],
     SkillArea.executive: ['مخطط للواجبات وهدف أسبوعي يراجعه معك'],
+    SkillArea.independence: ['مهمة مسؤولية أسبوعية يديرها بنفسه'],
+    SkillArea.creative: ['مشروع صغير: اختراع أو قصة أو مجسم من مواد البيت'],
     SkillArea.motor: ['رياضة وأشغال يدوية ولعب خارجي'],
   },
 };
@@ -307,11 +327,36 @@ class DevData {
 
   void logAttempt(String skill, String exId, bool ok, DateTime now) {
     final Map<String, List<int>> d = days.putIfAbsent(skill, () => {});
-    final List<int> v = d.putIfAbsent(dayKey(now), () => [0, 0]);
+    final List<int> v = d.putIfAbsent(dayKey(now), () => [0, 0, 0]);
+    while (v.length < 3) {
+      v.add(0);
+    }
     v[1]++;
     if (ok) v[0]++;
     seen.add(exId);
   }
+
+  /// A wrong try after the first one (the child kept trying with hints).
+  void logExtraTry(String skill, DateTime now) {
+    final Map<String, List<int>> d = days.putIfAbsent(skill, () => {});
+    final List<int> v = d.putIfAbsent(dayKey(now), () => [0, 0, 0]);
+    while (v.length < 3) {
+      v.add(0);
+    }
+    v[2]++;
+  }
+
+  /// Accuracy per day, oldest first, last [n] days with answers.
+  List<int> trend(String skill, {int n = 5}) {
+    final List<String> ks = (days[skill] ?? {}).keys.toList()..sort();
+    return ks.reversed.take(n).toList().reversed.map((k) {
+      final List<int> v = days[skill]![k]!;
+      return v[1] == 0 ? 0 : (v[0] * 100 / v[1]).round();
+    }).toList();
+  }
+
+  int extraTries(String skill) =>
+      (days[skill] ?? {}).values.fold(0, (a, v) => a + (v.length > 2 ? v[2] : 0));
 
   void logTransfer(String skill, bool pass, DateTime now) {
     transfer.putIfAbsent(skill, () => []).add({'d': dayKey(now), 'pass': pass});
@@ -370,6 +415,15 @@ class DevStore {
   static Future<void> save(String childId, DevData d) async {
     final SharedPreferences sp = await SharedPreferences.getInstance();
     await sp.setString(_key(childId), jsonEncode(d.toJson()));
+  }
+
+  static Future<void> logExtra(String childId, String skill) async {
+    if (childId.isEmpty) return;
+    try {
+      final DevData d = await load(childId);
+      d.logExtraTry(skill, DateTime.now());
+      await save(childId, d);
+    } catch (_) {}
   }
 
   static Future<void> logAttempt(String childId, String skill, String exId, bool ok) async {

@@ -34,7 +34,7 @@ void main() {
     expect(q.coUse, true);
     expect(q.capOverride, 15);
     expect(q.bandOverride, AgeBand.y9to12);
-    expect(q.days['jobs']!['2026-03-01'], [0, 1]);
+    expect(q.days['jobs']!['2026-03-01'], [0, 1, 0]);
     expect(q.notes.single['t'], 'قال كلمة جديدة');
   });
   test('screen gate: 18-36 months off by default, cap applies', () {
@@ -56,5 +56,21 @@ void main() {
     expect(p.levelOf('s'), 2);
     p.record(e, false, DateTime(2026, 1, 1));
     expect(p.levelOf('s'), 1);
+  });
+  test('extra tries and trend are logged', () {
+    final d = DevData();
+    d.logAttempt('jobs', 'j1', false, DateTime(2026, 3, 1));
+    d.logExtraTry('jobs', DateTime(2026, 3, 1));
+    d.logAttempt('jobs', 'j2', true, DateTime(2026, 3, 2));
+    expect(d.extraTries('jobs'), 1);
+    expect(d.trend('jobs'), [0, 100]);
+    expect(DevData.fromJson(d.toJson()).extraTries('jobs'), 1);
+  });
+  test('every area has real-world activities for every band', () {
+    for (final b in AgeBand.values) {
+      for (final a in SkillArea.values) {
+        expect(realWorldFor(b, a, DateTime(2026, 3, 1)), isNotEmpty);
+      }
+    }
   });
 }

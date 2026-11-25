@@ -142,6 +142,7 @@ class _ExerciseGameState extends State<ExerciseGame> {
       _sp.setString(_key, jsonEncode(_prog.toJson()));
     }
     widget.onReact(ok);
+    if (ok && _wrong > 0) DevStore.logExtra(widget.appState.currentAccount?.activeChild.id ?? '', e.skill);
     if (ok) {
       setState(() {
         _msg = e.explain.isEmpty ? e.correctFeedback : '${e.correctFeedback}\n${e.explain}';
@@ -166,6 +167,7 @@ class _ExerciseGameState extends State<ExerciseGame> {
         _resetAnswer();
       });
     } else {
+      if (_wrong > 0) DevStore.logExtra(widget.appState.currentAccount?.activeChild.id ?? '', e.skill);
       final String? h = ExerciseGrader.hintFor(e, _wrong);
       setState(() {
         final String part = st.total > 1

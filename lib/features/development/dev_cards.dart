@@ -8,6 +8,7 @@ import 'package:haneen_kids_vod/features/exercises/exercise_models.dart';
 import 'package:haneen_kids_vod/features/exercises/exercise_screen.dart';
 import 'package:haneen_kids_vod/features/exercises/game_catalog.dart';
 import 'package:haneen_kids_vod/features/exercises/skill_mastery_card.dart';
+import 'package:haneen_kids_vod/features/brain_games/screens/extra_games.dart';
 import 'dev_core.dart';
 
 const Color _card = Color(0xFF1E293B);
@@ -15,6 +16,7 @@ const Color _card = Color(0xFF1E293B);
 Map<String, String> _skillTitles() => {
       ...SkillMasteryCard.skillNames,
       for (final ExerciseGameDef g in kExerciseGames) g.skill: g.title,
+      for (final WidgetGameDef g in kWidgetGames) g.id: g.title,
     };
 
 String _childId(AppStateManager s) => s.currentAccount?.activeChild.id ?? '';
@@ -372,8 +374,30 @@ class _DevelopmentCardState extends State<DevelopmentCard> {
     w.add(_small('استُخدم اليوم في الألعاب: $used دقيقة. الأرقام الافتراضية (٢٠ و٦٠) اختيار متحفظ مبني على إرشادات WHO وAAP، '
         'ولا يوجد رقم علمي لعمر ٦ إلى ١٢ (UNVERIFIED). تجنّب الشاشات وقت الأكل وقبل النوم بساعة.'));
 
-    // Skills by area
-    w.add(_title('المهارات حسب المجال'));
+    // Summary: strengths, improving, needs practice, over time
+    final List<String> strong = [], improving = [], needs = [];
+    for (final String k in d.days.keys) {
+      final SkillState st = d.stateOf(k);
+      final List<int> tr = d.trend(k);
+      final String t = titles[k] ?? k;
+      if (st.stage == Stage.confident || st.stage == Stage.solid) {
+        strong.add(t);
+      } else if (tr.length >= 2 && tr.last > tr.first) {
+        improving.add(t);
+      } else if (st.attempts >= 5) {
+        needs.add(t);
+      }
+    }
+    w.add(_title('ملخص التقدم'));
+    w.add(_small('نقاط القوة: ${strong.isEmpty ? 'لسه بدري' : strong.join('، ')}', c: const Color(0xFFA7F3D0)));
+    w.add(_small('بتتحسن: ${improving.isEmpty ? '-' : improving.join('، ')}', c: const Color(0xFFFCD34D)));
+    w.add(_small('تحتاج تدريبًا: ${needs.isEmpty ? '-' : needs.join('، ')}', c: Colors.white70));
+    w.add(_small('الثقة في التقدير تزيد بتكرار الأداء على أيام مختلفة. إجابات يوم واحد لا تكفي.'));
+
+    // Skill map
+    w.add(_title('خريطة المهارات'));
+    w.add(_small('مهارات مناسبة لفئة ${band.label} (توزيع تصميمي غير مُثبت): '
+        '${titles.keys.where((k) => bandsOf(k).contains(band)).map((k) => titles[k]).take(14).join('، ')}...'));
     for (final SkillArea a in SkillArea.values) {
       final EvidenceBadge ev = kAreaEvidence[a]!;
       final List<String> skills = d.days.keys.where((s) => areaOf(s) == a).toList()..sort();
@@ -405,6 +429,8 @@ class _DevelopmentCardState extends State<DevelopmentCard> {
                   style: const TextStyle(color: Colors.white54, fontSize: 11)),
             ]),
             _small('${m.goal} • ${m.hints}'),
+            _small('${m.assessment}'),
+            _small('محاولات إضافية بعد تلميح: ${d.extraTries(s)} • الثبات عبر الأيام (٪ صح): ${d.trend(s).isEmpty ? '-' : d.trend(s).join(' ← ')}'),
             if (!ageOk) _small('مناسب أكثر لفئة عمرية أخرى (تصميم غير مُثبت).'),
             if (st.stage == Stage.confident)
               Align(

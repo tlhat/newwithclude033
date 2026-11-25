@@ -5,6 +5,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/core/theme/kid_theme.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'world_games.dart';
+import 'dev_games.dart';
+import 'package:haneen_kids_vod/features/development/dev_core.dart';
 
 typedef ExtraReact = void Function(bool correct);
 
@@ -24,6 +26,9 @@ const List<WidgetGameDef> kWidgetGames = [
   WidgetGameDef('shadow_match', 'ظل الصورة', '🌑', 'اعرف صاحب الظل', 0xFF6366F1),
   WidgetGameDef('slide_puzzle', 'بازل الأرقام', '🧩', 'رتّب القطع من ١ لـ ٨', 0xFFEC4899),
   WidgetGameDef('maze', 'المتاهة', '🌀', 'وصّل حنين للنجمة', 0xFF22C55E),
+  WidgetGameDef('stop_go', 'قف وامشِ', '🚦', 'أخضر اضغط وأحمر استنى', 0xFF22C55E),
+  WidgetGameDef('rule_switch', 'غيّر القاعدة', '🔀', 'مرة باللون ومرة بالشكل', 0xFF6366F1),
+  WidgetGameDef('draw_imagine', 'ارسم وتخيّل', '🎨', 'ارسم فكرة من خيالك', 0xFFEC4899),
   WidgetGameDef('daily_challenge', 'تحدي اليوم', '📅', '٥ أسئلة قصيرة كل يوم', 0xFFEF4444),
   WidgetGameDef('haneen_house', 'بيت حنين', '🏠', 'زيّن البيت بنجومك', 0xFF7C5E3C),
   WidgetGameDef('haneen_pet', 'كتكوت حنين', '🐣', 'اعتني بالكتكوت وهو يكبر', 0xFFF59E0B),
@@ -35,8 +40,20 @@ const List<WidgetGameDef> kWidgetGames = [
   WidgetGameDef('plant_care', 'اعتني بالنبتة', '🌱', 'اسقِها وعرّضها للشمس لتكبر', 0xFF84CC16),
 ];
 
-Widget buildWidgetGame(String id, AppStateManager s, ExtraReact react) {
+Widget buildWidgetGame(String id, AppStateManager s, ExtraReact rawReact) {
+  // Every widget game reports each answer to the local developmental log.
+  void react(bool ok) {
+    DevStore.logAttempt(s.currentAccount?.activeChild.id ?? '', id, id, ok);
+    rawReact(ok);
+  }
+
   switch (id) {
+    case 'stop_go':
+      return StopGoGame(appState: s, onReact: react);
+    case 'rule_switch':
+      return RuleSwitchGame(appState: s, onReact: react);
+    case 'draw_imagine':
+      return DrawImagineGame(appState: s, onReact: react);
     case 'letter_catcher':
       return LetterCatcherGame(appState: s, onReact: react);
     case 'clock_set':
