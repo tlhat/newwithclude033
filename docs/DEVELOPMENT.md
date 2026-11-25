@@ -18,4 +18,4 @@ All data is stored on the phone (SharedPreferences key `dev_state_<childId>`). N
 | 18 | Evidence per activity | `kAreaEvidence` (sources, strength, limit); UNVERIFIED shown as play |
 | 19 | Offline | everything local |
 
-Screen time: 18-36 months is off until a parent switches on co-use; default cap 20 min (18-36 m) and 60 min (3-5), parent-set for older ages (no source gives a number, UNVERIFIED). `DevGate` wraps the games area.
+Screen time: first band is 12-36 months. No game is locked by age or co-use. The daily limit is optional, parent-set, and off by default. A short non-blocking WHO note (S1, S2) is shown in the parent card. `DevGate` wraps the games area and only enforces a parent-set cap.

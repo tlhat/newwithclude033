@@ -5,13 +5,13 @@ import 'package:shared_preferences/shared_preferences.dart';
 /// It describes practice in the app only. It never diagnoses, never gives an
 /// IQ or "brain age", and never compares children. See docs/EVIDENCE.md.
 
-enum AgeBand { m18to36, y3to5, y6to8, y9to12 }
+enum AgeBand { m12to36, y3to5, y6to8, y9to12 }
 
 extension AgeBandX on AgeBand {
   String get label {
     switch (this) {
-      case AgeBand.m18to36:
-        return '١٨ شهرًا – ٣ سنوات';
+      case AgeBand.m12to36:
+        return '١٢ شهرًا – ٣ سنوات';
       case AgeBand.y3to5:
         return '٣ – ٥ سنوات';
       case AgeBand.y6to8:
@@ -21,15 +21,10 @@ extension AgeBandX on AgeBand {
     }
   }
 
-  /// Default daily minutes for this band. 0 means "no built-in cap".
-  /// 20 and 60 are conservative design choices based on WHO/AAP wording;
-  /// no source gives a cap for 6 to 12 (UNVERIFIED), so those are parent-set.
+  /// The daily limit is OFF by default for every band (0 = no cap).
+  /// A parent may set one; the app never blocks a game on its own.
   int get defaultCapMinutes {
     switch (this) {
-      case AgeBand.m18to36:
-        return 20;
-      case AgeBand.y3to5:
-        return 60;
       default:
         return 0;
     }
@@ -40,7 +35,7 @@ AgeBand bandFromAgeString(String age) {
   final Iterable<RegExpMatch> m = RegExp(r'\d+').allMatches(age);
   if (m.isEmpty) return AgeBand.y3to5;
   final int first = int.parse(m.first.group(0)!);
-  if (first <= 2) return AgeBand.m18to36;
+  if (first <= 2) return AgeBand.m12to36;
   if (first <= 5) return AgeBand.y3to5;
   if (first <= 8) return AgeBand.y6to8;
   return AgeBand.y9to12;
@@ -147,7 +142,7 @@ const Set<String> _advanced = {
 
 /// Band assignment is a design choice (UNVERIFIED), shown as such.
 List<AgeBand> bandsOf(String skill) {
-  if (_early.contains(skill)) return [AgeBand.m18to36, AgeBand.y3to5];
+  if (_early.contains(skill)) return [AgeBand.m12to36, AgeBand.y3to5];
   if (_advanced.contains(skill)) return [AgeBand.y6to8, AgeBand.y9to12];
   return [AgeBand.y3to5, AgeBand.y6to8, AgeBand.y9to12];
 }
@@ -251,17 +246,16 @@ List<T> pickTransfer<T>(List<T> bank, String Function(T) idOf, Set<String> seen,
 
 enum GateState { ok, offByDefault, timeUp }
 
-/// 18 to 36 months: off until a parent turns on co-use (WHO: sedentary screen
-/// time not recommended at 1 year; AAP: shared use). Then a minutes cap applies.
+/// No game is locked by age band or co-use. Only an optional parent-set
+/// minutes cap (default off) can end play for the day.
 GateState gateState(AgeBand band, bool coUse, int capMinutes, int usedToday) {
-  if (band == AgeBand.m18to36 && !coUse) return GateState.offByDefault;
   if (capMinutes > 0 && usedToday >= capMinutes) return GateState.timeUp;
   return GateState.ok;
 }
 
 /// Real-world activities per band and area (docs/EVIDENCE.md section 3).
 const Map<AgeBand, Map<SkillArea, List<String>>> kRealWorld = {
-  AgeBand.m18to36: {
+  AgeBand.m12to36: {
     SkillArea.language: ['سمّوا الأشياء في البيت وقولوا اسم كل شيء', 'اقرأوا كتاب صور واسألوه: ما هذا؟'],
     SkillArea.cognition: ['فرزوا الغسيل أو الملاعق أو الألعاب مع بعض'],
     SkillArea.social: ['سمّوا المشاعر خلال اليوم: شكلك فرحان'],
@@ -307,13 +301,18 @@ String realWorldFor(AgeBand b, SkillArea a, DateTime now) {
 
 String weekKey(DateTime now) => 'w${now.difference(DateTime(2026, 1, 1)).inDays ~/ 7}';
 
+/// Short, non-blocking parent note. Sources S1 and S2 in docs/EVIDENCE.md.
+const String kWhoNote =
+    'معلومة للوالد (WHO، المصدر S1 وS2): منظمة الصحة العالمية لا توصي بوقت شاشة جالس لعمر السنة، '
+    'وبحد أقصى ساعة لعمر ٢ إلى ٤ سنوات، والأقل أفضل. هذا مجرد إرشاد ولا يمنع التطبيق أي لعبة.';
+
 const String kNoDiagnosisLine =
     'هذا التطبيق للتدريب واللعب فقط، ولا يشخّص ولا يقيس ذكاء. إذا كنت قلقًا على نمو طفلك، تحدث مع طبيب أو أخصائي.';
 
 /// All developmental data for one child. Stored on this phone only.
 class DevData {
   AgeBand? bandOverride;
-  bool coUse = false;
+  bool coUse = false; // kept for old saves; no longer gates anything
   int capOverride = -1; // -1 = band default
   final Map<String, Map<String, List<int>>> days = {}; // skill -> date -> [right,total]
   final Map<String, List<Map<String, dynamic>>> transfer = {}; // skill -> [{d,pass}]

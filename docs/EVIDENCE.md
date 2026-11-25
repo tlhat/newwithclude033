@@ -1,6 +1,6 @@
 # Haneen: evidence base for the developmental support system
 
-Scope: ages 18 months to 12 years. This is a learning and play app, not a diagnostic or clinical tool. It makes no diagnosis, no IQ or "brain age" claims, and no promise that practice in the app improves general intelligence. All data stays on the phone.
+Scope: ages 12 months to 12 years. This is a learning and play app, not a diagnostic or clinical tool. It makes no diagnosis, no IQ or "brain age" claims, and no promise that practice in the app improves general intelligence. All data stays on the phone.
 
 Every source below was opened (fetched) on 25 Nov 2026. Where a page only gave the abstract, the claim is limited to what the abstract says. Items marked UNVERIFIED are design choices that no source I opened directly supports.
 
@@ -74,7 +74,7 @@ Strength scale: STRONG = meta-analysis or consensus of reviews. MODERATE = revie
 
 "Measure" is what the app records locally. It describes practice in the app, never ability, diagnosis, or IQ. Wording shown to parents: "practiced", "getting more confident", "needs more time".
 
-### 18 to 36 months (parent co-use only; default screen time off or very short)
+### 12 to 36 months (parent co-use recommended; nothing is locked; daily limit optional, default off)
 | Area | In-app activity | Measure | Parent real-world activity |
 |---|---|---|---|
 | Language | Name the picture, animal sounds, songs, hear-and-tap | Taps correct after hearing the word; parent confirms child said it | Name things at home and outside; read a picture book and ask "what is this?" |

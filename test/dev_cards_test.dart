@@ -12,13 +12,13 @@ class _FakeState extends Fake implements AppStateManager {
 Widget _wrap(Widget w) => MaterialApp(home: Scaffold(body: SingleChildScrollView(child: w)));
 
 void main() {
-  testWidgets('18-36 months band is locked by default', (t) async {
+  testWidgets('12-36 months band is not locked', (t) async {
     SharedPreferences.setMockInitialValues({'dev_state_': '{"band":0}'});
     await t.pumpWidget(MaterialApp(
         home: DevGate(appState: _FakeState(), child: const Text('GAMES'))));
     await t.pump(const Duration(milliseconds: 200));
-    expect(find.text('GAMES'), findsNothing);
-    expect(find.textContaining('مقفولة'), findsWidgets);
+    expect(find.text('GAMES'), findsOneWidget);
+    expect(find.textContaining('مقفولة'), findsNothing);
   });
   testWidgets('co-use on shows the games with a banner', (t) async {
     SharedPreferences.setMockInitialValues({'dev_state_': '{"band":0,"coUse":true}'});

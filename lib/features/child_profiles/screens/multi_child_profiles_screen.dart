@@ -13,6 +13,7 @@ class MultiChildProfilesScreen extends StatefulWidget {
 
 class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
   final List<String> _ageGroups = [
+    '1–2 سنة',
     '2–4 سنوات',
     '3–6 سنوات',
     '4–8 سنوات',

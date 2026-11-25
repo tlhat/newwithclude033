@@ -4,7 +4,7 @@ import 'package:haneen_kids_vod/features/exercises/exercise_models.dart';
 
 void main() {
   test('age string to band', () {
-    expect(bandFromAgeString('2–4 سنوات'), AgeBand.m18to36);
+    expect(bandFromAgeString('2–4 سنوات'), AgeBand.m12to36);
     expect(bandFromAgeString('3–6 سنوات'), AgeBand.y3to5);
     expect(bandFromAgeString('6–10 سنوات'), AgeBand.y6to8);
   });
@@ -37,10 +37,10 @@ void main() {
     expect(q.days['jobs']!['2026-03-01'], [0, 1, 0]);
     expect(q.notes.single['t'], 'قال كلمة جديدة');
   });
-  test('screen gate: 18-36 months off by default, cap applies', () {
-    expect(gateState(AgeBand.m18to36, false, 20, 0), GateState.offByDefault);
-    expect(gateState(AgeBand.m18to36, true, 20, 5), GateState.ok);
-    expect(gateState(AgeBand.m18to36, true, 20, 20), GateState.timeUp);
+  test('screen gate: nothing locked, optional cap applies', () {
+    expect(gateState(AgeBand.m12to36, false, 0, 0), GateState.ok);
+    expect(gateState(AgeBand.m12to36, true, 20, 5), GateState.ok);
+    expect(gateState(AgeBand.m12to36, true, 20, 20), GateState.timeUp);
     expect(gateState(AgeBand.y6to8, false, 0, 500), GateState.ok);
   });
   test('transfer picks unseen first', () {

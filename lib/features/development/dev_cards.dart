@@ -22,8 +22,7 @@ Map<String, String> _skillTitles() => {
 String _childId(AppStateManager s) => s.currentAccount?.activeChild.id ?? '';
 String _childAge(AppStateManager s) => s.currentAccount?.activeChild.age ?? '';
 
-/// Wraps the games area. 18 to 36 months: off until a parent turns on
-/// co-use. Counts minutes spent here against the parent-set daily cap.
+/// Wraps the games area. Nothing is locked by age. Counts minutes spent here against the parent-set daily cap.
 class DevGate extends StatefulWidget {
   final AppStateManager appState;
   final Widget child;
@@ -108,14 +107,10 @@ class _DevGateState extends State<DevGate> {
     final int used = d.usedByDay[dayKey(DateTime.now())] ?? 0;
     final GateState g = gateState(b, d.coUse, d.capFor(b), used);
     final String act = realWorldFor(b, SkillArea.motor, DateTime.now());
-    if (g == GateState.offByDefault) {
-      return _msg('الألعاب مقفولة للفئة دي',
-          'الفئة (${b.label}): الأفضل لعب حقيقي وكلام مع الأهل. الوالد يقدر يفتحها للاستخدام المشترك من بوابة الوالدين.', act);
-    }
     if (g == GateState.timeUp) {
       return _msg('خلص وقت الألعاب النهارده', 'الوقت اللي حدده الوالد خلص. نكمل بكرة بإذن الله.', act);
     }
-    if (b == AgeBand.m18to36) {
+    if (b == AgeBand.m12to36) {
       return Column(children: [
         Container(
           width: double.infinity,
@@ -325,6 +320,7 @@ class _DevelopmentCardState extends State<DevelopmentCard> {
       _small('تدريب $name داخل التطبيق فقط. محفوظ على هذا الهاتف ولا يتقارن بأطفال آخرين.'),
       const SizedBox(height: 4),
       _small(kNoDiagnosisLine, c: const Color(0xFFFCD34D)),
+      _small(kWhoNote),
       _title('الفئة العمرية'),
       Wrap(spacing: 8, children: [
         for (final AgeBand b in AgeBand.values)
@@ -340,20 +336,6 @@ class _DevelopmentCardState extends State<DevelopmentCard> {
       _small('اختيار الفئة وتوزيع الأنشطة عليها قرار تصميم غير مُثبت علميًا (غير مُثبت).'),
       _title('وقت الشاشة (يحدده الوالد)'),
     ];
-    if (band == AgeBand.m18to36) {
-      w.addAll([
-        SwitchListTile(
-          contentPadding: EdgeInsets.zero,
-          title: const Text('تشغيل الألعاب للاستخدام المشترك مع الوالد', style: TextStyle(color: Colors.white)),
-          subtitle: _small('مقفولة افتراضيًا. منظمة الصحة العالمية لا توصي بوقت شاشة جالس لعمر السنة.'),
-          value: d.coUse,
-          onChanged: (v) {
-            d.coUse = v;
-            _save();
-          },
-        ),
-      ]);
-    }
     w.add(Row(children: [
       Expanded(
           child: Text(cap == 0 ? 'الحد اليومي: بدون حد من التطبيق' : 'الحد اليومي: $cap دقيقة',
@@ -371,8 +353,8 @@ class _DevelopmentCardState extends State<DevelopmentCard> {
           },
           icon: const Icon(Icons.add_circle_outline, color: Colors.white70)),
     ]));
-    w.add(_small('استُخدم اليوم في الألعاب: $used دقيقة. الأرقام الافتراضية (٢٠ و٦٠) اختيار متحفظ مبني على إرشادات WHO وAAP، '
-        'ولا يوجد رقم علمي لعمر ٦ إلى ١٢ (غير مُثبت). تجنّب الشاشات وقت الأكل وقبل النوم بساعة.'));
+    w.add(_small('استُخدم اليوم في الألعاب: $used دقيقة. الحد اليومي اختياري ومطفأ افتراضيًا. '
+        'تجنّب الشاشات وقت الأكل وقبل النوم بساعة.'));
 
     // Summary: strengths, improving, needs practice, over time
     final List<String> strong = [], improving = [], needs = [];
