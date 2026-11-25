@@ -22,7 +22,7 @@ Map<String, String> _skillTitles() => {
 String _childId(AppStateManager s) => s.currentAccount?.activeChild.id ?? '';
 String _childAge(AppStateManager s) => s.currentAccount?.activeChild.age ?? '';
 
-/// Wraps the games area. Nothing is locked by age. Counts minutes spent here against the parent-set daily cap.
+/// Wraps the games area. Nothing is locked by age. Follows the single daily limit set by the parent (off by default).
 class DevGate extends StatefulWidget {
   final AppStateManager appState;
   final Widget child;
@@ -54,7 +54,7 @@ class _DevGateState extends State<DevGate> {
     final DevData? d = _d;
     if (d == null || !widget.active || !mounted) return;
     final AgeBand b = d.bandFor(_childAge(widget.appState));
-    if (gateState(b, d.coUse, d.capFor(b), d.usedByDay[dayKey(DateTime.now())] ?? 0) != GateState.ok) return;
+    if (widget.appState.isDailyLimitReached) return;
     final String k = dayKey(DateTime.now());
     d.usedByDay[k] = (d.usedByDay[k] ?? 0) + 1;
     await DevStore.save(_id, d);
@@ -105,7 +105,8 @@ class _DevGateState extends State<DevGate> {
     if (d == null) return widget.child;
     final AgeBand b = d.bandFor(_childAge(widget.appState));
     final int used = d.usedByDay[dayKey(DateTime.now())] ?? 0;
-    final GateState g = gateState(b, d.coUse, d.capFor(b), used);
+    // One limit for the whole app: the parent's setting in the child's controls.
+    final GateState g = widget.appState.isDailyLimitReached ? GateState.timeUp : GateState.ok;
     final String act = realWorldFor(b, SkillArea.motor, DateTime.now());
     if (g == GateState.timeUp) {
       return _msg('خلص وقت الألعاب النهارده', 'الوقت اللي حدده الوالد خلص. نكمل بكرة بإذن الله.', act);
@@ -312,7 +313,6 @@ class _DevelopmentCardState extends State<DevelopmentCard> {
     final AgeBand band = d.bandFor(_childAge(widget.appState));
     final DateTime now = DateTime.now();
     final int used = d.usedByDay[dayKey(now)] ?? 0;
-    final int cap = d.capFor(band);
     final List<Widget> w = [
       const Text('🌱 تقرير النمو والتدريب',
           style: TextStyle(fontSize: 16.5, fontWeight: FontWeight.bold, color: Colors.white)),
@@ -335,25 +335,11 @@ class _DevelopmentCardState extends State<DevelopmentCard> {
       _small('اختيار الفئة وتوزيع الأنشطة عليها قرار تصميم غير مُثبت علميًا (غير مُثبت).'),
       _title('وقت الشاشة (يحدده الوالد)'),
     ];
-    w.add(Row(children: [
-      Expanded(
-          child: Text(cap == 0 ? 'الحد اليومي: بدون حد من التطبيق' : 'الحد اليومي: $cap دقيقة',
-              style: const TextStyle(color: Colors.white))),
-      IconButton(
-          onPressed: () {
-            d.capOverride = (cap - 5).clamp(0, 240);
-            _save();
-          },
-          icon: const Icon(Icons.remove_circle_outline, color: Colors.white70)),
-      IconButton(
-          onPressed: () {
-            d.capOverride = (cap + 5).clamp(0, 240);
-            _save();
-          },
-          icon: const Icon(Icons.add_circle_outline, color: Colors.white70)),
-    ]));
-    w.add(_small('استُخدم اليوم في الألعاب: $used دقيقة. الحد اليومي اختياري ومطفأ افتراضيًا. '
-        'تجنّب الشاشات وقت الأكل وقبل النوم بساعة.'));
+    final ChildProfile? kid = widget.appState.currentAccount?.activeChild;
+    final int lim = kid?.dailyTimeLimit ?? 0;
+    w.add(_small('استُخدم اليوم في الألعاب: $used دقيقة. '
+        '${lim > 0 ? "الحد اليومي: $lim دقيقة للتطبيق كله." : "لا يوجد حد يومي."} '
+        'تغييره من «ضوابط الطفل». تجنّب الشاشات وقت الأكل وقبل النوم بساعة.'));
 
     // Summary: strengths, improving, needs practice, over time
     final List<String> strong = [], improving = [], needs = [];

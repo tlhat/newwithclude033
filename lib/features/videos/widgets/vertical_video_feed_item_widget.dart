@@ -579,7 +579,7 @@ class _VerticalVideoFeedItemWidgetState
                   _SideActionButton(
                     icon: Icons.assistant_rounded,
                     iconColor: const Color(0xFF38BDF8),
-                    label: 'مساعد ذكي',
+                    label: 'رفيق حنين',
                     onTap: widget.onVoiceAssistantTap,
                   ),
                   const SizedBox(height: 8),

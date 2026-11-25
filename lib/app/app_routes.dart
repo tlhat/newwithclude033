@@ -87,7 +87,7 @@ class SplashScreen extends StatelessWidget {
               ),
               const SizedBox(height: 8),
               Text(
-                'أكاديمية حنين • القصص التفاعلية • الألعاب الذكية (مجاني ١٠٠٪)',
+                'أكاديمية حنين • القصص التفاعلية • الألعاب التعليمية (مجاني ١٠٠٪)',
                 style: TextStyle(fontSize: 13.5, color: Colors.white70),
               ),
               const SizedBox(height: 24),

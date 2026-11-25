@@ -460,7 +460,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                                   borderRadius: BorderRadius.circular(12),
                                 ),
                                 child: Text(
-                                  '⏱️ ${child.usedMinutesToday}/${child.dailyTimeLimit} د • ⭐ ${child.starsEarned}',
+                                  '⏱️ ${child.usedMinutesToday}/${child.limitShown} د • ⭐ ${child.starsEarned}',
                                   style: const TextStyle(
                                     fontSize: 11,
                                     color: Color(0xFFF59E0B),

@@ -209,7 +209,7 @@ class _VerticalVideoFeedPlayerScreenState
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'المساعد الذكي — نصوص عائمة (${childName})',
+                              'رفيق حنين — نصوص عائمة (${childName})',
                               style: const TextStyle(
                                 fontSize: 17,
                                 fontWeight: FontWeight.bold,
@@ -386,7 +386,7 @@ class _VerticalVideoFeedPlayerScreenState
                             '🦋 سؤال وجواب: لماذا تطير الفراشة بين الأزهار؟ لجمع الرحيق اللذيذ ومساعدة النباتات على النمو!',
                             '🌞 سؤال وجواب: ما فائدة الشمس صباحاً؟ تمنحنا الدفء والضوء وتساعد النباتات الخضراء على النمو!',
                             '🦷 سؤال وجواب: لماذا نغسل أسناننا قبل النوم؟ لنحافظ عليها نظيفة وقوية وبيضاء كاللؤلؤ!',
-                            '🛡️ تذكير الأمان: أنا مساعد برمجي ذكي للتعلم؛ لا أطلب أبداً اسمك الكامل أو عنوانك أو مدرستك، وإذا خطر ببالك سؤال كبير فاسأل ماما أو بابا دائماً!',
+                            '🛡️ تذكير الأمان: أنا رفيق تعليمي داخل التطبيق؛ لا أطلب أبداً اسمك الكامل أو عنوانك أو مدرستك، وإذا خطر ببالك سؤال كبير فاسأل ماما أو بابا دائماً!',
                           ];
                           final nextQa = safeQaList[
                               DateTime.now().second % safeQaList.length];
@@ -1215,7 +1215,7 @@ class _VerticalVideoFeedPlayerScreenState
                           border: Border.all(color: Colors.white24, width: 0.8),
                         ),
                         child: Text(
-                          '⏱️ ${activeChild.usedMinutesToday}/${activeChild.dailyTimeLimit}د',
+                          '⏱️ ${activeChild.usedMinutesToday}/${activeChild.limitShown}د',
                           style: const TextStyle(
                             fontSize: 10.5,
                             color: Colors.white,
@@ -1648,7 +1648,7 @@ class _VerticalVideoFeedPlayerScreenState
                       ),
                       const SizedBox(height: 12),
                       Text(
-                        'انتهت حصتك اليومية (${activeChild.dailyTimeLimit} دقيقة) بهدوء، وجمعت ⭐ ${activeChild.starsEarned} نجوم رائعة! حان الآن وقت إراحة العينين والاستعداد للنوم الجميل.',
+                        'انتهت حصتك اليومية (${activeChild.limitShown} دقيقة) بهدوء، وجمعت ⭐ ${activeChild.starsEarned} نجوم رائعة! حان الآن وقت إراحة العينين والاستعداد للنوم الجميل.',
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           fontSize: 16,

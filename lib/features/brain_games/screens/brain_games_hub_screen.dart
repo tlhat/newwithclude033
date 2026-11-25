@@ -473,12 +473,12 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                           ),
                           child: Row(
                             children: [
-                              const Text('🤖',
+                              const Text('💡',
                                   style: TextStyle(fontSize: 22)),
                               const SizedBox(width: 8),
                               Expanded(
                                 child: Text(
-                                  'مستشار حنين الذكي (صعوبة تكيفية ${aiRec.adaptiveDifficultyTier}/٤): نقترح تقوية «${aiRec.focusDomainTitleAr}» في «${aiRec.recommendedGameTitleAr}»',
+                                  'اقتراح حنين (مستوى الصعوبة ${aiRec.adaptiveDifficultyTier}/٤): نقترح تقوية «${aiRec.focusDomainTitleAr}» في «${aiRec.recommendedGameTitleAr}»',
                                   style: const TextStyle(
                                     fontSize: 11,
                                     color: Color(0xFFA7F3D0),

@@ -760,7 +760,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                   _MonitorStatBadge(
                     label: 'وقت المشاهدة',
                     value:
-                        '${activeChild.usedMinutesToday}/${activeChild.dailyTimeLimit} د',
+                        '${activeChild.usedMinutesToday}/${activeChild.limitShown} د',
                     icon: Icons.timer_outlined,
                   ),
                   _MonitorStatBadge(
@@ -800,7 +800,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              '📊 التقرير التربوي الذكي ومؤشر الإتقان لـ (${activeChild.name} • ${pedReport.currentTierLabelAr}):',
+                              '📊 تقرير التقدم ومؤشر الإتقان لـ (${activeChild.name} • ${pedReport.currentTierLabelAr}):',
                               style: const TextStyle(
                                 fontSize: 13,
                                 fontWeight: FontWeight.bold,
@@ -1231,7 +1231,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      '⏱️ تعديل وقت الاستخدام اليومي للطفل (${activeChild.name}): ${activeChild.dailyTimeLimit} دقيقة',
+                      '⏱️ تعديل وقت الاستخدام اليومي للطفل (${activeChild.name}): ${activeChild.limitShown} دقيقة',
                       style: const TextStyle(
                         fontSize: 13.5,
                         fontWeight: FontWeight.bold,
@@ -1240,19 +1240,30 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                     ),
                     const SizedBox(height: 4),
                     Text(
-                      'المستهلك اليوم: ${activeChild.usedMinutesToday} دقيقة من ${activeChild.dailyTimeLimit} دقيقة',
+                      'المستهلك اليوم: ${activeChild.usedMinutesToday} دقيقة من ${activeChild.limitShown} دقيقة',
                       style: const TextStyle(fontSize: 11.5, color: Colors.white70),
                     ),
-                    Slider(
-                      value: activeChild.dailyTimeLimit.toDouble().clamp(5.0, 60.0),
-                      min: 5,
-                      max: 60,
-                      divisions: 11,
-                      activeColor: const Color(0xFF14B8A6),
-                      label: '${activeChild.dailyTimeLimit} دقيقة',
-                      onChanged: (val) =>
-                          widget.appState.updateDailyTimeLimit(val.round()),
+                    SwitchListTile(
+                      contentPadding: EdgeInsets.zero,
+                      title: const Text('تفعيل حد الوقت اليومي (للألعاب والقصص معًا)',
+                          style: TextStyle(fontSize: 13)),
+                      subtitle: const Text('مطفأ = بدون حد. حد واحد فقط لكل التطبيق.',
+                          style: TextStyle(fontSize: 11, color: Colors.white60)),
+                      value: activeChild.dailyTimeLimit > 0,
+                      onChanged: (on) =>
+                          widget.appState.updateDailyTimeLimit(on ? 30 : 0),
                     ),
+                    if (activeChild.dailyTimeLimit > 0)
+                      Slider(
+                        value: activeChild.dailyTimeLimit.toDouble().clamp(5.0, 60.0),
+                        min: 5,
+                        max: 60,
+                        divisions: 11,
+                        activeColor: const Color(0xFF14B8A6),
+                        label: '${activeChild.dailyTimeLimit} دقيقة',
+                        onChanged: (val) =>
+                            widget.appState.updateDailyTimeLimit(val.round()),
+                      ),
                     SizedBox(
                       width: double.infinity,
                       child: OutlinedButton.icon(
@@ -1577,7 +1588,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                         subtitle: Text(
-                          'الحصة: ${child.dailyTimeLimit}د • ⭐ ${child.starsEarned} • 🧠 ذكاء: ${child.intelligencePoints} (${child.gamesCompletedCount} ألعاب) • 🗣️ فصاحة: ${child.correctPronunciationsCount}',
+                          'الحصة: ${child.limitShown}د • ⭐ ${child.starsEarned} • 🧠 ذكاء: ${child.intelligencePoints} (${child.gamesCompletedCount} ألعاب) • 🗣️ فصاحة: ${child.correctPronunciationsCount}',
                           style: const TextStyle(color: Colors.white70, fontSize: 12),
                         ),
                         trailing: Row(
@@ -1754,7 +1765,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                           activeColor: const Color(0xFF14B8A6),
                           onChanged: widget.appState.toggleVoiceAssistant,
                           title: Text(
-                            '🤖 تفعيل المساعد الصوتي الذكي للطفل',
+                            '🎙️ تفعيل صوت حنين للطفل',
                             style: TextStyle(fontWeight: FontWeight.bold),
                           ),
                           subtitle: Text(

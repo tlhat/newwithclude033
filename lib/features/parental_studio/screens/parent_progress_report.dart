@@ -48,7 +48,8 @@ class ParentProgressReport extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final int limit = child.dailyTimeLimit <= 0 ? 1 : child.dailyTimeLimit;
-    final double usedFrac = (child.usedMinutesToday / limit).clamp(0.0, 1.0);
+    final double usedFrac =
+        child.dailyTimeLimit <= 0 ? 0.0 : (child.usedMinutesToday / limit).clamp(0.0, 1.0);
     final timeline = child.liveActivityTimeline.take(15).toList();
     final skills = child.cognitiveSkillScoresByDomain.entries.toList();
     final games = child.gameProgressByGameId.entries.toList()
@@ -90,7 +91,7 @@ class ParentProgressReport extends StatelessWidget {
                 ),
                 SizedBox(height: 6),
                 Text(
-                    'استخدم ${child.usedMinutesToday} من ${child.dailyTimeLimit} دقيقة' +
+                    'استخدم ${child.usedMinutesToday} من ${child.limitShown} دقيقة' +
                         ' • شاهد ${child.watchedVideosToday} فيديو'),
               ],
             ),

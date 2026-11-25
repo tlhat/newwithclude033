@@ -97,6 +97,8 @@ class ChildProfile {
   int correctPronunciationsCount;
   int intelligencePoints;
   int gamesCompletedCount;
+  /// Shown in the UI: the limit in minutes, or the infinity sign when none is set.
+  String get limitShown => dailyTimeLimit > 0 ? '$dailyTimeLimit' : '∞';
   bool isDeviceRemotelyLocked;
   String remoteLockReasonMessage;
   String currentLiveStatus;

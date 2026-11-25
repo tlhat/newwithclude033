@@ -40,7 +40,7 @@ class AppStateManager extends ChangeNotifier {
   String? lastSyncMessage;
 
   String currentAssistantBannerMessage =
-      'مرحباً يا بطل! أنا رفيق حنين الذكي، اضغط عليّ لأقرأ لك أو أقترح عليك قصة ممتعة!';
+      'مرحباً يا بطل! أنا رفيق حنين، اضغط عليّ لأقرأ لك أو أقترح عليك قصة ممتعة!';
   VideoModel? suggestedVideoForChild;
 
   Timer? _screenTimeTimer;
@@ -362,10 +362,14 @@ class AppStateManager extends ChangeNotifier {
           !isParentalControlActive &&
           !isAppInBackground) {
         final child = currentAccount!.activeChild;
-        if (child.usedMinutesToday < child.dailyTimeLimit) {
+        if (child.dailyTimeLimit <= 0 ||
+            child.usedMinutesToday < child.dailyTimeLimit) {
           child.usedMinutesToday++;
           _activeSessionSeconds += 60;
-          final int remaining = child.dailyTimeLimit - child.usedMinutesToday;
+          // 0 = no limit set by the parent: count the time, never warn or stop.
+          final int remaining = child.dailyTimeLimit <= 0
+              ? 100000
+              : child.dailyTimeLimit - child.usedMinutesToday;
           if (_activeSessionSeconds > 0 &&
               _activeSessionSeconds % (20 * 60) == 0 &&
               remaining > 1 &&
@@ -401,7 +405,8 @@ class AppStateManager extends ChangeNotifier {
   bool get isDailyLimitReached {
     final child = currentAccount?.activeChild;
     if (child == null) return false;
-    return child.usedMinutesToday >= child.dailyTimeLimit;
+    return child.dailyTimeLimit > 0 &&
+        child.usedMinutesToday >= child.dailyTimeLimit;
   }
 
   /// App is 100% Free forever: paywalls and trial expirations are permanently disabled in UI.
@@ -455,7 +460,7 @@ class AppStateManager extends ChangeNotifier {
         orElse: () => videos.first,
       );
       greeting =
-          'مساء الهدوء يا $childName! أنا مساعدك الذكي، أقترح عليك مشاهدة قصة «${candidate.title}» للاستعداد لنوم هادئ وجميل.';
+          'مساء الهدوء يا $childName! أنا رفيقك حنين، أقترح عليك مشاهدة قصة «${candidate.title}» للاستعداد لنوم هادئ وجميل.';
     } else if ((child?.correctPronunciationsCount ?? 0) < 2) {
       candidate = videos.firstWhere(
         (v) => v.category == 'arabic',
@@ -492,30 +497,33 @@ class AppStateManager extends ChangeNotifier {
     final String suggestion =
         customSuggestion ?? generateSmartParentRecommendation();
 
-    final alert = ParentEmailAlertItem(
-      id: 'mail_${DateTime.now().millisecondsSinceEpoch}',
-      recipientEmail: account.emailOrPhone,
-      subject: subject,
-      bodyMessage: bodyMessage,
-      smartImprovementSuggestion: suggestion,
-      sentAt: DateTime.now(),
-      deliveredToCloud: true,
-    );
+    bool delivered = false;
+    ParentEmailAlertItem build() => ParentEmailAlertItem(
+          id: 'mail_${DateTime.now().millisecondsSinceEpoch}',
+          recipientEmail: account.emailOrPhone,
+          subject: subject,
+          bodyMessage: bodyMessage,
+          smartImprovementSuggestion: suggestion,
+          sentAt: DateTime.now(),
+          deliveredToCloud: delivered,
+        );
 
-    account.emailAlertsLog.insert(0, alert);
-
+    // Delivered is true only when the webhook really answered 2xx. With no
+    // webhook set (the normal case) the alert stays in the local log only.
     if (emailWebhookUrl.trim().isNotEmpty &&
         AppNetworkPolicyGuard.canPerformOutboundNetworkRequest()) {
       try {
-        await http
+        final http.Response r = await http
             .post(
               Uri.parse(emailWebhookUrl.trim()),
               headers: {'Content-Type': 'application/json; charset=utf-8'},
-              body: jsonEncode(alert.toJson()),
+              body: jsonEncode(build().toJson()),
             )
             .timeout(const Duration(seconds: 8));
+        delivered = r.statusCode >= 200 && r.statusCode < 300;
       } catch (_) {}
     }
+    account.emailAlertsLog.insert(0, build());
 
     await _saveAccounts();
     notifyListeners();
@@ -2132,7 +2140,9 @@ class AppStateManager extends ChangeNotifier {
         ),
       );
     }
-    if (child.usedMinutesToday < child.dailyTimeLimit) {
+    if (child.dailyTimeLimit <= 0) {
+      child.usedMinutesToday += 2;
+    } else if (child.usedMinutesToday < child.dailyTimeLimit) {
       child.usedMinutesToday =
           min(child.dailyTimeLimit, child.usedMinutesToday + 2);
     }
@@ -2609,7 +2619,7 @@ class AppStateManager extends ChangeNotifier {
         actionTitle: masteredNow
             ? 'أتقن مهارة «$lessonTitle» بنسبة $updatedScore% (+$awardedStars نجمة)'
             : 'تدرّب على «$lessonTitle» ($updatedScore%) وتم تفعيل النشاط البديل المبسط',
-        categoryBadge: 'أكاديمية حنين الذكية',
+        categoryBadge: 'أكاديمية حنين',
       ),
     );
     child.touchSyncVersion();

@@ -7,6 +7,8 @@ import 'package:haneen_kids_vod/features/development/dev_cards.dart';
 class _FakeState extends Fake implements AppStateManager {
   @override
   ParentAccount? currentAccount;
+  @override
+  bool isDailyLimitReached = false;
 }
 
 Widget _wrap(Widget w) => MaterialApp(home: Scaffold(body: SingleChildScrollView(child: w)));
@@ -29,10 +31,9 @@ void main() {
     expect(find.textContaining('استخدام مشترك'), findsOneWidget);
   });
   testWidgets('time up screen when cap reached', (t) async {
-    final String today = DateTime.now().toIso8601String().substring(0, 10);
-    SharedPreferences.setMockInitialValues({'dev_state_': '{"band":1,"cap":10,"used":{"$today":10}}'});
+    SharedPreferences.setMockInitialValues({'dev_state_': '{"band":1}'});
     await t.pumpWidget(MaterialApp(
-        home: DevGate(appState: _FakeState(), child: const Text('GAMES'))));
+        home: DevGate(appState: _FakeState()..isDailyLimitReached = true, child: const Text('GAMES'))));
     await t.pump(const Duration(milliseconds: 200));
     expect(find.text('GAMES'), findsNothing);
     expect(find.textContaining('خلص وقت'), findsOneWidget);

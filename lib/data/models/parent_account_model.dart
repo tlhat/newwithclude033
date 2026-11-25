@@ -17,7 +17,7 @@ class ParentEmailAlertItem {
     required this.bodyMessage,
     required this.smartImprovementSuggestion,
     required this.sentAt,
-    this.deliveredToCloud = true,
+    this.deliveredToCloud = false,
   });
 
   factory ParentEmailAlertItem.fromJson(Map<String, dynamic> json) {
@@ -30,7 +30,7 @@ class ParentEmailAlertItem {
           (json['smartImprovementSuggestion'] ?? '').toString(),
       sentAt: DateTime.tryParse(json['sentAt']?.toString() ?? '') ??
           DateTime.now(),
-      deliveredToCloud: json['deliveredToCloud'] != false,
+      deliveredToCloud: json['deliveredToCloud'] == true,
     );
   }
 
