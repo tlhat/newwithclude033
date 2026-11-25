@@ -245,39 +245,6 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                   ),
                                 ),
                               ),
-                              OutlinedButton.icon(
-                                onPressed: () {
-                                  final slowGuide = PronunciationCoachService
-                                      .buildSlowSyllableGuide(
-                                          currentCard.wordExample);
-                                  final eval =
-                                      PronunciationCoachService.evaluate(
-                                    currentCard.wordExample,
-                                    currentCard.wordExample,
-                                  );
-                                  CalmVoiceService.instance.speak(
-                                    'لنردد معاً ببطء: ${slowGuide}. ${eval.feedbackMessage}',
-                                  );
-                                  setSheetState(() {
-                                    practicedVoiceInSession = true;
-                                    feedbackBannerText =
-                                        '🎙️ مدرب النطق اللطيف: ${eval.feedbackMessage}';
-                                  });
-                                },
-                                icon: const Icon(Icons.mic_rounded,
-                                    size: 18, color: Color(0xFFA7F3D0)),
-                                label: Text(
-                                  'ردد معي بلطف',
-                                  style: TextStyle(color: Color(0xFFA7F3D0)),
-                                ),
-                                style: OutlinedButton.styleFrom(
-                                  side: const BorderSide(
-                                      color: Color(0xFF14B8A6)),
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(14),
-                                  ),
-                                ),
-                              ),
                             ],
                           ),
                         ],

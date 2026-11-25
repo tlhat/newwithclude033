@@ -22,7 +22,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get navAcademy => 'أكاديمية حنين';
 
   @override
-  String get navGames => 'واحة الذكاء';
+  String get navGames => 'واحة اللعب والتعلم';
 
   @override
   String get navAchievements => 'إنجازاتي';
@@ -46,7 +46,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get starsEarnedLabel => 'النجوم المكتسبة';
 
   @override
-  String get iqPointsLabel => 'نقاط اللعب';
+  String get iqPointsLabel => 'نقاط الذكاء';
 
   @override
   String get completedLessonsLabel => 'دروس مكتملة';
@@ -59,7 +59,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get noBadgesYet =>
-      'ابدأ أول درس في الأكاديمية أو العب تحدياً في واحة الذكاء لفتح أول شارة لك.';
+      'ابدأ أول درس في الأكاديمية أو العب تحدياً في واحة اللعب والتعلم لفتح أول شارة لك.';
 
   @override
   String get goToAcademy => 'انتقل إلى أكاديمية حنين';

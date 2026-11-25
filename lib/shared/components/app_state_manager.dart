@@ -436,9 +436,6 @@ class AppStateManager extends ChangeNotifier {
     if (hour >= 18 && !account.warmEveningFilter) {
       return '🌙 اقتراح المساء: نلاحظ أن وقت المشاهدة مسائي؛ ننصح بتفعيل «فلتر المساء الدافئ» واختيار قسم «قصص النوم» لتهدئة الطفل قبل النوم.';
     }
-    if (child.correctPronunciationsCount < 2) {
-      return '🗣️ اقتراح تطوير النطق: شجّع ${child.name} على الضغط على زر «ردد معي» في قصص «فصاحة ونطق» ليستمع للمصحح الصوتي الهادئ ويطور مخارج الحروف.';
-    }
     if (child.completedActivities.length < 2) {
       return '🎯 اقتراح التوازن الحركي: بعد انتهاء القصة القادمة، افتح نافذة «نشاط البطل الواقعي» مع ${child.name} لتنفيذ مهمة حركية خارج الشاشة.';
     }
@@ -1174,7 +1171,7 @@ class AppStateManager extends ChangeNotifier {
       bodyMessage:
           'أهلاً بك يا ${newAccount.fullName}! تم ربط حساب جوجل ($key) وإنشاء ملف الطفل (${firstChild.name}) مع تفعيل تجربة مجانية شاملة لمدة ٢٤ ساعة.',
       customSuggestion:
-          '💡 نصيحة اليوم الأول: جرب مع ${firstChild.name} ميزة «ردد معي» الصوتية ومساعد حنين الذكي لاكتشاف القصص الأنسب لعمره (${firstChild.age}).',
+          '💡 نصيحة اليوم الأول: جرب مع ${firstChild.name} القصص والألعاب الهادئة ومساعد حنين لاكتشاف القصص الأنسب لعمره (${firstChild.age}).',
     );
 
     notifyListeners();
@@ -1947,7 +1944,6 @@ class AppStateManager extends ChangeNotifier {
 
   Future<void> logout() async {
     await CalmVoiceService.instance.stopSpeaking();
-    await CalmVoiceService.instance.stopListening();
     _activeSessionSeconds = 0;
     _inFlightRewardLocks.clear();
     resetCompanionGreetingPresentation(); // clear active memory context
@@ -1996,7 +1992,6 @@ class AppStateManager extends ChangeNotifier {
 
   Future<void> openChildProfilesScreen() async {
     await CalmVoiceService.instance.stopSpeaking();
-    await CalmVoiceService.instance.stopListening();
     hasSelectedChildInSession = false;
     resetCompanionGreetingPresentation(); // clear active memory context
     await _prefs.setBool('has_selected_child_in_session', false);
@@ -2009,7 +2004,6 @@ class AppStateManager extends ChangeNotifier {
         currentAccount!.children.any((c) => c.id == childId);
     if (!exists) return;
     await CalmVoiceService.instance.stopSpeaking();
-    await CalmVoiceService.instance.stopListening();
     _activeSessionSeconds = 0;
     currentAccount!.activeChildId = childId;
     hasSelectedChildInSession = true;
@@ -2027,7 +2021,6 @@ class AppStateManager extends ChangeNotifier {
         currentAccount!.children.any((c) => c.id == childId);
     if (!exists) return;
     await CalmVoiceService.instance.stopSpeaking();
-    await CalmVoiceService.instance.stopListening();
     _activeSessionSeconds = 0;
     currentAccount!.activeChildId = childId;
     _syncLikedStateForActiveChild();
@@ -2104,7 +2097,6 @@ class AppStateManager extends ChangeNotifier {
     }
 
     await CalmVoiceService.instance.stopSpeaking();
-    await CalmVoiceService.instance.stopListening();
     _inFlightRewardLocks.removeWhere((k) => k.startsWith('${childId}_'));
     currentAccount!.children.removeAt(idx);
     if (currentAccount!.children.isEmpty) {

@@ -888,20 +888,6 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                     SwitchListTile(
                       dense: true,
                       contentPadding: EdgeInsets.zero,
-                      value: activeChild.allowMicrophone,
-                      activeColor: const Color(0xFF14B8A6),
-                      onChanged: (v) => widget.appState
-                          .updateChildPrivacyAndSafetyControls(
-                              childId: activeChild.id, allowMicrophone: v),
-                      title: Text('السماح بالميكروفون في نشاط «ردد معي»',
-                          style: TextStyle(fontSize: 12)),
-                      subtitle: Text(
-                          'يُستخدم محلياً للتدرب على الكلمات ولا يتم حفظ أي تسجيل صوتي',
-                          style: TextStyle(fontSize: 10, color: Colors.white60)),
-                    ),
-                    SwitchListTile(
-                      dense: true,
-                      contentPadding: EdgeInsets.zero,
                       value: activeChild.allowExternalVideos,
                       activeColor: const Color(0xFF14B8A6),
                       onChanged: (v) => widget.appState

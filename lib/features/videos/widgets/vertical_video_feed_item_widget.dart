@@ -14,7 +14,6 @@ class VerticalVideoFeedItemWidget extends StatefulWidget {
   final VideoModel video;
   final bool isActive;
   final VoidCallback onLikeTap;
-  final VoidCallback onRepeatPhraseTap;
   final VoidCallback onHeroActivityTap;
   final VoidCallback onVoiceAssistantTap;
   final VoidCallback onBrainGamesTap;
@@ -25,7 +24,6 @@ class VerticalVideoFeedItemWidget extends StatefulWidget {
     required this.video,
     required this.isActive,
     required this.onLikeTap,
-    required this.onRepeatPhraseTap,
     required this.onHeroActivityTap,
     required this.onVoiceAssistantTap,
     required this.onBrainGamesTap,
@@ -547,13 +545,6 @@ class _VerticalVideoFeedItemWidgetState
                   ),
                   const SizedBox(height: 8),
                   _SideActionButton(
-                    icon: Icons.mic_rounded,
-                    iconColor: const Color(0xFFF59E0B),
-                    label: 'ردد معي',
-                    onTap: widget.onRepeatPhraseTap,
-                  ),
-                  const SizedBox(height: 8),
-                  _SideActionButton(
                     icon: Icons.emoji_events_rounded,
                     iconColor: const Color(0xFF14B8A6),
                     label: 'نشاط البطل',
@@ -682,40 +673,6 @@ class _VerticalVideoFeedItemWidgetState
                         fontSize: 11.5,
                         height: 1.35,
                         color: Colors.white70,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(height: 6),
-                  GestureDetector(
-                    onTap: widget.onRepeatPhraseTap,
-                    child: Container(
-                      padding: const EdgeInsets.symmetric(
-                          horizontal: 9, vertical: 5),
-                      decoration: BoxDecoration(
-                        color: const Color(0xFFF59E0B).withOpacity(0.16),
-                        borderRadius: BorderRadius.circular(10),
-                        border: Border.all(
-                            color: const Color(0xFFF59E0B).withOpacity(0.45)),
-                      ),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          const Icon(Icons.mic,
-                              size: 13, color: Color(0xFFFDE68A)),
-                          const SizedBox(width: 4),
-                          Flexible(
-                            child: Text(
-                              'ردد معي: ${item.repeatPhrase}',
-                              maxLines: 1,
-                              overflow: TextOverflow.ellipsis,
-                              style: const TextStyle(
-                                fontSize: 11.5,
-                                fontWeight: FontWeight.bold,
-                                color: Color(0xFFFDE68A),
-                              ),
-                            ),
-                          ),
-                        ],
                       ),
                     ),
                   ),

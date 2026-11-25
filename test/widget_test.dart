@@ -1486,7 +1486,7 @@ void main() {
 
       expect(find.text('قصص حنين'), findsOneWidget);
       expect(find.text('أكاديمية حنين'), findsOneWidget);
-      expect(find.text('واحة الذكاء'), findsOneWidget);
+      expect(find.text('واحة اللعب والتعلم'), findsOneWidget);
       expect(find.text('إنجازاتي'), findsOneWidget);
       expect(find.text('حسابي'), findsOneWidget);
 

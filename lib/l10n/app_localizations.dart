@@ -125,7 +125,7 @@ abstract class AppLocalizations {
   /// No description provided for @navGames.
   ///
   /// In ar, this message translates to:
-  /// **'واحة الذكاء'**
+  /// **'واحة اللعب والتعلم'**
   String get navGames;
 
   /// No description provided for @navAchievements.
@@ -191,7 +191,7 @@ abstract class AppLocalizations {
   /// No description provided for @noBadgesYet.
   ///
   /// In ar, this message translates to:
-  /// **'ابدأ أول درس في الأكاديمية أو العب تحدياً في واحة الذكاء لفتح أول شارة لك.'**
+  /// **'ابدأ أول درس في الأكاديمية أو العب تحدياً في واحة اللعب والتعلم لفتح أول شارة لك.'**
   String get noBadgesYet;
 
   /// No description provided for @goToAcademy.

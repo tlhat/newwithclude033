@@ -3,7 +3,6 @@ import 'dart:io';
 import 'dart:math';
 import 'package:flutter/widgets.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:speech_to_text/speech_to_text.dart' as stt;
 import 'package:video_player/video_player.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
@@ -34,12 +33,10 @@ class CalmVoiceService {
     return false;
   }
 
-  final stt.SpeechToText _speech = stt.SpeechToText();
   VideoPlayerController? _activeElevenLabsAudioController;
   VideoPlayerController? _calmBgMusicController;
   SharedPreferences? _prefs;
   bool _engineReady = false;
-  bool _sttReady = false;
   bool isSpeaking = false;
   bool isStoryNarrationPaused = false;
   bool isAssistantMuted = false;
@@ -89,9 +86,6 @@ class CalmVoiceService {
 
   Future<void> setChildMicrophoneAllowed(bool allowed) async {
     isChildMicrophoneAllowed = allowed;
-    if (!allowed) {
-      await stopListening();
-    }
   }
 
   Future<void> setAssistantMuted(bool muted) async {
@@ -636,69 +630,6 @@ class CalmVoiceService {
       } catch (_) {}
     }
     isSpeaking = false;
-  }
-
-  Future<bool> initSpeechRecognition() async {
-    if (isRunningInUnitTest) return false;
-    try {
-      if (_sttReady) return true;
-      _sttReady = await _speech.initialize(
-        onError: (_) {},
-        onStatus: (_) {},
-      );
-      return _sttReady;
-    } catch (_) {
-      return false;
-    }
-  }
-
-  Future<bool> startListening({
-    required void Function(String recognizedWords) onResult,
-    void Function(String errorReason)? onPermissionOrPolicyDenied,
-  }) async {
-    if (!isChildMicrophoneAllowed) {
-      await stopListening();
-      onPermissionOrPolicyDenied?.call(
-        'تم إيقاف الميكروفون بناءً على إعدادات الرقابة الأبوية لهذا الطفل.',
-      );
-      return false;
-    }
-    try {
-      final bool available = await initSpeechRecognition();
-      if (!available) {
-        onPermissionOrPolicyDenied?.call(
-          'خدمة التعرف على الكلام غير متاحة حالياً؛ يمكنك الاستماع للصوت والترديد الحر.',
-        );
-        return false;
-      }
-      await stopSpeaking();
-      await _speech.listen(
-        localeId: 'ar_EG',
-        listenFor: const Duration(seconds: 8),
-        pauseFor: const Duration(seconds: 3),
-        partialResults: true,
-        onResult: (result) {
-          if (!isChildMicrophoneAllowed) {
-            stopListening();
-            return;
-          }
-          onResult(result.recognizedWords);
-        },
-      );
-      return true;
-    } catch (_) {
-      onPermissionOrPolicyDenied?.call(
-        'تعذر فتح الميكروفون (تأكد من منح إذن الميكروفون للتطبيق).',
-      );
-      return false;
-    }
-  }
-
-  Future<void> stopListening() async {
-    if (isRunningInUnitTest) return;
-    try {
-      await _speech.stop();
-    } catch (_) {}
   }
 
   static String normalizeArabicText(String input) {

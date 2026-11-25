@@ -4,7 +4,7 @@
   "freeForeverTagline": "مجاني بالكامل ١٠٠٪ — بدون اشتراكات أو إعلانات",
   "navStories": "قصص حنين",
   "navAcademy": "أكاديمية حنين",
-  "navGames": "واحة الذكاء",
+  "navGames": "واحة اللعب والتعلم",
   "navAchievements": "إنجازاتي",
   "navAccount": "حسابي",
   "achievementsTitle": "إنجازاتي",
@@ -20,7 +20,7 @@
   "completedLessonsLabel": "دروس مكتملة",
   "unlockedBadgesLabel": "الشارات المفتوحة",
   "unlockedBadgesHeading": "الشارات التي حصلت عليها",
-  "noBadgesYet": "ابدأ أول درس في الأكاديمية أو العب تحدياً في واحة الذكاء لفتح أول شارة لك.",
+  "noBadgesYet": "ابدأ أول درس في الأكاديمية أو العب تحدياً في واحة اللعب والتعلم لفتح أول شارة لك.",
   "goToAcademy": "انتقل إلى أكاديمية حنين",
   "badgeUnlockedAt": "تم الفتح: {date}",
   "@badgeUnlockedAt": {
