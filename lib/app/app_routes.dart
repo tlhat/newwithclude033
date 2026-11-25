@@ -53,6 +53,9 @@ class _SplashRouterScreenState extends State<SplashRouterScreen> {
     if (!widget.appState.pinUnlockedThisSession) {
       return PinUnlockScreen(appState: widget.appState);
     }
+    if (widget.appState.childIntroPending) {
+      return FastStartScreen(appState: widget.appState);
+    }
     return MainNavigationShell(appState: widget.appState);
   }
 }

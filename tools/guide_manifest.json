@@ -224,6 +224,27 @@
   "text": "اسمع الحدوتة وإنت مرتاح، وأنا هحكيها لك."
  },
  {
+  "id": "fs_gender",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "fast_start",
+  "text": "إنت ولد ولا بنت؟"
+ },
+ {
+  "id": "fs_age",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "fast_start",
+  "text": "عندك كام سنة؟"
+ },
+ {
+  "id": "fs_name",
+  "feature": "guide",
+  "persona": "haneen",
+  "group": "fast_start",
+  "text": "اسمك إيه؟"
+ },
+ {
   "id": "gi_ex_number_line",
   "feature": "guide",
   "persona": "haneen",

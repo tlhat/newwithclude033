@@ -651,6 +651,7 @@ class AppStateManager extends ChangeNotifier {
     required int dailyTimeLimit,
     required String parentPasscode6Digits,
     String gender = 'boy',
+    bool childIntroPending = false,
   }) async {
     final String cleanName = childName.trim();
     final String cleanAge = childAge.trim();
@@ -667,7 +668,9 @@ class AppStateManager extends ChangeNotifier {
       return 'يرجى إنشاء رمز سري للوالدين مكوّن من ٦ أرقام بالضبط.';
     }
 
-    final int clampedLimit = dailyTimeLimit.clamp(5, 120);
+    // 0 means no daily limit (the default).
+    final int clampedLimit =
+        dailyTimeLimit <= 0 ? 0 : dailyTimeLimit.clamp(5, 120);
     const String familyKey = 'family@haneenkids.local';
 
     final ChildProfile firstChild = ChildProfile(
@@ -702,6 +705,7 @@ class AppStateManager extends ChangeNotifier {
 
     await _saveAccounts();
     await _prefs.setBool('onboarding_completed', true);
+    await _prefs.setBool('child_intro_pending', childIntroPending);
     await accountRepository.dataSource.setLoggedInUserKey(familyKey);
     await _prefs.setString('current_user_key', familyKey);
     await _prefs.setBool('has_selected_child_in_session', true);
@@ -710,6 +714,31 @@ class AppStateManager extends ChangeNotifier {
     notifyListeners();
     unawaited(backupToGoogleQuietly());
     return null;
+  }
+
+  /// True until the child has done the first game and the light
+  /// name / age / gender questions after the parent's one-time setup.
+  bool get childIntroPending => _prefs.getBool('child_intro_pending') ?? false;
+
+  Future<void> finishChildIntro({
+    String? name,
+    String? age,
+    String? gender,
+  }) async {
+    final ParentAccount? acc = currentAccount;
+    if (acc != null) {
+      final ChildProfile c = acc.activeChild;
+      await updateChildProfile(
+        childId: c.id,
+        name: name ?? c.name,
+        age: age ?? c.age,
+        chosenAvatar: c.chosenAvatar,
+        dailyTimeLimit: c.dailyTimeLimit,
+        gender: gender,
+      );
+    }
+    await _prefs.setBool('child_intro_pending', false);
+    notifyListeners();
   }
 
   // ------------------------------------------------------------ Google backup

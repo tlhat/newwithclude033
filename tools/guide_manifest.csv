@@ -31,6 +31,9 @@ gi_dad_voice,game_intro,صوت بابا بيحكي! سجّل حدوتة بصوت
 gi_screen_free,game_intro,وضع بدون شاشة! ماما أو بابا يسمعوا معاك، وإنت تجاوب بصوتك.
 gi_plant_care,game_intro,اعتني بالنبتة! اسقيها وحطها في الشمس عشان تكبر.
 bed_start,story_intro,اسمع الحدوتة وإنت مرتاح، وأنا هحكيها لك.
+fs_gender,fast_start,إنت ولد ولا بنت؟
+fs_age,fast_start,عندك كام سنة؟
+fs_name,fast_start,اسمك إيه؟
 gi_ex_number_line,game_intro,يلا نلعب خط الأعداد. حرّك النقطة على الرقم الصح.
 gi_ex_fill_blank,game_intro,يلا نلعب املأ الفراغ. اختر الكلمة الناقصة.
 gi_ex_multi_select,game_intro,يلا نلعب اختر كل الصح. فيه أكتر من إجابة صحيحة.

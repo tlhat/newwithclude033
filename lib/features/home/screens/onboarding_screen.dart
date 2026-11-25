@@ -93,15 +93,17 @@ class _OnboardingScreenState extends State<OnboardingScreen>
   void _goBack() {
     setState(() {
       _stepError = null;
-      _currentStep--;
+      _currentStep = -1;
     });
   }
 
   Future<void> _next() async {
     setState(() => _stepError = null);
 
+    // Fast start: the parent only sets the PIN. The child's name, age and
+    // gender are asked lightly after the first game.
     if (_currentStep == -1) {
-      setState(() => _currentStep = 0);
+      setState(() => _currentStep = 3);
       return;
     }
     if (_currentStep == 0) {
@@ -136,11 +138,14 @@ class _OnboardingScreenState extends State<OnboardingScreen>
 
     setState(() => _isSaving = true);
     final String? err = await widget.appState.completeOneTimeInitialSetup(
-      childName: _childNameCtrl.text.trim(),
+      childName: _childNameCtrl.text.trim().isEmpty
+          ? 'بطل'
+          : _childNameCtrl.text.trim(),
       childAge: _selectedAge,
-      dailyTimeLimit: _dailyUsageLimitMinutes,
+      dailyTimeLimit: 0,
       parentPasscode6Digits: passcode,
       gender: _selectedGender,
+      childIntroPending: true,
     );
     if (mounted) {
       setState(() {
@@ -356,7 +361,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: List.generate(
-              4,
+              0,
               (i) => AnimatedContainer(
                 duration: const Duration(milliseconds: 240),
                 margin: const EdgeInsets.symmetric(horizontal: 4),

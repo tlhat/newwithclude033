@@ -30,6 +30,9 @@ for n, t in enumerate(dart_list('wrongLines')): add(f'gv_wrong_{n+1}', 'feedback
 wi = re.search(r'widgetIntro = \{(.*?)\};', gv, re.S).group(1)
 for k, t in re.findall(r"'(\w+)': '([^']*)'", wi): add(f'gi_{k}', 'game_intro', t)
 add('bed_start', 'story_intro', re.search(r"bedtimeStart = '([^']*)'", gv).group(1))
+add('fs_gender', 'fast_start', 'إنت ولد ولا بنت؟')
+add('fs_age', 'fast_start', 'عندك كام سنة؟')
+add('fs_name', 'fast_start', 'اسمك إيه؟')
 for s, title, hint in re.findall(r"ExerciseGameDef\('(\w+)', '([^']*)', '[^']*', '([^']*)'", rd('lib/features/exercises/game_catalog.dart')):
     add(f'gi_ex_{s}', 'game_intro', f'يلا نلعب {title}. ' + re.sub(r'[؟?!.]+$', '', hint) + '.')
 w = rd('lib/features/brain_games/screens/world_games.dart')
