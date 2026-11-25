@@ -46,7 +46,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get starsEarnedLabel => 'النجوم المكتسبة';
 
   @override
-  String get iqPointsLabel => 'نقاط الذكاء';
+  String get iqPointsLabel => 'نقاط اللعب';
 
   @override
   String get completedLessonsLabel => 'دروس مكتملة';

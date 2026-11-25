@@ -1,6 +1,7 @@
 import 'package:haneen_kids_vod/core/services/app_rating_service.dart';
 import 'package:haneen_kids_vod/features/home/screens/my_path_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/features/development/dev_cards.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
@@ -158,7 +159,10 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
         onNavigateToAcademy: () => _switchTo(MainNavDestination.academy),
       ),
       HaneenAcademyScreen(appState: widget.appState),
-      BrainGamesHubScreen(appState: widget.appState),
+      DevGate(
+          appState: widget.appState,
+          active: _currentIndex == MainNavDestination.games.index,
+          child: BrainGamesHubScreen(appState: widget.appState)),
       AchievementsCenterTab(
         appState: widget.appState,
         onExploreAcademy: () => _switchTo(MainNavDestination.academy),

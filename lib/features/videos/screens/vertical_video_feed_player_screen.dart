@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/features/development/dev_cards.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
 class VerticalVideoFeedPlayerScreen extends StatefulWidget {
@@ -120,7 +121,7 @@ class _VerticalVideoFeedPlayerScreenState
     Navigator.push(
       context,
       MaterialPageRoute(
-        builder: (_) => BrainGamesHubScreen(appState: widget.appState),
+        builder: (_) => DevGate(appState: widget.appState, child: BrainGamesHubScreen(appState: widget.appState)),
       ),
     );
   }

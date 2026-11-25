@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:haneen_kids_vod/features/exercises/skill_mastery_card.dart';
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/features/development/dev_cards.dart';
 import 'package:flutter/services.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
@@ -1663,6 +1664,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                   ),
                   const SizedBox(height: 18),
                   SkillMasteryCard(appState: widget.appState),
+                  DevelopmentCard(appState: widget.appState),
                   ParentBetaFeedbackCard(appState: widget.appState),
                 ],
               ),

@@ -2309,9 +2309,9 @@ class AppStateManager extends ChangeNotifier {
           child.gamesCompletedCount % 2 == 0) {
         await sendParentEmailAlert(
           subject:
-              '🧠 تطور قدرات الذكاء للطفل ${child.name} في «$gameTitle»!',
+              '🧠 تدرّب الطفل ${child.name} على «$gameTitle»!',
           bodyMessage:
-              'أنجز ${child.name} تحدياً جديداً في لعبة ($gameTitle) وارتفعت نقاط الذكاء والقدرات لديه إلى ${child.intelligencePoints} نقطة مع ${child.starsEarned} نجمة!',
+              'أنجز ${child.name} تحدياً جديداً في لعبة ($gameTitle) وصلت نقاط اللعب لديه إلى ${child.intelligencePoints} نقطة مع ${child.starsEarned} نجمة!',
           customSuggestion:
               '💡 اقتراح تربوي: شجع ${child.name} على التنوع بين ألعاب الذاكرة البصرية والمنطق والحساب.',
         );
