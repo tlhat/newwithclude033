@@ -5,13 +5,15 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <!-- "ردد معي" speech practice (speech_to_text). -->
     <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <!-- Child lock: bring the app back to the front (best effort). -->
+    <uses-permission android:name="android.permission.REORDER_TASKS"/>
     <uses-feature android:name="android.hardware.microphone" android:required="false"/>
     <application
         android:label="حنين كيدز"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity
-            android:name=".MainActivity"
+            android:name="com.haneenkids.haneen_kids_vod.MainActivity"
             android:exported="true"
             android:launchMode="singleTop"
             android:taskAffinity=""
@@ -32,6 +34,31 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <!-- Child lock, optional "dedicated device" tier. Does nothing unless the
+             device owner is set once with adb (docs/KID_LOCK.md). -->
+        <receiver
+            android:name="com.haneenkids.haneen_kids_vod.HaneenAdminReceiver"
+            android:exported="true"
+            android:permission="android.permission.BIND_DEVICE_ADMIN">
+            <meta-data
+                android:name="android.app.device_admin"
+                android:resource="@xml/device_admin" />
+            <intent-filter>
+                <action android:name="android.app.action.DEVICE_ADMIN_ENABLED"/>
+            </intent-filter>
+        </receiver>
+        <!-- Child lock, optional launcher mode. Disabled until the parent turns it on. -->
+        <activity-alias
+            android:name="com.haneenkids.haneen_kids_vod.KidHome"
+            android:targetActivity="com.haneenkids.haneen_kids_vod.MainActivity"
+            android:enabled="false"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.HOME"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity-alias>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
         <meta-data

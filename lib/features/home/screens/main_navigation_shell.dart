@@ -1,6 +1,7 @@
 import 'package:haneen_kids_vod/core/services/app_rating_service.dart';
 import 'package:haneen_kids_vod/features/home/screens/my_path_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/features/kidlock/kid_lock.dart';
 import 'package:haneen_kids_vod/features/development/dev_cards.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
@@ -173,7 +174,11 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
       ),
     ];
 
-    return Scaffold(
+    return ValueListenableBuilder<bool>(
+      valueListenable: KidLock.on,
+      // Child lock: the Back button cannot leave the app from the root screen.
+      builder: (context, locked, child) => PopScope(canPop: !locked, child: child!),
+      child: Scaffold(
       floatingActionButtonLocation: FloatingActionButtonLocation.startFloat,
       floatingActionButton: _currentIndex <= 2
           ? FloatingActionButton.extended(
@@ -224,6 +229,6 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
           ),
         ],
       ),
-    );
+    ));
   }
 }
