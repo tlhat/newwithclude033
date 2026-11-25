@@ -42,6 +42,7 @@ flutter:
     # audio-assets-begin
     - assets/audio/audio_index.json
     # audio-assets-end
+    - assets/exercises/
     - assets/icon/
     - assets/avatars/
     - assets/avatars/parts/boy_front/

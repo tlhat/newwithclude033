@@ -2,6 +2,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'new_games.dart';
+import 'package:haneen_kids_vod/features/exercises/exercise_screen.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/features/companion/engine/companion_interaction_engine.dart';
 import 'package:haneen_kids_vod/features/companion/engine/companion_interaction_state.dart';
@@ -382,6 +383,12 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
             'skill': 'ارسم اللي في خيالك',
             'color': const Color(0xFFEC4899),
           },
+          {
+            'title': 'تمارين متنوعة',
+            'icon': '🧠',
+            'skill': 'اختيار وأرقام وترتيب وتوصيل وتصنيف',
+            'color': const Color(0xFF8B5CF6),
+          },
         ];
 
         return Scaffold(
@@ -641,6 +648,9 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
             appState: widget.appState, onReact: _companionReact);
       case 13:
         return ImagineDrawGame(
+            appState: widget.appState, onReact: _companionReact);
+      case 14:
+        return ExerciseGame(
             appState: widget.appState, onReact: _companionReact);
       default:
         return _buildEtiquetteDrawingStudioGame();
