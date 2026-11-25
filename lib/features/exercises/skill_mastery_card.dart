@@ -26,6 +26,7 @@ class SkillMasteryCard extends StatefulWidget {
     'opposites': 'الأضداد',
     'vocabulary': 'المفردات',
     'daily_routine': 'الروتين اليومي',
+    'body_parts': 'أجزاء الجسم',
     'number_line': 'خط الأعداد',
     'fill_blank': 'املأ الفراغ',
     'multi_select': 'اختر كل الصح',
