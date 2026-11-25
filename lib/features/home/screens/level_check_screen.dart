@@ -28,6 +28,40 @@ class _LevelCheckScreenState extends State<LevelCheckScreen> {
     _Q('١٢ - ٥ = ؟', ['٦', '٧', '٨'], 1),
     _Q('أي كلمة معناها عكس (كبير)؟', ['طويل', 'صغير', 'عالي'], 1),
   ];
+  /// Exact spoken lines (question, then the choices). Clip ids lvl_q0..lvl_q7
+  /// (persona haneen, feature levelcheck); same text is in tools/audio_manifest.json.
+  static const List<String> kSpoken = [
+    'أي واحدة فيها ثلاث تفاحات؟ الاختيارات: تفاحة واحدة، ثلاث تفاحات، خمس تفاحات.',
+    'أي حرف ده اللي على الشاشة؟ الاختيارات: باء، تاء، ميم.',
+    'عُدّ النجوم اللي على الشاشة. الاختيارات: خمسة، سبعة، تسعة.',
+    'ثلاثة زائد أربعة يساوي كام؟ الاختيارات: ستة، سبعة، ثمانية.',
+    'أي كلمة بتبدأ بحرف سين؟ الاختيارات: سمكة، قطة، بطة.',
+    'كمّل النمط. أحمر، أزرق، أحمر، أزرق، أحمر، وبعدين إيه؟ الاختيارات: أحمر، أزرق، أخضر.',
+    'اثنا عشر ناقص خمسة يساوي كام؟ الاختيارات: ستة، سبعة، ثمانية.',
+    'أي كلمة معناها عكس كبير؟ الاختيارات: طويل، صغير، عالي.',
+  ];
+
+  void _speakQuestion() {
+    if (_i < 0 || _i >= kSpoken.length) return;
+    CalmVoiceService.instance.speakCalmly(
+      kSpoken[_i],
+      allowSpeechForRepeatGame: true,
+      forceSpeakEvenIfAssistantMuted: true,
+    );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) => _speakQuestion());
+  }
+
+  @override
+  void dispose() {
+    CalmVoiceService.instance.stopSpeaking();
+    super.dispose();
+  }
+
   int _i = 0;
   int _score = 0;
   bool _done = false;
@@ -46,6 +80,7 @@ class _LevelCheckScreenState extends State<LevelCheckScreen> {
       if (mounted) setState(() => _done = true);
     } else {
       setState(() => _i++);
+      _speakQuestion();
     }
   }
 
@@ -87,7 +122,15 @@ class _LevelCheckScreenState extends State<LevelCheckScreen> {
     return Column(mainAxisSize: MainAxisSize.min, children: [
       Text('سؤال ${_i + 1} من ${_qs.length}',
           style: const TextStyle(color: Colors.white54)),
-      const SizedBox(height: 14),
+      const SizedBox(height: 8),
+      IconButton(
+        tooltip: 'اسمع السؤال تاني',
+        iconSize: 36,
+        color: const Color(0xFF38BDF8),
+        onPressed: _speakQuestion,
+        icon: const Icon(Icons.volume_up_rounded),
+      ),
+      const SizedBox(height: 6),
       Text(q.text,
           textAlign: TextAlign.center,
           style: const TextStyle(

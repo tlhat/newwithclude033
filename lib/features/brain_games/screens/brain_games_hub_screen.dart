@@ -1,6 +1,7 @@
 import 'package:haneen_kids_vod/features/brain_games/services/game_voice_texts.dart';
 import 'dart:math';
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/features/home/path_target.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'new_games.dart';
 import 'package:haneen_kids_vod/features/exercises/exercise_screen.dart';
@@ -20,6 +21,21 @@ class BrainGamesHubScreen extends StatefulWidget {
 
 class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
   int _selectedGameIndex = 0;
+
+  void _applyPathTarget() {
+    final t = PathTarget.pending.value;
+    if (t == null || t.tab != 2) return;
+    PathTarget.pending.value = null;
+    final g = t.gameIndex;
+    if (g != null && mounted) setState(() => _selectedGameIndex = g);
+  }
+
+  @override
+  void dispose() {
+    PathTarget.pending.removeListener(_applyPathTarget);
+    super.dispose();
+  }
+
   String? _heroReactionMessage;
   int _companionReactionTick = 0;
   bool _companionReactionCorrect = true;
@@ -122,6 +138,8 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
   @override
   void initState() {
     super.initState();
+    PathTarget.pending.addListener(_applyPathTarget);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _applyPathTarget());
     _syncChildGameProgressLevels();
     _initMemoryGame();
     widget.appState.logChildRealtimeActivity(

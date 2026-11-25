@@ -1,4 +1,6 @@
 import 'package:haneen_kids_vod/features/home/path_progress.dart';
+import 'package:haneen_kids_vod/features/home/path_target.dart';
+import 'package:haneen_kids_vod/features/activities/services/academy_voice_texts.dart';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
@@ -21,6 +23,27 @@ class HaneenAcademyScreen extends StatefulWidget {
 class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
   String _selectedTrackFilter = 'smart_path';
 
+  void _applyPathTarget() {
+    final t = PathTarget.pending.value;
+    if (t == null || t.tab != 1) return;
+    PathTarget.pending.value = null;
+    final id = t.trackId;
+    if (id != null && mounted) setState(() => _selectedTrackFilter = id);
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    PathTarget.pending.addListener(_applyPathTarget);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _applyPathTarget());
+  }
+
+  @override
+  void dispose() {
+    PathTarget.pending.removeListener(_applyPathTarget);
+    super.dispose();
+  }
+
   static List<Map<String, String>> _trackFilters = [
     {'id': 'smart_path', 'title': '🎯 مساري الذكي', 'emoji': '🎯'},
     {'id': 'all', 'title': 'كل المسارات', 'emoji': '🎓'},
@@ -36,25 +59,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
     {'id': 'thinking_problem_solving', 'title': 'التفكير والتركيز', 'emoji': '🧩'},
   ];
 
-  /// Phase 2: builds Tier 3 worked-example text from the lesson's own data.
-  /// Uses a safe candidate word (never the quiz answer/options) when one is
-  /// available; otherwise falls back to a generic strategy-based example.
-  String _tier3HintText(AppLocalizations l10n, AcademyTrackLesson lesson) {
-    final content = HintLadderEngine.buildSafeWorkedExample(
-      forbiddenAnswers: <String>[
-        ...lesson.quizOptions,
-        lesson.correctOption,
-        ...lesson.alternativeRemediationOptions,
-        lesson.alternativeRemediationCorrect,
-      ],
-      candidateWords: lesson.cards.map((c) => c.wordExample).toList(),
-      candidateEmojis: lesson.cards.map((c) => c.emoji).toList(),
-    );
-    if (content.isCurriculumExample) {
-      return l10n.companionHintTier3(content.exampleWord, content.exampleEmoji);
-    }
-    return l10n.companionHintTier3Fallback(lesson.targetWordOrPhrase);
-  }
+  String _tier3HintText(AppLocalizations l10n, AcademyTrackLesson lesson) =>
+      AcademyVoiceTexts.tier3(l10n, lesson);
 
   void _openLessonSheet(AcademyTrackLesson lesson, ChildProfile child) {
     widget.appState.setLastActiveAcademyLesson(lesson.id);
@@ -299,13 +305,30 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            '🧩 سؤال التثبيت والإتقان: ${lesson.quizQuestion}',
-                            style: const TextStyle(
-                              fontSize: 13.5,
-                              fontWeight: FontWeight.bold,
-                              color: Color(0xFFA7F3D0),
-                            ),
+                          Row(
+                            children: [
+                              Expanded(
+                                child: Text(
+                                  '🧩 سؤال التثبيت والإتقان: ${lesson.quizQuestion}',
+                                  style: const TextStyle(
+                                    fontSize: 13.5,
+                                    fontWeight: FontWeight.bold,
+                                    color: Color(0xFFA7F3D0),
+                                  ),
+                                ),
+                              ),
+                              IconButton(
+                                tooltip: 'اسمع السؤال',
+                                color: const Color(0xFF38BDF8),
+                                onPressed: () =>
+                                    CalmVoiceService.instance.speakCalmly(
+                                  AcademyVoiceTexts.quiz(lesson),
+                                  allowSpeechForRepeatGame: true,
+                                  forceSpeakEvenIfAssistantMuted: true,
+                                ),
+                                icon: const Icon(Icons.volume_up_rounded),
+                              ),
+                            ],
                           ),
                           const SizedBox(height: 8),
                           Row(
@@ -324,8 +347,13 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                         _ => '📖 ${_tier3HintText(l10n, lesson)}',
                                       };
                                     });
-                                    CalmVoiceService.instance
-                                        .speak(hintBannerText ?? '');
+                                    // Spoken line has no emoji and matches the recorded clip.
+                                    CalmVoiceService.instance.speakCalmly(
+                                      AcademyVoiceTexts.hint(
+                                          l10n, lesson, tier.level),
+                                      allowSpeechForRepeatGame: true,
+                                      forceSpeakEvenIfAssistantMuted: true,
+                                    );
                                   },
                                   icon: const Icon(Icons.lightbulb_rounded,
                                       size: 18, color: Color(0xFFF59E0B)),

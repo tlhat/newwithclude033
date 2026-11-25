@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'level_check_screen.dart';
 import 'package:haneen_kids_vod/features/home/path_progress.dart';
+import 'package:haneen_kids_vod/features/home/path_target.dart';
 
 class PathStep {
   final String id;
@@ -12,7 +13,12 @@ class PathStep {
 
   /// Tab index in the main shell: 0 stories, 1 academy, 2 games.
   final int tab;
-  PathStep(this.id, this.emoji, this.title, this.hint, this.tab);
+  final String? trackId;
+  final int? gameIndex;
+  PathStep(this.id, this.emoji, this.title, this.hint, this.tab,
+      {this.trackId, this.gameIndex});
+  PathTarget get target =>
+      PathTarget(tab, trackId: trackId, gameIndex: gameIndex);
 }
 
 /// "مساري": a short daily plan chosen from the child's age.
@@ -30,27 +36,27 @@ class MyPathPlan {
     if (age <= 4) {
       return [
         PathStep('s1', '📖', 'قصة قصيرة', 'اسمع قصة وشوف الرسومات', 0),
-        PathStep('a1', '🔤', 'حروف وأصوات', 'اتعلم حرف جديد مع حنين', 1),
-        PathStep('g1', '🧩', 'لعبة صور وأصوات', 'طابق الصورة بالصوت', 2),
-        PathStep('a2', '🌈', 'ألوان وأشكال', 'سمّي الألوان والأشكال', 1),
+        PathStep('a1', '🔤', 'حروف وأصوات', 'اتعلم حرف جديد مع حنين', 1, trackId: 'arabic_letters'),
+        PathStep('g1', '🧩', 'لعبة صور وأصوات', 'طابق الصورة بالصوت', 2, gameIndex: 8),
+        PathStep('a2', '🌈', 'ألوان وأشكال', 'سمّي الألوان والأشكال', 1, trackId: 'colors_shapes'),
         PathStep('s2', '🌙', 'قصة هادئة', 'ختام لطيف لليوم', 0),
       ];
     }
     if (age <= 6) {
       return [
-        PathStep('a1', '🔤', 'درس الحروف', 'حرف جديد وكلمات بيه', 1),
-        PathStep('g1', '🔢', 'لعبة الأرقام', 'عدّ وجمّع', 2),
+        PathStep('a1', '🔤', 'درس الحروف', 'حرف جديد وكلمات بيه', 1, trackId: 'arabic_letters'),
+        PathStep('g1', '🔢', 'لعبة الأرقام', 'عدّ وجمّع', 2, gameIndex: 4),
         PathStep('s1', '📖', 'قصة', 'اقرا واسمع واتعلم', 0),
-        PathStep('g2', '🧠', 'لعبة ذاكرة', 'فكّر وتذكّر', 2),
-        PathStep('a2', '🗣️', 'نطق واضح', 'قول الكلمة بصوت واضح', 1),
+        PathStep('g2', '🧠', 'لعبة ذاكرة', 'فكّر وتذكّر', 2, gameIndex: 3),
+        PathStep('a2', '🗣️', 'نطق واضح', 'قول الكلمة بصوت واضح', 1, trackId: 'communication'),
       ];
     }
     return [
-      PathStep('a1', '📚', 'درس اليوم', 'كلمات وجمل أطول', 1),
-      PathStep('g1', '🧠', 'تحدّي ذكاء', 'نمط وتصنيف ومختلف', 2),
-      PathStep('g2', '🔢', 'رياضيات', 'مسائل أسرع شوية', 2),
+      PathStep('a1', '📚', 'درس اليوم', 'كلمات وجمل أطول', 1, trackId: 'vocabulary'),
+      PathStep('g1', '🧠', 'تحدّي ذكاء', 'نمط وتصنيف ومختلف', 2, gameIndex: 2),
+      PathStep('g2', '🔢', 'رياضيات', 'مسائل أسرع شوية', 2, gameIndex: 4),
       PathStep('s1', '📖', 'قصة وأسئلة', 'اقرا وجاوب', 0),
-      PathStep('g3', '🎨', 'مرسم الآداب', 'ارسم وتعلّم أدب جديد', 2),
+      PathStep('g3', '🎨', 'مرسم الآداب', 'ارسم وتعلّم أدب جديد', 2, gameIndex: 0),
     ];
   }
 }
@@ -131,6 +137,7 @@ class _MyPathScreenState extends State<MyPathScreen> {
                     // Only go there. It is marked done when really finished.
                     if (!mounted) return;
                     Navigator.of(context).pop();
+                    PathTarget.pending.value = steps[si].target;
                     widget.onGoToTab(steps[si].tab);
                   },
                 ),
