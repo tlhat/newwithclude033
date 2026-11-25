@@ -1327,10 +1327,6 @@ void main() {
       expect(playUrl, contains("play.google.com/store/apps/details"));
       expect(appState.hasOpenedGooglePlayRating, isTrue);
 
-      final String updateMsg =
-          await appState.checkForAndTriggerInAppUpdate();
-      expect(updateMsg, contains("محدّث"));
-
       // 10e. Dual Voice Assistants & Auto-Advance on Correct Answer:
       // - Correct answer triggers Superhero voice (`L14QZl4DxSQ6xGvib36i`) and auto-advances (`autoAdvanced == true`)!
       // - Incorrect answer triggers Primary Assistant voice (`cUDXOxxuLZJdTcxEyGVB`)!

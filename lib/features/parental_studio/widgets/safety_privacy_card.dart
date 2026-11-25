@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'package:haneen_kids_vod/core/security/local_credential_security_service.dart';
 
@@ -51,14 +52,14 @@ class _SafetyPrivacyCardState extends State<SafetyPrivacyCard> {
       children: [
         if (_usesDefaultPin)
           Container(
-            margin: const EdgeInsets.only(bottom: 12),
-            padding: const EdgeInsets.all(14),
+            margin: EdgeInsets.only(bottom: 12),
+            padding: EdgeInsets.all(14),
             decoration: BoxDecoration(
-              color: const Color(0xFF7C2D12),
+              color: Color(0xFF7C2D12),
               borderRadius: BorderRadius.circular(16),
-              border: Border.all(color: const Color(0xFFF59E0B), width: 1.5),
+              border: Border.all(color: Color(0xFFF59E0B), width: 1.5),
             ),
-            child: const Row(
+            child: Row(
               children: [
                 Icon(Icons.warning_amber_rounded, color: Color(0xFFF59E0B)),
                 SizedBox(width: 10),
@@ -75,12 +76,12 @@ class _SafetyPrivacyCardState extends State<SafetyPrivacyCard> {
         OutlinedButton.icon(
           onPressed: () => Navigator.push(
             context,
-            MaterialPageRoute(builder: (_) => const PrivacyPolicyScreen()),
+            MaterialPageRoute(builder: (_) => PrivacyPolicyScreen()),
           ),
-          icon: const Icon(Icons.privacy_tip_outlined),
-          label: const Text('سياسة الخصوصية وحماية بيانات الأطفال'),
+          icon: Icon(Icons.privacy_tip_outlined),
+          label: Text(tr('سياسة الخصوصية وحماية بيانات الأطفال')),
         ),
-        const SizedBox(height: 14),
+        SizedBox(height: 14),
       ],
     );
   }
@@ -90,13 +91,12 @@ class _SafetyPrivacyCardState extends State<SafetyPrivacyCard> {
 /// DRAFT: have it reviewed before publishing, and keep it in sync with the
 /// Play Console "Data safety" form.
 class PrivacyPolicyScreen extends StatelessWidget {
-  const PrivacyPolicyScreen({super.key});
+  PrivacyPolicyScreen({super.key});
 
-  static const List<List<String>> sections = [
+  static List<List<String>> sections = [
     [
       'من نحن',
-      'حنين كيدز تطبيق تعليمي للأطفال. هذه السياسة تشرح ما نحفظه وما لا نحفظه. '
-          'التطبيق موجّه للأطفال، والوالدان هما المسؤولان عن الحساب.',
+      tr('حنين كيدز تطبيق تعليمي للأطفال. هذه السياسة تشرح ما نحفظه وما لا نحفظه. التطبيق موجّه للأطفال، والوالدان هما المسؤولان عن الحساب.'),
     ],
     [
       'ما البيانات التي نحفظها',
@@ -114,7 +114,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
           'التطبيق لا يسجّل صوت الطفل ولا يحفظه ولا يرسله إلى خوادمنا.',
     ],
     [
-      'الأصوات المنطوقة',
+      tr('الأصوات المنطوقة'),
       'معظم أصوات حنين مدمجة داخل التطبيق وتعمل دون إنترنت. عند عدم وجود تسجيل جاهز '
           'ومع وجود إنترنت، يُرسل نص الجملة فقط (قد يتضمن اسم الطفل) إلى خدمة توليد الصوت ElevenLabs '
           'لتحويله إلى كلام. لا يُرسل أي صوت ولا صور.',
@@ -128,29 +128,29 @@ class PrivacyPolicyScreen extends StatelessWidget {
     ],
     [
       'تنبيهات البريد لولي الأمر',
-      'إذا فعّل ولي الأمر تنبيهات البريد، تُرسل ملخصات عن تقدم الطفل إلى بريد ولي الأمر.',
+      tr('إذا فعّل ولي الأمر تنبيهات البريد، تُرسل ملخصات عن تقدم الطفل إلى بريد ولي الأمر.'),
     ],
     [
-      'التحكم والحذف',
+      tr('التحكم والحذف'),
       'يستطيع ولي الأمر في أي وقت: تغيير الرمز السري، وتعطيل الميكروفون والمزامنة، '
           'وحذف حساب ولي الأمر وبيانات الأطفال نهائياً من «إعدادات الحساب» داخل بوابة الوالدين.',
     ],
     [
       'التواصل',
-      'لأي سؤال أو طلب حذف بيانات: $kPrivacyContactEmail',
+      'لأي سؤال أو طلب حذف بيانات: {0}',
     ],
   ];
 
   @override
   Widget build(BuildContext context) {
     return Directionality(
-      textDirection: TextDirection.rtl,
+      textDirection: Tr.dir,
       child: Scaffold(
-        appBar: AppBar(title: const Text('سياسة الخصوصية')),
+        appBar: AppBar(title: Text(tr('سياسة الخصوصية'))),
         body: ListView(
           padding: const EdgeInsets.all(20),
           children: [
-            Text('آخر تحديث: $kPrivacyPolicyDate',
+            Text(tr('آخر تحديث: {0}', [kPrivacyPolicyDate]),
                 style: const TextStyle(fontSize: 12, color: Colors.grey)),
             const SizedBox(height: 12),
             for (final s in sections) ...[

@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 
+import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
@@ -20,12 +21,12 @@ class OnboardingScreenTestHook {
   static bool isWeakPin(String pin) => _OnboardingScreenState.isWeakPin(pin);
 }
 
-const Color _kNavy = Color(0xFF1E2A4A);
-const Color _kCream = Color(0xFFFFF7E8);
-const Color _kSkyTop = Color(0xFF6EC1FF);
-const Color _kSkyBottom = Color(0xFFCDEBFF);
-const List<Color> _kCoral = [Color(0xFFFF9577), Color(0xFFFF6B5B)];
-const List<Color> _kBlue = [Color(0xFF5BB0FA), Color(0xFF2F80ED)];
+Color _kNavy = Color(0xFF1E2A4A);
+Color _kCream = Color(0xFFFFF7E8);
+Color _kSkyTop = Color(0xFF6EC1FF);
+Color _kSkyBottom = Color(0xFFCDEBFF);
+List<Color> _kCoral = [Color(0xFFFF9577), Color(0xFFFF6B5B)];
+List<Color> _kBlue = [Color(0xFF5BB0FA), Color(0xFF2F80ED)];
 
 class _OnboardingScreenState extends State<OnboardingScreen>
     with SingleTickerProviderStateMixin {
@@ -37,17 +38,17 @@ class _OnboardingScreenState extends State<OnboardingScreen>
   bool _hidePin = true;
 
   final TextEditingController _childNameCtrl = TextEditingController();
-  String _selectedAge = '3–4 سنوات';
+  String _selectedAge = tr('3–4 سنوات');
   String _selectedGender = 'boy';
   int _dailyUsageLimitMinutes = 25;
   final TextEditingController _passcodeCtrl = TextEditingController();
 
   late final AnimationController _float = AnimationController(
     vsync: this,
-    duration: const Duration(seconds: 4),
+    duration: Duration(seconds: 4),
   )..repeat();
 
-  static const List<Map<String, String>> _ageOptions = [
+  static List<Map<String, String>> _ageOptions = [
     {
       'value': '2–3 سنوات',
       'label': '٢ – ٣ سنوات',
@@ -55,18 +56,18 @@ class _OnboardingScreenState extends State<OnboardingScreen>
     },
     {
       'value': '3–4 سنوات',
-      'label': '٣ – ٤ سنوات',
-      'sub': 'مرحلة التأسيس والنطق'
+      'label': tr('٣ – ٤ سنوات'),
+      'sub': tr('مرحلة التأسيس والنطق')
     },
     {
-      'value': '4–5 سنوات',
-      'label': '٤ – ٥ سنوات',
-      'sub': 'مرحلة المهارات والتفكير'
+      'value': tr('4–5 سنوات'),
+      'label': tr('٤ – ٥ سنوات'),
+      'sub': tr('مرحلة المهارات والتفكير')
     },
     {
-      'value': '5–6 سنوات',
-      'label': '٥ – ٦ سنوات',
-      'sub': 'مرحلة الاستعداد المدرسي'
+      'value': tr('5–6 سنوات'),
+      'label': tr('٥ – ٦ سنوات'),
+      'sub': tr('مرحلة الاستعداد المدرسي')
     },
   ];
 
@@ -106,7 +107,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
     }
     if (_currentStep == 0) {
       if (_childNameCtrl.text.trim().isEmpty) {
-        setState(() => _stepError = 'اكتب اسم الطفل أولاً للمتابعة.');
+        setState(() => _stepError = tr('اكتب اسم الطفل أولاً للمتابعة.'));
         return;
       }
       setState(() => _currentStep = 1);
@@ -121,16 +122,16 @@ class _OnboardingScreenState extends State<OnboardingScreen>
         _passcodeCtrl.text.trim().replaceAll(RegExp(r'\s+'), '');
     if (!ParentAccount.isValidParentalPinFormat(passcode)) {
       setState(() => _stepError =
-          'الرمز السري لازم يكون ٦ أرقام بالضبط (كتبت ${passcode.length} من ٦).');
+          tr('الرمز السري لازم يكون ٦ أرقام بالضبط (كتبت {0} من ٦).', [passcode.length]));
       return;
     }
     if (isWeakPin(passcode)) {
       setState(() => _stepError =
-          'الرمز ده سهل التخمين. اختار ٦ أرقام مش متتالية ومش متكررة.');
+          tr('الرمز ده سهل التخمين. اختار ٦ أرقام مش متتالية ومش متكررة.'));
       return;
     }
     if (!_termsAccepted) {
-      setState(() => _stepError = 'وافق على الشروط وسياسة الخصوصية للمتابعة.');
+      setState(() => _stepError = tr('وافق على الشروط وسياسة الخصوصية للمتابعة.'));
       return;
     }
 
@@ -160,7 +161,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
   Widget build(BuildContext context) {
     final bool welcome = _currentStep == -1;
     return Directionality(
-      textDirection: TextDirection.rtl,
+      textDirection: Tr.dir,
       child: Theme(
         data: Theme.of(context).copyWith(brightness: Brightness.light),
         child: Scaffold(
@@ -184,7 +185,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                       onPressed: _isSaving ? null : _goBack,
                       icon: const Icon(Icons.arrow_back_rounded,
                           color: Colors.white, size: 28),
-                      tooltip: 'رجوع',
+                      tooltip: tr('رجوع'),
                     ),
                   ),
                 Positioned(
@@ -193,7 +194,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                   right: 0,
                   bottom: 0,
                   child: Container(
-                    decoration: const BoxDecoration(
+                    decoration: BoxDecoration(
                       color: _kCream,
                       borderRadius:
                           BorderRadius.vertical(top: Radius.circular(34)),
@@ -305,8 +306,8 @@ class _OnboardingScreenState extends State<OnboardingScreen>
       child: Column(
         children: [
           const Spacer(),
-          const Text(
-            'أهلاً بيك في عالم حنين!',
+          Text(
+            tr('أهلاً بيك في عالم حنين!'),
             textAlign: TextAlign.center,
             style: TextStyle(
                 fontSize: 26, fontWeight: FontWeight.w900, color: _kNavy),
@@ -320,7 +321,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
           ),
           const Spacer(),
           _GradientButton(
-            label: 'يلا نبدأ!',
+            label: tr('يلا نبدأ!'),
             colors: _kCoral,
             icon: Icons.arrow_back_rounded,
             onPressed: _next,
@@ -334,11 +335,11 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                     height: 16,
                     child: CircularProgressIndicator(strokeWidth: 2))
                 : const Icon(Icons.account_circle_outlined, size: 20),
-            label: const Text('عندي حساب بالفعل (دخول بجوجل)',
+            label: Text(tr('عندي حساب بالفعل (دخول بجوجل)'),
                 style: TextStyle(fontSize: 14, fontWeight: FontWeight.w700)),
           ),
           const SizedBox(height: 4),
-          const Text('بإشراف الآباء والأمهات',
+          Text(tr('بإشراف الآباء والأمهات'),
               style: TextStyle(fontSize: 12, color: Color(0xFF7A86A6))),
         ],
       ),
@@ -403,7 +404,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
         Padding(
           padding: const EdgeInsets.fromLTRB(24, 4, 24, 16),
           child: _GradientButton(
-            label: last ? 'ابدأ رحلتي مع حنين' : 'التالي',
+            label: last ? tr('ابدأ رحلتي مع حنين') : tr('التالي'),
             colors: last ? _kBlue : _kCoral,
             loading: _isSaving,
             onPressed: _isSaving ? null : _next,
@@ -417,7 +418,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
         children: [
           Text(t,
               textAlign: TextAlign.center,
-              style: const TextStyle(
+              style: TextStyle(
                   fontSize: 22, fontWeight: FontWeight.w900, color: _kNavy)),
           const SizedBox(height: 4),
           Text(sub,
@@ -453,13 +454,13 @@ class _OnboardingScreenState extends State<OnboardingScreen>
       case 0:
         return Column(
           children: [
-            _title('مين البطل الصغير؟', 'نخصص الترحيب والدروس والقصص باسمه'),
+            _title(tr('مين البطل الصغير؟'), tr('نخصص الترحيب والدروس والقصص باسمه')),
             TextField(
               controller: _childNameCtrl,
-              style: const TextStyle(color: _kNavy, fontSize: 16),
+              style: TextStyle(color: _kNavy, fontSize: 16),
               textInputAction: TextInputAction.done,
-              decoration: _decoration('اسم الطفل', Icons.badge_outlined,
-                  hint: 'مثال: فارس أو ليلى'),
+              decoration: _decoration(tr('اسم الطفل'), Icons.badge_outlined,
+                  hint: tr('مثال: فارس أو ليلى')),
               onChanged: (_) => setState(() {}),
             ),
             const SizedBox(height: 16),
@@ -467,11 +468,11 @@ class _OnboardingScreenState extends State<OnboardingScreen>
               children: [
                 Expanded(
                     child: _genderCard(
-                        'boy', 'ولد', 'assets/avatars/boy_front.png')),
+                        'boy', tr('ولد'), 'assets/avatars/boy_front.png')),
                 const SizedBox(width: 12),
                 Expanded(
                     child: _genderCard(
-                        'girl', 'بنت', 'assets/avatars/girl_front.png')),
+                        'girl', tr('بنت'), 'assets/avatars/girl_front.png')),
               ],
             ),
           ],
@@ -481,7 +482,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
         return Column(
           children: [
             _title('كام سنة ${n.isEmpty ? 'طفلك' : n}؟',
-                'بنضبط صعوبة الألعاب والدروس على حسب السن'),
+                tr('بنضبط صعوبة الألعاب والدروس على حسب السن')),
             for (final o in _ageOptions) _ageTile(o),
           ],
         );
@@ -489,7 +490,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
         return Column(
           children: [
             _title(
-                'وقت اللعب اليومي', 'حدد الدقائق المسموحة يومياً لراحة عينيه'),
+                tr('وقت اللعب اليومي'), tr('حدد الدقائق المسموحة يومياً لراحة عينيه')),
             Container(
               padding: const EdgeInsets.all(18),
               decoration: BoxDecoration(
@@ -499,12 +500,12 @@ class _OnboardingScreenState extends State<OnboardingScreen>
               ),
               child: Column(
                 children: [
-                  Text('$_dailyUsageLimitMinutes دقيقة',
+                  Text(tr('{0} دقيقة', [_dailyUsageLimitMinutes]),
                       style: const TextStyle(
                           fontSize: 30,
                           fontWeight: FontWeight.w900,
                           color: Color(0xFFFF6B5B))),
-                  const Text('في اليوم',
+                  Text(tr('في اليوم'),
                       style: TextStyle(color: Color(0xFF6B7899))),
                   Slider(
                     value: _dailyUsageLimitMinutes.toDouble(),
@@ -512,7 +513,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                     max: 60,
                     divisions: 11,
                     activeColor: const Color(0xFFFF6B5B),
-                    label: '$_dailyUsageLimitMinutes دقيقة',
+                    label: tr('{0} دقيقة', [_dailyUsageLimitMinutes]),
                     onChanged: (v) =>
                         setState(() => _dailyUsageLimitMinutes = v.round()),
                   ),
@@ -524,18 +525,18 @@ class _OnboardingScreenState extends State<OnboardingScreen>
       default:
         return Column(
           children: [
-            _title('الرمز السري للوالدين',
-                'بيفتح قسم الوالدين: الوقت والتقارير والإعدادات'),
+            _title(tr('الرمز السري للوالدين'),
+                tr('بيفتح قسم الوالدين: الوقت والتقارير والإعدادات')),
             TextField(
               controller: _passcodeCtrl,
               keyboardType: TextInputType.number,
               obscureText: _hidePin,
               maxLength: 6,
               inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-              style: const TextStyle(
+              style: TextStyle(
                   color: _kNavy, fontSize: 20, letterSpacing: 6),
               decoration:
-                  _decoration('٦ أرقام', Icons.lock_outline_rounded).copyWith(
+                  _decoration(tr('٦ أرقام'), Icons.lock_outline_rounded).copyWith(
                 suffixIcon: IconButton(
                   icon: Icon(_hidePin
                       ? Icons.visibility_off_outlined
@@ -545,9 +546,9 @@ class _OnboardingScreenState extends State<OnboardingScreen>
               ),
             ),
             const SizedBox(height: 4),
-            const Align(
+            Align(
               alignment: AlignmentDirectional.centerStart,
-              child: Text('اختار رقم تفتكره ومش سهل على الطفل يخمنه.',
+              child: Text(tr('اختار رقم تفتكره ومش سهل على الطفل يخمنه.'),
                   style: TextStyle(fontSize: 12, color: Color(0xFF6B7899))),
             ),
             const SizedBox(height: 10),
@@ -562,15 +563,15 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                   child: Wrap(
                     crossAxisAlignment: WrapCrossAlignment.center,
                     children: [
-                      const Text('أوافق على ',
+                      Text(tr('أوافق على '),
                           style: TextStyle(fontSize: 13, color: _kNavy)),
                       GestureDetector(
                         onTap: () => Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (_) => const PrivacyPolicyScreen()),
+                              builder: (_) => PrivacyPolicyScreen()),
                         ),
-                        child: const Text('سياسة الخصوصية',
+                        child: Text(tr('سياسة الخصوصية'),
                             style: TextStyle(
                                 fontSize: 13,
                                 color: Color(0xFF2F80ED),
@@ -621,7 +622,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                       size: 18, color: Color(0xFFFF6B5B)),
                 if (sel) const SizedBox(width: 4),
                 Text(label,
-                    style: const TextStyle(
+                    style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w800,
                         color: _kNavy)),
@@ -656,7 +657,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(o['label']!,
-                        style: const TextStyle(
+                        style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w800,
                             color: _kNavy)),
@@ -809,7 +810,7 @@ class _SkyPainter extends CustomPainter {
     canvas.drawRect(
       r,
       Paint()
-        ..shader = const LinearGradient(
+        ..shader = LinearGradient(
           colors: [_kSkyTop, _kSkyBottom],
           begin: Alignment.topCenter,
           end: Alignment.bottomCenter,

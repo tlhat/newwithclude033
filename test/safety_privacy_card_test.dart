@@ -8,7 +8,7 @@ void main() {
     tester.view.physicalSize = const Size(800, 6000);
     tester.view.devicePixelRatio = 1.0;
     addTearDown(tester.view.reset);
-    await tester.pumpWidget(const MaterialApp(home: PrivacyPolicyScreen()));
+    await tester.pumpWidget(MaterialApp(home: PrivacyPolicyScreen()));
     expect(find.text('سياسة الخصوصية'), findsOneWidget);
     expect(find.text('ما لا نفعله'), findsOneWidget);
     // Every section has a title and text.

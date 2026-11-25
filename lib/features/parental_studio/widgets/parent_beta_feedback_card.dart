@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
 /// Parent-Only Beta Feedback, Version/Environment Info & Feature Flags Card
@@ -6,7 +7,7 @@ import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 class ParentBetaFeedbackCard extends StatefulWidget {
   final AppStateManager appState;
 
-  const ParentBetaFeedbackCard({
+  ParentBetaFeedbackCard({
     super.key,
     required this.appState,
   });
@@ -17,14 +18,14 @@ class ParentBetaFeedbackCard extends StatefulWidget {
 
 class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
   final TextEditingController _notesCtrl = TextEditingController();
-  String _selectedCategory = 'مشكلة استخدام';
+  String _selectedCategory = tr('مشكلة استخدام');
 
-  static const List<String> _categories = [
+  static List<String> _categories = [
     'عطل حرج',
     'مشكلة استخدام',
     'ترجمة',
-    'محتوى',
-    'اقتراح',
+    tr('محتوى'),
+    tr('اقتراح'),
   ];
 
   @override
@@ -57,14 +58,14 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              const Row(
+              Row(
                 children: [
                   Icon(Icons.bug_report_rounded,
                       color: AppDesignTokens.infoBlue),
                   SizedBox(width: 10),
                   Expanded(
                     child: Text(
-                      'معلومات النسخة وملاحظات ولي الأمر (Beta)',
+                      tr('معلومات النسخة وملاحظات ولي الأمر (Beta)'),
                       style: TextStyle(
                         fontSize: 16.5,
                         fontWeight: FontWeight.bold,
@@ -76,15 +77,15 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
               ),
               const SizedBox(height: 8),
               Text(
-                'الإصدار والبيئة: ${env.buildInfoSummary} • اللغة: ${widget.appState.localeController.uiLanguageCode.toUpperCase()}',
+                tr('الإصدار والبيئة: {0} • اللغة: {1}', [env.buildInfoSummary, widget.appState.localeController.uiLanguageCode.toUpperCase()]),
                 style: const TextStyle(fontSize: 12.5, color: Colors.white70),
               ),
               const SizedBox(height: 14),
               DropdownButtonFormField<String>(
                 value: _selectedCategory,
                 dropdownColor: const Color(0xFF0F172A),
-                decoration: const InputDecoration(
-                  labelText: 'تصنيف الملاحظة',
+                decoration: InputDecoration(
+                  labelText: tr('تصنيف الملاحظة'),
                 ),
                 items: _categories
                     .map((c) => DropdownMenuItem(value: c, child: Text(c)))
@@ -99,9 +100,9 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
               TextField(
                 controller: _notesCtrl,
                 maxLines: 3,
-                decoration: const InputDecoration(
-                  labelText: 'وصف المشكلة أو الاقتراح (بدون بيانات شخصية للطفل)',
-                  hintText: 'اكتب الخطوات أو الشاشة التي ظهرت فيها الملاحظة...',
+                decoration: InputDecoration(
+                  labelText: tr('وصف المشكلة أو الاقتراح (بدون بيانات شخصية للطفل)'),
+                  hintText: tr('اكتب الخطوات أو الشاشة التي ظهرت فيها الملاحظة...'),
                 ),
               ),
               const SizedBox(height: 12),
@@ -119,21 +120,21 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
                     _notesCtrl.clear();
                     if (context.mounted) {
                       ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(
-                          content: Text('✅ تم تسجيل ملاحظتك بنجاح في سجل الدعم.'),
+                        SnackBar(
+                          content: Text(tr('✅ تم تسجيل ملاحظتك بنجاح في سجل الدعم.')),
                         ),
                       );
                     }
                   },
                   icon: const Icon(Icons.send_rounded),
-                  label: const Text('إرسال الملاحظة لفريق التطوير'),
+                  label: Text(tr('إرسال الملاحظة لفريق التطوير')),
                 ),
               ),
               const SizedBox(height: 12),
               SwitchListTile(
                 contentPadding: EdgeInsets.zero,
-                title: const Text(
-                  'تفعيل تلميحات التعلم التكيفي التجريبية',
+                title: Text(
+                  tr('تفعيل تلميحات التعلم التكيفي التجريبية'),
                   style: TextStyle(fontSize: 13.5, color: Colors.white),
                 ),
                 value: flags.enableExperimentalAdaptiveHints,
@@ -145,12 +146,12 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
                 const SizedBox(height: 16),
                 const Divider(color: Colors.white24),
                 const SizedBox(height: 8),
-                const Row(
+                Row(
                   children: [
                     Icon(Icons.history_rounded, size: 18, color: Colors.white70),
                     SizedBox(width: 6),
                     Text(
-                      'سجل الملاحظات المرسلة للمطورين:',
+                      tr('سجل الملاحظات المرسلة للمطورين:'),
                       style: TextStyle(
                         fontSize: 13.5,
                         fontWeight: FontWeight.bold,
@@ -163,13 +164,13 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
                 ...widget.appState.betaFeedbackLog.take(4).map((entry) {
                   final String status = entry['status'] ?? 'Pending';
                   Color statusColor = const Color(0xFFF59E0B);
-                  String statusLabel = 'قيد الانتظار (Pending)';
+                  String statusLabel = tr('قيد الانتظار (Pending)');
                   if (status == 'Sent') {
                     statusColor = const Color(0xFF10B981);
-                    statusLabel = 'تم الإرسال (Sent)';
+                    statusLabel = tr('تم الإرسال (Sent)');
                   } else if (status == 'Failed') {
                     statusColor = const Color(0xFFEF4444);
-                    statusLabel = 'فشل الإرسال (Failed)';
+                    statusLabel = tr('فشل الإرسال (Failed)');
                   }
 
                   return Container(
@@ -236,8 +237,8 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
                               onPressed: () => widget.appState
                                   .retrySendingBetaFeedback(entry['id'] ?? ''),
                               icon: const Icon(Icons.refresh_rounded, size: 14),
-                              label: const Text(
-                                'إعادة المحاولة',
+                              label: Text(
+                                tr('إعادة المحاولة'),
                                 style: TextStyle(fontSize: 11.5),
                               ),
                             ),

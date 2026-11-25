@@ -1,3 +1,4 @@
+import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
@@ -39,7 +40,9 @@ class _HaneenKidsAppState extends State<HaneenKidsApp>
         final activeChild = widget.appState.currentAccount?.activeChild;
         final bool highContrast = activeChild?.highContrastMode ?? false;
 
+        Tr.lang = widget.appState.localeController.uiLanguageCode;
         return MaterialApp(
+          key: ValueKey<String>(Tr.lang),
           title: 'Haneen Kids',
           debugShowCheckedModeBanner: false,
           locale: widget.appState.localeController.uiLocale,

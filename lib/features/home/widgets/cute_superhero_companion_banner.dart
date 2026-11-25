@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
@@ -85,7 +86,7 @@ class _CuteSuperheroCompanionBannerState
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Row(
+                  Row(
                     children: [
                       Text('🦸‍♂️✨', style: TextStyle(fontSize: 28)),
                       SizedBox(width: 10),
@@ -94,7 +95,7 @@ class _CuteSuperheroCompanionBannerState
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'حنين وأصدقاؤك الأبطال الخارقون (تفاعل صوتي و3D)',
+                              tr('حنين وأصدقاؤك الأبطال الخارقون (تفاعل صوتي و3D)'),
                               style: TextStyle(
                                 fontSize: 16,
                                 fontWeight: FontWeight.bold,
@@ -102,7 +103,7 @@ class _CuteSuperheroCompanionBannerState
                               ),
                             ),
                             Text(
-                              'اضغط على حنين أو أي بطل ليستمع طفلك للتشجيع الصوتي والنصائح الذكية!',
+                              tr('اضغط على حنين أو أي بطل ليستمع طفلك للتشجيع الصوتي والنصائح الذكية!'),
                               style: TextStyle(
                                   fontSize: 12, color: Colors.white70),
                             ),
@@ -133,8 +134,8 @@ class _CuteSuperheroCompanionBannerState
                         );
                       },
                       icon: const Icon(Icons.palette_rounded, size: 18),
-                      label: const Text(
-                        'غرفة تخصيص شخصيتي (ولد / بنت) 🎨',
+                      label: Text(
+                        tr('غرفة تخصيص شخصيتي (ولد / بنت) 🎨'),
                         style: TextStyle(
                             fontSize: 13, fontWeight: FontWeight.bold),
                       ),
@@ -157,7 +158,7 @@ class _CuteSuperheroCompanionBannerState
                               _isJumping = true;
                             });
                             CalmVoiceService.instance.speakCalmly(
-                              '${h.nameAr} يقول لك: $alertMsg',
+                              tr('{0} يقول لك: {1}', [h.nameAr, alertMsg]),
                               allowSpeechForRepeatGame: true,
                             );
                             setModalState(() {});
@@ -225,7 +226,7 @@ class _CuteSuperheroCompanionBannerState
                                                   BorderRadius.circular(10),
                                             ),
                                             child: Text(
-                                              '🎙️ ناطق',
+                                              tr('🎙️ ناطق'),
                                               style: TextStyle(
                                                 fontSize: 10,
                                                 color: h.primaryColor,
@@ -270,7 +271,7 @@ class _CuteSuperheroCompanionBannerState
     final hero =
         kCuteSuperheroCharacters[_heroIndex % kCuteSuperheroCharacters.length];
     final String companionName = isCustomCompanion
-        ? (child.name.isNotEmpty ? 'شخصية ${child.name}' : 'شخصيتي المرافقة')
+        ? (child.name.isNotEmpty ? tr('شخصية {0}', [child.name]) : tr('شخصيتي المرافقة'))
         : hero.nameAr;
     final bool isAr = Localizations.localeOf(context).languageCode == 'ar';
     String? greeting;
@@ -363,7 +364,7 @@ class _CuteSuperheroCompanionBannerState
                               Flexible(
                                 child: Text(
                                   isCustomCompanion
-                                      ? '• رفيقك الدائم'
+                                      ? tr('• رفيقك الدائم')
                                       : '• ${hero.titleBadge}',
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
@@ -393,7 +394,7 @@ class _CuteSuperheroCompanionBannerState
             const SizedBox(width: 4),
             IconButton(
               visualDensity: VisualDensity.compact,
-              tooltip: 'استمع لتوجيه حنين الصوتي الذكي',
+              tooltip: tr('استمع لتوجيه حنين الصوتي الذكي'),
               onPressed: _triggerHeroWaveAndCheer,
               icon: const Icon(
                 Icons.record_voice_over_rounded,

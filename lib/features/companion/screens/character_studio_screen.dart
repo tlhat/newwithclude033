@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:haneen_kids_vod/app/app_theme.dart';
 import 'package:haneen_kids_vod/core/services/calm_voice_service.dart';
 import 'package:haneen_kids_vod/features/companion/models/avatar_customization_model.dart';
@@ -129,7 +130,7 @@ class _CharacterStudioScreenState extends State<CharacterStudioScreen> {
         });
         CalmVoiceService.instance.speakCalmly(
           isAr
-              ? 'مبروك يا بطل! تم فتح $itemName بنجاح!'
+              ? tr('مبروك يا بطل! تم فتح {0} بنجاح!', [itemName])
               : 'Awesome! $itemName unlocked successfully!',
           allowSpeechForRepeatGame: true,
         );
@@ -183,7 +184,7 @@ class _CharacterStudioScreenState extends State<CharacterStudioScreen> {
       final isAr = Localizations.localeOf(context).languageCode == 'ar';
       CalmVoiceService.instance.speakCalmly(
         isAr
-            ? 'شخصيتك رائعة جداً! سأكون معك دائماً في كل مغامرات حنين!'
+            ? tr('شخصيتك رائعة جداً! سأكون معك دائماً في كل مغامرات حنين!')
             : 'Your character looks amazing! I will accompany you everywhere!',
         allowSpeechForRepeatGame: true,
       );
@@ -251,7 +252,7 @@ class _CharacterStudioScreenState extends State<CharacterStudioScreen> {
                           onTap: () {
                             CalmVoiceService.instance.speakCalmly(
                               isAr
-                                  ? 'أنا شخصيتك المرافقة! اختر لي أجمل الملابس والتسريحات.'
+                                  ? tr('أنا شخصيتك المرافقة! اختر لي أجمل الملابس والتسريحات.')
                                   : 'I am your companion! Choose the coolest styles for me.',
                               allowSpeechForRepeatGame: true,
                             );
@@ -265,12 +266,12 @@ class _CharacterStudioScreenState extends State<CharacterStudioScreen> {
                             segments: [
                               ButtonSegment(
                                 value: CompanionViewAngle.front,
-                                label: Text(isAr ? 'أمامي' : 'Front', style: const TextStyle(fontSize: 10)),
+                                label: Text(isAr ? tr('أمامي') : 'Front', style: const TextStyle(fontSize: 10)),
                                 icon: const Icon(Icons.face, size: 14),
                               ),
                               ButtonSegment(
                                 value: CompanionViewAngle.threeQuarter,
-                                label: Text(isAr ? 'مائل' : '3/4', style: const TextStyle(fontSize: 10)),
+                                label: Text(isAr ? tr('مائل') : '3/4', style: const TextStyle(fontSize: 10)),
                                 icon: const Icon(Icons.threed_rotation, size: 14),
                               ),
                             ],
@@ -327,7 +328,7 @@ class _CharacterStudioScreenState extends State<CharacterStudioScreen> {
                       _buildCategoryChip(
                         category: StudioCategory.accessory,
                         icon: '👑',
-                        label: isAr ? 'الإضافات' : 'Extras',
+                        label: isAr ? tr('الإضافات') : 'Extras',
                       ),
                     ],
                   ),
@@ -433,15 +434,15 @@ class _CharacterStudioScreenState extends State<CharacterStudioScreen> {
               _buildGenderCard(
                 gender: CompanionGender.boy,
                 icon: '👦',
-                title: isAr ? 'ولد' : 'Boy',
-                subtitle: isAr ? 'بطل المغامرات' : 'Hero Boy',
+                title: isAr ? tr('ولد') : 'Boy',
+                subtitle: isAr ? tr('بطل المغامرات') : 'Hero Boy',
               ),
               const SizedBox(width: 12),
               _buildGenderCard(
                 gender: CompanionGender.girl,
                 icon: '👧',
-                title: isAr ? 'بنت' : 'Girl',
-                subtitle: isAr ? 'بطلة الذكاء' : 'Clever Girl',
+                title: isAr ? tr('بنت') : 'Girl',
+                subtitle: isAr ? tr('بطلة الذكاء') : 'Clever Girl',
               ),
             ],
           ),
@@ -559,7 +560,7 @@ class _CharacterStudioScreenState extends State<CharacterStudioScreen> {
                         )
                       else
                         Text(
-                          isAr ? 'مفتوح' : 'Unlocked',
+                          isAr ? tr('مفتوح') : 'Unlocked',
                           style: TextStyle(
                             fontSize: 10,
                             color: Colors.green.shade400,

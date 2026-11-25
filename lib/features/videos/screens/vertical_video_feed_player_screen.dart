@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
@@ -168,7 +169,7 @@ class _VerticalVideoFeedPlayerScreenState
 
   void _openSmartVoiceAssistantModal() {
     final child = widget.appState.currentAccount?.activeChild;
-    final String childName = child?.name ?? 'بطل حنين';
+    final String childName = child?.name ?? tr('بطل حنين');
     widget.appState.triggerVoiceAssistantGreetingAndSuggestion();
 
     showModalBottomSheet(
@@ -208,15 +209,15 @@ class _VerticalVideoFeedPlayerScreenState
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'المساعد الذكي — نصوص عائمة ($childName)',
+                              tr('المساعد الذكي — نصوص عائمة ({0})', [childName]),
                               style: const TextStyle(
                                 fontSize: 17,
                                 fontWeight: FontWeight.bold,
                                 color: Colors.white,
                               ),
                             ),
-                            const Text(
-                              'يظهر رسائل تشجيعية ونصائح عائمة هادئة على الشاشة بدون صوت',
+                            Text(
+                              tr('يظهر رسائل تشجيعية ونصائح عائمة هادئة على الشاشة بدون صوت'),
                               style: TextStyle(
                                   fontSize: 12, color: Colors.white70),
                             ),
@@ -244,8 +245,8 @@ class _VerticalVideoFeedPlayerScreenState
                     ),
                   ),
                   const SizedBox(height: 16),
-                  const Text(
-                    '✨ القصة المقترحة لك الآن:',
+                  Text(
+                    tr('✨ القصة المقترحة لك الآن:'),
                     style: TextStyle(
                       fontSize: 14,
                       fontWeight: FontWeight.bold,
@@ -280,13 +281,13 @@ class _VerticalVideoFeedPlayerScreenState
                           Navigator.pop(ctx);
                           _jumpToSuggestedVideo(suggested);
                         },
-                        child: const Text('شاهد الآن'),
+                        child: Text(tr('شاهد الآن')),
                       ),
                     ),
                   ),
                   const SizedBox(height: 14),
-                  const Text(
-                    '🎧 اطلب من المساعد الصوتي أن يساعدك:',
+                  Text(
+                    tr('🎧 اطلب من المساعد الصوتي أن يساعدك:'),
                     style: TextStyle(fontSize: 13, color: Colors.white70),
                   ),
                   const SizedBox(height: 10),
@@ -297,7 +298,7 @@ class _VerticalVideoFeedPlayerScreenState
                       ActionChip(
                         backgroundColor: const Color(0xFF0F172A),
                         avatar: const Text('🌙'),
-                        label: const Text('اقترح قصة نوم هادئة'),
+                        label: Text(tr('اقترح قصة نوم هادئة')),
                         onPressed: () {
                           final bedtimeVideo =
                               widget.appState.videos.firstWhere(
@@ -308,7 +309,7 @@ class _VerticalVideoFeedPlayerScreenState
                             widget.appState.suggestedVideoForChild =
                                 bedtimeVideo;
                             widget.appState.currentAssistantBannerMessage =
-                                'اخترت لك قصة النوم الهادئة «${bedtimeVideo.title}». تنفس بعمق واستمع بهدوء يا $childName.';
+                                tr('اخترت لك قصة النوم الهادئة «{0}». تنفس بعمق واستمع بهدوء يا {1}.', [bedtimeVideo.title, childName]);
                           });
                           CalmVoiceService.instance.speakCalmly(
                             widget.appState.currentAssistantBannerMessage,
@@ -316,9 +317,9 @@ class _VerticalVideoFeedPlayerScreenState
                         },
                       ),
                       ActionChip(
-                        backgroundColor: const Color(0xFF0F172A),
-                        avatar: const Text('🗣️'),
-                        label: const Text('دربني على جملة عربية فصيحة'),
+                        backgroundColor: Color(0xFF0F172A),
+                        avatar: Text('🗣️'),
+                        label: Text(tr('دربني على جملة عربية فصيحة')),
                         onPressed: () {
                           final arabicVideo = widget.appState.videos.firstWhere(
                             (v) => v.category == 'arabic',
@@ -328,21 +329,21 @@ class _VerticalVideoFeedPlayerScreenState
                             widget.appState.suggestedVideoForChild =
                                 arabicVideo;
                             widget.appState.currentAssistantBannerMessage =
-                                'هيا نردد معاً بهدوء: ${arabicVideo.repeatPhrase}';
+                                tr('هيا نردد معاً بهدوء: {0}', [arabicVideo.repeatPhrase]);
                           });
                           CalmVoiceService.instance.speakCalmly(
-                            'هيا نردد معاً بهدوء يا $childName: ${arabicVideo.repeatPhrase}',
+                            tr('هيا نردد معاً بهدوء يا {0}: {1}', [childName, arabicVideo.repeatPhrase]),
                             rate: 0.34,
                           );
                         },
                       ),
                       ActionChip(
-                        backgroundColor: const Color(0xFF0F172A),
-                        avatar: const Text('🧘'),
-                        label: const Text('تمرين التنفس والهدوء'),
+                        backgroundColor: Color(0xFF0F172A),
+                        avatar: Text('🧘'),
+                        label: Text(tr('تمرين التنفس والهدوء')),
                         onPressed: () {
-                          const calmBreathing =
-                              'يا بطل حنين، خذ شهيقاً عميقاً وهادئاً من أنفك كأنك تشم وردة جميلة... والآن أخرج الهواء ببطء وابتسم!';
+                          final String calmBreathing =
+                              tr('يا بطل حنين، خذ شهيقاً عميقاً وهادئاً من أنفك كأنك تشم وردة جميلة... والآن أخرج الهواء ببطء وابتسم!');
                           setModalState(() {
                             widget.appState.currentAssistantBannerMessage =
                                 calmBreathing;
@@ -352,7 +353,7 @@ class _VerticalVideoFeedPlayerScreenState
                       ActionChip(
                         backgroundColor: const Color(0xFF0F172A),
                         avatar: const Text('🎓'),
-                        label: const Text('افتح أكاديمية حنين التعليمية'),
+                        label: Text(tr('افتح أكاديمية حنين التعليمية')),
                         onPressed: () {
                           Navigator.pop(ctx);
                           _openHaneenAcademy(initialTab: 0);
@@ -361,7 +362,7 @@ class _VerticalVideoFeedPlayerScreenState
                       ActionChip(
                         backgroundColor: const Color(0xFF0F172A),
                         avatar: const Text('📖'),
-                        label: const Text('اقرأ لي قصة تفاعلية'),
+                        label: Text(tr('اقرأ لي قصة تفاعلية')),
                         onPressed: () {
                           Navigator.pop(ctx);
                           _openHaneenAcademy(initialTab: 1);
@@ -369,23 +370,23 @@ class _VerticalVideoFeedPlayerScreenState
                       ),
                       ActionChip(
                         backgroundColor: const Color(0xFF0F172A),
-                        avatar: const Text('🗺️'),
-                        label: const Text('خريطة النجوم والمكافآت'),
+                        avatar: Text('🗺️'),
+                        label: Text(tr('خريطة النجوم والمكافآت')),
                         onPressed: () {
                           Navigator.pop(ctx);
                           _openHaneenAcademy(initialTab: 2);
                         },
                       ),
                       ActionChip(
-                        backgroundColor: const Color(0xFF0F172A),
-                        avatar: const Text('❓'),
-                        label: const Text('اسألني سؤالاً علمياً بسيطاً'),
+                        backgroundColor: Color(0xFF0F172A),
+                        avatar: Text('❓'),
+                        label: Text(tr('اسألني سؤالاً علمياً بسيطاً')),
                         onPressed: () {
-                          const List<String> safeQaList = [
-                            '🦋 سؤال وجواب: لماذا تطير الفراشة بين الأزهار؟ لجمع الرحيق اللذيذ ومساعدة النباتات على النمو!',
-                            '🌞 سؤال وجواب: ما فائدة الشمس صباحاً؟ تمنحنا الدفء والضوء وتساعد النباتات الخضراء على النمو!',
-                            '🦷 سؤال وجواب: لماذا نغسل أسناننا قبل النوم؟ لنحافظ عليها نظيفة وقوية وبيضاء كاللؤلؤ!',
-                            '🛡️ تذكير الأمان: أنا مساعد برمجي ذكي للتعلم؛ لا أطلب أبداً اسمك الكامل أو عنوانك أو مدرستك، وإذا خطر ببالك سؤال كبير فاسأل ماما أو بابا دائماً!',
+                          List<String> safeQaList = [
+                            tr('🦋 سؤال وجواب: لماذا تطير الفراشة بين الأزهار؟ لجمع الرحيق اللذيذ ومساعدة النباتات على النمو!'),
+                            tr('🌞 سؤال وجواب: ما فائدة الشمس صباحاً؟ تمنحنا الدفء والضوء وتساعد النباتات الخضراء على النمو!'),
+                            tr('🦷 سؤال وجواب: لماذا نغسل أسناننا قبل النوم؟ لنحافظ عليها نظيفة وقوية وبيضاء كاللؤلؤ!'),
+                            tr('🛡️ تذكير الأمان: أنا مساعد برمجي ذكي للتعلم؛ لا أطلب أبداً اسمك الكامل أو عنوانك أو مدرستك، وإذا خطر ببالك سؤال كبير فاسأل ماما أو بابا دائماً!'),
                           ];
                           final nextQa = safeQaList[
                               DateTime.now().second % safeQaList.length];
@@ -412,7 +413,7 @@ class _VerticalVideoFeedPlayerScreenState
     PronunciationEvaluation? evaluation;
 
     CalmVoiceService.instance.speakCalmly(
-      'استمع جيداً يا بطل ثم ردد معي بهدوء: ${item.repeatPhrase}',
+      tr('استمع جيداً يا بطل ثم ردد معي بهدوء: {0}', [item.repeatPhrase]),
       rate: 0.35,
     );
 
@@ -437,12 +438,12 @@ class _VerticalVideoFeedPlayerScreenState
 
               if (result.isCorrect) {
                 await CalmVoiceService.instance.speakCalmly(
-                  '${result.correctionAdvice} هيا نرددها معاً مرة أخرى بصوت هادئ: ${item.repeatPhrase}',
+                  tr('{0} هيا نرددها معاً مرة أخرى بصوت هادئ: {1}', [result.correctionAdvice, item.repeatPhrase]),
                   rate: 0.36,
                 );
               } else {
                 await CalmVoiceService.instance.speakCalmly(
-                  '${result.correctionAdvice} استمع لي وردد معي كلمة بكلمة: ${item.repeatPhrase}',
+                  tr('{0} استمع لي وردد معي كلمة بكلمة: {1}', [result.correctionAdvice, item.repeatPhrase]),
                   rate: 0.32,
                 );
               }
@@ -478,7 +479,7 @@ class _VerticalVideoFeedPlayerScreenState
                             );
                           },
                           icon: const Icon(Icons.hearing_rounded),
-                          label: const Text('استمع للنطق الهادئ 🔊'),
+                          label: Text(tr('استمع للنطق الهادئ 🔊')),
                         ),
                         const SizedBox(width: 10),
                         OutlinedButton.icon(
@@ -491,13 +492,13 @@ class _VerticalVideoFeedPlayerScreenState
                           ),
                           onPressed: () {
                             CalmVoiceService.instance.speakCalmly(
-                              'هيا نقرأ معاً ببطء وهدوء: ${item.repeatPhrase}',
+                              tr('هيا نقرأ معاً ببطء وهدوء: {0}', [item.repeatPhrase]),
                               rate: 0.30,
                               allowSpeechForRepeatGame: true,
                             );
                           },
                           icon: const Icon(Icons.record_voice_over_rounded),
-                          label: const Text('ردد معي بالصوت الهادئ'),
+                          label: Text(tr('ردد معي بالصوت الهادئ')),
                         ),
                       ],
                     ),
@@ -525,8 +526,8 @@ class _VerticalVideoFeedPlayerScreenState
                       onTap: () async {
                         if (!(widget.appState.currentAccount?.activeChild.allowMicrophone ?? true)) {
                           ScaffoldMessenger.of(context).showSnackBar(
-                            const SnackBar(
-                              content: Text('الميكروفون معطل لهذا الطفل من إعدادات الرقابة الأبوية.'),
+                            SnackBar(
+                              content: Text(tr('الميكروفون معطل لهذا الطفل من إعدادات الرقابة الأبوية.')),
                             ),
                           );
                           return;
@@ -570,7 +571,7 @@ class _VerticalVideoFeedPlayerScreenState
                               SnackBar(
                                 content: Text(
                                   micDeniedMessage ??
-                                      'الميكروفون غير متاح حالياً؛ يمكنك الاستماع للنطق الصحيح والترديد الحر.',
+                                      tr('الميكروفون غير متاح حالياً؛ يمكنك الاستماع للنطق الصحيح والترديد الحر.'),
                                 ),
                                 backgroundColor: const Color(0xFFF59E0B),
                               ),
@@ -605,10 +606,10 @@ class _VerticalVideoFeedPlayerScreenState
                     const SizedBox(height: 8),
                     Text(
                       !(widget.appState.currentAccount?.activeChild.allowMicrophone ?? true)
-                          ? '🔒 الميكروفون معطل حالياً من إعدادات ولي الأمر (وضع الاستماع والترديد الحر فقط)'
+                          ? tr('🔒 الميكروفون معطل حالياً من إعدادات ولي الأمر (وضع الاستماع والترديد الحر فقط)')
                           : (isListeningMic
-                              ? '🎙️ تحدث الآن بصوت واضح... أنا أستمع لنطقك'
-                              : 'اضغط على الميكروفون للتدرب على الاستماع والتكرار (ملاحظة لولي الأمر: يعتمد هذا النشاط على التعرف اللغوي التشجيعي للكلمات ولا يُعد تشخيصاً طبياً لمخارج الحروف، ولا يتم حفظ أي تسجيل صوتي):'),
+                              ? tr('🎙️ تحدث الآن بصوت واضح... أنا أستمع لنطقك')
+                              : tr('اضغط على الميكروفون للتدرب على الاستماع والتكرار (ملاحظة لولي الأمر: يعتمد هذا النشاط على التعرف اللغوي التشجيعي للكلمات ولا يُعد تشخيصاً طبياً لمخارج الحروف، ولا يتم حفظ أي تسجيل صوتي):')),
                       textAlign: TextAlign.center,
                       style:
                           const TextStyle(fontSize: 11.5, color: Colors.white70),
@@ -620,8 +621,8 @@ class _VerticalVideoFeedPlayerScreenState
                           child: TextField(
                             controller: spokenCtrl,
                             decoration: InputDecoration(
-                              labelText: 'ما نطقه الطفل (التعرف الصوتي)',
-                              hintText: 'انطق بالميكروفون أو اكتب لتجربة المصحح',
+                              labelText: tr('ما نطقه الطفل (التعرف الصوتي)'),
+                              hintText: tr('انطق بالميكروفون أو اكتب لتجربة المصحح'),
                               suffixIcon: IconButton(
                                 icon: const Icon(Icons.check_circle_outline,
                                     color: Color(0xFF14B8A6)),
@@ -644,7 +645,7 @@ class _VerticalVideoFeedPlayerScreenState
                             verifyAndSpeakCorrection();
                           },
                           icon: const Icon(Icons.done_all, size: 16),
-                          label: const Text('محاكاة نطق متقن ١٠٠٪',
+                          label: Text(tr('محاكاة نطق متقن ١٠٠٪'),
                               style: TextStyle(fontSize: 12)),
                         ),
                         TextButton.icon(
@@ -660,7 +661,7 @@ class _VerticalVideoFeedPlayerScreenState
                           },
                           icon: const Icon(Icons.build_circle_outlined,
                               size: 16),
-                          label: const Text('محاكاة نطق ناقص للتصحيح',
+                          label: Text(tr('محاكاة نطق ناقص للتصحيح'),
                               style: TextStyle(fontSize: 12)),
                         ),
                       ],
@@ -689,15 +690,15 @@ class _VerticalVideoFeedPlayerScreenState
                               children: [
                                 Text(
                                   evaluation!.isCorrect
-                                      ? '✅ نطق صحيح ومتقن!'
-                                      : '🔄 يحتاج لتعديل بسيط وهادئ',
+                                      ? tr('✅ نطق صحيح ومتقن!')
+                                      : tr('🔄 يحتاج لتعديل بسيط وهادئ'),
                                   style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     fontSize: 15,
                                   ),
                                 ),
                                 Text(
-                                  'الدقة: ${(evaluation!.accuracyScore * 100).round()}%',
+                                  tr('الدقة: {0}%', [(evaluation!.accuracyScore * 100).round()]),
                                   style: const TextStyle(
                                     fontWeight: FontWeight.bold,
                                     color: Color(0xFFF59E0B),
@@ -737,9 +738,9 @@ class _VerticalVideoFeedPlayerScreenState
                                 );
                                 Navigator.pop(ctx);
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  const SnackBar(
+                                  SnackBar(
                                     content: Text(
-                                        '🎉 أحسنت النطق العربي الصحيح يا بطل! ربحت نجمة الفصاحة ⭐'),
+                                        tr('🎉 أحسنت النطق العربي الصحيح يا بطل! ربحت نجمة الفصاحة ⭐')),
                                     backgroundColor: Color(0xFF14B8A6),
                                   ),
                                 );
@@ -750,8 +751,8 @@ class _VerticalVideoFeedPlayerScreenState
                             : Icons.graphic_eq),
                         label: Text(
                           (evaluation?.isCorrect ?? false)
-                              ? 'تم التأكد من صحة النطق! استلم نجمتك ⭐'
-                              : 'تحقق من صحة النطق واستمع للتصحيح الهادئ',
+                              ? tr('تم التأكد من صحة النطق! استلم نجمتك ⭐')
+                              : tr('تحقق من صحة النطق واستمع للتصحيح الهادئ'),
                           style: const TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 14),
                         ),
@@ -769,7 +770,7 @@ class _VerticalVideoFeedPlayerScreenState
 
   void _openRealWorldHeroActivityModal(VideoModel item) {
     CalmVoiceService.instance.speakCalmly(
-      'نشاط البطل الواقعي: ${item.activeActivity}',
+      tr('نشاط البطل الواقعي: {0}', [item.activeActivity]),
       rate: 0.38,
     );
 
@@ -787,8 +788,8 @@ class _VerticalVideoFeedPlayerScreenState
             children: [
               const Text('🎯🏆', style: TextStyle(fontSize: 48)),
               const SizedBox(height: 10),
-              const Text(
-                'نافذة «نشاط البطل الواقعي»',
+              Text(
+                tr('نافذة «نشاط البطل الواقعي»'),
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.bold,
@@ -796,8 +797,8 @@ class _VerticalVideoFeedPlayerScreenState
                 ),
               ),
               const SizedBox(height: 8),
-              const Text(
-                'مهمة حركية وتربوية ممتعة لتقوم بها خارج الشاشة الآن:',
+              Text(
+                tr('مهمة حركية وتربوية ممتعة لتقوم بها خارج الشاشة الآن:'),
                 textAlign: TextAlign.center,
                 style: TextStyle(color: Colors.white70, fontSize: 13),
               ),
@@ -837,16 +838,16 @@ class _VerticalVideoFeedPlayerScreenState
                         .awardStarAndRecordActivity('activity_${item.id}');
                     Navigator.pop(ctx);
                     ScaffoldMessenger.of(context).showSnackBar(
-                      const SnackBar(
+                      SnackBar(
                         content: Text(
-                            '🌟 بطل حقيقي! أضفنا نجمة جديدة إلى رصيدك بعد إنجاز النشاط!'),
+                            tr('🌟 بطل حقيقي! أضفنا نجمة جديدة إلى رصيدك بعد إنجاز النشاط!')),
                         backgroundColor: Color(0xFFF59E0B),
                       ),
                     );
                   },
                   icon: const Icon(Icons.emoji_events),
-                  label: const Text(
-                    'أنجزت النشاط الواقعي! (+1 نجمة ⭐)',
+                  label: Text(
+                    tr('أنجزت النشاط الواقعي! (+1 نجمة ⭐)'),
                     style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                   ),
                 ),
@@ -877,13 +878,13 @@ class _VerticalVideoFeedPlayerScreenState
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20),
               ),
-              title: const Row(
+              title: Row(
                 children: [
                   Icon(Icons.shield_outlined, color: Color(0xFFF59E0B)),
                   SizedBox(width: 8),
                   Expanded(
                     child: Text(
-                      'بوابة الوالدين المحمية',
+                      tr('بوابة الوالدين المحمية'),
                       style:
                           TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                     ),
@@ -894,8 +895,8 @@ class _VerticalVideoFeedPlayerScreenState
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const Text(
-                    'للدخول إلى بوابة الوالدين، يرجى إدخال الرمز السري للوالدين (المكوّن من ٦ أرقام):',
+                  Text(
+                    tr('للدخول إلى بوابة الوالدين، يرجى إدخال الرمز السري للوالدين (المكوّن من ٦ أرقام):'),
                     style: TextStyle(color: Colors.white70, fontSize: 13),
                   ),
                   const SizedBox(height: 14),
@@ -905,8 +906,8 @@ class _VerticalVideoFeedPlayerScreenState
                     maxLength: 6,
                     keyboardType: TextInputType.number,
                     textAlign: TextAlign.center,
-                    decoration: const InputDecoration(
-                      hintText: 'أدخل الرمز السري (٦ أرقام)',
+                    decoration: InputDecoration(
+                      hintText: tr('أدخل الرمز السري (٦ أرقام)'),
                       counterText: '',
                     ),
                   ),
@@ -923,7 +924,7 @@ class _VerticalVideoFeedPlayerScreenState
               actions: [
                 TextButton(
                   onPressed: () => Navigator.pop(ctx),
-                  child: const Text('إلغاء',
+                  child: Text(tr('إلغاء'),
                       style: TextStyle(color: Colors.white60)),
                 ),
                 ElevatedButton(
@@ -937,7 +938,7 @@ class _VerticalVideoFeedPlayerScreenState
                     if (acc.isPinLockedOut) {
                       setDialogState(() {
                         gateError =
-                            '⏳ تم قفل البوابة مؤقتاً بسبب محاولات خاطئة. انتظر ${acc.remainingPinLockoutSeconds} ثانية.';
+                            tr('⏳ تم قفل البوابة مؤقتاً بسبب محاولات خاطئة. انتظر {0} ثانية.', [acc.remainingPinLockoutSeconds]);
                       });
                       return;
                     }
@@ -957,12 +958,12 @@ class _VerticalVideoFeedPlayerScreenState
                     } else {
                       setDialogState(() {
                         gateError = acc.isPinLockedOut
-                            ? '⏳ تم قفل البوابة مؤقتاً لمدة ${acc.remainingPinLockoutSeconds} ثانية لحماية طفلك.'
-                            : 'رمز PIN الأبوي غير صحيح.';
+                            ? tr('⏳ تم قفل البوابة مؤقتاً لمدة {0} ثانية لحماية طفلك.', [acc.remainingPinLockoutSeconds])
+                            : tr('رمز PIN الأبوي غير صحيح.');
                       });
                     }
                   },
-                  child: const Text('دخول استوديو الوالدين'),
+                  child: Text(tr('دخول استوديو الوالدين')),
                 ),
               ],
             );
@@ -1018,15 +1019,15 @@ class _VerticalVideoFeedPlayerScreenState
                     children: [
                       const Text('🌈🧸✨', style: TextStyle(fontSize: 54)),
                       const SizedBox(height: 12),
-                      const Text(
-                        'لا توجد قصص مرئية في هذا القسم الآن يا بطل!',
+                      Text(
+                        tr('لا توجد قصص مرئية في هذا القسم الآن يا بطل!'),
                         textAlign: TextAlign.center,
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold),
                       ),
                       const SizedBox(height: 6),
-                      const Text(
-                        'يمكنك استكشاف دروس «أكاديمية حنين» المصورة أو اللعب في واحة الذكاء ريثما نعود للقصص!',
+                      Text(
+                        tr('يمكنك استكشاف دروس «أكاديمية حنين» المصورة أو اللعب في واحة الذكاء ريثما نعود للقصص!'),
                         textAlign: TextAlign.center,
                         style: TextStyle(fontSize: 13, color: Colors.white70),
                       ),
@@ -1045,7 +1046,7 @@ class _VerticalVideoFeedPlayerScreenState
                               onPressed: () =>
                                   setState(() => _selectedCategory = 'all'),
                               icon: const Icon(Icons.video_library_rounded),
-                              label: const Text('عرض كل القصص'),
+                              label: Text(tr('عرض كل القصص')),
                             ),
                           ElevatedButton.icon(
                             style: ElevatedButton.styleFrom(
@@ -1054,7 +1055,7 @@ class _VerticalVideoFeedPlayerScreenState
                             ),
                             onPressed: () => _openHaneenAcademy(initialTab: 0),
                             icon: const Icon(Icons.school_rounded),
-                            label: const Text('أكاديمية حنين 🎓'),
+                            label: Text(tr('أكاديمية حنين 🎓')),
                           ),
                           ElevatedButton.icon(
                             style: ElevatedButton.styleFrom(
@@ -1063,7 +1064,7 @@ class _VerticalVideoFeedPlayerScreenState
                             ),
                             onPressed: _openBrainGamesHub,
                             icon: const Icon(Icons.psychology_rounded),
-                            label: const Text('ألعاب الذكاء 🧠'),
+                            label: Text(tr('ألعاب الذكاء 🧠')),
                           ),
                         ],
                       ),
@@ -1135,14 +1136,14 @@ class _VerticalVideoFeedPlayerScreenState
                               color: const Color(0xFFF59E0B).withOpacity(0.9),
                               borderRadius: BorderRadius.circular(16),
                             ),
-                            child: const Row(
+                            child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Icon(Icons.arrow_back_rounded,
                                     size: 13, color: Colors.black87),
                                 SizedBox(width: 3),
                                 Text(
-                                  'البداية',
+                                  tr('البداية'),
                                   style: TextStyle(
                                     fontSize: 10.5,
                                     fontWeight: FontWeight.bold,
@@ -1214,7 +1215,7 @@ class _VerticalVideoFeedPlayerScreenState
                           border: Border.all(color: Colors.white24, width: 0.8),
                         ),
                         child: Text(
-                          '⏱️ ${activeChild.usedMinutesToday}/${activeChild.dailyTimeLimit}د',
+                          tr('⏱️ {0}/{1}د', [activeChild.usedMinutesToday, activeChild.dailyTimeLimit]),
                           style: const TextStyle(
                             fontSize: 10.5,
                             color: Colors.white,
@@ -1237,7 +1238,7 @@ class _VerticalVideoFeedPlayerScreenState
                               const Text('🎓', style: TextStyle(fontSize: 11)),
                               const SizedBox(width: 3),
                               Text(
-                                'الأكاديمية (${activeChild.completedLessons.length})',
+                                tr('الأكاديمية ({0})', [activeChild.completedLessons.length]),
                                 style: const TextStyle(
                                   fontSize: 10,
                                   fontWeight: FontWeight.bold,
@@ -1264,7 +1265,7 @@ class _VerticalVideoFeedPlayerScreenState
                               const Text('🧠', style: TextStyle(fontSize: 11)),
                               const SizedBox(width: 3),
                               Text(
-                                'الذكاء (${activeChild.intelligencePoints})',
+                                tr('الذكاء ({0})', [activeChild.intelligencePoints]),
                                 style: const TextStyle(
                                   fontSize: 10,
                                   fontWeight: FontWeight.bold,
@@ -1323,14 +1324,14 @@ class _VerticalVideoFeedPlayerScreenState
                               color: const Color(0xFF14B8A6).withOpacity(0.85),
                               borderRadius: BorderRadius.circular(16),
                             ),
-                            child: const Row(
+                            child: Row(
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Icon(Icons.lock_outline,
                                     size: 12, color: Colors.white),
                                 SizedBox(width: 3),
                                 Text(
-                                  'الوالدين',
+                                  tr('الوالدين'),
                                   style: TextStyle(
                                     fontSize: 10.5,
                                     fontWeight: FontWeight.bold,
@@ -1421,11 +1422,11 @@ class _VerticalVideoFeedPlayerScreenState
                               border: Border.all(
                                   color: const Color(0xFF10B981), width: 1.2),
                             ),
-                            child: const Column(
+                            child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Text(
-                                  '🎓 أكاديمية حنين',
+                                  tr('🎓 أكاديمية حنين'),
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold,
@@ -1434,7 +1435,7 @@ class _VerticalVideoFeedPlayerScreenState
                                 ),
                                 SizedBox(height: 2),
                                 Text(
-                                  'تعلم الحروف والأرقام',
+                                  tr('تعلم الحروف والأرقام'),
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -1466,11 +1467,11 @@ class _VerticalVideoFeedPlayerScreenState
                               border: Border.all(
                                   color: const Color(0xFF14B8A6), width: 1.6),
                             ),
-                            child: const Column(
+                            child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Text(
-                                  '📖 القصص',
+                                  tr('📖 القصص'),
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold,
@@ -1479,7 +1480,7 @@ class _VerticalVideoFeedPlayerScreenState
                                 ),
                                 SizedBox(height: 2),
                                 Text(
-                                  'قصص مصورة متحركة',
+                                  tr('قصص مصورة متحركة'),
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -1507,11 +1508,11 @@ class _VerticalVideoFeedPlayerScreenState
                               border: Border.all(
                                   color: const Color(0xFFC084FC), width: 1.2),
                             ),
-                            child: const Column(
+                            child: Column(
                               mainAxisSize: MainAxisSize.min,
                               children: [
                                 Text(
-                                  '🎮 الألعاب',
+                                  tr('🎮 الألعاب'),
                                   style: TextStyle(
                                     fontSize: 12,
                                     fontWeight: FontWeight.bold,
@@ -1520,7 +1521,7 @@ class _VerticalVideoFeedPlayerScreenState
                                 ),
                                 SizedBox(height: 2),
                                 Text(
-                                  'ألعاب ذكاء وتفكير',
+                                  tr('ألعاب ذكاء وتفكير'),
                                   maxLines: 1,
                                   overflow: TextOverflow.ellipsis,
                                   style: TextStyle(
@@ -1566,7 +1567,7 @@ class _VerticalVideoFeedPlayerScreenState
                                   ),
                                 ],
                               ),
-                              child: const Row(
+                              child: Row(
                                 children: [
                                   Text('🎮✨',
                                       style: TextStyle(fontSize: 20)),
@@ -1577,7 +1578,7 @@ class _VerticalVideoFeedPlayerScreenState
                                           CrossAxisAlignment.start,
                                       children: [
                                         Text(
-                                          'ما رأيك أن نلعب ونتعلم؟',
+                                          tr('ما رأيك أن نلعب ونتعلم؟'),
                                           style: TextStyle(
                                             fontSize: 13,
                                             fontWeight: FontWeight.w900,
@@ -1585,7 +1586,7 @@ class _VerticalVideoFeedPlayerScreenState
                                           ),
                                         ),
                                         Text(
-                                          'اضغط هنا للانتقال فوراً إلى قسم الألعاب الممتعة!',
+                                          tr('اضغط هنا للانتقال فوراً إلى قسم الألعاب الممتعة!'),
                                           style: TextStyle(
                                             fontSize: 10.5,
                                             fontWeight: FontWeight.w600,
@@ -1637,7 +1638,7 @@ class _VerticalVideoFeedPlayerScreenState
                       const Text('🌙💤✨', style: TextStyle(fontSize: 68)),
                       const SizedBox(height: 20),
                       Text(
-                        'ستارة النوم الهادئة — تصبح على خير يا ${activeChild.name}!',
+                        tr('ستارة النوم الهادئة — تصبح على خير يا {0}!', [activeChild.name]),
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           fontSize: 23,
@@ -1647,7 +1648,7 @@ class _VerticalVideoFeedPlayerScreenState
                       ),
                       const SizedBox(height: 12),
                       Text(
-                        'انتهت حصتك اليومية (${activeChild.dailyTimeLimit} دقيقة) بهدوء، وجمعت ⭐ ${activeChild.starsEarned} نجوم رائعة! حان الآن وقت إراحة العينين والاستعداد للنوم الجميل.',
+                        tr('انتهت حصتك اليومية ({0} دقيقة) بهدوء، وجمعت ⭐ {1} نجوم رائعة! حان الآن وقت إراحة العينين والاستعداد للنوم الجميل.', [activeChild.dailyTimeLimit, activeChild.starsEarned]),
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           fontSize: 16,
@@ -1668,8 +1669,8 @@ class _VerticalVideoFeedPlayerScreenState
                         ),
                         onPressed: () => _openParentalGateDialog(initialTab: 2),
                         icon: const Icon(Icons.lock_open),
-                        label: const Text(
-                          'بوابة الوالدين (لتمديد الوقت أو تغيير الطفل)',
+                        label: Text(
+                          tr('بوابة الوالدين (لتمديد الوقت أو تغيير الطفل)'),
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -1698,8 +1699,8 @@ class _VerticalVideoFeedPlayerScreenState
                     children: [
                       const Text('🎁👑', style: TextStyle(fontSize: 64)),
                       const SizedBox(height: 16),
-                      const Text(
-                        'انتهت فترة التجربة المجانية الشاملة (٧ أيام)',
+                      Text(
+                        tr('انتهت فترة التجربة المجانية الشاملة (٧ أيام)'),
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 23,
@@ -1708,8 +1709,8 @@ class _VerticalVideoFeedPlayerScreenState
                         ),
                       ),
                       const SizedBox(height: 12),
-                      const Text(
-                        'استمتع طفلك بقصص حنين الهادئة والمصحح الصوتي! يمكنك الآن اختيار الباقة المرنة الأنسب لعائلتك والدفع بسهولة عبر فودافون كاش أو أورنج كاش أو اتصالات كاش أو إنستا باي أو فيزا.',
+                      Text(
+                        tr('استمتع طفلك بقصص حنين الهادئة والمصحح الصوتي! يمكنك الآن اختيار الباقة المرنة الأنسب لعائلتك والدفع بسهولة عبر فودافون كاش أو أورنج كاش أو اتصالات كاش أو إنستا باي أو فيزا.'),
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 15,
@@ -1730,8 +1731,8 @@ class _VerticalVideoFeedPlayerScreenState
                         ),
                         onPressed: () => _openParentalGateDialog(initialTab: 2),
                         icon: const Icon(Icons.workspace_premium),
-                        label: const Text(
-                          'الباقات',
+                        label: Text(
+                          tr('الباقات'),
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -1773,7 +1774,7 @@ class _VerticalVideoFeedPlayerScreenState
                       ),
                       const SizedBox(height: 22),
                       Text(
-                        '🔒 تم قفل شاشة الموبايل عن بُعد يا ${activeChild.name}',
+                        tr('🔒 تم قفل شاشة الموبايل عن بُعد يا {0}', [activeChild.name]),
                         textAlign: TextAlign.center,
                         style: const TextStyle(
                           fontSize: 23,
@@ -1812,8 +1813,8 @@ class _VerticalVideoFeedPlayerScreenState
                         ),
                         onPressed: () => _openParentalGateDialog(initialTab: 0),
                         icon: const Icon(Icons.lock_open_rounded),
-                        label: const Text(
-                          'فتح القفل الأبوي (بوابة الوالدين / الرمز السري)',
+                        label: Text(
+                          tr('فتح القفل الأبوي (بوابة الوالدين / الرمز السري)'),
                           style: TextStyle(fontWeight: FontWeight.bold),
                         ),
                       ),

@@ -410,8 +410,6 @@ class AppStateManager extends ChangeNotifier {
   static const String kGooglePlayStoreUrl =
       'https://play.google.com/store/apps/details?id=com.haneenkids.app';
 
-  String lastInAppUpdateStatusMessage =
-      'أنت تستخدم أحدث إصدار من حنين كيدز (v5.0 المجاني بالكامل).';
   bool hasOpenedGooglePlayRating = false;
 
   bool get isSubscriptionExpired => false;
@@ -420,13 +418,6 @@ class AppStateManager extends ChangeNotifier {
     hasOpenedGooglePlayRating = true;
     notifyListeners();
     return kGooglePlayStoreUrl;
-  }
-
-  Future<String> checkForAndTriggerInAppUpdate() async {
-    lastInAppUpdateStatusMessage =
-        '✅ تم فحص التحديثات داخل التطبيق: تطبيق حنين كيدز محدّث إلى آخر إصدار ويعمل بأعلى سرعة!';
-    notifyListeners();
-    return lastInAppUpdateStatusMessage;
   }
 
   String generateSmartParentRecommendation() {

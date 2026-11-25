@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
 class AppRoutes {
@@ -77,8 +78,8 @@ class SplashScreen extends StatelessWidget {
             children: [
               const HaneenAppIconPreviewWidget(size: 96),
               const SizedBox(height: 18),
-              const Text(
-                'حنين كيدز (Haneen Kids)',
+              Text(
+                tr('حنين كيدز (Haneen Kids)'),
                 style: TextStyle(
                   fontSize: 26,
                   fontWeight: FontWeight.bold,
@@ -86,8 +87,8 @@ class SplashScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 8),
-              const Text(
-                'أكاديمية حنين • القصص التفاعلية • الألعاب الذكية (مجاني ١٠٠٪)',
+              Text(
+                tr('أكاديمية حنين • القصص التفاعلية • الألعاب الذكية (مجاني ١٠٠٪)'),
                 style: TextStyle(fontSize: 13.5, color: Colors.white70),
               ),
               const SizedBox(height: 24),

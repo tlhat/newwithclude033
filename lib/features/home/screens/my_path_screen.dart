@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'level_check_screen.dart';
@@ -11,7 +12,7 @@ class PathStep {
 
   /// Tab index in the main shell: 0 stories, 1 academy, 2 games.
   final int tab;
-  const PathStep(this.id, this.emoji, this.title, this.hint, this.tab);
+  PathStep(this.id, this.emoji, this.title, this.hint, this.tab);
 }
 
 /// "مساري": a short daily plan chosen from the child's age.
@@ -23,11 +24,11 @@ class MyPathPlan {
   }
 
   static String groupName(int age) =>
-      age <= 4 ? 'من ٣ إلى ٤ سنين' : (age <= 6 ? 'من ٥ إلى ٦ سنين' : '٧ سنين وأكتر');
+      age <= 4 ? tr('من ٣ إلى ٤ سنين') : (age <= 6 ? tr('من ٥ إلى ٦ سنين') : tr('٧ سنين وأكتر'));
 
   static List<PathStep> stepsFor(int age) {
     if (age <= 4) {
-      return const [
+      return [
         PathStep('s1', '📖', 'قصة قصيرة', 'اسمع قصة وشوف الرسومات', 0),
         PathStep('a1', '🔤', 'حروف وأصوات', 'اتعلم حرف جديد مع حنين', 1),
         PathStep('g1', '🧩', 'لعبة صور وأصوات', 'طابق الصورة بالصوت', 2),
@@ -36,7 +37,7 @@ class MyPathPlan {
       ];
     }
     if (age <= 6) {
-      return const [
+      return [
         PathStep('a1', '🔤', 'درس الحروف', 'حرف جديد وكلمات بيه', 1),
         PathStep('g1', '🔢', 'لعبة الأرقام', 'عدّ وجمّع', 2),
         PathStep('s1', '📖', 'قصة', 'اقرا واسمع واتعلم', 0),
@@ -44,12 +45,12 @@ class MyPathPlan {
         PathStep('a2', '🗣️', 'نطق واضح', 'قول الكلمة بصوت واضح', 1),
       ];
     }
-    return const [
+    return [
       PathStep('a1', '📚', 'درس اليوم', 'كلمات وجمل أطول', 1),
-      PathStep('g1', '🧠', 'تحدّي ذكاء', 'نمط وتصنيف ومختلف', 2),
-      PathStep('g2', '🔢', 'رياضيات', 'مسائل أسرع شوية', 2),
-      PathStep('s1', '📖', 'قصة وأسئلة', 'اقرا وجاوب', 0),
-      PathStep('g3', '🎨', 'مرسم الآداب', 'ارسم وتعلّم أدب جديد', 2),
+      PathStep('g1', '🧠', tr('تحدّي ذكاء'), tr('نمط وتصنيف ومختلف'), 2),
+      PathStep('g2', '🔢', tr('رياضيات'), tr('مسائل أسرع شوية'), 2),
+      PathStep('s1', '📖', tr('قصة وأسئلة'), tr('اقرا وجاوب'), 0),
+      PathStep('g3', '🎨', tr('مرسم الآداب'), tr('ارسم وتعلّم أدب جديد'), 2),
     ];
   }
 
@@ -112,13 +113,13 @@ class _MyPathScreenState extends State<MyPathScreen> {
     final List<PathStep> steps = MyPathPlan.stepsFor(age);
     final int doneCount = steps.where((s) => _done.contains(s.id + s.tab.toString())).length;
     return Directionality(
-      textDirection: TextDirection.rtl,
+      textDirection: Tr.dir,
       child: Scaffold(
-        appBar: AppBar(title: const Text('مساري 🧭')),
+        appBar: AppBar(title: Text(tr('مساري 🧭'))),
         body: ListView(
           padding: const EdgeInsets.all(16),
           children: [
-            Text('خطة النهاردة يا ${child.name} (${MyPathPlan.groupName(age)})',
+            Text(tr('خطة النهاردة يا {0} ({1})', [child.name, MyPathPlan.groupName(age)]),
                 style:
                     const TextStyle(fontSize: 17, fontWeight: FontWeight.w800)),
             const SizedBox(height: 8),
@@ -127,7 +128,7 @@ class _MyPathScreenState extends State<MyPathScreen> {
                 minHeight: 10,
                 borderRadius: BorderRadius.circular(8)),
             const SizedBox(height: 4),
-            Text('$doneCount من ${steps.length}'),
+            Text(tr('{0} من {1}', [doneCount, steps.length])),
             const SizedBox(height: 12),
             for (final s in steps)
               Card(
@@ -148,9 +149,9 @@ class _MyPathScreenState extends State<MyPathScreen> {
                 ),
               ),
             if (doneCount >= steps.length)
-              const Padding(
+              Padding(
                 padding: EdgeInsets.only(top: 12),
-                child: Text('🎉 خلصت خطة النهاردة! برافو يا بطل',
+                child: Text(tr('🎉 خلصت خطة النهاردة! برافو يا بطل'),
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900)),
               ),

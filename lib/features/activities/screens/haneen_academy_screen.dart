@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'package:haneen_kids_vod/features/companion/engine/companion_interaction_engine.dart';
@@ -7,7 +8,7 @@ import 'package:haneen_kids_vod/features/companion/engine/companion_interaction_
 class HaneenAcademyScreen extends StatefulWidget {
   final AppStateManager appState;
   final int initialTabIndex;
-  const HaneenAcademyScreen({
+  HaneenAcademyScreen({
     super.key,
     required this.appState,
     this.initialTabIndex = 0,
@@ -20,7 +21,7 @@ class HaneenAcademyScreen extends StatefulWidget {
 class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
   String _selectedTrackFilter = 'smart_path';
 
-  static const List<Map<String, String>> _trackFilters = [
+  static List<Map<String, String>> _trackFilters = [
     {'id': 'smart_path', 'title': '🎯 مساري الذكي', 'emoji': '🎯'},
     {'id': 'all', 'title': 'كل المسارات', 'emoji': '🎓'},
     {'id': 'arabic_letters', 'title': 'الحروف العربية', 'emoji': '🔤'},
@@ -31,8 +32,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
     {'id': 'vocabulary', 'title': 'الكلمات والمفردات', 'emoji': '🗣️'},
     {'id': 'communication', 'title': 'الاستماع والنطق', 'emoji': '🎙️'},
     {'id': 'simple_science', 'title': 'العلوم المبسطة', 'emoji': '🔬'},
-    {'id': 'daily_habits', 'title': 'المهارات الحياتية', 'emoji': '🪥'},
-    {'id': 'thinking_problem_solving', 'title': 'التفكير والتركيز', 'emoji': '🧩'},
+    {'id': 'daily_habits', 'title': tr('المهارات الحياتية'), 'emoji': '🪥'},
+    {'id': 'thinking_problem_solving', 'title': tr('التفكير والتركيز'), 'emoji': '🧩'},
   ];
 
   /// Phase 2: builds Tier 3 worked-example text from the lesson's own data.
@@ -80,7 +81,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
     );
     String? hintBannerText;
     CalmVoiceService.instance.speak(
-      'أهلاً بك يا ${child.name} في درس ${lesson.title}. ${lesson.cards.isEmpty ? lesson.introductionText : lesson.cards.first.spokenNarration}',
+      tr('أهلاً بك يا {0} في درس {1}. {2}', [child.name, lesson.title, lesson.cards.isEmpty ? lesson.introductionText : lesson.cards.first.spokenNarration]),
     );
 
     showModalBottomSheet(
@@ -140,7 +141,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                 ),
                               ),
                               Text(
-                                '${lesson.trackTitle} • المستوى ${lesson.recommendedLevel} (${lesson.ageRange}) • الإتقان: $currentMastery%',
+                                tr('{0} • المستوى {1} ({2}) • الإتقان: {3}%', [lesson.trackTitle, lesson.recommendedLevel, lesson.ageRange, currentMastery]),
                                 style: const TextStyle(
                                   fontSize: 11.5,
                                   color: Colors.white70,
@@ -236,7 +237,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                 },
                                 icon: const Icon(Icons.volume_up_rounded,
                                     size: 18),
-                                label: const Text('استمع للنطق الواضح'),
+                                label: Text(tr('استمع للنطق الواضح')),
                                 style: ElevatedButton.styleFrom(
                                   backgroundColor: lesson.accentColor,
                                   foregroundColor: Colors.white,
@@ -256,18 +257,18 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                     currentCard.wordExample,
                                   );
                                   CalmVoiceService.instance.speak(
-                                    'لنردد معاً ببطء: $slowGuide. ${eval.feedbackMessage}',
+                                    tr('لنردد معاً ببطء: {0}. {1}', [slowGuide, eval.feedbackMessage]),
                                   );
                                   setSheetState(() {
                                     practicedVoiceInSession = true;
                                     feedbackBannerText =
-                                        '🎙️ مدرب النطق اللطيف: ${eval.feedbackMessage}';
+                                        tr('🎙️ مدرب النطق اللطيف: {0}', [eval.feedbackMessage]);
                                   });
                                 },
                                 icon: const Icon(Icons.mic_rounded,
                                     size: 18, color: Color(0xFFA7F3D0)),
-                                label: const Text(
-                                  'ردد معي بلطف',
+                                label: Text(
+                                  tr('ردد معي بلطف'),
                                   style: TextStyle(color: Color(0xFFA7F3D0)),
                                 ),
                                 style: OutlinedButton.styleFrom(
@@ -324,7 +325,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            '🧩 سؤال التثبيت والإتقان: ${lesson.quizQuestion}',
+                            tr('🧩 سؤال التثبيت والإتقان: {0}', [lesson.quizQuestion]),
                             style: const TextStyle(
                               fontSize: 13.5,
                               fontWeight: FontWeight.bold,
@@ -525,14 +526,14 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                         child: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            const Row(
+                            Row(
                               children: [
                                 Icon(Icons.auto_awesome_rounded,
                                     color: Color(0xFFFDE68A), size: 18),
                                 SizedBox(width: 6),
                                 Expanded(
                                   child: Text(
-                                    '🎈 طريقة بديلة مبسطة باللعب والصور لتثبيت المهارة:',
+                                    tr('🎈 طريقة بديلة مبسطة باللعب والصور لتثبيت المهارة:'),
                                     style: TextStyle(
                                       fontSize: 12.5,
                                       fontWeight: FontWeight.bold,
@@ -694,8 +695,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                         icon: const Icon(Icons.stars_rounded),
                         label: Text(
                           quizAnsweredCorrectly
-                              ? 'إتمام وتثبيت المهارة (+٢ نجمة إتقان)'
-                              : 'حفظ تقدم المحاولة ومتابعة التدريب لاحقاً',
+                              ? tr('إتمام وتثبيت المهارة (+٢ نجمة إتقان)')
+                              : tr('حفظ تقدم المحاولة ومتابعة التدريب لاحقاً'),
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                         style: ElevatedButton.styleFrom(
@@ -804,7 +805,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                       children: [
                         KidFriendlyBigBackButton(
                           compact: true,
-                          labelAr: 'إغلاق',
+                          labelAr: tr('إغلاق'),
                           onPressed: () {
                             CalmVoiceService.instance.stopSpeaking();
                             Navigator.pop(ctx);
@@ -824,7 +825,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                 ),
                               ),
                               Text(
-                                '${story.categoryBadge} • سرد ثنائي تلقائي (المساعد الرئيسي + السوبر هيرو)',
+                                tr('{0} • سرد ثنائي تلقائي (المساعد الرئيسي + السوبر هيرو)', [story.categoryBadge]),
                                 style: const TextStyle(
                                   fontSize: 11,
                                   color: Color(0xFFA7F3D0),
@@ -952,8 +953,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                           onPressed: triggerDualVoiceAutoNarration,
                           icon: const Icon(Icons.play_circle_fill_rounded,
                               size: 18),
-                          label: const Text(
-                            'تشغيل السرد الثنائي التلقائي',
+                          label: Text(
+                            tr('تشغيل السرد الثنائي التلقائي'),
                             style: TextStyle(
                                 fontSize: 12, fontWeight: FontWeight.bold),
                           ),
@@ -972,7 +973,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Text(
-                            '🧩 سؤال القصة: ${story.quizQuestion}',
+                            tr('🧩 سؤال القصة: {0}', [story.quizQuestion]),
                             style: const TextStyle(
                               fontSize: 13.5,
                               fontWeight: FontWeight.bold,
@@ -998,7 +999,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                     setStoryState(() {
                                       quizSolved = true;
                                       quizFeedback =
-                                          '🦸‍♂️ أحسنت! ${story.moralSummary}';
+                                          tr('🦸‍♂️ أحسنت! {0}', [story.moralSummary]);
                                     });
                                     await CalmVoiceService.instance
                                         .reactToChildAnswerAsHaneen(
@@ -1109,7 +1110,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
             title: Row(
               children: [
                 KidFriendlyBigBackButton(
-                  label: 'رجوع',
+                  label: tr('رجوع'),
                   accentColor: const Color(0xFFF59E0B),
                   onPressed: () {
                     CalmVoiceService.instance.stopSpeaking();
@@ -1117,9 +1118,9 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                   },
                 ),
                 const SizedBox(width: 10),
-                const Expanded(
+                Expanded(
                   child: Text(
-                    '🎓 أكاديمية حنين الذكية (٢–٦ سنوات)',
+                    tr('🎓 أكاديمية حنين الذكية (٢–٦ سنوات)'),
                     style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -1159,7 +1160,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                           size: 50,
                           animateBreathing: true,
                           speechText: Localizations.localeOf(context).languageCode == 'ar'
-                              ? 'أهلاً بك يا ${child.name} في الأكاديمية! هيا نتقدم في مسارك التعليمي الذكي.'
+                              ? tr('أهلاً بك يا {0} في الأكاديمية! هيا نتقدم في مسارك التعليمي الذكي.', [child.name])
                               : 'Welcome to the Academy, ${child.name}! Let\'s keep learning together.',
                           speakOnTap: true,
                         ),
@@ -1169,7 +1170,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
                               Text(
-                                'مسار البطل الذكي: ${child.name} (${child.age})',
+                                tr('مسار البطل الذكي: {0} ({1})', [child.name, child.age]),
                                 style: const TextStyle(
                                   fontSize: 16,
                                   fontWeight: FontWeight.bold,
@@ -1177,7 +1178,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                 ),
                               ),
                               Text(
-                                'المستوى الحالي: ${report.currentTierLabelAr} • إتقان المستوى: ${report.currentTierMasteryPercentage}% • النجوم: ⭐ ${child.starsEarned}',
+                                tr('المستوى الحالي: {0} • إتقان المستوى: {1}% • النجوم: ⭐ {2}', [report.currentTierLabelAr, report.currentTierMasteryPercentage, child.starsEarned]),
                                 style: const TextStyle(
                                   fontSize: 12,
                                   color: Color(0xFFA7F3D0),
@@ -1202,7 +1203,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                     if (child.needsRemediationLessonIds.isNotEmpty) ...[
                       const SizedBox(height: 8),
                       Text(
-                        '🎈 توجد (${child.needsRemediationLessonIds.length}) مهارة مقترح تثبيتها باللعب التفاعلي المبسط قبل الانتقال للمستوى الأعلى.',
+                        tr('🎈 توجد ({0}) مهارة مقترح تثبيتها باللعب التفاعلي المبسط قبل الانتقال للمستوى الأعلى.', [child.needsRemediationLessonIds.length]),
                         style: const TextStyle(
                           fontSize: 11.5,
                           color: Color(0xFFFDE68A),
@@ -1216,7 +1217,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                         onPressed: () => _openLessonSheet(resumeLesson, child),
                         icon: const Icon(Icons.play_circle_fill_rounded),
                         label: Text(
-                          'متابعة آخر درس نشط: ${resumeLesson.emoji} ${resumeLesson.title}',
+                          tr('متابعة آخر درس نشط: {0} {1}', [resumeLesson.emoji, resumeLesson.title]),
                           style: const TextStyle(fontWeight: FontWeight.bold),
                         ),
                         style: ElevatedButton.styleFrom(
@@ -1244,13 +1245,13 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Row(
+                    Row(
                       children: [
                         Text('📖🦸‍♂️', style: TextStyle(fontSize: 22)),
                         SizedBox(width: 8),
                         Expanded(
                           child: Text(
-                            'كروت القصص المصورة التفاعلية (سرد ثنائي: المساعد الرئيسي + السوبر هيرو)',
+                            tr('كروت القصص المصورة التفاعلية (سرد ثنائي: المساعد الرئيسي + السوبر هيرو)'),
                             style: TextStyle(
                               fontSize: 13.5,
                               fontWeight: FontWeight.bold,
@@ -1308,7 +1309,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                                         ),
                                         const SizedBox(height: 4),
                                         Text(
-                                          '${story.storyCards.length} كروت صور • تبديل تلقائي',
+                                          tr('{0} كروت صور • تبديل تلقائي', [story.storyCards.length]),
                                           style: const TextStyle(
                                             fontSize: 10.5,
                                             color: Color(0xFFA7F3D0),
@@ -1365,8 +1366,8 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                     children: [
                       const Text('🌈', style: TextStyle(fontSize: 44)),
                       const SizedBox(height: 8),
-                      const Text(
-                        'لا توجد دروس في هذا المسار حالياً',
+                      Text(
+                        tr('لا توجد دروس في هذا المسار حالياً'),
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
@@ -1378,7 +1379,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                         onPressed: () =>
                             setState(() => _selectedTrackFilter = 'smart_path'),
                         icon: const Icon(Icons.refresh_rounded),
-                        label: const Text('العودة لمساري الذكي'),
+                        label: Text(tr('العودة لمساري الذكي')),
                       ),
                     ],
                   ),
@@ -1443,7 +1444,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Text(
-                              '✅ متقن $masteryScore%',
+                              tr('✅ متقن {0}%', [masteryScore]),
                               style: const TextStyle(
                                 fontSize: 10.5,
                                 color: Color(0xFF6EE7B7),
@@ -1460,7 +1461,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                               borderRadius: BorderRadius.circular(10),
                             ),
                             child: Text(
-                              '🎈 تدريب بديل ($masteryScore%)',
+                              tr('🎈 تدريب بديل ({0}%)', [masteryScore]),
                               style: const TextStyle(
                                 fontSize: 10.5,
                                 color: Color(0xFFFDE68A),
@@ -1490,7 +1491,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                           borderRadius: BorderRadius.circular(12),
                         ),
                       ),
-                      child: Text(isMastered ? 'مراجعة' : 'ابدأ'),
+                      child: Text(isMastered ? tr('مراجعة') : tr('ابدأ')),
                     ),
                   ),
                 );

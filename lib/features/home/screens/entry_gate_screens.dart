@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/core/localization/tr.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
 // Art files used here. All are optional: until the logo file exists the
@@ -76,7 +77,7 @@ class _GateHeader extends StatelessWidget {
                 top: height * 0.10,
                 left: 20),
             _deco(
-                const Text('أ ب ت',
+                Text(tr('أ ب ت'),
                     style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.w900,
@@ -129,7 +130,7 @@ class _LogoFallback extends StatelessWidget {
   const _LogoFallback();
   @override
   Widget build(BuildContext context) {
-    const String t = 'حنين';
+    String t = tr('حنين');
     return Column(mainAxisSize: MainAxisSize.min, children: [
       CustomPaint(size: const Size(34, 24), painter: _CrownPainter()),
       Stack(
@@ -142,7 +143,7 @@ class _LogoFallback extends StatelessWidget {
                     ..style = PaintingStyle.stroke
                     ..strokeWidth = 8
                     ..color = const Color(0xFF3B2B8F))),
-          const Text(t,
+          Text(t,
               style: TextStyle(
                   fontSize: 56, fontWeight: FontWeight.w900, color: _gold)),
         ],
@@ -229,7 +230,7 @@ class _GateShell extends StatelessWidget {
     final double h = MediaQuery.of(context).size.height;
     final double headerH = (h * (showLogo ? 0.40 : 0.27)).clamp(190.0, 380.0);
     return Directionality(
-      textDirection: TextDirection.rtl,
+      textDirection: Tr.dir,
       child: Scaffold(
         body: Container(
           decoration: const BoxDecoration(
@@ -332,17 +333,17 @@ class _GoogleGateScreenState extends State<GoogleGateScreen> {
   Widget build(BuildContext context) {
     return _GateShell(
       showLogo: true,
-      footer: 'تحت إشراف الآباء والأمهات',
+      footer: tr('تحت إشراف الآباء والأمهات'),
       footerIcon: Icons.verified_user_outlined,
       child: Column(
         children: [
-          const Text('أهلاً بك في عالم حنين!',
+          Text(tr('أهلاً بك في عالم حنين!'),
               textAlign: TextAlign.center,
               style: TextStyle(
                   fontSize: 26, fontWeight: FontWeight.w900, color: _navy)),
           const SizedBox(height: 10),
-          const Text(
-            'ادخل بحساب جوجل الخاص بولي الأمر لحفظ تقدم طفلك ومتابعته على أي جهاز',
+          Text(
+            tr('ادخل بحساب جوجل الخاص بولي الأمر لحفظ تقدم طفلك ومتابعته على أي جهاز'),
             textAlign: TextAlign.center,
             style: TextStyle(
                 fontSize: 14.5, height: 1.6, color: Color(0xFF51608A)),
@@ -377,10 +378,10 @@ class _GoogleGateScreenState extends State<GoogleGateScreen> {
                           fit: BoxFit.scaleDown,
                           child: Row(
                             mainAxisSize: MainAxisSize.min,
-                            children: const [
+                            children: [
                               _GoogleG(size: 26),
                               SizedBox(width: 12),
-                              Text('الدخول بحساب جوجل',
+                              Text(tr('الدخول بحساب جوجل'),
                                   style: TextStyle(
                                       fontSize: 17,
                                       fontWeight: FontWeight.w800,
@@ -479,16 +480,16 @@ class _PinUnlockScreenState extends State<PinUnlockScreen> {
     final String name = widget.appState.currentAccount?.activeChild.name ?? '';
     return _GateShell(
       showLogo: false,
-      footer: 'حماية ولي الأمر • للآباء والأمهات',
+      footer: tr('حماية ولي الأمر • للآباء والأمهات'),
       footerIcon: Icons.lock_outline,
       child: Column(
         children: [
-          Text(name.isEmpty ? 'أهلاً بك في عالم حنين!' : 'أهلاً بك يا $name!',
+          Text(name.isEmpty ? tr('أهلاً بك في عالم حنين!') : tr('أهلاً بك يا {0}!', [name]),
               textAlign: TextAlign.center,
               style: const TextStyle(
                   fontSize: 22, fontWeight: FontWeight.w900, color: _navy)),
           const SizedBox(height: 6),
-          const Text('اكتب الرمز السري الخاص بولي الأمر (٦ أرقام)',
+          Text(tr('اكتب الرمز السري الخاص بولي الأمر (٦ أرقام)'),
               style: TextStyle(fontSize: 14, color: Color(0xFF51608A))),
           const SizedBox(height: 18),
           Row(
@@ -585,7 +586,7 @@ class _RemoteLockScreenState extends State<RemoteLockScreen> {
   @override
   Widget build(BuildContext context) {
     return Directionality(
-      textDirection: TextDirection.rtl,
+      textDirection: Tr.dir,
       child: Scaffold(
         backgroundColor: const Color(0xFF1E2A4A),
         body: SafeArea(
@@ -612,9 +613,9 @@ class _RemoteLockScreenState extends State<RemoteLockScreen> {
                     maxLength: ParentAccount.kUnifiedParentalPinLength,
                     textAlign: TextAlign.center,
                     style: const TextStyle(color: Colors.white),
-                    decoration: const InputDecoration(
+                    decoration: InputDecoration(
                       counterText: '',
-                      hintText: 'الرمز السري لولي الأمر لفتح القفل',
+                      hintText: tr('الرمز السري لولي الأمر لفتح القفل'),
                       hintStyle: TextStyle(color: Colors.white54),
                     ),
                     onSubmitted: (_) => _unlock(),
@@ -627,7 +628,7 @@ class _RemoteLockScreenState extends State<RemoteLockScreen> {
                     ),
                   const SizedBox(height: 14),
                   ElevatedButton(
-                      onPressed: _unlock, child: const Text('فتح القفل')),
+                      onPressed: _unlock, child: Text(tr('فتح القفل'))),
                 ],
               ),
             ),
