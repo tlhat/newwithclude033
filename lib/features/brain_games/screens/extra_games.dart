@@ -30,6 +30,7 @@ const List<WidgetGameDef> kWidgetGames = [
   WidgetGameDef('sticker_album', 'ألبوم الملصقات', '🏅', 'اجمع الملصقات والجوائز', 0xFFA855F7),
   WidgetGameDef('certificate', 'شهادة التقدير', '🏆', 'شهادتك داخل التطبيق', 0xFFD4A017),
   WidgetGameDef('bedtime', 'حدوتة قبل النوم', '🌙', 'الإضاءة بتخفت مع الحدوتة', 0xFF1E3A8A),
+  WidgetGameDef('dad_voice', 'صوت بابا بيحكي', '🎙️', 'سجّل حدوتة بصوتك', 0xFF0EA5E9),
   WidgetGameDef('screen_free', 'وضع بدون شاشة', '🗣️', 'أسئلة شفهية مع الأب أو الأم', 0xFF10B981),
   WidgetGameDef('plant_care', 'اعتني بالنبتة', '🌱', 'اسقِها وعرّضها للشمس لتكبر', 0xFF84CC16),
 ];

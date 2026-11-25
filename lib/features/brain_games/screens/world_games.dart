@@ -7,6 +7,7 @@ import 'package:haneen_kids_vod/core/theme/kid_theme.dart';
 import 'package:haneen_kids_vod/features/exercises/exercise_models.dart';
 import 'package:haneen_kids_vod/features/exercises/exercise_screen.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
+import 'dad_voice.dart';
 
 /// "عالم حنين": house, stickers, pet, certificate, bedtime story, screen-free
 /// quiz. Everything is stored on this phone only (SharedPreferences).
@@ -169,6 +170,8 @@ Widget buildWorldGame(String id, AppStateManager s) {
       return HaneenPetCard(appState: s);
     case 'certificate':
       return CertificateCard(appState: s);
+    case 'dad_voice':
+      return DadVoiceCard(appState: s);
     case 'bedtime':
       return BedtimeLauncherCard(appState: s);
     case 'daily_challenge':
