@@ -716,6 +716,28 @@ class AppStateManager extends ChangeNotifier {
     return null;
   }
 
+  /// True after a restore on a phone whose Keystore differs from the backup's.
+  bool get pinResetRequired => _prefs.getBool('pin_reset_required') ?? false;
+
+  /// Sets a new PIN after such a restore. Returns an Arabic error or null.
+  Future<String?> setNewPinAfterRestore(String pin) async {
+    final String p = pin.trim();
+    if (!ParentAccount.isValidParentalPinFormat(p)) {
+      return 'الرمز لازم يكون ٦ أرقام بالضبط.';
+    }
+    if (OnboardingScreenTestHook.isWeakPin(p)) {
+      return 'الرمز ده سهل التخمين. اختار ٦ أرقام مش متتالية ومش متكررة.';
+    }
+    final ParentAccount? acc = currentAccount;
+    if (acc == null) return 'مفيش حساب.';
+    acc.setNewParentalPin(p);
+    await _saveAccounts();
+    await _prefs.setBool('pin_reset_required', false);
+    pinUnlockedThisSession = true;
+    notifyListeners();
+    return null;
+  }
+
   /// True until the child has done the first game and the light
   /// name / age / gender questions after the parent's one-time setup.
   bool get childIntroPending => _prefs.getBool('child_intro_pending') ?? false;
@@ -756,6 +778,7 @@ class AppStateManager extends ChangeNotifier {
     });
     return jsonEncode({
       'version': 1,
+      'pepperFp': LocalCredentialSecurityService.pepperFingerprint(),
       'savedAt': DateTime.now().toIso8601String(),
       'currentUserKey': currentAccount == null
           ? null
@@ -785,6 +808,13 @@ class AppStateManager extends ChangeNotifier {
       currentAccount = _accounts[key];
       onboardingCompleted = true;
       hasSelectedChildInSession = true;
+      // The saved PIN check is tied to the old phone's Keystore secret. If it
+      // is not this phone's (reinstall, new phone, old backup), the old PIN
+      // can never match, so the parent (just verified by Google) sets a new one.
+      final bool sameKeystore = (data['pepperFp'] ?? '').toString() ==
+          LocalCredentialSecurityService.pepperFingerprint();
+      await _prefs.setBool('pin_reset_required', !sameKeystore);
+      if (!sameKeystore) pinUnlockedThisSession = false;
       await _saveAccounts();
       await _prefs.setBool('onboarding_completed', true);
       await accountRepository.dataSource.setLoggedInUserKey(key);

@@ -135,7 +135,7 @@ jobs:
           cat ~/.gradle/init.d/disable-lint.gradle
 
       - name: Build Release APK
-        run: flutter build apk --release --no-tree-shake-icons
+        run: flutter build apk --release --no-tree-shake-icons --target-platform android-arm64
 
       - name: Show the SHA-1 this APK is really signed with
         continue-on-error: true

@@ -50,6 +50,9 @@ class _SplashRouterScreenState extends State<SplashRouterScreen> {
     if (widget.appState.remoteLockActive) {
       return RemoteLockScreen(appState: widget.appState);
     }
+    if (widget.appState.pinResetRequired) {
+      return SetNewPinScreen(appState: widget.appState);
+    }
     if (!widget.appState.pinUnlockedThisSession) {
       return PinUnlockScreen(appState: widget.appState);
     }

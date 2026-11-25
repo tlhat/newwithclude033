@@ -431,7 +431,7 @@ class ParentAccount {
         rawPin: enteredPin.trim(),
         pinSalt: pinSalt,
         accountEmail: emailOrPhone,
-        iterations: LocalCredentialSecurityService.kDefaultPbkdf2Iterations,
+        iterations: LocalCredentialSecurityService.kPinPbkdf2Iterations,
       );
     }
     return true;
@@ -446,7 +446,7 @@ class ParentAccount {
       rawPin: newRawPin.trim(),
       pinSalt: pinSalt,
       accountEmail: emailOrPhone,
-      iterations: LocalCredentialSecurityService.kDefaultPbkdf2Iterations,
+      iterations: LocalCredentialSecurityService.kPinPbkdf2Iterations,
     );
     failedPinAttempts = 0;
     pinLockoutUntil = null;

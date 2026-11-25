@@ -56,6 +56,12 @@ class LocalCredentialSecurityService {
   /// Defaults to the OWASP 600,000-iteration standard.
   static int kDefaultPbkdf2Iterations = kOwaspRecommendedPbkdf2Iterations;
 
+  /// Work factor for the 6-digit parental PIN. The PIN is already mixed with a
+  /// 256-bit Keystore secret (see below), so 100,000 rounds is plenty
+  /// (NIST SP 800-63B minimum is 10,000). 600,000 rounds froze a mid-range
+  /// Samsung tablet for about 10 seconds on every PIN check.
+  static const int kPinPbkdf2Iterations = 100000;
+
   static final FlutterSecureStorage _secureStorage = const FlutterSecureStorage();
   static final Map<String, LockoutVaultSnapshot> _keystoreBackedLockoutVault =
       {};
@@ -78,6 +84,15 @@ class LocalCredentialSecurityService {
   }
 
   static String get keystoreDevicePinPepper => _keystoreDevicePinPepper;
+
+  /// Short fingerprint of this phone's Keystore pepper (not reversible).
+  /// A backup stores it so a restore can tell whether the saved PIN check
+  /// still works here. After a reinstall the pepper is new, so the old PIN
+  /// check can never match and the parent must set a new PIN.
+  static String pepperFingerprint() => crypto.sha256
+      .convert(utf8.encode('fp:$_keystoreDevicePinPepper'))
+      .toString()
+      .substring(0, 12);
 
   static Future<String> ensureKeystorePinPepperInitialized() async {
     try {
@@ -133,7 +148,7 @@ class LocalCredentialSecurityService {
     String? accountEmail,
     int? iterations,
   }) {
-    final int effectiveIterations = iterations ?? kDefaultPbkdf2Iterations;
+    final int effectiveIterations = iterations ?? kPinPbkdf2Iterations;
     final String cleanPin = rawPin.trim();
     final crypto.Hmac pepperHmac =
         crypto.Hmac(crypto.sha256, utf8.encode(_keystoreDevicePinPepper));
@@ -179,7 +194,7 @@ class LocalCredentialSecurityService {
 
   static bool needsPinKeystoreUpgrade(String storedValue) {
     return !isKeystorePepperedPinHash(storedValue) ||
-        needsIterationUpgrade(storedValue);
+        extractIterations(storedValue) != kPinPbkdf2Iterations;
   }
 
   /// Benchmarks PBKDF2-HMAC-SHA256 performance across low-end and mid-range Android profiles

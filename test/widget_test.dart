@@ -216,7 +216,7 @@ void main() {
       );
       expect(
         LocalCredentialSecurityService.extractIterations(account.pinHash),
-        equals(600000),
+        equals(LocalCredentialSecurityService.kPinPbkdf2Iterations),
       );
 
       // 2a. Offline Extraction Resistance: If an attacker steals SharedPreferences JSON (`account.toJson()`)

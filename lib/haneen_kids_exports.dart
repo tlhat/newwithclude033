@@ -108,3 +108,4 @@ export 'features/companion/screens/character_studio_screen.dart';
 export 'features/companion/engine/speech_coordinator.dart';
 export 'shared/dialogs/parental_pin_gate_dialog.dart';
 export 'features/home/screens/fast_start_screen.dart';
+export 'features/home/screens/set_new_pin_screen.dart';

@@ -69,6 +69,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
     }
     CalmVoiceService.instance.stopAllAudioImmediatelyForParentalGate();
     setState(() {
+      _prevIndex = _currentIndex;
       _currentIndex = idx;
     });
     SectionIntroService.instance.playForTab(idx);
@@ -148,31 +149,59 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
     );
   }
 
+  final Set<int> _visited = <int>{};
+  final Map<int, Widget> _pageCache = <int, Widget>{};
+  int _prevIndex = -1;
+
+  Widget _buildPage(int i) {
+    switch (i) {
+      case 0:
+        return VerticalVideoFeedPlayerScreen(
+          appState: widget.appState,
+          embeddedInShell: true,
+          tabActive: _currentIndex == MainNavDestination.stories.index,
+          onNavigateToGames: () => _switchTo(MainNavDestination.games),
+          onNavigateToAcademy: () => _switchTo(MainNavDestination.academy),
+        );
+      case 1:
+        return HaneenAcademyScreen(appState: widget.appState);
+      case 2:
+        return DevGate(
+            appState: widget.appState,
+            active: _currentIndex == MainNavDestination.games.index,
+            child: BrainGamesHubScreen(appState: widget.appState));
+      case 3:
+        return AchievementsCenterTab(
+          appState: widget.appState,
+          onExploreAcademy: () => _switchTo(MainNavDestination.academy),
+        );
+      default:
+        return ChildAccountTab(
+          appState: widget.appState,
+          onOpenParentalGate: _openParentalGate,
+        );
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context);
-    final List<Widget> pages = [
-      VerticalVideoFeedPlayerScreen(
-        appState: widget.appState,
-        embeddedInShell: true,
-        tabActive: _currentIndex == MainNavDestination.stories.index,
-        onNavigateToGames: () => _switchTo(MainNavDestination.games),
-        onNavigateToAcademy: () => _switchTo(MainNavDestination.academy),
-      ),
-      HaneenAcademyScreen(appState: widget.appState),
-      DevGate(
-          appState: widget.appState,
-          active: _currentIndex == MainNavDestination.games.index,
-          child: BrainGamesHubScreen(appState: widget.appState)),
-      AchievementsCenterTab(
-        appState: widget.appState,
-        onExploreAcademy: () => _switchTo(MainNavDestination.academy),
-      ),
-      ChildAccountTab(
-        appState: widget.appState,
-        onOpenParentalGate: _openParentalGate,
-      ),
-    ];
+    // Speed: a section is built the first time it is opened, and when you
+    // switch only the section you leave and the one you enter are rebuilt.
+    // The other sections reuse their old widget, so a tab change no longer
+    // rebuilds all five heavy screens.
+    _visited.add(_currentIndex);
+    final List<Widget> pages = <Widget>[];
+    for (int i = 0; i < 5; i++) {
+      if (!_visited.contains(i)) {
+        pages.add(const SizedBox.shrink());
+        continue;
+      }
+      if (i == _currentIndex || i == _prevIndex || _pageCache[i] == null) {
+        _pageCache[i] = RepaintBoundary(child: _buildPage(i));
+      }
+      pages.add(_pageCache[i]!);
+    }
 
     return ValueListenableBuilder<bool>(
       valueListenable: KidLock.on,
