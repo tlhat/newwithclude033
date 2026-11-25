@@ -301,11 +301,6 @@ String realWorldFor(AgeBand b, SkillArea a, DateTime now) {
 
 String weekKey(DateTime now) => 'w${now.difference(DateTime(2026, 1, 1)).inDays ~/ 7}';
 
-/// Short, non-blocking parent note. Sources S1 and S2 in docs/EVIDENCE.md.
-const String kWhoNote =
-    'معلومة للوالد (WHO، المصدر S1 وS2): منظمة الصحة العالمية لا توصي بوقت شاشة جالس لعمر السنة، '
-    'وبحد أقصى ساعة لعمر ٢ إلى ٤ سنوات، والأقل أفضل. هذا مجرد إرشاد ولا يمنع التطبيق أي لعبة.';
-
 const String kNoDiagnosisLine =
     'هذا التطبيق للتدريب واللعب فقط، ولا يشخّص ولا يقيس ذكاء. إذا كنت قلقًا على نمو طفلك، تحدث مع طبيب أو أخصائي.';
 

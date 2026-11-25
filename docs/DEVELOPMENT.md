@@ -18,4 +18,4 @@ All data is stored on the phone (SharedPreferences key `dev_state_<childId>`). N
 | 18 | Evidence per activity | `kAreaEvidence` (sources, strength, limit); UNVERIFIED shown as play |
 | 19 | Offline | everything local |
 
-Screen time: first band is 12-36 months. No game is locked by age or co-use. The daily limit is optional, parent-set, and off by default. A short non-blocking WHO note (S1, S2) is shown in the parent card. `DevGate` wraps the games area and only enforces a parent-set cap.
+Screen time: first band is 12-36 months. No game is locked by age or co-use. The daily limit is optional, parent-set, and off by default. `DevGate` wraps the games area and only enforces a parent-set cap.

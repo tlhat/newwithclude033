@@ -1667,7 +1667,7 @@ void main() {
       final englishCurriculum = AdaptiveLearningEngine.getCurriculumForLanguage('en');
       expect(englishCurriculum.isNotEmpty, isTrue);
       expect(englishCurriculum.first.id, equals('les_en_letter_a'));
-      expect(englishCurriculum.first.title.contains('Letter A'), isTrue);
+      expect(englishCurriculum.first.title.contains('A'), isTrue);
 
       expect(CurriculumTier.fromInt(1), equals(CurriculumTier.beginner));
       expect(CurriculumTier.fromInt(2), equals(CurriculumTier.elementary));

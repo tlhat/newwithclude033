@@ -320,7 +320,6 @@ class _DevelopmentCardState extends State<DevelopmentCard> {
       _small('تدريب $name داخل التطبيق فقط. محفوظ على هذا الهاتف ولا يتقارن بأطفال آخرين.'),
       const SizedBox(height: 4),
       _small(kNoDiagnosisLine, c: const Color(0xFFFCD34D)),
-      _small(kWhoNote),
       _title('الفئة العمرية'),
       Wrap(spacing: 8, children: [
         for (final AgeBand b in AgeBand.values)
