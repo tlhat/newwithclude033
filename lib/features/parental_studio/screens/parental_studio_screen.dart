@@ -58,13 +58,11 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
     widget.appState.setParentalControlActive(true);
     // Immediately stop all story narration, voices, and background music upon entering Parental Studio
     CalmVoiceService.instance.stopAllAudioImmediatelyForParentalGate();
-    final int oldMapped = widget.initialTabIndex == 2
+    final int mappedTabIndex = widget.initialTabIndex == 2
         ? 1
         : widget.initialTabIndex.clamp(0, 3);
-    // The remote monitor/lock tab was removed (postponed), so indexes shift by one.
-    final int mappedTabIndex = (oldMapped - 1).clamp(0, 3);
     _tabController = TabController(
-      length: 4,
+      length: 5,
       vsync: this,
       initialIndex: mappedTabIndex,
     );
@@ -715,14 +713,6 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
 
   Widget _buildRemoteChildMonitorAndLockTab(
       ParentAccount account, ChildProfile activeChild) {
-    final TextEditingController lockMsgCtrl = TextEditingController(
-      text: activeChild.remoteLockReasonMessage,
-    );
-    final TextEditingController voiceBroadcastCtrl = TextEditingController();
-    final TextEditingController monitorUrlCtrl = TextEditingController(
-      text: widget.appState.remoteMonitorApiUrl,
-    );
-
     return ListView(
       padding: const EdgeInsets.all(20),
       children: [
@@ -752,7 +742,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                   const SizedBox(width: 12),
                   Expanded(
                     child: Text(
-                      'مراقبة وقفل موبايل الطفل: ${activeChild.name}',
+                      'ضوابط وتقدم الطفل: ${activeChild.name}',
                       style: const TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
@@ -763,32 +753,6 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                 ],
               ),
               const SizedBox(height: 14),
-              Container(
-                width: double.infinity,
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  color: Colors.black26,
-                  borderRadius: BorderRadius.circular(14),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      '📡 ماذا يفعل الطفل الآن على الموبايل؟ (بث الحالة الفوري):',
-                      style: TextStyle(fontSize: 12, color: Colors.white70),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      activeChild.currentLiveStatus,
-                      style: const TextStyle(
-                        fontSize: 15,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ],
-                ),
-              ),
               const SizedBox(height: 14),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -1301,77 +1265,13 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                   ],
                 ),
               ),
-              const SizedBox(height: 16),
-              TextField(
-                controller: lockMsgCtrl,
-                decoration: InputDecoration(
-                  labelText: 'رسالة القفل التي تظهر على شاشة موبايل الطفل',
-                  prefixIcon: Icon(Icons.message_outlined),
-                ),
-              ),
-              const SizedBox(height: 12),
-              Row(
-                children: [
-                  Expanded(
-                    child: SizedBox(
-                      height: 50,
-                      child: ElevatedButton.icon(
-                        style: ElevatedButton.styleFrom(
-                          backgroundColor: activeChild.isDeviceRemotelyLocked
-                              ? const Color(0xFF10B981)
-                              : Colors.redAccent,
-                          foregroundColor: Colors.white,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(14),
-                          ),
-                        ),
-                        onPressed: () async {
-                          final bool nextLock =
-                              !activeChild.isDeviceRemotelyLocked;
-                          await widget.appState.setRemoteDeviceLockForChild(
-                            childId: activeChild.id,
-                            lockDevice: nextLock,
-                            customLockMessage: lockMsgCtrl.text,
-                          );
-                          if (mounted) {
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                content: Text(
-                                  nextLock
-                                      ? '🔒 تم إرسال أمر قفل شاشة موبايل (${activeChild.name}) فوراً!'
-                                      : '🟢 تم فتح قفل شاشة موبايل (${activeChild.name}) عن بُعد!',
-                                ),
-                                backgroundColor: nextLock
-                                    ? Colors.redAccent
-                                    : const Color(0xFF14B8A6),
-                              ),
-                            );
-                          }
-                        },
-                        icon: Icon(
-                          activeChild.isDeviceRemotelyLocked
-                              ? Icons.lock_open_rounded
-                              : Icons.phonelink_lock_rounded,
-                        ),
-                        label: Text(
-                          activeChild.isDeviceRemotelyLocked
-                              ? 'فتح قفل موبايل الطفل الآن'
-                              : 'قفل موبايل الطفل الآن من موبايلي 🔒',
-                          style: const TextStyle(
-                              fontWeight: FontWeight.bold, fontSize: 14),
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
             ],
           ),
         ),
         const SizedBox(height: 16),
         if (account.children.length > 1) ...[
           Text(
-            '👦👧 التبديل السريع لمراقبة طفل آخر في العائلة:',
+            '👦👧 اختر الطفل:',
             style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 8),
@@ -1383,7 +1283,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                 selected: isCurr,
                 selectedColor: const Color(0xFF14B8A6),
                 label: Text(
-                    '${c.chosenAvatar} ${c.name} ${c.isDeviceRemotelyLocked ? "🔒" : "🟢"}'),
+                    '${c.chosenAvatar} ${c.name}'),
                 onSelected: (_) => widget.appState.switchActiveChild(c.id),
               );
             }).toList(),
@@ -1391,33 +1291,6 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
           const SizedBox(height: 16),
         ],
 
-        Text(
-          '📋 سجل النشاط الحي لما يفعله (${activeChild.name}) على التطبيق:',
-          style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 8),
-        ...activeChild.liveActivityTimeline.map((entry) {
-          return Card(
-            color: const Color(0xFF1E293B),
-            margin: const EdgeInsets.only(bottom: 8),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(14),
-            ),
-            child: ListTile(
-              dense: true,
-              leading: const Icon(Icons.bolt_rounded, color: Color(0xFF38BDF8)),
-              title: Text(
-                entry.actionTitle,
-                style:
-                    const TextStyle(fontWeight: FontWeight.bold, fontSize: 13),
-              ),
-              subtitle: Text(
-                '${entry.categoryBadge} • ${entry.timestampIso.substring(0, 16).replaceAll("T", " ")}',
-                style: const TextStyle(fontSize: 11, color: Colors.white60),
-              ),
-            ),
-          );
-        }),
       ],
     );
   }
@@ -1568,6 +1441,9 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
               unselectedLabelColor: Colors.white70,
               tabs: [
                 Tab(
+                    icon: Icon(Icons.phonelink_lock_rounded),
+                    text: 'ضوابط الطفل'),
+                Tab(
                     icon: Icon(Icons.star_rate_rounded),
                     text: 'الدعم والتقييم'),
                 Tab(icon: Icon(Icons.child_care), text: 'ملفات الأطفال'),
@@ -1581,6 +1457,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
           body: TabBarView(
             controller: _tabController,
             children: [
+              _buildRemoteChildMonitorAndLockTab(account, activeChild),
               ListView(
                 padding: const EdgeInsets.all(20),
                 children: [
