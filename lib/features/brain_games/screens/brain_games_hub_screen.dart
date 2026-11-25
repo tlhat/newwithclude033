@@ -1,3 +1,4 @@
+import 'package:haneen_kids_vod/features/brain_games/services/game_voice_texts.dart';
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
@@ -1910,9 +1911,14 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
               IconButton(
                 tooltip: 'استمع للكلمة بصوت حنين',
                 onPressed: () {
-                  CalmVoiceService.instance.speakInstructionAsHaneen(
-                    'اختر الصورة المطابقة لكلمة ${current['word']}. ${current['hint']}',
-                    childName: child?.name,
+                  CalmVoiceService.instance.speakCalmly(
+                    GameVoiceTexts.pictureWord(levelNum,
+                        current['word'] as String,
+                        // The recorded clips use the standard level hint.
+                        HundredLevelGamesGenerator.getPictureWordMatchLevel(
+                            _picMatchIndex)['hint'] as String),
+                    rate: 0.37,
+                    allowSpeechForRepeatGame: true,
                   );
                 },
                 icon: const Icon(Icons.volume_up_rounded,
@@ -2255,10 +2261,14 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                   foregroundColor: Colors.white,
                 ),
                 onPressed: () {
-                  CalmVoiceService.instance.speakStoryOrQuestionAsHaneen(
-                    titleOrContext: 'استمع مع حنين',
-                    contentToRead: current['soundText'] as String,
-                    questionPrompt: current['question'] as String,
+                  CalmVoiceService.instance.speakCalmly(
+                    GameVoiceTexts.sound(current['soundText'] as String,
+                        current['question'] as String),
+                    rate: 0.36,
+                    allowSpeechForRepeatGame: true,
+                    overridePersonaId: 'storyteller',
+                    speechContext: ElevenLabsSpeechContext.storyNarration,
+                    respectContextualPersonas: false,
                   );
                 },
                 icon: const Icon(Icons.volume_up_rounded, size: 18),
@@ -2448,9 +2458,11 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
               IconButton(
                 tooltip: 'استمع للغز بصوت حنين',
                 onPressed: () {
-                  CalmVoiceService.instance.speakInstructionAsHaneen(
-                    '${current['title']}. ${current['riddleTip']}',
-                    childName: child?.name,
+                  CalmVoiceService.instance.speakCalmly(
+                    GameVoiceTexts.riddle(current['title'] as String,
+                        current['riddleTip'] as String),
+                    rate: 0.37,
+                    allowSpeechForRepeatGame: true,
                   );
                 },
                 icon: const Icon(Icons.volume_up_rounded,
