@@ -19,6 +19,12 @@ class GoogleIdentity {
 }
 
 /// An error whose message is safe to show to a parent, in Arabic.
+/// Last raw sign-in error, shown only on a long press of the error text
+/// (for support). Never shown in the normal flow.
+class GoogleSignInDiagnostics {
+  static String? last;
+}
+
 class GoogleAccountException implements Exception {
   final String messageAr;
   const GoogleAccountException(this.messageAr);
@@ -50,9 +56,12 @@ class RealGoogleSignInGateway implements GoogleSignInGateway {
 
   @override
   Future<GoogleIdentity?> signIn() async {
+    String stage = 'signIn';
     try {
+      GoogleSignInDiagnostics.last = null;
       final GoogleSignInAccount? acc = await _gs.signIn();
       if (acc == null) return null; // the parent closed the Google window
+      stage = 'authHeaders';
       final Map<String, String> headers = await acc.authHeaders;
       return GoogleIdentity(
         email: acc.email,
@@ -63,6 +72,8 @@ class RealGoogleSignInGateway implements GoogleSignInGateway {
     } on PlatformException catch (e) {
       final String code = e.code;
       final String msg = '${e.message ?? ''}';
+      GoogleSignInDiagnostics.last =
+          'stage=$stage code=$code message=$msg details=${e.details}';
       if (code == 'network_error') {
         throw const GoogleAccountException(
             'مفيش إنترنت دلوقتي. وصّل بالنت وجرّب تاني.');

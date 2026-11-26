@@ -395,10 +395,31 @@ class _GoogleGateScreenState extends State<GoogleGateScreen> {
           ),
           if (_error != null) ...[
             const SizedBox(height: 14),
-            Text(_error!,
-                textAlign: TextAlign.center,
-                style: const TextStyle(
-                    color: Color(0xFFD64545), fontSize: 13.5, height: 1.5)),
+            GestureDetector(
+              onLongPress: () {
+                final String? d = GoogleSignInDiagnostics.last;
+                if (d == null) return;
+                showDialog<void>(
+                  context: context,
+                  builder: (ctx) => Directionality(
+                    textDirection: TextDirection.ltr,
+                    child: AlertDialog(
+                      title: const Text('Support info'),
+                      content: SelectableText(d),
+                      actions: [
+                        TextButton(
+                            onPressed: () => Navigator.pop(ctx),
+                            child: const Text('OK')),
+                      ],
+                    ),
+                  ),
+                );
+              },
+              child: Text(_error!,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(
+                      color: Color(0xFFD64545), fontSize: 13.5, height: 1.5)),
+            ),
           ],
           const SizedBox(height: 10),
         ],
