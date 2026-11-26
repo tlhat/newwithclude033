@@ -77,7 +77,7 @@ class _ParentBetaFeedbackCardState extends State<ParentBetaFeedbackCard> {
               ),
               const SizedBox(height: 8),
               Text(
-                'الإصدار والبيئة: ${env.buildInfoSummary}',
+                'رقم الإصدار: ${env.buildVersion}',
                 style: const TextStyle(fontSize: 12.5, color: Colors.white70),
               ),
               const SizedBox(height: 14),

@@ -470,7 +470,7 @@ class _DevelopmentCardState extends State<DevelopmentCard> {
           child: _small('${n['d']} • ${n['area']}: ${n['t']}', c: Colors.white70)));
     }
     w.add(const SizedBox(height: 10));
-    w.add(_small('المصادر والحدود الكاملة في docs/EVIDENCE.md. لا تُعرض أي نسب مقارنة أو "عمر عقلي" أو ذكاء.'));
+    w.add(_small('هذه المؤشرات لمتابعة تقدم طفلك هو نفسه فقط. مفيش مقارنة بأطفال تانيين، ومفيش عمر عقلي ولا قياس ذكاء.'));
     return w;
   }
 }

@@ -157,7 +157,7 @@ class _KidLockCardState extends State<KidLockCard> {
               _small('الجهاز مُجهّز كجهاز مخصص: أقوى قفل، ولا يخرج الطفل حتى بالأزرار.', c: const Color(0xFFFCD34D)),
               TextButton(onPressed: _release, child: const Text('إلغاء وضع الجهاز المخصص (بالرمز)')),
             ] else
-              _small('للقفل الكامل المحكم: جهّز الجهاز كجهاز مخصص مرة واحدة. الشرح في docs/KID_LOCK.md.'),
+              _small('للقفل الكامل المحكم: جهّز الجهاز كجهاز مخصص مرة واحدة. الخطوات بتتعمل مرة واحدة بس.'),
             if (_msg.isNotEmpty) Padding(padding: const EdgeInsets.only(top: 8), child: _small(_msg, c: Colors.white)),
           ]),
         ),

@@ -70,7 +70,7 @@ class RealGoogleSignInGateway implements GoogleSignInGateway {
       if (code == 'sign_in_canceled') return null;
       if (msg.contains('10') || code == 'sign_in_failed') {
         throw const GoogleAccountException(
-            'إعداد دخول جوجل في التطبيق لسه مش مكتمل (بصمة SHA-1 أو رقم العميل). راجع خطوات الإعداد.');
+            'الدخول بجوجل مش شغال دلوقتي على الجهاز ده. جرّب تاني بعد شوية.');
       }
       throw GoogleAccountException('تعذّر الدخول بجوجل ($code).');
     }
@@ -132,7 +132,7 @@ class GoogleAccountService {
       final http.Response r = await call(c).timeout(const Duration(seconds: 30));
       if (r.statusCode == 401 || r.statusCode == 403) {
         throw const GoogleAccountException(
-            'جوجل رفضت الوصول للنسخة الاحتياطية. تأكد إن Google Drive API مفعّل في المشروع وإن الشاشة مرفوعة (In production).');
+            'جوجل رفضت الوصول للنسخة الاحتياطية. جرّب تاني بعد شوية.');
       }
       return r;
     } on GoogleAccountException {
