@@ -1,45 +1,25 @@
-# إنشاء مفتاح الرفع الجديد (upload key) وتجهيز النشر، خطوة بخطوة
+# مفتاح الرفع (upload key) لـ Play: اتعمل، ومفيش حاجة تعملها على جهازك
 
-مهم: مفتاح التوقيع الحالي وكلمة سره ظاهرين في المستودع العام. **ما ترفعش أي AAB موقّع بيه على Play**. لأن أول AAB بترفعه على Play (مع Play App Signing) بيتحول مفتاحه لمفتاح الرفع. لازم أول ملف يتوقّع بمفتاح جديد عملته أنت ومحدش شافه.
 المصدر: https://support.google.com/googleplay/android-developer/answer/9842756
 
-## الخطوة 1: اعمل المفتاح على جهازك (كمبيوتر)
-محتاج Java (أو Android Studio، وفيه keytool). افتح Terminal أو PowerShell واكتب (غيّر المسار لو عايز):
+## الحالة
+- اتولّد مفتاح رفع جديد (PKCS12، alias: haneen) وانحفظ **كأسرار GitHub فقط**: `HANEEN_UPLOAD_KEYSTORE_B64` و `HANEEN_UPLOAD_KEYSTORE_PASSWORD`. ما اتكتب في المستودع ولا في ملف ولا في Artifact.
+- الأسرار في GitHub **ما بتتقراش تاني** (حتى لحاب المستودع). مفيش نسخة منه عند حد. لو ضاع أو اتمسح: Play Console > Test and release > Setup > App signing > Request upload key reset (Google بتسمح بكده).
+- مفتاح التوقيع القديم (SHA-1 يبدأ بـ 63a88435) فضل بس لتوقيع APK الاختبار. **ما ترفعش على Play أي ملف موقّع بيه.**
+- SHA-1 لمفتاح الرفع: BF:1C:07:2C:D6:26:4B:05:35:A3:D1:12:ED:85:00:11:00:85:9F:03
 
-    keytool -genkeypair -v -keystore haneen-upload.jks -storetype PKCS12 -alias haneen -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Haneen Kids, O=Haneen Kids, C=EG"
+## بناء الـ AAB
+GitHub > Actions > Build Android APK > Run workflow:
+- build_aab = تشغيل
+- sign_with_upload_key = تشغيل (الافتراضي)
+بعد ما ينتهي: افتح التشغيل > Artifacts > haneen-kids-release-aab (zip، فكّه، جواه app-release.aab). ده الملف اللي بيترفع على Play.
 
-- هيسألك عن كلمة سر. اختار كلمة سر طويلة (16 حرف أو أكتر) **واكتبها في مكان آمن**. اكتب نفس الكلمة لو سأل عن كلمة سر المفتاح.
-- الاسم المستعار (alias) لازم يفضل `haneen` لأن الـ workflow بيستخدمه. وكلمة سر الملف وكلمة سر المفتاح لازم تكون **نفس الكلمة** (الـ workflow بيستخدم كلمة واحدة للاتنين).
-- احفظ ملف haneen-upload.jks في مكانين (فلاشة وحساب تخزين خاص). لو ضاع، Google تقدر تعمل reset لمفتاح الرفع، بس الأفضل متضيعوش.
-- متبعتش الملف ولا الكلمة لأي حد، ولا في شات، ولا في GitHub كملف.
+## على Play Console (إنت بس)
+1. Create app: الاسم، اللغة العربية، مجاني.
+2. Test and release > Setup > App signing: سيبها على الخيار الافتراضي (Google-managed key).
+3. Testing > Closed testing > Create new release > ارفع app-release.aab (راجع CLOSED_TESTING.md).
+4. بعد الرفع: Setup > App signing > انسخ SHA-1 لـ "App signing key certificate" وسجّلها في Google Cloud (راجع OAUTH_SHA1.md).
 
-## الخطوة 2: حوّل الملف لنص (base64)
-- Windows PowerShell:
-
-      [Convert]::ToBase64String([IO.File]::ReadAllBytes("haneen-upload.jks")) | Set-Clipboard
-
-  (بينسخ النص للحافظة.)
-- Mac/Linux:
-
-      base64 -i haneen-upload.jks | tr -d '\n' | pbcopy      (على لينكس: base64 -w0 haneen-upload.jks)
-
-## الخطوة 3: ضيف سرّين في GitHub
-1. افتح https://github.com/tlhat/newwithclude033/settings/secrets/actions
-2. اضغط **New repository secret**:
-   - Name: `HANEEN_KEYSTORE_B64`، Secret: الصق النص من الحافظة. Add secret.
-   - Name: `HANEEN_KEYSTORE_PASSWORD`، Secret: كلمة السر. Add secret.
-   (الأسماء موجودة بالفعل لو أضفتها قبل كده. اضغط Update واستبدل القيم.)
-
-## الخطوة 4: قولي (للمساعد) وأنا أعمل الباقي
-بعد ما تضيف السرين:
-1. أشيل كلمة سر المفتاح القديم المكتوبة في build.yaml وملفات ci/ من الـ workflow.
-2. أشغّل Build مع build_aab وأتأكد إن الـ AAB موقّع بالمفتاح الجديد (SHA-1 هيتغير ويطلع في السجل، ومش هيبدأ بـ 63a88435).
-3. أسلّمك لينك الـ AAB (Artifact): GitHub > Actions > آخر تشغيل > Artifacts > haneen-kids-release-aab (بيتحمل ملف zip، فُكّه تلاقي app-release.aab).
-
-ملحوظة: تغيير المفتاح معناه إن APK الاختبار الجديد بيتوقّع بتوقيع مختلف: لازم تشيل النسخة القديمة من الموبايل قبل ما تسطّب الجديدة.
-
-## الخطوة 5: على Play Console (إنت بس، بعد عمل الحساب)
-1. Create app. الاسم: واحة اللعب والتعلم. اللغة العربية. تطبيق مش لعبة (أو لعبة حسب اختيارك). مجاني.
-2. Test and release > Setup > App signing: خلّيها الخيار الافتراضي (Google-managed key).
-3. Testing > Closed testing > Create new release > ارفع app-release.aab. (راجع CLOSED_TESTING.md.)
-4. بعد الرفع: Test and release > Setup > App signing > انسخ **SHA-1** لـ "App signing key certificate" وابعتها لي أو سجّلها في Google Cloud (راجع OAUTH_SHA1.md).
+## بعد أول رفع ناجح
+- يتشال من build.yaml وملفات ci/ كلمة سر المفتاح القديم (بنعملها إحنا).
+- ملحوظة: الـ APK الموقّع بالمفتاح القديم مش بيتثبّت فوق نسخة المتجر والعكس. شيل النسخة القديمة قبل ما تجرب.
