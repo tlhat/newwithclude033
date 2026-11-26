@@ -5,6 +5,7 @@ import 'package:haneen_kids_vod/features/home/screens/my_path_screen.dart';
 import 'package:flutter/material.dart' hide Text;
 import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
 import 'package:haneen_kids_vod/features/kidlock/kid_lock.dart';
+import 'package:haneen_kids_vod/features/subscriptions/screens/subscriptions_tab.dart';
 import 'package:haneen_kids_vod/features/development/dev_cards.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
@@ -15,6 +16,7 @@ enum MainNavDestination {
   games,
   achievements,
   account,
+  subscriptions,
 }
 
 /// 5-Destination Bottom Navigation Shell (Stage P0 / Sprint 2 & 3):
@@ -195,6 +197,8 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
           appState: widget.appState,
           onExploreAcademy: () => _switchTo(MainNavDestination.academy),
         );
+      case 5:
+        return const SubscriptionsTab();
       default:
         return ChildAccountTab(
           appState: widget.appState,
@@ -212,7 +216,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
     // rebuilds all five heavy screens.
     _visited.add(_currentIndex);
     final List<Widget> pages = <Widget>[];
-    for (int i = 0; i < 5; i++) {
+    for (int i = 0; i < 6; i++) {
       if (!_visited.contains(i)) {
         pages.add(const SizedBox.shrink());
         continue;
@@ -293,6 +297,11 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
             icon: const Icon(Icons.person_outline_rounded),
             selectedIcon: const Icon(Icons.person_rounded),
             label: l10n.navAccount,
+          ),
+          const NavigationDestination(
+            icon: Icon(Icons.workspace_premium_outlined),
+            selectedIcon: Icon(Icons.workspace_premium_rounded),
+            label: 'الاشتراك',
           ),
         ],
       ),

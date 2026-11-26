@@ -1269,7 +1269,7 @@ void main() {
       expect(appState.hasSelectedChildInSession, isTrue);
       expect(appState.currentAccount, isNotNull);
       expect(appState.currentAccount?.subscriptionPlanId, equals("free_forever"));
-      expect(appState.currentAccount?.subscriptionStatusLabel, contains("مجاني بالكامل"));
+      expect(appState.currentAccount?.subscriptionStatusLabel, contains("محتوى مجاني محدود"));
       expect(appState.currentAccount?.isSubscriptionTampered, isFalse);
       expect(appState.currentAccount?.isSubscriptionActive, isTrue);
       expect(appState.currentAccount?.activeChild.name, equals("سارة"));
