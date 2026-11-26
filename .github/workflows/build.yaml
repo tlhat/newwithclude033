@@ -9,6 +9,10 @@ on:
         description: 'Also build the Play bundle (AAB)'
         type: boolean
         default: false
+      sign_with_upload_key:
+        description: 'Sign this manual build with the Play upload key (use for the AAB)'
+        type: boolean
+        default: true
 
 jobs:
   build:
@@ -79,10 +83,19 @@ jobs:
           OLD_PASS: ${{ secrets.KEYSTORE_PASSWORD }}
           KS_B64: ${{ secrets.HANEEN_KEYSTORE_B64 }}
           KS_PW: ${{ secrets.HANEEN_KEYSTORE_PASSWORD }}
+          UP_B64: ${{ secrets.HANEEN_UPLOAD_KEYSTORE_B64 }}
+          UP_PW: ${{ secrets.HANEEN_UPLOAD_KEYSTORE_PASSWORD }}
+          USE_UP: ${{ github.event_name == 'workflow_dispatch' && inputs.build_aab == true && inputs.sign_with_upload_key == true }}
         run: |
           F=android/app/build.gradle.kts
           sed -i 's/applicationId = ".*"/applicationId = "com.haneenkids.haneen_kids_vod"/' "$F"
-          if [ -n "$KS_B64" ] && [ -n "$KS_PW" ]; then
+          if [ "$USE_UP" = "true" ] && [ -n "$UP_B64" ] && [ -n "$UP_PW" ]; then
+            echo "$UP_B64" | base64 -d > /tmp/haneen.jks
+            echo "KSPASS=$UP_PW" >> "$GITHUB_ENV"
+            echo "::add-mask::$UP_PW"
+            SIGN=1
+            echo "Using the Play UPLOAD key for this manual build"
+          elif [ -n "$KS_B64" ] && [ -n "$KS_PW" ]; then
             echo "$KS_B64" | base64 -d > /tmp/haneen.jks
             echo "KSPASS=$KS_PW" >> "$GITHUB_ENV"
             echo "::add-mask::$KS_PW"
