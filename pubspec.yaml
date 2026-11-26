@@ -83,6 +83,7 @@ flutter:
     - assets/audio/storyteller/games_sound/
     - assets/audio/storyteller/stories/
     # audio-assets-end
+    - assets/audio/real_sounds/
     - assets/exercises/
     - assets/icon/
     - assets/avatars/

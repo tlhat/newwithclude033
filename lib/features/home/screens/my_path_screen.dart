@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/core/regional/dialect_pack.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'level_check_screen.dart';
@@ -145,7 +146,7 @@ class _MyPathScreenState extends State<MyPathScreen> {
             if (doneCount >= steps.length)
               Padding(
                 padding: EdgeInsets.only(top: 12),
-                child: Text('🎉 خلصت خطة النهاردة! برافو يا بطل',
+                child: Text(DialectPacks.t('path.allDone', '🎉 خلصت خطة النهاردة! برافو يا بطل'),
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900)),
               ),

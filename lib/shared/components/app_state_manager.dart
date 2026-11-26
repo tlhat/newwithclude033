@@ -881,6 +881,12 @@ class AppStateManager extends ChangeNotifier {
   /// True after the parent typed the 6-digit PIN in this app launch.
   bool pinUnlockedThisSession = false;
 
+  /// Asks for the parent PIN again (called when the app returns after a while).
+  void relockPin() {
+    pinUnlockedThisSession = false;
+    notifyListeners();
+  }
+
   /// The Google screen is done once a Google account is linked on this
   /// phone. Google sign-in is mandatory (needs internet once per phone).
   bool get googleGateDone => linkedGoogleEmail != null;

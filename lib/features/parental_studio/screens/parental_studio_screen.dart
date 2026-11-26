@@ -1,6 +1,7 @@
 import 'dart:math';
 import 'package:haneen_kids_vod/features/exercises/skill_mastery_card.dart';
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/features/parental_studio/widgets/regional_and_credits_card.dart';
 import 'package:haneen_kids_vod/features/development/dev_cards.dart';
 import 'package:haneen_kids_vod/features/kidlock/kid_lock_card.dart';
 import 'package:flutter/services.dart';
@@ -1729,6 +1730,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
               ListView(
                 padding: const EdgeInsets.all(20),
                 children: [
+                  const RegionalAndCreditsCard(),
                   SafetyPrivacyCard(appState: widget.appState),
                   Container(
                     padding: const EdgeInsets.all(18),

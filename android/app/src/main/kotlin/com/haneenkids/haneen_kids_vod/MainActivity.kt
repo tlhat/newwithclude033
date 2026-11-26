@@ -11,6 +11,7 @@ import android.os.Build
 import android.os.Handler
 import android.os.Looper
 import android.provider.Settings
+import android.telephony.TelephonyManager
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.engine.FlutterEngine
 import io.flutter.plugin.common.MethodChannel
@@ -31,6 +32,18 @@ class MainActivity : FlutterActivity() {
 
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
+        // Country hints for the dialect and country setup. Local only, no permission,
+        // no GPS. Returns two-letter codes read from the SIM and the network.
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "haneen/region").setMethodCallHandler { call, result ->
+            if (call.method == "countryHints") {
+                try {
+                    val tm = getSystemService(Context.TELEPHONY_SERVICE) as TelephonyManager
+                    result.success(mapOf("sim" to (tm.simCountryIso ?: ""), "network" to (tm.networkCountryIso ?: "")))
+                } catch (e: Exception) {
+                    result.success(mapOf("sim" to "", "network" to ""))
+                }
+            } else result.notImplemented()
+        }
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, channelName).setMethodCallHandler { call, result ->
             try {
                 when (call.method) {

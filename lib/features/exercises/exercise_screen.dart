@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'package:haneen_kids_vod/core/theme/kid_theme.dart';
 import 'exercise_models.dart';
+import 'package:haneen_kids_vod/core/services/real_sounds.dart';
 import 'game_catalog.dart';
 import 'package:haneen_kids_vod/features/development/dev_core.dart';
 
@@ -367,10 +368,14 @@ class _ExerciseGameState extends State<ExerciseGame> {
                 child: _tile('$l',
                     sel: _leftSel == '$l',
                     c: _pairs.containsKey('$l') ? KidTheme.primary : null,
-                    onTap: () => setState(() {
-                          _pairs.remove('$l');
-                          _leftSel = '$l';
-                        })),
+                    onTap: () {
+                      // Animal exercises: the tile plays the real recording.
+                      if (e.skill == 'animal_sounds') RealSounds.play('$l');
+                      setState(() {
+                        _pairs.remove('$l');
+                        _leftSel = '$l';
+                      });
+                    }),
               ),
           ]),
           Column(children: [

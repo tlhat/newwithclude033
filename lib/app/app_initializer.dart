@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/core/regional/regional_settings.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
@@ -17,6 +18,9 @@ class AppInitializer {
     await appState.initialize();
     try {
       await KidLock.restore();
+    } catch (_) {}
+    try {
+      await RegionalSettings.instance.load();
     } catch (_) {}
     PathProgress.activeChildIdProvider =
         () => appState.currentAccount?.activeChild.id;

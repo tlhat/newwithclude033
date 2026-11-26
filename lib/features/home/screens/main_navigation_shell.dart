@@ -1,4 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:haneen_kids_vod/core/regional/dialect_pack.dart';
 import 'package:haneen_kids_vod/core/services/app_rating_service.dart';
 import 'package:haneen_kids_vod/features/home/screens/my_path_screen.dart';
 import 'package:flutter/material.dart';
@@ -249,7 +250,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
                     decoration: BoxDecoration(
                         color: const Color(0xFFFDE68A),
                         borderRadius: BorderRadius.circular(10)),
-                    child: const Text('اضغط هنا، مخصص ليك',
+                    child: Text(DialectPacks.t('path.badge', 'اضغط هنا، مخصص ليك'),
                         style: TextStyle(
                             fontSize: 11,
                             fontWeight: FontWeight.w800,

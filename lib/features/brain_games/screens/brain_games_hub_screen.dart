@@ -2,6 +2,7 @@ import 'package:haneen_kids_vod/features/brain_games/services/game_voice_texts.d
 import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/features/home/path_target.dart';
+import 'package:haneen_kids_vod/core/services/real_sounds.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'new_games.dart';
 import 'package:haneen_kids_vod/features/exercises/exercise_screen.dart';
@@ -2278,7 +2279,10 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                   backgroundColor: const Color(0xFFF97316),
                   foregroundColor: Colors.white,
                 ),
-                onPressed: () {
+                onPressed: () async {
+                  // Real recording first (cat, lion, bird, bee, sheep, train).
+                  await RealSounds.play(current['correct'] as String);
+                  if (!mounted) return;
                   CalmVoiceService.instance.speakCalmly(
                     GameVoiceTexts.sound(current['soundText'] as String,
                         current['question'] as String),

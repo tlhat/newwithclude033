@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'package:haneen_kids_vod/features/billing/online_gate.dart';
+import 'package:haneen_kids_vod/app/pin_relock_policy.dart';
 
 class HaneenKidsApp extends StatefulWidget {
   final AppStateManager appState;
@@ -13,6 +14,9 @@ class HaneenKidsApp extends StatefulWidget {
 
 class _HaneenKidsAppState extends State<HaneenKidsApp>
     with WidgetsBindingObserver {
+  final GlobalKey<NavigatorState> _navKey = GlobalKey<NavigatorState>();
+  DateTime? _pausedAt;
+
   @override
   void initState() {
     super.initState();
@@ -29,6 +33,20 @@ class _HaneenKidsAppState extends State<HaneenKidsApp>
   void didChangeAppLifecycleState(AppLifecycleState state) {
     super.didChangeAppLifecycleState(state);
     final bool isBackground = state != AppLifecycleState.resumed;
+    if (state == AppLifecycleState.paused) {
+      _pausedAt ??= DateTime.now();
+    } else if (state == AppLifecycleState.resumed) {
+      final app = widget.appState;
+      if (PinRelockPolicy.shouldRelock(
+        pausedAt: _pausedAt,
+        now: DateTime.now(),
+        pinRequiredAtAll: app.pinUnlockedThisSession && app.currentAccount != null,
+      )) {
+        _navKey.currentState?.popUntil((r) => r.isFirst);
+        app.relockPin();
+      }
+      _pausedAt = null;
+    }
     widget.appState.setAppInBackground(isBackground);
   }
 
@@ -41,6 +59,7 @@ class _HaneenKidsAppState extends State<HaneenKidsApp>
         final bool highContrast = activeChild?.highContrastMode ?? false;
 
         return MaterialApp(
+          navigatorKey: _navKey,
           title: 'حنين كيدز',
           debugShowCheckedModeBanner: false,
           locale: widget.appState.localeController.uiLocale,
