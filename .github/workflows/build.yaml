@@ -149,9 +149,22 @@ jobs:
       - name: Build Release APK
         run: flutter build apk --release --no-tree-shake-icons --target-platform android-arm,android-arm64,android-x64
 
+      - name: Check 16 KB page-size compatibility of the native libraries (Play requirement)
+        run: python3 tools/check_16kb.py build/app/outputs/flutter-apk/app-release.apk
+
       - name: Build Play bundle (AAB), only when started by hand with build_aab
         if: github.event_name == 'workflow_dispatch' && inputs.build_aab == true
         run: flutter build appbundle --release --no-tree-shake-icons --target-platform android-arm,android-arm64,android-x64
+
+      - name: Check 16 KB compatibility inside the AAB
+        if: github.event_name == 'workflow_dispatch' && inputs.build_aab == true
+        run: python3 tools/check_16kb.py build/app/outputs/bundle/release/app-release.aab
+
+      - name: Show the upload-key SHA-1 of the AAB (not uploaded anywhere)
+        if: github.event_name == 'workflow_dispatch' && inputs.build_aab == true
+        continue-on-error: true
+        run: |
+          keytool -printcert -jarfile build/app/outputs/bundle/release/app-release.aab | grep -E "SHA1|SHA256"
 
       - name: Upload the AAB (manual runs only)
         if: github.event_name == 'workflow_dispatch' && inputs.build_aab == true
