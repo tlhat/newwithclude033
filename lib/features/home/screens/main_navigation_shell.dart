@@ -286,7 +286,6 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
         children: pages,
       ),
       bottomNavigationBar: NavigationBar(
-        labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
         selectedIndex: _currentIndex,
         onDestinationSelected: _selectIndex,
         destinations: [
@@ -323,7 +322,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
           const NavigationDestination(
             icon: Icon(Icons.admin_panel_settings_outlined),
             selectedIcon: Icon(Icons.admin_panel_settings_rounded),
-            label: 'بوابة الوالدين',
+            label: 'الوالدين',
           ),
         ],
       ),
