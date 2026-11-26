@@ -344,7 +344,7 @@ class _MultiChildProfilesScreenState extends State<MultiChildProfilesScreen> {
                       const SizedBox(width: 10),
                       Expanded(
                         child: Text(
-                          'حنين كيدز: محتوى مجاني والباقي بالاشتراك',
+                          'رأيك يفرق معانا. قيّم حنين كيدز ⭐',
                           style: const TextStyle(
                               fontSize: 12, color: Colors.white),
                         ),

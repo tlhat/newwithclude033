@@ -408,6 +408,36 @@ class _GoogleGateScreenState extends State<GoogleGateScreen> {
 }
 
 /// Second screen on every launch: the parent's 6-digit PIN.
+/// "نسيت رمز البين": confirms, then re-checks the parent with the same Google
+/// account. On success the app shows the set-new-PIN screen by itself.
+Future<void> startForgotPin(BuildContext context, AppStateManager app) async {
+  final bool? go = await showDialog<bool>(
+    context: context,
+    builder: (ctx) => Directionality(
+      textDirection: TextDirection.rtl,
+      child: AlertDialog(
+        title: const Text('نسيت رمز البين؟'),
+        content: const Text(
+            'هتدخل بنفس حساب جوجل المربوط بالعائلة، وبعدها تحط رمز جديد. مفيش رسايل ولا أكواد بتتبعت.'),
+        actions: [
+          TextButton(
+              onPressed: () => Navigator.pop(ctx, false),
+              child: const Text('إلغاء')),
+          ElevatedButton(
+              onPressed: () => Navigator.pop(ctx, true),
+              child: const Text('ادخل بجوجل')),
+        ],
+      ),
+    ),
+  );
+  if (go != true) return;
+  final String? err = await app.forgotPinViaGoogle();
+  if (err != null && context.mounted) {
+    ScaffoldMessenger.of(context)
+        .showSnackBar(SnackBar(content: Text(err)));
+  }
+}
+
 class PinUnlockScreen extends StatefulWidget {
   final AppStateManager appState;
   const PinUnlockScreen({super.key, required this.appState});
@@ -552,6 +582,11 @@ class _PinUnlockScreenState extends State<PinUnlockScreen> {
                 ),
               ],
             ),
+          ),
+          TextButton(
+            onPressed: () => startForgotPin(context, widget.appState),
+            child: const Text('نسيت رمز البين',
+                style: TextStyle(fontSize: 15, fontWeight: FontWeight.w700)),
           ),
         ],
       ),

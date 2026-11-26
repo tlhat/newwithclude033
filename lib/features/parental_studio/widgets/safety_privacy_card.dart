@@ -3,9 +3,6 @@ import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'package:haneen_kids_vod/core/security/local_credential_security_service.dart';
 
-/// Put your real contact email here before publishing. It is shown in the
-/// privacy policy screen.
-const String kPrivacyContactEmail = 'tlhatmaher1893@gmail.com';
 const String kPrivacyPolicyDate = '2026-11-24';
 
 /// Shown at the top of the parent "account settings" tab:
@@ -13,7 +10,14 @@ const String kPrivacyPolicyDate = '2026-11-24';
 ///  - a button that opens the in-app privacy policy
 class SafetyPrivacyCard extends StatefulWidget {
   final AppStateManager appState;
-  const SafetyPrivacyCard({super.key, required this.appState});
+  final bool showPinWarning;
+  final bool showPrivacyButton;
+  const SafetyPrivacyCard({
+    super.key,
+    required this.appState,
+    this.showPinWarning = true,
+    this.showPrivacyButton = true,
+  });
 
   @override
   State<SafetyPrivacyCard> createState() => _SafetyPrivacyCardState();
@@ -50,7 +54,7 @@ class _SafetyPrivacyCardState extends State<SafetyPrivacyCard> {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        if (_usesDefaultPin)
+        if (widget.showPinWarning && _usesDefaultPin)
           Container(
             margin: EdgeInsets.only(bottom: 12),
             padding: EdgeInsets.all(14),
@@ -73,6 +77,7 @@ class _SafetyPrivacyCardState extends State<SafetyPrivacyCard> {
               ],
             ),
           ),
+        if (widget.showPrivacyButton)
         OutlinedButton.icon(
           onPressed: () => Navigator.push(
             context,
@@ -135,7 +140,7 @@ class PrivacyPolicyScreen extends StatelessWidget {
     ],
     [
       'التواصل',
-      'لأي سؤال أو طلب حذف بيانات: {0}',
+      'لأي سؤال أو طلب حذف بيانات، استخدم زر «إرسال ملاحظة أو شكوى» في صفحة الدعم والتقييم.',
     ],
   ];
 

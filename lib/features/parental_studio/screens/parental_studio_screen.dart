@@ -1,3 +1,4 @@
+import 'package:haneen_kids_vod/core/services/feedback_mail.dart';
 import 'dart:math';
 import 'package:haneen_kids_vod/features/exercises/skill_mastery_card.dart';
 import 'package:flutter/material.dart' hide Text;
@@ -714,74 +715,8 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
     );
   }
 
-  Widget _buildRemoteChildMonitorAndLockTab(
-      ParentAccount account, ChildProfile activeChild) {
-    return ListView(
-      padding: const EdgeInsets.all(20),
-      children: [
-        Container(
-          padding: const EdgeInsets.all(18),
-          decoration: BoxDecoration(
-            gradient: LinearGradient(
-              colors: activeChild.isDeviceRemotelyLocked
-                  ? [const Color(0xFF7F1D1D), const Color(0xFF1E293B)]
-                  : [const Color(0xFF0F766E), const Color(0xFF1E293B)],
-            ),
-            borderRadius: BorderRadius.circular(20),
-            border: Border.all(
-              color: activeChild.isDeviceRemotelyLocked
-                  ? Colors.redAccent
-                  : const Color(0xFF14B8A6),
-              width: 2,
-            ),
-          ),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Text(activeChild.chosenAvatar,
-                      style: const TextStyle(fontSize: 40)),
-                  const SizedBox(width: 12),
-                  Expanded(
-                    child: Text(
-                      'ضوابط وتقدم الطفل: ${activeChild.name}',
-                      style: const TextStyle(
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 14),
-              const SizedBox(height: 14),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  _MonitorStatBadge(
-                    label: 'وقت المشاهدة',
-                    value:
-                        '${activeChild.usedMinutesToday}/${activeChild.limitShown} د',
-                    icon: Icons.timer_outlined,
-                  ),
-                  _MonitorStatBadge(
-                    label: 'الأكاديمية والذكاء',
-                    value:
-                        '🎓 ${activeChild.completedLessons.length} | 🧠 ${activeChild.intelligencePoints}',
-                    icon: Icons.school_outlined,
-                  ),
-                  _MonitorStatBadge(
-                    label: 'النجوم والأوسمة',
-                    value:
-                        '⭐ ${activeChild.starsEarned} | 🏅 ${activeChild.unlockedAchievements.length}',
-                    icon: Icons.star_border_rounded,
-                  ),
-                ],
-              ),
-              const SizedBox(height: 12),
-              Container(
+  Widget _masteryReportBlock(ChildProfile activeChild) {
+    return               Container(
                 width: double.infinity,
                 padding: const EdgeInsets.all(12),
                 decoration: BoxDecoration(
@@ -869,7 +804,77 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                     ),
                   ],
                 ),
+              );
+  }
+
+  Widget _buildRemoteChildMonitorAndLockTab(
+      ParentAccount account, ChildProfile activeChild) {
+    return ListView(
+      padding: const EdgeInsets.all(20),
+      children: [
+        Container(
+          padding: const EdgeInsets.all(18),
+          decoration: BoxDecoration(
+            gradient: LinearGradient(
+              colors: activeChild.isDeviceRemotelyLocked
+                  ? [const Color(0xFF7F1D1D), const Color(0xFF1E293B)]
+                  : [const Color(0xFF0F766E), const Color(0xFF1E293B)],
+            ),
+            borderRadius: BorderRadius.circular(20),
+            border: Border.all(
+              color: activeChild.isDeviceRemotelyLocked
+                  ? Colors.redAccent
+                  : const Color(0xFF14B8A6),
+              width: 2,
+            ),
+          ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Row(
+                children: [
+                  Text(activeChild.chosenAvatar,
+                      style: const TextStyle(fontSize: 40)),
+                  const SizedBox(width: 12),
+                  Expanded(
+                    child: Text(
+                      'ضوابط وتقدم الطفل: ${activeChild.name}',
+                      style: const TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ),
+                ],
               ),
+              const SizedBox(height: 14),
+              const SizedBox(height: 14),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  _MonitorStatBadge(
+                    label: 'وقت المشاهدة',
+                    value:
+                        '${activeChild.usedMinutesToday}/${activeChild.limitShown} د',
+                    icon: Icons.timer_outlined,
+                  ),
+                  _MonitorStatBadge(
+                    label: 'الأكاديمية والذكاء',
+                    value:
+                        '🎓 ${activeChild.completedLessons.length} | 🧠 ${activeChild.intelligencePoints}',
+                    icon: Icons.school_outlined,
+                  ),
+                  _MonitorStatBadge(
+                    label: 'النجوم والأوسمة',
+                    value:
+                        '⭐ ${activeChild.starsEarned} | 🏅 ${activeChild.unlockedAchievements.length}',
+                    icon: Icons.star_border_rounded,
+                  ),
+                ],
+              ),
+              const SizedBox(height: 12),
+              KidLockCard(appState: widget.appState),
               const SizedBox(height: 10),
               Container(
                 padding: const EdgeInsets.all(12),
@@ -1492,7 +1497,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                             SizedBox(width: 10),
                             Expanded(
                               child: Text(
-                                'حنين كيدز: محتوى مجاني والباقي بالاشتراك',
+                                'رأيك يفرق معانا ⭐',
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
@@ -1504,7 +1509,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                         ),
                         const SizedBox(height: 10),
                         Text(
-                          'دعمكم لنا بتقييم ٥ نجوم وتعليق إيجابي مشجع على متجر Google Play يساعدنا كثيراً في الوصول إلى المزيد من العائلات واستمرار تقديم الدروس والقصص والألعاب مجاناً بالكامل بدون أي إعلانات أو اشتراكات!',
+                          'لو حنين كيدز عجبكم، تقييمكم وتعليقكم على متجر Google Play بيساعدنا نوصل لعائلات أكتر ونكمّل نضيف دروس وقصص وألعاب جديدة. وملاحظاتكم بتخلينا نتحسن. شكراً ليكم!',
                           style: TextStyle(
                             fontSize: 13.5,
                             height: 1.55,
@@ -1551,9 +1556,28 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                     ),
                   ),
                   const SizedBox(height: 18),
-                  SkillMasteryCard(appState: widget.appState),
-                  DevelopmentCard(appState: widget.appState),
-                  KidLockCard(appState: widget.appState),
+                  SizedBox(
+                    width: double.infinity,
+                    height: 50,
+                    child: OutlinedButton.icon(
+                      onPressed: () async {
+                        final ok = await FeedbackMail.compose();
+                        if (!ok && context.mounted) {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            const SnackBar(
+                              content: Text(
+                                  'مفيش تطبيق بريد على الجهاز. ثبّت أو افتح تطبيق بريد وجرّب تاني.'),
+                            ),
+                          );
+                        }
+                      },
+                      icon: const Icon(Icons.mail_outline_rounded),
+                      label: const Text('إرسال ملاحظة أو شكوى'),
+                    ),
+                  ),
+                  const SizedBox(height: 12),
+                  SafetyPrivacyCard(
+                      appState: widget.appState, showPinWarning: false),
                   ParentBetaFeedbackCard(appState: widget.appState),
                 ],
               ),
@@ -1724,7 +1748,6 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                       ],
                     ),
                   ),
-                  ParentBetaFeedbackCard(appState: widget.appState),
                 ],
               ),
 
@@ -1732,7 +1755,8 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                 padding: const EdgeInsets.all(20),
                 children: [
                   const RegionalAndCreditsCard(),
-                  SafetyPrivacyCard(appState: widget.appState),
+                  SafetyPrivacyCard(
+                      appState: widget.appState, showPrivacyButton: false),
                   Container(
                     padding: const EdgeInsets.all(18),
                     decoration: BoxDecoration(
@@ -1938,7 +1962,15 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                   ),
                 ],
               ),
-              ParentProgressReport(child: activeChild),
+              ParentProgressReport(
+                child: activeChild,
+                extras: [
+                  _masteryReportBlock(activeChild),
+                  const SizedBox(height: 12),
+                  SkillMasteryCard(appState: widget.appState),
+                  DevelopmentCard(appState: widget.appState),
+                ],
+              ),
             ],
           ),
         );

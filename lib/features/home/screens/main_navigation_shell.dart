@@ -5,6 +5,7 @@ import 'package:haneen_kids_vod/features/home/screens/my_path_screen.dart';
 import 'package:flutter/material.dart' hide Text;
 import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
 import 'package:haneen_kids_vod/features/kidlock/kid_lock.dart';
+import 'package:haneen_kids_vod/features/home/screens/entry_gate_screens.dart' show startForgotPin;
 import 'package:haneen_kids_vod/features/subscriptions/screens/subscriptions_tab.dart';
 import 'package:haneen_kids_vod/features/development/dev_cards.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
@@ -17,6 +18,7 @@ enum MainNavDestination {
   achievements,
   account,
   subscriptions,
+  parentGate,
 }
 
 /// 5-Destination Bottom Navigation Shell (Stage P0 / Sprint 2 & 3):
@@ -95,6 +97,11 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
       _currentIndex = idx;
     });
     SectionIntroService.instance.playForTab(idx);
+    if (idx == MainNavDestination.parentGate.index) {
+      WidgetsBinding.instance.addPostFrameCallback((_) {
+        if (mounted) _openParentalGate();
+      });
+    }
   }
 
   void _switchTo(MainNavDestination dest) => _selectIndex(dest.index);
@@ -138,6 +145,13 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
               ],
             ),
             actions: [
+              TextButton(
+                onPressed: () {
+                  Navigator.pop(ctx);
+                  startForgotPin(context, widget.appState);
+                },
+                child: const Text('نسيت رمز البين'),
+              ),
               TextButton(
                 onPressed: () => Navigator.pop(ctx),
                 child: Text(l10n.cancelButton),
@@ -199,6 +213,8 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
         );
       case 5:
         return const SubscriptionsTab();
+      case 6:
+        return _ParentGatePage(onOpen: _openParentalGate);
       default:
         return ChildAccountTab(
           appState: widget.appState,
@@ -216,7 +232,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
     // rebuilds all five heavy screens.
     _visited.add(_currentIndex);
     final List<Widget> pages = <Widget>[];
-    for (int i = 0; i < 6; i++) {
+    for (int i = 0; i < 7; i++) {
       if (!_visited.contains(i)) {
         pages.add(const SizedBox.shrink());
         continue;
@@ -270,6 +286,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
         children: pages,
       ),
       bottomNavigationBar: NavigationBar(
+        labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
         selectedIndex: _currentIndex,
         onDestinationSelected: _selectIndex,
         destinations: [
@@ -303,8 +320,49 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
             selectedIcon: Icon(Icons.workspace_premium_rounded),
             label: 'الاشتراك',
           ),
+          const NavigationDestination(
+            icon: Icon(Icons.admin_panel_settings_outlined),
+            selectedIcon: Icon(Icons.admin_panel_settings_rounded),
+            label: 'بوابة الوالدين',
+          ),
         ],
       ),
     ));
+  }
+}
+
+/// Top-level "بوابة الوالدين" tab. The PIN is asked when the tab opens, and
+/// again from the button here.
+class _ParentGatePage extends StatelessWidget {
+  final VoidCallback onOpen;
+  const _ParentGatePage({required this.onOpen});
+
+  @override
+  Widget build(BuildContext context) {
+    return Directionality(
+      textDirection: TextDirection.rtl,
+      child: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(24),
+          child: Column(mainAxisSize: MainAxisSize.min, children: [
+            const Text('🔐', style: TextStyle(fontSize: 56)),
+            const SizedBox(height: 10),
+            const Text('بوابة الوالدين',
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w900)),
+            const SizedBox(height: 8),
+            const Text(
+                'ضوابط الطفل، تقرير التقدم، الحساب، الدعم والتقييم. محمية بالرمز السري.',
+                textAlign: TextAlign.center,
+                style: TextStyle(fontSize: 14, color: Colors.white70)),
+            const SizedBox(height: 18),
+            ElevatedButton.icon(
+              onPressed: onOpen,
+              icon: const Icon(Icons.lock_open_rounded),
+              label: const Text('فتح بالرمز السري'),
+            ),
+          ]),
+        ),
+      ),
+    );
   }
 }

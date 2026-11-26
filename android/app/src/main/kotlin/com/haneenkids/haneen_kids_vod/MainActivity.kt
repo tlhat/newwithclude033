@@ -34,6 +34,23 @@ class MainActivity : FlutterActivity() {
         super.configureFlutterEngine(flutterEngine)
         // Country hints for the dialect and country setup. Local only, no permission,
         // no GPS. Returns two-letter codes read from the SIM and the network.
+        // Opens the mail app with a prefilled message (feedback button).
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "haneen/mail").setMethodCallHandler { call, result ->
+            if (call.method == "compose") {
+                try {
+                    val to = call.argument<String>("to") ?: ""
+                    val uri = android.net.Uri.parse("mailto:" + android.net.Uri.encode(to) +
+                        "?subject=" + android.net.Uri.encode(call.argument<String>("subject") ?: "") +
+                        "&body=" + android.net.Uri.encode(call.argument<String>("body") ?: ""))
+                    val i = Intent(Intent.ACTION_SENDTO, uri)
+                    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                    startActivity(i)
+                    result.success(true)
+                } catch (e: Exception) {
+                    result.success(false)
+                }
+            } else result.notImplemented()
+        }
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "haneen/region").setMethodCallHandler { call, result ->
             if (call.method == "countryHints") {
                 try {

@@ -6,7 +6,9 @@ import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 /// Everything here comes from data the app already stores on [ChildProfile].
 class ParentProgressReport extends StatelessWidget {
   final ChildProfile child;
-  ParentProgressReport({super.key, required this.child});
+  final List<Widget> extras;
+  ParentProgressReport(
+      {super.key, required this.child, this.extras = const []});
 
   static Map<String, String> kGameNames = {
     'memory_match_lvl': 'الذاكرة البصرية',
@@ -63,8 +65,11 @@ class ParentProgressReport extends StatelessWidget {
         children: [
           Text(
             'تقرير تقدم ${child.name}',
-            style: TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
+            style: TextStyle(
+                fontSize: 20, fontWeight: FontWeight.w900, color: Colors.white),
           ),
+          SizedBox(height: 14),
+          ...extras,
           SizedBox(height: 14),
           Wrap(
             spacing: 10,
@@ -93,7 +98,8 @@ class ParentProgressReport extends StatelessWidget {
                 SizedBox(height: 6),
                 Text(
                     'استخدم ${child.usedMinutesToday} من ${child.limitShown} دقيقة' +
-                        ' • شاهد ${child.watchedVideosToday} فيديو'),
+                        ' • شاهد ${child.watchedVideosToday} فيديو',
+                    style: const TextStyle(color: Colors.white)),
               ],
             ),
           ),
@@ -156,7 +162,7 @@ class ParentProgressReport extends StatelessWidget {
                               Text(
                                 '${e.categoryBadge} • ${ago(e.timestampIso)}',
                                 style: const TextStyle(
-                                    fontSize: 11, color: Colors.black54),
+                                    fontSize: 11, color: Colors.white60),
                               ),
                             ],
                           ),
@@ -195,18 +201,21 @@ class ParentProgressReport extends StatelessWidget {
       width: 104,
       padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 8),
       decoration: BoxDecoration(
-        color: const Color(0xFFFFF7E6),
+        color: const Color(0xFF1E293B),
         borderRadius: BorderRadius.circular(16),
+        border: Border.all(color: Colors.white12),
       ),
       child: Column(
         children: [
           Text(emoji, style: const TextStyle(fontSize: 22)),
           Text(value,
-              style:
-                  const TextStyle(fontSize: 20, fontWeight: FontWeight.w900)),
+              style: const TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w900,
+                  color: Colors.white)),
           Text(label,
               textAlign: TextAlign.center,
-              style: const TextStyle(fontSize: 11)),
+              style: const TextStyle(fontSize: 11, color: Colors.white70)),
         ],
       ),
     );
@@ -217,19 +226,21 @@ class ParentProgressReport extends StatelessWidget {
       margin: const EdgeInsets.only(bottom: 14),
       padding: const EdgeInsets.all(14),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: const Color(0xFF1E293B),
         borderRadius: BorderRadius.circular(16),
-        boxShadow: const [BoxShadow(color: Color(0x14000000), blurRadius: 8)],
+        border: Border.all(color: Colors.white12),
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(title,
-              style:
-                  const TextStyle(fontSize: 15, fontWeight: FontWeight.bold)),
+              style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                  color: Color(0xFFA7F3D0))),
           const SizedBox(height: 8),
           DefaultTextStyle.merge(
-              style: const TextStyle(color: Colors.black87), child: child),
+              style: const TextStyle(color: Colors.white), child: child),
         ],
       ),
     );
@@ -242,7 +253,8 @@ class ParentProgressReport extends StatelessWidget {
         children: [
           SizedBox(
               width: 110,
-              child: Text(label, style: const TextStyle(fontSize: 12))),
+              child: Text(label,
+                  style: const TextStyle(fontSize: 12, color: Colors.white))),
           Expanded(
             child: LinearProgressIndicator(
               value: v,
@@ -251,7 +263,8 @@ class ParentProgressReport extends StatelessWidget {
             ),
           ),
           const SizedBox(width: 8),
-          Text(trailing, style: const TextStyle(fontSize: 12)),
+          Text(trailing,
+              style: const TextStyle(fontSize: 12, color: Colors.white)),
         ],
       ),
     );

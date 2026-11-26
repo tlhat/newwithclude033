@@ -720,6 +720,32 @@ class AppStateManager extends ChangeNotifier {
   /// True after a restore on a phone whose Keystore differs from the backup's.
   bool get pinResetRequired => _prefs.getBool('pin_reset_required') ?? false;
 
+  /// "Forgot PIN": no server, no email code. The parent signs in again with
+  /// the SAME Google account that is linked to this family, then sets a new
+  /// PIN on the existing screen. Returns an Arabic error or null.
+  Future<String?> forgotPinViaGoogle() async {
+    if (AppNetworkPolicyGuard.isOfflineOnlyModeActive) {
+      return 'وضع بدون إنترنت شغال. أوقفه وجرّب تاني.';
+    }
+    final String? linked = linkedGoogleEmail;
+    if (linked == null || currentAccount == null) {
+      return 'مفيش حساب جوجل مربوط بالعائلة دي.';
+    }
+    try {
+      final GoogleIdentity? who = await GoogleAccountService.instance.signIn();
+      if (who == null) return 'اتلغى الدخول بجوجل.';
+      if (who.email.trim().toLowerCase() != linked.trim().toLowerCase()) {
+        await GoogleAccountService.instance.signOut();
+        return 'ده مش حساب جوجل المربوط بالعائلة. ادخل بنفس الحساب.';
+      }
+      await _prefs.setBool('pin_reset_required', true);
+      notifyListeners();
+      return null;
+    } on GoogleAccountException catch (e) {
+      return e.messageAr;
+    }
+  }
+
   /// Sets a new PIN after such a restore. Returns an Arabic error or null.
   Future<String?> setNewPinAfterRestore(String pin) async {
     final String p = pin.trim();
