@@ -1,7 +1,9 @@
 # شكر وتقدير لأصوات الحيوانات الحقيقية / Real animal sound credits
 
-All files are public domain or CC0 (no attribution required). We list the authors anyway, with thanks.
 Source: Wikimedia Commons. Files are shortened, loudness-normalized and converted to Opus.
+
+- CC0 and public domain files: no attribution required, listed here with thanks.
+- **dog.ogg and cow.ogg are CC BY-SA** (attribution + share-alike). They are adapted (shortened, normalized, re-encoded) and are shared under the same license as the original. Share-alike applies to these two sound files only, not to the app code or other assets.
 
 | Sound | Original file | License | Author | Page |
 |---|---|---|---|---|
@@ -16,3 +18,5 @@ Source: Wikimedia Commons. Files are shortened, loudness-normalized and converte
 | elephant | Elephant voice - trumpeting.ogg | CC0 | தகவலுழவன் | https://commons.wikimedia.org/wiki/File%3AElephant_voice_-_trumpeting.ogg |
 | duck | Ducks snatching.ogg | CC0 | Bert76 | https://commons.wikimedia.org/wiki/File%3ADucks_snatching.ogg |
 | train | The horn of a Bluebird railcar.ogg | CC0 | NIRVAAN222222 | https://commons.wikimedia.org/wiki/File%3AThe_horn_of_a_Bluebird_railcar.ogg |
+| dog | Barking of a dog.ogg | CC BY-SA 3.0 | Amada44 | https://commons.wikimedia.org/wiki/File%3ABarking_of_a_dog.ogg |
+| cow | Single Cow Moo.ogg | CC BY-SA 4.0 | MichaeltheFox8621 | https://commons.wikimedia.org/wiki/File%3ASingle_Cow_Moo.ogg |

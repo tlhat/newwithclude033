@@ -4,7 +4,8 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart' show rootBundle;
 import 'package:video_player/video_player.dart';
 
-/// Real recordings of animals (and a train horn), all CC0 or public domain.
+/// Real recordings of animals (and a train horn): CC0, public domain, and two
+/// CC BY-SA files (dog, cow) credited in the parent corner.
 /// Files: assets/audio/real_sounds/<key>.ogg. Sources and credits are in
 /// assets/audio/real_sounds/CREDITS.md and shown in the app's thanks page.
 class RealSounds {
@@ -15,11 +16,12 @@ class RealSounds {
     '🐑': 'sheep', '🐏': 'sheep', '🐓': 'rooster', '🐔': 'rooster',
     '🐴': 'horse', '🐎': 'horse', '🫏': 'donkey', '🐘': 'elephant',
     '🦆': 'duck', '🚂': 'train', '🚆': 'train',
+    '🐶': 'dog', '🐕': 'dog', '🐮': 'cow', '🐄': 'cow',
   };
 
   static const Set<String> keys = {
     'cat', 'lion', 'bird', 'bee', 'sheep', 'rooster', 'horse', 'donkey',
-    'elephant', 'duck', 'train',
+    'elephant', 'duck', 'train', 'dog', 'cow',
   };
 
   /// Key for the first known emoji found in [text], or null.

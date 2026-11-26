@@ -1,4 +1,6 @@
-/// Credits for the real recordings (all CC0 / public domain, via Wikimedia Commons).
+/// Credits for the real recordings, from Wikimedia Commons.
+/// CC0 and public domain need no credit. The CC BY-SA files (dog, cow) must stay
+/// credited here; share-alike applies to those two sound files only.
 const List<List<String>> kRealSoundCredits = [
   ['القطة','George Miquilena','CC0','Maullido de gata hembra joven.ogg'],
   ['الأسد','த*உழவன்','Public domain','Lion raring-sound1TamilNadu178.ogg'],
@@ -11,4 +13,6 @@ const List<List<String>> kRealSoundCredits = [
   ['الفيل','தகவலுழவன்','CC0','Elephant voice - trumpeting.ogg'],
   ['البط','Bert76','CC0','Ducks snatching.ogg'],
   ['القطار','NIRVAAN222222','CC0','The horn of a Bluebird railcar.ogg'],
+  ['الكلب','Amada44','CC BY-SA 3.0','Barking of a dog.ogg'],
+  ['البقرة','MichaeltheFox8621','CC BY-SA 4.0','Single Cow Moo.ogg'],
 ];

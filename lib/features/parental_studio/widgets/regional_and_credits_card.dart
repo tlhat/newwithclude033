@@ -84,7 +84,7 @@ class RegionalAndCreditsCard extends StatelessWidget {
                     child: Padding(
                       padding: EdgeInsets.only(bottom: 6),
                       child: Text(
-                          'تسجيلات حرّة (CC0 أو ملكية عامة) من ويكيميديا كومنز. شكرًا لأصحابها.',
+                          'تسجيلات حرّة من ويكيميديا كومنز (CC0 أو ملكية عامة، وصوت الكلب والبقرة برخصة CC BY-SA مع نسب لأصحابهم). شكرًا لهم.',
                           style: TextStyle(fontSize: 12.5, color: Colors.white70)),
                     ),
                   ),
