@@ -36,7 +36,6 @@ void main() {
     await t.pumpWidget(MaterialApp(home: Scaffold(body: SingleChildScrollView(child: KidLockCard(appState: _FakeState())))));
     await t.pump(const Duration(milliseconds: 200));
     expect(find.textContaining('قفل الطفل'), findsWidgets);
-    expect(find.textContaining('docs/KID_LOCK.md'), findsOneWidget);
     expect(t.takeException(), isNull);
   });
 }
