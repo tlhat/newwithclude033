@@ -3113,6 +3113,8 @@ class AppStateManager extends ChangeNotifier {
     final String trimmed = rawUrl.trim();
     if (trimmed.isEmpty) return [];
     final bool isLocalFile = AppNetworkPolicyGuard.isSafeLocalFilePath(trimmed);
+    // Store build: no import from web links (TikTok/YouTube etc.).
+    if (!isLocalFile) return [];
     final activeChild = currentAccount?.activeChild;
 
     if (!isLocalFile) {

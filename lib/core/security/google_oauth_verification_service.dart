@@ -295,7 +295,7 @@ class GoogleOAuthVerificationService {
       return const GoogleOAuthVerificationOutcome(
         isVerified: false,
         errorMessage:
-            '🔒 لا يُسمح بالدخول بالبريد الإلكتروني وحده؛ يجب تقديم Google ID Token صالح.',
+            'تعذر التأكيد من حساب جوجل. حاول مرة أخرى بعد قليل.',
       );
     }
 
@@ -308,7 +308,7 @@ class GoogleOAuthVerificationService {
       return const GoogleOAuthVerificationOutcome(
         isVerified: false,
         errorMessage:
-            '🔒 فشل فحص بنية ومطالبات JWT (يجب أن يكون RS256 مع تطابق iss وaud المسجل لدى Google وexp وemail_verified وsub).',
+            'تعذر التأكيد من حساب جوجل. حاول مرة أخرى بعد قليل.',
       );
     }
 
@@ -316,7 +316,7 @@ class GoogleOAuthVerificationService {
       return const GoogleOAuthVerificationOutcome(
         isVerified: false,
         errorMessage:
-            '🔒 وضع عدم الاتصال مفعّل؛ يتطلب التحقق من Google اتصالاً بالخادم.',
+            'يلزم اتصال بالإنترنت لتسجيل الدخول بحساب جوجل.',
       );
     }
 
@@ -335,7 +335,7 @@ class GoogleOAuthVerificationService {
         return const GoogleOAuthVerificationOutcome(
           isVerified: false,
           errorMessage:
-              '🔒 معرف المفتاح (kid) غير موجود في مفاتيح Google العامة الرسمية حتى بعد تحديث JWKS.',
+              'تعذر التأكيد من حساب جوجل. حاول مرة أخرى بعد قليل.',
         );
       }
 
@@ -348,7 +348,7 @@ class GoogleOAuthVerificationService {
         return const GoogleOAuthVerificationOutcome(
           isVerified: false,
           errorMessage:
-              '🔒 فشل التحقق الرياضي من توقيع RS256 باستخدام مفتاح Google العام (الرمز مزور أو تم التلاعب بمحتواه).',
+              'تعذر التأكيد من حساب جوجل. حاول مرة أخرى بعد قليل.',
         );
       }
 
@@ -391,7 +391,7 @@ class GoogleOAuthVerificationService {
         if (response.statusCode != 200 && response.statusCode != 201) {
           return const GoogleOAuthVerificationOutcome(
             isVerified: false,
-            errorMessage: '🔒 رفض الخادم الخلفي (Backend) رمز Google ID Token.',
+            errorMessage: 'تعذر التأكيد من حساب جوجل. حاول مرة أخرى بعد قليل.',
           );
         }
 
@@ -427,7 +427,7 @@ class GoogleOAuthVerificationService {
         }
         return const GoogleOAuthVerificationOutcome(
           isVerified: false,
-          errorMessage: '🔒 بيانات استجابة الخادم لا تطابق شروط OIDC الآمنة.',
+          errorMessage: 'تعذر التأكيد من حساب جوجل. حاول مرة أخرى بعد قليل.',
         );
       }
 
@@ -473,7 +473,7 @@ class GoogleOAuthVerificationService {
 
     return const GoogleOAuthVerificationOutcome(
       isVerified: false,
-      errorMessage: '🔒 تعذر التحقق من صحة رمز Google ID Token عبر الخادم.',
+      errorMessage: 'تعذر التأكيد من حساب جوجل. حاول مرة أخرى بعد قليل.',
     );
   }
 }

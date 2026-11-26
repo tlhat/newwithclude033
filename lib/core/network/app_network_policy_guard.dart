@@ -8,20 +8,6 @@ class AppNetworkPolicyGuard {
   static int blockedNetworkRequestsCount = 0;
 
   static const List<String> kTrustedVideoAndFeedHosts = [
-    'youtube.com',
-    'www.youtube.com',
-    'm.youtube.com',
-    'youtu.be',
-    'googlevideo.com',
-    'ytimg.com',
-    'i.ytimg.com',
-    'tiktok.com',
-    'www.tiktok.com',
-    'vm.tiktok.com',
-    'vt.tiktok.com',
-    'tiktokcdn.com',
-    'tikwm.com',
-    'www.tikwm.com',
     'flutter.github.io',
     'github.io',
     'raw.githubusercontent.com',
