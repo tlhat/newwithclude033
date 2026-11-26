@@ -80,6 +80,32 @@ class RealGoogleSignInGateway implements GoogleSignInGateway {
       }
       if (code == 'sign_in_canceled') return null;
       if (msg.contains('10') || code == 'sign_in_failed') {
+        // Retry with the email scope only. If this works, the failure came
+        // from the Drive scope, and the parent can still get in.
+        try {
+          final GoogleSignIn basic = GoogleSignIn(
+            scopes: const <String>['email'],
+            serverClientId: _serverClientId.isEmpty ? null : _serverClientId,
+          );
+          final GoogleSignInAccount? acc = await basic.signIn();
+          if (acc != null) {
+            GoogleSignInDiagnostics.last =
+                '${GoogleSignInDiagnostics.last}; fallback email-only=OK (drive scope is the problem)';
+            return GoogleIdentity(
+              email: acc.email,
+              displayName: acc.displayName ?? acc.email,
+              id: acc.id,
+              authHeaders: await acc.authHeaders,
+            );
+          }
+          return null;
+        } on PlatformException catch (e2) {
+          GoogleSignInDiagnostics.last =
+              '${GoogleSignInDiagnostics.last}; fallback email-only=FAILED code=${e2.code} message=${e2.message}';
+        } catch (e3) {
+          GoogleSignInDiagnostics.last =
+              '${GoogleSignInDiagnostics.last}; fallback error=$e3';
+        }
         throw const GoogleAccountException(
             'الدخول بجوجل مش شغال دلوقتي على الجهاز ده. جرّب تاني بعد شوية.');
       }
