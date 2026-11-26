@@ -2,6 +2,8 @@ import 'package:haneen_kids_vod/features/home/path_progress.dart';
 import 'package:haneen_kids_vod/features/home/path_target.dart';
 import 'package:haneen_kids_vod/features/activities/services/academy_voice_texts.dart';
 import 'package:flutter/material.dart' hide Text;
+import 'package:haneen_kids_vod/core/entitlements/entitlements.dart';
+import 'package:haneen_kids_vod/core/entitlements/locked_content_sheet.dart';
 import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
@@ -64,6 +66,10 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
       AcademyVoiceTexts.tier3(l10n, lesson);
 
   void _openLessonSheet(AcademyTrackLesson lesson, ChildProfile child) {
+    if (Entitlements.academyLessonLocked(lesson.tierLevel)) {
+      showLockedContentSheet(context, 'الدرس ده مقفول: ${lesson.title}');
+      return;
+    }
     widget.appState.setLastActiveAcademyLesson(lesson.id);
     int selectedCardIndex = 0;
     final Set<int> exploredCardIndices = {0};
@@ -1279,8 +1285,14 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                         itemBuilder: (ctx, sIdx) {
                           final story = kInteractiveOriginalStories[sIdx];
                           return GestureDetector(
-                            onTap: () =>
-                                _openInteractiveStoryCarouselSheet(story, child),
+                            onTap: () {
+                              if (Entitlements.storyLocked(sIdx)) {
+                                showLockedContentSheet(
+                                    context, 'القصة دي مقفولة');
+                                return;
+                              }
+                              _openInteractiveStoryCarouselSheet(story, child);
+                            },
                             child: Container(
                               width: 235,
                               margin: const EdgeInsets.only(left: 10),
@@ -1296,7 +1308,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                               ),
                               child: Row(
                                 children: [
-                                  Text(story.illustration,
+                                  Text(Entitlements.storyLocked(sIdx) ? '🔒' : story.illustration,
                                       style: const TextStyle(fontSize: 32)),
                                   const SizedBox(width: 10),
                                   Expanded(
@@ -1500,7 +1512,9 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
                           borderRadius: BorderRadius.circular(12),
                         ),
                       ),
-                      child: Text(isMastered ? 'مراجعة' : 'ابدأ'),
+                      child: Text(Entitlements.academyLessonLocked(lesson.tierLevel)
+                          ? '🔒 مقفول'
+                          : (isMastered ? 'مراجعة' : 'ابدأ')),
                     ),
                   ),
                 );

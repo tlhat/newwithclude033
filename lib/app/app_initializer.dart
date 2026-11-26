@@ -1,3 +1,4 @@
+import 'package:haneen_kids_vod/core/entitlements/entitlements.dart';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/core/regional/regional_settings.dart';
 import 'package:flutter/services.dart';
@@ -21,6 +22,7 @@ class AppInitializer {
     } catch (_) {}
     try {
       await RegionalSettings.instance.load();
+      await Entitlements.load();
     } catch (_) {}
     PathProgress.activeChildIdProvider =
         () => appState.currentAccount?.activeChild.id;

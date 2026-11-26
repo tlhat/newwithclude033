@@ -13,7 +13,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get freeForeverTagline =>
-      '100% Free Forever — No Subscriptions or Ads';
+      'Free content plus subscription content — no ads';
 
   @override
   String get navStories => 'Stories';

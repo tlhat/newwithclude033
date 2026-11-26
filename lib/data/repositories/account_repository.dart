@@ -108,7 +108,7 @@ class AccountRepository {
         id: 'alert_welcome',
         recipientEmail: 'parent@haneenkids.com',
         subject:
-            '🎉 مرحباً بك في حنين كيدز — التطبيق مجاني بالكامل ١٠٠٪',
+            '🎉 مرحباً بك في حنين كيدز — فيه محتوى مجاني والباقي بالاشتراك',
         bodyMessage:
             'تم تفعيل حسابك بنجاح مجاناً بالكامل دون أي اشتراكات أو إعلانات. يمكنك متابعة تقدم فارس ونور في الفصاحة والأنشطة الواقعية من بوابة الوالدين.',
         smartImprovementSuggestion:

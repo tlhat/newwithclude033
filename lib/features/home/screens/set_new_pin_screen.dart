@@ -52,7 +52,8 @@ class _SetNewPinScreenState extends State<SetNewPinScreen> {
         maxLength: 6,
         textAlign: TextAlign.center,
         inputFormatters: [FilteringTextInputFormatter.digitsOnly],
-        style: const TextStyle(fontSize: 22, letterSpacing: 6),
+        style: const TextStyle(
+            fontSize: 22, letterSpacing: 6, color: Color(0xFF1E2A4A)),
         decoration: InputDecoration(
           labelText: label,
           counterText: '',

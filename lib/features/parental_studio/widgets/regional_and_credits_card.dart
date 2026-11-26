@@ -3,6 +3,7 @@ import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
 import 'package:haneen_kids_vod/core/regional/country_config.dart';
 import 'package:haneen_kids_vod/core/regional/regional_settings.dart';
 import 'package:haneen_kids_vod/core/services/real_sounds_credits.dart';
+import 'package:haneen_kids_vod/core/entitlements/entitlements.dart';
 
 /// Parent corner: country and dialect (auto or chosen), and the thanks list
 /// for the real animal recordings.
@@ -25,6 +26,22 @@ class RegionalAndCreditsCard extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              ValueListenableBuilder<bool>(
+                valueListenable: Entitlements.subscribed,
+                builder: (_, on, __) => SwitchListTile(
+                  contentPadding: EdgeInsets.zero,
+                  title: const Text('فتح المحتوى المدفوع (تجريبي)',
+                      style: TextStyle(
+                          fontSize: 14, fontWeight: FontWeight.w800)),
+                  subtitle: const Text(
+                      'مفتاح اختبار على الجهاز بس. مفيش دفع ولا اشتراك حقيقي.',
+                      style:
+                          TextStyle(fontSize: 12, color: Colors.white70)),
+                  value: on,
+                  onChanged: (v) => Entitlements.setStubSubscribed(v),
+                ),
+              ),
+              const Divider(color: Colors.white24),
               const Text('🌍 الدولة واللهجة',
                   style: TextStyle(fontSize: 16, fontWeight: FontWeight.w900)),
               const SizedBox(height: 4),

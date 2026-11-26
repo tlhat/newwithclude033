@@ -499,7 +499,7 @@ class ParentAccount {
 
   String get subscriptionStatusLabel {
     if (AppStateManager.isAppCompletelyFreeForever || subscriptionPlanId == 'free_forever') {
-      return '✨ مجاني بالكامل ١٠٠٪ — جميع القصص والألعاب والأكاديمية متاحة بلا حدود';
+      return '🌟 محتوى مجاني محدود. باقي القصص والألعاب والدروس بتفتح بالاشتراك';
     }
     if (isSubscriptionTampered) {
       return '⚠️ تم رصد تعديل غير مصرح به في بيانات الاشتراك المحلي (يرجى التحقق من الدفع الرسمي)';

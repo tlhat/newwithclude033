@@ -614,6 +614,8 @@ class _RemoteLockScreenState extends State<RemoteLockScreen> {
                     textAlign: TextAlign.center,
                     style: const TextStyle(color: Colors.white),
                     decoration: InputDecoration(
+                      filled: true,
+                      fillColor: const Color(0xFF1E293B),
                       counterText: '',
                       hintText: 'الرمز السري لولي الأمر لفتح القفل',
                       hintStyle: TextStyle(color: Colors.white54),

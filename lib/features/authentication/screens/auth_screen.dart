@@ -156,7 +156,7 @@ class _AuthScreenState extends State<AuthScreen> {
                             color: const Color(0xFFF59E0B).withOpacity(0.5)),
                       ),
                       child: Text(
-                        '✨ مجاني بالكامل ١٠٠٪ — بدون اشتراكات أو إعلانات',
+                        '✨ بدون إعلانات. فيه محتوى مجاني والباقي بالاشتراك',
                         textAlign: TextAlign.center,
                         style: TextStyle(
                           fontSize: 12,

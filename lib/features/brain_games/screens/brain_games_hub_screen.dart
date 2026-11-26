@@ -1,6 +1,8 @@
 import 'package:haneen_kids_vod/features/brain_games/services/game_voice_texts.dart';
 import 'dart:math';
 import 'package:flutter/material.dart' hide Text;
+import 'package:haneen_kids_vod/core/entitlements/entitlements.dart';
+import 'package:haneen_kids_vod/core/entitlements/locked_content_sheet.dart';
 import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
 import 'package:haneen_kids_vod/features/home/path_target.dart';
 import 'package:haneen_kids_vod/core/services/real_sounds.dart';
@@ -29,7 +31,13 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
     if (t == null || t.tab != 2) return;
     PathTarget.pending.value = null;
     final g = t.gameIndex;
-    if (g != null && mounted) setState(() => _selectedGameIndex = g);
+    if (g != null && mounted) {
+      if (Entitlements.gameLocked(g)) {
+        showLockedContentSheet(context, 'اللعبة دي مقفولة');
+        return;
+      }
+      setState(() => _selectedGameIndex = g);
+    }
   }
 
   @override
@@ -519,6 +527,12 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                                       MaterialTapTargetSize.shrinkWrap,
                                 ),
                                 onPressed: () {
+                                  if (Entitlements.gameLocked(
+                                      aiRec.recommendedGameTabIndex)) {
+                                    showLockedContentSheet(
+                                        context, 'اللعبة دي مقفولة');
+                                    return;
+                                  }
                                   setState(() {
                                     _selectedGameIndex =
                                         aiRec.recommendedGameTabIndex;
@@ -558,6 +572,11 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                         final Color accent = g['color'] as Color;
                         return GestureDetector(
                           onTap: () {
+                            if (Entitlements.gameLocked(i)) {
+                              showLockedContentSheet(
+                                  context, 'اللعبة دي مقفولة');
+                              return;
+                            }
                             CalmVoiceService.instance.stopSpeaking();
                             setState(() {
                               _selectedGameIndex = i;
@@ -601,7 +620,7 @@ class _BrainGamesHubScreenState extends State<BrainGamesHubScreen> {
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text(g['icon'] as String,
+                                Text(Entitlements.gameLocked(i) ? '🔒' : g['icon'] as String,
                                     style: const TextStyle(fontSize: 22)),
                                 const SizedBox(height: 4),
                                 Text(

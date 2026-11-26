@@ -13,7 +13,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get freeForeverTagline =>
-      'مجاني بالكامل ١٠٠٪ — بدون اشتراكات أو إعلانات';
+      'محتوى مجاني ومحتوى بالاشتراك — بدون إعلانات';
 
   @override
   String get navStories => 'قصص حنين';

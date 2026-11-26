@@ -125,7 +125,7 @@ class SmoothFreeTrialStatusBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // App is 100% Free forever: never display any trial countdown or paywall banner.
+    // Free tier plus subscription content: never display any trial countdown or paywall banner.
     return const SizedBox.shrink();
 
     final Duration rem = account.remainingSubscriptionDuration;

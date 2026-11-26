@@ -109,7 +109,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
       widget.appState.activateOrResetOneDayTrial();
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('✨ جميع مزايا التطبيق مفتوحة ومجانية بالكامل ١٠٠٪!'),
+          content: Text('🌟 فيه محتوى مجاني، والباقي بيفتح بالاشتراك'),
           backgroundColor: Color(0xFF14B8A6),
         ),
       );
@@ -1492,7 +1492,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
                             SizedBox(width: 10),
                             Expanded(
                               child: Text(
-                                'حنين كيدز مجاني ١٠٠٪ لجميع أطفالنا!',
+                                'حنين كيدز: محتوى مجاني والباقي بالاشتراك',
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold,
