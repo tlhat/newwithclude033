@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:math';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Text;
+import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:haneen_kids_vod/core/theme/kid_theme.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';

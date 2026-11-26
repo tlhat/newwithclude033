@@ -1,6 +1,7 @@
 import 'package:haneen_kids_vod/features/brain_games/services/game_voice_texts.dart';
 import 'dart:math';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Text;
+import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
 import 'package:haneen_kids_vod/features/home/path_target.dart';
 import 'package:haneen_kids_vod/core/services/real_sounds.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';

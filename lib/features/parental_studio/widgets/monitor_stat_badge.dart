@@ -1,5 +1,6 @@
 import 'dart:math';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Text;
+import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
 
 class ParentalMonitorSummaryTile extends StatelessWidget {
   final String title;

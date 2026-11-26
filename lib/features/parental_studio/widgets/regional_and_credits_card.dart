@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Text;
+import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
 import 'package:haneen_kids_vod/core/regional/country_config.dart';
 import 'package:haneen_kids_vod/core/regional/regional_settings.dart';
 import 'package:haneen_kids_vod/core/services/real_sounds_credits.dart';

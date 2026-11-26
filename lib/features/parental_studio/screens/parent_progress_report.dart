@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide Text;
+import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
 /// "تقرير التقدم": a read-only summary of what the child did and learned.

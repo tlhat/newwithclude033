@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:haneen_kids_vod/core/regional/country_config.dart';
+import 'package:haneen_kids_vod/core/regional/dialect_pack.dart';
+import 'package:haneen_kids_vod/core/regional/dialect_text.dart' show DialectScope;
 import 'package:haneen_kids_vod/l10n/app_localizations.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'package:haneen_kids_vod/features/billing/online_gate.dart';
@@ -75,12 +78,18 @@ class _HaneenKidsAppState extends State<HaneenKidsApp>
               minScaleFactor: 0.92,
               maxScaleFactor: 1.22,
             );
-            return MediaQuery(
-              data: mediaQuery.copyWith(textScaler: clampedScaler),
-              child: OnlineGate(
-                child: StarRewardHost(
-                  appState: widget.appState,
-                  child: child!,
+            return ValueListenableBuilder<DialectId>(
+              valueListenable: DialectPacks.notifier,
+              builder: (context, dialect, _) => DialectScope(
+                dialect: dialect,
+                child: MediaQuery(
+                  data: mediaQuery.copyWith(textScaler: clampedScaler),
+                  child: OnlineGate(
+                    child: StarRewardHost(
+                      appState: widget.appState,
+                      child: child!,
+                    ),
+                  ),
                 ),
               ),
             );

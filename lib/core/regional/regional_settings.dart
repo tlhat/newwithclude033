@@ -53,9 +53,10 @@ class RegionalSettings extends ChangeNotifier {
         if (parts.length > 1) region = parts.last;
       } catch (_) {}
     }
+    await DialectPacks.loadAssets(rootBundle);
     _detected = CountryDetector.pick(
         sim: sim, network: net, deviceRegion: region);
-    DialectPacks.active = dialect;
+    DialectPacks.setActive(dialect);
   }
 
   Future<void> setCountry(String? code) async {
@@ -66,7 +67,7 @@ class RegionalSettings extends ChangeNotifier {
     } else {
       await prefs.setString(_kCountry, code);
     }
-    DialectPacks.active = dialect;
+    DialectPacks.setActive(dialect);
     notifyListeners();
   }
 
@@ -78,7 +79,7 @@ class RegionalSettings extends ChangeNotifier {
     } else {
       await prefs.setString(_kDialect, d.key);
     }
-    DialectPacks.active = dialect;
+    DialectPacks.setActive(dialect);
     notifyListeners();
   }
 }
