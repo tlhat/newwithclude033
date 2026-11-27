@@ -49,7 +49,7 @@ class MainActivity : FlutterActivity() {
                         if (si != null) {
                             for (sg in si.apkContentsSigners) out.add("current=" + sha1(sg.toByteArray()))
                             if (si.hasPastSigningCertificates()) {
-                                for (sg in si.signingCertificateHistory) out.add("history=" + sha1(sg.toByteArray()))
+                                for (sg in (si.signingCertificateHistory ?: emptyArray())) out.add("history=" + sha1(sg.toByteArray()))
                             }
                         }
                     } else {
