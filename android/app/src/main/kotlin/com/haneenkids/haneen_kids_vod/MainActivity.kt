@@ -56,7 +56,7 @@ class MainActivity : FlutterActivity() {
                         @Suppress("DEPRECATION")
                         val pi = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNATURES)
                         @Suppress("DEPRECATION")
-                        for (sg in pi.signatures) out.add("current=" + sha1(sg.toByteArray()))
+                        for (sg in (pi.signatures ?: emptyArray())) out.add("current=" + sha1(sg.toByteArray()))
                     }
                     out.add("package=" + packageName)
                     out.add("installer=" + (try { packageManager.getInstallerPackageName(packageName) } catch (e: Exception) { null }))
