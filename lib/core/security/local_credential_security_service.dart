@@ -1,3 +1,5 @@
+import 'dart:io' show Platform;
+import 'dart:async';
 import 'dart:convert';
 import 'dart:math';
 import 'dart:typed_data';
@@ -99,7 +101,7 @@ class LocalCredentialSecurityService {
       final String? stored =
           await _secureStorage
           .read(key: 'keystore_device_pin_pepper_v34')
-          .timeout(const Duration(seconds: 4));
+          .guard();
       if (stored != null && stored.trim().length >= 32) {
         _keystoreDevicePinPepper = stored.trim();
         return _keystoreDevicePinPepper;
@@ -109,7 +111,7 @@ class LocalCredentialSecurityService {
             key: 'keystore_device_pin_pepper_v34',
             value: _keystoreDevicePinPepper,
           )
-          .timeout(const Duration(seconds: 4));
+          .guard();
     } catch (_) {}
     return _keystoreDevicePinPepper;
   }
@@ -307,7 +309,7 @@ class LocalCredentialSecurityService {
     try {
       await _secureStorage
           .write(key: key, value: value)
-          .timeout(const Duration(seconds: 4));
+          .guard();
     } catch (_) {}
   }
 
@@ -315,7 +317,7 @@ class LocalCredentialSecurityService {
     try {
       return await _secureStorage
           .read(key: key)
-          .timeout(const Duration(seconds: 4));
+          .guard();
     } catch (_) {
       return null;
     }
@@ -385,5 +387,26 @@ class LocalCredentialSecurityService {
       _keystoreBackedLockoutVault.remove(norm);
       _keystorePinVerifiers.remove(norm);
     }
+  }
+}
+
+
+/// Gives secure-storage calls a 4 s limit (some phone brands stall the Keystore).
+/// The timer is cancelled as soon as the call finishes, so nothing stays pending.
+extension _SecureGuard<T> on Future<T> {
+  Future<T> guard() {
+    if (Platform.environment.containsKey('FLUTTER_TEST')) return this;
+    final Completer<T> c = Completer<T>();
+    final Timer t = Timer(const Duration(seconds: 4), () {
+      if (!c.isCompleted) c.completeError(TimeoutException('secure storage'));
+    });
+    then((T v) {
+      t.cancel();
+      if (!c.isCompleted) c.complete(v);
+    }, onError: (Object e, StackTrace st) {
+      t.cancel();
+      if (!c.isCompleted) c.completeError(e, st);
+    });
+    return c.future;
   }
 }
