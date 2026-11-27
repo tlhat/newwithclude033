@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:haneen_kids_vod/core/safe_mode.dart';
 import 'dart:io';
 import 'dart:math';
 import 'package:flutter/widgets.dart';
@@ -497,6 +498,8 @@ class CalmVoiceService {
     try {
       final File f = File(filePath);
       if (!f.existsSync()) return;
+      if (SafeMode.voiceOff) return; // crash-loop safe mode: voice off
+      SafeMode.risk();
       if (_audioFailures >= 4) return; // this phone's player keeps failing: stay silent, never crash
       final VideoPlayerController ctrl = VideoPlayerController.file(
         f,

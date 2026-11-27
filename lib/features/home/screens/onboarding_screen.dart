@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 
+import 'package:haneen_kids_vod/core/safe_mode.dart';
 import 'package:flutter/material.dart' hide Text;
 import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
 import 'package:flutter/services.dart';
@@ -138,6 +139,7 @@ class _OnboardingScreenState extends State<OnboardingScreen>
     }
 
     setState(() => _isSaving = true);
+    SafeMode.risk();
     String? err;
     try {
       err = await widget.appState.completeOneTimeInitialSetup(

@@ -1,4 +1,5 @@
 import 'package:haneen_kids_vod/core/entitlements/entitlements.dart';
+import 'package:haneen_kids_vod/core/safe_mode.dart';
 import 'package:flutter/material.dart';
 import 'package:haneen_kids_vod/core/regional/regional_settings.dart';
 import 'package:flutter/services.dart';
@@ -14,6 +15,12 @@ class AppInitializer {
     // Low-end phones: keep decoded pictures small (default cap is 100 MB).
     PaintingBinding.instance.imageCache.maximumSizeBytes = 48 << 20;
     PaintingBinding.instance.imageCache.maximumSize = 120;
+    await SafeMode.init();
+    if (SafeMode.level >= 3) {
+      PaintingBinding.instance.imageCache.maximumSizeBytes = 16 << 20;
+      PaintingBinding.instance.imageCache.maximumSize = 40;
+    }
+    WidgetsBinding.instance.addPostFrameCallback((_) => SafeMode.risk(calm: const Duration(seconds: 20)));
     try {
       await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
       await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);

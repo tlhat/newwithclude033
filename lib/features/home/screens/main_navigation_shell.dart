@@ -1,4 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:haneen_kids_vod/core/safe_mode.dart';
 import 'package:haneen_kids_vod/core/regional/dialect_pack.dart';
 import 'package:haneen_kids_vod/core/services/app_rating_service.dart';
 import 'package:haneen_kids_vod/features/home/screens/my_path_screen.dart';
@@ -43,6 +44,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
   @override
   void initState() {
     super.initState();
+    SafeMode.risk();
     _loadPathBadge();
     _currentIndex = widget.initialDestination.index;
     WidgetsBinding.instance.addPostFrameCallback((_) {
@@ -91,6 +93,7 @@ class _MainNavigationShellState extends State<MainNavigationShell> {
       SectionIntroService.instance.playForTab(idx);
       return;
     }
+    SafeMode.risk();
     CalmVoiceService.instance.stopAllAudioImmediatelyForParentalGate();
     setState(() {
       _prevIndex = _currentIndex;

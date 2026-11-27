@@ -8,6 +8,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.content.pm.PackageManager
 import android.os.Build
+import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.provider.Settings
@@ -41,10 +42,58 @@ class MainActivity : FlutterActivity() {
     override fun getFlutterEngineFlags(): List<String> {
         val base = super.getFlutterEngineFlags()
         return try {
-            if (useSkiaOnThisChip()) base + "--enable-impeller=false" else base
+            if (safeLevel >= 1 || useSkiaOnThisChip()) base + "--enable-impeller=false" else base
         } catch (e: Throwable) {
             base
         }
+    }
+
+    // ---- Crash-loop self-recovery (all local, nothing leaves the phone) ----
+    // "armed" means a risky moment is in progress and has not yet been followed by a few
+    // calm seconds. If the next start still finds it armed, the last run did not survive, so
+    // the safe level goes up one step (max 3). Three calm runs in a row lower it again.
+    private val safePrefs by lazy { getSharedPreferences("haneen_safemode", Context.MODE_PRIVATE) }
+    private var safeLevel: Int = 0
+
+    private fun safeBegin() {
+        if (safeProcessLevel >= 0) { safeLevel = safeProcessLevel; return }
+        val p = safePrefs
+        var level = p.getInt("level", 0)
+        var stable = p.getInt("stable", 0)
+        if (p.getBoolean("armed", false)) {
+            level = Math.min(level + 1, 3)
+            stable = 0
+        }
+        p.edit().putInt("level", level).putInt("stable", stable).putBoolean("armed", true).commit()
+        safeLevel = level
+        safeProcessLevel = level
+    }
+
+    private fun safeHealthy() {
+        val p = safePrefs
+        var level = p.getInt("level", 0)
+        var stable = p.getInt("stable", 0)
+        if (p.getBoolean("armed", false)) {
+            stable += 1
+            if (stable >= 3 && level > 0) { level -= 1; stable = 0 }
+        }
+        p.edit().putInt("level", level).putInt("stable", stable).putBoolean("armed", false).commit()
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        try { safeBegin() } catch (e: Throwable) { safeLevel = 0 }
+        super.onCreate(savedInstanceState)
+    }
+
+    override fun onDestroy() {
+        try {
+            if (isFinishing) safePrefs.edit().putBoolean("armed", false).commit()
+        } catch (e: Throwable) { }
+        super.onDestroy()
+    }
+
+    companion object {
+        @Volatile private var safeProcessLevel: Int = -1
     }
 
     private fun sysProp(key: String): String {
@@ -77,6 +126,18 @@ class MainActivity : FlutterActivity() {
         // Country hints for the dialect and country setup. Local only, no permission,
         // no GPS. Returns two-letter codes read from the SIM and the network.
         // Opens the mail app with a prefilled message (feedback button).
+        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "haneen/safemode").setMethodCallHandler { call, result ->
+            try {
+                when (call.method) {
+                    "level" -> result.success(safeLevel)
+                    "arm" -> { safePrefs.edit().putBoolean("armed", true).commit(); result.success(true) }
+                    "healthy" -> { safeHealthy(); result.success(true) }
+                    else -> result.notImplemented()
+                }
+            } catch (e: Throwable) {
+                result.success(false)
+            }
+        }
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "haneen/mail").setMethodCallHandler { call, result ->
             if (call.method == "compose") {
                 try {
