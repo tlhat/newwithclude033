@@ -90,7 +90,7 @@ class RealGoogleSignInGateway implements GoogleSignInGateway {
           final GoogleSignInAccount? acc = await basic.signIn();
           if (acc != null) {
             GoogleSignInDiagnostics.last =
-                '${GoogleSignInDiagnostics.last}; fallback email-only=OK (drive scope is the problem)';
+                '${GoogleSignInDiagnostics.last}; fallback email-only=OK';
             return GoogleIdentity(
               email: acc.email,
               displayName: acc.displayName ?? acc.email,

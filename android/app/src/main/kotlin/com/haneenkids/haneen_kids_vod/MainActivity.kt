@@ -35,37 +35,6 @@ class MainActivity : FlutterActivity() {
         // Country hints for the dialect and country setup. Local only, no permission,
         // no GPS. Returns two-letter codes read from the SIM and the network.
         // Opens the mail app with a prefilled message (feedback button).
-        // Support info: SHA-1 of the certificate(s) this install is signed with.
-        MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "haneen/diag").setMethodCallHandler { call, result ->
-            if (call.method == "signing") {
-                try {
-                    fun sha1(b: ByteArray): String =
-                        java.security.MessageDigest.getInstance("SHA-1").digest(b)
-                            .joinToString(":") { "%02X".format(it) }
-                    val out = ArrayList<String>()
-                    if (Build.VERSION.SDK_INT >= 28) {
-                        val pi = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNING_CERTIFICATES)
-                        val si = pi.signingInfo
-                        if (si != null) {
-                            for (sg in si.apkContentsSigners) out.add("current=" + sha1(sg.toByteArray()))
-                            if (si.hasPastSigningCertificates()) {
-                                for (sg in (si.signingCertificateHistory ?: emptyArray())) out.add("history=" + sha1(sg.toByteArray()))
-                            }
-                        }
-                    } else {
-                        @Suppress("DEPRECATION")
-                        val pi = packageManager.getPackageInfo(packageName, PackageManager.GET_SIGNATURES)
-                        @Suppress("DEPRECATION")
-                        for (sg in (pi.signatures ?: emptyArray())) out.add("current=" + sha1(sg.toByteArray()))
-                    }
-                    out.add("package=" + packageName)
-                    out.add("installer=" + (try { packageManager.getInstallerPackageName(packageName) } catch (e: Exception) { null }))
-                    result.success(out.joinToString("; "))
-                } catch (e: Exception) {
-                    result.success("signing info error: " + e.message)
-                }
-            } else result.notImplemented()
-        }
         MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "haneen/mail").setMethodCallHandler { call, result ->
             if (call.method == "compose") {
                 try {

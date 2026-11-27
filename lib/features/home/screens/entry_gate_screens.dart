@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart' hide Text;
-import 'package:flutter/services.dart' show MethodChannel;
 import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 
@@ -396,37 +395,10 @@ class _GoogleGateScreenState extends State<GoogleGateScreen> {
           ),
           if (_error != null) ...[
             const SizedBox(height: 14),
-            GestureDetector(
-              onLongPress: () async {
-                String? d = GoogleSignInDiagnostics.last;
-                if (d == null) return;
-                try {
-                  final Object? sig = await const MethodChannel('haneen/diag')
-                      .invokeMethod<String>('signing');
-                  d = '$d\nsigning: $sig';
-                } catch (_) {}
-                if (!context.mounted) return;
-                showDialog<void>(
-                  context: context,
-                  builder: (ctx) => Directionality(
-                    textDirection: TextDirection.ltr,
-                    child: AlertDialog(
-                      title: const Text('Support info'),
-                      content: SelectableText(d ?? ""),
-                      actions: [
-                        TextButton(
-                            onPressed: () => Navigator.pop(ctx),
-                            child: const Text('OK')),
-                      ],
-                    ),
-                  ),
-                );
-              },
-              child: Text(_error!,
+            Text(_error!,
                   textAlign: TextAlign.center,
                   style: const TextStyle(
                       color: Color(0xFFD64545), fontSize: 13.5, height: 1.5)),
-            ),
           ],
           const SizedBox(height: 10),
         ],
