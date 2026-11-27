@@ -138,16 +138,21 @@ class _OnboardingScreenState extends State<OnboardingScreen>
     }
 
     setState(() => _isSaving = true);
-    final String? err = await widget.appState.completeOneTimeInitialSetup(
-      childName: _childNameCtrl.text.trim().isEmpty
-          ? 'بطل'
-          : _childNameCtrl.text.trim(),
-      childAge: _selectedAge,
-      dailyTimeLimit: 0,
-      parentPasscode6Digits: passcode,
-      gender: _selectedGender,
-      childIntroPending: true,
-    );
+    String? err;
+    try {
+      err = await widget.appState.completeOneTimeInitialSetup(
+        childName: _childNameCtrl.text.trim().isEmpty
+            ? 'بطل'
+            : _childNameCtrl.text.trim(),
+        childAge: _selectedAge,
+        dailyTimeLimit: 0,
+        parentPasscode6Digits: passcode,
+        gender: _selectedGender,
+        childIntroPending: true,
+      );
+    } catch (_) {
+      err = 'حصلت مشكلة وإحنا بنحفظ الإعدادات. جرّب تاني.';
+    }
     if (mounted) {
       setState(() {
         _isSaving = false;
