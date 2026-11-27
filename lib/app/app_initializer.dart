@@ -11,6 +11,9 @@ import 'package:haneen_kids_vod/features/home/path_progress.dart';
 class AppInitializer {
   static Future<AppStateManager> initializeAppState() async {
     WidgetsFlutterBinding.ensureInitialized();
+    // Low-end phones: keep decoded pictures small (default cap is 100 MB).
+    PaintingBinding.instance.imageCache.maximumSizeBytes = 48 << 20;
+    PaintingBinding.instance.imageCache.maximumSize = 120;
     await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
     await LocalCredentialSecurityService.ensureKeystorePinPepperInitialized();
