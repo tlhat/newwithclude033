@@ -61,10 +61,6 @@
         </activity-alias>
         <!-- Don't delete the meta-data below.
              This is used by the Flutter tool to generate GeneratedPluginRegistrant.java -->
-        <!-- Test: older budget GPUs (Adreno/Mali/PowerVR) have crashed with Impeller on Vulkan. -->
-        <meta-data
-            android:name="io.flutter.embedding.android.EnableImpeller"
-            android:value="false" />
         <meta-data
             android:name="flutterEmbedding"
             android:value="2" />
