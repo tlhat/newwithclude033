@@ -1,6 +1,8 @@
 package com.haneenkids.haneen_kids_vod
 
 import android.app.ActivityManager
+import android.app.AlarmManager
+import android.app.PendingIntent
 import android.app.admin.DevicePolicyManager
 import android.content.ComponentName
 import android.content.Context
@@ -82,7 +84,45 @@ class MainActivity : FlutterActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         try { safeBegin() } catch (e: Throwable) { safeLevel = 0 }
+        try { installRestartOnCrash() } catch (e: Throwable) { }
         super.onCreate(savedInstanceState)
+        try {
+            if (intent?.getBooleanExtra("haneen_recover", false) == true) {
+                android.widget.Toast.makeText(this, "جاري الفتح، انتظر", android.widget.Toast.LENGTH_LONG).show()
+            }
+        } catch (e: Throwable) { }
+    }
+
+    /**
+     * After an uncaught Java/Kotlin/Dart-bridge crash, ask Android to start the app again in
+     * about 1.5 seconds (the next start runs one safe-mode step higher). At most 2 restarts
+     * inside any 2 minutes, then it stops and lets the app close normally. Native signal
+     * crashes (SIGSEGV in the GPU driver) kill the process without running this code.
+     */
+    private fun installRestartOnCrash() {
+        if (restartInstalled) return
+        restartInstalled = true
+        val app = applicationContext
+        val previous = Thread.getDefaultUncaughtExceptionHandler()
+        Thread.setDefaultUncaughtExceptionHandler { t, e ->
+            try {
+                val p = app.getSharedPreferences("haneen_safemode", Context.MODE_PRIVATE)
+                val now = System.currentTimeMillis()
+                var n = p.getInt("rs_n", 0)
+                if (now - p.getLong("rs_t", 0L) > 120000L) n = 0
+                if (n < 2) {
+                    p.edit().putInt("rs_n", n + 1).putLong("rs_t", if (n == 0) now else p.getLong("rs_t", now)).commit()
+                    val i = Intent(app, MainActivity::class.java)
+                    i.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                    i.putExtra("haneen_recover", true)
+                    val flags = PendingIntent.FLAG_ONE_SHOT or (if (Build.VERSION.SDK_INT >= 23) PendingIntent.FLAG_IMMUTABLE else 0)
+                    val pi = PendingIntent.getActivity(app, 7331, i, flags)
+                    (app.getSystemService(Context.ALARM_SERVICE) as AlarmManager)
+                        .set(AlarmManager.RTC, now + 1500L, pi)
+                }
+            } catch (x: Throwable) { }
+            if (previous != null) previous.uncaughtException(t, e) else { android.os.Process.killProcess(android.os.Process.myPid()); System.exit(10) }
+        }
     }
 
     override fun onDestroy() {
@@ -94,6 +134,7 @@ class MainActivity : FlutterActivity() {
 
     companion object {
         @Volatile private var safeProcessLevel: Int = -1
+        @Volatile private var restartInstalled: Boolean = false
     }
 
     private fun sysProp(key: String): String {
