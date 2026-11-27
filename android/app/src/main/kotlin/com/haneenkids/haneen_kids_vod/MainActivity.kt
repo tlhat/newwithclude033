@@ -30,6 +30,48 @@ class MainActivity : FlutterActivity() {
     private val admin: ComponentName by lazy { ComponentName(this, HaneenAdminReceiver::class.java) }
     private val dpm: DevicePolicyManager by lazy { getSystemService(Context.DEVICE_POLICY_SERVICE) as DevicePolicyManager }
 
+    /**
+     * Impeller (the new Flutter renderer) has known native crashes and freezes on
+     * MediaTek, Unisoc and Kirin phones (Mali / PowerVR GPUs). On those phones only,
+     * start the engine with the older Skia renderer. Everywhere else Impeller stays on.
+     * The engine reads this before it starts, so it is the right place to decide.
+     * Detection uses the phone's chip name (no GPU call, so it cannot itself crash).
+     * Any error here means "do not change anything".
+     */
+    override fun getFlutterEngineFlags(): List<String> {
+        val base = super.getFlutterEngineFlags()
+        return try {
+            if (useSkiaOnThisChip()) base + "--enable-impeller=false" else base
+        } catch (e: Throwable) {
+            base
+        }
+    }
+
+    private fun sysProp(key: String): String {
+        return try {
+            val c = Class.forName("android.os.SystemProperties")
+            (c.getMethod("get", String::class.java).invoke(null, key) as? String) ?: ""
+        } catch (e: Throwable) { "" }
+    }
+
+    private fun useSkiaOnThisChip(): Boolean {
+        val parts = ArrayList<String>()
+        parts.add(Build.HARDWARE ?: "")
+        parts.add(Build.BOARD ?: "")
+        if (Build.VERSION.SDK_INT >= 31) {
+            parts.add(Build.SOC_MANUFACTURER ?: "")
+            parts.add(Build.SOC_MODEL ?: "")
+        }
+        for (k in arrayOf("ro.board.platform", "ro.hardware", "ro.hardware.chipname",
+            "ro.mediatek.platform", "ro.soc.manufacturer", "ro.soc.model")) parts.add(sysProp(k))
+        val re = Regex("^(mt\\d{3,4}.*|mtk.*|mediatek.*|ums\\d.*|sp\\d{4}.*|sc\\d{4}.*|unisoc.*|spreadtrum.*|kirin.*|hi\\d{4}.*|hisilicon.*)$")
+        for (raw in parts) {
+            val v = raw.trim().lowercase()
+            if (v.isNotEmpty() && v != "unknown" && re.matches(v)) return true
+        }
+        return false
+    }
+
     override fun configureFlutterEngine(flutterEngine: FlutterEngine) {
         super.configureFlutterEngine(flutterEngine)
         // Country hints for the dialect and country setup. Local only, no permission,
