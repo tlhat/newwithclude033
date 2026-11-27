@@ -97,15 +97,19 @@ class LocalCredentialSecurityService {
   static Future<String> ensureKeystorePinPepperInitialized() async {
     try {
       final String? stored =
-          await _secureStorage.read(key: 'keystore_device_pin_pepper_v34');
+          await _secureStorage
+          .read(key: 'keystore_device_pin_pepper_v34')
+          .timeout(const Duration(seconds: 4));
       if (stored != null && stored.trim().length >= 32) {
         _keystoreDevicePinPepper = stored.trim();
         return _keystoreDevicePinPepper;
       }
-      await _secureStorage.write(
-        key: 'keystore_device_pin_pepper_v34',
-        value: _keystoreDevicePinPepper,
-      );
+      await _secureStorage
+          .write(
+            key: 'keystore_device_pin_pepper_v34',
+            value: _keystoreDevicePinPepper,
+          )
+          .timeout(const Duration(seconds: 4));
     } catch (_) {}
     return _keystoreDevicePinPepper;
   }
@@ -301,13 +305,17 @@ class LocalCredentialSecurityService {
 
   static Future<void> writeSecureValue(String key, String value) async {
     try {
-      await _secureStorage.write(key: key, value: value);
+      await _secureStorage
+          .write(key: key, value: value)
+          .timeout(const Duration(seconds: 4));
     } catch (_) {}
   }
 
   static Future<String?> readSecureValue(String key) async {
     try {
-      return await _secureStorage.read(key: key);
+      return await _secureStorage
+          .read(key: key)
+          .timeout(const Duration(seconds: 4));
     } catch (_) {
       return null;
     }

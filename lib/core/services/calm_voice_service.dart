@@ -486,6 +486,8 @@ class CalmVoiceService {
 
   /// Plays the synthesized MP3 file and strictly waits until playback completes
   /// (using a `Completer` + position listener on `VideoPlayerController`) so two clips never overlap.
+  int _audioFailures = 0;
+
   Future<void> _playElevenLabsAudioFile(
     String filePath,
     int expectedToken, {
@@ -495,11 +497,21 @@ class CalmVoiceService {
     try {
       final File f = File(filePath);
       if (!f.existsSync()) return;
+      if (_audioFailures >= 4) return; // this phone's player keeps failing: stay silent, never crash
       final VideoPlayerController ctrl = VideoPlayerController.file(
         f,
         videoPlayerOptions: VideoPlayerOptions(mixWithOthers: true),
       );
-      await ctrl.initialize();
+      try {
+        await ctrl.initialize().timeout(const Duration(seconds: 6));
+        _audioFailures = 0;
+      } catch (_) {
+        _audioFailures++;
+        try {
+          await ctrl.dispose();
+        } catch (_) {}
+        return;
+      }
       if (expectedToken != ElevenLabsVoiceService.currentPlaybackToken) {
         await ctrl.dispose();
         return;
@@ -625,8 +637,10 @@ class CalmVoiceService {
       try {
         if (prev.value.isInitialized) {
           await prev.pause();
-          await prev.dispose();
         }
+      } catch (_) {}
+      try {
+        await prev.dispose();
       } catch (_) {}
     }
     isSpeaking = false;

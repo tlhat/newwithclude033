@@ -14,8 +14,10 @@ class AppInitializer {
     // Low-end phones: keep decoded pictures small (default cap is 100 MB).
     PaintingBinding.instance.imageCache.maximumSizeBytes = 48 << 20;
     PaintingBinding.instance.imageCache.maximumSize = 120;
-    await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-    await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+    try {
+      await SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+      await SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
+    } catch (_) {}
     await LocalCredentialSecurityService.ensureKeystorePinPepperInitialized();
     final SharedPreferences prefs = await SharedPreferences.getInstance();
     final AppStateManager appState = AppStateManager(prefs);
