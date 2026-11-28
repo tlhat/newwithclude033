@@ -6,6 +6,7 @@ import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
 Future<void> showLockedContentSheet(BuildContext context, String what) {
   return showModalBottomSheet<void>(
     context: context,
+    useSafeArea: true,
     backgroundColor: const Color(0xFF1E1B4B),
     shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(24))),

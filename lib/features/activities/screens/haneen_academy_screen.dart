@@ -107,6 +107,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
 
     showModalBottomSheet(
       context: context,
+    useSafeArea: true,
       isScrollControlled: true,
       backgroundColor: const Color(0xFF1E1B4B),
       shape: const RoundedRectangleBorder(
@@ -750,6 +751,7 @@ class _HaneenAcademyScreenState extends State<HaneenAcademyScreen> {
 
     showModalBottomSheet(
       context: context,
+    useSafeArea: true,
       isScrollControlled: true,
       backgroundColor: const Color(0xFF1E1B4B),
       shape: const RoundedRectangleBorder(

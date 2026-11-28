@@ -710,6 +710,7 @@ class _ParentalStudioScreenState extends State<ParentalStudioScreen>
 
     showModalBottomSheet(
       context: context,
+    useSafeArea: true,
       isScrollControlled: true,
       backgroundColor: const Color(0xFF1E293B),
       shape: RoundedRectangleBorder(

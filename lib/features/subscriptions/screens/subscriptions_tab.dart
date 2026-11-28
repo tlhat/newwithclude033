@@ -18,6 +18,7 @@ class SubscriptionsTab extends StatelessWidget {
   void _soon(BuildContext context) {
     showModalBottomSheet<void>(
       context: context,
+    useSafeArea: true,
       backgroundColor: const Color(0xFF1E1B4B),
       builder: (ctx) => Directionality(
         textDirection: TextDirection.rtl,

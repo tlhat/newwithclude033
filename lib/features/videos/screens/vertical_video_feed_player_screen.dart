@@ -175,6 +175,7 @@ class _VerticalVideoFeedPlayerScreenState
 
     showModalBottomSheet(
       context: context,
+    useSafeArea: true,
       isScrollControlled: true,
       backgroundColor: const Color(0xFF1E293B),
       shape: const RoundedRectangleBorder(
@@ -416,6 +417,7 @@ class _VerticalVideoFeedPlayerScreenState
 
     showModalBottomSheet(
       context: context,
+    useSafeArea: true,
       backgroundColor: const Color(0xFF1E293B),
       shape: const RoundedRectangleBorder(
         borderRadius: BorderRadius.vertical(top: Radius.circular(26)),

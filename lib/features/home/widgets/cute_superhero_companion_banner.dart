@@ -72,6 +72,7 @@ class _CuteSuperheroCompanionBannerState
   void _openHeroFriendsGalleryModal() {
     showModalBottomSheet(
       context: context,
+    useSafeArea: true,
       isScrollControlled: true,
       backgroundColor: const Color(0xFF1E293B),
       shape: const RoundedRectangleBorder(
