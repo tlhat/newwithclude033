@@ -42,17 +42,22 @@ void main() {
               home: SplashRouterScreen(appState: app))));
     await tester.pump(const Duration(milliseconds: 400));
 
-    // 1. Google screen first.
+    // 1. First launch: the intro tour shows before the Google gate.
+    expect(find.text('تخطّي'), findsOneWidget);
+    await tester.tap(find.text('تخطّي'));
+    await tester.pump();
+    await tester.pump(const Duration(milliseconds: 300));
+    // 2. Then the Google screen.
     expect(find.text('الدخول بحساب جوجل'), findsOneWidget);
     await tester.tap(find.text('الدخول بحساب جوجل'));
     await tester.pump();
     await tester.pump(const Duration(milliseconds: 100));
-    // 2. No backup: first-time setup (welcome).
+    // 3. No backup: first-time setup (welcome).
     expect(app.linkedGoogleEmail, 'mum@example.com');
     await tester.pump(const Duration(milliseconds: 400));
     expect(find.text('يلا نبدأ!'), findsOneWidget);
 
-    // 3. A family exists after setup; the next launch asks for the PIN.
+    // 4. A family exists after setup; the next launch asks for the PIN.
     await app.completeOneTimeInitialSetup(
         childName: 'سلمى',
         childAge: '5',
