@@ -42,6 +42,7 @@ flutter:
   assets:
     # audio-assets-begin
     - assets/audio/audio_index.json
+    - assets/audio/cheerful_friend/app/
     - assets/audio/cheerful_friend/companion/
     - assets/audio/cheerful_friend/games_classify/
     - assets/audio/cheerful_friend/games_etiquette/

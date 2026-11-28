@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart' hide Text;
 import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
+import 'package:haneen_kids_vod/features/home/screens/intro_tour_screen.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class AppRoutes {
   static const String splash = '/';
@@ -23,10 +25,16 @@ class SplashRouterScreen extends StatefulWidget {
 
 class _SplashRouterScreenState extends State<SplashRouterScreen> {
   bool _splashTimerDone = false;
+  bool _introSeen = false;
 
   @override
   void initState() {
     super.initState();
+    SharedPreferences.getInstance().then((SharedPreferences p) {
+      if (mounted && (p.getBool(IntroTourScreen.seenKey) ?? false)) {
+        setState(() => _introSeen = true);
+      }
+    });
     Future.delayed(const Duration(milliseconds: 250), () {
       if (mounted) {
         setState(() {
@@ -40,6 +48,12 @@ class _SplashRouterScreenState extends State<SplashRouterScreen> {
   Widget build(BuildContext context) {
     if (!widget.appState.isInitialized || !_splashTimerDone) {
       return const SplashScreen();
+    }
+    if (!widget.appState.googleGateDone && !_introSeen) {
+      return IntroTourScreen(
+        appState: widget.appState,
+        onDone: () => setState(() => _introSeen = true),
+      );
     }
     if (!widget.appState.googleGateDone) {
       return GoogleGateScreen(appState: widget.appState);
