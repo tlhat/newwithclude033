@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart' hide Text;
 import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
+import 'package:haneen_kids_vod/core/safe_mode.dart';
 import 'package:haneen_kids_vod/core/services/guide_voice.dart';
 import 'package:haneen_kids_vod/core/services/local_audio_library.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
