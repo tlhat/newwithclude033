@@ -35,7 +35,7 @@ class _IntroTourScreenState extends State<IntroTourScreen> {
     _IntroLine('cheerful_friend', 'assets/avatars/boy_front.png',
         'أهلاً يا أبطال! هنا هتلعبوا وتتعلموا حاجات حلوة أوي: قصص وألعاب وأكاديمية.'),
     _IntroLine('haneen', 'assets/avatars/girl_front.png',
-        'بابا أو ماما هيدخلوا بحساب جوجل عشان نحفظ تقدمكم ونجوائزكم على أي موبايل.'),
+        'بابا أو ماما هيدخلوا بحساب جوجل عشان نحفظ تقدمكم وجوايزكم على أي موبايل.'),
     _IntroLine('cheerful_friend', 'assets/avatars/boy_front.png',
         'يلا بينا نبدأ المغامرة!'),
   ];
