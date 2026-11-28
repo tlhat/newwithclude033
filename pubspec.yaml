@@ -1,7 +1,7 @@
 name: haneen_kids_vod
 description: Safe 100% Free Educational Platform for Kids with ElevenLabs Neural Voices, Interactive Academy, 200 Animated Stories, 10 Brain Games & 6-Digit Parental Controls
 publish_to: 'none'
-version: 5.0.11+35
+version: 5.0.12+36
 
 environment:
   sdk: '>=3.2.0 <4.0.0'
@@ -40,6 +40,7 @@ flutter:
   generate: true
   uses-material-design: true
   assets:
+    - assets/video/intro.mp4
     # audio-assets-begin
     - assets/audio/audio_index.json
     - assets/audio/cheerful_friend/app/

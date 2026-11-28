@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart' hide Text;
 import 'package:haneen_kids_vod/core/regional/dialect_text.dart';
-import 'package:haneen_kids_vod/features/home/screens/intro_tour_screen.dart';
+import 'package:haneen_kids_vod/features/home/screens/intro_video_screen.dart';
 import 'package:haneen_kids_vod/haneen_kids_exports.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -31,7 +31,7 @@ class _SplashRouterScreenState extends State<SplashRouterScreen> {
   void initState() {
     super.initState();
     SharedPreferences.getInstance().then((SharedPreferences p) {
-      if (mounted && (p.getBool(IntroTourScreen.seenKey) ?? false)) {
+      if (mounted && (p.getBool(IntroVideoScreen.seenKey) ?? false)) {
         setState(() => _introSeen = true);
       }
     });
@@ -50,7 +50,7 @@ class _SplashRouterScreenState extends State<SplashRouterScreen> {
       return const SplashScreen();
     }
     if (!widget.appState.googleGateDone && !_introSeen) {
-      return IntroTourScreen(
+      return IntroVideoScreen(
         appState: widget.appState,
         onDone: () => setState(() => _introSeen = true),
       );
